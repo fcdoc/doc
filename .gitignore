@@ -1,2 +1,9 @@
+/out/
+/img/
+bun.lockb
+node_modules/
 */.DS_Store
 .DS_Store
+
+/.fix/cache
+/.img/cache
