@@ -4,14 +4,11 @@ brief: 通过集成钉钉自建应用，实现在钉钉端内接收和响应告�
 
 # 钉钉集成
 
----
-
 通过集成钉钉自建应用，实现在钉钉端内接收和响应告警的能力。
 
 **（本文档以钉钉开放平台新版为例）**
 
 ## 一、创建钉钉应用
----
 
 ### 1. 创建自建应用
 
@@ -44,7 +41,6 @@ brief: 通过集成钉钉自建应用，实现在钉钉端内接收和响应告�
 <img src="https://fcdoc.github.io/img/NGXlVEMEAif9TLDyX8YR8-EEJIpaPD1LoT2k9jRW17k.avif" alt="drawing" width="500"/>
 
 ## 二、添加钉钉集成
----
 
 回到Flashduty **集成中心** 页面，选择即时消息 > 钉钉，在表单中填入 __集成名称__ 以及上一步复制的 应用信息后，点击保存创建。
 
@@ -55,7 +51,6 @@ brief: 通过集成钉钉自建应用，实现在钉钉端内接收和响应告�
 <img src="https://fcdoc.github.io/img/F0m958Mv6fHG7pIJd6kdU_vonunBaUNqYZI4rmYzVWI.avif" alt="drawing" width="400"/>
 
 ## 三、配置钉钉应用
----
 
 ### 1. 添加酷应用、网页应用和机器人
 <img src="https://fcdoc.github.io/img/ih9n4XTWewUf61MiouGbFFtEnPTsFPoRWPuJgw8olOM.avif" alt="drawing" width="500"/>
@@ -109,7 +104,6 @@ brief: 通过集成钉钉自建应用，实现在钉钉端内接收和响应告�
 <img src="https://fcdoc.github.io/img/3rG7tgIuLGrcn51sE-rA6vfasbg6sIKj3FWoud39Bt4.avif" alt="drawing" width="600"/>
 
 ## 四、应用发布与使用
----
 
 完成上述步骤后，进行**应用发布-版本管理与发布**，进行创建新版本，然后进行发布（注意把可见范围调整为全部员工，否则其他人无法使用）
 
@@ -122,7 +116,6 @@ brief: 通过集成钉钉自建应用，实现在钉钉端内接收和响应告�
 2. PC 端：桌面（PC）端通过 钉钉 > 工作台 > 搜索应用名称 > 打开应用 使用网页应用。
 
 ## 五、常见问题
----
 
 1. **消息无法投递到个人**，操作记录提示__未关联应用__？
 

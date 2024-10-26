@@ -4,12 +4,9 @@ brief: 通过集成飞书自建应用，实现在飞书端内接收和响应告�
 
 # 飞书 Lark集成
 
----
-
 通过集成飞书自建应用，实现在飞书端内接收和响应告警的能力。
 
 ## 一、创建飞书应用
----
 
 ### 1. 创建自建应用
 
@@ -32,7 +29,6 @@ brief: 通过集成飞书自建应用，实现在飞书端内接收和响应告�
 <img src="https://fcdoc.github.io/img/pCfnVRk1nPAjLQU-ReDmX-ab7TfqtNRZnGdOKkiVYyY.avif" alt="drawing" width="800"/>
 
 ## 二、添加飞书集成
----
 
 回到 Flashduty **集成中心** 页面，选择 **即时消息=>飞书**，在表单中填入 __名称__ 以及上一步复制的`App ID`、`App Secret`、`Verification Token` 和 `Encrypt Key`后，点击保存创建。
 
@@ -43,7 +39,6 @@ brief: 通过集成飞书自建应用，实现在飞书端内接收和响应告�
 <img src="https://fcdoc.github.io/img/F_i05Wj-itHzUr_HJJGEASuvJImXIDN_15RDfqWPeIQ.avif" alt="drawing" width="800"/>
 
 ## 三、配置飞书应用
----
 
 ### 1. 开通并配置应用能力
 
@@ -77,7 +72,6 @@ brief: 通过集成飞书自建应用，实现在飞书端内接收和响应告�
 <img src="https://fcdoc.github.io/img/t03fu8HgE8UB5ahuhxHv4Yej7bSMSCjpTeI1V6YJRI4.avif" alt="drawing" width="800"/>
 
 ## 四、应用发布与使用
----
 
 完成上述步骤后，进行应用的发布与使用，管理员审核后即可使用。
 注意：**可用范围** 需要特别配置，推荐 **所有员工**。
@@ -92,7 +86,6 @@ brief: 通过集成飞书自建应用，实现在飞书端内接收和响应告�
 2. PC 端：桌面（PC）端通过 飞书 > 工作台 > 搜索应用名称 > 打开应用 使用网页应用。
 
 ## 五、常见问题
----
 
 1. **消息无法投递到个人**，操作记录提示__未关联应用__？
 

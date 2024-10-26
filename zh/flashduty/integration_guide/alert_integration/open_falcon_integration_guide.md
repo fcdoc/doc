@@ -4,11 +4,8 @@ brief: 通过 webhook 的方式同步 Open-Falcon 告警事件到 Flashduty，�
 
 # Open Falcon集成
 
----
-
 通过 webhook 的方式同步 Open-Falcon 告警事件到 Flashduty，实现告警事件自动化降噪处理。
 ## 在 Flashduty
----
 您可通过以下2种方式，获取一个集成推送地址，任选其一即可。
 
 ### 使用专属集成
@@ -36,7 +33,6 @@ brief: 通过 webhook 的方式同步 Open-Falcon 告警事件到 Flashduty，�
     5. 完成。
 
 ## 在 Falcon
----
 选择告警规则，逐一配置 webhook。
 
 <div class="md-block">
@@ -57,7 +53,6 @@ brief: 通过 webhook 的方式同步 Open-Falcon 告警事件到 Flashduty，�
 </div>
 
 ## 状态对照
----
 <div class="md-block">
 
 Open-Falcon 到 Flashduty 告警等级映射关系：

@@ -4,19 +4,15 @@ brief: A fault in Flashduty represents an ongoing issue or an item requiring att
 
 # What Is a Fault
 
----
-
 A fault signifies an ongoing issue or an item requiring attention. Faults are generally set off by alarms, frequently accompanied by a sequence of similar alarms.
 
 ## Faults, Alarms, and Events
----
 
 When Flashduty receives an alarm event (such as an alarm notification from Zabbix), the system will automatically trigger an alarm, and this alarm will trigger a fault. Multiple similar active alarms may be aggregated into the same fault and dispatched, notified, and processed together.
 
 We can simply understand that **a fault is a compilation of similar alarms**. Without noise reduction, a fault is equivalent to an alarm. Conversely, in a noise-reduction scenario, a fault is equivalent to the associated multiple alarms. For more information on the alarm noise reduction model, please refer to [Understanding the Noise Reduction Process](doc-4185939).
 
 ## Fault Severity, Status, and Progress
----
 
 ### Severity
 
@@ -47,7 +43,6 @@ The status of an alarm represents the status of the fault in the original monito
 > Automatic fault recovery will automatically close the (processing progress); however, manual fault closure has no effect on the fault status.
 
 ## Fault Tag
----
 
 Labels are a very important basic concept in Flashduty. Different labels describe information about alarms and faults in different dimensions, and are widely used in filtering, retrieval, aggregation and other scenarios.
 
@@ -60,7 +55,6 @@ Tags can only be obtained through event reporting and cannot be manually modifie
 Flashduty offers a label enhancement solution for automated label generation. For more information, visit [Configure Label Enhancement](http://docs.flashcat.cloud/zh/flashduty/label-enrichment-settings).
 
 ## Fault Life Cycle
----
 
 **1. Trigger a New Fault**
 
@@ -91,14 +85,12 @@ On-call personnel can immediately claim the fault after receiving the notificati
 **Closing a fault** will change the processing progress to **Closed**. If the associated alarms are automatically recovered, the fault will also be automatically closed. Conversely, if a fault is manually closed, all associated alarms will be automatically closed. This means that these alarms will no longer be merged into any new events.
 
 ## Fault Timeline
----
 
 Each fault has a timeline that allows you to trace the changes and operations that have occurred at different times in the fault's history. For example, at what time the fault occurred, who was notified through which channel, and the outcome of the notification.
 
 ![](https://fcdoc.github.io/img/7vOIcjGm9D-jdoK4WtKCTV63KSPRW6vXBCpZwzU3vNo.avif)
 
 ## Trigger Fault
----
 
 ### Trigger Fault via Integration
 

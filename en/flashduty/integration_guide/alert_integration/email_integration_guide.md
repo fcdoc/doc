@@ -4,12 +4,9 @@ brief: Generate a unique email address in Flashduty and synchronize alarm occurr
 
 # Email Integration
 
----
-
 Generate a unique email address in Flashduty and synchronize alarm occurrences and recoveries to Flashduty via email.
 
 ## Operation Steps
----
 
 ### Create Email Integration
 
@@ -85,6 +82,5 @@ attachment_stripped = true
 5. If you change your account's domain name, the email address will also change. Be sure to update the push address accordingly.
 
 ## Severity Level Mapping
----
 
 The current email integration pushes alerts to Flashduty at a Warning level.

@@ -4,12 +4,9 @@ brief: Synchronize Graylog alert events to Kuaimao Nebula via webhook to automat
 
 # Graylog Alert Event
 
----
-
 Synchronize Graylog alert events to Kuaimao Nebula via webhook to automate noise reduction processing for these alerts.
 
 ## In Flashduty
----
 使用专属集成
 
 ### Use Proprietary Integrations
@@ -37,7 +34,6 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## In Graylog
----
 <div id="!"><h2>Graylog Alarm push configuration</h2><h3> Step 1: Configure alarm channel</h3><ol><li> Login to Graylog .</li><li> Find Alerts in the menu and select Notifications .</li><li> created Create Notification .</li><li> Enter Title and Description .</li><li> Notification Type Select **HTTP Notification** , as shown below.</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/eWI2dwAH-u6NiXImb2P94U6PLQwwqJ874Z-9dTEnG8U.avif"><ol start="6"><li> Input FlashDuty The obtained URL (you need to whiten URL for the first input).</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/lkx7VzY3ZZqF9K-qUu469azcTPzOeOevMdLD1b5Q9cU.avif"><ol start="7"><li> Click Save to save the whitened URL</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/99FRplZHwxawFUPjKweW08evg86CU7O26tKNkjuwANk.avif"><ol start="8"><li> After saving, commit Create .</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/LWGvCpNBZ1fE2ILfxZ9-COnwvCXk806KviB6KQ_B4fg.avif"><h3> Step 2: Use FlashDuty alarm channels in alarm events</h3><ol><li> Create or edit an existing Event Definition .</li><li> Other alarm configurations are omitted here (configure alarm conditions according to business requirements).</li><li> Configure channel in Notifications .</li><li> Add Notifition channel FlashDuty .</li><li> Click Done .</li><li> Just complete the next step.</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/FBEZ5WZwmS1KOXauhVJ_PCxKzhnwgCfeWVriVNKUqsA.avif"></div>
 
 ## Status Comparison

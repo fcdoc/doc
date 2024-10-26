@@ -4,12 +4,9 @@ brief: 通过单点登录使您能够轻松地集成到各种不同的应用和�
 
 # 配置单点登录
 
----
-
 FlashDuty 目前提供 SAML2.0、 OIDC、CAS 和 LDAP(仅私有化版本) 协议的单点登录（SSO）接入，使您能够轻松地集成到各种不同的应用和平台中，这些功能能够帮助您快速实现与其他平台共享身份信息，用户只需在一个平台登录一次，便可访问多个相关联的应用程序和服务，无需为每个应用程序单独进行身份验证，从而提高了工作效率，提高用户体验，简化登录流程，并增强安全性。
 
 ## 配置SAML协议
----
 配置路径：**访问控制=>单点登录=>开启=>设置=>选中 SAML2.0 协议类型**
 
 |字段|描述|
@@ -22,7 +19,6 @@ FlashDuty 目前提供 SAML2.0、 OIDC、CAS 和 LDAP(仅私有化版本) 协议
 |Flashcat服务提供商信息|**Service Provider Metadata：** <br> **Assertion Consumer Service URL：** 断言地址，用于在身份提供商调用进行单点登录|
 
 ## 配置OIDC协议
----
 配置路径：**访问控制=>单点登录=>开启=>设置=>选中 OIDC 协议类型**
 
 |字段|描述|
@@ -37,7 +33,6 @@ FlashDuty 目前提供 SAML2.0、 OIDC、CAS 和 LDAP(仅私有化版本) 协议
 |Flashcat服务提供商信息|**Redirect URL：** 身份提供商回调快猫星云的地址 <br> **支持签名算法：** RS256,RS384,RS512,ES256,ES384,ES512,PS256,PS384,PS512 (不支持HS256)<br>**请求scope：** openid, email, phone |
 
 ## 配置CAS协议
----
 配置路径：**访问控制=>单点登录=>开启=>设置=>选中 CAS 协议类型**
 
 |字段|描述|
@@ -51,7 +46,6 @@ FlashDuty 目前提供 SAML2.0、 OIDC、CAS 和 LDAP(仅私有化版本) 协议
 |Flashcat服务提供商信息|**Redirect URL：** 身份提供商回调快猫星云的地址
 
 ## 配置LDAP协议
----
 > [!NOTE]
 > LDAP单点登录，仅 __私有化版本__ 支持
 
@@ -81,7 +75,6 @@ FlashDuty 目前提供 SAML2.0、 OIDC、CAS 和 LDAP(仅私有化版本) 协议
 通过 [Ldap 配置](https://docs.flashcat.cloud/zh/flashduty/introduction) FlashDuty 的 SSO 单点登录。
 
 ## 常见问题
----
 
 |+| 什么是SSO单点登录？
 

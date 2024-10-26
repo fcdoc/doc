@@ -4,14 +4,10 @@ brief: Team Operations and Member Management
 
 # Team and Members
 
----
-
 ## Team Introduction
----
 A team is a collection of members, also conceptualized as a group, where members with varying responsibilities or from different projects are aggregated to facilitate the management of **collaboration spaces, task assignments, duty schedules, and service calendars** among other scenarios.
 
 ## Team Management
----
 
 ### Team Search
 
@@ -33,7 +29,6 @@ A team is a collection of members, also conceptualized as a group, where members
 > After deletion, all associated paths will immediately become invalid and cannot be restored; please proceed with caution.
 
 ## Member Management
----
 
 ### Invitation Method
 
@@ -61,7 +56,6 @@ A team is a collection of members, also conceptualized as a group, where members
 > Deleting a member does not remove their data.
 
 ## FAQs
----
 
 |+| Have the members not received the verification email after being invited via email?
 

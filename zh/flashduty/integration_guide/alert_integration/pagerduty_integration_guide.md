@@ -4,8 +4,6 @@ brief: 可以通过 PagerDuty 协议推送告警事件到快猫星云，实现�
 
 # PagerDuty集成
 
----
-
 通过 webhook 的方式同步
 
 Flashduty 实现了 PagerDuty Events API，输入和响应完全兼容。因此您可以通过 PagerDuty 协议推送告警事件到 Flashduty，实现告警事件自动化降噪处理。
@@ -13,7 +11,6 @@ Flashduty 实现了 PagerDuty Events API，输入和响应完全兼容。因此�
 同样的，对于已经支持推送事件到 PagerDuty 的告警系统（如 ElastAlert），你仅需要修改目的推送地址，即可利用 PagerDuty 协议推送事件到 Flashduty 。
 
 ## 在 Flashduty
----
 您可通过以下2种方式，获取一个集成推送地址，任选其一即可。
 
 ### 使用专属集成
@@ -41,7 +38,6 @@ Flashduty 实现了 PagerDuty Events API，输入和响应完全兼容。因此�
     5. 完成。
 
 ## 在 PagerDuty
----
 ### 请求地址
 
 ```

@@ -4,8 +4,6 @@ brief: Learn about the SLA commitments of Flashduty from Kuaimao Nebula Technolo
 
 # Flashduty Service Level Aggrement
 
----
-
 Last updated: 2024-04-28
 
 This Service Level Agreement (hereinafter referred to as "SLA") outlines the service availability metrics and compensation plan for the Flashduty service provided to you by Kuaimao Nebula.
@@ -13,7 +11,6 @@ This Service Level Agreement (hereinafter referred to as "SLA") outlines the ser
 Please note that, unless otherwise specified, this agreement does not apply to the public beta, invite-only beta, free features and versions, or the privatized versions of Flashduty.
 
 ## How We Ensure the SLA
----
 
 1. **Same-City Multi-Active**: The infrastructure is built across multiple data centers, with stateful components designed to be multi-active within the same city
 2. **Asynchronous Processing**: After an alert is reported, it immediately enters an asynchronous process, with retries for errors to minimize the risk of alert loss
@@ -22,7 +19,6 @@ Please note that, unless otherwise specified, this agreement does not apply to t
 5. **Continuous Monitoring**: Comprehensive system metrics are collected, regular stress tests are conducted, and system issues are identified promptly or proactively.
 
 ## Our SLA Commitments
----
 
 - **Function Availability (Error Rate)**: Core functions are available 99.9% of the time
 - **Delivery Timeliness (Delay Rate)**: 99.9% of alerts are delivered within 5 minutes of being triggered
@@ -61,7 +57,6 @@ The duration of service unavailability due to the following reasons will not be 
 - Unavailability caused by force majeure events.
 
 ## How to Apply for Compensation
----
 
 ### Compensation Standards
 
@@ -78,7 +73,6 @@ You may submit a compensation claim for Flashduty's failure to meet service avai
 Compensation claims must be submitted no later than two (2) months after the end of the month in which Flashduty failed to meet its service availability commitments.
 
 ## Additional Information
----
 
 Kuaimao Nebula reserves the right to modify the terms of this SLA.
 

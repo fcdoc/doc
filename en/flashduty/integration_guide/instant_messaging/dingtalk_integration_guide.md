@@ -4,14 +4,11 @@ brief: By integrating self-developed applications within DingTalk, the ability t
 
 # DingTalk Integration
 
----
-
 By integrating self-developed DingTalk applications, the capability to receive and respond to alerts within the DingTalk client is realized.
 
 **(This document uses the new version of the DingTalk Open Platform as an example.)**
 
 ## 1. Creating a DingTalk Application
----
 
 ### 1. Create a Self-Built Application
 
@@ -44,7 +41,6 @@ Generate __encryption aes_key__ and __signature Token__ as a backup.
 <img src="https://fcdoc.github.io/img/NGXlVEMEAif9TLDyX8YR8-EEJIpaPD1LoT2k9jRW17k.avif" alt="drawing" width="500"/>
 
 ## 2. Adding DingTalk Integration
----
 
 Flashduty to the **Integration Center** page, select Instant Messaging > , fill in **the integration name** and the application information copied in the previous step in the form, and click Save to create.
 
@@ -55,7 +51,6 @@ After saving, you will see information such as the **Web Configuration** address
 <img src="https://fcdoc.github.io/img/F0m958Mv6fHG7pIJd6kdU_vonunBaUNqYZI4rmYzVWI.avif" alt="drawing" width="400"/>
 
 ## 3. Configuring the DingTalk Application
----
 
 ### 1. Add Cool Apps, Web Apps, and Bots
 <img src="https://fcdoc.github.io/img/ih9n4XTWewUf61MiouGbFFtEnPTsFPoRWPuJgw8olOM.avif" alt="drawing" width="500"/>
@@ -109,7 +104,6 @@ Enter the Permission Management page and apply for the `qyapi_chat_manage` and `
 <img src="https://fcdoc.github.io/img/3rG7tgIuLGrcn51sE-rA6vfasbg6sIKj3FWoud39Bt4.avif" alt="drawing" width="600"/>
 
 ## 4. Application Release and Usage
----
 
 After completing the above steps, proceed with **Application Release - Version Management and Publishing**, create a new version, and then publish it (note that the visibility range should be set to all employees, otherwise others will not be able to use it)
 
@@ -122,7 +116,6 @@ After the application is released, you can use the mobile /PC to access the appl
 2. PC: On the desktop (PC) side, access the application through DingTalk > Workbench > search for the application name > open the application to use the web application.
 
 ## 5. Frequently Asked Questions
----
 
 1. **Message delivery to individuals is not possible**, with the operation record indicating __Not Associated with an Application__?
 

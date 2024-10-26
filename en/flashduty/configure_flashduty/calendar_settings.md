@@ -4,15 +4,11 @@ brief: By configuring the service calendar, you can manage allocation strategies
 
 # Configure Service Calendar
 
----
-
 ## Application Scenarios
----
 - When assigning faults, the calendar mode can be used to dispatch them according to rest or working days.
 - When it is necessary to silence alerts during a specific time period, the calendar mode can be employed for periodic silencing.
 
 ## Create Calendar
----
 **Navigate to Console => Fault Management => Service Calendar => Add Calendar to create.**
 - It is recommended to name the calendar based on the business dimension, for example, "Settlement Business System."
 - The calendar description should provide an overview of the business characteristics and logic, allowing team members to quickly grasp the information.
@@ -22,7 +18,6 @@ brief: By configuring the service calendar, you can manage allocation strategies
 ![Service Calendar](https://fcdoc.github.io/img/GG_lye0HJBxjFs54noT-0OrrOiUBH8NPZqkny2qYXl4.avif)
 
 ## Edit Calendar
----
 - Only the creator and team members have the right to edit the calendar; other members have read-only access.
 - Basic information such as the calendar name, description, and management team can be modified.
 - Rest days can be quickly marked based on the weekday.
@@ -33,7 +28,6 @@ brief: By configuring the service calendar, you can manage allocation strategies
 > Deleting a calendar is irreversible. Please ensure no business is using it before deletion.
 
 ## FAQs
----
 
 |+| What is the difference between a calendar and a duty label?
 

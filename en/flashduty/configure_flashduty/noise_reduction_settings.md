@@ -4,10 +4,7 @@ brief: Through alarm aggregation, multiple similar active alarms can be consolid
 
 # Configure Alarm Noise Reduction
 
----
-
 ## Set Alarm Aggregation
----
 Go to [Collaboration Space Details] - [Alarm Noise Reduction], you can set the **alarm aggregation** strategy. When creating a new collaboration space, alarm aggregation is turned off by default. It is recommended that you manually enable it and set aggregation policies as needed.
 
 > [!NOTE]
@@ -33,7 +30,6 @@ Go to [Collaboration Space Details] - [Alarm Noise Reduction], you can set the *
 <img src="https://fcdoc.github.io/img/V7G1hZj1IPX10Fsa_ekHR77oKs8POHsib5y2zg-Yjdw.avif" style="display: block; margin: 0 auto;" height="400">
 
 ## View Aggregation Examples
----
 
 When the space is set to aggregate by **alarm check items**, the system receives five alarm notifications sequentially, each triggering an alarm and a fault:
 
@@ -59,7 +55,6 @@ We can see the final [fault-alarm-event] correlation relationship through the co
 ![](https://fcdoc.github.io/img/jAkbujzJKD3war7mV4EyzsYvd-TZB1BX_wJ1PUGZKTM.avif)
 
 ## FAQs
----
 
 |+| Will the title of the fault change when alarms are incorporated?
 

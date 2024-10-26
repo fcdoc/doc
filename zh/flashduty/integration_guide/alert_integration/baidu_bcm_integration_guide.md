@@ -4,11 +4,8 @@ brief: 通过 webhook 的方式同步百度云 BCM 告警事件到 Flashduty，�
 
 # 百度云BCM监控集成
 
----
-
 通过 webhook 的方式同步百度云 BCM 告警事件到 Flashduty，实现告警事件自动化降噪处理。
 ## 在 Flashduty
----
 您可通过以下2种方式，获取一个集成推送地址，任选其一即可。
 
 ### 使用专属集成
@@ -36,7 +33,6 @@ brief: 通过 webhook 的方式同步百度云 BCM 告警事件到 Flashduty，�
     5. 完成。
 
 ## 在百度云监控 BCM
----
 <div class="md-block">
 
 1. 登录您的百度云控制台，检索 __云监控__ 产品，并进入对应控制台
@@ -51,7 +47,6 @@ brief: 通过 webhook 的方式同步百度云 BCM 告警事件到 Flashduty，�
 </div>
 
 ## 状态对照
----
 <div class="md-block">
 
 百度云监控到 Flashduty 告警等级映射关系：

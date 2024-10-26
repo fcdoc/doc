@@ -4,12 +4,9 @@ brief: 通过 webhook 的方式同步腾讯云监控 CM 告警事件到快猫星
 
 # 腾讯云监控 CM集成
 
----
-
 通过 webhook 的方式同步腾讯云监控 CM 告警事件到 Flashduty，实现告警事件自动化降噪处理。
 
 ## 在 Flashduty
----
 您可通过以下2种方式，获取一个集成推送地址，任选其一即可。
 
 ### 使用专属集成
@@ -37,7 +34,6 @@ brief: 通过 webhook 的方式同步腾讯云监控 CM 告警事件到快猫星
     5. 完成。
 
 ## 在腾讯云监控 CM
----
 <div class="md-block">
 
 1. 登录您的腾讯云控制台，选择云监控产品
@@ -57,7 +53,6 @@ brief: 通过 webhook 的方式同步腾讯云监控 CM 告警事件到快猫星
 </div>
 
 ## 状态对照
----
 <div class="md-block">
 
 腾讯云监控所有指标告警均对应到 Flashduty “警告（warning）”级别告警。

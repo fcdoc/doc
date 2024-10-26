@@ -6,12 +6,9 @@ brief: >-
 
 # Utilize dedicated integrations in Flashduty
 
----
-
 Through webhook, synchronize Zabbix alarm events to Flashduty (supports Zabbix 3.x to 6.x versions; configurations differ between versions) to automate the noise reduction of alarm events.
 
 ## In Flashduty
----
 使用专属集成
 
 ### Use Proprietary Integrations
@@ -39,7 +36,6 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## For versions 5.x to 6.x
----
 <span id="v5"></span>
 
 ### Use Shared Integrations
@@ -104,7 +100,6 @@ chmod +x send-to-flashduty.sh
 <div id="!"><p>Log in Zabbix Console, select Monitoring > Problems to view the latest alarm list.</p><ol><li> Click Actions , you can see the message notification results in the pop-up window</li><li> If the found Flashduty corresponding log, if Status is Sent , it means the notification is successful. Otherwise, troubleshoot the cause according to the prompts.</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/ZWiq1b69iYwn2zoaaTSqjHCvFiIkRe68itpXEnQes1A.avif"><ol start="3"><li> Return to the integration list. If the latest event time is displayed, the configuration is successful and the event is received.</li><li> Finish</li></ol></div>
 
 ## Status Comparison
----
 <div class="md-block">
 
 | Zabbix         |  Flashduty  | state |

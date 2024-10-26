@@ -6,12 +6,9 @@ brief: >-
 
 # Prometheus Alert Integration
 
----
-
 Push Prometheus alert events to Flashduty via AlertManager using a webhook. When an alert is triggered, send a trigger event to Flashduty, and when the alert is resolved, send a recovery event to Flashduty.
 
 ## Usage Restrictions
----
 
 ### In AlertManager
 
@@ -19,12 +16,10 @@ Push Prometheus alert events to Flashduty via AlertManager using a webhook. When
 - Your AlertManager server must be able to access the domain api.flascat.cloud to push alerts to the external network.
 
 ## Supported Versions
----
 
 This article is compatible with **Alertmanager version 0.16.0 and above**.
 
 ## Operation Steps
----
 
 ### In Flashduty
 
@@ -85,7 +80,6 @@ timestamp: '{{ with query "time()" }}{{ .
 `
 
 ## Severity Level Mapping
----
 
 The system sequentially extracts the `severity`, `priority`, and `level` tags from the alert event. The corresponding values will be used as Prometheus's own alert levels. If none are extracted, the system will automatically set the Prometheus alert level to `Warning`.
 
@@ -103,7 +97,6 @@ Prometheus to Flashduty Alert Level Mapping:
 | ok           | Ok       | Recovered |
 
 ## FAQs
----
 
 |+| Why have I not received any alerts in Flashduty?
 

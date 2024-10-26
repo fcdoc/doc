@@ -4,12 +4,9 @@ brief: Synchronize Alibaba Cloud Log Service SLS monitoring alarm events with Ku
 
 # Alibaba Cloud SLS Integration
 
----
-
 Synchronize Alibaba Cloud Log Service SLS monitoring alarm events with Flashduty via webhook, achieving automated noise reduction for alarm events.
 
 ## In Flashduty
----
 使用专属集成
 
 ### Use Proprietary Integrations
@@ -37,7 +34,6 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## In Alibaba Cloud SLS
----
 **Step 1: Configure Webhook**
 
 <div id="!"><ol><li>Log in to your Alibaba Cloud console, select Log Service SLS product, and select a Project</li><li> Enter the **Alarm** -> **Alarm Management** -> **Webhook Integration** page, click the **New** button to start editing.</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/do6Aljc-9776gTE_GTxT9gsVkAEejjOPvjVOZjEMs8U.avif"><ol start="3"><li> As shown in the figure, __ Type __ select "General Webhook ", __ method __ Select POST , __ request address __ fill in the integrated push address (obtained after saving)</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/l7QslDgInVpUwfNHW6GyVdSgdLrHiblCHY8-Zq1YR4M.avif"><ol start="4"><li> Click __ Confirm __ button to submit and save</li></ol></div>
@@ -62,7 +58,6 @@ When you need to route alarms to different collaboration spaces based on the pay
 <div id="!"><ol><li>Switch to the __ Rules / Transaction __ page, click the __ New Alarm __ button or select an existing alarm to update and edit</li><li> Enter the __ Alarm Rules __ Edit page, **Alarm Policy** .</li><li> __ Alarm strategy __ select "Normal mode", __ strategy __ use the object created previously</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/TQ-mllhuKcn6FKPy11GIPpGB8GvwiJ17ZSraCR-IPCg.avif"><ol start="4"><li> Click the __ OK __ button to submit and save</li><li> For all other rules, repeat the above steps to push all alarms to FlashDuty</li></ol></div>
 
 ## Status Comparison
----
 <div id="!"><p>Alibaba Cloud SLS Monitors the Flashduty level mapping relationship:</p>
 
 | Alibaba Cloud SLS Monitoring |  Flashduty  | state |

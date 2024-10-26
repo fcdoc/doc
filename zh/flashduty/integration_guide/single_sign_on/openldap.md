@@ -4,10 +4,7 @@ brief: 在Docker Compose中搭建LDAP教程
 
 # OpenLDAP 集成指引
 
----
-
 ## 快速了解
----
 
 LDAP（Lightweight Directory Access Protocol，轻量级目录访问协议）是一种基于X.500标准的协议，用于访问和维护分布式目录服务。LDAP使得用户和应用程序能够查询、浏览和搜索存储在目录中的信息，如用户身份信息、网络资源等。LDAP通常运行在TCP/IP协议栈上，特别是使用TCP端口389（对于未加密的通信）和636（对于加密的通信，使用LDAPS）。
 
@@ -23,7 +20,6 @@ OpenLDAP 是一个开源的实现轻型目录访问协议（LDAP）的软件，�
 > 本文基于环境中已经支持 Docker 和 Docker Compose，如果环境不支持，请先自行安装。
 
 ## Docker Compose 配置文件
----
 ```
 version: '1'
 
@@ -76,7 +72,6 @@ networks:
 > password 替换成想要设置的密码
 
 ## 服务启动
----
 将上述配置文件保存为 docker-compose.yml， 在配置文件所在的目录，打开终端或命令提示符，运行以下命令来启动服务：
 ```
 docker-compose up
@@ -100,11 +95,9 @@ docker-compose down
 ```
 
 ## 登录OpenLDAP
----
 在浏览器中访问 http://ip:8088/ , 使用用户名 cn=admin,dc=flashduty,dc=com 和 密码 xxx 登录。
 
 ## OpenLDAP 配置
----
 ### 添加组和用户
 
 ![](https://fcdoc.github.io/img/1rC8UssQX0Djb1bLj3EWmNjZPG1BX-DLWxY_Q8CSWmA.avif)

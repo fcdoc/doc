@@ -4,15 +4,12 @@ brief: Push proprietary system alert events to Flashduty via standard protocols 
 
 # Custom Alert Event Integration Guide
 
----
-
 Push proprietary system alert events to Flashduty via standard protocols to automate noise reduction processing for these alerts.
 
 > [!NOTE]
 > Flashduty is compatible with the webhook protocols of most commonly used alert systems. For these systems, you should use the corresponding integration first, as it is simpler and more convenient. This integration provides a standard HTTP interface, allowing you to develop adaptations. The benefit is that you can push any alert event you wish to be handled by oncall.
 
 ## Operation Steps
----
 
 ### In Flashduty
 
@@ -43,12 +40,10 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## Implement Protocol
----
 
 Please refer to [the development documentation](https://developer.flashcat.cloud/zh/flashduty/custom-alert) to complete the protocol development.
 
 ## Best Practices
----
 
 1. When an alert status changes, send an event to Kuaimao Nebula
 2. When an alert is resolved, send an event with a status of "Ok" to close the alert. Otherwise, the alert will remain open. If your alert system does not have a resolution event, it is recommended that you manually send a resolution event
@@ -58,7 +53,6 @@ Please refer to [the development documentation](https://developer.flashcat.cloud
 - Category information of the alert, such as class (API, database, network)
 
 ## FAQs
----
 
 |+| Why have I not received any alerts in Flashduty?
 

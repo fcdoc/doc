@@ -12,12 +12,10 @@ brief: 通过 webhook 的方式同步 Jira Issue 事件到快猫星云，实现�
 - （如果是私有化部署）您的Jira server 必须能够访问域名 api.flascat.cloud。
 
 ## 支持版本
----
 
 本文适配 **Jira Cloud 和 私有化** 版本。
 
 ## 操作步骤
----
 
 ### 在 Flashduty
 
@@ -44,7 +42,6 @@ brief: 通过 webhook 的方式同步 Jira Issue 事件到快猫星云，实现�
 </div>
 
 ## 状态映射
----
 
 <div class="md-block">
 

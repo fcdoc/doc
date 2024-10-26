@@ -4,12 +4,9 @@ brief: Alarm events from various businesses or teams can be assigned to the corr
 
 # Configure Dispatch Strategy
 
----
-
 Each collaborative workspace should have at least one dispatch policy in place. Through this policy, alarms from different businesses or teams can be directed to the appropriate handling groups, and the responsible members can be notified through various means such as IM apps, SMS, voice messages, and robots. Additionally, it supports multi-stage notification configurations and automatic progression between stages. If no dispatch policy is configured for a collaborative workspace, incoming alarms will not trigger any notifications.
 
 ## Policy Configuration
----
 ### Time Filtering
 - By default, all faults are notified according to this policy at any time.
 - It supports selecting whether to dispatch based on specific days of the week, for instance, only handling faults from Monday to Friday, with Saturday and Sunday exceptions.
@@ -26,7 +23,6 @@ Each collaborative workspace should have at least one dispatch policy in place. 
 Visit [How to Configure Filter Conditions](https://docs.flashcat.cloud/zh/flashduty/how-to-filter) for more information.
 
 ## Dispatch configuration
----
 
 ### Dispatch Object
 - **Individual:** Specify certain members to receive the alarm, with support for multiple selections and no duplicates allowed.
@@ -78,7 +74,6 @@ You can also manually upgrade faults; visit [Upgrade and Dispatch Faults](https:
 > We do not recommend setting up an overly large collaborative workspace, especially when managing alerts for a large-scale business. This can lead to the maintenance of numerous dispatch strategies, increasing the long-term maintenance burden, confusion, and the likelihood of errors.
 
 ## Policy Configuration Principles
----
 General principles for configuring dispatch strategies should consider the following aspects:
 
 1. **Matching Notification Object Capabilities:** Ensure that notification objects have the ability and authority to handle alerts within the space. This means that only relevant individuals or teams should receive alerts related to their work, avoiding the delivery of irrelevant alerts to unrelated individuals.
@@ -86,7 +81,6 @@ General principles for configuring dispatch strategies should consider the follo
 3. **Alarm Escalation Mechanism:** When an alert remains unclaimed or unhandled for an extended period, an escalation mechanism should be in place. This could involve automatically escalating the alert to the next level of handler or team or sending the alert to multiple handlers to ensure timely resolution.
 
 ## FAQs
----
 
 |+| How to investigate if an alarm is generated but no notification is received?
 

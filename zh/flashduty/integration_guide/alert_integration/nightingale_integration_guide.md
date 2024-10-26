@@ -6,12 +6,9 @@ brief: >-
 
 # 夜莺/FlahCat集成
 
----
-
 通过 webhook 的方式将夜莺（Nightingale / n9e）或 Flashcat 告警事件推送到 Flashduty。当告警触发时，向 Flashduty 发送触发事件，当告警恢复时，向 Flashduty 发送恢复事件。
 
 ## 使用限制
----
 
 ### 在夜莺
 
@@ -19,12 +16,10 @@ brief: >-
 - 您的夜莺 server 必须能够访问域名 api.flascat.cloud，将告警推送到外网。
 
 ## 支持版本
----
 
 本文适配 **夜莺 V5 和 V6** 版本。
 
 ## 操作步骤
----
 
 ### 在 Flashduty
 
@@ -118,7 +113,6 @@ Headers = ["Content-Type", "application/json", "X-From", "N9E"]
 </div>
 
 ## 严重程度映射关系
----
 
 夜莺/Flashcat 到 Flashduty 告警等级映射关系：
 
@@ -129,7 +123,6 @@ Headers = ["Content-Type", "application/json", "X-From", "N9E"]
 | 3   | Info     | 提醒 |
 
 ## 常见问题
----
 
 |+| 为什么在Flashduty没有收到告警？
 

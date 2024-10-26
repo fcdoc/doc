@@ -4,12 +4,9 @@ brief: Configure routing rules to route alarm events of the same type or related
 
 # Configure Routing Rules
 
----
-
 When integrating alarm events via shared integration, routing rules can be set to distribute events of the same type or related business to the respective collaboration spaces for categorized processing, analysis, etc.
 
 ## How to Configure
----
 Configuration path: **Integration Center => Alarm Events => Specific Integration Type => Create Route**
 
 **1. Add Route:** Multiple routes can be added without a current limit, but it's advisable to keep them concise to maintain readability.
@@ -24,7 +21,6 @@ Configuration path: **Integration Center => Alarm Events => Specific Integration
 <img src="https://fcdoc.github.io/img/6OTNxniH4889Qyk8SdVuF3-vrYcF9bxAE2CGG329U0s.avif"  width="800">
 
 ## Configuration Example
----
 
 ### 1. Distribute the Same Business Group to the Same Space
 **Scenario:** Route alarms from the same business group in the FlashCat monitoring platform to a unified collaboration space.
@@ -33,7 +29,6 @@ Configuration path: **Integration Center => Alarm Events => Specific Integration
 <img src="https://fcdoc.github.io/img/6zBXABVJ4xFMBJd7MQ7oT8Sla6LZa19rMPbUjXJ4IT4.avif"  width="800">
 
 ## FAQs
----
 
 |+| Routing rules not taking effect?
 

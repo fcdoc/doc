@@ -290,9 +290,13 @@ Object.entries({
 										return await (
 											await get(0, new Request(url), new URL(url))
 										).text()
-									} catch (err) {}
+									} catch {}
 								}
-								return fStr(genUrl(cdn_v[0]))
+								for (const host of cdn_v) {
+									try {
+										return await fStr(genUrl(host))
+									} catch {}
+								}
 							},
 							pkg_md = "{pkg.md}",
 							at = "@",

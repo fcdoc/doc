@@ -4,11 +4,7 @@ brief: Check historical solutions for similar failures to address new issues pro
 
 # Understand historical failures
 
----
-
 Check historical solutions for similar failures to address new issues promptly.
-
----
 
 When responding to failures, having access to solutions for similar historical issues can significantly expedite the resolution process. The historical failure feature provides responders with a list of resolved similar failures. For those unfamiliar with the issue, they can quickly review the timeline, root causes, and solutions of past failures, and replicate relevant actions. Historical failures offer the necessary context for problem-solving and help prevent panic among responders encountering unfamiliar issues.
 
@@ -16,7 +12,6 @@ When responding to failures, having access to solutions for similar historical i
 > This feature is currently in beta and is only available in the professional version and higher subscription plans. If you need to enable this feature, please contact us at any time.
 
 ## View Similar Failures
----
 
 ### Console
 
@@ -53,7 +48,6 @@ When assessing similarity, we primarily consider the following factors:
 When searching for historical failures, the system only matches resolved similar failures within the current collaboration space.
 
 ## FAQs
----
 
 |+| How long ago can I review historical failures?
 

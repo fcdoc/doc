@@ -4,11 +4,8 @@ brief: 通过集成 Microsoft Teams 第三方应用，实现在 Microsoft Teams 
 
 # Microsoft Teams集成
 
----
-
 通过集成 Microsoft Teams 第三方应用，实现在 Microsoft Teams 内接收和响应告警的能力。
 ## 一、安装应用
----
 
 Microsoft Teams 集成现处于 Beta 阶段，在关联前您需要先完成以下操作：
 

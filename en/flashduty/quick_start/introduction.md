@@ -4,10 +4,7 @@ brief: Flashduty is positioned as a **one-stop alarm response platform** for ent
 
 # Introduction to Getting Started
 
----
-
 ## What is Flashduty?
----
 
 Flashduty is positioned as a **one-stop alarm response platform** for enterprises, helping developers, DevOps, operations, and business leaders to accelerate alarm response, enhance product experience, and minimize fault-related losses.
 
@@ -19,14 +16,12 @@ Flashduty is positioned as a **one-stop alarm response platform** for enterprise
 5. **Observable fault handling**: Establishes multi-dimensional analysis metrics for handling efficiency, driving a continuous decrease in fault resolution times.
 
 ## Why Choose Flashduty?
----
 1. **Prioritize user experience**: Offers a clean and intuitive interface, balancing ease of use with flexibility.
 2. **Robust functionality**: Richly integrated and highly scalable, with API prioritization, providing solutions for a variety of scenarios.
 3. **Rapid iteration**: Leverages real feedback from thousands of enterprise users in the Nightingale open-source community for swift updates.
 4. **High cost-performance**: Offers competitive pricing and exceptional customer service.
 
 ## How to Contact Us?
----
 **Scan the QR code to add the technical support WeChat account for technical assistance**:
 
 <img src="https://fcdoc.github.io/img/kZTm5bHIA9-B1cSv2EEh_TAgRE86cwewNUiyjgJ4ceo.avif" alt="drawing" width="200">
@@ -43,6 +38,5 @@ Login to the console’s top-right corner, navigate to **Support > Feedback**, a
 [contact-us@flashcat.cloud](mailto:contact-us@flashcat.cloud)
 
 ## Try It Now!
----
 
 Visit [the console](https://console.flashcat.cloud/login?from=docs-intro), complete the registration to receive a 14-day free trial, and experience it now!

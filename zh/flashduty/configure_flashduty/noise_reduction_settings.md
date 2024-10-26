@@ -4,10 +4,7 @@ brief: 通过告警聚合，可以将多条相似的活跃告警聚合到同一�
 
 # 配置告警降噪
 
----
-
 ## 设置告警聚合
----
 前往【协作空间详情】-【告警降噪】，可以设置 **告警聚合** 策略。当创建一个新的协作空间，默认关闭告警聚合，建议您手动开启并按需设置聚合策略。
 
 > [!NOTE]
@@ -33,7 +30,6 @@ brief: 通过告警聚合，可以将多条相似的活跃告警聚合到同一�
 <img src="https://fcdoc.github.io/img/V7G1hZj1IPX10Fsa_ekHR77oKs8POHsib5y2zg-Yjdw.avif" style="display: block; margin: 0 auto;" height="400">
 
 ## 查看聚合示例
----
 
 设置空间按照 **告警检查项** 进行聚合，系统依次收到5次告警通知，这些通知依次触发了告警和故障：
 
@@ -59,7 +55,6 @@ brief: 通过告警聚合，可以将多条相似的活跃告警聚合到同一�
 ![](https://fcdoc.github.io/img/jAkbujzJKD3war7mV4EyzsYvd-TZB1BX_wJ1PUGZKTM.avif)
 
 ## 常见问题
----
 
 |+| 故障的标题是否会随告警合入改变？
 

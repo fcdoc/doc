@@ -4,11 +4,8 @@ brief: Through the integration of third-party applications in Microsoft Teams, e
 
 # Microsoft Teams Integration
 
----
-
 Through the integration of third-party applications in Microsoft Teams, enable the capability to receive and respond to alerts within Microsoft Teams.
 ## 1. Install the Application
----
 
 The Microsoft Teams integration is currently in the Beta phase. Before proceeding with the association, you need to complete the following actions:
 

@@ -4,12 +4,9 @@ brief: Single sign-on allows you to easily integrate into a variety of different
 
 # Configure Single Sign-On
 
----
-
 FlashDuty currently offers single sign-on (SSO) support for SAML2.0, OIDC, CAS, and LDAP (available only in the private version), making it effortless to integrate with various applications and platforms. These functionalities enable rapid sharing of identity information across platforms. Users need to authenticate only once on a single platform to access multiple related applications and services, eliminating the need for individual authentication for each app. This not only enhances work efficiency and user experience but also streamlines the login process and fortifies security.
 
 ## Configure SAML Protocol
----
 Configuration path: **Access Control => Single Sign-On => Enable => Settings => Select SAML2.0 Protocol Type**
 
 |Field|Description|
@@ -22,7 +19,6 @@ Configuration path: **Access Control => Single Sign-On => Enable => Settings => 
 |Flashcat Service Provider Information|**Service Provider Metadata:**<br>**Assertion Consumer Service URL:** The assertion address used for SSO when called by the identity provider|
 
 ## Configure OIDC Protocol
----
 Configuration path: **Access Control => Single Sign-On => Enable => Settings => Select OIDC Protocol Type**
 
 |Field|Description|
@@ -37,7 +33,6 @@ Configuration path: **Access Control => Single Sign-On => Enable => Settings => 
 |Flashcat Service Provider Information|**Redirect URL:** The callback URL for the identity provider to redirect to Kuaimao Nebula.<br>**Supported Signature Algorithms:** RS256, RS384, RS512, ES256, ES384, ES512, PS256, PS384, PS512 (HS256 not supported).<br>**Requested Scope:** openid, email, phone |
 
 ## Configure CAS Protocol
----
 Configuration path: **Access Control => Single Sign-On => Enable => Settings => Select CAS Protocol Type**
 
 |Field|Description|
@@ -51,7 +46,6 @@ Configuration path: **Access Control => Single Sign-On => Enable => Settings => 
 |Flashcat Service Provider Information|**Redirect URL:** The callback URL for the identity provider to redirect to Kuaimao Nebula
 
 ## Configure LDAP Protocol
----
 > [!NOTE]
 > LDAP Single sign-on, only supported by **privatized version**
 
@@ -81,7 +75,6 @@ Configure SSO Single Sign-On via [Keycloak Configuration](https://docs.flashcat.
 Configure SSO Single Sign-On via [Ldap Configuration](https://docs.flashcat.cloud/zh/flashduty/introduction) for FlashDuty.
 
 ## FAQs
----
 
 |+| What is SSO single sign-on?
 

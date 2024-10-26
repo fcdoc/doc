@@ -4,10 +4,7 @@ brief: Understand the scenarios and configuration methods for using custom opera
 
 # Custom Operations
 
----
-
 ## Usage Scenarios
----
 
 Custom operations are essentially Webhook calls. You can add custom operations for different collaboration space issues and manually trigger them in the fault details to facilitate rapid troubleshooting or information synchronization.
 
@@ -18,7 +15,6 @@ Common scenarios for using custom operations:
 4. **Update Status Page**: When it is confirmed that a fault affects online services, trigger an update to an external Status Page to notify your customers or stakeholders promptly.
 
 ## Configure Custom Operations
----
 
 1. Login to the console and navigate to **Integration Center > Webhook**
 2. Click to add a **Custom Operation** integration

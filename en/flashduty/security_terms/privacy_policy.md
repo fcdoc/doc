@@ -4,8 +4,6 @@ brief: Understand the Flashduty User Agreement of Kuaimao Nebula Technology Co.,
 
 # Flashduty User Agreement
 
----
-
 Last updated: October 10, 2022
 
 Dear User:
@@ -14,7 +12,6 @@ This "Flashcat Nebula User Service Agreement" (hereinafter referred to as "this 
 Please carefully read and fully understand each term of this Agreement, as well as the separate agreements or rules applicable when activating or using a specific Kuaimao Nebula service (hereinafter referred to as "other relevant agreements and rules"), especially those highlighted in bold or underlined, which are intended to draw your attention to key points.
 
 ## **1 General Terms**
----
 
 1.1 You confirm that: before using this service, you have fully read, understood, and agreed to all the contents of this Agreement and other relevant agreements and rules (especially those highlighted in bold and/or underlined). By selecting "Agree" on this website (specific wording may be found on the registration page) and completing the registration process, or by any other means choosing to use this service, you agree to comply with all terms under all the aforementioned agreements and/or rules and be bound by them.
 
@@ -25,7 +22,6 @@ Please carefully read and fully understand each term of this Agreement, as well 
 1.4 Kuaimao Nebula only provides technical services and technical support related to the Kuaimao Nebula Service and is a neutral provider of network services such as information storage space and related technical services. Any products, services, and related content such as websites, applications, etc. that you own and upload, store, or manage, control, or operate in any form through Kuaimao Nebula are developed and operated by you and you bear full responsibility for them. Kuaimao Nebula does not assume any responsibility for any such products, services, and related content.
 
 ## **2 User Service Account**
----
 
 ### **2.1 Account Registration**
 
@@ -65,7 +61,6 @@ If you are a minor or a person with limited capacity for civil conduct, you do n
 2.4.2 You understand and agree that if you have not logged in to this website using your email address, mobile phone number, or other methods and passwords recognized by this website for 12 consecutive months, and there are no unexpired services under your account, then Kuaimao Nebula can log out and clean up your login name on this website. After this operation, you will no longer be able to log in to this website with this login name.
 
 ## **3 Service Rules**
----
 
 3.1 Instructions you issue to Kuaimao Nebula in the following ways are irrevocable and binding instructions issued by you. You are solely responsible for any consequences and liabilities arising from Kuaimao Nebula's execution of such instructions:
 
@@ -101,7 +96,6 @@ If you are a minor or a person with limited capacity for civil conduct, you do n
 3.9.2 You are aware and acknowledge that each affiliated company of Kuaimao Nebula is a third-party beneficiary of the terms of this Agreement and other relevant agreements and rules, and each such affiliated company has the right to directly enforce and rely on the terms of this Agreement and other relevant agreements and rules conferring benefits upon them. In addition, no other third party shall be a third-party beneficiary of the terms of this Agreement and other related agreements and rules.
 
 ## **4 Your Rights and Obligations**
----
 
 4.1 Kuaimao Nebula will provide you with network technology and information services, and will offer technical support, customer consultation, and other services during the provision of services to you. For details of these services, please refer to the relevant pages on this website.
 
@@ -156,7 +150,6 @@ If you violate the above commitments, in addition to the measures such as deleti
 4.6 You are aware and acknowledge that installing and using pirated software on Kuaimao Nebula services is prohibited and violates this service agreement. At the same time, you should take all necessary and appropriate security protection measures for the computer information system you use in accordance with relevant national regulations, including but not limited to installing special computer information system security products approved by the state.
 
 ## **5 Rights and Obligations of Kuaimao Nebula**
----
 
 5.1 Based on the services you choose and the payment conditions, Kuaimao Nebula will provide you with qualified network technology and information services.
 
@@ -184,7 +177,6 @@ If you violate the above commitments, in addition to the measures such as deleti
 Should your account funds be frozen in accordance with the aforementioned provisions, Kuaimao Nebula will notify you via email, in-site messages, SMS, or phone calls, either singly or in combination. You will have the opportunity to appeal in accordance with the established procedures. If your appeal is submitted in accordance with Article 3.8 of this Agreement and is subsequently reviewed and approved by Kuaimao Nebula, the fund freezing measures will be immediately lifted. Conversely, if you fail to appeal within the stipulated timeframe or your appeal is not approved by Kuaimao Nebula, you acknowledge that Kuaimao Nebula reserves the right to indefinitely freeze the funds or return the frozen amounts to the original source of the recharge, which may include, but is not limited to, bank accounts, WeChat accounts, Alipay accounts, and others.
 
 ## **6 Personal Information Protection**
----
 
 You are aware and agree that by accepting the terms of this Agreement or by using the Service, you consent to Kuaimao Nebula collecting, using, and disclosing your personal information in accordance with the terms outlined below.
 
@@ -225,7 +217,6 @@ Kuaimao Nebula provides security measures in line with current technology to pre
 6.8.2 Use your personal information for the purpose of providing enhanced or analytical statistical functions, or use or disclose your personal information for sales or promotional purposes.
 
 ## **7 System Interruption or Failure**
----
 
 Under certain circumstances, the Kuaimao Nebula service system may experience disruptions that prevent you from using the service, resulting in corresponding consequences. Kuaimao Nebula will not be held liable for these situations:
 
@@ -239,7 +230,6 @@ Under certain circumstances, the Kuaimao Nebula service system may experience di
 - 8. Other circumstances that are not attributable to Kuaimao Nebula, that are beyond Kuaimao Nebula's control, or that are not reasonably foreseeable.
 
 ## **8 Scope of Liability and Limitation of Liability**
----
 
 8.1 Kuaimao Nebula's liability is limited to the scope outlined in this Agreement.
 
@@ -252,14 +242,12 @@ Under certain circumstances, the Kuaimao Nebula service system may experience di
 8.5 In any event, unless otherwise stipulated in this Agreement or otherwise agreed upon between Kuaimao Nebula and you for a specific product and/or service, you agree that Kuaimao Nebula's total liability for compensation under this Agreement and other relevant agreements and rules shall not exceed the total service fees charged to you.
 
 ## **9 Intellectual Property Rights**
----
 
 9.1 Except for third-party products or services, all content on this website, including but not limited to the content of related products or services, as well as images, logos, files, information, materials, structures, page designs, etc., are owned by Kuaimao Nebula or its affiliates and are protected by intellectual property rights, including but not limited to copyrights, trademark rights, patent rights, and trade secrets. Kuaimao Nebula reserves the right to seek legal remedies in accordance with applicable laws and the provisions of this Agreement for any infringement of its intellectual property rights.
 
 9.2 Without the written permission of Kuaimao Nebula or its affiliates, no one may use, modify, copy, disseminate, distribute, or publish any part of the products, services, software, programs, information, etc. on this website in any way or for any reason, including but not limited to bundling with other products for sale, or using super links or other means for commercial purposes.
 
 ## **10 Confidentiality**
----
 
 10.1 Under this Agreement, the receiving party ("receiver") shall keep confidential any information received from the disclosing party ("disclosure party"), which is marked or can reasonably be considered as confidential or proprietary information of the disclosure party (including, but not limited to, technical and commercial information, hereinafter referred to as "confidential information"). The receiver shall not use such information for any purpose outside the scope of this Agreement without the prior written consent of the disclosure party. The receiver shall handle the confidential information of the disclosure party with the same degree of care (and not less than the duty of reasonable care) as it would with its own confidential information.
 
@@ -275,7 +263,6 @@ Under certain circumstances, the Kuaimao Nebula service system may experience di
 10.4 The confidentiality obligations of the parties shall remain in effect during the term of this Agreement and shall continue to be effective after the expiration of the term until the information is no longer confidential.
 
 ## **11 Complete Agreement**
----
 
 11.1 This Agreement is composed of the terms of this Agreement and the rules announced on this website. In the event of any discrepancy in the interpretation of the terms used in this Agreement and the rules announced on this website, the terms of this Agreement shall prevail.
 
@@ -286,14 +273,12 @@ Under certain circumstances, the Kuaimao Nebula service system may experience di
 11.4 If any part of this Agreement is deemed invalid or unenforceable by a court of competent jurisdiction, this shall not affect the validity or enforceability of the remaining provisions.
 
 ## **12 Notice Delivery**
----
 
 12.1 You understand and acknowledge that Kuaimao Nebula may, at its discretion and upon reasonable judgment, send you notices through web announcements, emails, SMS, or conventional mail. Kuaimao Nebula presumes that the contact information you provide to this website is complete, accurate, and currently valid; such notices shall be deemed to have been delivered to the recipient on the date of dispatch.
 
 12.2 Unless otherwise stipulated in this Agreement or specified in a separate agreement explicitly concluded between Kuaimao Nebula and you, any notices you send to Kuaimao Nebula must be delivered to the official contact information of Kuaimao Nebula, such as its mailing address, fax number, and email address.
 
 ## **13 Governing Law and Dispute Resolution**
----
 
 13.1 The place of signing this Agreement is Haidian District, Beijing.
 

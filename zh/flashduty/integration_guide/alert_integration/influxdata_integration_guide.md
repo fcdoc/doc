@@ -4,12 +4,9 @@ brief: 通过 webhook 的方式同步 Influxdata 告警事件到快猫星云，�
 
 # Influxdata 集成
 
----
-
 通过 webhook 的方式同步 Influxdata 告警事件到 Flashduty，实现告警事件自动化降噪处理。
 
 ## 在 Flashduty
----
 您可通过以下2种方式，获取一个集成推送地址，任选其一即可。
 
 ### 使用专属集成
@@ -37,7 +34,6 @@ brief: 通过 webhook 的方式同步 Influxdata 告警事件到快猫星云，�
     5. 完成。
 
 ## 在 Influxdata
----
 <div class="md-block">
 
 1. 登录您的 Influxdata 控制台，进去 Alerting > Alert Rules 页面
@@ -50,7 +46,6 @@ brief: 通过 webhook 的方式同步 Influxdata 告警事件到快猫星云，�
 5. 完成
 
 ## 状态对照
----
 <div class="md-block">
 
 Influxdata 告警事件到 Flashduty 告警等级映射关系：

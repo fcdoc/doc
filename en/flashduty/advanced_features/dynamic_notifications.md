@@ -4,12 +4,9 @@ brief: Realize dynamic dispatch of alerts based on tags and integrate with your 
 
 # Dynamically set dispatch personnel
 
----
-
 Realize dynamic dispatch of alerts based on tags and integrate with your proprietary system.
 
 ## Adaptation scenarios
----
 
 **The responsible party for the alert is maintained and frequently adjusted in the source monitoring system, with the hope of timely synchronization to Flashduty.**
 
@@ -26,7 +23,6 @@ Scenario 3:
 Customer C has a self-developed monitoring system with many alerting policies, each set to notify a specific WeChat group. The customer decided to migrate incident response to Flashduty but wants to retain the relationship between the original monitoring system's policies and the WeChat groups, and to dynamically notify the WeChat groups of alerts based on this relationship.
 
 ## Implementation methods
----
 
 **Add specific tags or Query parameters to override the dispatch targets in Flashduty for dynamic dispatching.**
 
@@ -47,7 +43,6 @@ Parameter format as follows:
 > In the matched dispatch strategy, only the dispatch targets and group chat destinations change, while other content remains the same, similar to a template dispatch strategy.
 
 ## Push example
----
 
 ### Set a template dispatch policy
 
@@ -88,7 +83,6 @@ As shown in the figure below, the target fault is normally triggered and dispatc
 ![](https://fcdoc.github.io/img/WHCu6fjd-r-vUtUeAhxzLsFFwBNaf5gIG_gQ4lcHAZ4.avif)
 
 ## FAQs
----
 
 |+| What should I do if my monitoring system lacks these tags?
 

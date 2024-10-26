@@ -4,8 +4,6 @@ brief: Alarm events can be pushed to Kuaimao StarCloud via the PagerDuty protoco
 
 # PagerDuty Integration
 
----
-
 Synchronization via webhook
 
 Flashduty has implemented the PagerDuty Events API, with full compatibility for inputs and responses. Thus, you can push alarm events to Flashduty using the PagerDuty protocol to automate noise reduction processing.
@@ -13,7 +11,6 @@ Flashduty has implemented the PagerDuty Events API, with full compatibility for 
 Similarly, for alarm systems that already support event forwarding to PagerDuty (such as ElastAlert), simply modify the destination address to route events to Flashduty using the PagerDuty protocol.
 
 ## In Flashduty
----
 使用专属集成
 
 ### Use Proprietary Integrations
@@ -41,7 +38,6 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## In PagerDuty
----
 ### Request Address
 
 ```

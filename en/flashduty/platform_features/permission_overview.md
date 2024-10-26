@@ -4,15 +4,12 @@ brief: Understand the difference between feature permissions and data permission
 
 # Permissions, Roles
 
----
-
 Flashduty employs two types of permissions: functional permissions and data permissions, which are utilized in conjunction across different functional scenarios.
 
 > [!WARN]
 > You must possess both functional and data permissions to manipulate certain data objects.
 
 ## Function Permissions
----
 > [!NOTE]
 > Function permissions, also known as operational permissions, determine which system features or operations a user can access.
 
@@ -38,7 +35,6 @@ The following table lists the functional permissions that can currently be contr
 > Note that **all other functions** not listed in the table *(such as managing collaboration spaces)* are permissions that all users have by default (even if a user is not assigned a role) and do not require manual control.
 
 ## Data Permissions
----
 > [!NOTE]
 > Data permissions, also known as access permissions, control the scope of data that a user can access or view.
 
@@ -55,7 +51,6 @@ If you lack data permissions for a corresponding resource, the system will provi
 ![](https://fcdoc.github.io/img/dCWMN_bb4xQtkzwoFjba1jqNWm_4J0RjzhIubwbGtCw.avif)
 
 ## FAQs
----
 
 |+| I am already an account administrator; why can't I modify the collaboration space settings?
 

@@ -4,12 +4,9 @@ brief: 1	Synchronize Tencent Cloud Log Service CLS monitoring alarm events to Ku
 
 # 2	Integration of Tencent Cloud Log Service CLS
 
----
-
 3	Synchronize Tencent Cloud Log Service CLS monitoring alarm events to Flashduty via webhook, realizing automated noise reduction processing for alarm events.
 
 ## In Flashduty
----
 使用专属集成
 
 ### Use Proprietary Integrations
@@ -37,7 +34,6 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## CLS in Tencent Cloud
----
 
 **Step 1: Configure Notification Channel Group**
 
@@ -81,7 +77,6 @@ When you need to route alarms to different collaboration spaces based on the pay
 </code></pre></div>
 
 ## Status Comparison
----
 9	<div class="md-block">
 
 | Tencent Cloud CLS Monitoring |  Flashduty    | state

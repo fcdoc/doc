@@ -5,12 +5,9 @@ brief: >-
 
 # Fault Silencing and Suppression
 
----
-
 FlashDuty affords silent and suppression mechanisms to assist enterprises in optimizing the alarm process. The former temporarily mutes alarm notifications under specific conditions, while the latter automatically prevents the issuance of duplicate or anticipated alarms under certain conditions, collectively reducing disturbances and enhancing the efficiency and accuracy of the alarm system.
 
 ## Silent Rules
----
 
 During scheduled system maintenance windows or other specific time frames, silent rules can be预先设定 in advance to reduce unnecessary notifications.
 Configuration path: **Collaboration Space Details => Noise Reduction Configuration => Silent Rules**
@@ -44,7 +41,6 @@ Quick Silence refers to the rapid creation of **temporary or single** silent rul
 > Entering and operating Quick Silence from the same fault details edits the original rule and does not create a new one.
 
 ## Suppression Rules
----
 Optimizes the notification process in specific fault scenarios. For instance, when a Critical-level fault occurs, the system suppresses subsequent Info or Warning-level fault notifications related to it, avoiding redundancy and ensuring focus on the most urgent issues, thus achieving effective and targeted notifications. Configuration path: **Collaboration Space Details => Noise Reduction Configuration => Suppression Rules**.
 
 ### Suppression Conditions

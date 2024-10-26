@@ -4,14 +4,11 @@ brief: Understand the Flashduty terms of service of Kuaimao Nebula Technology Co
 
 # Flashduty Terms of Service
 
----
-
 Last updated: 2023-02-10
 
 Welcome to sign this "Kuaimao Nebula Product Service Agreement" (hereinafter referred to as "this Agreement") with Beijing Kuaimao Nebula Technology Co., Ltd. (hereinafter referred to as "Kuaimao Nebula") and use Kuaimao Nebula services!
 
 ## **General Terms**
----
 
 1.1. You confirm that: before using this service, you have fully read, understood and accepted all the contents of this agreement and other relevant agreements and rules (especially the contents marked in bold and/or underlined). By selecting "Agree" on the website (see the registration page for specific wording) and completing the purchase process or choosing to use the service in any other way, you agree to abide by all the terms under all the aforementioned agreements and/or rules and are willing to be bound by them. constraint.
 
@@ -22,7 +19,6 @@ Welcome to sign this "Kuaimao Nebula Product Service Agreement" (hereinafter ref
 1.4. Kuaimao Nebula only provides you with technical services and technical support related to Kuaimao Nebula services, and is a neutral provider of network services such as information storage space and related technical services. Any products, services, and related content such as websites, applications, etc. that you own and upload, store, or manage, control, or operate in any form through Kuaimao Nebula are developed and operated by you and you bear full responsibility for it. Maoxingyun does not assume any responsibility for any such products, services and related content.
 
 ## **General Terms of Service**
----
 
 ### **1. Contracting Parties and Scope of Agreement**
 

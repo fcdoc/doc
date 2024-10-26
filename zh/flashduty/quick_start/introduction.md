@@ -4,10 +4,7 @@ brief: Flashduty定位为企业**一站式告警响应平台**，我们帮助开
 
 # 入门介绍
 
----
-
 ## 什么是Flashduty？
----
 
 Flashduty定位为企业**一站式告警响应平台**，我们帮助开发者、DevOps、运维以及业务负责人加快告警响应，提升产品体验，减少故障损失。
 
@@ -19,14 +16,12 @@ Flashduty定位为企业**一站式告警响应平台**，我们帮助开发者�
 5. **故障处理可观测**：建立处理效率多维分析指标，推动故障处理时间持续下降。
 
 ## 为什么选择Flashduty？
----
 1. **体验优先**：提供简洁易操作的交互，兼顾易用性与灵活性。
 2. **功能强大**：丰富集成，高度扩展，API先行。提供各类场景的解决方案。
 3. **快速迭代**：接收夜莺开源社区上千家企业用户的真实反馈，快速迭代。
 4. **高性价比**：提供合理的价格与优质的客户服务。
 
 ## 如何联系我们？
----
 **扫码添加技术支持企业微信，获取技术支持**：
 
 <img src="https://fcdoc.github.io/img/kZTm5bHIA9-B1cSv2EEh_TAgRE86cwewNUiyjgJ4ceo.avif" alt="drawing" width="200">
@@ -43,6 +38,5 @@ Flashduty定位为企业**一站式告警响应平台**，我们帮助开发者�
 [contact-us@flashcat.cloud](mailto:contact-us@flashcat.cloud)
 
 ## 现在就去试用！
----
 
 访问[控制台](https://console.flashcat.cloud/login?from=docs-intro)，完成注册即赠送14天免费试用时长，现在就去体验吧！

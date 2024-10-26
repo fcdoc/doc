@@ -4,12 +4,9 @@ brief: Flashduty's dispatch strategies, silencing, suppression, routing, and lab
 
 # Configure Filter Conditions
 
----
-
 Filter conditions in Flashduty are used to match different alerts, incidents, or events. By using filter conditions, we can selectively operate on specific targets. This article will guide you through the design and configuration of filter conditions.
 
 ## Where to Use Filter Conditions?
----
 
 Filter conditions are applied in the following scenarios:
 
@@ -21,7 +18,6 @@ Filter conditions are applied in the following scenarios:
 6. **Label Enhancement**: Set filter conditions to match specific alerts, which will have labels generated according to the rules if they meet the conditions.
 
 ## How to Configure Filter Conditions?
----
 
 ### Design of Rules
 
@@ -93,7 +89,6 @@ For example:
 When the value does not conform to any of the above formats, it is considered an __exact match__. In this case, only a complete string match is considered a successful match.
 
 ## FAQs
----
 
 |+| Why isn't the system prompting me with optional tags?
 

@@ -4,8 +4,6 @@ brief: Understand the most common issues when using Flashduty
 
 # FAQs
 
----
-
 |+| What is FlashDuty?
 
     FlashDuty is positioned as a one-stop alarm response platform. We offer IT professionals on-duty services, alarm noise reduction, upgrading, and automation capabilities to accelerate enterprise fault response and minimize losses.

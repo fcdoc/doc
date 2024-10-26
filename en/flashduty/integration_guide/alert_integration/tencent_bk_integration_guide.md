@@ -4,12 +4,9 @@ brief: Synchronize Blue Whale Cloud monitoring events with Flashduty via webhook
 
 # Blue Whale Zhiyun Integration
 
----
-
 Synchronize Blue Whale Cloud monitoring events with Flashduty via webhook to automate noise reduction for alarm events.
 
 ## In Flashduty
----
 使用专属集成
 
 ### Use Proprietary Integrations
@@ -37,7 +34,6 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## In Blue Whale Zhiyun
----
 The following content has been validated in the __BlueWhale V6/7 versions__, and official support for V5 and earlier versions has been discontinued. It is recommended that you upgrade.
 
 BlueWhale's alert strategy can trigger a __Processing Package__, which can be integrated with peripheral systems to achieve complex functionalities. We will first create a processing package, configure the FlashDuty callback address, then edit the alert strategy to associate actions with this processing package, thereby enabling automatic alert notifications to be sent to FlashDuty. The detailed steps are as follows:
@@ -52,7 +48,6 @@ BlueWhale's alert strategy can trigger a __Processing Package__, which can be in
 <div id="!"><ol><li>Enter the __ Configuration - Policy __ page, select an existing policy to edit, or create a new alarm policy;</li><li> Scroll down to the __ Alarm Processing __ section, select `Send To FlashDuty` processing package for all three scenarios, and turn off __ Defense Rules __ , as shown below:</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/yeCaYyAFIHIaZZL6z7_gTPHz-vjF6nCl5Yw8rv1t9SI.avif"><ol start="3"><li> Submit and save, complete;</li><li> For other alarms that you want to push to FlashDuty repeat the above steps.</li></ol></div>
 
 ## Status Comparison
----
 <div class="md-block">
 
 | Blue Whale Zhiyun |  Flashduty  | state |

@@ -4,10 +4,7 @@ brief: 通过自定义配置模版，可以实现个性化通知内容的需求
 
 # 配置通知模版
 
----
-
 ## 什么场景会使用模板？
----
 系统在__分派故障__时，使用模板渲染 [Incident](#Incident) 并触发通知，分派可能发生于以下场景：
 
 1. 手动创建故障并分派
@@ -23,7 +20,6 @@ brief: 通过自定义配置模版，可以实现个性化通知内容的需求
 - 如果您期望引入更多函数，欢迎提交 merge request
 
 ## 我可以引用哪些变量？
----
 **引用变量示例**：
 
 ```
@@ -117,7 +113,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 `Labels` | map[string]string | 否 | 标签 KV，Key 和 Value 均为字符串
 
 ## 常见问题
----
 1. **我如何知道`Labels`具体有哪些标签信息？**
 
 - 手动创建的故障没有标签；
@@ -216,7 +211,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 以下为各通知渠道具体说明。
 
 ## 飞书应用
----
 您需要预先配置 __集成中心-即时消息-飞书__ 集成，才能发送消息卡片。如果不设置自定义内容，将采用系统默认模板，渲染全部标签信息：
 
 ```
@@ -259,7 +253,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 
 ## 钉钉应用
----
 您需要预先配置 __集成中心-即时消息-钉钉__ 集成，才能发送消息卡片。如果不设置自定义内容，将采用系统默认模板，渲染全部标签信息：
 
 ```
@@ -301,7 +294,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 
 ## 企业微信应用
----
 
 您需要预先配置 __集成中心-即时消息-企业微信__ 集成，才能发送消息卡片。如果不设置自定义内容，将采用系统默认模板，仅渲染常见标签信息：
 
@@ -337,7 +329,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 **注意，企业微信限制了卡片长度，在模板渲染区域，您最多可以渲染不超过 8 行内容，超过 8 行的部分将被隐藏**
 
 ## Slack 应用
----
 您需要预先配置 __集成中心-即时消息- Slack__ 集成，才能发送消息卡片。如果不设置自定义内容，将采用系统默认模板，仅渲染常见标签信息：
 
 ```
@@ -380,7 +371,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 
 ## Microsoft Teams 应用
----
 您需要预先配置 __集成中心-即时消息- Microsoft Teams__ 集成，才能发送消息卡片。如果不设置自定义内容，将采用系统默认模板，仅渲染常见标签信息：
 
 ```
@@ -423,7 +413,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 
 ## Microsoft Teams 应用
----
 您需要预先配置 __集成中心-即时消息- Microsoft Teams__ 集成，才能发送消息卡片。如果不设置自定义内容，将采用系统默认模板，仅渲染常见标签信息：
 
 ```
@@ -466,7 +455,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 
 ## 飞书机器人
----
 飞书机器人仅支持发送纯文本消息。
 
 - 消息__最大长度为4000字节，超出后截断发送__；
@@ -488,7 +476,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 
 ## 钉钉机器人
----
 钉钉机器人仅支持发送 Markdown 消息（[语法限制](https://open.dingtalk.com/document/robots/custom-robot-access#title-7ur-3ok-s1a)）。
 
 - 消息__最大长度为4000字节，超出后截断发送__；
@@ -498,7 +485,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 {{fireReason .}}INC [#{{.Num}}]({{.DetailUrl}}) {{toHtml .Title}}
 
----
 - 协作空间：{{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}
 - 严重程度：{{$s := colorSeverity .IncidentSeverity}}{{toHtml $s}}
 - 触发时间：{{date "2006-01-02 15:04:05" .StartTime}}
@@ -507,12 +493,10 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 告警对象：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
 - 故障描述：{{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
 - 分派人员：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
----
 <br>[详情]({{.DetailUrl}})|[认领]({{.DetailUrl}}?ack=1)
 ```
 
 ## 企业微信机器人
----
 企微机器人仅支持发送 Markdown 消息（[语法限制](https://developer.work.weixin.qq.com/document/path/91770#markdown%E7%B1%BB%E5%9E%8B)）。
 
 - 消息__最大长度为4000字节，超出后截断发送__；
@@ -533,7 +517,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 
 ## Telegram 机器人
----
 - 配置国内能访问的Telegram服务地址；
 - 消息__最大长度为4096字符，超出后不发送__；
 - 如果文本中包含`<br>`，渲染时会__先删除空行，再将`<br>`替换为换行符__；
@@ -555,7 +538,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 
 ## Slack 机器人
----
 - 消息__可以发送长度为15000左右字符，超出后截断发送__；
 - 如果文本中包含`<br>`，渲染时会__先删除空行，再将`<br>`替换为换行符__；
 - 如果不设置自定义内容，将采用系统默认模板，仅展示关键信息：
@@ -576,7 +558,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 
 ## Zoom 机器人
----
 - 消息__可以发送长度为4000左右字符，超出后截断发送__；
 - 如果文本中包含`<br>`，渲染时会__先删除空行，再将`<br>`替换为换行符__；
 - 消息格式 __遵循Zoom消息格式__，当前机器人应用不支持Markdown，其他格式可以参考官网: https://developers.zoom.us/docs/team-chat-apps/customizing-messages/
@@ -675,7 +656,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 
 ## 短信
----
 如果不设置自定义内容，将采用系统默认模板渲染通知：
 
 ```
@@ -683,7 +663,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 
 ## 邮件
----
 如果不设置自定义内容，将采用系统默认模板渲染通知：
 
 ```

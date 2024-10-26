@@ -4,10 +4,7 @@ brief: You can customize the account settings and configure personal notificatio
 
 # Personal Preference Settings
 
----
-
 ## Account Center
----
 - Access the Account Center: Hover over the user icon in the top right corner and select Account Settings.
 - Display personalized account settings and options to configure personal contact information, account password, APP Key, and notification methods.
 - You can configure the following items in your account settings:
@@ -18,14 +15,12 @@ brief: You can customize the account settings and configure personal notificatio
 ![](https://fcdoc.github.io/img/CqPJGldQsfI5kyyYGAFno50wbTJB4VV0Wz4Hb8IqXpc.avif)
 
 ## Account Information
----
 - Account identities are divided into two types: main account and member account.
 - Account nickname supports both Chinese and English, primarily used for display purposes.
 - Verification code is required when changing the email or mobile phone number.
 - Regions currently supported by mobile phone numbers include Mainland China, the United States, Canada, Indonesia, Germany, Malaysia, Australia, Singapore, Thailand, Russia, South Korea, Saudi Arabia, Vietnam, and Japan.
 
 ## APP key
----
 - APP key is crucial credential information for API requests.
 - Each account can create up to 5 APP keys. Deleting a key releases the quota; please distribute and use them sensibly.
 - The APP key value is only displayed upon successful creation; please keep it secure.
@@ -35,7 +30,6 @@ brief: You can customize the account settings and configure personal notificatio
 > - When deleting an APP key, ensure no business is using it. Once deleted, any business that previously used the key will become ineffective.
 
 ## Notification Methods
----
 - Different notification methods can be set for different alert levels.
 - Notifications will be sent according to personal configurations only **when the fault is directly assigned to an individual, or assigned to an individual via a dispatch policy with single chat enabled and personal preferences set**.
 - When configuring IM applications like DingTalk, WeChat, or Feishu, you must first associate the application to receive notifications.

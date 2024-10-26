@@ -4,12 +4,9 @@ brief: By configuring duty rules, it is possible to automate scheduling and noti
 
 # Configure Duty Rules
 
----
-
 Duty rules are a core component of a company's internal management approach, helping businesses to arrange staff working hours rationally, ensuring business continuity and efficiency. FlashDuty's duty schedule offers a variety of duty rules that can be tailored to fit the actual business needs of an enterprise.
 
 ## Duty Schedule
----
 1. On the duty management page, you can view a summary of all your duty assignments.
 2. Principal members can see all duty schedules or only those they manage.
 3. Before setting up duty rules, it is necessary to first create a duty list, which can also be associated with a team for maintenance and planning by its members.

@@ -4,12 +4,9 @@ brief: Understand the usage of fault lists, detail pages, including aggregate vi
 
 # Search and view faults
 
----
-
 Connect all company alarm events to Flashduty to monitor and manage alarms centrally.
 
 ## Fault List
----
 
 Flashduty offers two entry points for viewing the fault list: one within the collaboration space and another under the fault management menu. The difference lies in the fact that under the fault management menu, you can view faults across multiple collaboration spaces, even those of the entire company.
 
@@ -55,7 +52,6 @@ Under the **Settings** tab, select or disable the display of the following conte
 3. **Tags**: You can filter and select tags. If a fault does not have a particular tag, it will display as "–".
 
 ## Fault Details
----
 
 Fault details are the primary entry point for fault investigation, presenting all available information. Especially on the fault overview page, Flashduty highlights the most essential information you need.
 
@@ -70,7 +66,6 @@ Fault details are the primary entry point for fault investigation, presenting al
 You can switch to the top tabs to view more detailed **related alarms**, **timelines**, and **historical changes** for fault root cause analysis. For closed faults, the system also displays a **problem resolution** page to show the fault's root cause and solution.
 
 ### FAQs
----
 
 |+| The console error message reads: "Due to the large volume of data, we are unable to respond to your request promptly..."
 

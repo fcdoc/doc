@@ -4,12 +4,9 @@ brief: 通过 webhook 的方式同步 Sentry 告警事件到快猫星云，实�
 
 # Sentry告警事件
 
----
-
 通过 webhook 的方式同步 Sentry 告警事件到快猫星云，实现告警事件自动化降噪处理。
 
 ## 在 Flashduty
----
 您可通过以下2种方式，获取一个集成推送地址，任选其一即可。
 
 ### 使用专属集成
@@ -37,7 +34,6 @@ brief: 通过 webhook 的方式同步 Sentry 告警事件到快猫星云，实�
     5. 完成。
 
 ## 在 Sentry
----
 <div class="md-block">
 
 ## 一、前置说明

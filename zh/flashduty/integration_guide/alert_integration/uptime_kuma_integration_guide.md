@@ -4,12 +4,9 @@ brief: 通过 webhook 的方式同步 Uptime Kuma 告警事件到快猫星云，
 
 # Uptime Kuma 集成
 
----
-
 通过 webhook 的方式同步 Uptime Kuma 告警事件到 Flashduty，实现告警事件自动化降噪处理。
 
 ## 在 Flashduty
----
 您可通过以下2种方式，获取一个集成推送地址，任选其一即可。
 
 ### 使用专属集成
@@ -37,7 +34,6 @@ brief: 通过 webhook 的方式同步 Uptime Kuma 告警事件到快猫星云，
     5. 完成。
 
 ## 在 Uptime Kuma
----
 **步骤 1：设置通知渠道**
 
 1. 进入 `Settings -> Notifications` 页面，单击 Setup 进行编辑，如下图所示；
@@ -62,7 +58,6 @@ brief: 通过 webhook 的方式同步 Uptime Kuma 告警事件到快猫星云，
 </div>
 
 ## 状态对照
----
 <div class="md-block">
 
 Uptime Kuma 到 Flashduty 告警等级映射关系：

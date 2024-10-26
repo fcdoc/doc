@@ -4,12 +4,9 @@ brief: By integrating third-party enterprise WeChat applications, the ability to
 
 # Enterprise WeChat Integration
 
----
-
 By integrating third-party enterprise WeChat applications, the ability to receive and respond to alerts within the enterprise WeChat client is realized.
 
 ## 1. Install the Application
----
 
 1. Visit [the enterprise WeChat management backend](/0) - **Application Management** - **Third Party** and select to add a third-party application
 
@@ -30,7 +27,6 @@ By integrating third-party enterprise WeChat applications, the ability to receiv
 5. **Please note: Flashduty As an enterprise WeChat service provider, we provide you with a long-term free version of the `FlashDuty` application. This application needs to obtain the Enterprise WeChat interface calling license before it can be used (password-free login + messages). This license currently supports $ 60 day __ for free for up to __ . After that, we must purchase the Enterprise WeChat license for you before you can use it.**
 
 ## 2. Common Issues
----
 
 1. **Upon clicking the integrated save button, an error `authorize app first` appears?**
 

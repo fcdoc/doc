@@ -4,15 +4,11 @@ brief: 了解如何快速上手 Flashduty
 
 # 快速开始
 
----
-
 ## 演示视频
----
 
 <video controls src="https://fcdoc.github.io/img/demo.mp4"></video>
 
 ## 免费开始
----
 
 1. 浏览器访问 [Flashduty 控制台](https://console.flashcat.cloud/)，输入**手机号**或**工作邮箱**，阅读并同意我们的 [服务条款](https://docs.flashcat.cloud/zh/flashduty/user-aggrement) 和 [隐私政策](https://docs.flashcat.cloud/zh/flashduty/privacy-policy)，点击下一步，系统将会向您的手机或邮箱发送验证码。
 2. 输入 **企业或组织** 名称，以及上一步获得的验证码，点击下一步，完成注册。
@@ -22,7 +18,6 @@ brief: 了解如何快速上手 Flashduty
 > 基于安全性考虑，系统限制仅能通过工作邮箱注册。这意味着，如果您使用 qq.com、gmail.com、163.com 等后缀的邮箱，将被拒绝注册。
 
 ## 基本流程
----
 
 ![](https://fcdoc.github.io/img/ou5ipHtxUCsHg62yRMA8mRHHPtwemssZ5PAlcsAG2MY.avif)
 
@@ -69,7 +64,6 @@ brief: 了解如何快速上手 Flashduty
 > 前往 **账户设置=>通知设置** 页面，设置您在被分派以及值班轮换时，如何进行通知。注意此设置仅在直接分派，或按策略分派并指定遵循个人偏好时生效。
 
 ## 正式订阅
----
 
 > [!NOTE]
 > 拥有 **订阅管理** 权限的人员可以执行此操作。

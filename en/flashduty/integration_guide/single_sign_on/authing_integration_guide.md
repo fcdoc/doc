@@ -4,14 +4,10 @@ brief: Tutorial: Configuring Single Sign-On in Authing
 
 # Authing Single Sign-On Configuration and SSO Login Setup
 
----
-
 Quick Overview
----
 [Authing](https://www.authing.cn/) is a provider offering identity recognition and access control management. Through the Authing platform, you can log in to the FlashDuty management console using OIDC, SAML 2.0, or CAS protocols
 
 ## Preparation
----
 ### 1. Login or Register with Authing
 - Newly registered users need to first create a user pool; follow the prompts to do so
 ### 2. Create an Application
@@ -33,7 +29,6 @@ Quick Overview
 |Authentication Address|Redirect Address for SSO Login|
 
 ## Begin Configuring the OIDC Protocol
----
 ### 1. Open the [FlashDuty](console.flashcat.cloud) Console and Enable SSO Configuration
 
 ![](https://fcdoc.github.io/img/KZ0bU4AgfrxBFrbiDy_aMlMw0OAovw8d5iX6eDbvV4s.avif)
@@ -85,7 +80,6 @@ Quick Overview
 > Use the user created in Authing to log in to the FlashDuty console
 
 ## Begin Configuring the SAML 2.0 Protocol
----
 
 > [!NOTE]
 > You can create a new application or modify an existing one. Here, we demonstrate by modifying an application
@@ -121,7 +115,6 @@ Quick Overview
 > The above are the complete configurations for both methods. The configurations on the two platforms overlap, so please be cautious not to overlook any critical information. If you encounter any issues during the configuration process, you can contact FlashDuty technical support for assistance
 
 ## Begin Configuring the CAS Protocol
----
 ### 1. Open the [FlashDuty](console.flashcat.cloud) Console and Enable SSO Configuration
 
 ![](https://fcdoc.github.io/img/KZ0bU4AgfrxBFrbiDy_aMlMw0OAovw8d5iX6eDbvV4s.avif)

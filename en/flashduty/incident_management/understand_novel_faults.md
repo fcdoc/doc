@@ -4,11 +4,7 @@ brief: Novel fault detection, swift handling of emerging issues
 
 # Understanding novel faults
 
----
-
 Distinguish between common and novel faults to expedite troubleshooting
-
----
 
 so-called novel faults refer to those that have not occurred within a certain period in the past. If a fault is identified as a novel fault, the fault responder should be vigilant. This is crucial for OnCall engineers, as the impact of novel faults may be unknown, and their resolution may require immediate judgment. Some engineers may focus only on novel faults, developing standardized processes or SOPs for addressing such issues.
 
@@ -16,7 +12,6 @@ so-called novel faults refer to those that have not occurred within a certain pe
 > This feature is currently in beta and is only available in the professional version and higher subscription plans. If you need to enable this feature, please contact us at any time.
 
 ## View novel faults
----
 
 ### Console
 
@@ -45,7 +40,6 @@ When assessing similarity, we primarily consider the following factors:
 If the system detects no similar faults within the past **30** days, it will mark the fault as novel.
 
 ## FAQs
----
 
 |+| Does the novelty fault feature need to be enabled separately?
 

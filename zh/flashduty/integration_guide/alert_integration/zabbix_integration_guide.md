@@ -6,12 +6,9 @@ brief: >-
 
 # Zabbix集成
 
----
-
 通过 webhook 的方式同步 Zabbix 告警事件到 Flashduty（支持 Zabbix 3.x ~ 6.x 版本，不同版本配置有差异），实现告警事件自动化降噪处理。
 
 ## 在 Flashduty
----
 您可通过以下2种方式，获取一个集成推送地址，任选其一即可。
 
 ### 使用专属集成
@@ -39,7 +36,6 @@ brief: >-
     5. 完成。
 
 ## 在 Zabbix
----
 <span id="v5"></span>
 
 ### 5.x~6.x 版本
@@ -244,7 +240,6 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 </div>
 
 ## 状态对照
----
 <div class="md-block">
 
 Zabbix 到 Flashduty 告警等级映射关系：

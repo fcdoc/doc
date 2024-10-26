@@ -6,12 +6,9 @@ brief: >-
 
 # Nightingale/Flashcat Integration
 
----
-
 Push Nightingale (Nightingale/n9e) or Flashcat alert events to Flashduty through a webhook. When an alert is triggered, send a trigger event to Flashduty; when the alert is resolved, send a recovery event to Flashduty.
 
 ## Usage Restrictions
----
 
 ### In Nightingale,
 
@@ -19,12 +16,10 @@ Push Nightingale (Nightingale/n9e) or Flashcat alert events to Flashduty through
 - Your Nightingale server must be able to access the domain api.flascat.cloud to push alerts to the external network.
 
 ## Supported Versions
----
 
 This article is compatible with **Nightingale V5 and V6** versions.
 
 ## Operation Steps
----
 
 ### In Flashduty
 
@@ -76,7 +71,6 @@ Headers = ["Content-Type", "application/json", "X-From", "N9E"]
 </code></pre><p> You need to replace the corresponding parameter value of Url with the integrated push address.</p><ol start="4"><li> Save configuration file</li><li> Restart n9e server to make the configuration take effect</li><li> Return to the integration list. If the latest event time is displayed, the configuration is successful and the event is received.</li><li> Finish</li></ol></div>
 
 ## Severity Level Mapping
----
 
 Nightingale/Flashcat to Flashduty alert level mapping:
 
@@ -87,7 +81,6 @@ Nightingale/Flashcat to Flashduty alert level mapping:
 | 3   | Info     | remind |
 
 ## FAQs
----
 
 |+| Why have I not received any alerts in Flashduty?
 

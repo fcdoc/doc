@@ -4,12 +4,9 @@ brief: Synchronize Uptime Kuma alert events to Kuaimao Xingyun via webhook to au
 
 # Uptime Kuma Integration
 
----
-
 Synchronize Uptime Kuma alert events to Flashduty via webhook to automate noise reduction processing of alerts.
 
 ## In Flashduty
----
 使用专属集成
 
 ### Use Proprietary Integrations
@@ -37,7 +34,6 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## The process is now complete
----
 **Step 1: Set up notification channels**
 
 1. Access the `Settings -> Notifications` page, click on "Setup" to edit, as illustrated in the figure below;
@@ -53,7 +49,6 @@ When you need to route alarms to different collaboration spaces based on the pay
 <div id="!"><ol><li>Click `Add New Monitor` or edit existing monitoring items to complete monitoring configuration as needed;</li><li> As shown in the figure, part `Notifications` on the right enables the notification method created in the previous step;</li><li> If you need to set a label, you can add `Tags` Note that only labels that exist at the same time Key/Value will be pushed to FlashDuty ;</li><li> Submit and save, waiting for the alarm to be triggered.</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/MhOsvqHsYIku4nGsClITGQNGpNqg1ceKLBKd6xcN_P0.avif"></div>
 
 ## Status Comparison
----
 <div class="md-block">
 
 | Uptime Kuma  |  Flashduty  | state |

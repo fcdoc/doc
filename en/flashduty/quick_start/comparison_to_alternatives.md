@@ -4,10 +4,7 @@ brief: Compare Flashduty and Pagerduty in terms of products, services, and prici
 
 # Product Comparison
 
----
-
 ### Preface
----
 
 In the rapidly evolving IT landscape, organizations are increasingly dependent on a comprehensive suite of monitoring and event management tools to ensure business continuity and service stability. However, with the expansion of monitoring systems, an overwhelming number of alarms and event notifications are generated, presenting unprecedented challenges to IT teams. Ensuring that every alert is timely captured, accurately delivered, and effectively responded to has become crucial for maintaining service quality.
 
@@ -21,7 +18,6 @@ Facing these challenges, we have identified several scenarios that suggest organ
 **"What key factors should we consider when procuring on-call services?"** This guide offers comprehensive procurement advice for on-call tools. We will delve into the three critical dimensions of **product**, **service**, and **price**. We will explore the questions IT managers should ponder when seeking efficient and collaborative fault management solutions for their development and operations teams. Additionally, for each of these dimensions, we will provide a comparative analysis of mainstream on-call service providers both domestically and internationally, such as Flashduty and Pagerduty, to assist you in making an informed decision.
 
 ### Product
----
 #### Integration Capabilities
 
 The fault management system acts as a process processing center, storing all alarm and fault data. Such systems should offer robust data access and outbound call capabilities to integrate with various systems or workflows, accelerating response times and enhancing collaboration.
@@ -99,7 +95,6 @@ Platform capabilities are primarily focused on member management, duty response,
 |  **Operational Audit**  |  Is operational auditing supported?  |  Flashduty ✅, Pagerduty ✅  |
 
 ### Price
----
 Vendors typically offer various subscription options. However, we primarily consider which option offers the best value for money when meeting our own needs. Ensuring that actual usage does not exceed the budget and that the pricing method is straightforward is crucial.
 
 |  Comparison Item  |  Flashduty  |  Pagerduty  |
@@ -111,7 +106,6 @@ Vendors typically offer various subscription options. However, we primarily cons
 |  **Free Trial**  |  The Professional version is free for 14 days,<br>Additionally, 14 days are granted upon completing the configuration, totaling 28 days  |  The Business version is free for 14 days  |
 
 ### Service
----
 The service dimension primarily assesses the supplier's response method and timeliness in service. Instant messaging is much more effective than other methods.
 
 |  Comparison Item  |  Flashduty  |  Pagerduty  |
@@ -124,5 +118,4 @@ The service dimension primarily assesses the supplier's response method and time
 |  **Does it provide a Roadmap?**  |  Yes, [roadmap.flashcat.cloud](https://c9xudyniiq.feishu.cn/base/SAUGbfgkeatk9Gsqjj0cH6eGnZg)  |  no  |
 
 ### In Conclusion
----
 We recommend you seek a solution that can be customized to your needs and adapted to your various workflows. This mainly depends on your satisfaction with the provider's alerting and notification workflows, integrations, scheduling and escalations, pricing, and other features. It is advised that you make a choice after a comprehensive trial and evaluation.

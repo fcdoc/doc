@@ -4,12 +4,9 @@ brief: What is a collaboration space, what are its features, and how is it manag
 
 # Collaborative space
 
----
-
 As a core vehicle for organizing and managing troubleshooting, the collaboration space aims to manage separately the alerts from different teams, business systems, or service modules. Typically, each collaboration space corresponds to a specific operational and maintenance scope within the team's daily activities.
 
 ## Create a Collaboration Space
----
 
 ### Principles of Space Planning
 
@@ -28,7 +25,6 @@ Login to the console to create, path: **Fault Management => Collaboration Space 
 - During creation, the type of integration connected is **exclusive to that space** and only effective within it. It can also be overlooked and configured after creation.
 
 ## Manage Collaboration Space
----
 ### Space Overview
 - Account members can view all collaboration spaces but can only operate the ones they are responsible for.
 - by hovering over a collaboration space and clicking the star icon, you can **favorite or unfavorite** it.

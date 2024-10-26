@@ -4,12 +4,9 @@ brief: By modifying push parameters, you can customize the severity level and ti
 
 # Customize fault titles and severity levels
 
----
-
 By adjusting push parameters, you can tailor the severity and title details of faults.
 
 ## Customize severity levels
----
 
 **Add a query parameter 'severity' to the push URL to override the fault severity.**
 
@@ -24,7 +21,6 @@ https://api.flashcat.cloud/event/push/alert/aws/cloudwatch?integration_key=your-
 ```
 
 ## Customize fault titles
----
 
 > [!NOTE]
 > Compatible with all integrations reporting alerts via webhooks.
@@ -68,7 +64,6 @@ Example:
 |[TPL]{{.Labels.resource}} / Host Down | {"resource": "127.0.0.1"} | 127.0.0.1 / Host Down |
 
 ## FAQs
----
 
 |+| Utilize tags to dynamically generate titles; what should be done if the tags are absent?
 

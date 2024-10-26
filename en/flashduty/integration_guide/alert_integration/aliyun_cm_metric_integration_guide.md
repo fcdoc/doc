@@ -4,12 +4,9 @@ brief: Synchronize Alibaba Cloud monitoring alarm events with Kuaimao Xinyun via
 
 # Alibaba Cloud Monitoring CM Indicator Integration
 
----
-
 Synchronize Alibaba Cloud monitoring alarm events with Flashduty via webhook to automate noise reduction processing for alarm events.
 
 ## In Flashduty
----
 使用专属集成
 
 ### Use Proprietary Integrations
@@ -37,7 +34,6 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## In Alibaba Cloud Monitoring
----
 Choose either of the following two methods.
 
 **Method 1: Configure by Rule**
@@ -49,7 +45,6 @@ Choose either of the following two methods.
 <div id="!"><ol><li>Log in to your Alibaba Cloud console and select cloud monitoring products</li><li> Enter the alarm service -> Alarm contact page and choose to modify a contact.</li><li> As shown in the picture, fill in the integrated push address under Webhook</li><li> Click the Confirm button to submit the update</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/tJbcFhqxnFI_YxB1_byBDX_PODjjD-DNSFzTXoCKZFM.avif"><ol start="5"><li> Repeat the above steps for all contacts for which sync events are expected</li><li> Return to the integration list. If the latest event time is displayed, the configuration is successful and the event is received.</li><li> Finish</li></ol></div>
 
 ## Status Comparison
----
 <div class="md-block">
 
 | Alibaba Cloud Monitoring |  Flashduty  | state |

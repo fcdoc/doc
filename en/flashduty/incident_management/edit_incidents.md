@@ -4,12 +4,9 @@ brief: Learn how to modify information such as the title of the incident and how
 
 # Handle and update incidents
 
----
-
 Invesitigate incidents, update key information, and synchronize with others.
 
 ## Modify information
----
 
 When an incident is triggered and its symptoms become clearer over time, you can update key details like the incident title to make it more precise than the original alert information.
 
@@ -40,7 +37,6 @@ When an incident is triggered and its symptoms become clearer over time, you can
 > The modified description will not change with the integration of new alerts.
 
 ## Claim an incident
----
 
 You have three methods to claim a newly triggered incident.
 
@@ -73,7 +69,6 @@ You can view each person's assignment and claim times in the console. We calcula
 - For the overall MTTA of an incident, only the difference between the incident's trigger time and the time of its first claim is considered.
 
 ## Postpone handling
----
 
 10	After a fault has been claimed, the handler may require time to investigate and address the issue. The **Suspension** action can temporarily halt the fault's progression according to the anticipated dispatch strategy. You can set a suspension period after claiming the fault, such as 2 hours, 4 hours, or define a custom expiration time within 24 hours.
 
@@ -89,7 +84,6 @@ You can view each person's assignment and claim times in the console. We calcula
 14	On the fault message card, click the **Suspension** button, select the delay duration, and complete the action.
 
 ## Close an incident
----
 
 You have multiple ways to close an incident.
 
@@ -109,7 +103,6 @@ Manually closing a fault will change its processing status to **Closed**. You ca
 19	You can reopen a fault after accidentally closing it. Upon reopening, the fault will revert to the **Pending** status, and dispatch and notification will be reinitiated.
 
 ## Merge handling
----
 
 You can manually merge incidents with each other or with alerts. Merging similar alerts and incidents can converge information into a single incident, accelerating the handling process.
 
@@ -122,7 +115,6 @@ You can manually merge incidents with each other or with alerts. Merging similar
 The timeline will fully record your modification process.
 
 ## FAQs
----
 
 |+| I postponed the fault, yet the system still triggered a new, similar fault
 

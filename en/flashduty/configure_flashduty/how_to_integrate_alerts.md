@@ -4,12 +4,9 @@ brief: Access alarms through exclusive or shared integration, and what is the di
 
 # Various alarm access methods
 
----
-
 FlashDuty serves as a unified alarm processing platform, which itself does not generate alarm data. It is necessary to integrate alarm events from third-party monitoring platforms into FlashDuty to achieve unified alarm reception, noise reduction, dispatching, notification, resolution, analysis, and automation, such as alarms from monitoring platforms like Nightingale/FlashCat, Zabbix, Prometheus, and alerts from major cloud service providers. For more types, please refer to [Alarm Integration](https://docs.flashcat.cloud/zh/flashduty/custom-alert-integration-guide).
 
 ## Access methods
----
 
 ### Exclusive Integration
 Exclusive integration addition path: **Collaboration Space Details => Integration Data => Exclusive Integration**.
@@ -38,7 +35,6 @@ Shared integration addition path: **Integration Center => Alarm Events**.
 > We may adjust these limits in the future. If you need to increase these limits, please contact us.
 
 ## FAQs
----
 
 |+| The alarm event created in the integrated center's alert is not receiving any alarms?
 

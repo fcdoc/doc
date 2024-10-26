@@ -4,10 +4,7 @@ brief: Tutorial on Setting Up LDAP with Docker Compose
 
 # Guide to Integrating OpenLDAP
 
----
-
 ## Quick Overview
----
 
 LDAP (Lightweight Directory Access Protocol) is a protocol based on the X.500 standard and is used to access and maintain distributed directory services. LDAP enables users and applications to query, browse, and search information stored in the directory, such as user identity information, network resources, etc. LDAP usually runs on the TCP/IP protocol stack, specifically using TCP ports 389 (for unencrypted communication) and 636 (for encrypted communication, using LDAPS).
 
@@ -23,7 +20,6 @@ OpenLDAP is an open-source implementation of the Lightweight Directory Access Pr
 > This article assumes that the environment already supports Docker and Docker Compose. If not, please install them first.
 
 ## Docker Compose Configuration File
----
 ```
 version: '1'
 
@@ -76,7 +72,6 @@ networks:
 > Replace "password" with the desired password
 
 ## Service Startup
----
 Save the above configuration file as docker-compose.yml. In the directory containing the configuration file, open a terminal or command prompt and run the following command to start the service:
 ```
 docker-compose up
@@ -100,11 +95,9 @@ docker-compose down
 ```
 
 ## Login to OpenLDAP:
----
 Access http://ip:8088/ in your browser and log in using the username cn=admin,dc=flashduty,dc=com and the password xxx.
 
 ## OpenLDAP Configuration
----
 ### Add Groups and Users
 
 ![](https://fcdoc.github.io/img/1rC8UssQX0Djb1bLj3EWmNjZPG1BX-DLWxY_Q8CSWmA.avif)

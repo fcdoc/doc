@@ -4,10 +4,7 @@ brief: By customizing configuration templates, you can fulfill the need for pers
 
 # Configure Notification Template
 
----
-
 ## In what scenarios would templates be utilized?
----
 When the system __dispatches a fault__, it uses a template to render [Incident](#Incident) and triggers a notification. Dispatching may occur in the following scenarios:
 
 1. Manually create and dispatch faults
@@ -23,7 +20,6 @@ We utilize the __Golang template syntax__ [template/html](https://pkg.go.dev/htm
 - If you wish to introduce additional functions, please submit a merge request
 
 ## What variables can be referenced?
----
 **Example of referenced variable** :
 
 ```
@@ -117,7 +113,6 @@ CloseTime | int64 | no | Closing time, EndTime is the alarm recovery time, Close
 `Labels` | map[string]string | no | Tags KV, Key and Value are all strings
 
 ## FAQs
----
 1. **How do I know what specific tag information `Labels` has?**
 
 - Manually created faults do not have labels;
@@ -216,7 +211,6 @@ CloseTime | int64 | no | Closing time, EndTime is the alarm recovery time, Close
 The following is a detailed description of each notification channel.
 
 ## Feishu Application
----
 You need to pre-configure **the integration center - Instant Messaging -** integration to send message cards. If no custom content is set, the system default template will be used to render all label information:
 
 ```
@@ -259,7 +253,6 @@ If you want to display only key tag information, you can refer to the following 
 ```
 
 ## DingTalk Application
----
 You need to pre-configure **the integration center - Instant Messaging -** integration before you can send message cards. If no custom content is set, the system default template will be used to render all label information:
 
 ```
@@ -301,7 +294,6 @@ If you want to display only key tag information, you can refer to the following 
 ```
 
 ## Enterprise WeChat Application
----
 
 You need to pre-configure **the integration center - Instant Messaging - EnterpriseWeChat** integration to send message cards. If no custom content is set, the system default template will be used and only common tag information will be rendered:
 
@@ -337,7 +329,6 @@ As shown in the figure below:
 **Note that Enterprise WeChat limits the length of the card. In the template rendering area, you can render no more than 8 lines of content, and the part exceeding 8 lines will be hidden.**
 
 ## Slack App
----
 You need to pre-configure **the Integration Center - IM - Slack integration before** you can send message cards. If no custom content is set, the system default template will be used and only common tag information will be rendered:
 
 ```
@@ -380,7 +371,6 @@ If you want to display only key tag information, you can refer to the following 
 ```
 
 ## Microsoft Teams App
----
 You need to pre-configure **the Integration Center - IM - Microsoft Teams integration before** you can send message cards. If no custom content is set, the system default template will be used and only common tag information will be rendered:
 
 ```
@@ -423,7 +413,6 @@ If you want to display only key tag information, you can refer to the following 
 ```
 
 ## Microsoft Teams App
----
 You need to pre-configure **the Integration Center - IM - Microsoft Teams integration before** you can send message cards. If no custom content is set, the system default template will be used and only common tag information will be rendered:
 
 ```
@@ -466,7 +455,6 @@ If you want to display only key tag information, you can refer to the following 
 ```
 
 ## Feishu Robot
----
 Feishu Robot only supports sending plain text messages.
 
 - The message __has a maximum length of 4000 bytes; any excess will be truncated before sending__
@@ -488,7 +476,6 @@ Feishu Robot only supports sending plain text messages.
 ```
 
 ## DingTalk Robot
----
 DingTalk Robot only supports sending Markdown messages ([grammar restrictions](https://open.dingtalk.com/document/robots/custom-robot-access#title-7ur-3ok-s1a)).
 
 - The message __has a maximum length of 4000 bytes; any excess will be truncated before sending__
@@ -498,7 +485,6 @@ DingTalk Robot only supports sending Markdown messages ([grammar restrictions](h
 ```
 {{fireReason .}}INC [#{{.Num}}]({{.DetailUrl}}) {{toHtml .Title}}
 
----
 - 协作空间：{{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}
 - 严重程度：{{$s := colorSeverity .IncidentSeverity}}{{toHtml $s}}
 - 触发时间：{{date "2006-01-02 15:04:05" .StartTime}}
@@ -507,12 +493,10 @@ DingTalk Robot only supports sending Markdown messages ([grammar restrictions](h
 - 告警对象：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
 - 故障描述：{{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
 - 分派人员：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
----
 <br>[详情]({{.DetailUrl}})|[认领]({{.DetailUrl}}?ack=1)
 ```
 
 ## Enterprise WeChat Robot
----
 Qiwei Robot only supports sending Markdown messages ([grammar restrictions](https://developer.work.weixin.qq.com/document/path/91770#markdown%E7%B1%BB%E5%9E%8B)).
 
 - The message __has a maximum length of 4000 bytes; any excess will be truncated before sending__
@@ -533,7 +517,6 @@ Qiwei Robot only supports sending Markdown messages ([grammar restrictions](http
 ```
 
 ## Telegram Bot
----
 - Configure the Telegram service address that can be accessed in China;
 - The message __has a maximum length of 4096 characters and will not be sent if it exceeds this limit__
 - If the text contains `<br>`, during rendering, __empty lines will be removed first, and then `<br>` will be replaced with newline characters__
@@ -555,7 +538,6 @@ Qiwei Robot only supports sending Markdown messages ([grammar restrictions](http
 ```
 
 ## Slack Bot
----
 - The message __can be sent with a length of about 15000 characters; any excess will be truncated before sending__
 - If the text contains `<br>`, during rendering, __empty lines will be removed first, and then `<br>` will be replaced with newline characters__
 - If custom content is not set, the system default template will be used, displaying only key information:
@@ -576,7 +558,6 @@ Qiwei Robot only supports sending Markdown messages ([grammar restrictions](http
 ```
 
 ## Zoom Robot
----
 - The message __can be sent with a length of about 4000 characters; any excess will be truncated before sending__
 - If the text contains `<br>`, during rendering, __empty lines will be removed first, and then `<br>` will be replaced with newline characters__
 - The message format **follows the Zoom message format** . The current robot application does not support Markdown . For other formats, please refer to the official website : [https://developers.zoom.us/docs/team-chat-apps/customizing-messages/](https://developers.zoom.us/docs/team-chat-apps/customizing-messages/)
@@ -675,7 +656,6 @@ Qiwei Robot only supports sending Markdown messages ([grammar restrictions](http
 ```
 
 ## Short Message
----
 If custom content is not set, the system default template will be used to render the notification:
 
 ```
@@ -683,7 +663,6 @@ If custom content is not set, the system default template will be used to render
 ```
 
 ## Mail
----
 If custom content is not set, the system default template will be used to render the notification:
 
 ```

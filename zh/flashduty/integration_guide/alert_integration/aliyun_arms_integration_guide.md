@@ -4,12 +4,9 @@ brief: 通过 webhook 的方式同步阿里云 ARMS 监控告警事件到快猫�
 
 # 阿里云 ARMS 集成
 
----
-
 通过 webhook 的方式同步阿里云 ARMS 监控告警事件到 Flashduty，实现告警事件自动化降噪处理。
 
 ## 在 Flashduty
----
 您可通过以下2种方式，获取一个集成推送地址，任选其一即可。
 
 ### 使用专属集成
@@ -37,7 +34,6 @@ brief: 通过 webhook 的方式同步阿里云 ARMS 监控告警事件到快猫�
     5. 完成。
 
 ## 在 阿里云 ARMS
----
 **步骤 1：配置 通知对象**
 
 <div class="md-block">
@@ -62,7 +58,6 @@ brief: 通过 webhook 的方式同步阿里云 ARMS 监控告警事件到快猫�
 </div>
 
 ## 状态对照
----
 <div class="md-block">
 
 阿里云 ARMS 监控到 Flashduty 告警等级映射关系：

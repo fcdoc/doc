@@ -4,10 +4,7 @@ brief: Configuring Single Sign-On Tutorial in Keycloak
 
 # Keycloak Single Sign-On Configuration and SSO Login Setup
 
----
-
 ## Quick Overview
----
 
 Keycloak is an open-source identity and access management solution that offers a comprehensive suite of tools and features to assist developers in swiftly implementing secure user authentication and authorization mechanisms, while also streamlining the identity and access management process for applications
 
@@ -15,7 +12,6 @@ Keycloak is an open-source identity and access management solution that offers a
 > This article does not cover the deployment or explanation of Keycloak-related content. For more information, please refer to [the official documentation](https://www.keycloak.org/)
 
 ## Based on the SAML2.0 Protocol
----
 ### 1. Log in to the FlashDuty Console
 #### 1.1 Obtain the ACS Address from FlashDuty (to be used in step 2)
 #### 1.2 Path: Access Control => Single Sign-On => Settings => SAML2.0 Protocol => Flashcat Service Provider Information => Assertion Consumer Service URL
@@ -76,7 +72,6 @@ Keycloak is an open-source identity and access management solution that offers a
 ![](https://fcdoc.github.io/img/gDmsph7lG5N0JV3i5NvyCWDBgbpKe3OMKgP9IOskT70.avif)
 
 ## Based on the OIDC Protocol
----
 ### 1. Log in to the FlashDuty Platform
 - Obtain the Redirect URL from FlashDuty (to be used in step 2)
 - Path: **Access Control => Single Sign-On => Settings => OIDC Protocol => Flashcat Service Provider Information => Redirect URL**

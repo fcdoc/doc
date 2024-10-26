@@ -4,12 +4,9 @@ brief: Understand, configure, and utilize custom fields
 
 # Custom Fields
 
----
-
 Understand, configure, and utilize custom fields.
 
 ## Usage Scenarios
----
 
 FlashDuty has already integrated with most common alert systems, placing the majority of push content information into Labels for display. Nevertheless, our users still have some needs for expansion or customization, such as manually marking a fault as a false alarm. Therefore, we have introduced the **Custom Fields** feature to further enhance fault descriptions.
 
@@ -28,7 +25,6 @@ Custom fields enable you to add personalized metadata, record specific fault-rel
 ![card_view.png](https://fcdoc.github.io/img/qgzMUmesZeZzn3VDyYPdiwAcNxkJzd7czJX92cR_np8.avif)
 
 ## Configure Custom Fields
----
 
 ### Create Fields
 
@@ -72,7 +68,6 @@ Only the following content can be updated:
 You can initiate a deletion at any time from the console. However, be aware that deletion is a time-consuming process. When a field is deleted, the system will scan historical faults and update the associations asynchronously. You will not be able to recreate a field with the same name until the deletion process is complete.
 
 ## FAQs
----
 
 |+| Why can't I search for faults using the field I created?
 

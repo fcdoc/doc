@@ -6,12 +6,9 @@ brief: >-
 
 # Prometheus告警集成
 
----
-
 通过 webhook 的方式将 Prometheus 告警事件通过 AlertManager 推送到 Flashduty。当告警触发时，向 Flashduty 发送触发事件，当告警恢复时，向 Flashduty 发送恢复事件。
 
 ## 使用限制
----
 
 ### 在 AlertManager
 
@@ -19,12 +16,10 @@ brief: >-
 - 您的 AlertManager server 必须能够访问域名 api.flascat.cloud，将告警推送到外网。
 
 ## 支持版本
----
 
 本文适配 **Alertmanager 0.16.0 及以上** 版本。
 
 ## 操作步骤
----
 
 ### 在 Flashduty
 
@@ -117,7 +112,6 @@ timestamp: '{{ with query "time()" }}{{ . | first | value }}{{ end }}'
 </div>
 
 ## 严重程度映射关系
----
 
 系统依次提取告警事件标签中的 `severity`、`priority`和 `level`，对应值将作为 Prometheus 自身的告警等级，如果没有提取到，系统自动设置 Prometheus 告警等级为 `Warning`。
 
@@ -135,7 +129,6 @@ Promtheus 到 Flashduty 告警等级映射关系：
 | ok           | Ok       | 恢复 |
 
 ## 常见问题
----
 
 |+| 为什么在Flashduty没有收到告警？
 

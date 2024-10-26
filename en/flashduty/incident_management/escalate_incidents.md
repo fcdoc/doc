@@ -4,12 +4,9 @@ brief: Understand how to reassign, upgrade assignments, or add handlers
 
 # Upgrade and dispatch issues
 
----
-
 Reassign, upgrade the assignment, or add a handler.
 
 ## Reassign
----
 
 When an issue is assigned to you, but you confirm that you are not the appropriate person to handle it, or you are unable to address the issue, you can choose to reassign it to someone else or to the duty schedule.
 
@@ -19,7 +16,6 @@ Reassignment means sending out notifications again. If an issue marked as **In P
 > Currently, reassignment targets can only be the duty list or an individual, which we refer to as **Direct Assignment**. The difference from **Strategic Assignment** is that direct assignments are only notified based on personal preferences and do not allow for escalation.
 
 ## Upgrade Dispatch
----
 
 - **Automatic Upgrade**: If an issue is assigned to you automatically according to a (multi-level) dispatch strategy, and you fail to resolve it within the specified time frame, do not opt for a deferral of the upgrade, and the issue does not resolve itself automatically, it will automatically escalate to the next level at the designated time.
 
@@ -29,7 +25,6 @@ Reassignment means sending out notifications again. If an issue marked as **In P
 > The essence of an upgrade assignment is **reassignment**, with the main difference being that **upgrade assignments** follow the dispatch and notification channels already set in the dispatch policy.
 
 ## Add Handler
----
 
 When an issue is assigned to you but you need the involvement of other personnel (not currently listed as handlers), you can choose to add a handler.
 

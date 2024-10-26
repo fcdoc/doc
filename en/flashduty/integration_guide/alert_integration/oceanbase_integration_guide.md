@@ -4,12 +4,9 @@ brief: Synchronize OceanBase alarm events to Kuaimao Nebula via webhook to autom
 
 # OceanBase Alarm Event
 
----
-
 Synchronize OceanBase alarm events to Kuaimao Nebula via webhook to automate noise reduction processing for alarm events
 
 ## In Flashduty
----
 使用专属集成
 
 ### Use Proprietary Integrations
@@ -37,7 +34,6 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## At OceanBase
----
 
 <div id="!"><h2>OceanBase Alarm push configuration</h2><h3> Step 1: Configure alarm channel</h3><ol><li> Log in to your OceanBase and select Alarm Center.</li><li> Enter **the alarm channel** and click the **New Channel** button to start creating a new channel.</li><li> Select **custom script** for channel type.</li><li> The basic configuration content is as shown in the figure below:</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/IQVsfNMP7URm0FvPQlnMRB7JFUTPrgKlUw96ylc3Udc.avif"><ol start="5"><li> Copy the following script content in the configuration channel, and **please add the integration_key parameter in the script with the value FlashDuty in the push address integration_key** .</li></ol><pre> `#!/usr/bin/env bash
 
@@ -131,7 +127,6 @@ fi</p><pre> `
 </div>
 
 ## Status Comparison
----
 <div class="md-block">
 
 |OceanBase|Kuaimao Nebula|state|

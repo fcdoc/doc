@@ -4,12 +4,9 @@ brief: Synchronize Skywalking alert events to Kuaimao Nebula via webhook to auto
 
 # Skywalking Alert Event
 
----
-
 Synchronize Skywalking alert events to Kuaimao Nebula via webhook to automate noise reduction processing for these alerts.
 
 ## In Flashduty
----
 使用专属集成
 
 ### Use Proprietary Integrations
@@ -37,7 +34,6 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## In Skywalking
----
 <div id="!"><h2>1. Skywalking the configuration file of the service</h2><ol><li> Login to Skywalking .</li><li> Find configuration files for Skywalking . /config/alarm-settings.yml .</li><li> Add tags of Level in the alarm rule.</li></ol><pre> `# v8.6.0+ 及以上版本才支持tags标签，其他版本可以不添加。
 # Level 的对应 value ：Critical、Warning、Info。
 # 请注意大小写。

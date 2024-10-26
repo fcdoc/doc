@@ -4,12 +4,9 @@ brief: By integrating a self-built Feishu application, the ability to receive an
 
 # Feishu Lark Integration
 
----
-
 By integrating a self-built Feishu application, the ability to receive and respond to alerts within the Feishu platform is achieved.
 
 ## 1. Create a Feishu Application
----
 
 ### 1. Create a Self-Built Application
 
@@ -32,7 +29,6 @@ Go to the **Development Configuration - Events and Callbacks - Encryption Policy
 <img src="https://fcdoc.github.io/img/pCfnVRk1nPAjLQU-ReDmX-ab7TfqtNRZnGdOKkiVYyY.avif" alt="drawing" width="800"/>
 
 ## 2. Add Feishu Integration
----
 
 Flashduty to the **Integration Center** page, select **Instant Messaging = >飞书**, fill in **the name** and the `App ID` , `App Secret` , `Verification Token` and `Encrypt Key` copied in the previous step in the form, and click Save to create.
 
@@ -43,7 +39,6 @@ After creation, the newly added Feishu integration will appear in the list. Clic
 <img src="https://fcdoc.github.io/img/F_i05Wj-itHzUr_HJJGEASuvJImXIDN_15RDfqWPeIQ.avif" alt="drawing" width="800"/>
 
 ## 3. Configure the Feishu Application
----
 
 ### 1. Enable and Configure Application Capabilities
 
@@ -77,7 +72,6 @@ Enter the **Permission Management** page and apply for the `im:chat` and `im:mes
 <img src="https://fcdoc.github.io/img/t03fu8HgE8UB5ahuhxHv4Yej7bSMSCjpTeI1V6YJRI4.avif" alt="drawing" width="800"/>
 
 ## 4. Application Release and Usage
----
 
 After completing the above steps, proceed with the application release and usage. The application can be used after it is reviewed by the administrator.
 Note: The **Available Scope** requires special configuration, and it is recommended to set it to **All Employees**.
@@ -92,7 +86,6 @@ After the application is released, you can use the mobile /PC to access the appl
 2. PC: On the desktop (PC) side, access the application through Feishu > Workbench > search for the application name > open the application to use the web application.
 
 ## 5. Frequently Asked Questions
----
 
 1. **Message delivery to individuals is not possible**, with the operation record indicating __Not Associated with an Application__?
 

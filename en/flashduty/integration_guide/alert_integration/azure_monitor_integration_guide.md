@@ -4,12 +4,9 @@ brief: Synchronize Azure Monitor alert events to Kuaimao Xingyun via webhook to 
 
 # Azure Monitor Integration
 
----
-
 Synchronize Azure Monitor alert events to Flashduty via webhook to automate noise reduction processing of alerts.
 
 ## In Flashduty
----
 使用专属集成
 
 ### Use Proprietary Integrations
@@ -37,13 +34,11 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## The process is now complete
----
 **Step 1: Configure Webhook**
 
 <div id="!"><ol><li>Log in to your Azure portal and select Monitor ;</li><li> Enter page `Alerts -> Action groups` , click the Create button to start editing;</li><li> As shown in the figure, option `Actions` chooses `Action type` as `Webhook` ;</li><li> Fill in the name, copy and write the `URI` parts into the integrated push address, pay attention to the `Enable` general alert structure;</li><li> Click the Create button to submit and save.</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/4gzLFt9GChD5e3f_GYsfB0c4VwgFWvEtl4oBrNyvKzs.avif"><p> **Step 2: Configuration Alert rule**</p><ol><li> Enter page `Alerts -> Alert rules` , click Create or select an existing policy to edit;</li><li> As shown in the figure below, on page `Actions` , select the created Action group ;</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/b-vF-yP22lZacuG_Q9t4J7xx0uPFYqYcILv3Fc3vI3k.avif"><ol start="3"><li> Submit and save, waiting for the alarm to be triggered.</li></ol></div>
 
 ## Status Comparison
----
 <div class="md-block">
 
 | Azure Monitor  |  Flashduty  | state |

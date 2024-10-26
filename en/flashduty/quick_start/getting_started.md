@@ -4,15 +4,11 @@ brief: Learn how to quickly get started with Flashduty
 
 # Quick Start Guide
 
----
-
 ## Demonstration Video
----
 
 <video controls src="https://fcdoc.github.io/img/demo.mp4"></video>
 
 ## Get Started for Free
----
 
 1. Visit [Flashduty Console](https://console.flashcat.cloud/) via your browser, enter your **mobile number** or **work email**, read and agree to our [Terms of Service](https://docs.flashcat.cloud/zh/flashduty/user-aggrement) and [Privacy Policy](https://docs.flashcat.cloud/zh/flashduty/privacy-policy), then click "Next." The system will send a verification code to your mobile or email.
 2. Enter the name of your **company or organization**, along with the verification code received in the previous step, click "Next," and complete the registration.
@@ -22,7 +18,6 @@ brief: Learn how to quickly get started with Flashduty
 > Due to security considerations, the system only allows registration via work email. This means that if you use an email with a suffix like qq.com, gmail.com, 163.com, etc., your registration will be rejected.
 
 ## Basic Workflow
----
 
 ![](https://fcdoc.github.io/img/ou5ipHtxUCsHg62yRMA8mRHHPtwemssZ5PAlcsAG2MY.avif)
 
@@ -69,7 +64,6 @@ When an incident occurs, how will you be notified?
 > Go to **Account Settings > Notification Settings** to configure how you are notified when assigned or during shift rotations. Note that these settings only apply when assigned directly or when using policy-based assignments that follow personal preferences.
 
 ## Official Subscription
----
 
 > [!NOTE]
 > Only individuals with **Subscription Management** permissions can perform this action.
