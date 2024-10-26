@@ -4,7 +4,7 @@ brief: 通过专属集成或共享集成接入告警，以及专属集成和共�
 
 # 多种接入告警方式
 
-FlashDuty 作为统一告警处理平台，其本身不产生告警数据，需要将第三方监控平台的告警事件接入到 FlashDuty，以实现统一告警接收、降噪、分派、触达、解决、分析和自动化等，如夜莺/FlashCat、Zabbix、Promethues 等监控平台以及各大云厂商的告警，更多类型请参考 [告警集成](https://docs.flashcat.cloud/zh/flashduty/custom-alert-integration-guide)。
+FlashDuty 作为统一告警处理平台，其本身不产生告警数据，需要将第三方监控平台的告警事件接入到 FlashDuty，以实现统一告警接收、降噪、分派、触达、解决、分析和自动化等，如夜莺/FlashCat、Zabbix、Promethues 等监控平台以及各大云厂商的告警，更多类型请参考 [告警集成](/integration_guide/alert_integration/custom_alert_integration_guide)。
 
 ## 接入方式
 
@@ -25,7 +25,7 @@ FlashDuty 作为统一告警处理平台，其本身不产生告警数据，需�
 
 > [!NOTE]
 > - 专属集成或共享集成在新增告警集成后都会产生一个推送地址，将改地址复制到对应平台即可。
-> - 每种告警事件源接入的数据类型不同，具体方式参考[集成引导](https://docs.flashcat.cloud/zh/flashduty/custom-alert-integration-guide)的接入说明文档。
+> - 每种告警事件源接入的数据类型不同，具体方式参考[集成引导](/integration_guide/alert_integration/custom_alert_integration_guide)的接入说明文档。
 
 > [!WARN]
 > 为了保证整体系统的稳定性，我们对每一个集成上报的事件请求进行了频率限制。当前的限制为每个集成每秒上报请求限制（`qps`）为`100`，每分钟上报请求数限制（`qpm`）为`1000`。
@@ -47,11 +47,11 @@ FlashDuty 作为统一告警处理平台，其本身不产生告警数据，需�
 
 |+| 告警的标签如何生成？
 
-    Flashduty 针对每一种集成，按照应取尽取的原则，将关键信息全部方式标签、描述或标题当中。如果您希望在此基础上，动态生成其他标签，请配置标签增强规则，具体请参考：https://docs.flashcat.cloud/zh/flashduty/label-enrichment-settings
+    Flashduty 针对每一种集成，按照应取尽取的原则，将关键信息全部方式标签、描述或标题当中。如果您希望在此基础上，动态生成其他标签，请配置标签增强规则，具体请参考：/configure_flashduty/label_enrichment_settings
 
 |+| 告警标题是如何确定的？我是否可以修改？
 
-    Flashduty 针对每一种集成，使用了特定的标题生成方式，一般为”策略名称 / 告警对象“的组合，如果您希望定制标题的生成规则，请参考：https://docs.flashcat.cloud/zh/flashduty/customize-incident-attrs
+    Flashduty 针对每一种集成，使用了特定的标题生成方式，一般为”策略名称 / 告警对象“的组合，如果您希望定制标题的生成规则，请参考：/advanced_features/customize_incident_attrs
 
 |+| 怎么查看告警事件来自哪个集成类型？
 

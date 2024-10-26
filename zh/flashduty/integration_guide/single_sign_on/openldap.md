@@ -110,4 +110,4 @@ docker-compose down
 ![](https://fcdoc.github.io/img/lEGCTBal4Z6hl7Vawh6NpyUPvtqeLfHG1c55qXBZQX8.avif)
 
 > [!NOTE]
-> 上述字段的含义与描述请参考 [配置单点登录](https://docs.flashcat.cloud/zh/flashduty/single-sign-on)
+> 上述字段的含义与描述请参考 [配置单点登录](/platform_features/single_sign_on)

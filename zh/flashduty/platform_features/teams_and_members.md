@@ -40,7 +40,7 @@ brief: 团队的操作和成员的管理
 
 ### 邀请成员
 
-- 邀请成员时，可以直接赋予该成员一个角色；[了解权限设计](https://docs.flashcat.cloud/zh/flashduty/permission-overview)。
+- 邀请成员时，可以直接赋予该成员一个角色；[了解权限设计](/platform_features/permission_overview)。
 - 邮箱模式邀请时，被邀请成员会收到相应的通知邮件并可以在邮件中直接跳转登陆验证。
 - 短信模式邀请时，被邀请成员会收到相应的短信提醒。
 - 被邀请成员可通过邀请时的验证类型进行登录，如邮箱或手机号。

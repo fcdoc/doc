@@ -20,7 +20,7 @@ brief: 通过分派策略可以将不同业务或不同团队的告警事件分�
 
 ![tiaojian.png](https://fcdoc.github.io/img/WyGIe6d3UjoWaGg4Y8KCZ87KCalIEM3cdR1YMRI6RVc.avif)
 
-前往 [如何配置过滤条件](https://docs.flashcat.cloud/zh/flashduty/how-to-filter)，了解更多。
+前往 [如何配置过滤条件](/configure_flashduty/how_to_filter)，了解更多。
 
 ## 分派配置
 
@@ -33,19 +33,19 @@ brief: 通过分派策略可以将不同业务或不同团队的告警事件分�
 > [!NOTE]
 > 想与内部自研系统打通，实现动态分派？
 >
-> 请参考 [动态设置分派人员](https://docs.flashcat.cloud/zh/flashduty/dynamic-notifications)。
+> 请参考 [动态设置分派人员](/advanced_features/dynamic_notifications)。
 
 ### 单聊渠道
 单聊即一对一的进行推送。如邮件、短信、语音以及部分 IM 应用。
 
-- **遵循个人爱好：** 通知方式由成员自行在[账户配置](https://docs.flashcat.cloud/zh/flashduty/preference-settings)各个告警类别的接收渠道与方式。
+- **遵循个人爱好：** 通知方式由成员自行在[账户配置](/configure_flashduty/preference_settings)各个告警类别的接收渠道与方式。
 - **遵循统一设置：** 由策略配置人员统一配置通知对象中成员的接收告警的渠道和方式。
 
 ### 群聊渠道
 
 群聊即推送到群，并针对分派人员进行特别提醒。包括各类 Webhook 机器人，以及部分 IM 应用。
 
-- 群聊中可以选择各个应用以及群机器人的方式进行触达到接收人，**选择IM应用通知时**，通知对象需要先与对应的应用进行关联，具体可以参考[即时消息集成](https://docs.flashcat.cloud/zh/flashduty/lark-integration-guide)
+- 群聊中可以选择各个应用以及群机器人的方式进行触达到接收人，**选择IM应用通知时**，通知对象需要先与对应的应用进行关联，具体可以参考[即时消息集成](/integration_guide/instant_messaging/lark_integration_guide)
 
 > [!NOTE]
 > 个人与群聊通知渠道请至少选择一个。如果您不期望通知到任何个人，仅通知到群，您可以设置一个空团队作为分派对象。
@@ -61,7 +61,7 @@ brief: 通过分派策略可以将不同业务或不同团队的告警事件分�
 - 您可以选择故障__超时未关闭__或__超时未被认领__时，自动升级。
 - 典型场景是：主备值班人员之间，上下级之间，一二线之间进行层层升级。
 
-您也可以手动升级故障，前往 [升级与分派故障](https://docs.flashcat.cloud/zh/flashduty/escalate-incidents) 了解更多。
+您也可以手动升级故障，前往 [升级与分派故障](/incident_management/escalate_incidents) 了解更多。
 
 ### 策略顺序调整
 - 多个分派策略时，分派通知时是按顺序依次匹配，匹配到即终止，请在配置时充分考虑相关分派条件。
