@@ -20,9 +20,6 @@ MD =  join ROOT, 'zh'
 )
 
 
-ft = JSON.parse(read('1.json'))
-console.log ft
-
 dump = (path, changed) =>
   rpath = path.slice(MD.length+1)
   r = await isChange(rpath)
@@ -42,9 +39,6 @@ dump = (path, changed) =>
       li = r
 
   new_md = li.join('\n').replace(/\n{3,}/g, "\n\n")
-
-  for [f,t] from ft
-    new_md = new_md.replaceAll(f,t)
 
   if new_md != md
     write path, new_md
