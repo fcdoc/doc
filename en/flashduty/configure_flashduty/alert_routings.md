@@ -32,8 +32,6 @@ Configuration path: **Integration Center => Alarm Events => Specific Integration
 
 <img src="https://fcdoc.github.io/img/6zBXABVJ4xFMBJd7MQ7oT8Sla6LZa19rMPbUjXJ4IT4.avif"  width="800">
 
-
-
 ## FAQs
 ---
 
@@ -41,17 +39,13 @@ Configuration path: **Integration Center => Alarm Events => Specific Integration
 
     Please verify if the alert events correspond to the rules and if the rule settings are correct.
 
-
 |+| What happens when multiple routing rules are identical and delivered to the same collaboration space?
 
     An issue will be generated for each collaboration space; it is advisable to select multiple collaboration spaces within the same rule.
 
-
-
 |+| Not receiving alerts after setting up routing rules?
 
     Please ensure that the reported alert events can trigger the configured routing rules. Consider setting up a default catch-all route to handle unmatched alert events.
-
 
 |+| Does the default route get matched when the routing rule's flow control is set to Stop?
 

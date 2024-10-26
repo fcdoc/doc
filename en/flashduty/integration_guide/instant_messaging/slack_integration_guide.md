@@ -19,7 +19,6 @@ By integrating a third-party Slack application, the capability to receive and re
 
 3. Enter the data source name and click **Save**
 
-
 ## 2. Common Issues
 ---
 

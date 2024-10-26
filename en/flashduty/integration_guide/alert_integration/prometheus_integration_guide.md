@@ -10,7 +10,6 @@ brief: >-
 
 Push Prometheus alert events to Flashduty via AlertManager using a webhook. When an alert is triggered, send a trigger event to Flashduty, and when the alert is resolved, send a recovery event to Flashduty.
 
-
 ## Usage Restrictions
 ---
 
@@ -35,11 +34,10 @@ This article is compatible with **Alertmanager version 0.16.0 and above**.
 
 When you do not need to route alarm events to different collaboration spaces, this method is preferred because it is simpler.
 
-
 |+| Expand
 
     1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
-    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the Add Integration page
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the integration creation page
     3. Choose the **Prometheus** integration, click **Save**, and a card will be generated.
     4. Click on the generated card to view the **Push Address**, copy it for backup, and the task is complete.
 
@@ -47,10 +45,9 @@ When you do not need to route alarm events to different collaboration spaces, th
 
 When you need to route alarms to different collaboration spaces based on the payload information of the alarm event, this method is preferred.
 
-
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and go to the integration selection page.
+    1. Enter the Flashduty console, select **Integration Center > Alert Events**, and go to the integration selection page.
     2. Select the **Prometheus** integration:
     - **Integration Name**: Define a name for the current integration.
     3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
@@ -108,13 +105,12 @@ Prometheus to Flashduty Alert Level Mapping:
 ## FAQs
 ---
 
-
-|+| Why am I not receiving alerts in Flashduty?
+|+| Why have I not received any alerts in Flashduty?
 
     #### In Flashduty
 
     1. Check if the integration displays the **Latest Event Time**? If it doesn't, this indicates that Flashduty has not received the push; therefore, you should first troubleshoot the AlertManager component.
-    2. If you are using a **Shared Integration**, first verify whether you have set up **Routing Rules**. Without routing rules, the system will reject new pushes directly, as there is no collaboration space to handle your alerts. In such cases, simply configure the routing rules to your desired space.
+    2. If you are using a **Shared Integration**, first ensure you have set up **Routing Rules**. Without routing rules, the system will reject new pushes directly, as there is no collaboration space to handle your alerts. In such cases, simply configure the routing rules to your desired space.
 
     #### In AlertManager
 
@@ -122,6 +118,5 @@ Prometheus to Flashduty Alert Level Mapping:
     2. Open the AlertManager configuration file. If you have configured sub-routes, ensure your routing settings are accurate (for instance, if the preceding route is set to "continue," AlertManager will bypass matching any subsequent sub-routes. We advise setting only a default route to Flashduty at all times). Additionally, verify that the target callback address aligns perfectly with the integrated push address. If they do not correspond, please revise the **alarm rules** and re-verify the settings.
     3. If it matches, please continue to confirm that the AlertManager instance can access the external api.flashcat.cloud domain name. If not, you first need to open an external network for it, or separately enable external network access for Flashduty's domain name.
     4. If there are no network issues, you need to continue troubleshooting AlertManager to check for any related error logs.
-
 
     If, after performing the above steps, you still cannot identify the root cause of the issue, please contact us directly.

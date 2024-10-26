@@ -18,7 +18,6 @@ Reassignment means sending out notifications again. If an issue marked as **In P
 > [!TIP]
 > Currently, reassignment targets can only be the duty list or an individual, which we refer to as **Direct Assignment**. The difference from **Strategic Assignment** is that direct assignments are only notified based on personal preferences and do not allow for escalation.
 
-
 ## Upgrade Dispatch
 ---
 
@@ -39,7 +38,6 @@ Similar to **reassignment**, when adding a handler, you can only select the duty
 ![](https://fcdoc.github.io/img/5yV6SZljnoyzXZygOdopT3n8RgQkKr5WITkG_FlwCt4.avif)
 
 ## FAQs
-
 
 |+| Why is notification added without a strategy for handlers?
 

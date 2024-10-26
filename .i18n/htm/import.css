@@ -1,46 +1,21 @@
-/*
-if want use local font , use like below
-
-@font-face {
-    font-family: 'h';
-    src: local('miui'),
-         local('BlinkMacSystemFont'),
-         local('Helvetica Neue'),
-         local('Helvetica'),
-         local('Segoe UI'),
-         local('Arial'),
-         local('Roboto'),
-         local('PingFang SC'),
-         local('Hiragino Sans GB'),
-         local('Microsoft Yahei');
-    font-style: normal;
-    font-weight: normal;
-}
-*/
 @font-face {
   font-family: 'h';
-  src: local('BlinkMacSystemFont'),
-    local('Segoe UI'),
-    local('Roboto'),
+  src: local('PingFang SC'),
+    local('Verdana'),
     local('Helvetica Neue'),
-    local('Arial'),
-    local('Noto Sans'),
-    local('Apple Color Emoji'),
-    local('Segoe UI Emoji');
+    local('Microsoft Yahei'),
+    local('Hiragino Sans GB'),
+    local('Microsoft Sans Serif');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 's';
-  src: local('BlinkMacSystemFont'),
-    local('Segoe UI'),
-    local('Roboto'),
-    local('Helvetica Neue'),
-    local('Arial'),
+  src: local('Segoe UI'),
     local('Noto Sans'),
-    local('Apple Color Emoji'),
-    local('Segoe UI Emoji');
+    local('Helvetica'),
+    local('Arial');
   font-style: normal;
   font-weight: normal;
 }
@@ -53,7 +28,6 @@ if want use local font , use like below
     local('Menlo'),
     local('Monaco'),
     local('Consolas');
-  /* 备用字体 */
   font-style: normal;
   font-weight: normal;
 }

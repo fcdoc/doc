@@ -67,22 +67,17 @@ A team is a collection of members, also conceptualized as a group, where members
 
     Please verify that the email address was entered correctly, check if the email was received in the spam folder, and ensure no blocking policy is set for the email. If all is well, you may ask the inviter to resend the invitation or contact the official technical support team.
 
-
-
 |+| Didn’t the member invited via SMS receive the verification text message?
 
     Please confirm that the mobile number was entered correctly and that no blocking policy is in place on the phone. If everything is in order, you can ask the inviter to resend the invitation or reach out to the official technical support team.
-
 
 |+| Can the same member belong to multiple principal tenants?
 
     Yes, for instance, if member A is part of multiple entities, member A will be prompted to select the entity to log into upon signing in.
 
-
 |+| Can the mobile numbers or email addresses of members under the same account be duplicated?
 
     No, they cannot be duplicated; the mobile number or email address must remain unique.
-
 
 |+| Why can’t the administrator change other members’ email addresses or mobile numbers?
 

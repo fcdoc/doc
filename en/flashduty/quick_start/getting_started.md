@@ -11,7 +11,6 @@ brief: Learn how to quickly get started with Flashduty
 
 <video controls src="https://fcdoc.github.io/img/demo.mp4"></video>
 
-
 ## Get Started for Free
 ---
 
@@ -21,7 +20,6 @@ brief: Learn how to quickly get started with Flashduty
 
 > [!NOTE]
 > Due to security considerations, the system only allows registration via work email. This means that if you use an email with a suffix like qq.com, gmail.com, 163.com, etc., your registration will be rejected.
-
 
 ## Basic Workflow
 ---
@@ -41,7 +39,6 @@ Enter the [collaboration space](https://console.flashcat.cloud/channel) list pag
 >
 > **Even as an account administrator, you cannot modify the configuration of a collaboration space you are not managing.**
 
-
 ### Integration of Alert Events
 
 Collaboration spaces can only store incidents and require external integration to receive alert event reports.
@@ -52,7 +49,6 @@ Collaboration spaces can only store incidents and require external integration t
 - To route alerts to different collaboration spaces based on conditions, go to **Integration Center - Alert Events**, add a shared integration, and set up routing rules based on those conditions. This method is particularly useful for integrations like Zabbix and Prometheus that do not easily support webhook policy management.
 
 3. If the integration receives an alert event, the integration card will display the **latest event time**. Otherwise, it will show **no alerts received yet**. You can check if your monitoring system has generated new alerts and if the network is functioning properly.
-
 
 > [!NOTE]
 > Flashduty is compatible with most daily-used monitoring systems and can be used right away. If you have a custom alert system, use **Custom Events** or **Email Integration**. If you have other monitoring system needs, feel free to contact us.

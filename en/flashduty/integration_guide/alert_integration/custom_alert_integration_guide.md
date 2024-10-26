@@ -22,7 +22,6 @@ Push proprietary system alert events to Flashduty via standard protocols to auto
 
 When you do not need to route alarm events to different collaboration spaces, this method is preferred because it is simpler.
 
-
 |+| Expand
 
     1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
@@ -34,7 +33,6 @@ When you do not need to route alarm events to different collaboration spaces, th
 
 When you need to route alarms to different collaboration spaces based on the payload information of the alarm event, this method is preferred.
 
-
 |+| Expand
 
     1. Enter the Flashduty console, select **Integration Center > Alert Events**, and go to the integration selection page.
@@ -43,7 +41,6 @@ When you need to route alarms to different collaboration spaces based on the pay
     3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
     4. Click **Create Route** to configure routing rules for the integration. You can route different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed later.
     5. Completed.
-
 
 ## Implement Protocol
 ---
@@ -60,10 +57,8 @@ Please refer to [the development documentation](https://developer.flashcat.cloud
 - Ownership information of the alert, such as team, owner, etc
 - Category information of the alert, such as class (API, database, network)
 
-
 ## FAQs
 ---
-
 
 |+| Why have I not received any alerts in Flashduty?
 

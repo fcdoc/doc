@@ -41,7 +41,6 @@ Keycloak 是一个开源的身份和访问管理解决方案，它提供了一�
 
 ![](https://fcdoc.github.io/img/PYpH626xaO7ZfOx6O9_UcGu0gZGRSJU2E61bNhM2fug.avif)
 
-
 #### 3.3 创建 email/phone/username 三种字段类型
 > [!NOTE]
 > 创建之前需要先删除之前 OpenID Connect 协议的用户，创建完成设置为 Default
@@ -51,7 +50,6 @@ Keycloak 是一个开源的身份和访问管理解决方案，它提供了一�
 #### 3.4 将添加的用户加入到 Client 中
 ![](https://fcdoc.github.io/img/OWCPp0soyAyMh-eZBaokxk-cs9_xgPruEL9VfxvAEF0.avif)
 ![](https://fcdoc.github.io/img/mkZNfR9v63jjkT9vZ480v2-wHCRYCg8OPGILwJBrQH4.avif)
-
 
 #### 3.5 配置 email/phone/username 映射器(以 email 为例，其他按照下面步骤配置即可)
 ![](https://fcdoc.github.io/img/pBg2KT_RubAPb4vIIEfNbKYMJCb-ome2Kw4xhSSUXEI.avif)
@@ -66,7 +64,6 @@ Keycloak 是一个开源的身份和访问管理解决方案，它提供了一�
 
 #### 4.2 上传 XML 文件到 FlashDuty 的单点登录配置中
 ![](https://fcdoc.github.io/img/idsjJegDi2gpoyDZmawJGYL-iccbjRzXo_gzM4JwDro.avif)
-
 
 ### 5.在 Keycloak 创建用户并测试登录
 

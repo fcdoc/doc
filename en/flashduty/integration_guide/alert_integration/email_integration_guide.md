@@ -19,18 +19,16 @@ You can obtain an email address using either of the following two methods.
 
 When you do not need to route alarm events to different collaboration spaces, this method is preferred because it is simpler.
 
-
-|+| 1	Expand
+|+| Expand
 
     1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
-    2. Select the **Integrated Data** tab, click on **Add an Integration**, and proceed to the integration setup page
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the integration creation page
     3. Choose the **Email** integration, click **Save**, and a card will be generated.
     4. Click on the generated card to view the **Email Address**, copy it for backup, and the task is complete.
 
 #### Use Shared Integrations
 
 When you need to route alarms to different collaboration spaces based on the payload information of the alarm event, this method is preferred.
-
 
 |+| Expand
 
@@ -40,7 +38,7 @@ When you need to route alarms to different collaboration spaces based on the pay
     - **Email Address**: Assign a memorable prefix for the email that must be unique within the account.
     - **Push Mode**: Choose the conditions under which the email will trigger or resume alerts.
     3. Copy the **Email Address** displayed on the current page for backup.
-    4. Click **Create Route** to configure routing rules for the integration. You can route different alerts to different collaboration spaces based on specific conditions, or set a default collaboration space as a fallback, with further adjustments as necessary.
+    4. Click **Create Route** to configure routing rules for the integration. You can route different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed later.
     5. Completed.
 
 ### Customize Email Integration
@@ -85,8 +83,6 @@ attachment_stripped = true
 4. In new alerts triggered by email, **the title is the email's subject, and the description is the email's content**.
 
 5. If you change your account's domain name, the email address will also change. Be sure to update the push address accordingly.
-
-
 
 ## Severity Level Mapping
 ---

@@ -6,7 +6,6 @@ brief: Understand the most common issues when using Flashduty
 
 ---
 
-
 |+| What is FlashDuty?
 
     FlashDuty is positioned as a one-stop alarm response platform. We offer IT professionals on-duty services, alarm noise reduction, upgrading, and automation capabilities to accelerate enterprise fault response and minimize losses.
@@ -18,7 +17,6 @@ brief: Understand the most common issues when using Flashduty
     - A centralized location is needed to collect and uniformly process, track, and analyze alarms from all sources within the company.
     - Alarms need to be categorized and critical personnel should be dynamically notified through different channels, with an automatic escalation process to prevent alarms from going unhandled.
     - Daily alarm handling consumes a significant amount of time, and alarm noise reduction is required to address alarm fatigue.
-
 
 |+| What notification methods does FlashDuty support?
 
@@ -37,7 +35,6 @@ brief: Understand the most common issues when using Flashduty
     | WeChat Work Robot    |    |  ✅  |
     | Zoom Robot    |    |  ✅  |
     | Telegram Bot    |    |  ✅  |
-
 
 |+| Does FlashDuty use a fixed number for voice notifications?
 

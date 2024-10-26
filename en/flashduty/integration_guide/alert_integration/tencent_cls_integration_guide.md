@@ -16,18 +16,16 @@ brief: 1	Synchronize Tencent Cloud Log Service CLS monitoring alarm events to Ku
 
 When you do not need to route alarm events to different collaboration spaces, this method is preferred because it is simpler.
 
-
 |+| Expand
 
     1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
-    2. Select the **Integrated Data** tab, click on **Add an Integration**, and proceed to the Add Integration page
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the integration creation page
     3. Choose the **Tencent Cloud CLS** integration, click **Save**, and a card will be generated.
-    4. Click on the generated card to view the **Push Address**, copy it for later use, and the process is complete.
+    4. Click on the generated card to view the **Push Address**, copy it for backup, and the task is complete.
 
 ### Use Shared Integrations
 
 When you need to route alarms to different collaboration spaces based on the payload information of the alarm event, this method is preferred.
-
 
 |+| Expand
 
@@ -35,7 +33,7 @@ When you need to route alarms to different collaboration spaces based on the pay
     2. Select the **Tencent Cloud CLS** integration:
     - **Integration Name**: Define a name for the current integration.
     3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on specific conditions, or directly set a default collaboration space as a fallback, which can be adjusted as needed later on.
+    4. Click **Create Route** to configure routing rules for the integration. You can route different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed later.
     5. Completed.
 
 ## CLS in Tencent Cloud
@@ -48,7 +46,6 @@ When you need to route alarms to different collaboration spaces based on the pay
 **Step 2: Configure Alarm Policy**
 
 <div id="!"><ol><li>Log in to your Tencent Cloud console, select the Log Service CLS product, and enter Monitoring Alarm - Alarm Policy</li><li> Click **New** to start a new</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/FCfCmqlCwhjze8nSa88mkVt3nUX1myHyDFygJd8_lIc.avif"><ol start="3"><li><p> As shown in the figure, __ Alarm name __ fill in the specific alarm name, select the specific log topic for the log topic</p></li><li><p> **Execution statement:** Fill in the specific query statement, select the time range for the query time range, click preview to view the execution results, and enter the specific trigger condition for the trigger condition.</p></li><li><p> **Alarm levels** are divided into emergency, alarm and reminder. The program is selected according to the severity of the alarm, and the execution cycle is selected according to needs.</p></li><li><p> **Multi-dimensional analysis** , when an alarm is triggered, additional retrieval and analysis can be performed on the original log, and the results are appended to the alarm notification to assist in locating the cause of the alarm. Multidimensional analysis will not affect alarm triggering conditions.</p></li><li><p> Alarm notifications, **notification channel groups** , can be associated with specific channel groups</p></li></ol></div>
-
 
 **Step 3: Configure Custom Callback**
 
@@ -82,7 +79,6 @@ When you need to route alarms to different collaboration spaces based on the pay
 "analysis_result": {{.AnalysisResult}}
 }
 </code></pre></div>
-
 
 ## Status Comparison
 ---

@@ -59,7 +59,6 @@ Group chat involves sending notifications to a group with special mentions for d
 - Cyclic notifications are disabled by default, meaning that the same event is notified only once. If enabled, configure the number of notifications appropriately. Note that you must enter a value of at least `2` to receive additional cyclic notifications.
 - If a fault is claimed, cyclic notifications will cease.
 
-
 ### Upgrade Dispatch
 
 - To ensure that faults are addressed, set automatic upgrades for faults that are not closed or claimed within a timeout. This involves setting up multiple stages.
@@ -78,7 +77,6 @@ You can also manually upgrade faults; visit [Upgrade and Dispatch Faults](https:
 > [!WARN]
 > We do not recommend setting up an overly large collaborative workspace, especially when managing alerts for a large-scale business. This can lead to the maintenance of numerous dispatch strategies, increasing the long-term maintenance burden, confusion, and the likelihood of errors.
 
-
 ## Policy Configuration Principles
 ---
 General principles for configuring dispatch strategies should consider the following aspects:
@@ -87,15 +85,12 @@ General principles for configuring dispatch strategies should consider the follo
 2. **Multi-channel Notification:** Utilize multiple notification methods to ensure that notification objects receive alerts promptly. For example, use various channels such as SMS, email, and instant messaging tools to improve the timeliness and reliability of notifications. However, different notification methods are recommended for different alert levels to prevent information overload.
 3. **Alarm Escalation Mechanism:** When an alert remains unclaimed or unhandled for an extended period, an escalation mechanism should be in place. This could involve automatically escalating the alert to the next level of handler or team or sending the alert to multiple handlers to ensure timely resolution.
 
-
 ## FAQs
 ---
-
 
 |+| How to investigate if an alarm is generated but no notification is received?
 
     Go to Fault Details => Timeline to check the notification status of each channel in the notification trigger process. If there is a failure, a failure message will be provided for reference. For further reasons, please contact technical support for assistance with troubleshooting.
-
 
 |+| Why do the notification methods not align with my personal preference settings?
 

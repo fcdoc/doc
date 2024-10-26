@@ -35,15 +35,12 @@ Flashduty is positioned as a **one-stop alarm response platform** for enterprise
 
 <img src="https://fcdoc.github.io/img/lUuHJZGgA3k24I-EH9IDwEk2N6wZfuHnbS2lGmxpRGo.avif" alt="drawing" width="200">
 
-
 **Console feedback**:
 
 Login to the console’s top-right corner, navigate to **Support > Feedback**, and submit your feedback.
 
-
 **Send us an email**:
 [contact-us@flashcat.cloud](mailto:contact-us@flashcat.cloud)
-
 
 ## Try It Now!
 ---

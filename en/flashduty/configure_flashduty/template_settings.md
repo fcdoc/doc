@@ -209,13 +209,11 @@ CloseTime | int64 | no | Closing time, EndTime is the alarm recovery time, Close
 
 ```
 
-
 9. **How can I view more functions and examples of their use?**
 - Function list: https://github.com/flashcatcloud/sprig/blob/master/functions.go#L97
 - Usage example: View the corresponding _test.go file, such as date function test cases can be found at https://github.com/flashcatcloud/sprig/blob/master/date_test.go
 
 The following is a detailed description of each notification channel.
-
 
 ## Feishu Application
 ---
@@ -260,8 +258,6 @@ If you want to display only key tag information, you can refer to the following 
 {{if (index .Labels "runbook_url")}}runbook_url：{{toHtml (index .Labels "runbook_url")}}{{end}}
 ```
 
-
-
 ## DingTalk Application
 ---
 You need to pre-configure **the integration center - Instant Messaging -** integration before you can send message cards. If no custom content is set, the system default template will be used to render all label information:
@@ -304,7 +300,6 @@ If you want to display only key tag information, you can refer to the following 
 {{if (index .Labels "runbook_url")}}**runbook_url**：{{index .Labels "runbook_url"}}{{end}}
 ```
 
-
 ## Enterprise WeChat Application
 ---
 
@@ -341,8 +336,6 @@ As shown in the figure below:
 
 **Note that Enterprise WeChat limits the length of the card. In the template rendering area, you can render no more than 8 lines of content, and the part exceeding 8 lines will be hidden.**
 
-
-
 ## Slack App
 ---
 You need to pre-configure **the Integration Center - IM - Slack integration before** you can send message cards. If no custom content is set, the system default template will be used and only common tag information will be rendered:
@@ -353,7 +346,6 @@ You need to pre-configure **the Integration Center - IM - Slack integration befo
 {{range $k, $v := .Labels}}
 {{if not (in $k "resource" "body_text")}}*{{$k}}* : {{toHtml $v}}{{end}}{{end}}
 ```
-
 
 As shown in the figure below:
 
@@ -387,8 +379,6 @@ If you want to display only key tag information, you can refer to the following 
 {{if (index .Labels "runbook_url")}}*runbook_url*：{{index .Labels "runbook_url"}}{{end}}
 ```
 
-
-
 ## Microsoft Teams App
 ---
 You need to pre-configure **the Integration Center - IM - Microsoft Teams integration before** you can send message cards. If no custom content is set, the system default template will be used and only common tag information will be rendered:
@@ -399,7 +389,6 @@ You need to pre-configure **the Integration Center - IM - Microsoft Teams integr
 {{range $k, $v := .Labels}}
 {{if not (in $k "resource" "body_text" "body_text_with_table")}}**{{$k}}** : {{toHtml $v}}{{end}}{{end}}
 ```
-
 
 As shown in the figure below:
 
@@ -433,10 +422,6 @@ If you want to display only key tag information, you can refer to the following 
 {{if (index .Labels "runbook_url")}}**runbook_url**：{{index .Labels "runbook_url"}}{{end}}
 ```
 
-
-
-
-
 ## Microsoft Teams App
 ---
 You need to pre-configure **the Integration Center - IM - Microsoft Teams integration before** you can send message cards. If no custom content is set, the system default template will be used and only common tag information will be rendered:
@@ -447,7 +432,6 @@ You need to pre-configure **the Integration Center - IM - Microsoft Teams integr
 {{range $k, $v := .Labels}}
 {{if not (in $k "resource" "body_text" "body_text_with_table")}}**{{$k}}** : {{toHtml $v}}{{end}}{{end}}
 ```
-
 
 As shown in the figure below:
 
@@ -480,8 +464,6 @@ If you want to display only key tag information, you can refer to the following 
 {{if (index .Labels "mode")}}**mode**：{{index .Labels "mode"}}{{end}}
 {{if (index .Labels "runbook_url")}}**runbook_url**：{{index .Labels "runbook_url"}}{{end}}
 ```
-
-
 
 ## Feishu Robot
 ---
@@ -504,8 +486,6 @@ Feishu Robot only supports sending plain text messages.
 分派人员：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 <br>详情：{{.DetailUrl}}
 ```
-
-
 
 ## DingTalk Robot
 ---
@@ -531,8 +511,6 @@ DingTalk Robot only supports sending Markdown messages ([grammar restrictions](h
 <br>[详情]({{.DetailUrl}})|[认领]({{.DetailUrl}}?ack=1)
 ```
 
-
-
 ## Enterprise WeChat Robot
 ---
 Qiwei Robot only supports sending Markdown messages ([grammar restrictions](https://developer.work.weixin.qq.com/document/path/91770#markdown%E7%B1%BB%E5%9E%8B)).
@@ -553,8 +531,6 @@ Qiwei Robot only supports sending Markdown messages ([grammar restrictions](http
 > 分派人员：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 <br>[详情]({{.DetailUrl}})|[认领]({{.DetailUrl}}?ack=1)
 ```
-
-
 
 ## Telegram Bot
 ---
@@ -577,8 +553,6 @@ Qiwei Robot only supports sending Markdown messages ([grammar restrictions](http
 
 <br>[详情]({{.DetailUrl}})|[认领]({{.DetailUrl}}?ack=1)
 ```
-
-
 
 ## Slack Bot
 ---
@@ -700,8 +674,6 @@ Qiwei Robot only supports sending Markdown messages ([grammar restrictions](http
 }
 ```
 
-
-
 ## Short Message
 ---
 If custom content is not set, the system default template will be used to render the notification:
@@ -709,8 +681,6 @@ If custom content is not set, the system default template will be used to render
 ```
 您有故障待处理：{{toHtml .Title}}，协作空间：{{.ChannelName}}，等级：{{.IncidentSeverity}}{{if gt .AlertCnt 1}}，共聚合{{.AlertCnt}}条告警{{end}}
 ```
-
-
 
 ## Mail
 ---

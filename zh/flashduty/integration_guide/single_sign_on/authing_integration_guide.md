@@ -6,7 +6,6 @@ brief: 在Authing中配置单点登录教程
 
 ---
 
-
 快速了解
 ---
 [Authing](https://www.authing.cn/)是一家提供身份识别和访问控制管理的供应商，通过Authing平台，可实现以OIDC、SAML2.0或CAS协议的方式登录FlashDuty管理控制台
@@ -32,8 +31,6 @@ brief: 在Authing中配置单点登录教程
 |APP Secret|对应 FlashDuty 的 Client Secret|
 |Issuer|对应 FlashDuty 的 Issuer|
 |认证地址|通过 SSO 登录时跳转的地址|
-
-
 
 ## 开始配置 OIDC 协议
 ---
@@ -71,7 +68,6 @@ brief: 在Authing中配置单点登录教程
 > [!NOTE]
 > FlashDuty 只支持用户邮箱关联，所以需要用邮箱创建用户
 
-
 ![](https://fcdoc.github.io/img/wJC3EQjcBkksln8c1Yetxw-EqkMQpM7O-3nGITx7604.avif)
 
 #### 4.2 使用 SSO 地址测试登录
@@ -87,7 +83,6 @@ brief: 在Authing中配置单点登录教程
 
 > [!NOTE]
 > 使用在 Authing 创建的用户，登录 FlashDuty 控制台
-
 
 ## 开始配置 SAML2.0 协议
 ---
@@ -125,7 +120,6 @@ brief: 在Authing中配置单点登录教程
 > [!NOTE]
 > 以上是两种方式的全部配置方式，两个平台在配置时有穿插，所以请务必小心不要遗忘关键信息，如在配置过程中有任何问题，可以联系 FlashDuty 技术支持协助
 
-
 ## 开始配置 CAS 协议
 ---
 ### 1. 打开 [FlashDuty](console.flashcat.cloud) 控制台并开启单点登录配置
@@ -162,13 +156,11 @@ brief: 在Authing中配置单点登录教程
 > [!NOTE]
 > FlashDuty 只支持用户邮箱关联，所以需要用邮箱创建用户
 
-
 ![](https://fcdoc.github.io/img/wJC3EQjcBkksln8c1Yetxw-EqkMQpM7O-3nGITx7604.avif)
 
 #### 4.2 使用 SSO 地址测试登录
 
 ![](https://fcdoc.github.io/img/dII3AxQNII7gMXCoB0qo_PNjiVrH1km-IBFJTjlGKxY.avif)
-
 
 #### 4.3 SSO 地址跳转到登录页面
 

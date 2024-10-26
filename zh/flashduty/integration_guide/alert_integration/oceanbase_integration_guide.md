@@ -16,7 +16,6 @@ brief: 通过 webhook 的方式同步OceanBase告警事件到快猫星云，实�
 
 当您不需要将告警事件路由到不同的协作空间，优先选择此方式，更简单。
 
-
 |+| 展开
 
     1. 进入 Flashduty 控制台，选择 **协作空间**，进入某个空间的详情页面
@@ -28,7 +27,6 @@ brief: 通过 webhook 的方式同步OceanBase告警事件到快猫星云，实�
 
 当您需要根据告警事件的 Payload 信息，将告警路由到不同的协作空间，优先选择此方式。
 
-
 |+| 展开
 
     1. 进入 Flashduty 控制台，选择 **集成中心=>告警事件**，进入集成选择页面。
@@ -37,8 +35,6 @@ brief: 通过 webhook 的方式同步OceanBase告警事件到快猫星云，实�
     3. 点击 **保存** 后，复制当前页面的新生成的 **推送地址** 备用。
     4. 点击 **创建路由**，为集成配置路由规则。您可以按条件匹配不同的告警到不同的协作空间，也可以直接设置默认协作空间作为兜底，后续再按需调整。
     5. 完成。
-
-
 
 ## 在 OceanBase
 ---
@@ -165,7 +161,6 @@ OCP告警通知-单条告警
 1. 新建推送配置，路径：**告警中心=>告警推送=>新建推送配置**。
 2. 推送类型、指定对象按需配置即可。
 
-
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/xQQWu3WIzYHZ-oN5KSj9d2tD0HvTTLNVngjSn7YXxMU.avif" />
 
 3. 推送语言选择 **简体中文**。
@@ -173,10 +168,8 @@ OCP告警通知-单条告警
 5. 开启 **恢复通知**。
 6. 提交。
 
-
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/QuWqfI-2cNzlQ_tXih5zqo_AB3YzPDDD8scvINbxt54.avif" />
 </div>
-
 
 ## 二、状态对照
 
@@ -191,7 +184,6 @@ OCP告警通知-单条告警
 |提醒|Info|提醒|
 
 </div>
-
 
 ## 状态对照
 ---

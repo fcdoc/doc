@@ -34,7 +34,6 @@ The following table lists the functional permissions that can currently be contr
 | **Subscription Management**<br>- Subscription Management<br>- Balance Insufficient Reminder<br>- Change Expiration Policy for Version<br>- Enable Monitoring Management Function    | ✔️ |  | ✔️ |
 | **All Other Features** | ✔️ | ✔️ | ✔️ |
 
-
 > [!WARN]
 > Note that **all other functions** not listed in the table *(such as managing collaboration spaces)* are permissions that all users have by default (even if a user is not assigned a role) and do not require manual control.
 
@@ -53,19 +52,16 @@ Flashduty **controls data permissions based on teams** and applies to the follow
 
 If you lack data permissions for a corresponding resource, the system will provide the following prompt:
 
-
 ![](https://fcdoc.github.io/img/dCWMN_bb4xQtkzwoFjba1jqNWm_4J0RjzhIubwbGtCw.avif)
 
 ## FAQs
 ---
-
 
 |+| I am already an account administrator; why can't I modify the collaboration space settings?
 
     Because the collaboration space operates under data permissions, you must be the creator, the main account, or one of the responsible team members to modify the information of the respective collaboration space.
 
     If there is no designated responsible team for the space, you can request that the space creator or main account set up a team for the collaboration space and invite you to join, which will grant you administrative privileges for that space.
-
 
 |+| Why can a member without any role address issues?
 

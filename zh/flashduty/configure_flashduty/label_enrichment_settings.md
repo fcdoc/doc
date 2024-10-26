@@ -60,8 +60,6 @@ FlashDuty 故障详情中的故障标签以 key:value 的形式展示告警的�
 #### 1.3 提取效果
 <img src="https://fcdoc.github.io/img/uZkBXgpld3Ng5wCstL8exfe4C0kvYx_lu564VLcBfpk.avif" style="display: block; margin: 0 auto;" width="500">
 
-
-
 ### 2. **标签组合**
 **场景：** 公司的日志平台可以通过域名+事件ID+时间戳的方式直接访问到日志详情，但告警信息中只有事件ID和时间戳标签，所以需要根据这些信息组合成一个访问地址。
 #### 2.1 告警原文
@@ -87,7 +85,6 @@ FlashDuty 故障详情中的故障标签以 key:value 的形式展示告警的�
 
 创建schema，source_labels和result_labels参数分别表示源标签和目标标签名称（[更多创建方式](https://developer.flashcat.cloud/api-142409927)）
 
-
 ```
 curl --location --request POST 'https://api.flashcat.cloud/enrichment/mapping/schema/create?app_key={}' \
 --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
@@ -107,7 +104,6 @@ curl --location --request POST 'https://api.flashcat.cloud/enrichment/mapping/sc
 
 ```
 
-
 #### 3.2 上传映射表（需要CSV格式）
 
 | ID | Type | Level |Dlevel|
@@ -125,7 +121,6 @@ curl --location --request POST 'https://api.flashcat.cloud/enrichment/mapping/da
 --form 'file=@"./test.csv"'
 
 ```
-
 
 #### 3.3 配置映射关系
 

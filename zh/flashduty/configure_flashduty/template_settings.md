@@ -209,13 +209,11 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 
 ```
 
-
 9. **如何查阅更多的函数及其使用示例？**
 - 函数列表：https://github.com/flashcatcloud/sprig/blob/master/functions.go#L97
 - 使用示例：查看对应的\_test.go 文件，比如 date 函数测试用例见 https://github.com/flashcatcloud/sprig/blob/master/date_test.go
 
 以下为各通知渠道具体说明。
-
 
 ## 飞书应用
 ---
@@ -260,8 +258,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 {{if (index .Labels "runbook_url")}}runbook_url：{{toHtml (index .Labels "runbook_url")}}{{end}}
 ```
 
-
-
 ## 钉钉应用
 ---
 您需要预先配置 __集成中心-即时消息-钉钉__ 集成，才能发送消息卡片。如果不设置自定义内容，将采用系统默认模板，渲染全部标签信息：
@@ -304,7 +300,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 {{if (index .Labels "runbook_url")}}**runbook_url**：{{index .Labels "runbook_url"}}{{end}}
 ```
 
-
 ## 企业微信应用
 ---
 
@@ -341,8 +336,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 
 **注意，企业微信限制了卡片长度，在模板渲染区域，您最多可以渲染不超过 8 行内容，超过 8 行的部分将被隐藏**
 
-
-
 ## Slack 应用
 ---
 您需要预先配置 __集成中心-即时消息- Slack__ 集成，才能发送消息卡片。如果不设置自定义内容，将采用系统默认模板，仅渲染常见标签信息：
@@ -353,7 +346,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 {{range $k, $v := .Labels}}
 {{if not (in $k "resource" "body_text")}}*{{$k}}* : {{toHtml $v}}{{end}}{{end}}
 ```
-
 
 如下图所示：
 
@@ -387,8 +379,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 {{if (index .Labels "runbook_url")}}*runbook_url*：{{index .Labels "runbook_url"}}{{end}}
 ```
 
-
-
 ## Microsoft Teams 应用
 ---
 您需要预先配置 __集成中心-即时消息- Microsoft Teams__ 集成，才能发送消息卡片。如果不设置自定义内容，将采用系统默认模板，仅渲染常见标签信息：
@@ -399,7 +389,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 {{range $k, $v := .Labels}}
 {{if not (in $k "resource" "body_text" "body_text_with_table")}}**{{$k}}** : {{toHtml $v}}{{end}}{{end}}
 ```
-
 
 如下图所示：
 
@@ -433,10 +422,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 {{if (index .Labels "runbook_url")}}**runbook_url**：{{index .Labels "runbook_url"}}{{end}}
 ```
 
-
-
-
-
 ## Microsoft Teams 应用
 ---
 您需要预先配置 __集成中心-即时消息- Microsoft Teams__ 集成，才能发送消息卡片。如果不设置自定义内容，将采用系统默认模板，仅渲染常见标签信息：
@@ -447,7 +432,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 {{range $k, $v := .Labels}}
 {{if not (in $k "resource" "body_text" "body_text_with_table")}}**{{$k}}** : {{toHtml $v}}{{end}}{{end}}
 ```
-
 
 如下图所示：
 
@@ -480,8 +464,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 {{if (index .Labels "mode")}}**mode**：{{index .Labels "mode"}}{{end}}
 {{if (index .Labels "runbook_url")}}**runbook_url**：{{index .Labels "runbook_url"}}{{end}}
 ```
-
-
 
 ## 飞书机器人
 ---
@@ -504,8 +486,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 分派人员：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 <br>详情：{{.DetailUrl}}
 ```
-
-
 
 ## 钉钉机器人
 ---
@@ -531,8 +511,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 <br>[详情]({{.DetailUrl}})|[认领]({{.DetailUrl}}?ack=1)
 ```
 
-
-
 ## 企业微信机器人
 ---
 企微机器人仅支持发送 Markdown 消息（[语法限制](https://developer.work.weixin.qq.com/document/path/91770#markdown%E7%B1%BB%E5%9E%8B)）。
@@ -553,8 +531,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 > 分派人员：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 <br>[详情]({{.DetailUrl}})|[认领]({{.DetailUrl}}?ack=1)
 ```
-
-
 
 ## Telegram 机器人
 ---
@@ -577,8 +553,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 
 <br>[详情]({{.DetailUrl}})|[认领]({{.DetailUrl}}?ack=1)
 ```
-
-
 
 ## Slack 机器人
 ---
@@ -700,8 +674,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 }
 ```
 
-
-
 ## 短信
 ---
 如果不设置自定义内容，将采用系统默认模板渲染通知：
@@ -709,8 +681,6 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 您有故障待处理：{{toHtml .Title}}，协作空间：{{.ChannelName}}，等级：{{.IncidentSeverity}}{{if gt .AlertCnt 1}}，共聚合{{.AlertCnt}}条告警{{end}}
 ```
-
-
 
 ## 邮件
 ---

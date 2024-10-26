@@ -32,7 +32,6 @@ Go to [Collaboration Space Details] - [Alarm Noise Reduction], you can set the *
 
 <img src="https://fcdoc.github.io/img/V7G1hZj1IPX10Fsa_ekHR77oKs8POHsib5y2zg-Yjdw.avif" style="display: block; margin: 0 auto;" height="400">
 
-
 ## View Aggregation Examples
 ---
 

@@ -29,7 +29,6 @@ brief: 通过配置服务日历，可以使用工作日或休息日模式进行�
 
 ![](https://fcdoc.github.io/img/6we-QRWfJKvBVRJZC2rF7JdF73fg6ntjNLDnw0A5GSg.avif)
 
-
 > [!WARN]
 > 删除日历不可恢复，请在删除前确保没有业务再使用。
 

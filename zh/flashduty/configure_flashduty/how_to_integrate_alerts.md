@@ -6,9 +6,7 @@ brief: 通过专属集成或共享集成接入告警，以及专属集成和共�
 
 ---
 
-
 FlashDuty 作为统一告警处理平台，其本身不产生告警数据，需要将第三方监控平台的告警事件接入到 FlashDuty，以实现统一告警接收、降噪、分派、触达、解决、分析和自动化等，如夜莺/FlashCat、Zabbix、Promethues 等监控平台以及各大云厂商的告警，更多类型请参考 [告警集成](https://docs.flashcat.cloud/zh/flashduty/custom-alert-integration-guide)。
-
 
 ## 接入方式
 ---
@@ -26,7 +24,6 @@ FlashDuty 作为统一告警处理平台，其本身不产生告警数据，需�
 - 集成中心创建的告警事件类型是全局的，必须**通过路由规则来选择将告警推送到某个协作空间或多个协作空间**。
 - 每个集成 **必须配置至少一个接收告警的协作空间，否则该集成不生效，即无法接收告警事件**。
 
-
 ![jichengzhongxin.png](https://fcdoc.github.io/img/Ag1OnefntjpAjD-qq6fCgotIHvpQl1F-G2kc9VC7WAs.avif)
 
 > [!NOTE]
@@ -43,27 +40,22 @@ FlashDuty 作为统一告警处理平台，其本身不产生告警数据，需�
 ## 常见问题
 ---
 
-
 |+| 集成中心的告警事件中创建的集成接收不到告警？
 
     1. 请确认是否有配置路由。
     2. 请确认源平台是否有触发告警事件以及是否有产生告警。
 
-
 |+| 创建集成数量是否有限制？
 
     目前没有限制。
-
 
 |+| 告警的标签如何生成？
 
     Flashduty 针对每一种集成，按照应取尽取的原则，将关键信息全部方式标签、描述或标题当中。如果您希望在此基础上，动态生成其他标签，请配置标签增强规则，具体请参考：https://docs.flashcat.cloud/zh/flashduty/label-enrichment-settings
 
-
 |+| 告警标题是如何确定的？我是否可以修改？
 
     Flashduty 针对每一种集成，使用了特定的标题生成方式，一般为”策略名称 / 告警对象“的组合，如果您希望定制标题的生成规则，请参考：https://docs.flashcat.cloud/zh/flashduty/customize-incident-attrs
-
 
 |+| 怎么查看告警事件来自哪个集成类型？
 

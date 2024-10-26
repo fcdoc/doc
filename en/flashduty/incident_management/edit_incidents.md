@@ -64,7 +64,6 @@ Once someone claims an incident, the status will change from "Pending" to "Close
 
 9	After a single individual claims a fault, they can opt to **Unclaim** it, which is applicable in cases of mistaken claim. When all claimants have withdrawn their claims, the fault will revert to the **Pending** status.
 
-
 ### Handling progress and MTTA
 
 You can view each person's assignment and claim times in the console. We calculate the MTTA of an incident based on the following rules:
@@ -77,7 +76,6 @@ You can view each person's assignment and claim times in the console. We calcula
 ---
 
 10	After a fault has been claimed, the handler may require time to investigate and address the issue. The **Suspension** action can temporarily halt the fault's progression according to the anticipated dispatch strategy. You can set a suspension period after claiming the fault, such as 2 hours, 4 hours, or define a custom expiration time within 24 hours.
-
 
 > [!TIP]
 > 12	Should you initiate a suspension and the suspension period expire without completing the fault handling, the system will automatically revert the fault to the **Pending** status and reinitiate the dispatch notification.
@@ -125,7 +123,6 @@ The timeline will fully record your modification process.
 
 ## FAQs
 ---
-
 
 |+| I postponed the fault, yet the system still triggered a new, similar fault
 

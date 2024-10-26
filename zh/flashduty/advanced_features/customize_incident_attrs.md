@@ -43,7 +43,6 @@ https://api.flashcat.cloud/event/push/alert/aws/cloudwatch?integration_key=your-
 |\$resource::\$check | {"resource": "127.0.0.1"} | 127.0.0.1 / \$check |
 |\$resource::主机宕机 | {"resource": "127.0.0.1"} | 127.0.0.1 / 主机宕机 |
 
-
 ### 通过\${var}引用标签生成
 
 以[TPL]作为前缀，使用\${}来引用变量，变量内容将从标签中提取，提取不到使用\<no value\>替代。
@@ -55,7 +54,6 @@ https://api.flashcat.cloud/event/push/alert/aws/cloudwatch?integration_key=your-
 |[TPL]\${resource} / \${check}| {"resource": "127.0.0.1", "check": "cpu idle low"} | 127.0.0.1 / cpu idle low |
 |[TPL]\${resource} / \${check} | {"resource": "127.0.0.1"} | 127.0.0.1 / \<no value\> |
 |[TPL]\${resource} / 主机宕机 | {"resource": "127.0.0.1"} | 127.0.0.1 / 主机宕机 |
-
 
 ### 通过Golang模版语法生成
 
@@ -71,7 +69,6 @@ https://api.flashcat.cloud/event/push/alert/aws/cloudwatch?integration_key=your-
 
 ## 常见问题
 ---
-
 
 |+| 使用标签动态生成标题，如果标签不存在怎么办？
 

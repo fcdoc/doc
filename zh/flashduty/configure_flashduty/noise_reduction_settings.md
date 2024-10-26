@@ -32,7 +32,6 @@ brief: 通过告警聚合，可以将多条相似的活跃告警聚合到同一�
 
 <img src="https://fcdoc.github.io/img/V7G1hZj1IPX10Fsa_ekHR77oKs8POHsib5y2zg-Yjdw.avif" style="display: block; margin: 0 auto;" height="400">
 
-
 ## 查看聚合示例
 ---
 

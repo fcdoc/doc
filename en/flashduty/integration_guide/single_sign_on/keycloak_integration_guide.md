@@ -41,7 +41,6 @@ Keycloak is an open-source identity and access management solution that offers a
 
 ![](https://fcdoc.github.io/img/PYpH626xaO7ZfOx6O9_UcGu0gZGRSJU2E61bNhM2fug.avif)
 
-
 #### 3.3 Create Three Field Types: email/phone/username
 > [!NOTE]
 > Before creating, you need to delete the user associated with the previous OpenID Connect protocol and set the new one as Default after completion
@@ -51,7 +50,6 @@ Keycloak is an open-source identity and access management solution that offers a
 #### 3.4 Add the Created Users to the Client
 ![](https://fcdoc.github.io/img/OWCPp0soyAyMh-eZBaokxk-cs9_xgPruEL9VfxvAEF0.avif)
 ![](https://fcdoc.github.io/img/mkZNfR9v63jjkT9vZ480v2-wHCRYCg8OPGILwJBrQH4.avif)
-
 
 #### 3.5 Configure Email/Phone/Username Mappers (Using Email as an Example; Configure Others Following These Steps)
 ![](https://fcdoc.github.io/img/pBg2KT_RubAPb4vIIEfNbKYMJCb-ome2Kw4xhSSUXEI.avif)
@@ -66,7 +64,6 @@ Keycloak is an open-source identity and access management solution that offers a
 
 #### 4.2 Upload the XML File to FlashDuty's Single Sign-On Configuration
 ![](https://fcdoc.github.io/img/idsjJegDi2gpoyDZmawJGYL-iccbjRzXo_gzM4JwDro.avif)
-
 
 ### 5. Create a User in Keycloak and Test Login
 

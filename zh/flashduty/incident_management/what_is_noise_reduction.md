@@ -12,7 +12,6 @@ brief: 理解Flashduty如何针对告警进行降噪
 
 当Flashduty接收到告警事件（比如Zabbix的一条告警通知），系统会自动触发一条告警，而这条告警将会触发一条故障。多条相似的活跃告警，可能会被聚合到同一条故障中，一起分派、通知和处理，这可以显著降低通知频次并提高处置效率。
 
-
 ## 降噪模型
 ---
 
@@ -49,7 +48,6 @@ brief: 理解Flashduty如何针对告警进行降噪
 
 <img src="https://fcdoc.github.io/img/V7G1hZj1IPX10Fsa_ekHR77oKs8POHsib5y2zg-Yjdw.avif" style="display: block; margin: 0 auto;" height="400">
 
-
 ## 查看聚合示例
 ---
 
@@ -78,7 +76,6 @@ brief: 理解Flashduty如何针对告警进行降噪
 
 ## 常见问题
 ---
-
 
 |+| 故障的标题是否会随告警合入改变？
 

@@ -15,7 +15,6 @@ so-called novel faults refer to those that have not occurred within a certain pe
 > [!NOTE]
 > This feature is currently in beta and is only available in the professional version and higher subscription plans. If you need to enable this feature, please contact us at any time.
 
-
 ## View novel faults
 ---
 
@@ -45,10 +44,8 @@ When assessing similarity, we primarily consider the following factors:
 
 If the system detects no similar faults within the past **30** days, it will mark the fault as novel.
 
-
 ## FAQs
 ---
-
 
 |+| Does the novelty fault feature need to be enabled separately?
 

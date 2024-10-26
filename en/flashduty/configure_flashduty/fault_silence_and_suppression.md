@@ -23,7 +23,6 @@ Configuration path: **Collaboration Space Details => Noise Reduction Configurati
 
 <img src="https://fcdoc.github.io/img/jM2er25BoW7JDHWOJVTIBBZwwVmPRn2bu_S4QGGv1rc.avif" style="display: block; margin: 0 auto;" width="800">
 
-
 ### Silent Conditions
 - **Condition Configuration:** Allows selection of match or non-match based on fault severity, fault tags, or combined conditions.
 - **Multiple Conditions:** The system supports advanced logical operators (such as AND, OR) for flexible combination of fault severity, fault tags, and other attributes, enabling precise multi-dimensional alarm matching and control.
@@ -38,7 +37,6 @@ Quick Silence refers to the rapid creation of **temporary or single** silent rul
 - **Effective Scope:** The silent rule applies to the collaboration space of the associated fault and **cannot be changed**.
 - **Effective Time:** Only supports a single time range (default 24 hours); the rule is automatically deleted upon expiration without a deletion record.
 - **Silent Condition:** Defaults to using the fault's tags as conditions, with an exact match required. Visit [Configure Filter Conditions](https://docs.flashcat.cloud/zh/flashduty/how-to-filter) to learn how to set up restrictions.
-
 
 <img src="https://fcdoc.github.io/img/4skl6ajxT--De2Dklq48hnH9yhaXPawv9oikbEYqa78.avif" style="display: block; margin: 0 auto;" width="800">
 

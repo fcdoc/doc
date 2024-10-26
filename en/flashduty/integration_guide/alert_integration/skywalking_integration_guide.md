@@ -16,11 +16,10 @@ Synchronize Skywalking alert events to Kuaimao Nebula via webhook to automate no
 
 When you do not need to route alarm events to different collaboration spaces, this method is preferred because it is simpler.
 
-
 |+| Expand
 
     1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
-    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the Add Integration page
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the integration creation page
     3. Choose the **Skywalking** integration, click **Save**, and a card will be generated.
     4. Click on the generated card to view the **Push Address**, copy it for backup, and the task is complete.
 
@@ -28,17 +27,14 @@ When you do not need to route alarm events to different collaboration spaces, th
 
 When you need to route alarms to different collaboration spaces based on the payload information of the alarm event, this method is preferred.
 
-
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and go to the integration selection page.
+    1. Enter the Flashduty console, select **Integration Center > Alert Events**, and go to the integration selection page.
     2. Select the **Skywalking** integration:
     - **Integration Name**: Define a name for the current integration.
     3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
-    4. Click **Create Route** to configure routing rules for the integration. You can route different alerts to different collaboration spaces based on specific conditions, or set a default collaboration space as a fallback, which can be adjusted as necessary later on.
+    4. Click **Create Route** to configure routing rules for the integration. You can route different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed later.
     5. Completed.
-
-
 
 ## In Skywalking
 ---
@@ -64,7 +60,7 @@ default:
 is-default: true
 urls:
 - https://api.flashcat.cloud/event/push/alert/skywalking?integration_key=18c7f1551df55fa28a1a87f0846d9d1e131
-`</pre><ol start="5"><li><p> After editing is completed, save and restart the Skywalking to make the configuration file take effect.</p></li></ol><h2> 2. Status comparison</h2><div id="!">
+`</pre><ol start="5"><li> After editing is completed, save and restart the Skywalking to make the configuration file take effect.</li></ol><h2> 2. Status comparison</h2><div id="!">
 
 |Skywalking|Kuaimao Nebula|state|
 |---|---|---|
@@ -72,6 +68,5 @@ urls:
 |Warning|Warning|warn|
 |Info|Info|remind|
 |Other or Empty|Info|remind|
-
 
 </div>

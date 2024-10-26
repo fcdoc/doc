@@ -29,7 +29,6 @@ brief: By configuring the service calendar, you can manage allocation strategies
 
 ![](https://fcdoc.github.io/img/6we-QRWfJKvBVRJZC2rF7JdF73fg6ntjNLDnw0A5GSg.avif)
 
-
 > [!WARN]
 > Deleting a calendar is irreversible. Please ensure no business is using it before deletion.
 

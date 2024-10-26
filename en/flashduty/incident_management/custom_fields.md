@@ -71,7 +71,6 @@ Only the following content can be updated:
 
 You can initiate a deletion at any time from the console. However, be aware that deletion is a time-consuming process. When a field is deleted, the system will scan historical faults and update the associations asynchronously. You will not be able to recreate a field with the same name until the deletion process is complete.
 
-
 ## FAQs
 ---
 

@@ -19,10 +19,8 @@ LDAP的核心特性包括：
 
 OpenLDAP 是一个开源的实现轻型目录访问协议（LDAP）的软件，由于其开源和灵活性，OpenLDAP 成为了许多企业和组织的首选 LDAP 实现。
 
-
 > [!NOTE]
 > 本文基于环境中已经支持 Docker 和 Docker Compose，如果环境不支持，请先自行安装。
-
 
 ## Docker Compose 配置文件
 ---
@@ -111,14 +109,12 @@ docker-compose down
 
 ![](https://fcdoc.github.io/img/1rC8UssQX0Djb1bLj3EWmNjZPG1BX-DLWxY_Q8CSWmA.avif)
 
-
 > [!NOTE]
 > 在 __用户路径__ (例如上图 ou=people 下的  cn=falsh duty) -> `Add new attribute` -> 选择 `Email` , 为用户添加 Email 属性，若已经存在请忽略。
 
 ## FlashDuty 集成
 结合上述OpenLDAP配置，FlashDuty集成信息如下图所示：
 ![](https://fcdoc.github.io/img/lEGCTBal4Z6hl7Vawh6NpyUPvtqeLfHG1c55qXBZQX8.avif)
-
 
 > [!NOTE]
 > 上述字段的含义与描述请参考 [配置单点登录](https://docs.flashcat.cloud/zh/flashduty/single-sign-on)

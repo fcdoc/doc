@@ -43,7 +43,6 @@ Example:
 |\$resource::\$check | {"resource": "127.0.0.1"} | 127.0.0.1 / \$check |
 |$resource:: Host Down | {"resource": "127.0.0.1"} | 127.0.0.1 / Host Down |
 
-
 ### Referencing tags to generate content using ${var}
 
 Use '[TPL]' as the prefix and '${}' to reference variables. The variable content will be extracted from the tags; if extraction fails, use '<no value\>' as a substitute.
@@ -55,7 +54,6 @@ Example:
 |[TPL]\${resource} / \${check}| {"resource": "127.0.0.1", "check": "cpu idle low"} | 127.0.0.1 / cpu idle low |
 |[TPL]\${resource} / \${check} | {"resource": "127.0.0.1"} | 127.0.0.1 / \<no value\> |
 |[TPL]${resource} / Host Down | {"resource": "127.0.0.1"} | 127.0.0.1 / Host Down |
-
 
 ### Generated using Golang template syntax
 
@@ -71,7 +69,6 @@ Example:
 
 ## FAQs
 ---
-
 
 |+| Utilize tags to dynamically generate titles; what should be done if the tags are absent?
 

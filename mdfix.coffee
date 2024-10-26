@@ -37,7 +37,7 @@ dump = (path, changed) =>
     if r
       li = r
 
-  new_md = li.join('\n')
+  new_md = li.join('\n').replace(/\n{3,}/g, "\n\n")
   if new_md != md
     write path, new_md
 

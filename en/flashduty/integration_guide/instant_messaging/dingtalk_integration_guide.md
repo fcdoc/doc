@@ -121,7 +121,6 @@ After the application is released, you can use the mobile /PC to access the appl
 1. Mobile: On the mobile side, access the application through DingTalk > Workbench > search for the application name > open the application to use the web application.
 2. PC: On the desktop (PC) side, access the application through DingTalk > Workbench > search for the application name > open the application to use the web application.
 
-
 ## 5. Frequently Asked Questions
 ---
 

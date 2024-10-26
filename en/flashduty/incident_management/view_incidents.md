@@ -13,7 +13,6 @@ Connect all company alarm events to Flashduty to monitor and manage alarms centr
 
 Flashduty offers two entry points for viewing the fault list: one within the collaboration space and another under the fault management menu. The difference lies in the fact that under the fault management menu, you can view faults across multiple collaboration spaces, even those of the entire company.
 
-
 ![](https://fcdoc.github.io/img/HHHZag1gZSDUdLUUapF-diTesLEySgjEC5azLRzY8Ys.avif)
 
 1. **Assignees**: By default, it focuses on faults **assigned to me**, but can be switched to view faults across the entire account.
@@ -47,7 +46,6 @@ Flashduty provides various filtering capabilities and offers ample flexibility. 
 > [!TIP]
 > Flexibility often comes at the cost of performance, and this is also true for Flashduty, despite our extensive performance optimizations. We always recommend narrowing your search time range and using conditions like **assigned to me** and **processing progress** to limit the scope of your query.
 
-
 ### Custom Rendering
 
 Under the **Settings** tab, select or disable the display of the following content to customize the fault list display:
@@ -55,7 +53,6 @@ Under the **Settings** tab, select or disable the display of the following conte
 1. **Basic Attributes**: Define whether to display basic information such as duration and handler.
 2. **Custom Fields**: You can select custom fields defined by the platform. If a fault does not have this field set, it will display as "–".
 3. **Tags**: You can filter and select tags. If a fault does not have a particular tag, it will display as "–".
-
 
 ## Fault Details
 ---
@@ -74,7 +71,6 @@ You can switch to the top tabs to view more detailed **related alarms**, **timel
 
 ### FAQs
 ---
-
 
 |+| The console error message reads: "Due to the large volume of data, we are unable to respond to your request promptly..."
 

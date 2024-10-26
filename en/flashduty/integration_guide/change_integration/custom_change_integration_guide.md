@@ -22,7 +22,6 @@ Push proprietary system change events to Flashduty via standard protocols. Most 
 3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
 4. Completed.
 
-
 ## Implement Protocol
 ---
 
@@ -38,17 +37,16 @@ Tags are descriptive elements of events and should be as detailed as possible, i
 ## FAQs
 ---
 
-
 |+| Why have I not received any updates in Flashduty?
 
     #### In Flashduty
 
-    1. Verify if the integration displays **the latest event timestamp**. If it does not, this indicates that Flashduty has not received the push notifications; proceed to investigate the Nightingale component as a priority.
+    1. Check if the integration displays the **Latest Event Time**. If not, it indicates that Flashduty has not received the push; therefore, begin troubleshooting with the Nightingale component first.
 
     #### In your system
 
-    1. Confirm that the address you requested is exactly the same as the one provided in the integration details.
-    2. Confirm that your service can access the external api.flashcat.cloud domain name. If not, you first need to open an external network for the server, or enable external network access for Flashduty's domain name alone.
-    3. Print the response output of the Flashduty service to check for any clear information.
+    1. Confirm that the requested address matches exactly with the address in the integration details.
+    2. Confirm that your service can access the external api.flashcat.cloud domain name. If not, you first need to open an external network for the server, or separately enable external network access for Flashduty's domain name.
+    3. Print the response result from the Flashduty service to check for any clear information.
 
-    If the root cause of the problem is still not found after performing the above steps, please contact us **with the request_id in the request response** .
+    If the root cause of the issue is still not identified after following the above steps, please contact us **with the request_id from the response**.

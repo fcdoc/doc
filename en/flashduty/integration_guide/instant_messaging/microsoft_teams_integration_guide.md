@@ -21,7 +21,6 @@ Download [FlashDutyBot.zip](https://fcpub-1301667576.cos.ap-nanjing.myqcloud.com
 ### 2. Upload the Application Package
 Enter **Microsoft Teams jump to [ +Apps ] - [ Manage your apps ] - [ Upload an app ] - [ Upload an app to your org ' s app catalog ]** to upload the application package FlashDutyBot.zip
 
-
 ![](https://fcdoc.github.io/img/4H1BjgL-F76QJ7e_BvGHE9JSdClYYtFcqgibEjjaeeM.avif)
 
 ### 3. Configure Application Visibility
@@ -80,11 +79,9 @@ Copy the command: linkUser {} and send it to the chat, then click to associate i
 
     Please navigate to the Integration Center => Instant Messaging => Check if the teams and users in Microsoft Teams have been successfully associated
 
-
 |+| How to view associated teams and users
 
     Please navigate to the Integration Center => Instant Messaging => View the associated Teams and associated users in Microsoft Teams
-
 
 |+| How to disassociate teams and users
 

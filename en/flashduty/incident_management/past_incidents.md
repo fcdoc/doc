@@ -15,7 +15,6 @@ When responding to failures, having access to solutions for similar historical i
 > [!NOTE]
 > This feature is currently in beta and is only available in the professional version and higher subscription plans. If you need to enable this feature, please contact us at any time.
 
-
 ## View Similar Failures
 ---
 
@@ -40,7 +39,6 @@ How do we sort?
 > [!NOTE]
 > Recording the **solution** and **root cause** of each resolved failure is a good practice that greatly enhances the efficiency of subsequent responders.
 
-
 ### How to Identify
 
 The system uses a machine learning model to determine the similarity between failures. When the similarity exceeds 90%, we consider the two failures to be similar.
@@ -54,10 +52,8 @@ When assessing similarity, we primarily consider the following factors:
 
 When searching for historical failures, the system only matches resolved similar failures within the current collaboration space.
 
-
 ## FAQs
 ---
-
 
 |+| How long ago can I review historical failures?
 

@@ -50,7 +50,6 @@ Configuration path: **Access Control => Single Sign-On => Enable => Settings => 
 |Create Account on Login|Enabled by default. **If disabled, members must be invited to join before they can log in.**|
 |Flashcat Service Provider Information|**Redirect URL:** The callback URL for the identity provider to redirect to Kuaimao Nebula
 
-
 ## Configure LDAP Protocol
 ---
 > [!NOTE]
@@ -84,31 +83,25 @@ Configure SSO Single Sign-On via [Ldap Configuration](https://docs.flashcat.clou
 ## FAQs
 ---
 
-
 |+| What is SSO single sign-on?
 
     Single sign-on (SSO) is one of the solutions for integrating enterprise systems, designed to unify user identity authentication. With SSO, users need to log in only once to access all mutually trusted enterprise applications.
-
 
 |+| What are the features of the SAML 2.0 protocol?
 
     The SAML 2.0 protocol, based on XML, facilitates secure and standardized single sign-on and identity verification across different domains. It supports various data exchange bindings, ensuring interoperability and flexibility.
 
-
 |+| What are the characteristics of the OIDC protocol?
 
     The OIDC protocol, built upon OAuth 2.0, offers a standardized and secure authentication process. It employs JSON Web Tokens to transmit user information, thereby enabling cross-platform single sign-on and comprehensive identity management.
-
 
 |+| What are the characteristics of the CAS protocol?
 
     The CAS protocol is a single sign-on (SSO) protocol for web applications. It allows users to use a single authentication process on multiple services, using service tickets (Service Ticket) and authentication tickets (Authentication Ticket) to implement services. Certification.
 
-
 |+| What are the characteristics of the LDAP protocol?
 
     The LDAP protocol is developed based on the X.500 standard. Data is organized in a tree structure, which facilitates hierarchical management and rapid retrieval of data. It provides a flexible query language (LDAP Search Filter), allowing users to filter and search data based on complex conditions.
-
 
 |+| Does it support the integration of multiple protocols?
 

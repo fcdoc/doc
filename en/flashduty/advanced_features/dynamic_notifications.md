@@ -25,7 +25,6 @@ Scenario 3:
 
 Customer C has a self-developed monitoring system with many alerting policies, each set to notify a specific WeChat group. The customer decided to migrate incident response to Flashduty but wants to retain the relationship between the original monitoring system's policies and the WeChat groups, and to dynamically notify the WeChat groups of alerts based on this relationship.
 
-
 ## Implementation methods
 ---
 
@@ -87,7 +86,6 @@ curl --location --request POST 'https://api.flashcat.cloud/event/push/alert/stan
 As shown in the figure below, the target fault is normally triggered and dispatched. The dispatch personnel and target group chat have been replaced as expected.
 
 ![](https://fcdoc.github.io/img/WHCu6fjd-r-vUtUeAhxzLsFFwBNaf5gIG_gQ4lcHAZ4.avif)
-
 
 ## FAQs
 ---

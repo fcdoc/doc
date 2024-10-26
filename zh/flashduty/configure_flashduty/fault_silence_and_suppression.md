@@ -23,7 +23,6 @@ FlashDuty提供了静默和抑制机制，来帮助企业优化告警流程，�
 
 <img src="https://fcdoc.github.io/img/jM2er25BoW7JDHWOJVTIBBZwwVmPRn2bu_S4QGGv1rc.avif" style="display: block; margin: 0 auto;" width="800">
 
-
 ### 静默条件
 - **条件配置：** 可以根据故障的严重性或故障标签以及组合条件进行选择匹配或不匹配。
 - **多条件时：** 系统支持高级逻辑运算符（如AND、OR），以便灵活组合故障的严重程度、故障标签及其他属性，实现精准的多维度告警匹配与控制。
@@ -38,7 +37,6 @@ FlashDuty提供了静默和抑制机制，来帮助企业优化告警流程，�
 - **生效范围：** 静默规则生效的协作空间为该故障的所属协作空间，**无法更改**。
 - **生效时间：** 只支持单次时间范围（默认24小时），规则到期后自动删除该规则且无删除记录。
 - **静默条件：** 默认取该故障的标签作为条件，且是完全匹配条件。您可以前往 [配置过滤条件](https://docs.flashcat.cloud/zh/flashduty/how-to-filter)，了解如何配置限制条件。
-
 
 <img src="https://fcdoc.github.io/img/4skl6ajxT--De2Dklq48hnH9yhaXPawv9oikbEYqa78.avif" style="display: block; margin: 0 auto;" width="800">
 

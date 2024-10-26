@@ -40,9 +40,7 @@ brief: You can customize the account settings and configure personal notificatio
 - Notifications will be sent according to personal configurations only **when the fault is directly assigned to an individual, or assigned to an individual via a dispatch policy with single chat enabled and personal preferences set**.
 - When configuring IM applications like DingTalk, WeChat, or Feishu, you must first associate the application to receive notifications.
 
-
 ## FAQs
-
 
 |+| I set my preferred notification method, but why wasn't the notification triggered?
 
@@ -50,4 +48,4 @@ brief: You can customize the account settings and configure personal notificatio
 
     Moreover, the single chat notification channel of the assignment strategy supports two settings: "Follow personal preferences" and "Follow unified settings." Notifications are personalized based on your settings only under the "Follow personal preferences" option. If you choose "Follow unified settings," everyone will receive notifications according to this setting, rather than their individual preferences.
 
-    Go to Collaboration Space Details => Assignment Policy to check your specific settings.
+    Go to Collaboration Space Details => Assignment Policy to review your specific settings.

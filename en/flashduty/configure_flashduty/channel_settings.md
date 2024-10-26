@@ -17,7 +17,6 @@ As a core vehicle for organizing and managing troubleshooting, the collaboration
 
 ✗ It should be avoided to integrate different types of or unrelated alerts into the same collaboration space. For instance, a space should not simultaneously handle both order-related alerts and those related to hardware resources or networks, as this would lead to confusion in handling, dispatching, and analyzing alerts, making it difficult for teams to accurately identify and prioritize issues, thus decreasing work efficiency.
 
-
 ### Begin Creation
 Login to the console to create, path: **Fault Management => Collaboration Space => Create Collaboration Space**.
 
@@ -28,7 +27,6 @@ Login to the console to create, path: **Fault Management => Collaboration Space 
 - If the distribution of faults within the space has not been planned, you can **skip setting the dispatch policy**. After creation, you can continue to configure the dispatch policy.
 - During creation, the type of integration connected is **exclusive to that space** and only effective within it. It can also be overlooked and configured after creation.
 
-
 ## Manage Collaboration Space
 ---
 ### Space Overview
@@ -37,7 +35,6 @@ Login to the console to create, path: **Fault Management => Collaboration Space 
 - By default, all collaboration spaces are displayed. You can **view collaboration spaces related to "me" by selecting "Managed by Me" or "My Favorites"**.
 - When there are many collaboration spaces and the ones you are interested in are ranked low, you can **use the sorting feature in the upper right corner to bring your preferred collaboration spaces to the forefront**.
 - Sorting can be freely arranged and **will only affect the current user, not others**.
-
 
 ### Change Information
 - The space name, description, automatic timeout closure, and management team can be changed, which can be modified in the Space Details -> Basic Settings section.
@@ -50,7 +47,6 @@ Login to the console to create, path: **Fault Management => Collaboration Space 
 - Select multiple **faults with the same status** to perform batch operations such as closing or claiming.
 - **Merging** allows multiple faults to be combined into one for handling, supporting merging across different collaboration spaces.
 - **For more details, please refer to [Searching and Viewing Faults](https://docs.flashcat.cloud/zh/flashduty/view-incidents)**.
-
 
 ### Integrated Data
 - Integrations created under a collaboration space are **exclusive to that space**.

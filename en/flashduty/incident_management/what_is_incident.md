@@ -43,10 +43,8 @@ The status of an alarm represents the status of the fault in the original monito
 - **Recovered**: All associated alarms have been resolved, and the fault will automatically recover.
 - **Unrecovered**: At least one associated alarm has not been resolved, and the fault will remain in an unrecovered state.
 
-
 > [!TIP]
 > Automatic fault recovery will automatically close the (processing progress); however, manual fault closure has no effect on the fault status.
-
 
 ## Fault Tag
 ---
@@ -92,7 +90,6 @@ On-call personnel can immediately claim the fault after receiving the notificati
 
 **Closing a fault** will change the processing progress to **Closed**. If the associated alarms are automatically recovered, the fault will also be automatically closed. Conversely, if a fault is manually closed, all associated alarms will be automatically closed. This means that these alarms will no longer be merged into any new events.
 
-
 ## Fault Timeline
 ---
 
@@ -127,7 +124,6 @@ Flashduty provides an email integration that allows you to report alarms by send
 
 > [!TIP]
 > You can set specific email prefixes for each integration. You can also contact us to set an easy-to-remember exclusive domain name for your main account. For example, order-service@tesla.flashcat.cloud.
-
 
 ### Trigger Fault via Console
 

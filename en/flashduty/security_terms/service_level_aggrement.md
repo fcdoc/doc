@@ -47,7 +47,6 @@ Specific Definitions Are As Follows:
 - **Error rate** : Number of failed requests every 5 minutes / Total number of valid requests every 5 minutes × 100 %
 - **Latency rate** : number of failed notifications every 5 minutes / Total number of valid notifications every 5 minutes × 100 %
 
-
 ### Exceptions
 
 The duration of service unavailability due to the following reasons will not be counted towards the unavailability time:
@@ -60,7 +59,6 @@ The duration of service unavailability due to the following reasons will not be 
 - Unavailability caused by your failure to follow Kuaimao Nebula's product documentation or recommendations
 - Delays in push notifications caused by carrier or terminal signal issues
 - Unavailability caused by force majeure events.
-
 
 ## How to Apply for Compensation
 ---

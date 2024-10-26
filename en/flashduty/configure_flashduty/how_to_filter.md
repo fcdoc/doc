@@ -6,7 +6,6 @@ brief: Flashduty's dispatch strategies, silencing, suppression, routing, and lab
 
 ---
 
-
 Filter conditions in Flashduty are used to match different alerts, incidents, or events. By using filter conditions, we can selectively operate on specific targets. This article will guide you through the design and configuration of filter conditions.
 
 ## Where to Use Filter Conditions?
@@ -20,7 +19,6 @@ Filter conditions are applied in the following scenarios:
 4. **Alert Aggregation**: Alert aggregation supports default dimensions, but for finer control, you need to set filter conditions to match specific alerts and define new aggregation dimensions for those incidents.
 5. **Routing Rules**: When using the alert integration of the integration center, global routing matching rules can be set. Different alerts can be matched with different filter conditions and routed to specific collaboration spaces.
 6. **Label Enhancement**: Set filter conditions to match specific alerts, which will have labels generated according to the rules if they meet the conditions.
-
 
 ## How to Configure Filter Conditions?
 ---
@@ -36,7 +34,6 @@ The overall judgment logic is divided into multiple sets of conditions:
 Each condition is divided into fields, operators and target values. Among them, there are only two situations for operators:
 - **Matching** : The target can have multiple value if any value satisfies the condition, then the condition matches.
 - **Unmatched** : The target can have multiple value if all value do not meet the condition, then the condition matches.
-
 
 > [!NOTE]
 > Condition target values are all strings and support various matching methods, including **Exact**, **Regular**, **Wildcard**, **IP Range**, and **Numerical Size**.
@@ -91,7 +88,6 @@ When the value is prefixed with `num: [gt|ge|lt|le ] : `As a prefix, the entire 
 For example:
 - Filter by Exact Value
 
-
 ### Filtering by Exact Value
 
 When the value does not conform to any of the above formats, it is considered an __exact match__. In this case, only a complete string match is considered a successful match.
@@ -99,13 +95,11 @@ When the value does not conform to any of the above formats, it is considered an
 ## FAQs
 ---
 
-
 |+| Why isn't the system prompting me with optional tags?
 
     Flashduty handles a large volume of data reports. To ensure system stability, the system only searches for up to 500 alarm events within the last 24 hours to perform deduplication of tags. Consequently, the scope of tags extracted may change dynamically, and it's possible that no tags will be extracted if there is no new data in the past 24 hours.
 
     In this scenario, **you can enter tags manually**.
-
 
 |+| My regular expression was validated offline, so why isn't it matching in the system?
 

@@ -16,18 +16,16 @@ Synchronize AWS CloudWatch alarm events with Flashduty via webhook to automate n
 
 When you do not need to route alarm events to different collaboration spaces, this method is preferred because it is simpler.
 
-
 |+| Expand
 
     1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the integration creation page
     3. Choose the **AWS CloudWatch** integration, click **Save**, and a card will be generated.
-    4. Click on the generated card to view the **Push Address**, copy it for future reference, and the task is complete.
+    4. Click on the generated card to view the **Push Address**, copy it for backup, and the task is complete.
 
 ### Use Shared Integrations
 
 When you need to route alarms to different collaboration spaces based on the payload information of the alarm event, this method is preferred.
-
 
 |+| Expand
 
@@ -35,7 +33,7 @@ When you need to route alarms to different collaboration spaces based on the pay
     2. Select the **AWS CloudWatch** integration:
     - **Integration Name**: Define a name for the current integration.
     3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
-    4. Click **Create Route** to configure routing rules for the integration. You can route different alerts to different collaboration spaces based on specific conditions, or set a default collaboration space as a fallback, with further adjustments as necessary.
+    4. Click **Create Route** to configure routing rules for the integration. You can route different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed later.
     5. Completed.
 
 ## In AWS CloudWatch

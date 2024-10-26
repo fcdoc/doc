@@ -19,10 +19,8 @@ Entries and attributes: Each entry (Entry) in LDAP contains multiple attributes 
 
 OpenLDAP is an open-source implementation of the Lightweight Directory Access Protocol (LDAP). Due to its open-source nature and flexibility, OpenLDAP has become the preferred LDAP implementation for many enterprises and organizations.
 
-
 > [!NOTE]
 > This article assumes that the environment already supports Docker and Docker Compose. If not, please install them first.
-
 
 ## Docker Compose Configuration File
 ---
@@ -111,14 +109,12 @@ Access http://ip:8088/ in your browser and log in using the username cn=admin,dc
 
 ![](https://fcdoc.github.io/img/1rC8UssQX0Djb1bLj3EWmNjZPG1BX-DLWxY_Q8CSWmA.avif)
 
-
 > [!NOTE]
 > In **the user path** (for example, cn = falsh duty ) under ou = people in the picture above -> `Add new attribute` -> Select `Email` to add Email attributes to the user. If it already exists, please ignore it.
 
 ## FlashDuty Integration
 With the above OpenLDAP configuration, the FlashDuty integration details are as shown in the figure below:
 ![](https://fcdoc.github.io/img/lEGCTBal4Z6hl7Vawh6NpyUPvtqeLfHG1c55qXBZQX8.avif)
-
 
 > [!NOTE]
 > For the meaning and description of the above fields, please refer to [Configuring Single Sign-On](https://docs.flashcat.cloud/zh/flashduty/single-sign-on)

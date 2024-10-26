@@ -21,7 +21,6 @@ Microsoft Teams 集成现处于 Beta 阶段，在关联前您需要先完成以�
 ### 2. 上传应用包
 进入 **Microsoft Teams，跳转 [+Apps] - [Manage your apps] - [Upload an app] - [Upload an app to your org's app catalog]** 上传应用包 FlashDutyBot.zip
 
-
 ![](https://fcdoc.github.io/img/4H1BjgL-F76QJ7e_BvGHE9JSdClYYtFcqgibEjjaeeM.avif)
 
 ### 3. 配置应用可见范围
@@ -80,11 +79,9 @@ Microsoft Teams 集成现处于 Beta 阶段，在关联前您需要先完成以�
 
     请前往集成中心=>即时消息=>Microsoft Teams中的团队和用户是否有关联成功
 
-
 |+| 怎么查看已关联的团队和用户
 
     请前往集成中心=>即时消息=>Microsoft Teams中的关联Teams和关联用户中查看
-
 
 |+| 怎么取消关联的团队和用户
 

@@ -60,8 +60,6 @@ Each alert event in the integration center has an option for configuring tag enh
 #### 1.3 Extraction Effect
 <img src="https://fcdoc.github.io/img/uZkBXgpld3Ng5wCstL8exfe4C0kvYx_lu564VLcBfpk.avif" style="display: block; margin: 0 auto;" width="500">
 
-
-
 ### 2. **Tag Combination**
 **Scenario:** The company's log platform can access log details directly using a domain name + Event ID + timestamp, but the alert information only contains Event ID and timestamp tags, so it needs to be combined into an access address based on this information.
 #### 2.1 Original Alert Text
@@ -87,7 +85,6 @@ Source alert information contains only resource type ID and numeric alert levels
 
 Create a schema where source_labels and result_labels parameters represent the source and target tag names, respectively ([more creation methods](https://developer.flashcat.cloud/api-142409927))
 
-
 ```
 curl --location --request POST 'https://api.flashcat.cloud/enrichment/mapping/schema/create?app_key={}' \
 --header 'User-Agent: Apifox/1.0.0 (https://apifox.com)' \
@@ -107,7 +104,6 @@ curl --location --request POST 'https://api.flashcat.cloud/enrichment/mapping/sc
 
 ```
 
-
 #### 3.2 Upload Mapping Table (CSV format required)
 
 | ID | Type | Level |Dlevel|
@@ -125,7 +121,6 @@ curl --location --request POST 'https://api.flashcat.cloud/enrichment/mapping/da
 --form 'file=@"./test.csv"'
 
 ```
-
 
 #### 3.3 Configure Mapping Relationship
 

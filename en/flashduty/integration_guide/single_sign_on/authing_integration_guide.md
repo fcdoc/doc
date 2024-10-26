@@ -6,7 +6,6 @@ brief: Tutorial: Configuring Single Sign-On in Authing
 
 ---
 
-
 Quick Overview
 ---
 [Authing](https://www.authing.cn/) is a provider offering identity recognition and access control management. Through the Authing platform, you can log in to the FlashDuty management console using OIDC, SAML 2.0, or CAS protocols
@@ -32,8 +31,6 @@ Quick Overview
 |APP Secret|FlashDuty Corresponding Client Secret|
 |Issuer|FlashDuty Corresponding Issuer|
 |Authentication Address|Redirect Address for SSO Login|
-
-
 
 ## Begin Configuring the OIDC Protocol
 ---
@@ -71,7 +68,6 @@ Quick Overview
 > [!NOTE]
 > FlashDuty only supports user email association, so create users using email addresses
 
-
 ![](https://fcdoc.github.io/img/wJC3EQjcBkksln8c1Yetxw-EqkMQpM7O-3nGITx7604.avif)
 
 #### 4.2 Test Login Using the SSO Address
@@ -87,7 +83,6 @@ Quick Overview
 
 > [!NOTE]
 > Use the user created in Authing to log in to the FlashDuty console
-
 
 ## Begin Configuring the SAML 2.0 Protocol
 ---
@@ -125,7 +120,6 @@ Quick Overview
 > [!NOTE]
 > The above are the complete configurations for both methods. The configurations on the two platforms overlap, so please be cautious not to overlook any critical information. If you encounter any issues during the configuration process, you can contact FlashDuty technical support for assistance
 
-
 ## Begin Configuring the CAS Protocol
 ---
 ### 1. Open the [FlashDuty](console.flashcat.cloud) Console and Enable SSO Configuration
@@ -162,13 +156,11 @@ Quick Overview
 > [!NOTE]
 > FlashDuty only supports user email association, so create users using email addresses
 
-
 ![](https://fcdoc.github.io/img/wJC3EQjcBkksln8c1Yetxw-EqkMQpM7O-3nGITx7604.avif)
 
 #### 4.2 Test Login Using the SSO Address
 
 ![](https://fcdoc.github.io/img/dII3AxQNII7gMXCoB0qo_PNjiVrH1km-IBFJTjlGKxY.avif)
-
 
 #### 4.3 The SSO Address Redirects to the Login Page
 

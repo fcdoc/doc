@@ -35,15 +35,12 @@ Flashduty定位为企业**一站式告警响应平台**，我们帮助开发者�
 
 <img src="https://fcdoc.github.io/img/lUuHJZGgA3k24I-EH9IDwEk2N6wZfuHnbS2lGmxpRGo.avif" alt="drawing" width="200">
 
-
 **控制台意见反馈**：
 
 登录控制台右上角，访问 **支持=>意见反馈**，提交反馈。
 
-
 **发送邮件给我们**：
 [contact-us@flashcat.cloud](mailto:contact-us@flashcat.cloud)
-
 
 ## 现在就去试用！
 ---

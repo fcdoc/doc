@@ -25,7 +25,6 @@ brief: 实现告警基于标签动态进行分派，与您自研系统打通
 
 客户 C 有一套自研监控系统，设定了很多告警策略，每一条策略都设定通知到某个微信群。该客户决定将事件响应迁移至 Flashduty，但希望仍然保留源监控系统中策略到微信群的关系，并且能够将告警依赖此关系动态通知到微信群。
 
-
 ## 实现方式
 ---
 
@@ -87,7 +86,6 @@ curl --location --request POST 'https://api.flashcat.cloud/event/push/alert/stan
 如下图所示，目标故障正常触发并进行分派。故障的分派人员和目标群聊都按照预期进行了替换。
 
 ![](https://fcdoc.github.io/img/WHCu6fjd-r-vUtUeAhxzLsFFwBNaf5gIG_gQ4lcHAZ4.avif)
-
 
 ## 常见问题
 ---
