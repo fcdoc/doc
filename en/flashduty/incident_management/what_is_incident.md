@@ -121,6 +121,8 @@ Flashduty provides an email integration that allows you to report alarms by send
 
 Click the **Create** button on the console to initiate fault creation.
 
+<div style="font-size:12px">
+
 | Field | Is it necessary | Description |
 | :---: | :---:   | ---- |
 | Fault title | yes | A brief statement indicating what has occurred |
@@ -128,3 +130,5 @@ Click the **Create** button on the console to initiate fault creation.
 | Severity | yes | Select one of the three enumeration values: Critical, Warning, and Info |
 | Collaborative space | no | Fault attribution; if not selected, it represents a global fault. In this case, the fault must be assigned directly to a person to notify |
 | Assign personnel | no | Troubleshooting personnel; if not selected, will be matched and assigned according to the collaboration space they belong to, otherwise they will be notified directly according to personal preferences |
+
+</div>
