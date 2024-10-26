@@ -43,12 +43,28 @@ Shared integration addition path: **Integration Center => Alarm Events**.
 ## FAQs
 ---
 
-<details><summary>The integration created in the integration center's alarm event doesn't receive alarms?</summary> 1. Please confirm if routing is configured. 2. Please confirm if the source platform is triggering alarm events and generating alarms.</details>
 
-<details><summary>Is there a limit to the number of integrations I can create?</summary> There are currently no restrictions.</details>
+|+| The alarm event created in the integrated center's alert is not receiving any alarms?
 
-<details><summary>How are alarm labels generated?</summary> Flashduty adopts an all-inclusive approach for each integration, incorporating all crucial information into tags, descriptions, or titles. If you wish to dynamically generate additional labels based on this, please configure tag enrichment rules. For detailed instructions, refer to: https://docs.flashcat.cloud/zh/flashduty/label-enrichment-settings</details>
+    1. Please confirm if there is a routing configuration in place.
+    2. Please confirm whether the source platform has triggered an alert event and whether an alert has been generated.
 
-<details><summary>How is the alarm title determined? Can I customize it?</summary> Flashduty employs a specific title generation method for each integration, typically combining "policy name / alarm object". If you want to customize the title generation rules, please refer to: https://docs.flashcat.cloud/zh/flashduty/customize-incident-attrs</details>
 
-<details><summary>How can I determine the integration type of an alarm event?</summary> Click "Fault" -> Enter Fault Details -> Associated Alarm -> Alarm Source.</details>
+|+| Is there a limit to the number of integrations that can be created?
+
+    There are currently no restrictions in place.
+
+
+|+| How are alarm labels generated?
+
+    For each integration, Flashduty puts all the key information in tags, descriptions or titles according to the principle of "what should be taken". If you want to dynamically generate other labels on this basis, please configure label enhancement rules. For details, please refer to: https://docs.flashcat.cloud/zh/flashduty/label-enrichment-settings
+
+
+|+| How is the alarm title determined? Can I modify it?
+
+    Flashduty uses a specific title generation method for each integration, which is generally a combination of "policy name/alarm object". If you want to customize the title generation rules, please refer to: https://docs.flashcat.cloud/zh /flashduty/customize-incident-attrs
+
+
+|+| How can I check the integration type from which an alarm event originates?
+
+    Click on Fault -> Enter Fault Details -> Related Alarms -> Alarm Source.

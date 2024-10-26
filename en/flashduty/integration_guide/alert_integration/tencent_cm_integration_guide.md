@@ -16,13 +16,27 @@ Synchronize Tencent Cloud Monitoring CM alarm events to Flashduty via webhook to
 
 When you do not need to route alarm events to different collaboration spaces, this method is preferred because it is simpler.
 
-<details><summary>Expand</summary><ol><li><p> Enter the Flashduty console, select **the collaboration space** , and enter the details page of a certain space</p></li><li><p> Select **Integration Data** tab and click **Add an Integration** to enter the Add Integration page.</p></li><li><p> Select **Tencent Cloud Monitoring CM** Integration, click **Save** , and generate a card.</p></li><li><p> Click on the generated card to view **the push address** , copy it for later use, and complete.</p></li></ol></details>
+
+|+| Expand
+
+    1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the Add Integration page
+    3. Choose the **Tencent Cloud Monitoring CM** integration, click **Save**, and a card will be generated.
+    4. Click on the generated card to view the **Push Address**, copy it for backup, and the process is complete.
 
 ### Use Shared Integrations
 
 When you need to route alarms to different collaboration spaces based on the payload information of the alarm event, this method is preferred.
 
-<details><summary>Expand</summary><ol><li> Enter the Flashduty console, select **Integration Center = > event** , and enter the integration selection page.</li><li> Select **Tencent Cloud Monitoring CM** integration:</li></ol><ul><li> **Integration Name** : Define a name for the current integration.</li></ul><ol start="3"><li> After clicking **Save** , copy the newly generated **push address** of the current page for later use.</li><li> Click **Create Route** to configure routing rules for the integration. You can match different alarms to different collaboration spaces based on conditions, or you can directly set the default collaboration space as a fallback, and then adjust it as needed.</li><li> Finish.</li></ol></details>
+
+|+| Expand
+
+    1. Enter the Flashduty console, select **Integration Center > Alarm Events**, and go to the integration selection page.
+    2. Select the **Tencent Cloud Monitoring CM** integration:
+    - **Integration Name**: Define a name for the current integration.
+    3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
+    4. Click **Create Route** to configure routing rules for the integration. You can route different alarms to different collaboration spaces based on specific conditions, or set a default collaboration space as a fallback, which can be adjusted as needed later on.
+    5. Completed.
 
 ## In Tencent Cloud Monitoring CM
 ---

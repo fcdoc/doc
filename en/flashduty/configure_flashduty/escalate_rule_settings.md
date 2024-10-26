@@ -91,6 +91,14 @@ General principles for configuring dispatch strategies should consider the follo
 ## FAQs
 ---
 
-<details><summary>How to troubleshoot if an alarm occurs but no notification is received</summary>Go to Fault Details => Timeline to check the status of each channel in the notification process. If a failure occurs, there will be a failure message for reference. For more reasons, you can contact technical support for assistance with troubleshooting.</details>
 
-<details><summary>Why don't my notification methods match my personal preferences?</summary> Flashduty The single chat notification channel supports two settings, one is "Follow personal preferences" and the other is "Follow unified settings". Only in the "Follow personal preferences" setting, notifications will be personalized according to your settings.<p> Go to Collaboration Space Details = > Policy to view your specific settings.</p></details>
+|+| How to investigate if an alarm is generated but no notification is received?
+
+    Go to Fault Details => Timeline to check the notification status of each channel in the notification trigger process. If there is a failure, a failure message will be provided for reference. For further reasons, please contact technical support for assistance with troubleshooting.
+
+
+|+| Why do the notification methods not align with my personal preference settings?
+
+    Flashduty's single chat notification channel supports two settings: "Follow Personal Preferences" and "Follow Unified Settings." Notifications will be personalized according to your settings only when the "Follow Personal Preferences" option is selected.
+
+    Go to Collaboration Space Details => Assignment Policy to review your specific settings.

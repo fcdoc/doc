@@ -72,10 +72,9 @@ https://api.flashcat.cloud/event/push/alert/aws/cloudwatch?integration_key=your-
 ## 常见问题
 ---
 
-<details>
-<summary>使用标签动态生成标题，如果标签不存在怎么办？</summary>
 
-取决于您使用哪一种变量获取方式，标题可能会保留原始的变量信息或使用\<no value\>替代。
+|+| 使用标签动态生成标题，如果标签不存在怎么办？
 
-即使获取不到变量，也不影响告警的生成，您可放心调试。
-</details>
+    取决于您使用哪一种变量获取方式，标题可能会保留原始的变量信息或使用\<no value\>替代。
+
+    即使获取不到变量，也不影响告警的生成，您可放心调试。

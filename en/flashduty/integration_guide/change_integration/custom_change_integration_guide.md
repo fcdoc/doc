@@ -38,4 +38,17 @@ Tags are descriptive elements of events and should be as detailed as possible, i
 ## FAQs
 ---
 
-<details><summary>Why didn't I receive the changes in Flashduty ?</summary><h4> exist Flashduty</h4><ol><li> Check if the integration shows **the latest event time** ? If not, it means that Flashduty has not received the push, and the Nightingale part will be directly checked first.</li></ol><h4> in your system</h4><ol><li> Confirm that the address you requested exactly matches the address in the integration details.</li><li> Confirm that your service can access the external network api.flashcat.cloud domain name. If not, you first need to open an external network for server , or separately enable external network access for the Flashduty domain name.</li><li> Print the response result of the Flashduty service to see if there is clear information.</li></ol><p> If the root cause of the problem is still not found after performing the above steps, please contact us **with the request_id in the request response** .</p></details>
+
+|+| Why have I not received any updates in Flashduty?
+
+    #### In Flashduty
+
+    1. Verify if the integration displays **the latest event timestamp**. If it does not, this indicates that Flashduty has not received the push notifications; proceed to investigate the Nightingale component as a priority.
+
+    #### In your system
+
+    1. Confirm that the address you requested is exactly the same as the one provided in the integration details.
+    2. Confirm that your service can access the external api.flashcat.cloud domain name. If not, you first need to open an external network for the server, or enable external network access for Flashduty's domain name alone.
+    3. Print the response output of the Flashduty service to check for any clear information.
+
+    If the root cause of the problem is still not found after performing the above steps, please contact us **with the request_id in the request response** .

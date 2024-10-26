@@ -52,15 +52,10 @@ if want use local font , use like below
     local('Liberation Mono'),
     local('Menlo'),
     local('Monaco'),
-    local('Consolas'),
-    local('monospace');
+    local('Consolas');
   /* 备用字体 */
   font-style: normal;
   font-weight: normal;
-}
-
-::mark {
-  font-family: 'Courier New', 'Courier', 'Lucida Console', 'Monaco', 'Consolas', monospace;
 }
 
 body,

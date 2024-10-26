@@ -19,13 +19,29 @@ You can obtain an email address using either of the following two methods.
 
 When you do not need to route alarm events to different collaboration spaces, this method is preferred because it is simpler.
 
-<details><summary>Expand</summary><ol><li> Enter the Flashduty console, select **the collaboration space** , and enter the details page of a certain space</li><li> Select **Integration Data** tab and click **Add an Integration** to enter the Add Integration page.</li><li> Select **Mail Email** Integration, click **Save** , and generate the card.</li><li> Click on the generated card to view **the email address** , copy it for later use, and complete.</li></ol></details>
+
+|+| 1	Expand
+
+    1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
+    2. Select the **Integrated Data** tab, click on **Add an Integration**, and proceed to the integration setup page
+    3. Choose the **Email** integration, click **Save**, and a card will be generated.
+    4. Click on the generated card to view the **Email Address**, copy it for backup, and the task is complete.
 
 #### Use Shared Integrations
 
 When you need to route alarms to different collaboration spaces based on the payload information of the alarm event, this method is preferred.
 
-<details><summary>Expand</summary><ol><li> Enter the Flashduty console, select **Integration Center = > event** , and enter the integration selection page.</li><li> Select **Mail Email** Integration:</li></ol><ul><li> **Integration Name** : Define a name for the current integration.</li><li> **Email address** : Set a prefix for the email that is easy to remember and needs to be unique under the account.</li><li> **Push mode** : Select the situation under which the email triggers or restores the alarm.</li></ul><ol start="3"><li> Copy **the email address** of the current page for later use.</li><li> Click **Create Route** to configure routing rules for the integration. You can match different alarms to different collaboration spaces based on conditions, or you can directly set the default collaboration space as a fallback, and then adjust it as needed.</li><li> Finish.</li></ol></details>
+
+|+| Expand
+
+    1. Enter the Flashduty console, select **Integration Center > Alert Events**, and go to the integration selection page.
+    2. Select the **Email** integration:
+    - **Integration Name**: Define a name for the current integration.
+    - **Email Address**: Assign a memorable prefix for the email that must be unique within the account.
+    - **Push Mode**: Choose the conditions under which the email will trigger or resume alerts.
+    3. Copy the **Email Address** displayed on the current page for backup.
+    4. Click **Create Route** to configure routing rules for the integration. You can route different alerts to different collaboration spaces based on specific conditions, or set a default collaboration space as a fallback, with further adjustments as necessary.
+    5. Completed.
 
 ### Customize Email Integration
 

@@ -43,28 +43,28 @@ FlashDuty 作为统一告警处理平台，其本身不产生告警数据，需�
 ## 常见问题
 ---
 
-<details>
-<summary>集成中心的告警事件中创建的集成接收不到告警？</summary>
-1. 请确认是否有配置路由。
-2. 请确认源平台是否有触发告警事件以及是否有产生告警。
-</details>
 
-<details>
-<summary>创建集成数量是否有限制？</summary>
-目前没有限制。
-</details>
+|+| 集成中心的告警事件中创建的集成接收不到告警？
 
-<details>
-<summary>告警的标签如何生成？</summary>
-Flashduty 针对每一种集成，按照应取尽取的原则，将关键信息全部方式标签、描述或标题当中。如果您希望在此基础上，动态生成其他标签，请配置标签增强规则，具体请参考：https://docs.flashcat.cloud/zh/flashduty/label-enrichment-settings
-</details>
+    1. 请确认是否有配置路由。
+    2. 请确认源平台是否有触发告警事件以及是否有产生告警。
 
-<details>
-<summary>告警标题是如何确定的？我是否可以修改？</summary>
-Flashduty 针对每一种集成，使用了特定的标题生成方式，一般为”策略名称 / 告警对象“的组合，如果您希望定制标题的生成规则，请参考：https://docs.flashcat.cloud/zh/flashduty/customize-incident-attrs
-</details>
 
-<details>
-<summary>怎么查看告警事件来自哪个集成类型？</summary>
-点击故障->进入故障详情->关联告警->告警来源。
-</details>
+|+| 创建集成数量是否有限制？
+
+    目前没有限制。
+
+
+|+| 告警的标签如何生成？
+
+    Flashduty 针对每一种集成，按照应取尽取的原则，将关键信息全部方式标签、描述或标题当中。如果您希望在此基础上，动态生成其他标签，请配置标签增强规则，具体请参考：https://docs.flashcat.cloud/zh/flashduty/label-enrichment-settings
+
+
+|+| 告警标题是如何确定的？我是否可以修改？
+
+    Flashduty 针对每一种集成，使用了特定的标题生成方式，一般为”策略名称 / 告警对象“的组合，如果您希望定制标题的生成规则，请参考：https://docs.flashcat.cloud/zh/flashduty/customize-incident-attrs
+
+
+|+| 怎么查看告警事件来自哪个集成类型？
+
+    点击故障->进入故障详情->关联告警->告警来源。

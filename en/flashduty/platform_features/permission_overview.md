@@ -59,6 +59,16 @@ If you lack data permissions for a corresponding resource, the system will provi
 ## FAQs
 ---
 
-<details><summary>I am already an account administrator, why can’t I modify the collaboration space settings?</summary> Because the collaboration space applies data permissions, you must be the creator, the main account, and one of the responsible team members before you can modify the information of the corresponding collaboration space.<p> If the space does not have a responsible team, you can ask the space creator or owner to set up a team for the collaboration space and invite you to join. Then you will have management rights for the space.</p></details>
 
-<details><summary>Why can a member with no role handle failures?</summary> Because sometimes you will encounter a failure that requires the cooperation of multiple teams to deal with it. Therefore, Flashduty has no authority control over handling alarms. All personnel on the platform can view all alarms under the account and handle them.<p> However, we do not rule out the possibility that we will implement access control for handling faults in the future.</p></details>
+|+| I am already an account administrator; why can't I modify the collaboration space settings?
+
+    Because the collaboration space operates under data permissions, you must be the creator, the main account, or one of the responsible team members to modify the information of the respective collaboration space.
+
+    If there is no designated responsible team for the space, you can request that the space creator or main account set up a team for the collaboration space and invite you to join, which will grant you administrative privileges for that space.
+
+
+|+| Why can a member without any role address issues?
+
+    Because it's not uncommon to encounter issues that require the collaboration of multiple teams to resolve. Therefore, Flashduty does not impose permission controls on alarm handling. All personnel on the platform can view and manage all alarms under the account.
+
+    However, we do not exclude the possibility of implementing permission controls for handling issues in the future.

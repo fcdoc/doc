@@ -99,6 +99,14 @@ When the value does not conform to any of the above formats, it is considered an
 ## FAQs
 ---
 
-<details><summary>Why am I not prompted for optional tags?</summary> Flashduty Accepts a large amount of data reporting. In order to ensure the stability of the system, the system only searches for up to 500 alarm events in the past 24 hours to deduplicate labels. Therefore, the range of extracted tags may change dynamically, and even no tags can be extracted when there is no new data in the past 24 hours).<p> In this case, **you can enter the tag manually** .</p></details>
 
-<details><summary>My regular expression has passed offline verification, why can't it be matched in the system?</summary> Flashduty All platforms use the ` RE2 ` regular specification, and some ` Perl ` syntax may not match. You can use AI Chatbot generate expression, and go to RE2 Playground to verify.</details>
+|+| Why isn't the system prompting me with optional tags?
+
+    Flashduty handles a large volume of data reports. To ensure system stability, the system only searches for up to 500 alarm events within the last 24 hours to perform deduplication of tags. Consequently, the scope of tags extracted may change dynamically, and it's possible that no tags will be extracted if there is no new data in the past 24 hours.
+
+    In this scenario, **you can enter tags manually**.
+
+
+|+| My regular expression was validated offline, so why isn't it matching in the system?
+
+    Flashduty's entire platform adheres to the `RE2` regular expression specification, and some `Perl` syntax may not be compatible. You can use the AI Chatbot to generate expressions and visit the RE2 Playground for verification.

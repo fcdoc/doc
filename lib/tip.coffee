@@ -1,11 +1,10 @@
 HIGHLIGHT = 1
 
-< (md)=>
+< (li)=>
   state = 0
   r = []
   t = []
-  for i from md.trim().replaceAll('\r\n','\n').split('\n')
-    i = i.trimEnd()
+  for i from li
     ts = i.trimStart()
     if ts.startsWith(':::')
       if ts.length > 3
@@ -33,4 +32,4 @@ HIGHLIGHT = 1
       r.push i
   if t.length
     r.push ...t
-  return r.join '\n'
+  return r

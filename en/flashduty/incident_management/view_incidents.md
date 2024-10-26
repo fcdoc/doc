@@ -75,4 +75,9 @@ You can switch to the top tabs to view more detailed **related alarms**, **timel
 ### FAQs
 ---
 
-<details><summary>Console error: Due to the large volume of data , we are unable to respond to your request in a timely manner. ..</summary><p> This error often appears on fault, alarm list query, analysis dashboard and other pages. Mainly because the system matches too much data and the query times out.</p><p> In this case, please narrow the query scope, such as time interval, or use precise query conditions. If you still have questions, please contact us.</p></details>
+
+|+| The console error message reads: "Due to the large volume of data, we are unable to respond to your request promptly..."
+
+    This error frequently manifests on pages such as fault and alarm list inquiries, as well as analysis dashboards. It is primarily due to an excessive number of data matches by the system, leading to query timeouts.
+
+    In such instances, please refine your search criteria, for example by specifying a narrower time range, or by using more precise query conditions. Should you continue to experience issues, please feel free to contact us.

@@ -35,13 +35,29 @@ This article is compatible with **Nightingale V5 and V6** versions.
 
 When you do not need to route alarm events to different collaboration spaces, this method is preferred because it is simpler.
 
-<details><summary>Expand</summary><ol><li> Enter the Flashduty console, select **the collaboration space** , and enter the details page of a certain space</li><li> Select **Integration Data** tab and click **Add an Integration** to enter the Add Integration page.</li><li> Select **Nightingale /Flashcat** integration, click **Save** , and generate the card.</li><li> Click on the generated card to view **the push address** , copy it for later use, and complete.</li><li> (Optional) Click the generated card, click the **Edit** button, select **the console address** , and enter the Nightingale console address (only the domain name part). Flashduty A Nightingale details jump link will be generated for the new alarm.</li></ol></details>
+
+|+| Expand
+
+    1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the integration creation page
+    3. Choose the **Nightingale/Flashcat** integration, click **Save**, and a card will be generated.
+    4. Click on the generated card to view the **Push Address**, copy it for backup, and the task is complete.
+    5. *(Optional)* Click on the generated card, click the **Edit** button, select **Console Address**, and enter the Nightingale console address (only the domain name part). Flashduty will generate a Nightingale detail jump link for new alerts.
 
 #### Use Shared Integrations
 
 When you need to route alarms to different collaboration spaces based on the payload information of the alarm event, this method is preferred.
 
-<details><summary>Expand</summary><ol><li> Enter the Flashduty console, select **Integration Center = > event** , and enter the integration selection page.</li><li> Select **Nightingale /Flashcat** integration:</li></ol><ul><li> **Integration Name** : Define a name for the current integration.</li><li> **Console address** : (Optional) Enter the Nightingale console address (only the domain name part). Flashduty A Nightingale details jump link will be generated for new alarms.</li></ul><ol start="3"><li> After clicking **Save** , copy the newly generated **push address** of the current page for later use.</li><li> Click **Create Route** to configure routing rules for the integration. You can match different alarms to different collaboration spaces based on conditions, or you can directly set the default collaboration space as a fallback, and then adjust it as needed.</li><li> Finish.</li></ol></details>
+
+|+| Expand
+
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and go to the integration selection page.
+    2. Select the **Nightingale/Flashcat** integration:
+    - **Integration Name**: Define a name for the current integration.
+    - **Console Address**: *(Optional)* Enter the Nightingale console address (only the domain name part), and Flashduty will generate a Nightingale detail jump link for new alerts.
+    3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
+    4. Click **Create Route** to configure routing rules for the integration. You can route different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, and adjust as needed later.
+    5. Completed.
 
 ### In Nightingale/Flashcat,
 
@@ -76,4 +92,20 @@ Nightingale/Flashcat to Flashduty alert level mapping:
 ## FAQs
 ---
 
-<details><summary>Why didn't I receive the alert Flashduty !?</summary><h4> exist Flashduty</h4><ol><li> Check if the integration shows **the latest event time** ? If not, it means that Flashduty has not received the push, and the Nightingale part will be directly checked first.</li><li> If you are using **shared integration** , first confirm whether you have configured **routing rules** . If you do not set routing rules, the system will directly reject new pushes because there is no collaboration space to receive your alerts. In this case, just configure the routing rules directly to the space you want.</li></ol><h4> in the nightingale /Flashcat</h4><ol><li><p> First, confirm whether the Nightingale test has generated new alarms: Go to **alarm management = > historical alarms** and check whether new alarms have been generated after configuring webhook . Note that the new alarm status must be **Triggered** . If no new alarm is generated, please continue to wait for a new alarm to be triggered before re-verifying.</p></li><li><p> After finding the alarm, go to the alarm details and view **the callback address** section. Verify whether the real callback address exactly matches the integrated push address. If they do not match, please modify **the alarm rules** and re-verify.</p></li><li><p> If it matches, you need to log in to Nightingale server confirm that it can access the external network api.flashcat.cloud domain name. If not, you first need to open an external network for server , or separately enable external network access for the domain name of Flashduty .</p></li><li><p> If there is no problem with the network, you need to continue troubleshooting server to find whether there are relevant error logs.</p></li></ol><p> If you still cannot find the root cause of the problem after performing the above steps, please contact us directly.</p></details>
+
+|+| Why am I not receiving alerts in Flashduty?
+
+    #### In Flashduty
+
+    1. Check if the integration displays the **Latest Event Time**. If not, it indicates that Flashduty has not received the push; therefore, begin troubleshooting with the Nightingale component first.
+    2. If you are using a **shared integration**, first verify if you have set up **routing rules**. Without routing rules, the system will reject new pushes directly, as there is no collaboration space to handle your alerts. In such cases, configure the routing rules to your desired space.
+
+    #### In Nightingale/Flashcat,
+
+    1. First, confirm if Nightingale has generated new alerts: go to **Alert Management => Historical Alerts** and check if new alerts have been generated after setting up the webhook. Ensure the new alerts are marked as **Triggered**. If no new alerts are generated, wait for new alerts to trigger before re-verifying.
+    2. After locating the alert, enter the alert details and check the **Callback Address** section. Verify that the actual callback address matches the integration push address exactly. If they do not match, adjust the **alert rules** and re-verify.
+    3. If they match, log in to the Nightingale server and confirm that it can access the external domain api.flashcat.cloud. If it cannot, you need to enable external network access for the server or specifically for the Flashduty domain.
+    4. If there are no network issues, continue to troubleshoot the server for any relevant error logs.
+
+
+    If you still cannot identify the root cause after these steps, please contact us directly.

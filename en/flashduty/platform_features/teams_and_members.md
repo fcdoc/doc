@@ -62,13 +62,28 @@ A team is a collection of members, also conceptualized as a group, where members
 
 ## FAQs
 ---
-<details><summary>What if invited members do not receive the verification email?</summary> Please verify that the email address was entered correctly, check the spam folder, and ensure no email filtering policies are in place. If all is well, ask the inviter to resend the invitation or contact official technical support.</details>
+
+|+| Have the members not received the verification email after being invited via email?
+
+    Please verify that the email address was entered correctly, check if the email was received in the spam folder, and ensure no blocking policy is set for the email. If all is well, you may ask the inviter to resend the invitation or contact the official technical support team.
 
 
-<details><summary>What if invited members do not receive the verification SMS?</summary> Please verify that the mobile number is correct and that no SMS filtering policies are in place. If all is well, ask the inviter to resend the invitation or contact official technical support.</details>
 
-<details><summary>Can a member belong to multiple principal tenants?</summary> Yes, if a member belongs to multiple entities, they will be prompted to select the entity to log into upon signing in.</details>
+|+| Didn’t the member invited via SMS receive the verification text message?
 
-<details><summary>Can mobile numbers or emails be duplicated under the same account entity?</summary> No, mobile numbers or emails must be unique.</details>
+    Please confirm that the mobile number was entered correctly and that no blocking policy is in place on the phone. If everything is in order, you can ask the inviter to resend the invitation or reach out to the official technical support team.
 
-<details><summary>Why can't administrators change other members' email addresses or mobile numbers?</summary> Mobile numbers and email addresses are crucial for fault notifications and console login. To prevent unexpected changes without the member's knowledge, which could lead to unforeseen incidents, only the member themselves can make changes, and verification is required during the process.</details>
+
+|+| Can the same member belong to multiple principal tenants?
+
+    Yes, for instance, if member A is part of multiple entities, member A will be prompted to select the entity to log into upon signing in.
+
+
+|+| Can the mobile numbers or email addresses of members under the same account be duplicated?
+
+    No, they cannot be duplicated; the mobile number or email address must remain unique.
+
+
+|+| Why can’t the administrator change other members’ email addresses or mobile numbers?
+
+    The mobile number or email address is a crucial channel for fault notifications and console logins. To prevent unexpected incidents due to changes made without the individual's knowledge, only the account owner can modify this information, and it requires verification upon changes.

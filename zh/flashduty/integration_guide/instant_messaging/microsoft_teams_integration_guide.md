@@ -75,17 +75,17 @@ Microsoft Teams 集成现处于 Beta 阶段，在关联前您需要先完成以�
 ![](https://fcdoc.github.io/img/cpsWE8YB5hTfUdPnNl4x6T8p7uq40Ew_6763QVKxIqU.avif)
 
 ## 常见问题
-<details>
-<summary>团队或个人收不到消息</summary>
-请前往集成中心=>即时消息=>Microsoft Teams中的团队和用户是否有关联成功
-</details>
 
-<details>
-<summary>怎么查看已关联的团队和用户</summary>
-请前往集成中心=>即时消息=>Microsoft Teams中的关联Teams和关联用户中查看
-</details>
+|+| 团队或个人收不到消息
 
-<details>
-<summary>怎么取消关联的团队和用户</summary>
-暂不支持
-</details>
+    请前往集成中心=>即时消息=>Microsoft Teams中的团队和用户是否有关联成功
+
+
+|+| 怎么查看已关联的团队和用户
+
+    请前往集成中心=>即时消息=>Microsoft Teams中的关联Teams和关联用户中查看
+
+
+|+| 怎么取消关联的团队和用户
+
+    暂不支持

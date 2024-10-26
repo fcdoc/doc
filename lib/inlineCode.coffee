@@ -1,8 +1,8 @@
 > is-chinese:isChinese
 
-< (md)=>
+< (li)=>
   r = []
-  for line from md.split('\n')
+  for line from li
     if line
       has_cn = 0
       line = line.replace(
@@ -24,4 +24,4 @@
       if has_cn
         line = line.replaceAll("**__",'__').replaceAll("__**",'__')
     r.push line
-  return r.join('\n')
+  return r

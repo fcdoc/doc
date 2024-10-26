@@ -75,10 +75,9 @@ Flashduty 提供各种维度的筛选能力，并给您足够多的灵活度。�
 ### 常见问题
 ---
 
-<details>
-<summary>控制台报错：Due to the large volume of data, we are unable to respond to your request in a timely manner...</summary>
 
-这个错误经常出现于故障、告警列表查询、分析看板等页面。主要是因为系统匹配到的数据过多，查询超时。
+|+| 控制台报错：Due to the large volume of data, we are unable to respond to your request in a timely manner...
 
-这种情况下，请您缩小查询范围，比如时间区间，或使用精确的查询条件。如果还有问题，请联系我们。
-</details>
+    这个错误经常出现于故障、告警列表查询、分析看板等页面。主要是因为系统匹配到的数据过多，查询超时。
+
+    这种情况下，请您缩小查询范围，比如时间区间，或使用精确的查询条件。如果还有问题，请联系我们。

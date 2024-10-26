@@ -22,13 +22,27 @@ Push proprietary system alert events to Flashduty via standard protocols to auto
 
 When you do not need to route alarm events to different collaboration spaces, this method is preferred because it is simpler.
 
-<details><summary>Expand</summary><ol><li> Enter the Flashduty console, select **the collaboration space** , and enter the details page of a certain space</li><li> Select **Integration Data** tab and click **Add an Integration** to enter the Add Integration page.</li><li> Select **Prometheus** Integrate, click **Save** , and generate the card.</li><li> Click on the generated card to view **the push address** , copy it for later use, and complete.</li></ol></details>
+
+|+| Expand
+
+    1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the integration creation page
+    3. Choose the **Prometheus** integration, click **Save**, and a card will be generated.
+    4. Click on the generated card to view the **Push Address**, copy it for backup, and the task is complete.
 
 #### Use Shared Integrations
 
 When you need to route alarms to different collaboration spaces based on the payload information of the alarm event, this method is preferred.
 
-<details><summary>Expand</summary><ol><li> Enter the Flashduty console, select **Integration Center = > event** , and enter the integration selection page.</li><li> Select **custom event** integration:</li></ol><ul><li> **Integration Name** : Define a name for the current integration.</li></ul><ol start="3"><li> After clicking **Save** , copy the newly generated **push address** of the current page for later use.</li><li> Click **Create Route** to configure routing rules for the integration. You can match different alarms to different collaboration spaces based on conditions, or you can directly set the default collaboration space as a fallback, and then adjust it as needed.</li><li> Finish.</li></ol></details>
+
+|+| Expand
+
+    1. Enter the Flashduty console, select **Integration Center > Alert Events**, and go to the integration selection page.
+    2. Select the **Custom Event** integration:
+    - **Integration Name**: Define a name for the current integration.
+    3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
+    4. Click **Create Route** to configure routing rules for the integration. You can route different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed later.
+    5. Completed.
 
 
 ## Implement Protocol
@@ -50,4 +64,18 @@ Please refer to [the development documentation](https://developer.flashcat.cloud
 ## FAQs
 ---
 
-<details><summary>Why didn't I receive the alert Flashduty !?</summary><h4> exist Flashduty</h4><ol><li> Check if the integration shows **the latest event time** ? If not, it means Flashduty has not received the push, and your system will be prioritized directly.</li><li> If you are using **shared integration** , first confirm whether you have configured **routing rules** . If you do not set routing rules, the system will directly reject new pushes because there is no collaboration space to receive your alerts. In this case, just configure the routing rules directly to the space you want.</li></ol><h4> in your system</h4><ol><li> Confirm that the address you requested exactly matches the address in the integration details.</li><li> Confirm that your service can access the external network api.flashcat.cloud domain name. If not, you first need to open an external network for server , or separately enable external network access for the Flashduty domain name.</li><li> Print the response result of the Flashduty service to see if there is clear information.</li></ol><p> If the root cause of the problem is still not found after performing the above steps, please contact us **with the request_id in the request response** .</p></details>
+
+|+| Why have I not received any alerts in Flashduty?
+
+    #### In Flashduty
+
+    1. Verify if the integration displays the **Latest Event Time**? If it does not, this indicates that Flashduty has not received the push, and you should check your system first.
+    2. If you are using a **Shared Integration**, first ensure you have set up **Routing Rules**. Without routing rules, the system will reject new pushes directly, as there is no collaboration space to handle your alerts. In such cases, simply configure the routing rules to your desired space.
+
+    #### In your system
+
+    1. Confirm that the requested address matches exactly with the address in the integration details.
+    2. Confirm that your service can access the external api.flashcat.cloud domain name. If not, you first need to open an external network for the server, or separately enable external network access for Flashduty's domain name.
+    3. Print the response result from the Flashduty service to check for any clear information.
+
+    If the root cause of the issue is still not identified after following the above steps, please contact us **with the request_id from the response**.

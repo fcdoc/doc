@@ -35,13 +35,27 @@ This article is compatible with **Alertmanager version 0.16.0 and above**.
 
 When you do not need to route alarm events to different collaboration spaces, this method is preferred because it is simpler.
 
-<details><summary>Expand</summary><ol><li> Enter the Flashduty console, select **the collaboration space** , and enter the details page of a certain space</li><li> Select **Integration Data** tab and click **Add an Integration** to enter the Add Integration page.</li><li> Select **Prometheus** Integrate, click **Save** , and generate the card.</li><li> Click on the generated card to view **the push address** , copy it for later use, and complete.</li></ol></details>
+
+|+| Expand
+
+    1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the Add Integration page
+    3. Choose the **Prometheus** integration, click **Save**, and a card will be generated.
+    4. Click on the generated card to view the **Push Address**, copy it for backup, and the task is complete.
 
 #### Use Shared Integrations
 
 When you need to route alarms to different collaboration spaces based on the payload information of the alarm event, this method is preferred.
 
-<details><summary>Expand</summary><ol><li> Enter the Flashduty console, select **Integration Center = > event** , and enter the integration selection page.</li><li> Select ** Prometheus** integration:</li></ol><ul><li> **Integration Name** : Define a name for the current integration.</li></ul><ol start="3"><li> After clicking **Save** , copy the newly generated **push address** of the current page for later use.</li><li> Click **Create Route** to configure routing rules for the integration. You can match different alarms to different collaboration spaces based on conditions, or you can directly set the default collaboration space as a fallback, and then adjust it as needed.</li><li> Finish.</li></ol></details>
+
+|+| Expand
+
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and go to the integration selection page.
+    2. Select the **Prometheus** integration:
+    - **Integration Name**: Define a name for the current integration.
+    3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
+    4. Click **Create Route** to configure routing rules for the integration. You can route different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed later.
+    5. Completed.
 
 ### In AlertManager
 
@@ -94,4 +108,20 @@ Prometheus to Flashduty Alert Level Mapping:
 ## FAQs
 ---
 
-<details><summary>Why didn't I receive the alert Flashduty !?</summary><h4> exist Flashduty</h4><ol><li> Check if the integration shows **the latest event time** ? If not, it means that Flashduty has not received the push, so you can directly check it first AlertManager Part.</li><li> If you are using **shared integration** , first confirm whether you have configured **routing rules** . If you do not set routing rules, the system will directly reject new pushes because there is no collaboration space to receive your alerts. In this case, just configure the routing rules directly to the space you want.</li></ol><h4> exist AlertManager</h4><ol><li><p> First, confirm whether the AlertManager generates new alarms. If no new alarm is generated, please continue to wait for a new alarm to be triggered before re-verifying.</p></li><li><p> Open the AlertManager configuration file. If you have set up a sub-route, please make sure that your routing settings are correct (for example, the previous route is set to continue AlertManager will skip matching subsequent sub-routes. We recommend that you always only set a default route to Flashduty ). Also verify whether the target callback address exactly matches the integrated push address. If they do not match, please modify **the alarm rules** and re-verify.</p></li><li><p> If it matches, please continue to confirm that AlertManager instance can access the external network api.flashcat.cloud domain name. If not, you first need to open an external network for it, or separately enable external network access for the domain name Flashduty .</p></li><li><p> If there is no problem with the network, you need to continue troubleshooting AlertManager to find whether there are relevant error logs.</p></li></ol><p> If you still cannot find the root cause of the problem after performing the above steps, please contact us directly.</p></details>
+
+|+| Why am I not receiving alerts in Flashduty?
+
+    #### In Flashduty
+
+    1. Check if the integration displays the **Latest Event Time**? If it doesn't, this indicates that Flashduty has not received the push; therefore, you should first troubleshoot the AlertManager component.
+    2. If you are using a **Shared Integration**, first verify whether you have set up **Routing Rules**. Without routing rules, the system will reject new pushes directly, as there is no collaboration space to handle your alerts. In such cases, simply configure the routing rules to your desired space.
+
+    #### In AlertManager
+
+    1. First, confirm whether AlertManager has generated a new alert. If no new alert has been generated, please wait for a new alert to trigger and then re-verify.
+    2. Open the AlertManager configuration file. If you have configured sub-routes, ensure your routing settings are accurate (for instance, if the preceding route is set to "continue," AlertManager will bypass matching any subsequent sub-routes. We advise setting only a default route to Flashduty at all times). Additionally, verify that the target callback address aligns perfectly with the integrated push address. If they do not correspond, please revise the **alarm rules** and re-verify the settings.
+    3. If it matches, please continue to confirm that the AlertManager instance can access the external api.flashcat.cloud domain name. If not, you first need to open an external network for it, or separately enable external network access for Flashduty's domain name.
+    4. If there are no network issues, you need to continue troubleshooting AlertManager to check for any related error logs.
+
+
+    If, after performing the above steps, you still cannot identify the root cause of the issue, please contact us directly.

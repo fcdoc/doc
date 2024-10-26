@@ -24,17 +24,22 @@ dump = (path, changed) =>
   r = await isChange(rpath)
   if not r
     return
-  md = read path
 
-  save = 0
+  md = read(path).trimEnd().replace('\r\n','\n')
+
+  li = []
+  for i from md.split('\n')
+    i = i.trimEnd()
+    li.push i
+
   for fix from FIXER
-    r = await fix md, rpath
-    if r and r!=md
-      md = r
-      save = 1
+    r = await fix li, rpath
+    if r
+      li = r
 
-  if save
-    write path, md
+  new_md = li.join('\n')
+  if new_md != md
+    write path, new_md
 
   changed.push rpath
   return
@@ -42,9 +47,11 @@ dump = (path, changed) =>
 do =>
   pool = Pool 10
   changed = []
+
   for await path from walk MD, (i)=>i.startsWith('.')
     if path.endsWith('.md')
       await pool dump, path, changed
+
   await pool.done
 
   if changed.length

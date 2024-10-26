@@ -91,4 +91,8 @@ As shown in the figure below, the target fault is normally triggered and dispatc
 
 ## FAQs
 ---
-<details><summary>What should I do if my monitoring system does not have these tags?</summary><ol><li> If your system supports active label addition, such as Prometheus or Nightingale, it is recommended that you add specific labels directly to the alarm policy.</li><li> If your system already has the relevant tags, but the format or naming is different. For example, if your host has a team tag, you need to find the corresponding person in charge based on the team. In this case, you can use the tag enhancement function to generate tags related to the person in charge based on the team tag. For details, please refer to [Configuring Tag Enhancement](/0) .</li></ol></details>
+
+|+| What should I do if my monitoring system lacks these tags?
+
+    1. If your system allows for actively adding tags, such as Prometheus or Nightingale, it is suggested that you add specific tags directly within the alerting policy.
+    2. If your system already possesses relevant tags but differs in format or naming, for instance, if your host is labeled with a team tag, and you need to identify the responsible individual based on the team, you can utilize the tag enhancement feature to generate tags related to the responsible person based on the team tag. Please refer to [Configuring Tag Enhancement](http://docs.flashcat.cloud/zh/flashduty/label-enrichment-settings) for specific instructions.

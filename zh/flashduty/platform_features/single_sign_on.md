@@ -84,32 +84,32 @@ FlashDuty 目前提供 SAML2.0、 OIDC、CAS 和 LDAP(仅私有化版本) 协议
 ## 常见问题
 ---
 
-<details>
-<summary>什么是SSO单点登录？</summary>
-单点登录（SSO）是整合企业系统的解决方案之一，用于统一用户身份认证，用户只需要登录一次就可以访问所有企业相互信任的应用系统。
-</details>
 
-<details>
-<summary>SAML2.0协议特点？</summary>
-SAML 2.0协议以XML为基础，通过安全、标准化的声明方式，跨域实现单点登录与身份验证，支持多种数据交换绑定，确保互操作性与灵活性。
-</details>
+|+| 什么是SSO单点登录？
 
-<details>
-<summary>OIDC协议特点？</summary>
-OIDC协议基于OAuth 2.0，提供标准化、安全的身份验证流程，利用JSON Web Tokens传输用户信息，实现跨平台的单点登录与身份管理。
-</details>
+    单点登录（SSO）是整合企业系统的解决方案之一，用于统一用户身份认证，用户只需要登录一次就可以访问所有企业相互信任的应用系统。
 
-<details>
-<summary>CAS协议特点？</summary>
-CAS协议是一种用于Web应用的单点登录（SSO）协议，它允许用户在多个服务上使用单一的认证过程，使用服务票据（Service Ticket）和认证票据（Authentication Ticket）来实现服务的认证。
-</details>
 
-<details>
-<summary>LDAP协议特点？</summary>
-LDAP协议基于X.500 标准发展而来，数据以树状结构组织，便于数据的层级管理和快速检索，提供了灵活的查询语言（LDAP Search Filter），允许用户根据复杂的条件过滤和搜索数据。
-</details>
+|+| SAML2.0协议特点？
 
-<details>
-<summary>是否支持多种协议接入？</summary>
-目前不支持，只能选择一种协议接入
-</details>
+    SAML 2.0协议以XML为基础，通过安全、标准化的声明方式，跨域实现单点登录与身份验证，支持多种数据交换绑定，确保互操作性与灵活性。
+
+
+|+| OIDC协议特点？
+
+    OIDC协议基于OAuth 2.0，提供标准化、安全的身份验证流程，利用JSON Web Tokens传输用户信息，实现跨平台的单点登录与身份管理。
+
+
+|+| CAS协议特点？
+
+    CAS协议是一种用于Web应用的单点登录（SSO）协议，它允许用户在多个服务上使用单一的认证过程，使用服务票据（Service Ticket）和认证票据（Authentication Ticket）来实现服务的认证。
+
+
+|+| LDAP协议特点？
+
+    LDAP协议基于X.500 标准发展而来，数据以树状结构组织，便于数据的层级管理和快速检索，提供了灵活的查询语言（LDAP Search Filter），允许用户根据复杂的条件过滤和搜索数据。
+
+
+|+| 是否支持多种协议接入？
+
+    目前不支持，只能选择一种协议接入

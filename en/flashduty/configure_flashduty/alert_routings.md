@@ -36,11 +36,23 @@ Configuration path: **Integration Center => Alarm Events => Specific Integration
 
 ## FAQs
 ---
-<details><summary>Routing rules not taking effect?</summary> Please check if the alarm events match the rules and if the rules are correctly configured.</details>
 
-<details><summary>What happens when multiple routing rules are the same and deliver to the same collaboration space?</summary> A corresponding issue will be generated for each collaboration space. It is recommended to select multiple collaboration spaces in the same rule.</details>
+|+| Routing rules not taking effect?
+
+    Please verify if the alert events correspond to the rules and if the rule settings are correct.
 
 
-<details><summary>Not receiving alarms after configuring routing rules?</summary> Please confirm whether the reported alarm events match the configured routing rules. It is suggested to set up a default fallback route to capture unmatched events.</details>
+|+| What happens when multiple routing rules are identical and delivered to the same collaboration space?
 
-<details><summary>Will the default route be matched if the routing rule flow control is set to Stop?</summary> It will match. The default route serves as a catch-all and is not subject to the flow control restrictions.</details>
+    An issue will be generated for each collaboration space; it is advisable to select multiple collaboration spaces within the same rule.
+
+
+
+|+| Not receiving alerts after setting up routing rules?
+
+    Please ensure that the reported alert events can trigger the configured routing rules. Consider setting up a default catch-all route to handle unmatched alert events.
+
+
+|+| Does the default route get matched when the routing rule's flow control is set to Stop?
+
+    It will match. The default route serves as a fallback and is not restricted by flow control settings.

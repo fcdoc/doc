@@ -49,4 +49,7 @@ If the system detects no similar faults within the past **30** days, it will mar
 ## FAQs
 ---
 
-<details><summary>Do novelty faults need to be enabled separately?</summary> There is no need to set up and turn it on. By default, the system will trigger novel fault identification for all professional and above subscription versions.</details>
+
+|+| Does the novelty fault feature need to be enabled separately?
+
+    No setup or activation is required. By default, the system will activate the identification of novelty faults for all subscription versions starting from the Professional edition and above.

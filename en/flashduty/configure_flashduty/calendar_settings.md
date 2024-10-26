@@ -35,4 +35,7 @@ brief: By configuring the service calendar, you can manage allocation strategies
 
 ## FAQs
 ---
-<details><summary>What is the difference between calendar and duty labels?</summary> The biggest difference between the service calendar and the duty schedule is that the positioning and application scenarios of the two are different. When the duty schedule is used for receiving, it belongs to the receiving object of fault events and is responsible for receiving and processing the faults assigned to the duty; while the service calendar is used for dispatching time, that is, it is responsible for assigning faults in which time periods, and belongs to the upper layer of the receiver ; The service calendar is generally used in the securities industry. For example, only business that trades on weekdays needs attention.</details>
+
+|+| What is the difference between a calendar and a duty label?
+
+    The primary difference between a service calendar and a duty schedule lies in their respective positioning and application scenarios. A duty schedule is used for receiving, serving as the recipient for fault events, responsible for acknowledging and handling assigned faults; whereas a service calendar is used for dispatching, determining which time periods' faults should be assigned, and it operates at a higher level than the receiver. Typically, service calendars are utilized in the securities industry, for instance, only businesses that trade on weekdays need to pay attention to them.

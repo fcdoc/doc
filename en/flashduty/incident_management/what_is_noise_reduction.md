@@ -79,9 +79,28 @@ We can see the final [fault-alarm-event] correlation relationship through the co
 ## FAQs
 ---
 
-<details><summary>Will the fault title change when the alarm is merged?</summary> No, the default fault title remains the same as the first alarm that triggered it. You can manually modify the fault title at any time. This title will not change when new alarms are merged. </details>
-<details><summary>Will the fault label change when the alarm is merged?</summary><ul><li> Manually created alerts: No, their label list will always be empty</li><li> Automatically triggered alarm: It is possible that the label of the fault will be consistent with the label of the first alarm that triggered the fault. If the label of the alarm changes, the label of the fault will also change synchronously.</li></ul></details>
-<details><summary>Will the alarm label change as the event is merged?</summary> Yes, the alarm label will always align with the newly added event. For example, if you receive an alarm "CPU idle is low" at 10:00 AM with a trigger value of 10%, as more events are merged, the trigger value label may dynamically change. However, if the new event is a recovery event, the alarm will retain its existing labels and add any new, relevant labels. Our aim is to keep the displayed alarm label as close as possible to its initial state when triggered. </details>
-<details><summary>Is there an upper limit on the number of alarms that can be merged into faults?</summary> Yes, we have set a maximum of 1000 alarms for a single fault. This is primarily to optimize the rendering time of the console page. However, as Flashduty is a high-performance event processing system with extensive concurrent logic in the background, seeing fault aggregation exceed 1000 alarms is a normal occurrence. </details>
-<details><summary>Is there an upper limit on the number of events that can be combined into alarms?</summary> There is no limit. However, the maximum window for an alarm to aggregate events is 24 hours. This means that if an alarm is triggered and remains unresolved after 24 hours, no further events will be merged. If Flashduty receives new events, a new alarm will be generated. </details>
-<details><summary>Why do the number of events I push and the number of events associated with the alarm not match?</summary> The merging of events into alarms is a noise reduction process. If Flashduty determines that a newly reported event does not significantly differ from the existing alarm (for example, the status, severity, or description remain unchanged), Flashduty will discard the new event and use the labels from the new event to overwrite any existing labels. </details>
+
+|+| Will the title of the fault change when alarms are incorporated?
+
+    No, the default title of the fault is identical to the first alarm that triggered it. You can manually edit the fault title at any time, and this title will not change with the incorporation of new alarms.
+
+|+| Will the tags of the fault change when alarms are incorporated?
+
+    - Manually created alerts: No, their tag list will always remain empty
+    - Automatically triggered alerts: Possibly, in such cases, the tags of the fault will match those of the first alarm that triggered the fault. If the tags of the alarm change, the tags of the fault will also update accordingly.
+
+|+| Will the tags of the alarm change with the incorporation of events?
+
+    Yes, the tags of the alarm will always align with the newly incorporated events. For instance, if you receive an alert "CPU idle too low" at 10 a.m., with a trigger value of 10%, as more events are incorporated into the alert, the trigger value tag may change dynamically. However, if the new event is a recovery event, the alarm will retain its existing tags and add any tags that were not previously present. Our principle is to maintain the tags displayed by the alarm as close as possible to their state at the time of triggering.
+
+|+| Is there a limit to the number of alarms that can be incorporated into a fault?
+
+    Yes, we have set a limit of 1,000 alarms for a single fault to be aggregated, primarily to reduce the rendering time of the console page. However, Flashduty is a high-performance event processing system with extensive concurrent logic in the background. Therefore, when you see a fault aggregated with more than 1,000 alarms, this may be a normal occurrence.
+
+|+| Is there a limit to the number of events that can be incorporated into an alarm?
+
+    No, there isn't. However, the maximum window for an alarm to aggregate events is 24 hours. This means that if an alarm is triggered and not resolved within 24 hours, no new events will be incorporated in the future. If Flashduty receives new events, a new alarm will be generated.
+
+|+| Why don't the number of events I push match the number of events associated with the alarm?
+
+    The merging of events into alarms is also a process of noise reduction. If Flashduty determines that the newly reported events and alarms have not changed significantly (e.g., status, severity, description, etc. remain unchanged), Flashduty will discard the new events and use the tags from the new events to overwrite the existing tags.

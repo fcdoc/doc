@@ -74,4 +74,7 @@ You can initiate a deletion at any time from the console. However, be aware that
 
 ## FAQs
 ---
-<details><summary>Why can't I retrieve the fault by the field I created?</summary><p> Please confirm whether the field type you want to retrieve is **text** type. In order to ensure the stability of the system, the system currently does not support retrieving text type fields, please understand.</p></details>
+
+|+| Why can't I search for faults using the field I created?
+
+    Please confirm if the field type you wish to search is **text**. To maintain system stability, the system currently does not support searching fields of the text type. Your understanding is appreciated.

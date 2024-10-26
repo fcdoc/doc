@@ -75,8 +75,17 @@ Copy the command: linkUser {} and send it to the chat, then click to associate i
 ![](https://fcdoc.github.io/img/cpsWE8YB5hTfUdPnNl4x6T8p7uq40Ew_6763QVKxIqU.avif)
 
 ## FAQs
-<details><summary>Team or Individual Fails to Receive Messages</summary> Please go to the Integration Center => Instant Messaging => Check if the team and user in Microsoft Teams are successfully associated.</details>
 
-<details><summary>How to View Associated Teams and Users</summary> Please go to the Integration Center => Instant Messaging => View the associated Teams and users in Microsoft Teams.</details>
+|+| The team or individual is not receiving messages
 
-<details><summary>How to Cancel Associated Teams and Users</summary> This feature is not supported yet.</details>
+    Please navigate to the Integration Center => Instant Messaging => Check if the teams and users in Microsoft Teams have been successfully associated
+
+
+|+| How to view associated teams and users
+
+    Please navigate to the Integration Center => Instant Messaging => View the associated Teams and associated users in Microsoft Teams
+
+
+|+| How to disassociate teams and users
+
+    Not supported yet

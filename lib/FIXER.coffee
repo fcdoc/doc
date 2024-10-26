@@ -1,7 +1,9 @@
 > ./tip
-  ./inlineCode.coffee
+  ./inlineCode
+  ./detail
 
 export default [
   tip
   inlineCode
+  detail
 ]

@@ -72,10 +72,9 @@ Example:
 ## FAQs
 ---
 
-<details>
-<summary>What should be done if tags are missing when dynamically generating titles?</summary>
 
-Depending on the variable retrieval method used, the title may retain the original variable information or use '<no value\>' as a substitute.
+|+| Utilize tags to dynamically generate titles; what should be done if the tags are absent?
 
-Even if variables cannot be retrieved, the generation of alerts will not be affected, allowing for confident debugging.
-</details>
+    Depending on the variable retrieval method used, the title may retain the original variable information or use '<no value\>' as a substitute.
+
+    Even if variables cannot be retrieved, the generation of alerts will not be affected, allowing for confident debugging.

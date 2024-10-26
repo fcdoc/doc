@@ -126,4 +126,12 @@ The timeline will fully record your modification process.
 ## FAQs
 ---
 
-<details><summary>I suspended the fault, why did the system still trigger a new similar fault?</summary><p> You may misunderstand **the suspend function** as **the silent function** , but there is a big difference between the two.</p><ul><li> The silent function requires you to fill in the matching policy. When a newly triggered fault matches the silent policy, no notification will be issued. Quiet policies can affect the triggering of notifications for new faults.</li><li> The suspension function does not require you to fill in any policies. It only buys you a period of time to deal with the fault after you claim it, preventing the fault from being escalated to the next handler.</li></ul><p> If you need to suppress an alert policy, use **silence** instead of **suspend** .</p></details>
+
+|+| I postponed the fault, yet the system still triggered a new, similar fault
+
+    You might have misunderstood **the postponement feature** as **the silent feature**, but there is a significant difference between the two.
+
+    - The silent feature requires you to enter a matching strategy. If a newly triggered fault aligns with the silent strategy, no notification will be sent. The silent strategy can impact the notification for new faults.
+    - The postponement feature does not require you to input any strategy. It simply grants you a period of time to address the fault after you have claimed it, preventing the fault from escalating to the next handler during the resolution process.
+
+    If you need to suppress an alert policy, please use **silence**, not **postpone**.

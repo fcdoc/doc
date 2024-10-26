@@ -43,4 +43,11 @@ brief: You can customize the account settings and configure personal notificatio
 
 ## FAQs
 
-<details><summary>I have set my personal preference notification method, why is the notification not triggered?</summary> Flashduty How to dispatch people and notify them only depends on the settings of the dispatch policy. This means that if you do not set a dispatch policy, there will be no notification when a failure occurs.<p> Secondly, the dispatch strategy single chat notification channel supports two settings, one is "follow personal preferences" and the other is "follow unified settings". Only in the "Follow personal preferences" setting, notifications will be personalized according to your settings. If you select "Follow unified settings", everyone will be notified according to this setting, rather than each person's preference.</p><p> Go to Collaboration Space Details = > Policy to view your specific settings.</p></details>
+
+|+| I set my preferred notification method, but why wasn't the notification triggered?
+
+    Flashduty's personnel dispatch and notification rely solely on the assignment strategy settings. This implies that if you haven't configured an assignment strategy, no notifications will be sent when a failure is triggered.
+
+    Moreover, the single chat notification channel of the assignment strategy supports two settings: "Follow personal preferences" and "Follow unified settings." Notifications are personalized based on your settings only under the "Follow personal preferences" option. If you choose "Follow unified settings," everyone will receive notifications according to this setting, rather than their individual preferences.
+
+    Go to Collaboration Space Details => Assignment Policy to check your specific settings.

@@ -58,6 +58,19 @@ When searching for historical failures, the system only matches resolved similar
 ## FAQs
 ---
 
-<details><summary>How far back can I view historical faults?</summary> Currently, you can only view similar faults within 30 days before the current fault occurs. Over time, the system may delete historical data, in which case you may not be able to view historical faults.<p> Regardless, you can view up to 30 days of historical data for a currently occurring failure.</p></details>
-<details><summary>Can I mark that the current fault is not similar to historical faults?</summary><p> No, the system currently does not have a marking function. But you can communicate and give feedback to us through other channels.</p></details>
-<details><summary>How can I make historical glitches work better?</summary> 1. It is recommended that you fill in the root causes and solutions for important faults; 2. It is recommended that you try to enrich the labels of faults, especially the service and resource tags; 3. It is recommended that you enrich the titles and descriptions of alarms to make them more accurate. Express the fault phenomenon.</details>
+
+|+| How long ago can I review historical failures?
+
+    At present, you can only review similar failures within 30 days prior to the occurrence of the current failure. As time progresses, the system may delete historical data, in which case you might not be able to access past failures.
+
+    Nonetheless, for failures currently in progress, you can consult up to 30 days of historical data.
+
+|+| Can I indicate that the current failure is dissimilar to historical failures?
+
+    No, the system currently lacks a marking feature. However, you can communicate with us and provide feedback through alternative channels.
+
+|+| How can I enhance the effectiveness of historical failures?
+
+    1. It is recommended that you fill in the root cause and solution for significant failures in detail;
+    2. It is suggested that you enrich the tags for failures, particularly focusing on service and resource tags;
+    3. It is recommended that you enhance the title and description of alerts to more accurately convey the symptoms of the failure.

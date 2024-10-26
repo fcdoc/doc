@@ -84,14 +84,32 @@ Configure SSO Single Sign-On via [Ldap Configuration](https://docs.flashcat.clou
 ## FAQs
 ---
 
-<details><summary>What is SSO Single Sign-On?</summary>Single sign-on (SSO) is a solution for integrating enterprise systems that unifies user identity authentication, allowing users to access all mutually trusted enterprise application systems with a single login.</details>
 
-<details><summary>What are the features of the SAML2.0 protocol?</summary>The SAML 2.0 protocol is based on XML and uses a secure, standardized declaration method to achieve cross-domain single sign-on and authentication. It supports multiple data exchange bindings, ensuring interoperability and flexibility.</details>
+|+| What is SSO single sign-on?
 
-<details><summary>What are the features of the OIDC protocol?</summary>The OIDC protocol, based on OAuth 2.0, provides a standardized and secure identity verification process. It uses JSON Web Tokens to transmit user information, enabling cross-platform single sign-on and identity management.</details>
+    Single sign-on (SSO) is one of the solutions for integrating enterprise systems, designed to unify user identity authentication. With SSO, users need to log in only once to access all mutually trusted enterprise applications.
 
-<details><summary>What are the features of the CAS protocol?</summary>The CAS protocol is a single sign-on (SSO) protocol for web applications. It allows users to use a single authentication process across multiple services, using service tickets (Service Ticket) and authentication tickets (Authentication Ticket) to authenticate services.</details>
 
-<details><summary>What are the features of the LDAP protocol?</summary>The LDAP protocol, developed from the X.500 standard, organizes data in a tree structure, facilitating hierarchical management and rapid data retrieval. It provides a flexible query language (LDAP Search Filter) that allows users to filter and search data based on complex conditions.</details>
+|+| What are the features of the SAML 2.0 protocol?
 
-<details><summary>Does it support multiple protocol access?</summary>Currently, it does not support multiple protocol access; you can only choose one protocol to integrate.</details>
+    The SAML 2.0 protocol, based on XML, facilitates secure and standardized single sign-on and identity verification across different domains. It supports various data exchange bindings, ensuring interoperability and flexibility.
+
+
+|+| What are the characteristics of the OIDC protocol?
+
+    The OIDC protocol, built upon OAuth 2.0, offers a standardized and secure authentication process. It employs JSON Web Tokens to transmit user information, thereby enabling cross-platform single sign-on and comprehensive identity management.
+
+
+|+| What are the characteristics of the CAS protocol?
+
+    The CAS protocol is a single sign-on (SSO) protocol for web applications. It allows users to use a single authentication process on multiple services, using service tickets (Service Ticket) and authentication tickets (Authentication Ticket) to implement services. Certification.
+
+
+|+| What are the characteristics of the LDAP protocol?
+
+    The LDAP protocol is developed based on the X.500 standard. Data is organized in a tree structure, which facilitates hierarchical management and rapid retrieval of data. It provides a flexible query language (LDAP Search Filter), allowing users to filter and search data based on complex conditions.
+
+
+|+| Does it support the integration of multiple protocols?
+
+    Currently, it does not support multiple protocols; only one protocol can be chosen for integration

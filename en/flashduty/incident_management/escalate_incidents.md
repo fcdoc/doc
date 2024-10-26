@@ -40,5 +40,11 @@ Similar to **reassignment**, when adding a handler, you can only select the duty
 
 ## FAQs
 
-<details><summary>Why is there no strategic way to notify when adding handlers?</summary><p> Adding handlers and reassigning are set according to personal notification preferences by default, and you can update them on the personal settings page. In the future, we will support you to modify the notification method independently when dispatching.</p></details>
-<details><summary>Why is there no upgrade button in my incident details?</summary><p> You can switch between different dispatch stages only if the fault is dispatched according to the dispatch policy. When you choose direct assignment (for example, if the individual is assigned through reassignment), the failure is not related to any assignment policy and cannot be escalated through the policy.</p></details>
+
+|+| Why is notification added without a strategy for handlers?
+
+    Handlers are added and reassigned by default based on individual notification preferences, which you can update on the personal settings page. In the future, we will support the ability for you to modify the notification method independently during reassignment.
+
+|+| Why is there no "Upgrade" button in my incident details?
+
+    You can only switch between different dispatch stages if the incident is assigned according to the dispatch policy. When you opt for direct assignment (for instance, by specifying an individual through reassignment), the incident is unrelated to any assignment policy and cannot be escalated via the policy.
