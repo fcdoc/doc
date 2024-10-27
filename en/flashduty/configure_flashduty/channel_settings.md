@@ -20,7 +20,7 @@ Login to the console to create, path: **Fault Management => Collaboration Space 
 - **Space Name:** It is suggested to name and plan based on departments, teams, or business types to gain a clearer understanding of the space's purpose.
 - **Description:** A brief summary of the business handled by the space and the types of alerts it receives is recommended.
 - **Management Team:** The management team for the space can be set upon creation. **Team members have full operational permissions for the space**, while non-creators have read-only access to the space's configuration.
-- **Automatic Timeout Closure:** After N minutes of inactivity, the system will automatically close the fault **(applicable to all new faults in this space)**. Faults that are closed due to timeout will **receive corresponding notification messages** (the notification channel depends on the configuration of the [dispatch policy](https://docs.flashcat.cloud/zh/flashduty/escalate-rule-settings)).
+- **Timeout Automatic Shutdown:** If a fault remains unclosed for more than N minutes, **the system will automatically close it** (applicable to all new faults in this space). Faults that are closed due to timeout **will also receive corresponding notification of closure** (the notification method depends on the configuration of [Dispatch Policy](/configure_flashduty/escalate_rule_settings)).
 - If the distribution of faults within the space has not been planned, you can **skip setting the dispatch policy**. After creation, you can continue to configure the dispatch policy.
 - During creation, the type of integration connected is **exclusive to that space** and only effective within it. It can also be overlooked and configured after creation.
 
@@ -42,7 +42,7 @@ Login to the console to create, path: **Fault Management => Collaboration Space 
 - Filter conditions can be set based on fault status, handler, time, title, and other criteria.
 - Select multiple **faults with the same status** to perform batch operations such as closing or claiming.
 - **Merging** allows multiple faults to be combined into one for handling, supporting merging across different collaboration spaces.
-- **For more details, please refer to [Searching and Viewing Faults](https://docs.flashcat.cloud/zh/flashduty/view-incidents)**.
+- **For more detailed information, please refer to [Searching and Viewing Faults](/incident_management/view_incidents)**.
 
 ### Integrated Data
 - Integrations created under a collaboration space are **exclusive to that space**.
@@ -55,10 +55,10 @@ Login to the console to create, path: **Fault Management => Collaboration Space 
 - Manage notification rules, channels, and escalation policies for faults.
 - Fault notifications are matched sequentially according to the order of each policy, and no further matching occurs after a match is found.
 - When multiple policies exist, you can freely drag and adjust the order of the distribution policies, ensuring that notification rules align with business needs before making changes.
-- For more information on **distribution strategies**, please refer to the [Distribution Strategies](https://docs.flashcat.cloud/zh/flashduty/escalate-rule-settings) section.
+- For more details on **dispatch policies**, please refer to the [Dispatch Policies](/configure_flashduty/escalate_rule_settings) section.
 
 ### Noise Reduction Configuration
 - Aggregation noise reduction combines similar or related alerts into a single fault.
 - Aggregation can be configured based on alert title, level, and label dimensions.
 - Fault convergence automatically suppresses notifications for the same fault within a certain time frame.
-- For more information about **noise reduction configuration**, please refer to the [Noise Reduction Configuration](https://docs.flashcat.cloud/zh/flashduty/noise-reduction-settings) section.
+- For further information about **noise reduction settings**, please refer to the [Noise Reduction Settings](/configure_flashduty/noise_reduction_settings) section.

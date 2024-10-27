@@ -94,7 +94,7 @@ Each fault has a timeline that allows you to trace the changes and operations th
 
 ### Trigger Fault via Integration
 
-Flashduty supports most common monitoring systems, including Prometheus, Zabbix, Nightingale, and cloud monitoring, among others. For specific steps, please refer to [Alarm Integration](https://docs.flashcat.cloud/zh/flashduty/nightingale-integration-guide).
+Flashduty has already integrated with most common monitoring systems, including Prometheus, Zabbix, Nightingale, and cloud monitoring. Visit [Alarm Integration](/integration_guide/alert_integration/nightingale_integration_guide) for detailed steps on how to proceed.
 
 > [!TIP]
 > Flashduty supports both dedicated integration and shared integration models. Alarms delivered to dedicated integrations within a collaboration space will trigger faults within that space.
@@ -102,7 +102,7 @@ Flashduty supports most common monitoring systems, including Prometheus, Zabbix,
 
 ### Triggering Faults via API
 
-Flashduty provides a custom event standard that allows you to report alarms via a standard protocol, suitable for any unadapted monitoring system. For detailed documentation, please read [Custom Events](https://docs.flashcat.cloud/zh/flashduty/custom-alert-integration-guide).
+Flashduty offers a custom event standard, enabling you to report alerts through a standard protocol, which is suitable for any monitoring systems that are not yet supported. For more information, refer to [Custom Events](/integration_guide/alert_integration/custom_alert_integration_guide).
 
 > [!TIP]
 > To ensure the stability of the entire system, Flashduty currently imposes a **200qps** frequency limit on API reporting. Exceeding this limit will result in the rejection of reports.
@@ -112,7 +112,7 @@ Flashduty provides a custom event standard that allows you to report alarms via 
 
 ### Trigger Fault via Email
 
-Flashduty provides an email integration that allows you to report alarms by sending emails. It is suitable for all monitoring systems that support email reminders. For detailed documentation, please read [Custom Events](https://docs.flashcat.cloud/zh/flashduty/email-integration-guide).
+Flashduty provides an email integration feature, allowing you to report alerts by sending emails, making it compatible with all monitoring systems that support email notifications. Detailed instructions can be found in [Custom Events](/integration_guide/alert_integration/email_integration_guide).
 
 > [!TIP]
 > You can set specific email prefixes for each integration. You can also contact us to set an easy-to-remember exclusive domain name for your main account. For example, order-service@tesla.flashcat.cloud.
@@ -121,14 +121,14 @@ Flashduty provides an email integration that allows you to report alarms by send
 
 Click the **Create** button on the console to initiate fault creation.
 
-<div style="font-size:12px">
+<div style="font-size:14px">
 
 | Field | Is it necessary | Description |
 | :---: | :---:   | ---- |
 | Fault title | yes | A brief statement indicating what has occurred |
 | Fault description | no | Detailed description of the fault, supporting Markdown syntax |
 | Severity | yes | Select one of the three enumeration values: Critical, Warning, and Info |
-| Collaborative space | no | Fault attribution; if not selected, it represents a global fault. In this case, the fault must be assigned directly to a person to notify |
-| Assign personnel | no | Troubleshooting personnel; if not selected, will be matched and assigned according to the collaboration space they belong to, otherwise they will be notified directly according to personal preferences |
+| Collaborative space | no | If fault attribution is not selected, it represents a global fault.<br> In this case, the fault must be assigned directly to the person to notify |
+| Assign personnel | no | If the fault handler does not choose, they will be matched and assigned according to the collaboration space they belong to.<br> Otherwise, notifications will be made directly according to personal preferences. |
 
 </div>

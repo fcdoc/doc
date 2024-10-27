@@ -10,7 +10,7 @@ brief: Learn how to quickly get started with Flashduty
 
 ## Get Started for Free
 
-1. Visit [Flashduty Console](https://console.flashcat.cloud/) via your browser, enter your **mobile number** or **work email**, read and agree to our [Terms of Service](https://docs.flashcat.cloud/zh/flashduty/user-aggrement) and [Privacy Policy](https://docs.flashcat.cloud/zh/flashduty/privacy-policy), then click "Next." The system will send a verification code to your mobile or email.
+1. Access the [Flashduty Console](https://console.flashcat.cloud/) through your browser, input **your mobile number** or **work email**, read and consent to our [Terms of Service](/security_terms/user_aggrement) and [Privacy Policy](/security_terms/privacy_policy), then click "Next". The system will subsequently dispatch a verification code to your mobile phone or email.
 2. Enter the name of your **company or organization**, along with the verification code received in the previous step, click "Next," and complete the registration.
 3. The system will guide you through the process of completing your information and will send you a custom alert event to experience voice, SMS, or email notifications.
 

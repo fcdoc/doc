@@ -40,7 +40,7 @@ A team is a collection of members, also conceptualized as a group, where members
 
 ### Invite Members
 
-- When inviting a member, you can directly assign them a role; [understand permission design](https://docs.flashcat.cloud/zh/flashduty/permission-overview).
+- When inviting a member, you can directly assign them a role; [understand the permission design](/platform_features/permission_overview).
 - For email invitations, the invited member will receive a notification email and can directly jump to the login verification from within the email.
 - For SMS invitations, the invited member will receive a corresponding SMS notification.
 - Invited members can log in using the verification method provided during the invitation, such as email or mobile phone number.

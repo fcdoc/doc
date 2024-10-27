@@ -35,7 +35,8 @@
 body,
 input,
 textarea,
-b {
+p b,
+li b {
   font-weight: 350;
   color: #444;
 }

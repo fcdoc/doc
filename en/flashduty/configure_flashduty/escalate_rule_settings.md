@@ -20,7 +20,7 @@ Each collaborative workspace should have at least one dispatch policy in place. 
 
 ![tiaojian.png](https://fcdoc.github.io/img/WyGIe6d3UjoWaGg4Y8KCZ87KCalIEM3cdR1YMRI6RVc.avif)
 
-Visit [How to Configure Filter Conditions](https://docs.flashcat.cloud/zh/flashduty/how-to-filter) for more information.
+Go to [How to Configure Filter Conditions](/configure_flashduty/how_to_filter) for more information.
 
 ## Dispatch configuration
 
@@ -33,19 +33,19 @@ Visit [How to Configure Filter Conditions](https://docs.flashcat.cloud/zh/flashd
 > [!NOTE]
 > Looking to integrate with internal self-developed systems for dynamic dispatching?
 >
-> Refer to [Dynamically Setting Dispatch Personnel](https://docs.flashcat.cloud/zh/flashduty/dynamic-notifications).
+> Please refer to [Dynamically Setting Dispatch Personnel](/advanced_features/dynamic_notifications).
 
 ### Single Chat Channel
 Single chat refers to one-on-one notifications, such as through email, SMS, voice, and certain IM applications.
 
-- **Follow Personal Preferences:** Notification methods are determined by members based on their [account settings for each alarm category's receiving channels and methods](https://docs.flashcat.cloud/zh/flashduty/preference-settings).
+- **Follow Individual Preferences:** Notification methods are set by members individually within the [Account Configuration](/configure_flashduty/preference_settings) for each alert category's reception channels and methods.
 - **Follow Unified Settings:** Notification recipients' channels and methods are configured uniformly by the policy setter.
 
 ### Group Chat Channel
 
 Group chat involves sending notifications to a group with special mentions for dispatch personnel, including various webhook robots and some IM applications.
 
-- In group chats, you can choose how to reach recipients through different applications and group robots. **When selecting IM app notifications**, the notification recipient must first link to the corresponding application. See [Instant Messaging Integration](https://docs.flashcat.cloud/zh/flashduty/lark-integration-guide) for details
+- In group chats, various applications and group bots can be selected to reach recipients. **When choosing IM app notifications**, the notification recipient must first associate with the corresponding app. Details can be found in [Instant Messaging Integration](/integration_guide/instant_messaging/lark_integration_guide)
 
 > [!NOTE]
 > Select at least one notification channel for personal and group chats. If you prefer not to notify individuals, only groups, you can set an empty team as the dispatch target.
@@ -61,7 +61,7 @@ Group chat involves sending notifications to a group with special mentions for d
 - You can opt for an automatic upgrade when the fault __Timeout is not closed__ or __Timeout is not claimed__.
 - Typical scenarios include hierarchical upgrades between primary and backup duty personnel, between superiors and subordinates, and between first and second lines of support.
 
-You can also manually upgrade faults; visit [Upgrade and Dispatch Faults](https://docs.flashcat.cloud/zh/flashduty/escalate-incidents) for more information.
+You can also manually escalate faults; visit [Escalating and Dispatching Faults](/incident_management/escalate_incidents) for more details.
 
 ### Strategy Sequence Adjustment
 - When multiple dispatch strategies are in place, notifications are matched sequentially and stop once a match is found. Consider the relevant dispatch conditions thoroughly when configuring.

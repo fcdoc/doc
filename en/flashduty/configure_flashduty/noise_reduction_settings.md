@@ -15,7 +15,7 @@ Go to [Collaboration Space Details] - [Alarm Noise Reduction], you can set the *
 - If you expect to handle different alarms separately, please enable __Fine-grained Control__.
 - Fine-Grained Control allows you to filter faults and specify a particular aggregation dimension.
 - The system always prioritizes fine-grained control matching. If no match is found, the default aggregation dimensions will be used.
-- You can visit [Configure Filter Conditions](https://docs.flashcat.cloud/zh/flashduty/how-to-filter) to understand how to set up filters.
+- You can proceed to [Configure filters](/configure_flashduty/how_to_filter) to understand how to set up filtering criteria.
 
 - Aggregation window: You can choose to aggregate only alarms that occur in close succession (indicating stronger relevance), while alarms beyond the time window will trigger new faults. **Note that this is a sliding window, which extends as new alarms are incorporated**.
 

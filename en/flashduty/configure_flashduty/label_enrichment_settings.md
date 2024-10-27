@@ -31,7 +31,7 @@ Each alert event in the integration center has an option for configuring tag enh
 
 ### Configuration Instructions
 
-- **Restriction Conditions:** When enhancing tags, you can configure prerequisite rules to restrict whether tags are generated or deleted (default is off). If there are restrictions, tags will not be generated or deleted if the conditions are not met. You can visit [Configure Filter Conditions](https://docs.flashcat.cloud/zh/flashduty/how-to-filter) to understand how to set up restriction conditions.
+- **Restrictions:** During tag enhancement, you can set up conditional rules to control whether to create or remove corresponding tags (disabled by default). If such conditions are in place and not met, tags will neither be generated nor deleted. You can visit [Configure Filter Conditions](/configure_flashduty/how_to_filter) to understand how to set these restrictions.
 - **Overwrite:** When generating a new tag based on set conditions, you can choose whether to overwrite the original tag (default is off). For instance, if a new tag named "host" with the value "A" is generated according to the rules, and the tag "host" already exists in the original alert, it will overwrite the original tag.
 
 - **Preview:** After completing the rule configuration, a preview is supported, allowing for a visual observation of the configuration effect.

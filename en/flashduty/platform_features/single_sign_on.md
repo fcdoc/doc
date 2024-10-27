@@ -70,9 +70,9 @@ Configuration path: **Access Control => Single Sign-On => Enable => Settings => 
 
 ## Best Practices
 
-Configure SSO Single Sign-On via [Authing Configuration](https://docs.flashcat.cloud/zh/flashduty/introduction) for FlashDuty.
-Configure SSO Single Sign-On via [Keycloak Configuration](https://docs.flashcat.cloud/zh/flashduty/introduction) for FlashDuty.
-Configure SSO Single Sign-On via [Ldap Configuration](https://docs.flashcat.cloud/zh/flashduty/introduction) for FlashDuty.
+SSO single sign-on configured through [Authing](/quick_start/introduction) for FlashDuty.
+SSO single sign-on configured through [Keycloak](/quick_start/introduction) for FlashDuty.
+SSO single sign-on configured through [LDAP](/quick_start/introduction) for FlashDuty.
 
 ## FAQs
 

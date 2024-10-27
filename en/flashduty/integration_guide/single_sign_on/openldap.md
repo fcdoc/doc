@@ -110,4 +110,4 @@ With the above OpenLDAP configuration, the FlashDuty integration details are as 
 ![](https://fcdoc.github.io/img/lEGCTBal4Z6hl7Vawh6NpyUPvtqeLfHG1c55qXBZQX8.avif)
 
 > [!NOTE]
-> For the meaning and description of the above fields, please refer to [Configuring Single Sign-On](https://docs.flashcat.cloud/zh/flashduty/single-sign-on)
+> For the meaning and description of the aforementioned fields, please refer to [Configuring Single Sign-On](/platform_features/single_sign_on)

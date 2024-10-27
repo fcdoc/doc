@@ -11,7 +11,7 @@ Configuration path: **Integration Center => Alarm Events => Specific Integration
 
 **1. Add Route:** Multiple routes can be added without a current limit, but it's advisable to keep them concise to maintain readability.
 **2. Adjust Order:** With two or more routing rules, you can adjust the activation order using the up and down arrows.
-**3. Routing Rules:** Support for multiple conditions and rules for logical operations (including both match and non-match operations). Various matching patterns are available, such as exact matches, wildcards, and regular expressions. Visit [Configure Filter Conditions](https://docs.flashcat.cloud/zh/flashduty/how-to-filter) to learn how to set up constraints.
+**3. Routing rules:** Supports multiple conditions and rules for logical operations (matching or non-matching operations can be distinguished at the same time). Multiple matching modes are pointed out when matching conditions, such as exact matching, wildcards, regular expressions, etc. You can go to [Configure filters](/configure_flashduty/how_to_filter) to learn how to configure restrictions.
 **4. Process Control:** In the presence of two or more routing rules, the option to **terminate or proceed** with the matching of subsequent rules is available. By default, the system **continues matching**, ensuring that subsequent routes remain active. Conversely, selecting **termination** will deactivate any subsequent rules.
 **5. Preview Rules:** After configuring the rules, you can view the configuration expressions.
 **6. Insert Route:** When there are two or more routing rules, you can insert a new route before or after an existing one, saving the need to reorder.

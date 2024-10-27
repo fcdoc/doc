@@ -4,7 +4,7 @@ brief: Access alarms through exclusive or shared integration, and what is the di
 
 # Various alarm access methods
 
-FlashDuty serves as a unified alarm processing platform, which itself does not generate alarm data. It is necessary to integrate alarm events from third-party monitoring platforms into FlashDuty to achieve unified alarm reception, noise reduction, dispatching, notification, resolution, analysis, and automation, such as alarms from monitoring platforms like Nightingale/FlashCat, Zabbix, Prometheus, and alerts from major cloud service providers. For more types, please refer to [Alarm Integration](https://docs.flashcat.cloud/zh/flashduty/custom-alert-integration-guide).
+FlashDuty serves as a unified alert processing platform that does not generate alert data on its own. It requires integrating alert events from third-party monitoring platforms such as Nightingale/FlashCat, Zabbix, Prometheus, and alerts from major cloud service providers into FlashDuty to facilitate unified alert reception, noise reduction, dispatching, notification, resolution, analysis, and automation. For more types, please refer to [Alarm Integration](/integration_guide/alert_integration/custom_alert_integration_guide).
 
 ## Access methods
 
@@ -25,7 +25,7 @@ Shared integration addition path: **Integration Center => Alarm Events**.
 
 > [!NOTE]
 > - Exclusive or shared integration will generate a push address after a new alarm integration is added. Copy the modified address to the corresponding platform.
-> - Each alarm event source accesses different data types. For specific methods, refer to the access instructions in the [Integration Guide](https://docs.flashcat.cloud/zh/flashduty/custom-alert-integration-guide).
+> - Each alert event source integrates different data types. For specific integration methods, please refer to the access instructions in [Integration Guide](/integration_guide/alert_integration/custom_alert_integration_guide).
 
 > [!WARN]
 > To ensure the overall system's stability, we have imposed frequency limits on event requests reported by each integration. The current limits are a request limit per second (`qps`) of `100` and a request limit per minute (`qpm`) of `1000`.
@@ -47,11 +47,11 @@ Shared integration addition path: **Integration Center => Alarm Events**.
 
 |+| How are alarm labels generated?
 
-    For each integration, Flashduty puts all the key information in tags, descriptions or titles according to the principle of "what should be taken". If you want to dynamically generate other labels on this basis, please configure label enhancement rules. For details, please refer to: https://docs.flashcat.cloud/zh/flashduty/label-enrichment-settings
+    Flashduty applies the principle of "take everything" to tag, describe, or title all crucial information for each integration. To dynamically generate additional tags based on this, please configure tag enrichment rules. For details, refer to: /configure_flashduty/label_enrichment_settings
 
 |+| How is the alarm title determined? Can I modify it?
 
-    Flashduty uses a specific title generation method for each integration, which is generally a combination of "policy name/alarm object". If you want to customize the title generation rules, please refer to: https://docs.flashcat.cloud/zh /flashduty/customize-incident-attrs
+    Flashduty employs a specific title generation method for each integration, typically combining "policy name / alarm object". To customize the title generation rules, please refer to: /advanced_features/customize_incident_attrs
 
 |+| How can I check the integration type from which an alarm event originates?
 

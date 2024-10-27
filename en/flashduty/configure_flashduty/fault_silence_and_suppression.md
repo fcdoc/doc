@@ -16,7 +16,7 @@ Configuration path: **Collaboration Space Details => Noise Reduction Configurati
 - **Periodic Silence:**
 
 - Weekly Mode: Can be set to activate daily or on certain days of the week.
-- Calendar Mode: A [Service Calendar](https://docs.flashcat.cloud/zh/flashduty/calendar-settings) must be created in advance, with rules activated based on working or non-working days.
+- Calendar mode: You need to create a [service calendar](/configure_flashduty/calendar_settings) in advance, and the settings will take effect based on the working or non-working days indicated in the calendar.
 
 <img src="https://fcdoc.github.io/img/jM2er25BoW7JDHWOJVTIBBZwwVmPRn2bu_S4QGGv1rc.avif" style="display: block; margin: 0 auto;" width="800">
 
@@ -33,7 +33,7 @@ Quick Silence refers to the rapid creation of **temporary or single** silent rul
 - **Basic Information:** The rule name and description are automatically generated based on the fault's ID and title.
 - **Effective Scope:** The silent rule applies to the collaboration space of the associated fault and **cannot be changed**.
 - **Effective Time:** Only supports a single time range (default 24 hours); the rule is automatically deleted upon expiration without a deletion record.
-- **Silent Condition:** Defaults to using the fault's tags as conditions, with an exact match required. Visit [Configure Filter Conditions](https://docs.flashcat.cloud/zh/flashduty/how-to-filter) to learn how to set up restrictions.
+- **Silent condition:** The default condition is to take the tag of the fault as the criterion, requiring an exact match. You can visit [Configure filters](/configure_flashduty/how_to_filter) to understand how to set up restrictive conditions.
 
 <img src="https://fcdoc.github.io/img/4skl6ajxT--De2Dklq48hnH9yhaXPawv9oikbEYqa78.avif" style="display: block; margin: 0 auto;" width="800">
 
@@ -51,7 +51,7 @@ When a new fault meets the conditions and there is an active fault that meets th
 - **Condition Matching:** Allows selection of match or non-match based on fault severity, fault tags, or combined conditions.
 - **Same Items:** Supports matching using the same attributes or labels, with multiple conditions, selecting at least one attribute or label, and requiring simultaneous satisfaction when both are chosen.
 
-Visit [Configure Filter Conditions](https://docs.flashcat.cloud/zh/flashduty/how-to-filter) to learn how to set up restrictions.
+You can visit [Configure filters](/configure_flashduty/how_to_filter) to understand how to set up restrictive conditions.
 
 > [!WARN]
 > When a fault meeting the conditions is suppressed, it will still be displayed and processed in the console, but no notification will be triggered.
