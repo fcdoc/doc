@@ -40,9 +40,9 @@ If you are a minor or a person with limited capacity for civil conduct, you do n
 
 2.2.3 Unless there are special circumstances, your Kuaimao Nebula account will serve as the corresponding identification basis for all activities you conduct on this website. Each Kuaimao Nebula account can be used as the basis for independently carrying out activities on this website. However, under the following circumstances, Kuaimao Nebula has the right to uniformly handle multiple Kuaimao Nebula accounts owned by the same and/or related legal entities based on its own reasonable judgment, including:
 
-- 1. There are related relationships between multiple Kuaimao Nebula accounts such as main account and sub-account, authorized account and authorized account, and in accordance with the provisions of applicable laws, the terms of this Agreement, or other relevant agreements and rules, each account bears joint and several liability for each other
-- 2. There are related situations between multiple Kuaimao Nebula accounts, including but not limited to one or more identical registration information, payment on behalf of others, products or services purchased for the same purpose, and there are malicious arrears and/or violations of applicable laws, the terms of this Agreement, or other relevant agreements and rules, and Kuaimao Nebula can determine by combining other relevant evidence that such Kuaimao Nebula accounts are actually owned or held by the same legal entity or the same group; or
-- 3. Any other situation where Kuaimao Nebula deems there are sufficient reasons to handle multiple Kuaimao Nebula-related accounts in a unified manner.
+1. There are related relationships between multiple Kuaimao Nebula accounts such as main account and sub-account, authorized account and authorized account, and in accordance with the provisions of applicable laws, the terms of this Agreement, or other relevant agreements and rules, each account bears joint and several liability for each other
+2. There are related situations between multiple Kuaimao Nebula accounts, including but not limited to one or more identical registration information, payment on behalf of others, products or services purchased for the same purpose, and there are malicious arrears and/or violations of applicable laws, the terms of this Agreement, or other relevant agreements and rules, and Kuaimao Nebula can determine by combining other relevant evidence that such Kuaimao Nebula accounts are actually owned or held by the same legal entity or the same group; or
+3. Any other situation where Kuaimao Nebula deems there are sufficient reasons to handle multiple Kuaimao Nebula-related accounts in a unified manner.
 
 ### **2.3 Account Security**
 
@@ -64,10 +64,10 @@ If you are a minor or a person with limited capacity for civil conduct, you do n
 
 3.1 Instructions you issue to Kuaimao Nebula in the following ways are irrevocable and binding instructions issued by you. You are solely responsible for any consequences and liabilities arising from Kuaimao Nebula's execution of such instructions:
 
-- 1. All operations performed through your Kuaimao Nebula account and password;
-- 2. All information sent to Kuaimao Nebula through the mobile phone number bound to your account;
-- 3. Information sent to Kuaimao Nebula through other hardware, terminals, software, codes, account names, etc. bound to your account; or
-- 4. Any other method of operation agreed between Kuaimao Nebula and you or approved by Kuaimao Nebula.
+1. All operations performed through your Kuaimao Nebula account and password;
+2. All information sent to Kuaimao Nebula through the mobile phone number bound to your account;
+3. Information sent to Kuaimao Nebula through other hardware, terminals, software, codes, account names, etc. bound to your account; or
+4. Any other method of operation agreed between Kuaimao Nebula and you or approved by Kuaimao Nebula.
 
 3.2 You know and acknowledge that when you use this service, the terms of this Agreement, the prompts about transaction operations that appear on the pages of this website, or the information (text messages or phone calls, etc.) sent by Kuaimao Nebula to your mobile phone are part of the relevant rules of this service. If you continue to use the service after receiving the above information, you agree to accept all relevant rules of this service. You understand and agree that Kuaimao Nebula has the right to unilaterally modify the relevant rules of this service without your consent. These rules should be based on the real-time display content of the page when you use this service or the text messages or phone calls sent to your mobile phone. Please note that your agreement and compliance with these rules are a prerequisite for your use of this service.
 
@@ -107,37 +107,37 @@ If you are a minor or a person with limited capacity for civil conduct, you do n
 
 4.4.1 You will refrain from any action that may affect, harm, or potentially affect or harm the legitimate rights and interests of Kuaimao Nebula and any of its affiliated companies (hereinafter collectively referred to as "Kuaimao Companies"), including:
 
-- 1. Violating any service agreement/terms, management regulations, transaction rules, or other regulations published by Kuaimao Companies;
-- 2. Disrupting or attempting to disrupt the normal trading order of Kuaimao Companies;
-- 3. Using any Chinese or English (whether full name or abbreviation), numbers, letters, domain names, logos, etc., that contain the name or brand of Kuaimao Companies and are misleading to others, or are intended to suggest or imply a certain relationship with Kuaimao Companies; and
-- 4. Any other action that Kuaimao Nebula reasonably determines to be similar in nature to the above actions or may result in similar risks or consequences.
+1. Violating any service agreement/terms, management regulations, transaction rules, or other regulations published by Kuaimao Companies;
+2. Disrupting or attempting to disrupt the normal trading order of Kuaimao Companies;
+3. Using any Chinese or English (whether full name or abbreviation), numbers, letters, domain names, logos, etc., that contain the name or brand of Kuaimao Companies and are misleading to others, or are intended to suggest or imply a certain relationship with Kuaimao Companies; and
+4. Any other action that Kuaimao Nebula reasonably determines to be similar in nature to the above actions or may result in similar risks or consequences.
 
 You are aware and acknowledge that if you violate the above commitments, Kuaimao Nebula will terminate the services provided to you, which means you will no longer be able to log in to any Kuaimao Company website, and all services provided by Kuaimao Company websites will also be terminated for you simultaneously.
 
 4.4.2 You hereby undertake that when using Kuaimao Nebula services, you will comply with relevant applicable laws, industry practices, and social public morality, and will not store, publish, or disseminate the following information:
 
-- 1. Any information that violates national laws, regulations, or policies;
-- 2. Political propaganda and/or news information that violates national regulations;
-- 3. Information involving state secrets and/or security;
-- 4. Information that violates national ethnic and religious policies;
-- 5. Information related to feudal superstition and/or obscene, pornographic, indecent content, or information that incites crime;
-- 6. Information suspected of illegal activities such as betting and gambling;
-- 7. Information that impedes the security of the functioning of the Internet; and
-- 8. Information that infringes upon the legitimate rights and interests of others and/or any information that is harmful to social order, social security, and public morals.
+1. Any information that violates national laws, regulations, or policies;
+2. Political propaganda and/or news information that violates national regulations;
+3. Information involving state secrets and/or security;
+4. Information that violates national ethnic and religious policies;
+5. Information related to feudal superstition and/or obscene, pornographic, indecent content, or information that incites crime;
+6. Information suspected of illegal activities such as betting and gambling;
+7. Information that impedes the security of the functioning of the Internet; and
+8. Information that infringes upon the legitimate rights and interests of others and/or any information that is harmful to social order, social security, and public morals.
 
 You also undertake not to provide any assistance or convenience for others to store, publish, or disseminate the above information, including but not limited to setting URLs, BANNER links, etc.
 
 4.4.3 You hereby undertake that when using Kuaimao Nebula services, you will comply with relevant applicable laws, maintain the order and security of the Internet, and will not engage in or provide assistance for any behavior that violates applicable laws or regulations, including but not limited to:
 
-- 1. Engaging in illegal activities such as betting and gambling;
-- 2. Engaging in fraudulent, deceptive, or misleading conduct, or engaging in any conduct that infringes upon the intellectual property rights or any other legitimate rights and interests of others;
-- 3. Publishing or disseminating spam;
-- 4. Violating the operating regulations of the network, equipment, or services connected to the Kuaimao Nebula website or network;
-- 5. Engaging in illegal or unauthorized access, misappropriation, interference, or monitoring;
-- 6. Engaging in any behavior that undermines or attempts to undermine network security, including but not limited to malicious scanning of websites, servers, etc., illegal intrusion into systems, illegal acquisition of data, etc., through viruses, Trojans, malicious codes, phishing, etc.;
-- 7. Engaging in any behavior that changes or attempts to change the system configuration provided by Kuaimao Nebula services or undermines system security;
-- 8. Using technology or other means to disrupt or interfere with the operation of Kuaimao Nebula services or the use of Kuaimao Nebula services by others; and
-- 9. Interfering with or attempting to interfere with the normal operation of any Kuaimao Nebula products or services or any part or function thereof in any way, or producing, publishing, or disseminating the above-mentioned tools, methods, etc.
+1. Engaging in illegal activities such as betting and gambling;
+2. Engaging in fraudulent, deceptive, or misleading conduct, or engaging in any conduct that infringes upon the intellectual property rights or any other legitimate rights and interests of others;
+3. Publishing or disseminating spam;
+4. Violating the operating regulations of the network, equipment, or services connected to the Kuaimao Nebula website or network;
+5. Engaging in illegal or unauthorized access, misappropriation, interference, or monitoring;
+6. Engaging in any behavior that undermines or attempts to undermine network security, including but not limited to malicious scanning of websites, servers, etc., illegal intrusion into systems, illegal acquisition of data, etc., through viruses, Trojans, malicious codes, phishing, etc.;
+7. Engaging in any behavior that changes or attempts to change the system configuration provided by Kuaimao Nebula services or undermines system security;
+8. Using technology or other means to disrupt or interfere with the operation of Kuaimao Nebula services or the use of Kuaimao Nebula services by others; and
+9. Interfering with or attempting to interfere with the normal operation of any Kuaimao Nebula products or services or any part or function thereof in any way, or producing, publishing, or disseminating the above-mentioned tools, methods, etc.
 
 4.4.4 You hereby undertake that when using Kuaimao Nebula services, you will strictly comply with the terms of service you have entered into with Kuaimao Nebula, the management specifications, processes, service descriptions, price descriptions on the relevant pages, and any order pages you have confirmed and agreed to, including but not limited to the content regarding timely payment.
 
@@ -155,24 +155,24 @@ If you violate the above commitments, in addition to the measures such as deleti
 
 5.2 Unless the following circumstances exist, Kuaimao Nebula will keep your information confidential and promise not to disclose your information to any third party or authorize any third party to use your information:
 
-- 1. Information that must be provided in accordance with the requirements of applicable laws;
-- 2. Information that must be provided in accordance with the requirements of administrative, judicial, and other state authorities;
-- 3. Information that can be provided in accordance with the provisions of this Agreement or other service agreements, contracts, online terms, etc., concluded between you and Kuaimao Nebula;
-- 4. Information that can be provided with your consent and confirmation;
-- 5. Information that is needed to resolve reported incidents;
-- 6. Information that is necessary to prevent the occurrence of serious illegal acts or suspected criminal acts, and for which Kuaimao Nebula must take necessary and reasonable actions; or
-- 7. Information that is needed to provide you with products, services, and information, including but not limited to situations where Kuaimao Nebula provides you with products, services, and information through third-party technology and services.
+1. Information that must be provided in accordance with the requirements of applicable laws;
+2. Information that must be provided in accordance with the requirements of administrative, judicial, and other state authorities;
+3. Information that can be provided in accordance with the provisions of this Agreement or other service agreements, contracts, online terms, etc., concluded between you and Kuaimao Nebula;
+4. Information that can be provided with your consent and confirmation;
+5. Information that is needed to resolve reported incidents;
+6. Information that is necessary to prevent the occurrence of serious illegal acts or suspected criminal acts, and for which Kuaimao Nebula must take necessary and reasonable actions; or
+7. Information that is needed to provide you with products, services, and information, including but not limited to situations where Kuaimao Nebula provides you with products, services, and information through third-party technology and services.
 
 5.3 You are aware and acknowledge that based on your service usage, Kuaimao Nebula will have the right to directly deduct relevant service fees from your account balance in accordance with the provisions of this Agreement.
 
 5.4 You are aware and acknowledge that if one of the following circumstances occurs, Kuaimao Nebula has the right to freeze part or all of the funds in your account:
 
-- 1. In accordance with national laws, regulations, policies, and legal documents;
-- 2. At the request of competent state authorities;
-- 3. When Kuaimao Nebula, based on its unilateral reasonable judgment, believes that there are abnormalities in your account operations, fund inflows and outflows, etc.;
-- 4. When someone else mistakenly transfers funds to your account, which may result in your unjust enrichment;
-- 5. When you are complained about by others, and the complaining party has provided certain evidence; or
-- 6. After its own reasonable judgment, Kuaimao Nebula considers other situations that may create risks.
+1. In accordance with national laws, regulations, policies, and legal documents;
+2. At the request of competent state authorities;
+3. When Kuaimao Nebula, based on its unilateral reasonable judgment, believes that there are abnormalities in your account operations, fund inflows and outflows, etc.;
+4. When someone else mistakenly transfers funds to your account, which may result in your unjust enrichment;
+5. When you are complained about by others, and the complaining party has provided certain evidence; or
+6. After its own reasonable judgment, Kuaimao Nebula considers other situations that may create risks.
 
 Should your account funds be frozen in accordance with the aforementioned provisions, Kuaimao Nebula will notify you via email, in-site messages, SMS, or phone calls, either singly or in combination. You will have the opportunity to appeal in accordance with the established procedures. If your appeal is submitted in accordance with Article 3.8 of this Agreement and is subsequently reviewed and approved by Kuaimao Nebula, the fund freezing measures will be immediately lifted. Conversely, if you fail to appeal within the stipulated timeframe or your appeal is not approved by Kuaimao Nebula, you acknowledge that Kuaimao Nebula reserves the right to indefinitely freeze the funds or return the frozen amounts to the original source of the recharge, which may include, but is not limited to, bank accounts, WeChat accounts, Alipay accounts, and others.
 
@@ -220,14 +220,14 @@ Kuaimao Nebula provides security measures in line with current technology to pre
 
 Under certain circumstances, the Kuaimao Nebula service system may experience disruptions that prevent you from using the service, resulting in corresponding consequences. Kuaimao Nebula will not be held liable for these situations:
 
-- 1. During scheduled system maintenance;
-- 2. Due to telecommunications equipment failures that disrupt data transmission;
-- 3. Due to force majeure events such as typhoons, earthquakes, tsunamis, floods, power outages, wars, or terrorist attacks, which cause the Kuaimao Nebula system to malfunction and prevent business operations;
-- 4. If you use the Kuaimao Nebula service in an unauthorized manner, if you operate the service improperly, or if your computer software, system, hardware, or communication lines fail;
-- 5. Service interruptions or delays caused by network security incidents, such as damage from computer viruses, Trojan horses, or other malicious programs, or hacker attacks;
-- 6. Service interruption or delay resulting from damage to telecommunications/power lines by third parties, or due to installation, modification, and maintenance activities conducted by telecommunications/power providers on their networks/resources
-- 7. Payment service interruptions or delays caused by issues with banks or other reasons; and
-- 8. Other circumstances that are not attributable to Kuaimao Nebula, that are beyond Kuaimao Nebula's control, or that are not reasonably foreseeable.
+1. During scheduled system maintenance;
+2. Due to telecommunications equipment failures that disrupt data transmission;
+3. Due to force majeure events such as typhoons, earthquakes, tsunamis, floods, power outages, wars, or terrorist attacks, which cause the Kuaimao Nebula system to malfunction and prevent business operations;
+4. If you use the Kuaimao Nebula service in an unauthorized manner, if you operate the service improperly, or if your computer software, system, hardware, or communication lines fail;
+5. Service interruptions or delays caused by network security incidents, such as damage from computer viruses, Trojan horses, or other malicious programs, or hacker attacks;
+6. Service interruption or delay resulting from damage to telecommunications/power lines by third parties, or due to installation, modification, and maintenance activities conducted by telecommunications/power providers on their networks/resources
+7. Payment service interruptions or delays caused by issues with banks or other reasons; and
+8. Other circumstances that are not attributable to Kuaimao Nebula, that are beyond Kuaimao Nebula's control, or that are not reasonably foreseeable.
 
 ## **8 Scope of Liability and Limitation of Liability**
 
@@ -255,10 +255,10 @@ Under certain circumstances, the Kuaimao Nebula service system may experience di
 
 10.3 Notwithstanding the foregoing, the Receiving Party shall not be obligated to maintain confidentiality in the following circumstances:
 
-- 1. Where the Disclosing Party has consented to the disclosure;
-- 2. Where the disclosure is not due to the Receiving Party's fault;
-- 3. Where the Receiving Party has already obtained the information from other legitimate sources before the Disclosing Party's disclosure and the Disclosing Party is not subject to similar confidentiality restrictions; and
-- 4. Where the Receiving Party is required to disclose any information by legal proceedings or regulatory authorities.
+1. Where the Disclosing Party has consented to the disclosure;
+2. Where the disclosure is not due to the Receiving Party's fault;
+3. Where the Receiving Party has already obtained the information from other legitimate sources before the Disclosing Party's disclosure and the Disclosing Party is not subject to similar confidentiality restrictions; and
+4. Where the Receiving Party is required to disclose any information by legal proceedings or regulatory authorities.
 
 10.4 The confidentiality obligations of the parties shall remain in effect during the term of this Agreement and shall continue to be effective after the expiration of the term until the information is no longer confidential.
 
