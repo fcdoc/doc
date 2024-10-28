@@ -48,18 +48,54 @@ This address supports both the PagerDuty V1 and V2 Events API. **You must update
 
 ### Pagerduty V2 Events
 
-<div id="!"><h4>Reference documentation:</h4><p> [PagerDuty V2 Events](/0)</p><h4> Authentication method:</h4><p> Choose one of two ways:</p><ul><li> Method 1: Include parameter integration_key in QueryString</li><li> Method 2: Pass integration_key as routing_key parameter Payload</li></ul></div>
+#### Reference Documentation:
+
+[PagerDuty V2 Events](https://developer.pagerduty.com/api-reference/368ae3d938c9e-send-an-event-to-pager-duty)
+
+#### Authentication Method:
+
+Select either of the two methods:
+
+- Method 1: Include parameters in QueryString integration_key
+- Method 2: Pass integration_key as the routing_key parameter into Payload
 
 ### Pagerduty V1 Events
 
-<div id="!"><h4>Reference documentation:</h4><p> [PagerDuty V1 Events](/0)</p><h4> Authentication method:</h4><p> Choose one of two ways:</p><ul><li> Method 1: Include parameter integration_key in QueryString</li><li> Method 2: Pass integration_key as service_key parameter Payload</li></ul></div>
+#### Reference Documentation:
+
+[PagerDuty V1 Events](https://developer.pagerduty.com/api-reference/f0037990796c8-send-an-event-to-pager-duty)
+
+#### Authentication Method:
+
+Select either of the two methods:
+
+- Method 1: Include parameters in QueryString integration_key
+- Method 2: Pass integration_key as the service_key parameter into Payload
 
 ### Configuration Example
 
 Take [ElastAlert2](https://github.com/jertel/elastalert2) as an example:
 
-<div id="!"><ol><li>Step 1: Get the push address</li></ol><p> Fill in the integration name on the current page and save it, reopen the integration details, and copy the push address, such as:</p><pre> `{api_host}/event/push/alert/pagerduty?integration_key=xxx
-`</pre><ol start="2"><li> Step 2: Modify push address</li></ol><p> Modify the source code corresponding to the deployed ElastAlert instance, [check diff](/0) :</p><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/bgbLujRxqtPVvOHrDFsFH6pmWYFB9d5p9AT2jnZtlxY.avif"><ol start="3"><li> Step 3: Report the alarm incident</li></ol><p> Follow the steps [of ElastAlert PagerDuty Push Configuration Document](/1) to configure alarms:</p><pre> `name: "b"
+1. Step 1: Obtain the push address
+
+Enter the integration name on the current page and save it. Then, reopen the integration details and copy the push address, for example:
+
+```
+{api_host}/event/push/alert/pagerduty?integration_key=xxx
+```
+
+2. Step 2: Modify the push address
+
+Revise the source code for the deployed ElastAlert instance, [view the diff](https://github.com/jertel/elastalert2/commit/e815a62a6b1eecef6e1fef13afd99d905b67fc34)
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/bgbLujRxqtPVvOHrDFsFH6pmWYFB9d5p9AT2jnZtlxY.avif" />
+
+3. Step 3: Report an alert incident
+
+Follow the steps outlined in the [ElastAlert PagerDuty push configuration documentation](https://elastalert2.readthedocs.io/en/latest/ruletypes.html#pagerduty) to configure alerts:
+
+```
+name: "b"
 type: "frequency"
 index: "pgy_audit*"
 is_enabled: true
@@ -97,4 +133,6 @@ pagerduty_v2_payload_group: app-stack
 pagerduty_v2_payload_severity: error
 pagerduty_v2_payload_source: mysql.host.name
 # ------- FlashDuty ----------------
-`</pre><ol start="4"><li> Step 4: Restart ElastAlert , wait for the alarm to be triggered</li></ol></div>
+```
+
+4. Step 4: Restart ElastAlert and wait for the alert to be triggered

@@ -53,31 +53,55 @@ When you need to route alarms to different collaboration spaces based on the pay
 
 #### Step 1: Configure Alertmanager
 
-<div id="!"><ol><li>Log into your Alertmanager instance</li><li> Find and open the configuration file, usually alertmanager.yml in the Alertmanager root directory</li><li> In the receivers configuration section, add a Flashduty  webhook type receiver , as follows</li></ol><pre> <code class="language-receiver">receivers:
+1. Log in to your Alertmanager instance
+2. Find and open the configuration file, usually alertmanager.yml in the root directory of the Alertmanager deployment
+3. Within the receivers configuration section, add a Flashduty webhook receiver as follows:
+
+```receiver config
+receivers:
 - name: 'flashcat'
 webhook_configs:
 - url: '您的集成推送地址'
 send_resolved: true
 http_config:
 proxy_url: 'http://proxyserver:port'
-</code></pre><p> You need to url the corresponding parameter value with the integrated push address. Note query string the parameter part needs to be carried integration_key</p><p> If you need to request Flashduty through a proxy, you can additionally set the http_config to proxy_url parameters as the proxy address.</p><ol start="4"><li> In the route configuration section, change the default route and specify receiver to webhook just configured, as follows:</li></ol><pre> <code class="language-route">route:
+```
+
+You need to replace url with the corresponding parameter value as the integrated push address. Note that the query string parameter part needs to carry integration_key .
+
+If you need to request through a proxy Flashduty you can additionally set the proxy_url parameter of http_config to the proxy address.
+
+4. In the route configuration section, modify the default route to specify the webhook receiver that was just configured, as shown below:
+
+```route config
+route:
 ...
 receiver: 'flashcat'
-</code></pre><p> You can also add receiver to the non-default route , but then you will only synchronize the alarm events corresponding to route to Flashduty not all alarm events.</p><ol start="5"><li> Save configuration file</li><li> Make changes take effect by reloading the configuration file (sending a SIGHUP signal, or POST request /-/reload api to the process)</li><li> Finish</li></ol></div>
+```
+
+You can also add a receiver to a non-default route; however, doing so will only synchronize the alerts for that specific route to Flashduty, not all alerts.
+
+5. Save the configuration file
+6. Make changes take effect by reloading the configuration file (sending a SIGHUP signal to the process, or POST request to /-/reload api)
+7. Completion
 
 #### Step 2: Configure Timestamp
 
 By default, the system uses the current time as the event trigger time. If you wish to customize the time, you can set an additional timestamp field to indicate the exact time of each alert occurrence.
 
-<div id="!"><ol><li>Log into your Prometheus Server instance</li><li> Open the configuration file related to the alarm rule</li><li> For each alarm rule, change the annotations part and add the timestamp field, as follows:</li></ol><pre> `annotations:
-timestamp: '{{ with query "time()" }}{{ .
-`</pre> | first | value }}{{ end }} '...</p><pre> `
-4. 保存配置文件
-5. 通过重新加载配置文件（向进程发送 SIGHUP 信号，或 POST 请求/-/reload api），使更改生效
-6. 完成
+1. Log in to your Prometheus Server instance
+2. Open the configuration file related to the alerting rules
+3. For each alert rule, change the annotations section and add the timestamp field as follows:
 
-</div>
-`
+```
+annotations:
+timestamp: '{{ with query "time()" }}{{ . | first | value }}{{ end }}'
+...
+```
+
+4. Save the configuration file
+5. Make changes take effect by reloading the configuration file (sending a SIGHUP signal to the process, or POST request to /-/reload api)
+6. Completion
 
 ## Severity Level Mapping
 

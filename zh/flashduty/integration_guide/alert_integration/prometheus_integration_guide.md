@@ -53,8 +53,6 @@ brief: >-
 
 #### 步骤 1：配置 Alertmanager
 
-<div class="md-block">
-
 1. 登录您的 Alertmanager 实例
 2. 找到并打开配置文件，一般为 Alertmanager 部署根目录下的 alertmanager.yml
 3. 在 receivers 配置部分，增加一个 Flashduty  webhook 类型的 receiver，如下
@@ -87,13 +85,9 @@ receiver: 'flashcat'
 6. 通过重新加载配置文件（向进程发送 SIGHUP 信号，或 POST 请求/-/reload api），使更改生效
 7. 完成
 
-</div>
-
 #### 步骤 2：配置 Timestamp
 
 默认情况下，系统使用当前时间作为事件触发时间。如果您希望自定义时间，您可以额外设定一个 timestamp 字段来标识每一次告警发生的准确时间。
-
-<div class="md-block">
 
 1. 登录您的 Prometheus Server 实例
 2. 打开告警规则相关配置文件
@@ -108,8 +102,6 @@ timestamp: '{{ with query "time()" }}{{ . | first | value }}{{ end }}'
 4. 保存配置文件
 5. 通过重新加载配置文件（向进程发送 SIGHUP 信号，或 POST 请求/-/reload api），使更改生效
 6. 完成
-
-</div>
 
 ## 严重程度映射关系
 

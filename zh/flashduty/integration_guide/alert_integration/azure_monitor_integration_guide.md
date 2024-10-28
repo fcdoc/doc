@@ -36,8 +36,6 @@ brief: 通过 webhook 的方式同步 Azure Monitor 告警事件到快猫星云�
 ## 在 Azure Monitor
 **步骤 1：配置 Webhook**
 
-<div class="md-block">
-
 1. 登录您的 Azure 门户，选择 Monitor 产品；
 2. 进入 `Alerts -> Action groups` 页面，单击 Create 按钮，开始编辑；
 3. 如图，`Actions` 选项选择 `Action type` 为 `Webhook`；
@@ -55,10 +53,7 @@ brief: 通过 webhook 的方式同步 Azure Monitor 告警事件到快猫星云�
 
 3. 提交保存，等待告警触发。
 
-</div>
-
 ## 状态对照
-<div class="md-block">
 
 Azure Monitor 到 Flashduty 告警等级映射关系：
 
@@ -69,5 +64,3 @@ Azure Monitor 到 Flashduty 告警等级映射关系：
 | Sev2     | Warning  | 警告 |
 | Sev3     | Info     | 提醒 |
 | Sev4     | Info     | 提醒 |
-
-</div>

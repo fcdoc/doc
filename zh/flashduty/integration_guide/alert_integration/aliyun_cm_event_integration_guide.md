@@ -36,8 +36,6 @@ brief: 通过 webhook 的方式同步阿里云云监控事件中心告警到快�
 ## 在阿里云监控 CM 事件
 **步骤 1：添加推送渠道**
 
-<div class="md-block">
-
 1. 登录您的阿里云控制台，选择云监控产品
 2. 进入 **事件中心 -> 事件订阅** 页面，切换到 **推送渠道** 标签页，单击 创建推送渠道 按钮，开始编辑内容
 3. 如图，**请求方法** 选择 **POST**，**地址** 填写集成的推送地址
@@ -45,11 +43,7 @@ brief: 通过 webhook 的方式同步阿里云云监控事件中心告警到快�
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/seOk8MgkEvjJCNzrDUEr8i0bnprzJyM5bb7-V_I3lqs.avif" />
 
-</div>
-
 **步骤 2：添加订阅策略**
-
-<div class="md-block">
 
 1. 登录您的阿里云控制台，选择云监控产品
 2. 进入 **事件中心 -> 事件订阅** 页面，切换到 **订阅策略** 标签页，单击 创建订阅策略 按钮，开始编辑内容
@@ -59,10 +53,7 @@ brief: 通过 webhook 的方式同步阿里云云监控事件中心告警到快�
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/yyNAM2bu8Z8ppbnnUX_irJpODrosO8QqejhB8egEojw.avif" />
 
-</div>
-
 ## 状态对照
-<div class="md-block">
 
 阿里云云监控事件告警到 Flashduty 告警等级映射关系：
 
@@ -71,5 +62,3 @@ brief: 通过 webhook 的方式同步阿里云云监控事件中心告警到快�
 | CRITICAL     | Critical | 严重 |
 | WARNING      | Warning  | 警告 |
 | INFO         | Info     | 提醒 |
-
-</div>

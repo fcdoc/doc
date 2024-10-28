@@ -27,8 +27,6 @@ brief: 通过 webhook 的方式同步 Jira Issue 事件到快猫星云，实现�
 
 ### 在 Jira
 
-<div class="md-block">
-
 1. 登录您的 Jira
 2. 进入 **Settings=>System=>Webhooks** 页面，点击 Create 按钮
 3. 填写回调地址为当前集成对应的推送地址，并勾选 Issue Created/Updated/Deleted 三种类型事件
@@ -39,11 +37,7 @@ brief: 通过 webhook 的方式同步 Jira Issue 事件到快猫星云，实现�
 
 5. 完成
 
-</div>
-
 ## 状态映射
-
-<div class="md-block">
 
 Flashduty 默认提取 webhook payload 中 status.name 信息，并按照下边的映射关系进行状态转换：
 
@@ -63,5 +57,3 @@ Flashduty 默认提取 webhook payload 中 status.name 信息，并按照下边�
 | closed      | done       | 已完成             |
 
 如您希望变更此映射关系，请联系 Flashduty。
-
-</div>

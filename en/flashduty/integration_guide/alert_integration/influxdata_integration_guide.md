@@ -34,12 +34,22 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## In Influxdata
-<div id="!"><ol><li>Log in to your Influxdata console and go to the Alerting > Alert Rules page</li><li> Click on the alarm rule that needs to be synchronized, enter the Alert Rule Builder page, and start editing the rules.</li><li> Alert Handlers Part, Select Add Another Handler , select post as type, HTTP endpoint fill in the integrated push address, as shown in the figure below:</li></ol><p>![influxdb-alert-rule](/0)</p><ol start="4"><li> Save Rule the button to save. Wait for the event to be triggered. If the latest event time is displayed in the integration list, it means the configuration is successful and the event is received.</li><li> Finish</li></ol><h2> Status comparison</h2><div id="!"><p> Influxdata relationship between alarm Flashduty and alarm levels:</p>
+
+1. Log in to your InfluxData console and navigate to the Alerting > Alert Rules page
+2. Click on the alert rule that requires event synchronization, proceed to the Alert Rule Builder page, and begin editing the rule
+3. In the Alert Handlers section, choose Add Another Handler, select "post" as the type, and enter the integrated push address in the HTTP endpoint field, as illustrated in the figure below:
+
+![influxdb-alert-rule](https://fcdoc.github.io/img/zh/zOee-vdaCq3Qhon3O8iOhQF-zC2yV8gKyGQo-mcDFKE.avif)
+
+4. Click the Save Rule button to preserve your changes. Await the triggering of an event; if the latest event time appears in the integration list, this indicates that the configuration is successful and events are being received
+5. Completed
+
+## Status Comparison
+
+The mapping relationship between InfluxData alert events and FlashDuty alert levels:
 
 | Influxdata |  Flashduty  | state |
 | ---------- | -------- | ---- |
 | CRITICAL   | Critical | serious |
 | WARNING    | Warning  | warn |
 | INFO       | Info     | remind |
-
-</div>

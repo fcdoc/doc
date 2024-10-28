@@ -40,20 +40,36 @@ BlueWhale's alert strategy can trigger a __Processing Package__, which can be in
 
 #### Step 1: Create a Processing Package
 
-<div id="!"><ol><li>Log in to your Blue Whale Zhiyun desktop and enter __ Monitoring Platform __ ;</li><li> Enter the __ Configuration - Processing Package __ page, click the __ Add Package __ button to start creating a processing package;</li><li> Fill in the name as `Send To FlashDuty` , select the package type __HTTP callback __ , select the push method as `POST` , and fill in the integrated push address (obtained after saving the integration), as shown in the following figure:</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/PZqbJNifhVKQj9FQNUw3DmVq8JGPf0sug4nfwFxVEjQ.avif"><ol start="4"><li> Switch to __ __ , select type `JSON` , copy the message body and fill in the following information (when an alarm is actually generated, Blue Whale will render the variable content as Payload and push it to the target callback address):</li></ol><pre> `{{alarm.callback_message}}
-`</pre><ol start="5"><li> Save the package to complete creation.</li></ol></div>
+1. Log in to your Blue Whale Zhiyun desktop and navigate to the __Monitoring Platform__
+2. Proceed to the __Configuration - Processing Package__ page, click the __Add Package__ button to begin creating a new processing package
+3. Enter the name `Send To FlashDuty`, select __HTTP Callback__ as the package type, choose the `POST` method for notification, and fill in the integrated push address (which you will obtain after saving the integration), as illustrated below:
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/PZqbJNifhVKQj9FQNUw3DmVq8JGPf0sug4nfwFxVEjQ.avif" />
+
+4. Switch to the __Body__ section, choose the `JSON` type, and copy the following information into the message body (when an actual alert is triggered, Blue Whale will render the variable content as Payload and send it to the target callback address):
+
+```
+{{alarm.callback_message}}
+```
+
+5. Save the package to complete the creation process.
 
 #### Step 2: Edit Alarm Policy
 
-<div id="!"><ol><li>Enter the __ Configuration - Policy __ page, select an existing policy to edit, or create a new alarm policy;</li><li> Scroll down to the __ Alarm Processing __ section, select `Send To FlashDuty` processing package for all three scenarios, and turn off __ Defense Rules __ , as shown below:</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/yeCaYyAFIHIaZZL6z7_gTPHz-vjF6nCl5Yw8rv1t9SI.avif"><ol start="3"><li> Submit and save, complete;</li><li> For other alarms that you want to push to FlashDuty repeat the above steps.</li></ol></div>
+1. Access the __Configuration - Alarm Policy__ page, and either edit an existing policy or create a new one
+2. Scroll down to the __Alarm Handling__ section, choose the `Send To FlashDuty` processing package for all three scenarios, and disable the __Defense Rules__, as shown in the figure below:
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/yeCaYyAFIHIaZZL6z7_gTPHz-vjF6nCl5Yw8rv1t9SI.avif" />
+
+3. Submit the changes and save to complete
+4. For other alerts that you wish to push to FlashDuty, repeat the above steps.
 
 ## Status Comparison
-<div class="md-block">
+
+Mapping relationship between Blue Whale Zhiyun and FlashDuty alarm levels:
 
 | Blue Whale Zhiyun |  Flashduty  | state |
 | -------- | -------- | ---- |
 | Fatal     | Critical | serious |
 | Early Warning     | Warning  | warn |
 | remind     | Info     | remind |
-
-</div>

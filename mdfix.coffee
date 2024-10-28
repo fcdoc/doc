@@ -38,7 +38,14 @@ dump = (path, changed) =>
     if r
       li = r
 
-  new_md = li.join('\n').replace(/\n{3,}/g, "\n\n")
+  # new_md = li.join('\n').replace(/\n{3,}/g, "\n\n")
+  #
+  # new_md = new_md.split('<div class="md-block">')
+  # i = 0
+  # while ++i<new_md.length
+  #   new_md[i] = new_md[i].replace('</div>','')
+  #
+  # new_md = new_md.join('')
 
   if new_md != md
     write path, new_md

@@ -33,10 +33,19 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## In Baidu Cloud Monitoring BCM
-<div id="!"><ol><li>Log in to your Baidu Cloud console, retrieve **cloud monitoring** products, and enter the corresponding console</li><li> Baidu Cloud provides a variety of ways to configure alarm callbacks. For details, please refer to [the official documentation](/0) . The following only demonstrates **alarm management - Alarm policy** entry configuration method</li><li> Enter **the Alarm Management - Alarm Policy** page and choose to edit an existing alarm policy or create a new one.</li><li> In the **callback address** column of the alarm policy, fill in the integrated push address (fill in the integration name on the current page, and the address can be generated after saving)</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/YNQKnmj1FuILvVEkkDliHTFfRCgRUxWDDNsctXsp12Q.avif"><ol start="5"><li> Finish</li></ol></div>
+
+1. Log in to your Baidu Cloud console, retrieve **cloud monitoring** products, and enter the corresponding console
+2. Baidu Cloud provides a variety of ways to configure alarm callbacks. For details, please refer to [the official documentation](/0) . The following only demonstrates **alarm management - Alarm policy** entry configuration method
+3. Enter **the Alarm Management - Alarm Strategy** page and choose to edit an existing alarm strategy or create a new one.
+4. In the **callback address** column of the alarm policy, fill in the integrated push address (fill in the integration name on the current page, and the address can be generated after saving)
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/YNQKnmj1FuILvVEkkDliHTFfRCgRUxWDDNsctXsp12Q.avif" />
+
+5. Completion
 
 ## Status Comparison
-<div class="md-block">
+
+Baidu Cloud monitoring alarm level mapping to Flashduty:
 
 | BCM  |  Flashduty  | state |
 | ---- | -------- | ---- |
@@ -44,5 +53,3 @@ When you need to route alarms to different collaboration spaces based on the pay
 | Important | Critical | serious |
 | warn | Warning  | warn |
 | Notification | Info     | remind |
-
-</div>

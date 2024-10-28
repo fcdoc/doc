@@ -46,8 +46,6 @@ brief: 通过 webhook 的方式同步 Uptime Kuma 告警事件到快猫星云，
 
 **步骤 2：配置监控项**
 
-<div class="md-block">
-
 1. 点击 `Add New Monitor` 或编辑已有的监控项，按需完成监控配置；
 2. 如图，右侧 `Notifications` 部分启用上一步创建的通知方式；
 3. 如需设置标签，可以添加 `Tags`，注意仅同时存在 Key/Value 的标签才会推送到 FlashDuty；
@@ -55,10 +53,7 @@ brief: 通过 webhook 的方式同步 Uptime Kuma 告警事件到快猫星云，
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/MhOsvqHsYIku4nGsClITGQNGpNqg1ceKLBKd6xcN_P0.avif" />
 
-</div>
-
 ## 状态对照
-<div class="md-block">
 
 Uptime Kuma 到 Flashduty 告警等级映射关系：
 
@@ -67,5 +62,3 @@ Uptime Kuma 到 Flashduty 告警等级映射关系：
 | Critical     | Critical | 严重 |
 | Warning     | Warning  | 警告 |
 | Info     | Info     | 提醒 |
-
-</div>

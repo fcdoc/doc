@@ -38,8 +38,6 @@ Grafana V4~V8 版本默认开启 Legacy Alerting 功能，在 V9 之后默认开
 
 ### Legacy Alerting
 
-<div class="md-block">
-
 1. 打开您的 Grafana 控制台，选择 Alerting > Notification channels 页面
 2. 点击 Add Channel，打开配置 Channel 弹窗页面
 3. 配置名称，Type 选择 webhook，Url 填写集成的推送地址， Method 选择 POST，如下图所示：
@@ -49,11 +47,7 @@ Grafana V4~V8 版本默认开启 Legacy Alerting 功能，在 V9 之后默认开
 4. 保存，回到集成列表，等待产生告警后，如果展示了最新事件时间，说明配置成功且收到事件
 5. 完成
 
-</div>
-
 ### Grafana Alerting
-
-<div class="md-block">
 
 1. 打开您的 Grafana 控制台，选择 Alerting > Contact points 页面
 2. 点击 New contact point，打开配置弹窗页面
@@ -73,7 +67,6 @@ Grafana V4~V8 版本默认开启 Legacy Alerting 功能，在 V9 之后默认开
 7. 完成
 
 ## 状态对照
-<div class="md-block">
 
 Legacy Alerting 到 Flashduty 告警等级映射关系：
 
@@ -97,5 +90,3 @@ Grafana Alerting 到 Flashduty 告警等级映射关系：
 | unknown          | Info     | 提醒 |
 | unk              | Info     | 提醒 |
 | ok               | Ok       | 恢复 |
-
-</div>

@@ -38,11 +38,37 @@ Grafana versions V4 to V8 have the Legacy Alerting feature enabled by default, w
 
 ### Legacy Alerting
 
-<div id="!"><ol><li>Open your Grafana Console and select Alerting > Notification channels</li><li> Click Add Channel to open the configuration Channel pop-up page</li><li> Configure the name, Type select webhook , Url fill in the integrated push address, Method select POST , as shown in the figure below:</li></ol><img alt="drawing" id="#"><ol start="4"><li> Save, return to the integration list, and wait for the alarm to be generated. If the latest event time is displayed, the configuration is successful and the event is received.</li><li> Finish</li></ol></div>
+1. Open your Grafana console and navigate to Alerting > Notification channels
+2. Click Add Channel to launch the configuration pop-up page for the channel
+3. Enter a name, select webhook as the Type, input the integrated push address into the Url field, and choose POST for the Method, as illustrated in the figure below:
+
+<img src="https://fcdoc.github.io/img/zh/fQXBqKhIHlI8PUM_p94fy7gHI2Rktw8Q1GPxBBHQLFc.avif" alt="drawing" width="600"/>
+
+4. Save the settings, return to the integration list, and await the generation of an alert. If the latest event time is displayed, this indicates that the configuration is successful and the event has been received
+5. Completion
 
 ### Grafana Alerting
 
-<div id="!"><ol><li>Open your Grafana Console and select Alerting > Contact points</li><li> Click New contact point to open the configuration pop-up page</li><li> Configuration name, Type select webhook , Url fill in the integrated push address, Method select POST as shown in the figure below:</li></ol><img alt="drawing" id="#"><ol start="4"><li> Open the Notification policies , edit or add according to the situation policy and select contact point as the sending channel created in the previous step, as shown in the figure below:</li></ol><img alt="drawing" id="$"><ol start="5"><li> Save, return to the integration list, and wait for the alarm to be generated. If the latest event time is displayed, the configuration is successful and the event is received.</li><li> The default alarm level is warning If you need to customize it, you can configure the severity label on the alarm details page (for enumeration, please refer to the status comparison below). The specific operation is as shown in the figure below:</li></ol><img alt="drawing" id="("><ol start="7"><li> Finish</li></ol><h2> Status comparison</h2><div id="!"><p> Alarm level Legacy Alerting to Flashduty mapping relationship:</p>
+1. Open your Grafana console and go to Alerting > Contact points
+2. Click New contact point to open the configuration pop-up page
+3. Enter a name, choose webhook as the Type, fill in the integrated push address in the Url field, and select POST for the Method, as shown in the figure below:
+
+<img src="https://fcdoc.github.io/img/zh/aIJoRQ3-Liw2pzV9ocEPP8rmttmbl3NBmAQKvlSAvL4.avif" alt="drawing" width="600"/>
+
+4. Proceed to the Notification policies page, edit or add a policy as needed, and select the contact point created in the previous step as the notification channel, as depicted in the following figure:
+
+<img src="https://fcdoc.github.io/img/zh/aEkbMq5KAHvDZDVVoJI_tE9BQVeS1XbqvRkLWJCoRdk.avif" alt="drawing" width="600"/>
+
+5. Save the changes, return to the integration list, and wait for an alert to trigger. If the latest event time is shown, this confirms that the configuration is successful and the event has been received
+6. The default alert level is set to warning. If customization is required, configure the severity label on the alert details page (refer to the enumeration in the status comparison below for guidance). The specific steps are shown in the figure below:
+
+<img src="https://fcdoc.github.io/img/zh/QlEaNg9Wp-D2BxD6MAFJlJIGfWLS_Dl24XTrzj_L_TI.avif" alt="drawing" width="600"/>
+
+7. Completion
+
+## Status Comparison
+
+Mapping relationship between Legacy Alerting and Flashduty alert levels:
 
 | Legacy Alerting |  Flashduty  | state |
 | --------------- | -------- | ---- |
@@ -50,7 +76,9 @@ Grafana versions V4 to V8 have the Legacy Alerting feature enabled by default, w
 | no_data         | Critical | serious |
 | ok              | Ok       | Recovered |
 
-Grafana Alerting to Flashduty level mapping relationship:</p><p> The system extracts `severity` , `priority` and `level` in the alarm event tags in sequence, and the corresponding values will be used as Prometheus s own alarm level. If not extracted, the system will automatically set it Prometheus the alarm level is `warning` ).
+Mapping relationship between Grafana Alerting and Flashduty alert levels:
+
+The system sequentially extracts the `severity`, `priority`, and `level` tags from the alert event. The corresponding values will serve as Prometheus's native alert levels. If these tags are not found, the system will automatically set the Prometheus alert level to `warning`.
 
 | Grafana Alerting |  Flashduty  | state |
 | ---------------- | -------- | ---- |
@@ -62,5 +90,3 @@ Grafana Alerting to Flashduty level mapping relationship:</p><p> The system extr
 | unknown          | Info     | remind |
 | unk              | Info     | remind |
 | ok               | Ok       | Recovered |
-
-</div>

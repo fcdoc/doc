@@ -34,14 +34,40 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## In Tencent Cloud EventBridge
-<div id="!"><ol><li>Log in to your Tencent Cloud console and select the event bus product</li><li> Enter the event rules page, click the New button to start editing rules</li><li> Fill in the name as FlashDuty as shown in the figure below:</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/3xdEpRnxM31nV5t8REeGxRbhRhwfQpwFooG7q6L6JhA.avif"><ol start="4"><li> In the event matching part, you can select specific events through the form mode, or you can customize the following JSON content to match all events:</li></ol><pre> `{
+
+1. Log in to your Tencent Cloud console and select the Event Bus product
+2. Navigate to the Event Rules page, click the "Create" button to begin editing the rules
+3. Enter the name "FlashDuty" as shown in the following image:
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/3xdEpRnxM31nV5t8REeGxRbhRhwfQpwFooG7q6L6JhA.avif" />
+
+4. In the event matching section, you can choose specific events using the form mode, or customize the following JSON content to match all events:
+
+```
+{
 "source": [
 {
 "suffix": ".cloud.tencent"
 }
 ]
 }
-`</pre><p> The diagram is as follows:</p><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/pRBjDtOVtl4b6YmKAVF8EJ9RoOAIPGgt4m2hRWWaMzk.avif"><ol start="5"><li> Next, configure the event target, select "Message Push", "Universal Notification Template", "English", "Interface Callback" and "Custom webhook " respectively, webhook fill in the integrated push address for the address</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/ha120gZ2uvDk4brSB4_OqEoYRM751-TesVi4cmOYQ-0.avif"><ol start="6"><li> Click the Save button, return to the event set page, select an event set, click Send event, and test</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/gh3xRQXvARrh7BWDz_le-dLR-0TMS4vblvXZbSu7NkM.avif"><ol start="7"><li> Return to the integration list. If the latest event time is displayed, the configuration is successful and the event is received.</li><li> Finish</li></ol></div>
+```
+
+The illustration is as follows:
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/pRBjDtOVtl4b6YmKAVF8EJ9RoOAIPGgt4m2hRWWaMzk.avif" />
+
+5. Next, configure the event targets by selecting "Message Push", "Universal Notification Template", "English", "Interface Callback", and "Custom Webhook". Fill in the webhook address with the integrated push address
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/ha120gZ2uvDk4brSB4_OqEoYRM751-TesVi4cmOYQ-0.avif" />
+
+6. Click the "Save" button, go back to the Event Sets page, select an event set, click "Send Event" to perform a test
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/gh3xRQXvARrh7BWDz_le-dLR-0TMS4vblvXZbSu7NkM.avif" />
+
+7. Return to the integration list. If the latest event time is displayed, it indicates that the configuration is successful and the event has been received
+8. Completion
 
 ## Status Comparison
-<div id="!"><p>All events in the Tencent Cloud event bus correspond to "warning ( warning )" level alarms Flashduty</p></div>
+
+All events on the Tencent Cloud event bus correspond to Flashduty "warning" level alarms.

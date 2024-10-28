@@ -38,14 +38,33 @@ Choose either of the following two methods.
 
 **Method 1: Configure by Rule**
 
-<div id="!"><ol><li>Log in to your Alibaba Cloud console and select cloud monitoring products</li><li> Enter the Alarm Service -> Alarm Rules page, select a rule, and click the Modify button to start editing the rule content.</li><li> As shown in the figure, fill in the callback address under advanced settings as the integrated push address.</li><li> Click the Confirm button to submit the update</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/n5-x2vmAcZT9W1drSq44Cz74Tmi7RGcJCjr2w_n3Vls.avif"><ol start="5"><li> Repeat the above steps for all alert rules that expect synchronization events</li><li> Return to the integration list. If the latest event time is displayed, the configuration is successful and the event is received.</li><li> Finish</li></ol></div>
+1. Log in to your Alibaba Cloud console and select the Cloud Monitoring service
+2. Navigate to Alarm Service -> Alarm Rules, select a rule, click the "Modify" button to begin editing the rule content
+3. As illustrated, enter the integrated push address in the "Advanced Settings" as the callback URL
+4. Click the "Confirm" button to submit the update
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/n5-x2vmAcZT9W1drSq44Cz74Tmi7RGcJCjr2w_n3Vls.avif" />
+
+5. Repeat the above steps for all alert rules that you wish to synchronize events for
+6. Return to the integration list; if the latest event time is displayed, it indicates successful configuration and event reception
+7. Completed
 
 **Method 2: Configure by Contact**
 
-<div id="!"><ol><li>Log in to your Alibaba Cloud console and select cloud monitoring products</li><li> Enter the alarm service -> Alarm contact page and choose to modify a contact.</li><li> As shown in the picture, fill in the integrated push address under Webhook</li><li> Click the Confirm button to submit the update</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/tJbcFhqxnFI_YxB1_byBDX_PODjjD-DNSFzTXoCKZFM.avif"><ol start="5"><li> Repeat the above steps for all contacts for which sync events are expected</li><li> Return to the integration list. If the latest event time is displayed, the configuration is successful and the event is received.</li><li> Finish</li></ol></div>
+1. Log in to your Alibaba Cloud console and select the Cloud Monitoring service
+2. Go to Alarm Service -> Alarm Contacts, and select a contact to modify
+3. As shown, input the integrated push address under the "Webhook" section
+4. Click the "Confirm" button to submit the update
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/tJbcFhqxnFI_YxB1_byBDX_PODjjD-DNSFzTXoCKZFM.avif" />
+
+5. Repeat the above steps for all contacts that you want to synchronize events with
+6. Return to the integration list; if the latest event time is displayed, it indicates successful configuration and event reception
+7. Completed
 
 ## Status Comparison
-<div class="md-block">
+
+Mapping relationship between Alibaba Cloud Cloud Monitoring and Flashduty alarm levels:
 
 | Alibaba Cloud Monitoring |  Flashduty  | state |
 | ------------ | -------- | ---- |
@@ -53,5 +72,3 @@ Choose either of the following two methods.
 | WARN         | Warning  | warn |
 | INFO         | Info     | remind |
 | NODATA       | Info     | remind |
-
-</div>

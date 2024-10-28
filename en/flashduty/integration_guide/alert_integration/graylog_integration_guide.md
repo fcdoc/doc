@@ -34,16 +34,44 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## In Graylog
-<div id="!"><h2>Graylog Alarm push configuration</h2><h3> Step 1: Configure alarm channel</h3><ol><li> Login to Graylog .</li><li> Find Alerts in the menu and select Notifications .</li><li> created Create Notification .</li><li> Enter Title and Description .</li><li> Notification Type Select **HTTP Notification** , as shown below.</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/eWI2dwAH-u6NiXImb2P94U6PLQwwqJ874Z-9dTEnG8U.avif"><ol start="6"><li> Input FlashDuty The obtained URL (you need to whiten URL for the first input).</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/lkx7VzY3ZZqF9K-qUu469azcTPzOeOevMdLD1b5Q9cU.avif"><ol start="7"><li> Click Save to save the whitened URL</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/99FRplZHwxawFUPjKweW08evg86CU7O26tKNkjuwANk.avif"><ol start="8"><li> After saving, commit Create .</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/LWGvCpNBZ1fE2ILfxZ9-COnwvCXk806KviB6KQ_B4fg.avif"><h3> Step 2: Use FlashDuty alarm channels in alarm events</h3><ol><li> Create or edit an existing Event Definition .</li><li> Other alarm configurations are omitted here (configure alarm conditions according to business requirements).</li><li> Configure channels in Notifications .</li><li> Add Notifition channel FlashDuty .</li><li> Click Done .</li><li> Just complete the next step.</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/FBEZ5WZwmS1KOXauhVJ_PCxKzhnwgCfeWVriVNKUqsA.avif"></div>
+
+## 1. Graylog Alert Push Configuration
+
+### Step 1: Configure the Alert Notification Channel
+1. Login to the Graylog console.
+2. Locate Alerts in the menu and select Notifications.
+3. Create a new Notification.
+4. Enter the Title and Description.
+5. Select **HTTP Notification** for the Notification Type, as shown in the figure below.
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/eWI2dwAH-u6NiXImb2P94U6PLQwwqJ874Z-9dTEnG8U.avif" />
+
+6. Enter the URL obtained from FlashDuty (the URL needs to be whitelisted upon first entry).
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/lkx7VzY3ZZqF9K-qUu469azcTPzOeOevMdLD1b5Q9cU.avif" />
+
+7. Click Save to whitelist the URL
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/99FRplZHwxawFUPjKweW08evg86CU7O26tKNkjuwANk.avif" />
+
+8. After saving, submit the creation.
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/LWGvCpNBZ1fE2ILfxZ9-COnwvCXk806KviB6KQ_B4fg.avif" />
+
+### Step 2: Utilize the FlashDuty Alert Channel in Alert Events
+1. Create or edit an existing Event Definition.
+2. Other alert configurations are omitted here (configure alert conditions according to business needs).
+3. Configure the channel in Notifications.
+4. Select the FlashDuty channel under Add Notification.
+5. Click Done.
+6. Proceed to the next step to complete the process.
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/FBEZ5WZwmS1KOXauhVJ_PCxKzhnwgCfeWVriVNKUqsA.avif" />
 
 ## Status Comparison
-
-<div class="md-block">
 
 |Graylog|Kuaimao Nebula|state|
 |---|---|---|
 |3|Critical|serious|
 |2|Warning|warn|
 |1|Info|remind|
-
-</div>

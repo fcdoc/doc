@@ -36,29 +36,55 @@ When you need to route alarms to different collaboration spaces based on the pay
 ## In Alibaba Cloud SLS
 **Step 1: Configure Webhook**
 
-<div id="!"><ol><li>Log in to your Alibaba Cloud console, select Log Service SLS product, and select a Project</li><li> Enter the **Alarm** -> **Alarm Management** -> **Webhook Integration** page, click the **New** button to start editing.</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/do6Aljc-9776gTE_GTxT9gsVkAEejjOPvjVOZjEMs8U.avif"><ol start="3"><li> As shown in the figure, __ Type __ select "General Webhook ", __ method __ Select POST , __ request address __ fill in the integrated push address (obtained after saving)</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/l7QslDgInVpUwfNHW6GyVdSgdLrHiblCHY8-Zq1YR4M.avif"><ol start="4"><li> Click __ Confirm __ button to submit and save</li></ol></div>
+1. Log in to your Alibaba Cloud console, and select the Log Service SLS product. Choose a Project
+2. Enter **the Alarm** -> **Alarm Management** -> **Webhook Integration** page, click the **New** button to start editing
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/do6Aljc-9776gTE_GTxT9gsVkAEejjOPvjVOZjEMs8U.avif" />
+
+3. As shown in the figure, __ Type __ select "General Webhook ", __ Request method __ select POST , __ Request address __ fill in the integrated push address (obtained after saving)
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/l7QslDgInVpUwfNHW6GyVdSgdLrHiblCHY8-Zq1YR4M.avif" />
+
+4. Click __ Confirm __ button to submit and save
 
 **Step 2: Configure Content Template**
 
-<div id="!"><ol><li>Switch to the __ Content Template __ page, click the __ Add __ button to start editing</li><li> Enter __Webhook- Custom __ configuration items, __ Sending method __ select "Send one by one", __ content __ Copy the following content:</li></ol><pre> `{{ alert
-`</pre> | to_json}}</p><pre> `
-<img alt="drawing" id="!">
+1. Switch to the __ Content Template __ page, click the __ Add __ button to start editing
+2. Enter __Webhook- Customized __ items, __ Sending method __ select "Send one by one", __ Sending content __ Copy the following content:
 
-3. 点击__确认__按钮，提交保存
+```
+{{ alert | to_json}}
+```
 
-</div>
-`
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/iqZZ9Gy8c1s1h7ZnI8NaZQRxTLcNnoO5BLGRl3KUU5Q.avif" />
+
+3. Click __ Confirm __ button to submit and save
 
 **Step 3: Configure Action Strategy**
 
-<div id="!"><ol><li>Switch to the __ Action Strategy __ page, click the __ Add __ button to start editing</li><li> Enter __ the first action list __ configuration item, click to add a __ action group __ node.</li><li> __ __ Select "General Webhook ", __ select Webhook__ and __ content template __ use the object created previously, __ send period __ select "any"</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/Dl-kqzyg53lz-hqYR8rZw8wC-cVpK4103tdtDLESOzU.avif"><ol start="4"><li> Click __ to end __ to complete the creation of the first action list</li><li> Click __ Confirm __ button to submit and save</li></ol></div>
+1. Switch to the __ Action Strategy __ page, click the __ Add __ button to start editing
+2. Enter the __ First Action List __ configuration item and click to add an __ Action Group __ node.
+3. __ Channel __ select "General Webhook ", __ select Webhook__ and __ Content Template __ use the object created previously, __ send period __ select "Any"
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/Dl-kqzyg53lz-hqYR8rZw8wC-cVpK4103tdtDLESOzU.avif" />
+
+4. Click __ End __ to complete the creation of the first action list
+5. Click __ Confirm __ button to submit and save
 
 **Step 4: Configure Monitoring Rules**
 
-<div id="!"><ol><li>Switch to the __ Rules / Transaction __ page, click the __ New Alarm __ button or select an existing alarm to update and edit</li><li> Enter the __ Alarm Rules __ Edit page, **Alarm Policy** .</li><li> __ Alarm strategy __ select "Normal mode", __ strategy __ use the object created previously</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/TQ-mllhuKcn6FKPy11GIPpGB8GvwiJ17ZSraCR-IPCg.avif"><ol start="4"><li> Click the __ OK __ button to submit and save</li><li> For all other rules, repeat the above steps to push all alarms to FlashDuty</li></ol></div>
+1. Switch to the __ Rules / Transaction __ page, click the __ New Alarm __ button or select an existing alarm to update and edit
+2. Enter __ Alarm Rules __ edit page, **Alarm Policy** .
+3. __ Alarm strategy __ "Normal mode", __ Action strategy __ use the object created previously
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/TQ-mllhuKcn6FKPy11GIPpGB8GvwiJ17ZSraCR-IPCg.avif" />
+
+4. Click the __ OK __ button to submit and save
+5. Repeat the above steps for all other rules to ensure all alerts are pushed to FlashDuty
 
 ## Status Comparison
-<div id="!"><p>Alibaba Cloud SLS Monitors the Flashduty level mapping relationship:</p>
+
+Alibaba Cloud SLS monitors the mapping relationship between FlashDuty alarm levels:
 
 | Alibaba Cloud SLS Monitoring |  Flashduty  | state |
 | --------------- | -------- | ---- |
@@ -67,5 +93,3 @@ When you need to route alarms to different collaboration spaces based on the pay
 | 6               | Warning  | warn |
 | 4               | Warning  | warn |
 | 2               | Info     | remind |
-
-</div>

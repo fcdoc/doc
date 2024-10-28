@@ -34,7 +34,6 @@ brief: 通过 webhook 的方式同步 Influxdata 告警事件到快猫星云，�
     5. 完成。
 
 ## 在 Influxdata
-<div class="md-block">
 
 1. 登录您的 Influxdata 控制台，进去 Alerting > Alert Rules 页面
 2. 点击需要同步事件的告警规则，进入 Alert Rule Builder 页面，开始编辑规则
@@ -46,7 +45,6 @@ brief: 通过 webhook 的方式同步 Influxdata 告警事件到快猫星云，�
 5. 完成
 
 ## 状态对照
-<div class="md-block">
 
 Influxdata 告警事件到 Flashduty 告警等级映射关系：
 
@@ -55,5 +53,3 @@ Influxdata 告警事件到 Flashduty 告警等级映射关系：
 | CRITICAL   | Critical | 严重 |
 | WARNING    | Warning  | 警告 |
 | INFO       | Info     | 提醒 |
-
-</div>

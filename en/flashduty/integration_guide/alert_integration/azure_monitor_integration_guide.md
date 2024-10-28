@@ -36,10 +36,26 @@ When you need to route alarms to different collaboration spaces based on the pay
 ## The process is now complete
 **Step 1: Configure Webhook**
 
-<div id="!"><ol><li>Log in to your Azure portal and select Monitor ;</li><li> Enter page `Alerts -> Action groups` , click the Create button to start editing;</li><li> As shown in the figure, option `Actions` chooses `Action type` as `Webhook` ;</li><li> Fill in the name, copy and write the `URI` parts into the integrated push address, pay attention to the `Enable` general alert structure;</li><li> Click the Create button to submit and save.</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/4gzLFt9GChD5e3f_GYsfB0c4VwgFWvEtl4oBrNyvKzs.avif"><p> **Step 2: Configuration Alert rule**</p><ol><li> Enter page `Alerts -> Alert rules` , click Create or select an existing policy to edit;</li><li> As shown in the figure below, on page `Actions` , select the created one Action group ;</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/b-vF-yP22lZacuG_Q9t4J7xx0uPFYqYcILv3Fc3vI3k.avif"><ol start="3"><li> Submit and save, waiting for the alarm to be triggered.</li></ol></div>
+1. Log in to your Azure Portal and select the Monitor service;
+2. Proceed to the `Alerts -> Action groups` page, click the Create button to begin editing;
+3. As illustrated, under the `Actions` section, choose `Action type` as `Webhook`;
+4. Enter a name, then copy and paste the integrated push address into the `URI` field, ensuring the general alert structure is `Enabled`;
+5. Click the Create button to submit and save your changes.
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/4gzLFt9GChD5e3f_GYsfB0c4VwgFWvEtl4oBrNyvKzs.avif" />
+
+**Step 2: Configure Alert Rule**
+
+1. Access the `Alerts -> Alert rules` page, click Create or select an existing policy to edit;
+2. As shown in the figure below, in the `Actions` tab, select the Action group you have created;
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/b-vF-yP22lZacuG_Q9t4J7xx0uPFYqYcILv3Fc3vI3k.avif" />
+
+3. Submit and save the settings, then wait for the alert to be triggered.
 
 ## Status Comparison
-<div class="md-block">
+
+A mapping relationship between Azure Monitor and Flashduty alert levels:
 
 | Azure Monitor  |  Flashduty  | state |
 | ------------ | -------- | ---- |
@@ -48,5 +64,3 @@ When you need to route alarms to different collaboration spaces based on the pay
 | Sev2     | Warning  | warn |
 | Sev3     | Info     | remind |
 | Sev4     | Info     | remind |
-
-</div>

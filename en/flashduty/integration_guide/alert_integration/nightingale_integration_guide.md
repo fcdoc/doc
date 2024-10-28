@@ -57,18 +57,53 @@ Choose one of the two configuration methods.
 
 #### Method 1: Configure by Policy
 
-<div id="!"><p>Select alarm rules in batches and configure them webhook .</p><ol><li> Log in to your n9e , select Alarm Management > Alarm Rules, and enter the alarm rule list page</li><li> Select the alarm rules you want to import in batches and select Batch Update Alert Rules in the upper right corner.</li><li> Select the "Callback Address" field in the pop-up window and fill in the integrated push address in the new input box, as shown in the figure below:</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/UjmNaNKJ88MKM2yEVC51LPmB0PoC2jve-WRDdLKvsjk.avif"><ol start="4"><li> Return to the integration list. If the latest event time is displayed, the configuration is successful and the event is received.</li><li> Finish</li></ol></div>
+Select and configure webhooks for alert rules in bulk.
+
+1. Login to your n9e console, navigate to Alarm Management > Alarm Rules, and access the alarm rule list page
+2. Select the desired alert rules in bulk, then choose "Batch Update Alert Rules" from the upper right corner
+3. In the popup window, select the "Callback Address" field and enter the integrated push address in the new input box, as shown in the figure below:
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/UjmNaNKJ88MKM2yEVC51LPmB0PoC2jve-WRDdLKvsjk.avif" />
+
+4. Return to the integration list. If the latest event time is displayed, it indicates that the configuration is successful and events are being received
+5. Completed
 
 #### Method 2: Global Configuration
 
-<div id="!">Nightingale supports configuring global webhook in pages and configuration files to push all alarm events. You can choose one of the following two methods.<h5> V6 and above version</h5><ol><li> Log into your n9e console</li><li> Enter __ System Configuration - Notification Settings - Callback Address __ page</li><li> As shown in the figure below, enable a new one webhook and fill in the integrated push address in part `URL`</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/KlaBAhQQ7VXvE2gal3qgIgbV0nuXhUjcu7ERu8Tg948.avif"><ol start="4"><li> Finish</li></ol><h5> V5.4 ~ 5.15</h5><ol><li> Log into your n9e server instance</li><li> Find and open the configuration file, usually etc/server.conf</li><li> Change the Alerting configuration part and write the Webhook configuration as follows</li></ol><pre> <code class="language-receiver">[Alerting.Webhook]
+Nightingale allows configuration of global webhook addresses in both the interface and configuration files to push all alert events. Choose either of the following two methods.
+
+##### V6 and Above
+
+1. Login to your n9e console
+2. Enter the __System Configuration - Notification Settings - Callback Address__ page
+3. As shown in the figure below, enable a new webhook and fill in the integrated push address in the `URL` field
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/KlaBAhQQ7VXvE2gal3qgIgbV0nuXhUjcu7ERu8Tg948.avif" />
+
+4. Completed
+
+##### V5.4 ~ 5.15
+
+1. Login to your n9e server instance
+2. Locate and open the configuration file, typically found at etc/server.conf
+3. Modify the Alerting configuration section by adding the Webhook configuration as follows:
+
+```receiver config
+[Alerting.Webhook]
 Enable = true
 Url = "{api_host}/event/push/alert/n9e?integration_key=$integration_key"
 BasicAuthUser = ""
 BasicAuthPass = ""
 Timeout = "5s"
 Headers = ["Content-Type", "application/json", "X-From", "N9E"]
-</code></pre><p> You need to replace the corresponding parameter value of Url with the integrated push address.</p><ol start="4"><li> Save configuration file</li><li> Restart n9e server to make the configuration take effect</li><li> Return to the integration list. If the latest event time is displayed, the configuration is successful and the event is received.</li><li> Finish</li></ol></div>
+```
+
+You are required to substitute the parameter value corresponding to the URL with the integrated push endpoint.
+
+4. Save the configuration file
+5. Restart the n9e server to activate the changes
+6. Return to the integration list. If the latest event time is displayed, it indicates that the configuration is successful and events are being received
+7. Completed
 
 ## Severity Level Mapping
 

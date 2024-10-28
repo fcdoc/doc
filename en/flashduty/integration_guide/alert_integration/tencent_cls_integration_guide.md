@@ -37,15 +37,42 @@ When you need to route alarms to different collaboration spaces based on the pay
 
 **Step 1: Configure Notification Channel Group**
 
-<div id="!"><ol><li>Log in to your Tencent Cloud console, select the Log Service CLS product, and enter Monitoring Alarm - Notification Channel Group</li><li> Click **New** to start creating a new</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/9TVvjInBRsJOGHYptzIJmMgCaYUTRTohbSwENzk9_bg.avif"><ol start="3"><li><p> As shown in the figure, **name** fill in the specific channel group name, __ channel type __ select "custom interface callback", **callback address** fill in the integrated push address, **request method** select POST</p></li><li><p> Click **OK** to save and **add** multiple channels.</p></li></ol></div>
+1. Log in to your Tencent Cloud console, select the Log Service CLS product, and navigate to Monitoring Alerts - Notification Channel Group
+2. Click **New** to start a new
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/9TVvjInBRsJOGHYptzIJmMgCaYUTRTohbSwENzk9_bg.avif" />
+
+3. As shown in the figure, **name** fill in the specific channel group name __ channel type __ select "custom interface callback", **callback address** fill in the integrated push address, **request method** select POST
+
+4. Click **OK** to save and **add** multiple channels.
 
 **Step 2: Configure Alarm Policy**
 
-<div id="!"><ol><li>Log in to your Tencent Cloud console, select the Log Service CLS product, and enter Monitoring Alarm - Alarm Policy</li><li> Click **New** to start a new</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/FCfCmqlCwhjze8nSa88mkVt3nUX1myHyDFygJd8_lIc.avif"><ol start="3"><li><p> As shown in the figure, __ Alarm name __ fill in the specific alarm name, select the specific log topic for the log topic</p></li><li><p> **Execution statement:** Fill in the specific query statement, select the time range for the query time range, click preview to view the execution results, and enter the specific trigger condition for the trigger condition.</p></li><li><p> **Alarm levels** are divided into emergency, alarm and reminder. The program is selected according to the severity of the alarm, and the execution cycle is selected according to needs.</p></li><li><p> **Multi-dimensional analysis** , when an alarm is triggered, additional retrieval and analysis can be performed on the original log, and the results are appended to the alarm notification to assist in locating the cause of the alarm. Multidimensional analysis will not affect alarm triggering conditions.</p></li><li><p> Alarm notifications, **notification channel groups** , can be associated with specific channel groups</p></li></ol></div>
+1. Log in to your Tencent Cloud console, select the Log Service CLS product, and navigate to Monitoring Alerts - Alert Policy
+2. Click **New** to start a new
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/FCfCmqlCwhjze8nSa88mkVt3nUX1myHyDFygJd8_lIc.avif" />
+
+3. As shown in the figure, __ Alarm name __ fill in the specific alarm name, and select the specific log topic for the log topic
+
+4. **Execution statement:** Fill in the specific query statement, select the time range for the query time range, click preview to view the execution results, and enter the specific trigger condition for the trigger condition.
+
+5. **Alarm levels** are divided into emergency, alarm and reminder. The program is selected according to the severity of the alarm, and the execution cycle is selected according to needs.
+
+6. **Multi-dimensional analysis** , when an alarm is triggered, additional retrieval and analysis can be performed on the original log, and the results are appended to the alarm notification to assist in locating the cause of the alarm. Multidimensional analysis will not affect alarm triggering conditions.
+
+7. Alarm notifications, **notification channel groups** , can be associated with specific channel groups
 
 **Step 3: Configure Custom Callback**
 
-<div id="!"><ol><li><p>After associating the channel group, you can see the callback content configuration</p></li><li><p> Request header, you can add specific requests headers</p></li><li><p> Request content, return specific request data format, refer to:</p></li></ol><pre> <code class="language-json">{
+1. After associating the channel group, you will be able to view the callback content configuration
+
+2. Request headers, you can add specific request headers
+
+3. Request content, return specific request data format, refer to:
+
+```json
+{
 "uin": "{{escape .UIN}}",
 "nickname": "{{escape .Nickname}}",
 "region": "{{escape .Region}}",
@@ -74,13 +101,14 @@ When you need to route alarms to different collaboration spaces based on the pay
 "query_log": {{.QueryLog}},
 "analysis_result": {{.AnalysisResult}}
 }
-</code></pre></div>
+```
 
 ## Status Comparison
-9	<div class="md-block">
+
+Tencent Cloud CLS Monitoring Alert Level to Flashduty Mapping Relationship:
 
 | Tencent Cloud CLS Monitoring |  Flashduty    | state
 | ------------- | --------- | --- |
 | Info          |  Info     | remind
 | Warn          |  Warning  | warn
-| Critical      |  Critical | urgent</p> </
+| Critical      |  Critical | Urgent

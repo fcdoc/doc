@@ -42,8 +42,6 @@ brief: >-
 
 #### 步骤 1：定义 Flashduty  media type
 
-<div class="md-block">
-
 1. media type 是 Zabbix 中用于发送通知和告警的传输通道。进入终端，通过以下命令，下载完整配置
 
 ```
@@ -65,11 +63,7 @@ wget https://download.flashcat.cloud/flashduty/integration/zabbix/zbx_mediatype_
 
 4. 点击 Update，保存配置
 
-</div>
-
 #### 步骤 2：关联 media type 至 user
-
-<div class="md-block">
 
 media type 必须关联至某个 user 才能发送事件。user 至少拥有对 host 的 read 权限。建议直接关联到 Admin 用户。以 Admin 用户为例：
 
@@ -84,11 +78,7 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 2. 点击 Add 按钮，退出添加 media 窗口
 3. 点击 Update 按钮，退出编辑 user 页面
 
-</div>
-
 #### 步骤 3：创建 action
-
-<div class="md-block">
 
 发送通知是 Zabbix 中动作（actions）执行的操作之一。因此，为了建立一个通知，登录 Zabbix 控制台，选择 `Configuration > Actions`，然后：
 
@@ -108,11 +98,7 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/eBJqunprfGJYQKJ843YcyuGkeEtykZmW2n9Wme-xqTc.avif" />
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/EPSOBfH6Q2QrVkBSqKBj5rEJxsrnm7VD2gaoczsAl00.avif" />
 
-</div>
-
 #### 步骤 4：发送事件到 Flashduty
-
-<div class="md-block">
 
 登录 Zabbix 控制台，选择 `Monitoring > Problems`，查看最新的告警列表。
 
@@ -124,15 +110,11 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 3. 回到集成列表，如果展示了最新事件时间，说明配置成功且收到事件
 4. 完成
 
-</div>
-
 <span id="v4"></span>
 
 ### 3.x~4.x 版本
 
 #### 步骤 1：定义 Flashduty  media type
-
-<div class="md-block">
 
 1. 登录 Zabbix 控制台，选择 `Administration > Media Types`，点击右上角 `Create media type` 按钮，进入编辑页面
 2. 在编辑页面，Type 选择`Script`，Parameter 依次填写以下内容（不要调整顺序，没有值的也要留空，脚本按顺序获取参数值）：
@@ -165,11 +147,7 @@ chmod +x send-to-flashduty.sh
 
 6. 注意，__脚本中使用了 curl 和 jq 命令__，确保这个 Zabbix server 进程可以找到并执行这两个命令，如果没有您需要根据情况安装
 
-</div>
-
 #### 步骤 2：关联 media type 至 user
-
-<div class="md-block">
 
 media type 必须关联至某个 user 才能发送事件。user 至少拥有对 host 的 read 权限。建议直接关联到 Admin 用户。以 Admin 用户为例：
 
@@ -184,11 +162,7 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 2. 点击 Add 按钮，退出添加 media 窗口
 3. 点击 Update 按钮，退出编辑 user 页面
 
-</div>
-
 #### 步骤 3：创建 action
-
-<div class="md-block">
 
 发送通知是 Zabbix 中动作（actions）执行的操作之一。因此，为了建立一个通知，登录 Zabbix 控制台，选择 `Configuration > Actions`，然后：
 
@@ -221,11 +195,7 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/uLSWCypOMpiVbmkFV38ApSvAF3wiRw6ci5Gu1d_SbWk.avif" />
 
-</div>
-
 #### 步骤 4：发送事件到 Flashduty
-
-<div class="md-block">
 
 登录 Zabbix 控制台，选择 Monitoring > Problems，查看最新的告警列表。
 
@@ -237,10 +207,7 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 3. 回到集成列表，如果展示了最新事件时间，说明配置成功且收到事件
 4. 完成
 
-</div>
-
 ## 状态对照
-<div class="md-block">
 
 Zabbix 到 Flashduty 告警等级映射关系：
 
@@ -252,5 +219,3 @@ Zabbix 到 Flashduty 告警等级映射关系：
 | Warning        | Warning  | 警告 |
 | Information    | Info     | 提醒 |
 | Not classified | Info     | 提醒 |
-
-</div>

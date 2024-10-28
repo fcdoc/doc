@@ -35,7 +35,20 @@ When you need to route alarms to different collaboration spaces based on the pay
 
 ## At OceanBase
 
-<div id="!"><h2>OceanBase Alarm push configuration</h2><h3> Step 1: Configure alarm channel</h3><ol><li> Log in to your OceanBase and select Alarm Center.</li><li> Enter **the alarm channel** and click the **New Channel** button to start creating a new channel.</li><li> Select **custom script** for channel type.</li><li> The basic configuration content is as shown in the figure below:</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/IQVsfNMP7URm0FvPQlnMRB7JFUTPrgKlUw96ylc3Udc.avif"><ol start="5"><li> Copy the following script content in the configuration channel, and **please add the integration_key parameter in the script with the value FlashDuty in the push address integration_key** .</li></ol><pre> `#!/usr/bin/env bash
+## 1. OceanBase Alarm Notification Configuration
+
+### Step 1: Configure the Alarm Notification Channel
+1. Login to your OceanBase console and navigate to the Alarm Center.
+2. Access the **Alarm Channels** section, click the **Create New Channel** button to begin setting up a new channel.
+3. Select **Custom Script** as the channel type.
+4. The basic configuration details are as shown in the following image:
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/IQVsfNMP7URm0FvPQlnMRB7JFUTPrgKlUw96ylc3Udc.avif" />
+
+5. In the channel configuration, copy the following script content, and **please supplement the integration_key parameter in the script with the value of integration_key from the FlashDuty push address**.
+
+```
+#!/usr/bin/env bash
 
 function sendToFlashDuty() {
 URL="${address}/event/push/alert/standard?integration_key=${integration_key}"
@@ -67,54 +80,91 @@ curl -s -X POST ${URL} -H 'Content-Type: application/json' -d '{
 return $?
 }
 
-alarm_name=$(echo ${alarm_name}
-`</pre> | sed  "s/ /_/g")
-alarm_target=$(echo ${alarm_target} | sed  "s/ /_/g" )</p><p> # the alarm update time as the alarm generation time timestamp = $ ( TZ = UTC date -d "${alarm_updated_at}" + %s)</p><p> #OceanBase The status and level of the alarm notification are in Chinese, so turn to , first Md5 and then make a judgment levelMd5 = $ ( echo ${alarm_level} | md5sum | awk '{print$1}')
-statusMd5=$(echo ${alarm_status} | md5sum | awk ' {print$1} ')</p><p> # status Md5
-active = "048d106318302b41372b4292b5696ad4"
-Inactive = "bf7da164d431439fe9668fbc964110c4"</p><p> # Alarm level Md5
-down = "2e1558b0a152fae2dd15884561b1508d"
-critical = "59b9b38574ca2ee4f5e264b56f49a83f"
-alert = "723931b03a5d1cec59eac40cf0703580"
-caution = "abf4d55ba8926eff32cb44065e634ed3"
-info = "6aae3f4254789d72aa0cc8ed55b8f11f"</p><p> address = " [https://api.flashcat.cloud](https://api.flashcat.cloud) "
-integration_key = ""</p><p> # Convert the alarm level definition of OceanBase if [[ ${statusMd5} == ${Inactive} ]] ;then
-alert_level = "Ok"
-timestamp = $ ( TZ = UTC date -d "${alarm_resolved_at}" + %s) elif [[ ${statusMd5} == "${active}" ]] ;then
+alarm_name=$(echo ${alarm_name} | sed  "s/ /_/g")
+alarm_target=$(echo ${alarm_target} | sed  "s/ /_/g")
+
+#使用告警更新时间作为告警产生时间
+timestamp=$(TZ=UTC date -d "${alarm_updated_at}" +%s)
+
+#OceanBase告警通知的状态和级别是中文，所以先转Md5，再做判断
+levelMd5=$(echo ${alarm_level} | md5sum | awk '{print$1}')
+statusMd5=$(echo ${alarm_status} | md5sum | awk '{print$1}')
+
+#状态Md5
+active="048d106318302b41372b4292b5696ad4"
+Inactive="bf7da164d431439fe9668fbc964110c4"
+
+#告警级别Md5
+down="2e1558b0a152fae2dd15884561b1508d"
+critical="59b9b38574ca2ee4f5e264b56f49a83f"
+alert="723931b03a5d1cec59eac40cf0703580"
+caution="abf4d55ba8926eff32cb44065e634ed3"
+info="6aae3f4254789d72aa0cc8ed55b8f11f"
+
+address="https://api.flashcat.cloud"
+integration_key=""
+
+#将OceanBase的告警级别定义做转换
+if [[ ${statusMd5} == ${Inactive} ]];then
+alert_level="Ok"
+timestamp=$(TZ=UTC date -d "${alarm_resolved_at}" +%s)
+elif [[ ${statusMd5} == "${active}" ]];then
 if [[ ${levelMd5} == ${down} || ${levelMd5} == ${critical} ]];then
 alert_level="Critical"
 elif [[ ${levelMd5} == ${alert} ]];then
 alert_level="Warning"
-elif [[ ${levelMd5} == ${caution}  ||  ${levelMd5} == ${info} ]] ;then
-alert_level = "Info"
+elif [[ ${levelMd5} == ${caution}  ||  ${levelMd5} == ${info} ]];then
+alert_level="Info"
 fi
-fi</p><p> # Notification will be sent only when the status is in alarm or alarm is restored. No notification will be sent if the status is blocked or suppressed if [[ ${statusMd5} == ${active} || ${statusMd5} == ${Inactive} ]] ;then
+fi
+
+#只有状态是告警中或恢复告警才发通知，屏蔽或抑制的不发通知
+if [[ ${statusMd5} == ${active} || ${statusMd5} == ${Inactive} ]];then
 sendToFlashDuty
-fi</p><pre> `
-6. Response 校验信息填写 {} 即可。
-7. 消息配置中的告警消息格式选择 Markdown。
-8. 告警消息模板 **选择简体中文**，并填写以下内容并提交。
+fi
+```
 
-`</pre><p> OCP notification - Single alarm</p><ul><li> Alert ID : ${alarm_id}</li><li> Name: ${alarm_name}</li><li> Level: ${alarm_level}</li><li> Alarm objects: ${alarm_target}</li><li> Services: ${service}</li><li> Overview: ${alarm_summary}</li><li> Generation time: ${alarm_active_at}</li><li> Update time: ${alarm_updated_at}</li><li> Recovery time: ${alarm_resolved_at}</li><li> Details: ${alarm_description}</li><li> Status: ${alarm_status}</li><li> Alarm type: ${alarm_type}</li><li> Alarm threshold: ${alarm_threshold}</li><li> Cluster group: ${ob_cluster_group}</li><li> Cluster: ${ob_cluster}</li><li> Host: ${host_ip}</li><li> Application cluster: ${app_cluster}</li><li> OCP Link: ${alarm_url}</li></ul><pre> `
-### 步骤2：配置告警推送
+6. Simply input the verification information into the {} placeholder for Response.
+7. In the message configuration, select Markdown as the format for alarm messages.
+8. Choose **Simplified Chinese** for the alarm message template, and fill in the following content before submitting.
 
-1. 新建推送配置，路径：**告警中心=>告警推送=>新建推送配置**。
-2. 推送类型、指定对象按需配置即可。
+```
+OCP告警通知-单条告警
+- 告警ID： ${alarm_id}
+- 名称：${alarm_name}
+- 级别：${alarm_level}
+- 告警对象：${alarm_target}
+- 服务： ${service}
+- 概述：${alarm_summary}
+- 生成时间：${alarm_active_at}
+- 更新时间： ${alarm_updated_at}
+- 恢复时间：${alarm_resolved_at}
+- 详情：${alarm_description}
+- 状态： ${alarm_status}
+- 告警类型： ${alarm_type}
+- 告警阈值： ${alarm_threshold}
+- 集群组： ${ob_cluster_group}
+- 集群： ${ob_cluster}
+- 主机： ${host_ip}
+- 应用集群： ${app_cluster}
+- OCP链接：${alarm_url}
+```
 
-<img alt="drawing" id="!">
+### Step 2: Configure Alarm Notifications
 
-3. 推送语言选择 **简体中文**。
-4. 告警通道选择 **FlashDuty** 。
-5. 开启 **恢复通知**。
-6. 提交。
+1. Create a new notification configuration by following the path: **Alarm Center => Alarm Notifications => Create New Notification Configuration**.
+2. Configure the push type and specified recipients as needed.
 
-<img alt="drawing" id="#">
-</div>
-`
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/xQQWu3WIzYHZ-oN5KSj9d2tD0HvTTLNVngjSn7YXxMU.avif" />
+
+3. Select **Simplified Chinese** as the language for notifications.
+4. Choose **FlashDuty** as the alarm channel.
+5. Enable **Recovery Notifications**.
+6. Submit the configuration.
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/QuWqfI-2cNzlQ_tXih5zqo_AB3YzPDDD8scvINbxt54.avif" />
 
 ## Status Comparison
-
-<div class="md-block">
 
 |OceanBase|Kuaimao Nebula|state|
 |---|---|---|
@@ -124,10 +174,7 @@ fi</p><pre> `
 |Notice|Info|remind|
 |remind|Info|remind|
 
-</div>
-
 ## Status Comparison
-<div class="md-block">
 
 |OceanBase|Kuaimao Nebula|state|
 |---|---|---|
@@ -136,5 +183,3 @@ fi</p><pre> `
 |warn|Warning|warn|
 |Notice|Info|remind|
 |remind|Info|remind|
-
-</div>

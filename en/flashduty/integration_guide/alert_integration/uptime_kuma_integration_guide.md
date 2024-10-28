@@ -46,15 +46,19 @@ When you need to route alarms to different collaboration spaces based on the pay
 
 **Step 2: Configure monitoring items**
 
-<div id="!"><ol><li>Click `Add New Monitor` or edit existing monitoring items to complete monitoring configuration as needed;</li><li> As shown in the figure, part `Notifications` on the right enables the notification method created in the previous step;</li><li> If you need to set a label, you can add `Tags` Note that only labels that exist at the same time Key/Value will be pushed to FlashDuty ;</li><li> Submit and save, waiting for the alarm to be triggered.</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/MhOsvqHsYIku4nGsClITGQNGpNqg1ceKLBKd6xcN_P0.avif"></div>
+1. Click on `Add New Monitor` or edit an existing monitor to customize the monitoring settings as required;
+2. As illustrated, enable the notification method created in the previous step in the `Notifications` section on the right;
+3. If you need to set a label, you can add `Tags` Note that only labels that also exist Key/Value will be pushed to FlashDuty ;
+4. Submit and save the changes, then wait for the alert to be triggered.
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/MhOsvqHsYIku4nGsClITGQNGpNqg1ceKLBKd6xcN_P0.avif" />
 
 ## Status Comparison
-<div class="md-block">
+
+The mapping relationship between Uptime Kuma and FlashDuty alert levels:
 
 | Uptime Kuma  |  Flashduty  | state |
 | ------------ | -------- | ---- |
 | Critical     | Critical | serious |
 | Warning     | Warning  | warn |
 | Info     | Info     | remind |
-
-</div>

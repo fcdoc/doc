@@ -35,8 +35,6 @@ brief: 通过 webhook 的方式同步 Open-Falcon 告警事件到 Flashduty，�
 ## 在 Falcon
 选择告警规则，逐一配置 webhook。
 
-<div class="md-block">
-
 1. 登录您的 Falcon 控制台，选择 Templates，进入告警规则模板列表页面
 2. 打开任意一个告警规则模板，填写回调地址为当前集成对应的推送地址
 3. 点击 Save 按钮，保存告警规则
@@ -50,10 +48,7 @@ brief: 通过 webhook 的方式同步 Open-Falcon 告警事件到 Flashduty，�
 5. 回到集成列表，如果展示了最新事件时间，说明配置成功且收到事件
 6. 完成
 
-</div>
-
 ## 状态对照
-<div class="md-block">
 
 Open-Falcon 到 Flashduty 告警等级映射关系：
 
@@ -66,5 +61,3 @@ Open-Falcon 到 Flashduty 告警等级映射关系：
 | 4           | Info     | 提醒 |
 | 5           | Info     | 提醒 |
 | 6           | Info     | 提醒 |
-
-</div>

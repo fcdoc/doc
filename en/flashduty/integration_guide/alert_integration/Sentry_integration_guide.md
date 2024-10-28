@@ -34,7 +34,52 @@ When you need to route alarms to different collaboration spaces based on the pay
     5. Completed.
 
 ## In Sentry
-<div id="!"><h2>1. Preliminary instructions</h2><p> Sentry Provides two types of alarm mechanisms: Issue Alerts and Metric Alerts . Issue Alerts Supports the notification function through WebHooks in Integrations , while Metric Alerts is limited to use Internal Integration alarm notification. Worth noting Internal Integration not only compatible with Metric Alerts , but also Issue Alerts . In view of the wide applicability of Internal Integration , we decided to adopt this method uniformly and no longer rely solely on WebHooks to simplify the configuration of alarm notifications.</p><h2> 2. Sentry Alarm push configuration</h2><h3> Step 1: Add FlashDuty Custom Integrations</h3><ol><li> Log in to the Sentry management console.</li><li> In the left navigation bar, find **Settings = > Custom Integrations** .</li><li> Click Create New Integration and select **Internal Integration** .</li><li> on the edit page. **Fill in FlashDuty at Name WebhookURL copy and write the integrated push address at** ;.</li><li> Turn on **Alert Rule Action** , refer to the following configuration:</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/WsTxnddIFxx3K9TzO9oeQdeGe4_uvFdAMKD_8ZZbt38.avif"><ol start="5"><li> **Configure Read permissions for Issue & Event** in the PERMISSIONS .</li><li> In the WEBHOOKS configuration, check **issue** , **please do not check error and comment**</li><li> After the configuration is complete, click Save Changes to complete the creation.</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/QLbhF_ak80OpOZK3z4SOdT46MBmuS29kneZWyT4zZzk.avif"><p> **Special notes on WEBHOOKS configuration:**</p><ol><li> After checking **issue** FlashDuty can receive the resolved event of issue , that is, when resolved is manually triggered for a problem in the issue list, we will automatically restore the associated fault in FlashDuty</li><li> Other events of issue , such as create , assigned , archived , and unresolved , are not supported.</li><li> If error and comment are checked at the same time, FlashDuty will not receive and process such events.</li></ol><h3> Step 2: Use FlashDuty Integration in Alerts</h3><ol><li> In the left navigation bar, find **Alerts = > Create Alert**</li><li> Select the Alert to create, such as Issue .</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/JByBizu05Z4bxPUlUtnsmePcvjUBA0zMKC75mJX6qyo.avif"><ol start="3"><li><p> Please configure the trigger conditions as needed.</p></li><li><p> **Add action at THEN perform these actions** and select **Send a notification via** .</p></li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/n9LGTYqFuUmJEPlP-3sHQI-zy0TF8HpY7sQvtOLJ9cA.avif"><ol start="5"><li> For the notification channel, select **FlashDuty** added above.</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/rtUTpFhDO_-3FKalrhFBZJg3aVRb8c7YBnkwXj42KQI.avif"><ol start="6"><li> After configuring other options, click **Save Rule** to save.</li></ol><h2> 3. Status comparison</h2><div id="!">
+
+## 1. Preliminary Remarks
+Sentry offers two types of alert mechanisms: Issue Alerts and Metric Alerts. Issue Alerts support notification functionality through WebHooks in Integrations, whereas Metric Alerts are restricted to using the Internal Integration for alert notifications. It is important to note that the Internal Integration is not only suitable for Metric Alerts but is also compatible with Issue Alerts. Given the broad applicability of the Internal Integration, we have decided to adopt this approach uniformly, thereby simplifying alert notification configuration by no longer relying solely on WebHooks.
+
+## 2. Sentry Alert Push Configuration
+
+### Step 1: Add FlashDuty Custom Integrations
+
+1. Login to the Sentry management console.
+2. Locate **Settings => Custom Integrations** in the left-hand navigation bar.
+3. Click on Create New Integration and select **Internal Integration**.
+4. on the edit page. **Fill in FlashDuty at Name , copy and write the integrated push address at WebhookURL** .
+5. Enable **Alert Rule Action**, referring to the configuration shown in the following image:
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/WsTxnddIFxx3K9TzO9oeQdeGe4_uvFdAMKD_8ZZbt38.avif" />
+
+5. **Configure Read permissions for Issue & Event** in PERMISSIONS Configuration.
+6. In the WEBHOOKS configuration, check **issue**; **do not check** error and comment.
+7. After completing the configuration, click Save Changes to finish the creation.
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/QLbhF_ak80OpOZK3z4SOdT46MBmuS29kneZWyT4zZzk.avif" />
+
+**Special Notes on WEBHOOKS Configuration:**
+1. By checking **issue**, FlashDuty can receive the resolved event for issues. This means that when an issue is manually marked as resolved in the issue list, we will automatically restore the associated incident in FlashDuty.
+2. FlashDuty does not support other issue events such as create, assigned, archived, and unresolved.
+3. If both error and comment are checked, FlashDuty will not receive or process these events.
+
+### Step 2: Use FlashDuty Integration in Alerts
+1. Find **Alerts => Create Alert** in the left-hand navigation bar.
+2. Select the type of Alert you wish to create, such as Issue.
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/JByBizu05Z4bxPUlUtnsmePcvjUBA0zMKC75mJX6qyo.avif" />
+
+3. Configure the trigger conditions as needed.
+
+4. In the **THEN perform these actions** section, add an action and select **Send a notification via**.
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/n9LGTYqFuUmJEPlP-3sHQI-zy0TF8HpY7sQvtOLJ9cA.avif" />
+
+5.  Choose the **FlashDuty** notification channel that you added earlier.
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/rtUTpFhDO_-3FKalrhFBZJg3aVRb8c7YBnkwXj42KQI.avif" />
+
+6. After configuring the other options, click **Save Rule** to save.
+
+## 3. Status Correspondence
 
 |Sentry|Kuaimao Nebula|state|
 |---|---|---|
@@ -42,5 +87,3 @@ When you need to route alarms to different collaboration spaces based on the pay
 |warning|Warning|warn|
 |triggered|Warning|warn|
 |resolved|Ok|Recovered|
-
-</div>

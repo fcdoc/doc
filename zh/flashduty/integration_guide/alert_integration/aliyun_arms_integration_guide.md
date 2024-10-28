@@ -36,8 +36,6 @@ brief: 通过 webhook 的方式同步阿里云 ARMS 监控告警事件到快猫�
 ## 在 阿里云 ARMS
 **步骤 1：配置 通知对象**
 
-<div class="md-block">
-
 1. 登录您的阿里云控制台，选择ARMS监控产品；
 2. 进入 __告警管理 -> 通知对象__ 页面，选择 __Webhook集成__，单击 新建Webhook 按钮，开始编辑内容；
 3. 如图，设定对象名称，并选择 `Post` ，复制写入集成的推送地址；
@@ -55,10 +53,7 @@ brief: 通过 webhook 的方式同步阿里云 ARMS 监控告警事件到快猫�
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/Bo_QVu-dAYs8mM-5bjKjO16cZvjnvMzV0R9eBWo0uGw.avif" />
 
-</div>
-
 ## 状态对照
-<div class="md-block">
 
 阿里云 ARMS 监控到 Flashduty 告警等级映射关系：
 
@@ -68,5 +63,3 @@ brief: 通过 webhook 的方式同步阿里云 ARMS 监控告警事件到快猫�
 | P2     | Warning  | 警告 |
 | P3     | Warning     | 警告 |
 | P4     | Info     | 提醒 |
-
-</div>

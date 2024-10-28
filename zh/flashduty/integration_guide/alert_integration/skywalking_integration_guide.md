@@ -34,7 +34,6 @@ brief: 通过 webhook 的方式同步 Skywalking 告警事件到快猫星云，�
     5. 完成。
 
 ## 在 Skywalking
-<div class="md-block">
 
 ## 一、修改 Skywalking 服务的配置文件
 
@@ -75,13 +74,9 @@ urls:
 
 ## 二、状态对照
 
-<div class="md-block">
-
 |Skywalking|快猫星云|状态|
 |---|---|---|
 |Critical|Critical|严重|
 |Warning|Warning|警告|
 |Info|Info|提醒|
 |其他或为空|Info|提醒|
-
-</div>

@@ -33,7 +33,6 @@ brief: 通过 webhook 的方式同步百度云 BCM 告警事件到 Flashduty，�
     5. 完成。
 
 ## 在百度云监控 BCM
-<div class="md-block">
 
 1. 登录您的百度云控制台，检索 __云监控__ 产品，并进入对应控制台
 2. 百度云提供了多种方式来配置告警回调，具体可以参考[官方文档](https://cloud.baidu.com/doc/BCM/s/bkdzl6d69)，以下仅演示 __报警管理-报警策略__ 入口配置方式
@@ -44,10 +43,7 @@ brief: 通过 webhook 的方式同步百度云 BCM 告警事件到 Flashduty，�
 
 5. 完成
 
-</div>
-
 ## 状态对照
-<div class="md-block">
 
 百度云监控到 Flashduty 告警等级映射关系：
 
@@ -57,5 +53,3 @@ brief: 通过 webhook 的方式同步百度云 BCM 告警事件到 Flashduty，�
 | 重要 | Critical | 严重 |
 | 警告 | Warning  | 警告 |
 | 通知 | Info     | 提醒 |
-
-</div>

@@ -34,7 +34,6 @@ brief: 通过 webhook 的方式同步 AWS CloudWatch 告警事件到 Flashduty�
     5. 完成。
 
 ## 在 AWS CloudWatch
-<div class="md-block">
 
 1. 登录您的 AWS 控制台，检索 `Simple Notification Service` 产品，并进入对应产品控制台
 2. 进入 `Topics` 页面，单击 `Create topic` 按钮，开始创建主题
@@ -56,11 +55,6 @@ brief: 通过 webhook 的方式同步 AWS CloudWatch 告警事件到 Flashduty�
 12. 回到集成列表，如果展示了最新事件时间，说明配置成功且收到事件
 13. 完成
 
-</div>
-
 ## 状态对照
-<div class="md-block">
 
 CloudWatch 监控所有指标告警均对应到 Flashduty “警告（warning）”级别告警。
-
-</div>

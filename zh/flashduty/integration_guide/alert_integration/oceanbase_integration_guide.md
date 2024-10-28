@@ -35,8 +35,6 @@ brief: 通过 webhook 的方式同步OceanBase告警事件到快猫星云，实�
 
 ## 在 OceanBase
 
-<div class="md-block">
-
 ## 一、OceanBase告警推送配置
 
 ### 步骤1：配置告警通道
@@ -165,12 +163,9 @@ OCP告警通知-单条告警
 6. 提交。
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/QuWqfI-2cNzlQ_tXih5zqo_AB3YzPDDD8scvINbxt54.avif" />
-</div>
 
 ## 二、状态对照
 
-<div class="md-block">
-
 |OceanBase|快猫星云|状态|
 |---|---|---|
 |停服|Critical|严重|
@@ -178,11 +173,8 @@ OCP告警通知-单条告警
 |警告|Warning|警告|
 |注意|Info|提醒|
 |提醒|Info|提醒|
-
-</div>
 
 ## 状态对照
-<div class="md-block">
 
 |OceanBase|快猫星云|状态|
 |---|---|---|
@@ -191,5 +183,3 @@ OCP告警通知-单条告警
 |警告|Warning|警告|
 |注意|Info|提醒|
 |提醒|Info|提醒|
-
-</div>

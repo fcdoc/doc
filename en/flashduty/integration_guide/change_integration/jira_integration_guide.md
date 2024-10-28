@@ -27,11 +27,19 @@ This guide is compatible with **Jira Cloud and On-Premises** versions.
 
 ### In Jira
 
-<div id="!"><ol><li>Login your Jira</li><li> Enter **Settings = >System = >Webhooks** page, click Create button</li><li> Fill in the callback address as the push address corresponding to the current integration, and check Issue Created/Updated/Deleted three types of events</li><li> You can choose to fill in JQL to further narrow down (such as specific Projects ) the scope of events to be synchronized</li><li> Click the Save button to submit the configuration</li></ol>![drawing](https://fcdoc.github.io/img/zh/B6IhBdbjTowcYF9BrtI8yg1Zd8GUkJkCmDOleGUd7PE.avif)<ol start="5"><li> Finish</li></ol></div>
+1. Log into your Jira account
+2. Navigate to the **Settings => System => Webhooks** page and click the "Create" button
+3. Set the callback address to the push address associated with the current integration, and select the event types: Issue Created/Updated/Deleted
+4. Optionally, you can enter JQL to further refine the scope of events to be synchronized (e.g., specific Projects)
+5. Click the "Save" button to submit the configuration
+
+<img alt="drawing" src="https://fcdoc.github.io/img/zh/B6IhBdbjTowcYF9BrtI8yg1Zd8GUkJkCmDOleGUd7PE.avif" />
+
+5. Configuration complete
 
 ## Status Mapping
 
-<div class="md-block">
+By default, Flashduty extracts the "status.name" information from the webhook payload and performs status transitions based on the mapping relationship provided below:
 
 | Jira        | Flashduty   | state               |
 | ----------- | ---------- | ------------------ |
@@ -48,4 +56,4 @@ This guide is compatible with **Jira Cloud and On-Premises** versions.
 | resolved    | done       | Completed             |
 | closed      | done       | Completed             |
 
-If you wish to modify this mapping, please reach out to Flashduty for assistance.</p>
+If you wish to modify this mapping, please contact Flashduty support.

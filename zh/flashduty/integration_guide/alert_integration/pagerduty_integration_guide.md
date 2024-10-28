@@ -48,8 +48,6 @@ Flashduty 实现了 PagerDuty Events API，输入和响应完全兼容。因此�
 
 ### Pagerduty V2 Events
 
-<div class="md-block">
-
 #### 参考文档：
 
 [PagerDuty V2 Events](https://developer.pagerduty.com/api-reference/368ae3d938c9e-send-an-event-to-pager-duty)
@@ -61,11 +59,7 @@ Flashduty 实现了 PagerDuty Events API，输入和响应完全兼容。因此�
 - 方式 1：在 QueryString 中包含参数 integration_key
 - 方式 2：将 integration_key 作为 routing_key 参数传入 Payload
 
-</div>
-
 ### Pagerduty V1 Events
-
-<div class="md-block">
 
 #### 参考文档：
 
@@ -78,13 +72,9 @@ Flashduty 实现了 PagerDuty Events API，输入和响应完全兼容。因此�
 - 方式 1：在 QueryString 中包含参数 integration_key
 - 方式 2：将 integration_key 作为 service_key 参数传入 Payload
 
-</div>
-
 ### 配置示例
 
 以 [ElastAlert2](https://github.com/jertel/elastalert2) 为例:
-
-<div class="md-block">
 
 1. 步骤 1：获得推送地址
 
@@ -146,5 +136,3 @@ pagerduty_v2_payload_source: mysql.host.name
 ```
 
 4. 步骤 4：重启 ElastAlert，等待告警触发
-
-</div>

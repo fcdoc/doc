@@ -36,19 +36,29 @@ When you need to route alarms to different collaboration spaces based on the pay
 ## Configure Alibaba Cloud Monitoring CM Events
 **Step 1: Add a Push Channel**
 
-<div id="!"><ol><li>Log in to your Alibaba Cloud console and select cloud monitoring products</li><li> Enter **the Event Center -> Event Subscription** page, switch to **the Push Channel** tab, click the Create Push Channel button, and start editing content</li><li> As shown in the figure, select **POST** **for the request method** , and fill in the integrated push address **for the address.**</li><li> Click the Confirm button to submit the update</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/seOk8MgkEvjJCNzrDUEr8i0bnprzJyM5bb7-V_I3lqs.avif"></div>
+1. Log in to your Alibaba Cloud console and select the Cloud Monitoring service
+2. Enter the **Event Center -> Event Subscription** page, navigate to the **Push Channels** tab, click the "Create Push Channel" button to begin editing the content
+3. As illustrated, select **POST** for the **Request Method** and enter the integrated push address in the **Address** field
+4. Click the "Confirm" button to submit the updates
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/seOk8MgkEvjJCNzrDUEr8i0bnprzJyM5bb7-V_I3lqs.avif" />
 
 **Step 2: Add a Subscription Policy**
 
-<div id="!"><ol><li>Log in to your Alibaba Cloud console and select cloud monitoring products</li><li> Enter **the Event Center -> Event Subscription** page, switch to **the Subscription Strategy** tab, click the Create Subscription Strategy button, and start editing content</li><li> Fill in the subscription name, select the event type and scope, and configure the push channel at the bottom to be the Flashduty created previously.</li><li> Click the Confirm button to submit the update</li><li> The figure below shows the subscription results of two types of events: threshold and system.</li></ol><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/yyNAM2bu8Z8ppbnnUX_irJpODrosO8QqejhB8egEojw.avif"></div>
+1. Log in to your Alibaba Cloud console and select the Cloud Monitoring service
+2. Access the **Event Center -> Event Subscription** page, go to the **Subscription Strategy** tab, and click the "Create Subscription Strategy" button to start editing the content
+3. Enter a subscription name, choose the event type and scope, and at the bottom, configure the push channel to the previously created Flashduty channel
+4. Click the "Confirm" button to finalize and submit the updates
+5. The figure below shows the subscription results for two types of events: Threshold and System
+
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/yyNAM2bu8Z8ppbnnUX_irJpODrosO8QqejhB8egEojw.avif" />
 
 ## Status Comparison
-<div class="md-block">
+
+Mapping relationship between Alibaba Cloud Monitoring event alerts and Flashduty alert levels:
 
 | Alibaba Cloud Monitoring |  Flashduty  | state |
 | ------------ | -------- | ---- |
 | CRITICAL     | Critical | serious |
 | WARNING      | Warning  | warn |
 | INFO         | Info     | remind |
-
-</div>

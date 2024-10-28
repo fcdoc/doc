@@ -34,7 +34,6 @@ brief: 通过 webhook 的方式同步Graylog告警事件到快猫星云，实现
     5. 完成。
 
 ## 在 Graylog
-<div class="md-block">
 
 ## 一、Graylog 告警推送配置
 
@@ -68,16 +67,11 @@ brief: 通过 webhook 的方式同步Graylog告警事件到快猫星云，实现
 6. 下一步完成即可。
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/FBEZ5WZwmS1KOXauhVJ_PCxKzhnwgCfeWVriVNKUqsA.avif" />
-</div>
 
 ## 二、状态对照
-
-<div class="md-block">
 
 |Graylog|快猫星云|状态|
 |---|---|---|
 |3|Critical|严重|
 |2|Warning|警告|
 |1|Info|提醒|
-
-</div>

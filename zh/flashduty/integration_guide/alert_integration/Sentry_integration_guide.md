@@ -34,7 +34,6 @@ brief: 通过 webhook 的方式同步 Sentry 告警事件到快猫星云，实�
     5. 完成。
 
 ## 在 Sentry
-<div class="md-block">
 
 ## 一、前置说明
 Sentry 提供了两类告警机制：Issue Alerts 和 Metric Alerts。Issue Alerts 支持通过 Integrations 中的 WebHooks 实现通知功能，而 Metric Alerts 则限定于使用 Internal Integration 进行告警通知。值得注意的是 Internal Integration 不仅适用于 Metric Alerts，也兼容 Issue Alerts。鉴于 Internal Integration 的广泛适用性，我们决定统一采用这一方式，不再单独依赖 WebHooks，以此来简化告警通知的配置。
@@ -82,13 +81,9 @@ Sentry 提供了两类告警机制：Issue Alerts 和 Metric Alerts。Issue Aler
 
 ## 三、状态对照
 
-<div class="md-block">
-
 |Sentry|快猫星云|状态|
 |---|---|---|
 |critical|Critical|严重|
 |warning|Warning|警告|
 |triggered|Warning|警告|
 |resolved|Ok|恢复|
-
-</div>
