@@ -18,13 +18,13 @@ so-called novel faults refer to those that have not occurred within a certain pe
 1. On the fault list page, novel faults will be marked with a distinct **Novelty** label;
 2. On the fault details page, novel faults will be clearly labeled with **Novelty** at the top, along with an explanation.
 
-<img src="https://fcdoc.github.io/img/xqtBsH90jOXzcppNlKqXij4peIRPbV51UKC2dJ3JjnU.avif" alt="新奇" style="display: block; margin: 0 auto;" width="600">
+<img src="https://fcdoc.github.io/img/zh/xqtBsH90jOXzcppNlKqXij4peIRPbV51UKC2dJ3JjnU.avif" alt="新奇" style="display: block; margin: 0 auto;" width="600">
 
 ### IM Tool
 
 For example, on Feishu, when a fault is identified as a novel alert, the system will enhance the notification:
 
-<img src="https://fcdoc.github.io/img/gngVyQEuu-kSTV7uje3XUNK6objwAnF7b1KkiEgIK4g.avif" alt="新奇-feishu" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/gngVyQEuu-kSTV7uje3XUNK6objwAnF7b1KkiEgIK4g.avif" alt="新奇-feishu" style="display: block; margin: 0 auto;" width="500">
 
 ### How to Identify
 

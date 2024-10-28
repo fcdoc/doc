@@ -12,13 +12,13 @@ Each collaborative workspace should have at least one dispatch policy in place. 
 - It supports selecting whether to dispatch based on specific days of the week, for instance, only handling faults from Monday to Friday, with Saturday and Sunday exceptions.
 - It supports dispatch selection based on the service calendar (which needs to be created beforehand), allowing configuration according to holidays or working days, such as notifying only on trading days, which is common in the securities industry.
 
-![rilitongzhi.png](https://fcdoc.github.io/img/gsUqruaXsUQO8Vbb-QgEIJb23EQ3jUZDMWBvtOYSEBs.avif)
+![rilitongzhi.png](https://fcdoc.github.io/img/zh/gsUqruaXsUQO8Vbb-QgEIJb23EQ3jUZDMWBvtOYSEBs.avif)
 
 ### Fault Filtering
 - By default, all faults are notified in accordance with this policy.
 - It supports conditional matching of faults by title, level, and tags, for example, following the dispatch for alarms with a level of "Info."
 
-![tiaojian.png](https://fcdoc.github.io/img/WyGIe6d3UjoWaGg4Y8KCZ87KCalIEM3cdR1YMRI6RVc.avif)
+![tiaojian.png](https://fcdoc.github.io/img/zh/WyGIe6d3UjoWaGg4Y8KCZ87KCalIEM3cdR1YMRI6RVc.avif)
 
 Go to [How to Configure Filter Conditions](/configure_flashduty/how_to_filter) for more information.
 

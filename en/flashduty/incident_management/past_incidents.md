@@ -18,7 +18,7 @@ When responding to failures, having access to solutions for similar historical i
 1. Locate a failure that requires attention from the failure list or collaboration space
 2. Click on the failure title to enter the details, and select the **Historical Failures** tab within the details.
 
-![Flashduty-Historical Alarm.png](https://fcdoc.github.io/img/wu2Re-AiIWhAfr5-CbJ97oUk_2YD5I_So1EE6SbIJgo.avif)
+![Flashduty - Historical Alarm.png](https://fcdoc.github.io/img/zh/wu2Re-AiIWhAfr5-CbJ97oUk_2YD5I_So1EE6SbIJgo.avif)
 
 The system will provide up to 5 similar historical failures to avoid excessive time spent on reviewing and identifying information.
 

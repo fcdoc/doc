@@ -41,11 +41,11 @@ brief: 通过 webhook 的方式同步阿里云日志服务 SLS 监控告警事�
 1. 登录您的阿里云控制台，选择日志服务 SLS 产品，选择一个 Project
 2. 进入 __告警__->__告警管理__->__Webhook集成__ 页面，单击 __新建__ 按钮，开始编辑
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/do6Aljc-9776gTE_GTxT9gsVkAEejjOPvjVOZjEMs8U.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/do6Aljc-9776gTE_GTxT9gsVkAEejjOPvjVOZjEMs8U.avif" />
 
 3. 如图，__类型__选择“通用 Webhook”，__请求方法__选择 POST，__请求地址__填写集成的推送地址（保存后得到）
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/l7QslDgInVpUwfNHW6GyVdSgdLrHiblCHY8-Zq1YR4M.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/l7QslDgInVpUwfNHW6GyVdSgdLrHiblCHY8-Zq1YR4M.avif" />
 
 4. 点击__确认__按钮，提交保存
 
@@ -62,7 +62,7 @@ brief: 通过 webhook 的方式同步阿里云日志服务 SLS 监控告警事�
 {{ alert | to_json}}
 ```
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/iqZZ9Gy8c1s1h7ZnI8NaZQRxTLcNnoO5BLGRl3KUU5Q.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/iqZZ9Gy8c1s1h7ZnI8NaZQRxTLcNnoO5BLGRl3KUU5Q.avif" />
 
 3. 点击__确认__按钮，提交保存
 
@@ -76,7 +76,7 @@ brief: 通过 webhook 的方式同步阿里云日志服务 SLS 监控告警事�
 2. 进入__第一行动列表__配置项，点击添加一个__行动组__节点。
 3. __渠道__选择“通用 Webhook”，__选择Webhook__和__内容模板__使用前边创建的对象，__发送时段__选择“任意”
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/Dl-kqzyg53lz-hqYR8rZw8wC-cVpK4103tdtDLESOzU.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/Dl-kqzyg53lz-hqYR8rZw8wC-cVpK4103tdtDLESOzU.avif" />
 
 4. 点击__结束__，完成第一行动列表创建
 5. 点击__确认__按钮，提交保存
@@ -91,7 +91,7 @@ brief: 通过 webhook 的方式同步阿里云日志服务 SLS 监控告警事�
 2. 进入__告警规则__编辑页面，__告警策略__。
 3. __告警策略__选择“普通模式”，__行动策略__使用前边创建的对象
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/TQ-mllhuKcn6FKPy11GIPpGB8GvwiJ17ZSraCR-IPCg.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/TQ-mllhuKcn6FKPy11GIPpGB8GvwiJ17ZSraCR-IPCg.avif" />
 
 4. 点击__确定__按钮，提交保存
 5. 针对所有其他规则，重复上述步骤，可以将全部告警推送到 FlashDuty

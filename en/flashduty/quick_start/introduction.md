@@ -24,11 +24,11 @@ Flashduty is positioned as a **one-stop alarm response platform** for enterprise
 ## How to Contact Us?
 **Scan the QR code to add the technical support WeChat account for technical assistance**:
 
-<img src="https://fcdoc.github.io/img/kZTm5bHIA9-B1cSv2EEh_TAgRE86cwewNUiyjgJ4ceo.avif" alt="drawing" width="200">
+<img src="https://fcdoc.github.io/img/zh/kZTm5bHIA9-B1cSv2EEh_TAgRE86cwewNUiyjgJ4ceo.avif" alt="drawing" width="200">
 
 **Scan the QR code to add the business manager’s WeChat account for business support**:
 
-<img src="https://fcdoc.github.io/img/lUuHJZGgA3k24I-EH9IDwEk2N6wZfuHnbS2lGmxpRGo.avif" alt="drawing" width="200">
+<img src="https://fcdoc.github.io/img/zh/lUuHJZGgA3k24I-EH9IDwEk2N6wZfuHnbS2lGmxpRGo.avif" alt="drawing" width="200">
 
 **Console feedback**:
 

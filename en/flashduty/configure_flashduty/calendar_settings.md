@@ -15,14 +15,14 @@ brief: By configuring the service calendar, you can manage allocation strategies
 - After configuring team members to manage the calendar, they will have full permissions for that calendar.
 - Newly created calendars are set to all working days by default. It is generally advised to link them directly to national holidays to automatically incorporate holiday schedules, thus saving the manual marking process. Even after linking, manual adjustments can still be made as needed.
 
-![Service Calendar](https://fcdoc.github.io/img/GG_lye0HJBxjFs54noT-0OrrOiUBH8NPZqkny2qYXl4.avif)
+![Service Calendar](https://fcdoc.github.io/img/zh/GG_lye0HJBxjFs54noT-0OrrOiUBH8NPZqkny2qYXl4.avif)
 
 ## Edit Calendar
 - Only the creator and team members have the right to edit the calendar; other members have read-only access.
 - Basic information such as the calendar name, description, and management team can be modified.
 - Rest days can be quickly marked based on the weekday.
 
-![](https://fcdoc.github.io/img/6we-QRWfJKvBVRJZC2rF7JdF73fg6ntjNLDnw0A5GSg.avif)
+![](https://fcdoc.github.io/img/zh/6we-QRWfJKvBVRJZC2rF7JdF73fg6ntjNLDnw0A5GSg.avif)
 
 > [!WARN]
 > Deleting a calendar is irreversible. Please ensure no business is using it before deletion.

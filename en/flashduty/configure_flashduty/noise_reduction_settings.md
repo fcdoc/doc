@@ -27,7 +27,7 @@ Go to [Collaboration Space Details] - [Alarm Noise Reduction], you can set the *
 
 - Preview: You can use the preview feature to retrieve recent events and render the noise reduction results in real-time, thus assessing the noise reduction effect. The system can retrieve up to `666` historical events.
 
-<img src="https://fcdoc.github.io/img/V7G1hZj1IPX10Fsa_ekHR77oKs8POHsib5y2zg-Yjdw.avif" style="display: block; margin: 0 auto;" height="400">
+<img src="https://fcdoc.github.io/img/zh/V7G1hZj1IPX10Fsa_ekHR77oKs8POHsib5y2zg-Yjdw.avif" style="display: block; margin: 0 auto;" height="400">
 
 ## View Aggregation Examples
 
@@ -52,7 +52,7 @@ We can see the final [fault-alarm-event] correlation relationship through the co
 - Click on the alarm title to view the details of the associated alarm, including its timeline and related events
 - Click on the event point to view the specific content reported by the event, including tags and descriptions
 
-![](https://fcdoc.github.io/img/jAkbujzJKD3war7mV4EyzsYvd-TZB1BX_wJ1PUGZKTM.avif)
+![](https://fcdoc.github.io/img/zh/jAkbujzJKD3war7mV4EyzsYvd-TZB1BX_wJ1PUGZKTM.avif)
 
 ## FAQs
 

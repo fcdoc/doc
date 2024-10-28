@@ -19,7 +19,7 @@ Duty rules are a core component of a company's internal management approach, hel
 - Duty rules, combined with shift adjustment rules, form the comprehensive duty schedule.
 - Duty rules can be viewed from a timeline or calendar perspective to see the final duty arrangement.
 
-<img src="https://fcdoc.github.io/img/YAhBMLK6qkGY1kRBVS-phRgql1KoULwbXKbMY0VHQj0.avif" style="display: block; margin: 0 auto;" height="500">
+<img src="https://fcdoc.github.io/img/zh/YAhBMLK6qkGY1kRBVS-phRgql1KoULwbXKbMY0VHQj0.avif" style="display: block; margin: 0 auto;" height="500">
 
 ### Edit Rules
 #### 1. Create
@@ -49,7 +49,7 @@ Duty rules are a core component of a company's internal management approach, hel
 
 - Rules/Effects:
 
-![zhibanxiaoguo-1.png](https://fcdoc.github.io/img/wYD8amIzvc9KkZLPA6mweXUYMBflr-06TZFOQTqGn0A.avif)
+![zhibanxiaoguo-1.png](https://fcdoc.github.io/img/zh/wYD8amIzvc9KkZLPA6mweXUYMBflr-06TZFOQTqGn0A.avif)
 
 ### Combined Shift Scheduling
 - Requirement Overview
@@ -60,8 +60,8 @@ Duty rules are a core component of a company's internal management approach, hel
 
 - Rule Display:
 
-![zuhezhibanguize.png](https://fcdoc.github.io/img/8byBJUrSY8afMbm84FqNvTr6U8rnpXbIqhXXFht6Mek.avif)
+![zuhezhibanguize.png](https://fcdoc.github.io/img/zh/8byBJUrSY8afMbm84FqNvTr6U8rnpXbIqhXXFht6Mek.avif)
 
 - Effect Display:
 
-![zuhezhibanxiaoguo.png](https://fcdoc.github.io/img/xdVAhdN0fbDFVgt9frLmrVIXmHlXHaUVZrBUVJfGmKw.avif)
+![zuhezhibanxiaoguo.png](https://fcdoc.github.io/img/zh/xdVAhdN0fbDFVgt9frLmrVIXmHlXHaUVZrBUVJfGmKw.avif)

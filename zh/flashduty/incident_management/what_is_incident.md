@@ -88,7 +88,7 @@ On-Call 人员收到通知后，可以立即进行认领。您可以在 **语音
 
 任一故障都有一个时间线，用于回溯故障历史不同时刻发生的变化和操作。比如故障在什么时间点，以什么通道通知到了谁，以及通知的结果。
 
-![](https://fcdoc.github.io/img/7vOIcjGm9D-jdoK4WtKCTV63KSPRW6vXBCpZwzU3vNo.avif)
+![](https://fcdoc.github.io/img/zh/7vOIcjGm9D-jdoK4WtKCTV63KSPRW6vXBCpZwzU3vNo.avif)
 
 ## 触发故障
 
@@ -121,8 +121,6 @@ Flashduty 提供了一个邮件集成，允许您通过发送邮件来上报告�
 
 控制台点击 **创建** 按钮，发起故障创建。
 
-<div style="font-size:14px">
-
 | 字段 | 是否必须 | 描述 |
 | :---: | :---:   | ---- |
 | 故障标题 | 是 | 一句话指明发生了什么 |
@@ -130,5 +128,3 @@ Flashduty 提供了一个邮件集成，允许您通过发送邮件来上报告�
 | 严重程度 | 是 | 选择 Critical、Warning、Info 三个枚举值之一 |
 | 协作空间 | 否 | 故障归属<br>如果不选择，代表全局故障。<br>此情况下，故障必须直接分派到人才能通知 |
 | 分派人员 | 否 | 故障处理人员<br>如果不选择，按照归属协作空间进行匹配和分派，<br>否则直接按照个人偏好设置进行通知 |
-
-</div>

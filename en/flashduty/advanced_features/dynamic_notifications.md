@@ -48,7 +48,7 @@ Parameter format as follows:
 
 Configure a dispatch policy for the collaboration space. As shown in the figure below, the space is set up with one dispatch link, with the dispatch target being Toutie Technology, and simultaneously pushing to a WeChat group with a token ending in 5b96.
 
-![](https://fcdoc.github.io/img/BzEFtRd9mmTNVjjnF7f_AcO7kcjSqdKamWmET3Dxwjw.avif)
+![](https://fcdoc.github.io/img/zh/BzEFtRd9mmTNVjjnF7f_AcO7kcjSqdKamWmET3Dxwjw.avif)
 
 ### Set labels for alerts
 
@@ -80,7 +80,7 @@ curl --location --request POST 'https://api.flashcat.cloud/event/push/alert/stan
 
 As shown in the figure below, the target fault is normally triggered and dispatched. The dispatch personnel and target group chat have been replaced as expected.
 
-![](https://fcdoc.github.io/img/WHCu6fjd-r-vUtUeAhxzLsFFwBNaf5gIG_gQ4lcHAZ4.avif)
+![](https://fcdoc.github.io/img/zh/WHCu6fjd-r-vUtUeAhxzLsFFwBNaf5gIG_gQ4lcHAZ4.avif)
 
 ## FAQs
 

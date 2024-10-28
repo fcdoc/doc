@@ -41,20 +41,20 @@ brief: 通过 webhook 的方式同步华为云监控 CES 告警事件到快猫�
 3. 协议选择 `HTTPS`，名称填写 `flashduty`，终端填写集成地址（当前页面填写集成名称，保存后即可生成地址）
 4. 点击 __确定__ 按钮，完成通知对象创建
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/tgH1UDKys17VJAMsXbifQp-qYjXBKKOpusNdIiZJYbE.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/tgH1UDKys17VJAMsXbifQp-qYjXBKKOpusNdIiZJYbE.avif" />
 
 5. 进入 __告警-告警通知-通知组__ 页面，单击 __创建通知组__ 按钮
 6. 组名称填写 `FlashDuty`，通知对象勾选前边创建的 `flashduty`
 7. 点击 __确定__ 按钮，完成通知组创建
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/un2_U8J_auion76Ks570Tt6OQj1_akTliX0oX-a3QUQ.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/un2_U8J_auion76Ks570Tt6OQj1_akTliX0oX-a3QUQ.avif" />
 
 注意，创建通知组时，华为云会发起请求到 Flashduty，验证推送地址，查看通知组的通知对象列表，仅当通知对象状态为 __已确认__ 时，才会正常推送告警
 
 8. 进入 __告警-告警规则__ 页面，选择已有的告警规则进行编辑，或者创建新的告警规则，打开 __告警规则详情__ 页面
 9. 其中 __通知组__ 选择 `FlashDuty`，触发条件勾选 __出现告警__ 和 __恢复正常__。点击 __确定__ 按钮，保存修改
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/XNjNCWbTfuFnsmavwkCyhMtG9DJNykfjqsIQiLG4Sj4.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/XNjNCWbTfuFnsmavwkCyhMtG9DJNykfjqsIQiLG4Sj4.avif" />
 
 10. 回到 Flashduty 控制台集成列表页面，如果展示了最新事件时间，说明配置成功且收到事件
 11. 完成

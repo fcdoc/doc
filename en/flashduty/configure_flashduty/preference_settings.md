@@ -12,7 +12,7 @@ brief: You can customize the account settings and configure personal notificatio
 - APP Key: Create or delete an APP key.
 - Notification Method: Configure according to personal preferences.
 
-![](https://fcdoc.github.io/img/CqPJGldQsfI5kyyYGAFno50wbTJB4VV0Wz4Hb8IqXpc.avif)
+![](https://fcdoc.github.io/img/zh/CqPJGldQsfI5kyyYGAFno50wbTJB4VV0Wz4Hb8IqXpc.avif)
 
 ## Account Information
 - Account identities are divided into two types: main account and member account.

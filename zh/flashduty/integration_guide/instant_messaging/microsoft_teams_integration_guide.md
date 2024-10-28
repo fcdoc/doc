@@ -18,19 +18,19 @@ Microsoft Teams 集成现处于 Beta 阶段，在关联前您需要先完成以�
 ### 2. 上传应用包
 进入 **Microsoft Teams，跳转 [+Apps] - [Manage your apps] - [Upload an app] - [Upload an app to your org's app catalog]** 上传应用包 FlashDutyBot.zip
 
-![](https://fcdoc.github.io/img/4H1BjgL-F76QJ7e_BvGHE9JSdClYYtFcqgibEjjaeeM.avif)
+![](https://fcdoc.github.io/img/zh/4H1BjgL-F76QJ7e_BvGHE9JSdClYYtFcqgibEjjaeeM.avif)
 
 ### 3. 配置应用可见范围
 进入 Microsoft Teams 管理中心，找到 FlashDuty 应用，将应用可见范围调整为所有人（或者您自定义的范围）
 
 > [!NOTE]
 > 如遇到应用状态为 [已阻止]，请稍等片刻后刷新页面或手动修改
-![](https://fcdoc.github.io/img/jNLXwWgaj5dxyxxgtyWjdSjJIF4XJpq1x4cBSQ4eAb4.avif)
+![](https://fcdoc.github.io/img/zh/jNLXwWgaj5dxyxxgtyWjdSjJIF4XJpq1x4cBSQ4eAb4.avif)
 
 ### 4. 查看是否添加成功
 等待几分钟，组织成员即可在 [+Apps] - [Built for your org] 找到此应用集成
 
-![](https://fcdoc.github.io/img/mDDLIqPv8lNm_zqQrh9qHQZc3SCtgyARuN5wDaODyEs.avif)
+![](https://fcdoc.github.io/img/zh/mDDLIqPv8lNm_zqQrh9qHQZc3SCtgyARuN5wDaODyEs.avif)
 
 ## 二、关联团队
 
@@ -38,18 +38,18 @@ Microsoft Teams 集成现处于 Beta 阶段，在关联前您需要先完成以�
 
 #### 1.1 找到 FlashDuty 应用
 如无应用，请联系您的 Microsoft Teams 组织管理员
-![](https://fcdoc.github.io/img/mDDLIqPv8lNm_zqQrh9qHQZc3SCtgyARuN5wDaODyEs.avif)
+![](https://fcdoc.github.io/img/zh/mDDLIqPv8lNm_zqQrh9qHQZc3SCtgyARuN5wDaODyEs.avif)
 
 #### 1.2 添加到目标 Team
 > [!WARN]
 > 注意：此步必须选择目标 Team 的 General Channel，否则将无法发送故障到 Team 中
 
-![](https://fcdoc.github.io/img/yGkKFnJa_bt0FwUNfYNz_HoaDD7RbQUnrm2vuSGceW0.avif)
+![](https://fcdoc.github.io/img/zh/yGkKFnJa_bt0FwUNfYNz_HoaDD7RbQUnrm2vuSGceW0.avif)
 
 ### 2. 发送关联指令
 @FlashDuty 并发送 linkTeam {ID} 到添加的 Team 中，点击立即关联
 
-![](https://fcdoc.github.io/img/3ncB4ZFRKrXfiFI9mY1_dWgRQSlaiFWdjYLozZtc5t8.avif)
+![](https://fcdoc.github.io/img/zh/3ncB4ZFRKrXfiFI9mY1_dWgRQSlaiFWdjYLozZtc5t8.avif)
 
 ## 三、关联用户
 
@@ -57,18 +57,18 @@ Microsoft Teams 集成现处于 Beta 阶段，在关联前您需要先完成以�
 
 #### 1.1 找到 FlashDuty 应用
 如无应用，请联系您的 Microsoft Teams 组织管理员
-![](https://fcdoc.github.io/img/mDDLIqPv8lNm_zqQrh9qHQZc3SCtgyARuN5wDaODyEs.avif)
+![](https://fcdoc.github.io/img/zh/mDDLIqPv8lNm_zqQrh9qHQZc3SCtgyARuN5wDaODyEs.avif)
 
 #### 1.2 点击添加按钮
 > [!WARN]
 > 注意：此步必须选择目标 Team 的 General Channel，否则将无法发送故障到 Team 中
 
-![](https://fcdoc.github.io/img/BxbYezkSRzMseDCvtFvLuNCVzAj5TUTOexiKGkSpo04.avif)
+![](https://fcdoc.github.io/img/zh/BxbYezkSRzMseDCvtFvLuNCVzAj5TUTOexiKGkSpo04.avif)
 
 ### 2. 发送关联指令
 复制指令：linkUser {} 发送到聊天中，再点击立即关联
 
-![](https://fcdoc.github.io/img/cpsWE8YB5hTfUdPnNl4x6T8p7uq40Ew_6763QVKxIqU.avif)
+![](https://fcdoc.github.io/img/zh/cpsWE8YB5hTfUdPnNl4x6T8p7uq40Ew_6763QVKxIqU.avif)
 
 ## 常见问题
 

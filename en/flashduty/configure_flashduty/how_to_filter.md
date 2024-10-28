@@ -34,7 +34,7 @@ Each condition is divided into fields, operators and target values. Among them, 
 > [!NOTE]
 > Condition target values are all strings and support various matching methods, including **Exact**, **Regular**, **Wildcard**, **IP Range**, and **Numerical Size**.
 
-<img src="https://fcdoc.github.io/img/-Vf5HeXq1VMVm1O5j6DdBa2sqiWJKeYxnCN3b9ZTt84.avif" style="display: block; margin: 0 auto;" height="300">
+<img src="https://fcdoc.github.io/img/zh/-Vf5HeXq1VMVm1O5j6DdBa2sqiWJKeYxnCN3b9ZTt84.avif" style="display: block; margin: 0 auto;" height="300">
 
 As shown in the diagram above, there are two sets of conditions, each with two conditions and multiple matching values. If the severity is "Critical" or "Warning" and the check label equals "Binlog Synchronization Delay", the overall condition is met. Otherwise, if the check label contains "cpu", "io", or "disk" and the value label's numerical value is greater than 90, the overall condition is also met. The filter conditions can also be described intuitively using an expression:
 

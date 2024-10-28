@@ -6,7 +6,7 @@ brief: 了解如何快速上手 Flashduty
 
 ## 演示视频
 
-<video controls src="https://fcdoc.github.io/img/demo.mp4"></video>
+<video controls src="https://fcdoc.github.io/img/zh/demo.mp4"></video>
 
 ## 免费开始
 
@@ -19,7 +19,7 @@ brief: 了解如何快速上手 Flashduty
 
 ## 基本流程
 
-![](https://fcdoc.github.io/img/ou5ipHtxUCsHg62yRMA8mRHHPtwemssZ5PAlcsAG2MY.avif)
+![](https://fcdoc.github.io/img/zh/ou5ipHtxUCsHg62yRMA8mRHHPtwemssZ5PAlcsAG2MY.avif)
 
 ### 创建协作空间
 

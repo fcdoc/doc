@@ -41,11 +41,11 @@ brief: 通过 webhook 的方式同步腾讯云监控 CM 告警事件到快猫星
 3. 填写回调地址为集成的推送地址，通知语言选择 英文
 4. 点击 保存 按钮，保存模板
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/Mx0ptF5_sB39VvPufOJofjlLXjqmecyBt8CYNIPXM3c.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/Mx0ptF5_sB39VvPufOJofjlLXjqmecyBt8CYNIPXM3c.avif" />
 
 5. 进入 告警配置 -> 告警策略 页面，选择针对所有要发送事件的告警策略，进入详情，添加上步新建的通知模板
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/wmSUn2CyyOZJ-kktoTUMQ3jtGgD2GqNx51IVcZdafIk.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/wmSUn2CyyOZJ-kktoTUMQ3jtGgD2GqNx51IVcZdafIk.avif" />
 
 6. 回到集成列表，如果展示了最新事件时间，说明配置成功且收到事件
 7. 完成

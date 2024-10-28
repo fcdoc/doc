@@ -18,7 +18,7 @@ Configuration path: **Integration Center => Alarm Events => Specific Integration
 **7. Default Route:** At least one routing rule is required for shared integration to receive alarm events. A default route is provided, which will distribute events to the corresponding collaboration space if no other rules match.
 **8. Delivery Space:** You can select multiple collaboration spaces to deliver matching alarms.
 
-<img src="https://fcdoc.github.io/img/6OTNxniH4889Qyk8SdVuF3-vrYcF9bxAE2CGG329U0s.avif"  width="800">
+<img src="https://fcdoc.github.io/img/zh/6OTNxniH4889Qyk8SdVuF3-vrYcF9bxAE2CGG329U0s.avif"  width="800">
 
 ## Configuration Example
 
@@ -26,7 +26,7 @@ Configuration path: **Integration Center => Alarm Events => Specific Integration
 **Scenario:** Route alarms from the same business group in the FlashCat monitoring platform to a unified collaboration space.
 **Rule:** Match based on the Labels.group_name tag.
 
-<img src="https://fcdoc.github.io/img/6zBXABVJ4xFMBJd7MQ7oT8Sla6LZa19rMPbUjXJ4IT4.avif"  width="800">
+<img src="https://fcdoc.github.io/img/zh/6zBXABVJ4xFMBJd7MQ7oT8Sla6LZa19rMPbUjXJ4IT4.avif"  width="800">
 
 ## FAQs
 

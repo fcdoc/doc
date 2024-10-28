@@ -45,19 +45,19 @@ brief: 通过 webhook 的方式同步Graylog告警事件到快猫星云，实现
 4. 输入 Title 和 Description。
 5. Notification Type 选择 **HTTP Notification**，如下图。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/eWI2dwAH-u6NiXImb2P94U6PLQwwqJ874Z-9dTEnG8U.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/eWI2dwAH-u6NiXImb2P94U6PLQwwqJ874Z-9dTEnG8U.avif" />
 
 6. 输入 FlashDuty 获取到的 URL (第一次输入需要对 URL 加白)。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/lkx7VzY3ZZqF9K-qUu469azcTPzOeOevMdLD1b5Q9cU.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/lkx7VzY3ZZqF9K-qUu469azcTPzOeOevMdLD1b5Q9cU.avif" />
 
 7. 点击 Save 保存加白的 URL
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/99FRplZHwxawFUPjKweW08evg86CU7O26tKNkjuwANk.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/99FRplZHwxawFUPjKweW08evg86CU7O26tKNkjuwANk.avif" />
 
 8. 保存后，提交 Create。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/LWGvCpNBZ1fE2ILfxZ9-COnwvCXk806KviB6KQ_B4fg.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/LWGvCpNBZ1fE2ILfxZ9-COnwvCXk806KviB6KQ_B4fg.avif" />
 
 ### 步骤2：在告警事件中使用 FlashDuty 告警通道
 1. 创建或编辑已有的 Event Definition。
@@ -67,7 +67,7 @@ brief: 通过 webhook 的方式同步Graylog告警事件到快猫星云，实现
 5. 点击 Done。
 6. 下一步完成即可。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/FBEZ5WZwmS1KOXauhVJ_PCxKzhnwgCfeWVriVNKUqsA.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/FBEZ5WZwmS1KOXauhVJ_PCxKzhnwgCfeWVriVNKUqsA.avif" />
 </div>
 
 ## 二、状态对照

@@ -6,7 +6,7 @@ brief: Learn how to quickly get started with Flashduty
 
 ## Demonstration Video
 
-<video controls src="https://fcdoc.github.io/img/demo.mp4"></video>
+<video controls src="https://fcdoc.github.io/img/zh/demo.mp4"></video>
 
 ## Get Started for Free
 
@@ -19,7 +19,7 @@ brief: Learn how to quickly get started with Flashduty
 
 ## Basic Workflow
 
-![](https://fcdoc.github.io/img/ou5ipHtxUCsHg62yRMA8mRHHPtwemssZ5PAlcsAG2MY.avif)
+![](https://fcdoc.github.io/img/zh/ou5ipHtxUCsHg62yRMA8mRHHPtwemssZ5PAlcsAG2MY.avif)
 
 ### Create a Collaboration Space
 

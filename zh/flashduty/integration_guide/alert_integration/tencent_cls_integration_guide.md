@@ -42,7 +42,7 @@ brief: 通过 webhook 的方式同步腾讯云日志服务 CLS 监控告警事�
 1. 登录您的腾讯云控制台，选择日志服务 CLS 产品，进入 监控告警 - 通知渠道组
 2. 单击 __新建__ 开始新建
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/9TVvjInBRsJOGHYptzIJmMgCaYUTRTohbSwENzk9_bg.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/9TVvjInBRsJOGHYptzIJmMgCaYUTRTohbSwENzk9_bg.avif" />
 
 3. 如图，__名称__ 填写具体的渠道组名称，__渠道类型__选择“自定义接口回调”，__回调地址__ 填写集成的推送地址，__请求方法__ 选择POST
 
@@ -57,7 +57,7 @@ brief: 通过 webhook 的方式同步腾讯云日志服务 CLS 监控告警事�
 1. 登录您的腾讯云控制台，选择日志服务 CLS 产品，进入 监控告警 - 告警策略
 2. 单击 __新建__ 开始新建
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/FCfCmqlCwhjze8nSa88mkVt3nUX1myHyDFygJd8_lIc.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/FCfCmqlCwhjze8nSa88mkVt3nUX1myHyDFygJd8_lIc.avif" />
 
 3. 如图，__告警名称__填写具体的告警名称，日志主题选择具体的日志主题
 

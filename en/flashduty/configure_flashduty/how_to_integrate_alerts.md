@@ -14,14 +14,14 @@ Exclusive integration addition path: **Collaboration Space Details => Integratio
 - In exclusive integration, alarms accessed in a collaboration space **do not require configuration of routing rules, meaning all alarms will be distributed to this space** (excluding filtered alarms) and cannot be shared with other collaboration spaces.
 - Exclusive integration should be chosen when alarms do not need to be distributed to multiple different spaces.
 
-![zhuanshujicheng1.png](https://fcdoc.github.io/img/OjUArE19Yq2a3UdlhEmLR_3NvXfy2pvEnGf2ZYBpIxE.avif)
+![zhuanshujicheng1.png](https://fcdoc.github.io/img/zh/OjUArE19Yq2a3UdlhEmLR_3NvXfy2pvEnGf2ZYBpIxE.avif)
 
 ### Shared Integration
 Shared integration addition path: **Integration Center => Alarm Events**.
 - Alarm event types created in the Integration Center are global and must **be directed to specific collaboration spaces or multiple collaboration spaces using routing rules**.
 - Each integration **must be configured with at least one collaboration space to receive alarms; otherwise, the integration will not be effective, meaning it cannot receive alarm events**.
 
-![jichengzhongxin.png](https://fcdoc.github.io/img/Ag1OnefntjpAjD-qq6fCgotIHvpQl1F-G2kc9VC7WAs.avif)
+![jichengzhongxin.png](https://fcdoc.github.io/img/zh/Ag1OnefntjpAjD-qq6fCgotIHvpQl1F-G2kc9VC7WAs.avif)
 
 > [!NOTE]
 > - Exclusive or shared integration will generate a push address after a new alarm integration is added. Copy the modified address to the corresponding platform.

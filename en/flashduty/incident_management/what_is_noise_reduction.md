@@ -26,7 +26,7 @@ Faults can be triggered in two ways: manually or automatically. Alarm noise redu
 4. Flashduty assigns personnel according to the dispatching strategy and notifies them
 5. Personnel receive the notification and begin to address the fault
 
-![Flashduty-Alarm Noise Reduction.png](https://fcdoc.github.io/img/162SjbaT8JsHNjwpD1lTkMqYHD9AafLsUB1CvUKGVV0.avif)
+![Flashduty-Alarm Noise Reduction.png](https://fcdoc.github.io/img/zh/162SjbaT8JsHNjwpD1lTkMqYHD9AafLsUB1CvUKGVV0.avif)
 
 ## Set Alarm Aggregation
 
@@ -40,7 +40,7 @@ Go to [Collaboration Space Details] - [Alarm Noise Reduction], you can set the *
 - Storm Alert: After a fault is triggered, the system immediately dispatches and notifies (unless a delay notification is set). Subsequent alarms are incorporated without triggering new notifications, which may prevent timely detection of an alarm storm. Therefore, we provide a threshold; when the number of incorporated alarms reaches this threshold, a storm alert is triggered to prompt urgent handling.
 - Preview: Use the preview function to pull recent events and render the noise reduction results in real-time to assess the effectiveness of the noise reduction
 
-<img src="https://fcdoc.github.io/img/V7G1hZj1IPX10Fsa_ekHR77oKs8POHsib5y2zg-Yjdw.avif" style="display: block; margin: 0 auto;" height="400">
+<img src="https://fcdoc.github.io/img/zh/V7G1hZj1IPX10Fsa_ekHR77oKs8POHsib5y2zg-Yjdw.avif" style="display: block; margin: 0 auto;" height="400">
 
 ## View Aggregation Examples
 
@@ -65,7 +65,7 @@ We can see the final [fault-alarm-event] correlation relationship through the co
 - Click on the alarm title to view the details of the associated alarm, including its timeline and related events
 - Click on the event point to view the specific content reported by the event, including tags and descriptions
 
-![](https://fcdoc.github.io/img/jAkbujzJKD3war7mV4EyzsYvd-TZB1BX_wJ1PUGZKTM.avif)
+![](https://fcdoc.github.io/img/zh/jAkbujzJKD3war7mV4EyzsYvd-TZB1BX_wJ1PUGZKTM.avif)
 
 ## FAQs
 

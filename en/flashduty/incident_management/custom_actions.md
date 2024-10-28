@@ -27,7 +27,7 @@ Common scenarios for using custom operations:
 
 After creation, you can see the operation button under [Fault Details - More Operations] in the corresponding space. Click the button and the system will prompt you with the operation result. If the operation is successful, the system will write the operation record.
 
-![custom-action-do.png](https://fcdoc.github.io/img/Sjr8pj4VrgWhgGHEdi8haXEXy1mEnsNuceGjfoDFeG8.avif)
+![custom-action-do.png](https://fcdoc.github.io/img/zh/Sjr8pj4VrgWhgGHEdi8haXEXy1mEnsNuceGjfoDFeG8.avif)
 
 ### How to Implement Webhooks?
 

@@ -12,7 +12,7 @@ By integrating a third-party Slack application, the capability to receive and re
 
 2. The page jumps to the interface of Slack select **the workspace** in the upper right corner, and then click **Allow**
 
-<img src="https://fcdoc.github.io/img/aXIi-nrANb2NC__s3jg6kIgcoh68NENKYDJb8xhf9Mk.avif" alt="drawing" width="400"/>
+<img src="https://fcdoc.github.io/img/zh/aXIi-nrANb2NC__s3jg6kIgcoh68NENKYDJb8xhf9Mk.avif" alt="drawing" width="400"/>
 
 3. Enter the data source name and click **Save**
 

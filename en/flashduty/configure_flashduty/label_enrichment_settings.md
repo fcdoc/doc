@@ -27,7 +27,7 @@ Each alert event in the integration center has an option for configuring tag enh
 - **Mapping:** New key-value pairs can be generated from the system's source key values through mapping relationships. This requires预先 creating a schema [mapping relationship](https://developer.flashcat.cloud/api-142409927) and [uploading metadata](https://developer.flashcat.cloud/api-145679479) before configuration, with specific settings referred to in the configuration examples below.
 - **Deletion:** Deleting a specified tag will be ineffective if the tag does not exist.
 
-![](https://fcdoc.github.io/img/C3KhUjC60kncXxls61TDQEEruy0WQewZoicEf02fmks.avif)
+![](https://fcdoc.github.io/img/zh/C3KhUjC60kncXxls61TDQEEruy0WQewZoicEf02fmks.avif)
 
 ### Configuration Instructions
 
@@ -36,7 +36,7 @@ Each alert event in the integration center has an option for configuring tag enh
 
 - **Preview:** After completing the rule configuration, a preview is supported, allowing for a visual observation of the configuration effect.
 
-![](https://fcdoc.github.io/img/YlGXF3qKrge-Zo66mUMwnDL5zeaWT7GLg-2SXJRoekA.avif)
+![](https://fcdoc.github.io/img/zh/YlGXF3qKrge-Zo66mUMwnDL5zeaWT7GLg-2SXJRoekA.avif)
 
 > [!NOTE]
 > When multiple tag rules are configured, they will be executed in top-to-bottom order. If a rule does not match, the corresponding tag will not be generated/deleted, and no prompt message will be displayed.
@@ -46,27 +46,27 @@ Each alert event in the integration center has an option for configuring tag enh
 **Scenario:** Alerts from email integration require key information to be extracted from the description as tags for application in other scenarios, such as extracting IP addresses and trigger values from the description into separate tags.
 #### 1.1 Original Alert Text
 
-<img src="https://fcdoc.github.io/img/Rb27ZLASfgZmpdWolbpWjks_kXixho4PPNWCFKQsplk.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/Rb27ZLASfgZmpdWolbpWjks_kXixho4PPNWCFKQsplk.avif" style="display: block; margin: 0 auto;" width="500">
 
 #### 1.2 Extraction Rules
 
-<img src="https://fcdoc.github.io/img/AhCk-nFOBQrsrpMVOSfrX9IfHm9MBNjDCA0djxuWKa4.avif" style="display: block; margin: 0 auto;"  width="500">
+<img src="https://fcdoc.github.io/img/zh/AhCk-nFOBQrsrpMVOSfrX9IfHm9MBNjDCA0djxuWKa4.avif" style="display: block; margin: 0 auto;"  width="500">
 
 #### 1.3 Extraction Effect
-<img src="https://fcdoc.github.io/img/uZkBXgpld3Ng5wCstL8exfe4C0kvYx_lu564VLcBfpk.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/uZkBXgpld3Ng5wCstL8exfe4C0kvYx_lu564VLcBfpk.avif" style="display: block; margin: 0 auto;" width="500">
 
 ### 2. **Tag Combination**
 **Scenario:** The company's log platform can access log details directly using a domain name + Event ID + timestamp, but the alert information only contains Event ID and timestamp tags, so it needs to be combined into an access address based on this information.
 #### 2.1 Original Alert Text
-<img src="https://fcdoc.github.io/img/-AL6h9QgiwkE2AsfYeBfTbF94zi5HqCzjLoAqfZD_i4.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/-AL6h9QgiwkE2AsfYeBfTbF94zi5HqCzjLoAqfZD_i4.avif" style="display: block; margin: 0 auto;" width="500">
 
 #### 2.2 Combination Rules
 
-<img src="https://fcdoc.github.io/img/O62n1CJ2Qp0j7Xf2zboj1K5NfOcaawF_fO_arncUQhg.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/O62n1CJ2Qp0j7Xf2zboj1K5NfOcaawF_fO_arncUQhg.avif" style="display: block; margin: 0 auto;" width="500">
 
 #### 2.3 Combination Effect
 
-<img src="https://fcdoc.github.io/img/-4qbdrhz0uEY1G83zBTJgRXeubIXeQ-iaLFhZCtpc5Q.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/-4qbdrhz0uEY1G83zBTJgRXeubIXeQ-iaLFhZCtpc5Q.avif" style="display: block; margin: 0 auto;" width="500">
 
 ### 3. **Tag Mapping**
 **Scenario:** When the tag values in source alert information are not fixed and their meanings are not intuitively clear, mapping can be used to create new defined tags and values; for example, when the source alert only contains resource type ID information, but you want to reflect the corresponding resource type names, this can be achieved through mapping.
@@ -119,15 +119,15 @@ curl --location --request POST 'https://api.flashcat.cloud/enrichment/mapping/da
 
 #### 3.3 Configure Mapping Relationship
 
-<img src="https://fcdoc.github.io/img/0yGvcoNhFa8b42HZsdo1DdoPWtNRO5U9SrVN0Dmaq_U.avif" style="display: block; margin: 0 auto;"  width="500">
+<img src="https://fcdoc.github.io/img/zh/0yGvcoNhFa8b42HZsdo1DdoPWtNRO5U9SrVN0Dmaq_U.avif" style="display: block; margin: 0 auto;"  width="500">
 
 ##### 3.3.1 Original Alert Text
 
-<img src="https://fcdoc.github.io/img/ozOHAnGimcC2mkLn3fOyNnJ9w6aJH-hcL4yvuhv3Jrs.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/ozOHAnGimcC2mkLn3fOyNnJ9w6aJH-hcL4yvuhv3Jrs.avif" style="display: block; margin: 0 auto;" width="500">
 
 ##### 3.3.2 Mapping Effect
 
-<img src="https://fcdoc.github.io/img/R97ivADiQK8AcLgF-KHsoc88JjPPW2aQR_GlZCQS-Yk.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/R97ivADiQK8AcLgF-KHsoc88JjPPW2aQR_GlZCQS-Yk.avif" style="display: block; margin: 0 auto;" width="500">
 
 > [!NOTE]
 > If you do not want the source tag to still exist, you can achieve this through a deletion rule.

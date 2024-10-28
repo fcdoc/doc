@@ -45,7 +45,7 @@ brief: 通过 webhook 的方式同步阿里云云监控告警事件到快猫星�
 3. 如图，在 高级设置 下填写回调地址为集成的推送地址
 4. 点击 确认 按钮，提交更新
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/n5-x2vmAcZT9W1drSq44Cz74Tmi7RGcJCjr2w_n3Vls.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/n5-x2vmAcZT9W1drSq44Cz74Tmi7RGcJCjr2w_n3Vls.avif" />
 
 5. 对于所有期望同步事件的告警规则，重复上述步骤
 6. 回到集成列表，如果展示了最新事件时间，说明配置成功且收到事件
@@ -62,7 +62,7 @@ brief: 通过 webhook 的方式同步阿里云云监控告警事件到快猫星�
 3. 如图，在 Webhook 下填写集成的推送地址
 4. 点击 确认 按钮，提交更新
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/tJbcFhqxnFI_YxB1_byBDX_PODjjD-DNSFzTXoCKZFM.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/tJbcFhqxnFI_YxB1_byBDX_PODjjD-DNSFzTXoCKZFM.avif" />
 
 5. 对于所有期望同步事件的联系人，重复上述步骤
 6. 回到集成列表，如果展示了最新事件时间，说明配置成功且收到事件

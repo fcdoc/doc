@@ -60,7 +60,7 @@ brief: 在 Flashduty 生成唯一的邮件地址，通过邮件的方式将告�
 - 接收所有邮件，当邮件内容中包含 **RESOVED** 字样时，关闭告警，否则触发新告警；
 - Alert Key 从邮件标题中提取，规则为 **/(.\*)/**。
 
-<img src="https://fcdoc.github.io/img/UzSAxxB8q30joMRUlGUldv2u9iiYGCNCXG0uJmiRvtA.avif" alt="drawing" width="800"/>
+<img src="https://fcdoc.github.io/img/zh/UzSAxxB8q30joMRUlGUldv2u9iiYGCNCXG0uJmiRvtA.avif" alt="drawing" width="800"/>
 
 ### 注意事项
 

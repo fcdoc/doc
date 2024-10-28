@@ -222,7 +222,7 @@ You need to pre-configure **the integration center - Instant Messaging -** integ
 
 As shown in the figure below:
 
-<img src="https://fcdoc.github.io/img/J98dSP86cWqCChp7NGPy5yWabfG66jrDlLFIgzpMjYw.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fcdoc.github.io/img/zh/J98dSP86cWqCChp7NGPy5yWabfG66jrDlLFIgzpMjYw.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
 If you want to display only key tag information, you can refer to the following code snippet:
 
@@ -264,7 +264,7 @@ You need to pre-configure **the integration center - Instant Messaging -** integ
 
 As shown in the figure below:
 
-<img src="https://fcdoc.github.io/img/weJqFl22lWcHW3KZo4lFHKRadEvGUclE7OL3W8BM2F0.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fcdoc.github.io/img/zh/weJqFl22lWcHW3KZo4lFHKRadEvGUclE7OL3W8BM2F0.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
 If you want to display only key tag information, you can refer to the following code snippet:
 
@@ -324,7 +324,7 @@ You need to pre-configure **the integration center - Instant Messaging - Enterpr
 
 As shown in the figure below:
 
-<img src="https://fcdoc.github.io/img/kc9K5HzTgAu_MmhpaEV9CWqmg5AZwDmV6X4g_T10mnc.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fcdoc.github.io/img/zh/kc9K5HzTgAu_MmhpaEV9CWqmg5AZwDmV6X4g_T10mnc.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
 **Note that Enterprise WeChat limits the length of the card. In the template rendering area, you can render no more than 8 lines of content, and the part exceeding 8 lines will be hidden.**
 
@@ -340,7 +340,7 @@ You need to pre-configure **the Integration Center - IM - Slack integration befo
 
 As shown in the figure below:
 
-<img src="https://fcdoc.github.io/img/0m3LAvve_fgFH8cVvhTk6Z4Qwpw5SUFee7hf7XliCAs.avif" alt="drawing" style="display: block; margin: 0 auto;" width="600"/>
+<img src="https://fcdoc.github.io/img/zh/0m3LAvve_fgFH8cVvhTk6Z4Qwpw5SUFee7hf7XliCAs.avif" alt="drawing" style="display: block; margin: 0 auto;" width="600"/>
 
 If you want to display only key tag information, you can refer to the following code snippet:
 
@@ -382,7 +382,7 @@ You need to pre-configure **the Integration Center - IM - Microsoft Teams integr
 
 As shown in the figure below:
 
-<img src="https://fcdoc.github.io/img/BAqnlzAiIJTgO4QpAvulu4fB62HIMfiWSXjldSxB5Uk.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
+<img src="https://fcdoc.github.io/img/zh/BAqnlzAiIJTgO4QpAvulu4fB62HIMfiWSXjldSxB5Uk.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
 
 If you want to display only key tag information, you can refer to the following code snippet:
 
@@ -424,7 +424,7 @@ You need to pre-configure **the Integration Center - IM - Microsoft Teams integr
 
 As shown in the figure below:
 
-<img src="https://fcdoc.github.io/img/BAqnlzAiIJTgO4QpAvulu4fB62HIMfiWSXjldSxB5Uk.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
+<img src="https://fcdoc.github.io/img/zh/BAqnlzAiIJTgO4QpAvulu4fB62HIMfiWSXjldSxB5Uk.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
 
 If you want to display only key tag information, you can refer to the following code snippet:
 
@@ -689,7 +689,7 @@ If custom content is not set, the system default template will be used to render
 <body data-id="__react-email-body" style="background-color:rgb(255,255,255);border-radius:0.25rem;margin-top:2.5rem;margin-bottom:2.5rem;margin-left:auto;margin-right:auto;padding:1rem;min-width:400px;max-width:660px;font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji">
 <div style="width:100%;height:0.375rem;margin-bottom:2rem" class="bg-{{.IncidentSeverity}}"></div>
 <div style="display:flex;align-items:center;margin-bottom:1.5rem">
-<div style="display:flex;align-items:flex-end;gap:1rem"><img witdh="120" data-id="react-email-img" src="https://fcdoc.github.io/img/5sp7YaSh-LnDzReB0Qnd3HSfrGRY6X8Amie5S-FmmNc.avif" height="40" style="display:block;outline:none;border:none;text-decoration:none" /><span style="font-size:1.25rem;line-height:1.75rem;font-weight:600">您有故障待处理</span></div>
+<div style="display:flex;align-items:flex-end;gap:1rem"><img witdh="120" data-id="react-email-img" src="https://fcdoc.github.io/img/zh/5sp7YaSh-LnDzReB0Qnd3HSfrGRY6X8Amie5S-FmmNc.avif" height="40" style="display:block;outline:none;border:none;text-decoration:none" /><span style="font-size:1.25rem;line-height:1.75rem;font-weight:600">您有故障待处理</span></div>
 </div>
 <div style="background-color:rgb(243,244,246);padding:2rem;margin-top:1rem;border-radius:0.5rem">
 <div style="display:flex;flex-direction:column;gap:0.75rem">
@@ -752,4 +752,4 @@ If custom content is not set, the system default template will be used to render
 
 As shown in the figure below:
 
-<img src="https://fcdoc.github.io/img/t84afsCGAkRd_qtwBXqtWMEseQIZRcdCoeRYViFtl8Y.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fcdoc.github.io/img/zh/t84afsCGAkRd_qtwBXqtWMEseQIZRcdCoeRYViFtl8Y.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>

@@ -61,7 +61,7 @@ wget https://download.flashcat.cloud/flashduty/integration/zabbix/zbx_mediatype_
 - `zabbix_url`：Zabbix 控制台地址，直接复制即可（如果您的页面配置了 tomcat/nginx 转发路径，请同时携带），系统会在路径后拼接 trigger_id 等参数来生成告警详情页面连接
 - `HTTPProxy`：如果您的 Zabbix Server 不能直接访问 Flashduty 服务，可以将该参数设置为一个代理地址
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/Wa1lJ6E3soYLZa2u6CJUpyAbJsVvqjqDuTl2m5pyK-g.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/Wa1lJ6E3soYLZa2u6CJUpyAbJsVvqjqDuTl2m5pyK-g.avif" />
 
 4. 点击 Update，保存配置
 
@@ -79,7 +79,7 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 - Send To：填写 N/A
 - 其他配置使用默认配置，保持不变
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/NQZGtjnDMgN5oBrDr-I7TfOtAVCihNKlxVsahULxRMg.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/NQZGtjnDMgN5oBrDr-I7TfOtAVCihNKlxVsahULxRMg.avif" />
 
 2. 点击 Add 按钮，退出添加 media 窗口
 3. 点击 Update 按钮，退出编辑 user 页面
@@ -105,8 +105,8 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 - 点击 Add 按钮，完成该配置项配置
 - 重复以上步骤，完成对 `Recovery operations` 和 `Update operations` 的配置
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/eBJqunprfGJYQKJ843YcyuGkeEtykZmW2n9Wme-xqTc.avif" />
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/EPSOBfH6Q2QrVkBSqKBj5rEJxsrnm7VD2gaoczsAl00.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/eBJqunprfGJYQKJ843YcyuGkeEtykZmW2n9Wme-xqTc.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/EPSOBfH6Q2QrVkBSqKBj5rEJxsrnm7VD2gaoczsAl00.avif" />
 
 </div>
 
@@ -119,7 +119,7 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 1. 点击 Actions，弹窗内可以看到消息通知结果
 2. 找到 Flashduty 对应日志，如果 Status 为 `Sent`，代表通知成功。否则根据提示排查原因
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/OXyBJbDkZ1sj4otE-Is2dYelUR6ggs6rHPr-VtC3JGk.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/OXyBJbDkZ1sj4otE-Is2dYelUR6ggs6rHPr-VtC3JGk.avif" />
 
 3. 回到集成列表，如果展示了最新事件时间，说明配置成功且收到事件
 4. 完成
@@ -144,7 +144,7 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 - __Zabbix 控制台地址__，直接复制即可（如果您的页面配置了 tomcat/nginx 转发路径，请同时携带），用于生成告警详情页面连接。如果没有空着即可，保持在第四个参数
 - `HTTPProxy`：如果您的 Zabbix Server 不能直接访问 Flashduty 服务，可以将该参数设置为一个代理地址。如果没有空着即可，保持在第五个参数
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/Pv1jMnTxVQTysLQ8P6aBOVM8MChQKRarA8SW01QX-1c.avif"/>
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/Pv1jMnTxVQTysLQ8P6aBOVM8MChQKRarA8SW01QX-1c.avif"/>
 
 3. `Script name` 填写 `send-to-flashduty.sh`
 4. 点击 Update，保存配置
@@ -179,7 +179,7 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 - Send To：填写 N/A
 - 其他配置使用默认配置，保持不变
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/GWCfInrRqnlRwvapcrtU-olJfugWnKPWNB6ZZ7BLpsY.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/GWCfInrRqnlRwvapcrtU-olJfugWnKPWNB6ZZ7BLpsY.avif" />
 
 2. 点击 Add 按钮，退出添加 media 窗口
 3. 点击 Update 按钮，退出编辑 user 页面
@@ -205,7 +205,7 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 - 点击 Add 按钮，完成该配置项配置
 - 重复以上步骤，完成对 `Recovery operations` 和 `Update operations` 的配置
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/HlbY6VbtYAM28b-HLPawASZgS_QHOMmhsx0V2X9QabQ.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/HlbY6VbtYAM28b-HLPawASZgS_QHOMmhsx0V2X9QabQ.avif" />
 
 3. 选择 `Operations`，分别更新三种场景的通知内容配置：
 
@@ -219,7 +219,7 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 
 - 重复以上步骤，完成对 `Recovery operations` 和 `Update operations` 的配置
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/uLSWCypOMpiVbmkFV38ApSvAF3wiRw6ci5Gu1d_SbWk.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/uLSWCypOMpiVbmkFV38ApSvAF3wiRw6ci5Gu1d_SbWk.avif" />
 
 </div>
 
@@ -232,7 +232,7 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 1. 点击 Actions，弹窗内可以看到消息通知结果
 2. 找到 Flashduty 对应日志，如果 Status 为 Sent，代表通知成功。否则根据提示排查原因
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/ZWiq1b69iYwn2zoaaTSqjHCvFiIkRe68itpXEnQes1A.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/ZWiq1b69iYwn2zoaaTSqjHCvFiIkRe68itpXEnQes1A.avif" />
 
 3. 回到集成列表，如果展示了最新事件时间，说明配置成功且收到事件
 4. 完成

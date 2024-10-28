@@ -65,7 +65,7 @@ brief: >-
 2. 批量选中您期望导入的告警规则，右上角选择批量更新告警规则
 3. 在弹窗中选择“回调地址”字段，新增输入框中填写集成的推送地址，如下图所示：
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/UjmNaNKJ88MKM2yEVC51LPmB0PoC2jve-WRDdLKvsjk.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/UjmNaNKJ88MKM2yEVC51LPmB0PoC2jve-WRDdLKvsjk.avif" />
 
 4. 回到集成列表，如果展示了最新事件时间，说明配置成功且收到事件
 5. 完成
@@ -83,7 +83,7 @@ brief: >-
 2. 进入__系统配置-通知设置-回调地址__页面
 3. 如下图所示，启用一个新的 webhook，`URL` 部分填写集成的推送地址
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/KlaBAhQQ7VXvE2gal3qgIgbV0nuXhUjcu7ERu8Tg948.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/KlaBAhQQ7VXvE2gal3qgIgbV0nuXhUjcu7ERu8Tg948.avif" />
 
 4. 完成
 

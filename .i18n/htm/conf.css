@@ -4,10 +4,7 @@
 }
 
 #Ft>b>a.site {
-  background: url("//p.3ti.site/i18n.svg") 0 0 / cover;
-  display: block;
-  height: 24px;
-  opacity: 0.8;
-  width: 115px;
-  flex-shrink: 0;
+  background: none 50% / contain no-repeat;
+  /* muse write this, for overwrite linear-gradient(0, #f40, #f90)*/
+  background-image: url(//fcdoc.github.io/img/i.svg) !important;
 }

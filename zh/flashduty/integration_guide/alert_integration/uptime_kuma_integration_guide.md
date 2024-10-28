@@ -42,7 +42,7 @@ brief: 通过 webhook 的方式同步 Uptime Kuma 告警事件到快猫星云，
 4. `Severity` 为严重程度，按需选择；
 5. 提交保存
 
-<img alt="drawing" width="400" src="https://fcdoc.github.io/img/qhNB9d5__aqCBTrcBAcfGYP5YeeaAAdrSxF3KlQjg6M.avif" />
+<img alt="drawing" width="400" src="https://fcdoc.github.io/img/zh/qhNB9d5__aqCBTrcBAcfGYP5YeeaAAdrSxF3KlQjg6M.avif" />
 
 **步骤 2：配置监控项**
 
@@ -53,7 +53,7 @@ brief: 通过 webhook 的方式同步 Uptime Kuma 告警事件到快猫星云，
 3. 如需设置标签，可以添加 `Tags`，注意仅同时存在 Key/Value 的标签才会推送到 FlashDuty；
 4. 提交保存，等待告警触发。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/MhOsvqHsYIku4nGsClITGQNGpNqg1ceKLBKd6xcN_P0.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/MhOsvqHsYIku4nGsClITGQNGpNqg1ceKLBKd6xcN_P0.avif" />
 
 </div>
 

@@ -60,7 +60,7 @@ Configuration Example:
 - Receive all emails; when the content includes the word **RESOLVED**, close the alert, otherwise trigger a new one
 - Extract the Alert Key from the email title using the rule **/(.*)/**.
 
-<img src="https://fcdoc.github.io/img/UzSAxxB8q30joMRUlGUldv2u9iiYGCNCXG0uJmiRvtA.avif" alt="drawing" width="800"/>
+<img src="https://fcdoc.github.io/img/zh/UzSAxxB8q30joMRUlGUldv2u9iiYGCNCXG0uJmiRvtA.avif" alt="drawing" width="800"/>
 
 ### Notes
 

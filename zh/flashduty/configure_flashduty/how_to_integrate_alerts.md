@@ -14,14 +14,14 @@ FlashDuty 作为统一告警处理平台，其本身不产生告警数据，需�
 - 在协作空间的专属集成接入的告警**不需要配置路由规则，即所有告警都会分发到该空间**(排除已过滤的告警)，无法与其他协作空间共享。
 - 当告警不需要分发到多个不同空间时，可以选择专属集成。
 
-![zhuanshujicheng1.png](https://fcdoc.github.io/img/OjUArE19Yq2a3UdlhEmLR_3NvXfy2pvEnGf2ZYBpIxE.avif)
+![zhuanshujicheng1.png](https://fcdoc.github.io/img/zh/OjUArE19Yq2a3UdlhEmLR_3NvXfy2pvEnGf2ZYBpIxE.avif)
 
 ### 共享集成
 共享集成添加路径：**集成中心=>告警事件**。
 - 集成中心创建的告警事件类型是全局的，必须**通过路由规则来选择将告警推送到某个协作空间或多个协作空间**。
 - 每个集成 **必须配置至少一个接收告警的协作空间，否则该集成不生效，即无法接收告警事件**。
 
-![jichengzhongxin.png](https://fcdoc.github.io/img/Ag1OnefntjpAjD-qq6fCgotIHvpQl1F-G2kc9VC7WAs.avif)
+![jichengzhongxin.png](https://fcdoc.github.io/img/zh/Ag1OnefntjpAjD-qq6fCgotIHvpQl1F-G2kc9VC7WAs.avif)
 
 > [!NOTE]
 > - 专属集成或共享集成在新增告警集成后都会产生一个推送地址，将改地址复制到对应平台即可。

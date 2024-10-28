@@ -35,7 +35,7 @@ brief: 通过 webhook 的方式同步 Jira Issue 事件到快猫星云，实现�
 4. 可选择填写 JQL 来进一步缩小（如特定的 Projects ）要同步的事件范围
 5. 点击 Save 按钮，提交配置
 
-<img alt="drawing" src="https://fcdoc.github.io/img/B6IhBdbjTowcYF9BrtI8yg1Zd8GUkJkCmDOleGUd7PE.avif" />
+<img alt="drawing" src="https://fcdoc.github.io/img/zh/B6IhBdbjTowcYF9BrtI8yg1Zd8GUkJkCmDOleGUd7PE.avif" />
 
 5. 完成
 

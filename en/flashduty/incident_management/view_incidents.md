@@ -10,7 +10,7 @@ Connect all company alarm events to Flashduty to monitor and manage alarms centr
 
 Flashduty offers two entry points for viewing the fault list: one within the collaboration space and another under the fault management menu. The difference lies in the fact that under the fault management menu, you can view faults across multiple collaboration spaces, even those of the entire company.
 
-![](https://fcdoc.github.io/img/HHHZag1gZSDUdLUUapF-diTesLEySgjEC5azLRzY8Ys.avif)
+![](https://fcdoc.github.io/img/zh/HHHZag1gZSDUdLUUapF-diTesLEySgjEC5azLRzY8Ys.avif)
 
 1. **Assignees**: By default, it focuses on faults **assigned to me**, but can be switched to view faults across the entire account.
 2. **Processing Progress**: Filter faults by processing progress, with the default set to **All**.
@@ -28,7 +28,7 @@ Flashduty offers two entry points for viewing the fault list: one within the col
 
 Aggregate views provide a different perspective for viewing faults, allowing you to define various aggregation dimensions. The essence of aggregation dimensions is real-time grouping, such as aggregating by severity.
 
-![](https://fcdoc.github.io/img/J7MizvU-Gd2gBNItJuE5kbo0FeypSzo74DxQSwGZm_8.avif)
+![](https://fcdoc.github.io/img/zh/J7MizvU-Gd2gBNItJuE5kbo0FeypSzo74DxQSwGZm_8.avif)
 
 > [!TIP]
 > For performance reasons, the system will match up to **100 pieces of** data for aggregation in the aggregate view. Thus, the list page you see may not include all matching data. If this is a concern, switch to the list view.
@@ -55,7 +55,7 @@ Under the **Settings** tab, select or disable the display of the following conte
 
 Fault details are the primary entry point for fault investigation, presenting all available information. Especially on the fault overview page, Flashduty highlights the most essential information you need.
 
-![](https://fcdoc.github.io/img/Z2yap9_v7IRgltiWTpayQTnNy8bR1RZsI6ay3DE2Gj4.avif)
+![](https://fcdoc.github.io/img/zh/Z2yap9_v7IRgltiWTpayQTnNy8bR1RZsI6ay3DE2Gj4.avif)
 
 1. **Key Information**: The fault's title, severity, processing progress, ID number, collaboration space, and duration.
 2. **Detailed Information**: The fault's description, impact, and tags. Both the description and impact support Markdown formatting.

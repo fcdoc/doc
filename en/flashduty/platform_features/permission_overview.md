@@ -48,7 +48,7 @@ Flashduty **controls data permissions based on teams** and applies to the follow
 
 If you lack data permissions for a corresponding resource, the system will provide the following prompt:
 
-![](https://fcdoc.github.io/img/dCWMN_bb4xQtkzwoFjba1jqNWm_4J0RjzhIubwbGtCw.avif)
+![](https://fcdoc.github.io/img/zh/dCWMN_bb4xQtkzwoFjba1jqNWm_4J0RjzhIubwbGtCw.avif)
 
 ## FAQs
 

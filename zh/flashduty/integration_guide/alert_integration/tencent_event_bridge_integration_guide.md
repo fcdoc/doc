@@ -40,7 +40,7 @@ brief: 通过 webhook 的方式同步腾讯云事件总线 EB 事件到快猫星
 2. 进入 事件规则 页面，单击 新建 按钮，开始编辑规则
 3. 填写名称为 FlashDuty，如下图所示：
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/3xdEpRnxM31nV5t8REeGxRbhRhwfQpwFooG7q6L6JhA.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/3xdEpRnxM31nV5t8REeGxRbhRhwfQpwFooG7q6L6JhA.avif" />
 
 4. 事件匹配部分可以通过表单模式选择特定事件，也可以自定义填写以下 JSON 内容，匹配全部事件：
 
@@ -56,15 +56,15 @@ brief: 通过 webhook 的方式同步腾讯云事件总线 EB 事件到快猫星
 
 图示如下：
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/pRBjDtOVtl4b6YmKAVF8EJ9RoOAIPGgt4m2hRWWaMzk.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/pRBjDtOVtl4b6YmKAVF8EJ9RoOAIPGgt4m2hRWWaMzk.avif" />
 
 5. 下一步，配置事件目标，分别选择”消息推送“、”通用通知模板“、”英文“，”接口回调“和”自定义 webhook“，webhook 地址填写集成的推送地址
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/ha120gZ2uvDk4brSB4_OqEoYRM751-TesVi4cmOYQ-0.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/ha120gZ2uvDk4brSB4_OqEoYRM751-TesVi4cmOYQ-0.avif" />
 
 6. 点击 保存 按钮，回到 事件集 页面，选择一个事件集，点击 发送事件，进行测试
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/gh3xRQXvARrh7BWDz_le-dLR-0TMS4vblvXZbSu7NkM.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/gh3xRQXvARrh7BWDz_le-dLR-0TMS4vblvXZbSu7NkM.avif" />
 
 7. 回到集成列表，如果展示了最新事件时间，说明配置成功且收到事件
 8. 完成

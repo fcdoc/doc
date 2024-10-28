@@ -14,15 +14,15 @@ FlashDuty 已支持接入大部分常见的告警系统，我们将推送内容�
 
 - **灵活定义**：您可以根据需要创建多个自定义字段，并定义字段的名称、类型、可选项和默认值。常见的自定义字段类型包括文本、下拉列表、Checkbox等。
 
-![field_list.png](https://fcdoc.github.io/img/cvylIK7Sjff1ob1ZMisQH_yeUeEviyzie3RiMU2b59c.avif)
+![field_list.png](https://fcdoc.github.io/img/zh/cvylIK7Sjff1ob1ZMisQH_yeUeEviyzie3RiMU2b59c.avif)
 
 - **信息关联**：通过自定义字段，可以将故障与其他相关数据关联起来。例如，可以添加自定义字段来标识受影响的系统、地理位置、关联的客户或是否误报等。
 
-![reset_field.png](https://fcdoc.github.io/img/4TczIamyUJycZfUIZWU_fTAAROBC3p7o1e96Ejcku9I.avif)
+![reset_field.png](https://fcdoc.github.io/img/zh/4TczIamyUJycZfUIZWU_fTAAROBC3p7o1e96Ejcku9I.avif)
 
 - **筛选和分类**：故障列表支持按照自定义字段筛选和分类视图。您可以根据自定义字段的值来创建常用筛选项，以便更好地组织和处理故障。
 
-![card_view.png](https://fcdoc.github.io/img/qgzMUmesZeZzn3VDyYPdiwAcNxkJzd7czJX92cR_np8.avif)
+![card_view.png](https://fcdoc.github.io/img/zh/qgzMUmesZeZzn3VDyYPdiwAcNxkJzd7czJX92cR_np8.avif)
 
 ## 配置自定义字段
 

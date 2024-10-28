@@ -18,7 +18,7 @@ brief: 查阅历史相似故障解决办法，快速处理新故障
 1. 从故障列表或协作空间，找到一条需要处理的故障；
 2. 点击故障标题，进入故障详情，在详情中选择**历史故障**标签页。
 
-![Flashduty-历史告警.png](https://fcdoc.github.io/img/wu2Re-AiIWhAfr5-CbJ97oUk_2YD5I_So1EE6SbIJgo.avif)
+![Flashduty-历史告警.png](https://fcdoc.github.io/img/zh/wu2Re-AiIWhAfr5-CbJ97oUk_2YD5I_So1EE6SbIJgo.avif)
 
 系统会至多给出5条相似的历史故障，以避免信息太多导致您查阅辨识浪费更多时间。
 

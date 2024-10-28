@@ -18,7 +18,7 @@ Configuration path: **Collaboration Space Details => Noise Reduction Configurati
 - Weekly Mode: Can be set to activate daily or on certain days of the week.
 - Calendar mode: You need to create a [service calendar](/configure_flashduty/calendar_settings) in advance, and the settings will take effect based on the working or non-working days indicated in the calendar.
 
-<img src="https://fcdoc.github.io/img/jM2er25BoW7JDHWOJVTIBBZwwVmPRn2bu_S4QGGv1rc.avif" style="display: block; margin: 0 auto;" width="800">
+<img src="https://fcdoc.github.io/img/zh/jM2er25BoW7JDHWOJVTIBBZwwVmPRn2bu_S4QGGv1rc.avif" style="display: block; margin: 0 auto;" width="800">
 
 ### Silent Conditions
 - **Condition Configuration:** Allows selection of match or non-match based on fault severity, fault tags, or combined conditions.
@@ -35,7 +35,7 @@ Quick Silence refers to the rapid creation of **temporary or single** silent rul
 - **Effective Time:** Only supports a single time range (default 24 hours); the rule is automatically deleted upon expiration without a deletion record.
 - **Silent condition:** The default condition is to take the tag of the fault as the criterion, requiring an exact match. You can visit [Configure filters](/configure_flashduty/how_to_filter) to understand how to set up restrictive conditions.
 
-<img src="https://fcdoc.github.io/img/4skl6ajxT--De2Dklq48hnH9yhaXPawv9oikbEYqa78.avif" style="display: block; margin: 0 auto;" width="800">
+<img src="https://fcdoc.github.io/img/zh/4skl6ajxT--De2Dklq48hnH9yhaXPawv9oikbEYqa78.avif" style="display: block; margin: 0 auto;" width="800">
 
 > [!NOTE]
 > Entering and operating Quick Silence from the same fault details edits the original rule and does not create a new one.
@@ -60,4 +60,4 @@ You can visit [Configure filters](/configure_flashduty/how_to_filter) to underst
 
 When there is a Critical-level fault with the same check item within 24 hours, suppress Waning and Info-level faults.
 
-<img src="https://fcdoc.github.io/img/EcTfwEo.avif" style="display: block; margin: 0 auto;" width=800>
+<img src="https://fcdoc.github.io/img/zh/EcTfwEo.avif" style="display: block; margin: 0 auto;" width=800>

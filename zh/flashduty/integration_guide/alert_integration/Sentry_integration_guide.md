@@ -49,13 +49,13 @@ Sentry 提供了两类告警机制：Issue Alerts 和 Metric Alerts。Issue Aler
 4. 在编辑页面。**Name 处填写 FlashDuty，WebhookURL 处复制写入集成的推送地址**。
 5. 开启 **Alert Rule Action**，参考如下图配置：
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/WsTxnddIFxx3K9TzO9oeQdeGe4_uvFdAMKD_8ZZbt38.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/WsTxnddIFxx3K9TzO9oeQdeGe4_uvFdAMKD_8ZZbt38.avif" />
 
 5. 在 PERMISSIONS 配置中为 **Issue & Event 配置 Read 权限** 。
 6. 在 WEBHOOKS 配置中，勾选 **issue** ，**请不要勾选 error 和 comment**。
 7. 配置完成后，点击 Save Changes 完成创建。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/QLbhF_ak80OpOZK3z4SOdT46MBmuS29kneZWyT4zZzk.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/QLbhF_ak80OpOZK3z4SOdT46MBmuS29kneZWyT4zZzk.avif" />
 
 **关于 WEBHOOKS 配置的特殊说明：**
 1. 勾选 **issue** 后 FlashDuty 可以接收 issue 的 resolved 事件，即在 issue 列表中对某个问题进行手动触发 resolved 时，我们会自动恢复 FlashDuty 中关联的故障。
@@ -66,17 +66,17 @@ Sentry 提供了两类告警机制：Issue Alerts 和 Metric Alerts。Issue Aler
 1. 在左侧导航栏，找到 **Alerts => Create Alert**。
 2. 选择要创建的 Alert 类型，如 Issue 。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/JByBizu05Z4bxPUlUtnsmePcvjUBA0zMKC75mJX6qyo.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/JByBizu05Z4bxPUlUtnsmePcvjUBA0zMKC75mJX6qyo.avif" />
 
 3. 触发条件请按需配置。
 
 4. 在 **THEN perform these actions 处 Add action** 并选择 **Send a notification via**。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/n9LGTYqFuUmJEPlP-3sHQI-zy0TF8HpY7sQvtOLJ9cA.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/n9LGTYqFuUmJEPlP-3sHQI-zy0TF8HpY7sQvtOLJ9cA.avif" />
 
 5.  通知渠道选择上面添加的 **FlashDuty**。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/rtUTpFhDO_-3FKalrhFBZJg3aVRb8c7YBnkwXj42KQI.avif" />
+<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/rtUTpFhDO_-3FKalrhFBZJg3aVRb8c7YBnkwXj42KQI.avif" />
 
 6. 配置好其他选项后，点击 **Save Rule** 保存即可。
 

@@ -14,15 +14,15 @@ Custom fields enable you to add personalized metadata, record specific fault-rel
 
 - **Flexible Definition**: You can create multiple custom fields as needed, defining field names, types, optional choices, and default values.
 
-![field_list.png](https://fcdoc.github.io/img/cvylIK7Sjff1ob1ZMisQH_yeUeEviyzie3RiMU2b59c.avif)
+![field_list.png](https://fcdoc.github.io/img/zh/cvylIK7Sjff1ob1ZMisQH_yeUeEviyzie3RiMU2b59c.avif)
 
 - **Information Association**: Custom fields can be used to associate faults with other relevant data. For example, you can add custom fields to indicate affected systems, geographic locations, associated clients, or whether it's a false alarm.
 
-![reset_field.png](https://fcdoc.github.io/img/4TczIamyUJycZfUIZWU_fTAAROBC3p7o1e96Ejcku9I.avif)
+![reset_field.png](https://fcdoc.github.io/img/zh/4TczIamyUJycZfUIZWU_fTAAROBC3p7o1e96Ejcku9I.avif)
 
 - **Filtering and Categorization**: The fault list supports filtering and categorizing views based on custom fields. You can create common filter options based on the values of custom fields to better organize and manage faults.
 
-![card_view.png](https://fcdoc.github.io/img/qgzMUmesZeZzn3VDyYPdiwAcNxkJzd7czJX92cR_np8.avif)
+![card_view.png](https://fcdoc.github.io/img/zh/qgzMUmesZeZzn3VDyYPdiwAcNxkJzd7czJX92cR_np8.avif)
 
 ## Configure Custom Fields
 

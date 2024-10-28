@@ -59,7 +59,7 @@ This address supports both the PagerDuty V1 and V2 Events API. **You must update
 Take [ElastAlert2](https://github.com/jertel/elastalert2) as an example:
 
 <div id="!"><ol><li>Step 1: Get the push address</li></ol><p> Fill in the integration name on the current page and save it, reopen the integration details, and copy the push address, such as:</p><pre> `{api_host}/event/push/alert/pagerduty?integration_key=xxx
-`</pre><ol start="2"><li> Step 2: Modify push address</li></ol><p> Modify the source code corresponding to the deployed ElastAlert instance, [check diff](/0) :</p><img alt="drawing" width="600" src="https://fcdoc.github.io/img/bgbLujRxqtPVvOHrDFsFH6pmWYFB9d5p9AT2jnZtlxY.avif"><ol start="3"><li> Step 3: Report the alarm incident</li></ol><p> Follow the steps [of ElastAlert PagerDuty Push Configuration Document](/1) to configure alerts:</p><pre> `name: "b"
+`</pre><ol start="2"><li> Step 2: Modify push address</li></ol><p> Modify the source code corresponding to the deployed ElastAlert instance, [check diff](/0) :</p><img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/bgbLujRxqtPVvOHrDFsFH6pmWYFB9d5p9AT2jnZtlxY.avif"><ol start="3"><li> Step 3: Report the alarm incident</li></ol><p> Follow the steps [of ElastAlert PagerDuty Push Configuration Document](/1) to configure alarms:</p><pre> `name: "b"
 type: "frequency"
 index: "pgy_audit*"
 is_enabled: true

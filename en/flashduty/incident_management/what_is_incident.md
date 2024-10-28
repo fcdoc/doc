@@ -88,7 +88,7 @@ On-call personnel can immediately claim the fault after receiving the notificati
 
 Each fault has a timeline that allows you to trace the changes and operations that have occurred at different times in the fault's history. For example, at what time the fault occurred, who was notified through which channel, and the outcome of the notification.
 
-![](https://fcdoc.github.io/img/7vOIcjGm9D-jdoK4WtKCTV63KSPRW6vXBCpZwzU3vNo.avif)
+![](https://fcdoc.github.io/img/zh/7vOIcjGm9D-jdoK4WtKCTV63KSPRW6vXBCpZwzU3vNo.avif)
 
 ## Trigger Fault
 
@@ -121,8 +121,6 @@ Flashduty provides an email integration feature, allowing you to report alerts b
 
 Click the **Create** button on the console to initiate fault creation.
 
-<div style="font-size:14px">
-
 | Field | Is it necessary | Description |
 | :---: | :---:   | ---- |
 | Fault title | yes | A brief statement indicating what has occurred |
@@ -130,5 +128,3 @@ Click the **Create** button on the console to initiate fault creation.
 | Severity | yes | Select one of the three enumeration values: Critical, Warning, and Info |
 | Collaborative space | no | If fault attribution is not selected, it represents a global fault.<br> In this case, the fault must be assigned directly to the person to notify |
 | Assign personnel | no | If the fault handler does not choose, they will be matched and assigned according to the collaboration space they belong to.<br> Otherwise, notifications will be made directly according to personal preferences. |
-
-</div>

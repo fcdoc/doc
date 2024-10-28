@@ -30,7 +30,7 @@ When an issue is assigned to you but you need the involvement of other personnel
 
 Similar to **reassignment**, when adding a handler, you can only select the duty list or an individual as the assignment target. The system will notify these individuals based on their personal preferences.
 
-![](https://fcdoc.github.io/img/5yV6SZljnoyzXZygOdopT3n8RgQkKr5WITkG_FlwCt4.avif)
+![](https://fcdoc.github.io/img/zh/5yV6SZljnoyzXZygOdopT3n8RgQkKr5WITkG_FlwCt4.avif)
 
 ## FAQs
 
