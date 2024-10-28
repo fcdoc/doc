@@ -35,16 +35,16 @@ Custom fields enable you to add personalized metadata, record specific fault-rel
 2. Click **Create Custom Field**
 3. Enter the following information:
 
-- **Field Name**: Identifies the field in the API and cannot be modified after creation.
-- **Display Name**: The field name displayed on the fault details page, which can be modified after creation.
-- **Field Description**: Helps those handling faults to understand and use the field effectively.
+   **Field Name**: Identifies the field in the API and cannot be modified after creation.
+   **Display Name**: The field name displayed on the fault details page, which can be modified after creation.
+   **Field Description**: Helps those handling faults to understand and use the field effectively.
 
 4. Select the field type and add optional choices and default values as necessary. The following field types are available:
 
-- **Text**: A plain text input box that can accommodate up to 500 characters.
-- **Single Choice**: A single selection dropdown allowing for up to ten options, with each option not exceeding 200 characters.
-- **Multiple Choice**: A multi-selection dropdown allowing for up to ten options, with each option not exceeding 200 characters.
-- **Checkbox**: A checkbox input.
+   **Text**: A plain text input box that can accommodate up to 500 characters.
+   **Single Choice**: A single selection dropdown allowing for up to ten options, with each option not exceeding 200 characters.
+   **Multiple Choice**: A multi-selection dropdown allowing for up to ten options, with each option not exceeding 200 characters.
+   **Checkbox**: A checkbox input.
 
 5. Click **Submit** to complete the process
 
