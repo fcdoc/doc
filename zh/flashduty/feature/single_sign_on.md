@@ -70,9 +70,9 @@ FlashDuty 目前提供 SAML2.0、 OIDC、CAS 和 LDAP(仅私有化版本) 协议
 
 ## 最佳实践
 
-通过 [Authing 配置](/quick_start/introduction) FlashDuty 的 SSO 单点登录。
-通过 [Keycloak 配置](/quick_start/introduction) FlashDuty 的 SSO 单点登录。
-通过 [Ldap 配置](/quick_start/introduction) FlashDuty 的 SSO 单点登录。
+通过 [Authing 配置](/start/introduction) FlashDuty 的 SSO 单点登录。
+通过 [Keycloak 配置](/start/introduction) FlashDuty 的 SSO 单点登录。
+通过 [Ldap 配置](/start/introduction) FlashDuty 的 SSO 单点登录。
 
 ## 常见问题
 

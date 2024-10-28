@@ -1,83 +1,83 @@
 README.md
-quick_start/README.md
-  quick_start/introduction.md
-  quick_start/getting_started.md
-  quick_start/frequently_asked_questions.md
-  quick_start/comparison_to_alternatives.md
-incident_management/README.md
-  incident_management/what_is_incident.md
-  incident_management/view_incidents.md
-  incident_management/edit_incidents.md
-  incident_management/escalate_incidents.md
-  incident_management/custom_fields.md
-  incident_management/custom_actions.md
-  incident_management/what_is_noise_reduction.md
-  incident_management/past_incidents.md
-  incident_management/understand_novel_faults.md
-configure_flashduty/README.md
-  configure_flashduty/channel_settings.md
-  configure_flashduty/how_to_integrate_alerts.md
-  configure_flashduty/noise_reduction_settings.md
-  configure_flashduty/escalate_rule_settings.md
-  configure_flashduty/label_enrichment_settings.md
-  configure_flashduty/schedule_settings.md
-  configure_flashduty/template_settings.md
-  configure_flashduty/calendar_settings.md
-  configure_flashduty/preference_settings.md
-  configure_flashduty/alert_routings.md
-  configure_flashduty/fault_silence_and_suppression.md
-  configure_flashduty/how_to_filter.md
-platform_features/README.md
-  platform_features/teams_and_members.md
-  platform_features/permission_overview.md
-  platform_features/single_sign_on.md
-  platform_features/audits.md
-  platform_features/subscription.md
-advanced_features/README.md
-  advanced_features/customize_incident_attrs.md
-  advanced_features/dynamic_notifications.md
-integration_guide/README.md
-  integration_guide/alert_integration/README.md
-    integration_guide/alert_integration/custom_alert_integration_guide.md
-    integration_guide/alert_integration/email_integration_guide.md
-    integration_guide/alert_integration/nightingale_integration_guide.md
-    integration_guide/alert_integration/prometheus_integration_guide.md
-    integration_guide/alert_integration/grafana_integration_guide.md
-    integration_guide/alert_integration/zabbix_integration_guide.md
-    integration_guide/alert_integration/uptime_kuma_integration_guide.md
-    integration_guide/alert_integration/aliyun_arms_integration_guide.md
-    integration_guide/alert_integration/aliyun_cm_event_integration_guide.md
-    integration_guide/alert_integration/aliyun_cm_metric_integration_guide.md
-    integration_guide/alert_integration/aliyun_sls_integration_guide.md
-    integration_guide/alert_integration/aws_cloudwatch_integration_guide.md
-    integration_guide/alert_integration/azure_monitor_integration_guide.md
-    integration_guide/alert_integration/baidu_bcm_integration_guide.md
-    integration_guide/alert_integration/huawei_ces_integration_guide.md
-    integration_guide/alert_integration/influxdata_integration_guide.md
-    integration_guide/alert_integration/open_falcon_integration_guide.md
-    integration_guide/alert_integration/pagerduty_integration_guide.md
-    integration_guide/alert_integration/tencent_bk_integration_guide.md
-    integration_guide/alert_integration/tencent_cls_integration_guide.md
-    integration_guide/alert_integration/tencent_cm_integration_guide.md
-    integration_guide/alert_integration/tencent_event_bridge_integration_guide.md
-    integration_guide/alert_integration/oceanbase_integration_guide.md
-    integration_guide/alert_integration/graylog_integration_guide.md
-    integration_guide/alert_integration/skywalking_integration_guide.md
-    integration_guide/alert_integration/Sentry_integration_guide.md
-  integration_guide/change_integration/README.md
-    integration_guide/change_integration/custom_change_integration_guide.md
-    integration_guide/change_integration/jira_integration_guide.md
-  integration_guide/instant_messaging/README.md
-    integration_guide/instant_messaging/lark_integration_guide.md
-    integration_guide/instant_messaging/dingtalk_integration_guide.md
-    integration_guide/instant_messaging/wecom_integration_guide.md
-    integration_guide/instant_messaging/slack_integration_guide.md
-    integration_guide/instant_messaging/microsoft_teams_integration_guide.md
-  integration_guide/single_sign_on/README.md
-    integration_guide/single_sign_on/authing_integration_guide.md
-    integration_guide/single_sign_on/keycloak_integration_guide.md
-    integration_guide/single_sign_on/openldap.md
-security_terms/README.md
- security_terms/user_aggrement.md
- security_terms/privacy_policy.md
- security_terms/service_level_aggrement.md
+start/README.md
+  start/introduction.md
+  start/getting_started.md
+  start/frequently_asked_questions.md
+  start/comparison_to_alternatives.md
+alter/README.md
+  alter/what_is_incident.md
+  alter/view_incidents.md
+  alter/edit_incidents.md
+  alter/escalate_incidents.md
+  alter/custom_fields.md
+  alter/custom_actions.md
+  alter/what_is_noise_reduction.md
+  alter/past_incidents.md
+  alter/understand_novel_faults.md
+conf/README.md
+  conf/channel_settings.md
+  conf/how_to_integrate_alerts.md
+  conf/noise_reduction_settings.md
+  conf/escalate_rule_settings.md
+  conf/label_enrichment_settings.md
+  conf/schedule_settings.md
+  conf/template_settings.md
+  conf/calendar_settings.md
+  conf/preference_settings.md
+  conf/alert_routings.md
+  conf/fault_silence_and_suppression.md
+  conf/how_to_filter.md
+feature/README.md
+  feature/teams_and_members.md
+  feature/permission_overview.md
+  feature/single_sign_on.md
+  feature/audits.md
+  feature/subscription.md
+advanced/README.md
+  advanced/customize_incident_attrs.md
+  advanced/dynamic_notifications.md
+mixin/README.md
+  mixin/alert_integration/README.md
+    mixin/alert_integration/custom_alert_mixin.md
+    mixin/alert_integration/email_mixin.md
+    mixin/alert_integration/nightingale_mixin.md
+    mixin/alert_integration/prometheus_mixin.md
+    mixin/alert_integration/grafana_mixin.md
+    mixin/alert_integration/zabbix_mixin.md
+    mixin/alert_integration/uptime_kuma_mixin.md
+    mixin/alert_integration/aliyun_arms_mixin.md
+    mixin/alert_integration/aliyun_cm_event_mixin.md
+    mixin/alert_integration/aliyun_cm_metric_mixin.md
+    mixin/alert_integration/aliyun_sls_mixin.md
+    mixin/alert_integration/aws_cloudwatch_mixin.md
+    mixin/alert_integration/azure_monitor_mixin.md
+    mixin/alert_integration/baidu_bcm_mixin.md
+    mixin/alert_integration/huawei_ces_mixin.md
+    mixin/alert_integration/influxdata_mixin.md
+    mixin/alert_integration/open_falcon_mixin.md
+    mixin/alert_integration/pagerduty_mixin.md
+    mixin/alert_integration/tencent_bk_mixin.md
+    mixin/alert_integration/tencent_cls_mixin.md
+    mixin/alert_integration/tencent_cm_mixin.md
+    mixin/alert_integration/tencent_event_bridge_mixin.md
+    mixin/alert_integration/oceanbase_mixin.md
+    mixin/alert_integration/graylog_mixin.md
+    mixin/alert_integration/skywalking_mixin.md
+    mixin/alert_integration/Sentry_mixin.md
+  mixin/change_integration/README.md
+    mixin/change_integration/custom_change_mixin.md
+    mixin/change_integration/jira_mixin.md
+  mixin/instant_messaging/README.md
+    mixin/instant_messaging/lark_mixin.md
+    mixin/instant_messaging/dingtalk_mixin.md
+    mixin/instant_messaging/wecom_mixin.md
+    mixin/instant_messaging/slack_mixin.md
+    mixin/instant_messaging/microsoft_teams_mixin.md
+  mixin/single_sign_on/README.md
+    mixin/single_sign_on/authing_mixin.md
+    mixin/single_sign_on/keycloak_mixin.md
+    mixin/single_sign_on/openldap.md
+license/README.md
+ license/user_aggrement.md
+ license/privacy_policy.md
+ license/service_level_aggrement.md

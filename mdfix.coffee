@@ -38,7 +38,7 @@ dump = (path, changed) =>
     if r
       li = r
 
-  # new_md = li.join('\n').replace(/\n{3,}/g, "\n\n")
+  new_md = li.join('\n').replace(/\n{3,}/g, "\n\n")
   #
   # new_md = new_md.split('<div class="md-block">')
   # i = 0

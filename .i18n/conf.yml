@@ -2,6 +2,9 @@ i18n:
   fromTo:
     zh: en
 
+  url:
+    - https://fcdoc.github.io/img/
+
 ignore:
   - _*
 
@@ -15,7 +18,7 @@ nav:
     menu: NB flashduty
     use: Doc
 
-
 addon:
   - i18n.addon/toc
   # - i18n.addon/mouse
+

@@ -10,7 +10,7 @@ brief: 了解如何快速上手 Flashduty
 
 ## 免费开始
 
-1. 浏览器访问 [Flashduty 控制台](https://console.flashcat.cloud/)，输入**手机号**或**工作邮箱**，阅读并同意我们的 [服务条款](/security_terms/user_aggrement) 和 [隐私政策](/security_terms/privacy_policy)，点击下一步，系统将会向您的手机或邮箱发送验证码。
+1. 浏览器访问 [Flashduty 控制台](https://console.flashcat.cloud/)，输入**手机号**或**工作邮箱**，阅读并同意我们的 [服务条款](/license/user_aggrement) 和 [隐私政策](/license/privacy_policy)，点击下一步，系统将会向您的手机或邮箱发送验证码。
 2. 输入 **企业或组织** 名称，以及上一步获得的验证码，点击下一步，完成注册。
 3. 系统会引导您完成信息完善，并尝试为您发送一条自定义告警事件，让您体验语音、短信或邮件告警。
 

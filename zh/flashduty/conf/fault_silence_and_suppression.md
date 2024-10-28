@@ -16,7 +16,7 @@ FlashDuty提供了静默和抑制机制，来帮助企业优化告警流程，�
 - **周期静默：**
 
 - 星期模式：可以选择每天或者每个星期中某一天或某几天的时间内生效。
-- 日历模式：需提前创建[服务日历](/configure_flashduty/calendar_settings)，然后根据日历中的工作日或休息日生效。
+- 日历模式：需提前创建[服务日历](/conf/calendar_settings)，然后根据日历中的工作日或休息日生效。
 
 <img src="https://fcdoc.github.io/img/zh/jM2er25BoW7JDHWOJVTIBBZwwVmPRn2bu_S4QGGv1rc.avif" style="display: block; margin: 0 auto;" width="800">
 
@@ -33,7 +33,7 @@ FlashDuty提供了静默和抑制机制，来帮助企业优化告警流程，�
 - **基本信息：** 规则名称和规则描述默认取该故障的 ID 和标题进行组合。
 - **生效范围：** 静默规则生效的协作空间为该故障的所属协作空间，**无法更改**。
 - **生效时间：** 只支持单次时间范围（默认24小时），规则到期后自动删除该规则且无删除记录。
-- **静默条件：** 默认取该故障的标签作为条件，且是完全匹配条件。您可以前往 [配置过滤条件](/configure_flashduty/how_to_filter)，了解如何配置限制条件。
+- **静默条件：** 默认取该故障的标签作为条件，且是完全匹配条件。您可以前往 [配置过滤条件](/conf/how_to_filter)，了解如何配置限制条件。
 
 <img src="https://fcdoc.github.io/img/zh/4skl6ajxT--De2Dklq48hnH9yhaXPawv9oikbEYqa78.avif" style="display: block; margin: 0 auto;" width="800">
 
@@ -51,7 +51,7 @@ FlashDuty提供了静默和抑制机制，来帮助企业优化告警流程，�
 - **条件匹配：** 可以根据故障的严重性或故障标签以及组合条件进行选择匹配或不匹配。
 - **相同项：** 支持使用相同属性或相同标签进行匹配，支持多个条件，属性和标签至少选择一个，当同时选择时需要同时满足。
 
-您可以前往 [配置过滤条件](/configure_flashduty/how_to_filter)，了解如何配置限制条件。
+您可以前往 [配置过滤条件](/conf/how_to_filter)，了解如何配置限制条件。
 
 > [!WARN]
 > 当符合条件的故障被抑制时，仍然会在控制台展示和处理，只是不会触发通知。
