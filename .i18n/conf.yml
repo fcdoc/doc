@@ -2,8 +2,8 @@ i18n:
   fromTo:
     zh: en
 
-  url:
-    - https://fcdoc.github.io/img/
+  replace:
+    https://fcdoc.github.io/img/ : en
 
 ignore:
   - _*

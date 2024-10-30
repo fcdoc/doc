@@ -48,7 +48,7 @@ brief: 实现告警基于标签动态进行分派，与您自研系统打通
 
 为协作空间配置一个分派策略。如下图所示，该空间只设定一个分派环节，分派对象为头铁科技，同时推送 token 为 5b96 结尾的企微群聊。
 
-![](https://fcdoc.github.io/img/zh/BzEFtRd9mmTNVjjnF7f_AcO7kcjSqdKamWmET3Dxwjw.avif)
+![](https://fcdoc.github.io/img/zh/flashduty/advanced/dynamic_notifications/1.avif)
 
 ### 为告警设定标签
 
@@ -80,7 +80,7 @@ curl --location --request POST 'https://api.flashcat.cloud/event/push/alert/stan
 
 如下图所示，目标故障正常触发并进行分派。故障的分派人员和目标群聊都按照预期进行了替换。
 
-![](https://fcdoc.github.io/img/zh/WHCu6fjd-r-vUtUeAhxzLsFFwBNaf5gIG_gQ4lcHAZ4.avif)
+![](https://fcdoc.github.io/img/zh/flashduty/advanced/dynamic_notifications/2.avif)
 
 ## 常见问题
 

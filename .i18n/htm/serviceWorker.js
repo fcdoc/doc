@@ -83,6 +83,12 @@ const NO_REWRTE = new Set(
 	},
 	_get = async (now, cache_req, url, res, maxage) => {
 		if ([200, 204].includes(res.status)) {
+			const content_type = res.headers.get("Content-Type")
+			for (const prefix of ["video/", "audio/"]) {
+				if (content_type?.startsWith(prefix)) {
+					return res
+				}
+			}
 			if (!maxage) {
 				const cache = res.headers.get("cache-control")
 				if (cache && cache !== "no-cache") {
