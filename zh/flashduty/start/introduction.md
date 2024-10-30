@@ -24,11 +24,11 @@ Flashduty定位为企业**一站式告警响应平台**，我们帮助开发者�
 ## 如何联系我们？
 **扫码添加技术支持企业微信，获取技术支持**：
 
-<img src="https://fcdoc.github.io/img/zh/kZTm5bHIA9-B1cSv2EEh_TAgRE86cwewNUiyjgJ4ceo.avif" alt="drawing" width="200">
+<img src="https://fcdoc.github.io/img/zh/flashduty/start/introduction/1.avif" alt="drawing" width="200">
 
 **扫码添加商务经理企业微信，获取商务支持**：
 
-<img src="https://fcdoc.github.io/img/zh/lUuHJZGgA3k24I-EH9IDwEk2N6wZfuHnbS2lGmxpRGo.avif" alt="drawing" width="200">
+<img src="https://fcdoc.github.io/img/zh/flashduty/start/introduction/2.avif" alt="drawing" width="200">
 
 **控制台意见反馈**：
 

@@ -12,7 +12,7 @@ brief: 可以为账号进行个性化配置、配置个人通知方式
 - APP Key: 创建或删除APP key。
 - 通知方式：根据个人喜好进行配置。
 
-![](https://fcdoc.github.io/img/zh/CqPJGldQsfI5kyyYGAFno50wbTJB4VV0Wz4Hb8IqXpc.avif)
+![](https://fcdoc.github.io/img/zh/flashduty/conf/preference_settings/1.avif)
 
 ## 账号信息
 - 账号身份分为两种，分别是主体账号和成员账号。

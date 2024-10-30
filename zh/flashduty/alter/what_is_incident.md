@@ -88,13 +88,13 @@ On-Call 人员收到通知后，可以立即进行认领。您可以在 **语音
 
 任一故障都有一个时间线，用于回溯故障历史不同时刻发生的变化和操作。比如故障在什么时间点，以什么通道通知到了谁，以及通知的结果。
 
-![](https://fcdoc.github.io/img/zh/7vOIcjGm9D-jdoK4WtKCTV63KSPRW6vXBCpZwzU3vNo.avif)
+![](https://fcdoc.github.io/img/zh/flashduty/alter/what_is_incident/1.avif)
 
 ## 触发故障
 
 ### 通过 集成 触发故障
 
-Flashduty 已经支持大部分常见监控系统，包括 Prometheus、Zabbix、夜莺 以及云监控等，前往 [告警集成](/mixin/alert_integration/nightingale_mixin) 查看具体操作步骤。
+Flashduty 已经支持大部分常见监控系统，包括 Prometheus、Zabbix、夜莺 以及云监控等，前往 [告警集成](/mixin/alert_integration/nightingale) 查看具体操作步骤。
 
 > [!TIP]
 > Flashduty 支持专属集成和共享集成模式。将告警投递到协作空间下的专属集成，故障将在此协作空间下触发。
@@ -102,7 +102,7 @@ Flashduty 已经支持大部分常见监控系统，包括 Prometheus、Zabbix�
 
 ### 通过 API 触发故障
 
-Flashduty 提供了一个自定义事件标准，允许您通过标准协议上报告警，适用于任何未适配的监控系统。详细文档请阅读 [自定义事件](/mixin/alert_integration/custom_alert_mixin) 。
+Flashduty 提供了一个自定义事件标准，允许您通过标准协议上报告警，适用于任何未适配的监控系统。详细文档请阅读 [自定义事件](/mixin/alert_integration/custom_alert) 。
 
 > [!TIP]
 > 为了保证整个系统的稳定，Flashduty 目前对于 API 上报有 **200qps** 的频率限制，超出限制之后将会拒绝上报。
@@ -112,7 +112,7 @@ Flashduty 提供了一个自定义事件标准，允许您通过标准协议上�
 
 ### 通过 邮件 触发故障
 
-Flashduty 提供了一个邮件集成，允许您通过发送邮件来上报告警，适用于所有支持邮件提醒的监控系统。详细文档请阅读 [自定义事件](/mixin/alert_integration/email_mixin) 。
+Flashduty 提供了一个邮件集成，允许您通过发送邮件来上报告警，适用于所有支持邮件提醒的监控系统。详细文档请阅读 [自定义事件](/mixin/alert_integration/email) 。
 
 > [!TIP]
 > 您可以为每一个集成设置特定的邮件前缀。您也可以联系我们，为主体账号设置一个方便记忆的专属域名。比如，order-service@tesla.flashcat.cloud。

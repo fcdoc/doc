@@ -38,44 +38,44 @@ advanced/README.md
   advanced/dynamic_notifications.md
 mixin/README.md
   mixin/alert_integration/README.md
-    mixin/alert_integration/custom_alert_mixin.md
-    mixin/alert_integration/email_mixin.md
-    mixin/alert_integration/nightingale_mixin.md
-    mixin/alert_integration/prometheus_mixin.md
-    mixin/alert_integration/grafana_mixin.md
-    mixin/alert_integration/zabbix_mixin.md
-    mixin/alert_integration/uptime_kuma_mixin.md
-    mixin/alert_integration/aliyun_arms_mixin.md
-    mixin/alert_integration/aliyun_cm_event_mixin.md
-    mixin/alert_integration/aliyun_cm_metric_mixin.md
-    mixin/alert_integration/aliyun_sls_mixin.md
-    mixin/alert_integration/aws_cloudwatch_mixin.md
-    mixin/alert_integration/azure_monitor_mixin.md
-    mixin/alert_integration/baidu_bcm_mixin.md
-    mixin/alert_integration/huawei_ces_mixin.md
-    mixin/alert_integration/influxdata_mixin.md
-    mixin/alert_integration/open_falcon_mixin.md
-    mixin/alert_integration/pagerduty_mixin.md
-    mixin/alert_integration/tencent_bk_mixin.md
-    mixin/alert_integration/tencent_cls_mixin.md
-    mixin/alert_integration/tencent_cm_mixin.md
-    mixin/alert_integration/tencent_event_bridge_mixin.md
-    mixin/alert_integration/oceanbase_mixin.md
-    mixin/alert_integration/graylog_mixin.md
-    mixin/alert_integration/skywalking_mixin.md
-    mixin/alert_integration/Sentry_mixin.md
+    mixin/alert_integration/custom_alert.md
+    mixin/alert_integration/email.md
+    mixin/alert_integration/nightingale.md
+    mixin/alert_integration/prometheus.md
+    mixin/alert_integration/grafana.md
+    mixin/alert_integration/zabbix.md
+    mixin/alert_integration/uptime_kuma.md
+    mixin/alert_integration/aliyun_arms.md
+    mixin/alert_integration/aliyun_cm_event.md
+    mixin/alert_integration/aliyun_cm_metric.md
+    mixin/alert_integration/aliyun_sls.md
+    mixin/alert_integration/aws_cloudwatch.md
+    mixin/alert_integration/azure_monitor.md
+    mixin/alert_integration/baidu_bcm.md
+    mixin/alert_integration/huawei_ces.md
+    mixin/alert_integration/influxdata.md
+    mixin/alert_integration/open_falcon.md
+    mixin/alert_integration/pagerduty.md
+    mixin/alert_integration/tencent_bk.md
+    mixin/alert_integration/tencent_cls.md
+    mixin/alert_integration/tencent_cm.md
+    mixin/alert_integration/tencent_event_bridge.md
+    mixin/alert_integration/oceanbase.md
+    mixin/alert_integration/graylog.md
+    mixin/alert_integration/skywalking.md
+    mixin/alert_integration/Sentry.md
   mixin/change_integration/README.md
-    mixin/change_integration/custom_change_mixin.md
-    mixin/change_integration/jira_mixin.md
+    mixin/change_integration/custom_change.md
+    mixin/change_integration/jira.md
   mixin/instant_messaging/README.md
-    mixin/instant_messaging/lark_mixin.md
-    mixin/instant_messaging/dingtalk_mixin.md
-    mixin/instant_messaging/wecom_mixin.md
-    mixin/instant_messaging/slack_mixin.md
-    mixin/instant_messaging/microsoft_teams_mixin.md
+    mixin/instant_messaging/lark.md
+    mixin/instant_messaging/dingtalk.md
+    mixin/instant_messaging/wecom.md
+    mixin/instant_messaging/slack.md
+    mixin/instant_messaging/microsoft_teams.md
   mixin/single_sign_on/README.md
-    mixin/single_sign_on/authing_mixin.md
-    mixin/single_sign_on/keycloak_mixin.md
+    mixin/single_sign_on/authing.md
+    mixin/single_sign_on/keycloak.md
     mixin/single_sign_on/openldap.md
 license/README.md
  license/user_aggrement.md

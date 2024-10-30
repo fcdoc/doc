@@ -27,7 +27,7 @@ FlashDuty 故障详情中的故障标签以 key:value 的形式展示告警的�
 - **映射：** 是将系统中的源键值通过映射关系生成新的键值对，需预先[创建schema](https://developer.flashcat.cloud/api-142409927)映射关系和[上传元数据](https://developer.flashcat.cloud/api-145679479)后才可以配置，具体配置参考下文中的配置示例。
 - **删除：** 即删除指定名称的标签，如果删除的标签不存在则无效。
 
-![](https://fcdoc.github.io/img/zh/C3KhUjC60kncXxls61TDQEEruy0WQewZoicEf02fmks.avif)
+![](https://fcdoc.github.io/img/zh/flashduty/conf/label_enrichment_settings/1.avif)
 
 ### 配置说明
 
@@ -36,7 +36,7 @@ FlashDuty 故障详情中的故障标签以 key:value 的形式展示告警的�
 
 - **预览：** 配置完成规则后，支持预览，可以直观的观察规则配置效果。
 
-![](https://fcdoc.github.io/img/zh/YlGXF3qKrge-Zo66mUMwnDL5zeaWT7GLg-2SXJRoekA.avif)
+![](https://fcdoc.github.io/img/zh/flashduty/conf/label_enrichment_settings/2.avif)
 
 > [!NOTE]
 > 标签规则可以配置多个，多个规则时会从上而下的顺序执行，当其中有规则不匹配时则不会生成/删除对应的标签，且没有提示信息。
@@ -46,27 +46,27 @@ FlashDuty 故障详情中的故障标签以 key:value 的形式展示告警的�
 **场景：** 告警事件来自邮件集成，需要从描述信息中提取关键信息作为标签应用到其他场景，比如将描述信息中的 IP 和触发值提取为独立的标签。
 #### 1.1告警原文
 
-<img src="https://fcdoc.github.io/img/zh/Rb27ZLASfgZmpdWolbpWjks_kXixho4PPNWCFKQsplk.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/flashduty/conf/label_enrichment_settings/3.avif" style="display: block; margin: 0 auto;" width="500">
 
 #### 1.2 提取规则
 
-<img src="https://fcdoc.github.io/img/zh/AhCk-nFOBQrsrpMVOSfrX9IfHm9MBNjDCA0djxuWKa4.avif" style="display: block; margin: 0 auto;"  width="500">
+<img src="https://fcdoc.github.io/img/zh/flashduty/conf/label_enrichment_settings/4.avif" style="display: block; margin: 0 auto;"  width="500">
 
 #### 1.3 提取效果
-<img src="https://fcdoc.github.io/img/zh/uZkBXgpld3Ng5wCstL8exfe4C0kvYx_lu564VLcBfpk.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/flashduty/conf/label_enrichment_settings/5.avif" style="display: block; margin: 0 auto;" width="500">
 
 ### 2. **标签组合**
 **场景：** 公司的日志平台可以通过域名+事件ID+时间戳的方式直接访问到日志详情，但告警信息中只有事件ID和时间戳标签，所以需要根据这些信息组合成一个访问地址。
 #### 2.1 告警原文
-<img src="https://fcdoc.github.io/img/zh/-AL6h9QgiwkE2AsfYeBfTbF94zi5HqCzjLoAqfZD_i4.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/flashduty/conf/label_enrichment_settings/6.avif" style="display: block; margin: 0 auto;" width="500">
 
 #### 2.2 组合规则
 
-<img src="https://fcdoc.github.io/img/zh/O62n1CJ2Qp0j7Xf2zboj1K5NfOcaawF_fO_arncUQhg.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/flashduty/conf/label_enrichment_settings/7.avif" style="display: block; margin: 0 auto;" width="500">
 
 #### 2.3 组合效果
 
-<img src="https://fcdoc.github.io/img/zh/-4qbdrhz0uEY1G83zBTJgRXeubIXeQ-iaLFhZCtpc5Q.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/flashduty/conf/label_enrichment_settings/8.avif" style="display: block; margin: 0 auto;" width="500">
 
 ### 3. **标签映射**
 **场景：** 当源告警信息中的标签值不固定且不能直观定位其含义时可以通过映射的方式，将源标签映射新定义标签和值；比如源告警中只有资源类型ID信息，但希望将每个ID对应的资源类型名称也体现出来，这时可以通过映射实现。
@@ -119,15 +119,15 @@ curl --location --request POST 'https://api.flashcat.cloud/enrichment/mapping/da
 
 #### 3.3 配置映射关系
 
-<img src="https://fcdoc.github.io/img/zh/0yGvcoNhFa8b42HZsdo1DdoPWtNRO5U9SrVN0Dmaq_U.avif" style="display: block; margin: 0 auto;"  width="500">
+<img src="https://fcdoc.github.io/img/zh/flashduty/conf/label_enrichment_settings/9.avif" style="display: block; margin: 0 auto;"  width="500">
 
 ##### 3.3.1 告警原文
 
-<img src="https://fcdoc.github.io/img/zh/ozOHAnGimcC2mkLn3fOyNnJ9w6aJH-hcL4yvuhv3Jrs.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/flashduty/conf/label_enrichment_settings/10.avif" style="display: block; margin: 0 auto;" width="500">
 
 ##### 3.3.2 映射效果
 
-<img src="https://fcdoc.github.io/img/zh/R97ivADiQK8AcLgF-KHsoc88JjPPW2aQR_GlZCQS-Yk.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/flashduty/conf/label_enrichment_settings/11.avif" style="display: block; margin: 0 auto;" width="500">
 
 > [!NOTE]
 > 如果不希望源标签还存在，可以通过删除规则实现。

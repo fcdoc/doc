@@ -18,13 +18,13 @@ brief: 新奇故障识别，快速处理新故障
 1. 在故障列表页面，新奇故障将提供明显的**新奇**标识；
 2. 在故障详情页面，新奇故障将在最上方提供明显的**新奇**标识和解释。
 
-<img src="https://fcdoc.github.io/img/zh/xqtBsH90jOXzcppNlKqXij4peIRPbV51UKC2dJ3JjnU.avif" alt="新奇" style="display: block; margin: 0 auto;" width="600">
+<img src="https://fcdoc.github.io/img/zh/flashduty/alter/understand_novel_faults/1.avif" alt="新奇" style="display: block; margin: 0 auto;" width="600">
 
 ### IM 工具
 
 以飞书为例，当故障被识别为新奇告警时，系统会加强提醒：
 
-<img src="https://fcdoc.github.io/img/zh/gngVyQEuu-kSTV7uje3XUNK6objwAnF7b1KkiEgIK4g.avif" alt="新奇-feishu" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcdoc.github.io/img/zh/flashduty/alter/understand_novel_faults/2.avif" alt="新奇-feishu" style="display: block; margin: 0 auto;" width="500">
 
 ### 如何识别
 

@@ -19,7 +19,7 @@ brief: 通过配置值班规则，可以实现自动调度和通知到具体值�
 - 值班规则+调班规则形成最终的值班规则。
 - 值班规则可以按照时间线、日历的视角进行查看最终值班效果。
 
-<img src="https://fcdoc.github.io/img/zh/YAhBMLK6qkGY1kRBVS-phRgql1KoULwbXKbMY0VHQj0.avif" style="display: block; margin: 0 auto;" height="500">
+<img src="https://fcdoc.github.io/img/zh/flashduty/conf/schedule_settings/1.avif" style="display: block; margin: 0 auto;" height="500">
 
 ### 编辑规则
 #### 1. 创建
@@ -49,7 +49,7 @@ brief: 通过配置值班规则，可以实现自动调度和通知到具体值�
 
 - 规则/效果：
 
-![zhibanxiaoguo-1.png](https://fcdoc.github.io/img/zh/wYD8amIzvc9KkZLPA6mweXUYMBflr-06TZFOQTqGn0A.avif)
+![](https://fcdoc.github.io/img/zh/flashduty/conf/schedule_settings/2.avif)
 
 ### 组合排班
 - 需求概述
@@ -60,8 +60,8 @@ brief: 通过配置值班规则，可以实现自动调度和通知到具体值�
 
 - 规则展示：
 
-![zuhezhibanguize.png](https://fcdoc.github.io/img/zh/8byBJUrSY8afMbm84FqNvTr6U8rnpXbIqhXXFht6Mek.avif)
+![](https://fcdoc.github.io/img/zh/flashduty/conf/schedule_settings/3.avif)
 
 - 效果展示：
 
-![zuhezhibanxiaoguo.png](https://fcdoc.github.io/img/zh/xdVAhdN0fbDFVgt9frLmrVIXmHlXHaUVZrBUVJfGmKw.avif)
+![](https://fcdoc.github.io/img/zh/flashduty/conf/schedule_settings/4.avif)

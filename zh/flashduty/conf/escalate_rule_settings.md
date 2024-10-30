@@ -12,13 +12,13 @@ brief: 通过分派策略可以将不同业务或不同团队的告警事件分�
 - 支持按星期中的某天进行选择是否分派，比如只有星期一到星期五的故障才进行分派处理，星期六星期日的故障不处理。
 - 支持按服务日历进行选择是否分派（服务日历需提前创建），可根据假期或工作日进行配置，如只有交易日的故障才需要通知，一般适用于证券行业。
 
-![rilitongzhi.png](https://fcdoc.github.io/img/zh/gsUqruaXsUQO8Vbb-QgEIJb23EQ3jUZDMWBvtOYSEBs.avif)
+![](https://fcdoc.github.io/img/zh/flashduty/conf/escalate_rule_settings/1.avif)
 
 ### 故障过滤
 - 默认全部故障均按该策略通知。
 - 支持按标题、级别和标签等条件匹配故障，如告警级别为 Info 的遵循该分派分派。
 
-![tiaojian.png](https://fcdoc.github.io/img/zh/WyGIe6d3UjoWaGg4Y8KCZ87KCalIEM3cdR1YMRI6RVc.avif)
+![](https://fcdoc.github.io/img/zh/flashduty/conf/escalate_rule_settings/2.avif)
 
 前往 [如何配置过滤条件](/conf/how_to_filter)，了解更多。
 
@@ -45,7 +45,7 @@ brief: 通过分派策略可以将不同业务或不同团队的告警事件分�
 
 群聊即推送到群，并针对分派人员进行特别提醒。包括各类 Webhook 机器人，以及部分 IM 应用。
 
-- 群聊中可以选择各个应用以及群机器人的方式进行触达到接收人，**选择IM应用通知时**，通知对象需要先与对应的应用进行关联，具体可以参考[即时消息集成](/mixin/instant_messaging/lark_mixin)
+- 群聊中可以选择各个应用以及群机器人的方式进行触达到接收人，**选择IM应用通知时**，通知对象需要先与对应的应用进行关联，具体可以参考[即时消息集成](/mixin/instant_messaging/lark)
 
 > [!NOTE]
 > 个人与群聊通知渠道请至少选择一个。如果您不期望通知到任何个人，仅通知到群，您可以设置一个空团队作为分派对象。

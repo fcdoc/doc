@@ -27,7 +27,7 @@ brief: 了解自定义操作的使用场景和配置方式
 
 创建后，您可以在对应空间的【故障详情-更多操作】下看到操作按钮，点击按钮系统会提示操作结果。如果操作成功，系统会写入操作记录。
 
-![custom-action-do.png](https://fcdoc.github.io/img/zh/Sjr8pj4VrgWhgGHEdi8haXEXy1mEnsNuceGjfoDFeG8.avif)
+![](https://fcdoc.github.io/img/zh/flashduty/alter/custom_actions/1.avif)
 
 ### 如何实现 webhook？
 
