@@ -2,4 +2,6 @@ zh:
   快猫星云: Flashcat
 
 zh>en:
-  告警: alter
+  告警: alert
+  报警: alert
+  故障: incident

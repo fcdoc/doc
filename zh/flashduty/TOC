@@ -78,6 +78,6 @@ mixin/README.md
     mixin/single_sign_on/keycloak.md
     mixin/single_sign_on/openldap.md
 license/README.md
- license/user_aggrement.md
+ license/user.md
  license/privacy_policy.md
- license/service_level_aggrement.md
+ license/service_level.md
