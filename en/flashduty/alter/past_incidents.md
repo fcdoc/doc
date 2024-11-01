@@ -1,66 +1,66 @@
 ---
-brief: View historical solutions for similar incidents to quickly address new incidents
+brief: View solutions to similar historical incidents to quickly handle new incidents
 ---
 
-# Understand historical incidents
+# Learn about Historical Incidents
 
-View historical solutions for similar incidents to quickly address new incidents.
+View solutions to similar historical incidents to quickly handle new incidents.
 
-When responding to an incident, if we can refer to the solutions of similar historical incidents, it will significantly enhance the efficiency of incident resolution. The historical incident feature is designed to provide responders with a list of resolved similar incidents. For those unfamiliar with the issue, they can swiftly review the timeline, root causes, and solutions of past incidents, and replicate relevant actions. Historical incidents provide the necessary context for problem-solving and prevent panic among responders who are faced with unfamiliar issues.
+When responding to an incident, if we can view the solutions to similar historical incidents, it will greatly accelerate the resolution process. The historical incident feature provides responders with a list of similar incidents that have been resolved. For responders unfamiliar with the issue, they can quickly review the timeline, root causes, and solutions of historical incidents, and replicate relevant actions. Historical incidents provide the necessary context for problem-solving and help prevent panic when responders encounter unfamiliar issues.
 
 > [!NOTE]
-> This feature is currently in beta and is only available in the professional version and higher subscription plans. If you need to enable this feature, please contact us at any time.
+> This feature is currently in beta and is only available in the Professional version and above. If you need to enable this feature, please contact us.
 
-## View similar incidents
+## View Similar Incidents
 
 ### Console
 
-1. Locate an incident that requires attention from the incident list or collaboration space
-2. Click on the incident title to enter the incident details and select the **History Incidents** tab.
+1. From the incident list or collaboration space, find an incident that needs to be processed;
+2. Click the incident title, enter the incident details, and select the **Historical Incidents** tab.
 
 ![](https://fcdoc.github.io/img/zh/flashduty/alter/past_incidents/1.avif)
 
-The system will display up to 5 similar historical incidents to prevent information overload and save time in identification.
+The system will provide up to 5 similar historical incidents to avoid overwhelming you with too much information.
 
-### Sorting Principles
+### Sorting Principle
 
 How do we sort?
 
-1. The system will only match incidents with a similarity greater than 90%
-2. The system prioritizes incidents with more detailed solutions and root cause analysis
-3. The system prioritizes incidents with higher similarity
-4. The system lists the most recent incidents first.
+1. The system only matches incidents with a similarity greater than 90%;
+2. The system prioritizes incidents with more detailed solutions and root causes;
+3. The system prioritizes incidents with higher similarity;
+4. The system prioritizes more recent incidents.
 
 > [!NOTE]
-> It is a good practice to document **solutions** and **root causes** upon resolving an incident, which greatly aids subsequent responders.
+> Leaving **solutions** and **root causes** when resolving an incident is a good habit. This will greatly enhance the response speed for future incidents.
 
 ### How to Identify
 
-The system employs a machine learning model to assess the similarity between incidents, considering those with a similarity greater than 90% as similar.
+The system uses a machine learning model to determine the similarity between incidents. When the similarity is greater than 90%, we consider the two incidents to be similar.
 
-When assessing similarity, we primarily consider the following factors:
+When judging similarity, we primarily consider the following factors:
 
-1. Incident Title
-2. Incident Detailed Description
-3. The services affected by the incident (usually extracted from the service tag)
-4. Incident includes alert objects (usually extracted from the resource tag)
+1. Title of the Incident
+2. Detailed Description of the Incident
+3. The service affected by the Incident (generally extracted from the service tag)
+4. The alert object in the Incident (generally extracted from the resource tag)
 
-When searching for historical incidents, the system matches only resolved incidents within the current collaboration space.
+When retrieving historical incidents, the system only matches similar incidents that have been resolved in the current collaboration space.
 
-## FAQs
+## Frequently Asked Questions
 
 |+| How far back can I view historical incidents?
 
-    Currently, you can only view similar incidents within 30 days prior to the current incident. Over time, the system may archive historical data, which could make past incidents inaccessible.
+    Currently, you can only view similar incidents within 30 days before the current incident. Over time, the system may delete historical data, in which case you may not be able to view historical incidents.
 
-    Nonetheless, for ongoing incidents, you can access up to 30 days of historical data.
+    Regardless, for the current incident, you can view up to 30 days of historical data.
 
-|+| Can I mark the current incident as dissimilar to historical incidents?
+|+| Can I mark that the current incident is not similar to historical incidents?
 
-    No, the system currently lacks a marking feature. However, you can communicate with us and provide feedback through alternative channels.
+    No, the system currently does not have a marking function. However, you can communicate and provide feedback to us through other channels.
 
-|+| How can I improve the effectiveness of historical incidents?
+|+| How can I make historical incidents more effective?
 
-    1. It is advisable to meticulously document the root causes and proposed solutions for significant incidents
-    2. It is recommended to enrich incident tags, particularly the service and resource tags
-    3. It is recommended to enhance the title and description of alerts to accurately convey the incident phenomena.
+    1. It is recommended that you fill in the root causes and solutions for important incidents;
+    2. It is recommended that you enrich the incident tags, especially the service and resource tags;
+    3. It is recommended that you provide more detailed titles and descriptions for alerts to more accurately describe the incident.

@@ -1,49 +1,49 @@
 ---
-brief: Synchronize Huawei Cloud Monitoring CES alert events with Kuaimao Nebula via webhook to automate noise reduction processing for alert events"
+brief: Synchronize Huawei Cloud Monitoring CES alert events to Kuaimao Nebula via webhook to achieve automatic noise reduction of alert events"
 ---
 
 # Huawei Cloud Monitoring CES Integration
 
-Synchronize Huawei Cloud Monitoring CES alert events with Flashduty via webhook to automate noise reduction processing for alert events.
+Synchronize Huawei Cloud Monitoring CES alert events to Flashduty via webhook to achieve automated noise reduction of alert events.
 
 ## In Flashduty
-使用专属集成
+You can obtain an integrated push address through the following two methods, choose either one.
 
 ### Use Proprietary Integrations
 
-When there is no need to route alert events to different collaboration spaces, this method is preferable as it is more straightforward.
+When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
     1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
-    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the integration creation page
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
     3. Choose the **Huawei Cloud Monitoring CES** integration, click **Save**, and a card will be generated.
-    4. Click on the generated card to view the **Push Address**, copy it for backup, and the task is complete.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
 
 ### Use Shared Integrations
 
-When routing alert events to different collaboration spaces based on the payload information of the alert events is required, this method should be prioritized.
+When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and proceed to the integration selection page.
-    2. Select the **Huawei Cloud Monitoring CES** integration:
+    1. Enter the Flashduty console, select **Integration Center => Alerts**, and navigate to the integration selection page.
+    2. Choose the **Huawei Cloud Monitoring CES** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, to be adjusted as needed later.
-    5. Completed.
+    3. After clicking **Save**, copy the newly generated **push address** for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed.
+    5. Complete.
 
 ## In Huawei Cloud Monitoring CES
 
 1. Log in to your Huawei Cloud console, search for **cloud monitoring** products, and enter the corresponding product console
 2. Enter the **alert-Alert Notification - Notification Object** page and click the **Create Notification Object** button
-3. Choose the `HTTPS` protocol, enter `flashduty` as the name, and fill in the integrated address (enter the integration name on the current page, and an address will be generated upon saving)
+3. Select `HTTPS` for the protocol, fill in `flashduty` for the name, and enter the integration address for the endpoint (fill in the integration name on the current page, and the address will be generated after saving)
 4. Click the **OK** button to complete the notification object creation
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/huawei_ces/1.avif" />
 
 5. Enter the **alert-Alert Notification - Notification Group** page and click the **Create Notification Group** button
-6. Enter `FlashDuty` as the group name and select the previously created `flashduty` as the notification object
+6. Fill in `FlashDuty` for the group name, and select the `flashduty` notification object created earlier
 7. Click the **OK** button to complete the notification group creation
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/huawei_ces/2.avif" />
@@ -55,16 +55,16 @@ Note that when creating a notification group, Huawei Cloud will initiate a reque
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/huawei_ces/3.avif" />
 
-10. Return to the Flashduty console integration list page. If the latest event time is displayed, it indicates that the configuration is successful and events are being received
-11. Finish
+10. Return to the Flashduty console integration list page. If the latest event time is displayed, the configuration is successful and the event has been received
+11. Complete
 
 ## Status Comparison
 
-Mapping relationship between Huawei Cloud Monitoring and Flashduty alert levels:
+Mapping of Huawei Cloud Monitoring to Flashduty alert levels:
 
-| CES  |  Flashduty  | state |
+| CES  |  Flashduty  | Status |
 | ---- | -------- | ---- |
-| Urgent | Critical | serious |
-| Important | Critical | serious |
-| Minor | Warning  | warn |
-| Hint | Info     | remind |
+| Emergency | Critical | Critical |
+| Important | Critical | Critical |
+| Minor | Warning  | Warning |
+| Info | Info     | Information |

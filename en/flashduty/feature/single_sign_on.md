@@ -4,98 +4,98 @@ brief: Single sign-on allows you to easily integrate into a variety of different
 
 # Configure Single Sign-On
 
-FlashDuty currently offers single sign-on (SSO) support for SAML2.0, OIDC, CAS, and LDAP (available only in the private version), making it effortless to integrate with various applications and platforms. These functionalities enable rapid sharing of identity information across platforms. Users need to authenticate only once on a single platform to access multiple related applications and services, eliminating the need for individual authentication for each app. This not only enhances work efficiency and user experience but also streamlines the login process and fortifies security.
+FlashDuty currently supports single sign-on (SSO) for SAML2.0, OIDC, CAS, and LDAP (private version only) protocols. This enables seamless integration with various applications and platforms, helping you quickly share identity information with other platforms. Users only need to log in once to access multiple associated applications and services, eliminating the need for separate identity verification for each application. This improves work efficiency, enhances user experience, simplifies the login process, and enhances security.
 
 ## Configure SAML Protocol
 Configuration path: **Access Control => Single Sign-On => Enable => Settings => Select SAML2.0 Protocol Type**
 
 |Field|Description|
 |----|----|
-|Protocol Type|Select SAML2.0|
+|protocol type|Select SAML2.0|
 |Metadata Document|XML document obtained from the identity provider|
-|Field Mapping|FlashDuty extracts user email, username, and mobile information from the identity provider through field mapping.|
-|Login Domain|A crucial identifier, unique globally|
-|Create Account on Login|Enabled by default. **If disabled, members must be invited to join before they can log in.**|
-|Flashcat Service Provider Information|**Service Provider Metadata:**<br>**Assertion Consumer Service URL:** The assertion address used for SSO when called by the identity provider|
+|User DN|CAS Login Path|
+|Authentication Filter|An important basis for identification, globally unique|
+|Field Mapping|It is enabled by default. **If it is disabled, you need to invite members to join before you can log in.**|
+|An important identifier for user recognition, globally unique|**Service Provider Metadata:**<br> **Assertion Consumer Service URL:** Assertion address, used for single sign-on when called by the identity provider|
 
 ## Configure OIDC Protocol
 Configuration path: **Access Control => Single Sign-On => Enable => Settings => Select OIDC Protocol Type**
 
 |Field|Description|
 |----|----|
-|Protocol Type|Select OIDC Protocol|
-|Issuer|Retrieve Issuer from the identity provider, a case-sensitive URL without query parameters|
-|Client ID|Client ID obtained from the identity provider|
-|Client Secret|Client Secret obtained from the identity service provider|
-|Field Mapping|FlashDuty extracts user email, username, and mobile information from the identity provider through field mapping.|
-|Login Domain|A crucial identifier, unique globally|
-|Create Account on Login|Enabled by default. **If disabled, members must be invited to join before they can log in.**|
-|Flashcat Service Provider Information|**Redirect URL:** The callback URL for the identity provider to redirect to Kuaimao Nebula.<br>**Supported Signature Algorithms:** RS256, RS384, RS512, ES256, ES384, ES512, PS256, PS384, PS512 (HS256 not supported).<br>**Requested Scope:** openid, email, phone |
+|protocol type|Select OIDC protocol|
+|Issuer|Issuer|
+|Client ID|Case-sensitive URL obtained from the identity provider, cannot contain query parameters|
+|Client Secret|Client ID|
+|User DN|CAS Login Path|
+|Authentication Filter|An important basis for identification, globally unique|
+|Field Mapping|It is enabled by default. **If it is disabled, you need to invite members to join before you can log in.**|
+|An important identifier for user recognition, globally unique|**Redirect URL :** The identity provider calls back the address of Kuaimao Nebula<br> **Supported signature algorithms:** RS256 , RS384 , RS512 , ES256 , ES384 , ES512 PS256 ,, PS384 , PS512 ( HS256 is not supported)<br> **Request scope :** openid , email , phone |
 
 ## Configure CAS Protocol
-Configuration path: **Access Control => Single Sign-On => Enable => Settings => Select CAS Protocol Type**
+Configuration path: **Access Control = > Single Sign On = > = > Settings = > checked CAS Protocol Type**
 
 |Field|Description|
 |----|----|
-|Protocol Type|Select CAS Protocol|
-|CAS Address|CAS service address obtained from the identity provider|
-|CAS Login Path|CAS Login Path|
-|Field Mapping|FlashDuty extracts user email, username, and mobile information from the identity provider through field mapping.|
-|Login Domain|A crucial identifier, unique globally|
-|Create Account on Login|Enabled by default. **If disabled, members must be invited to join before they can log in.**|
-|Flashcat Service Provider Information|**Redirect URL:** The callback URL for the identity provider to redirect to Kuaimao Nebula
+|protocol type|Field|
+|Description|Protocol Type|
+|CAS Address|CAS Address|
+|User DN|CAS Login Path|
+|Authentication Filter|An important basis for identification, globally unique|
+|Field Mapping|It is enabled by default. **If it is disabled, you need to invite members to join before you can log in.**|
+|An important identifier for user recognition, globally unique|**Redirect URL :** The identity provider calls back the address of Kuaimao Nebula
 
 ## Configure LDAP Protocol
 > [!NOTE]
 > LDAP Single sign-on, only supported by **privatized version**
 
-Configuration path: **Access Control => Single Sign-On => Enable => Settings => Select LDAP Protocol Type**
+Configuration path: **Access Control = > Single Sign On = > = > Settings = > checked LDAP Protocol Type**
 
 |Field|Description|
 |----|----|
-|Protocol Type|Select LDAP Protocol|
-|LDAP Link|LDAP service address, e.g., ldap://10.10.10.10:389 |
-|BIND DN|Username for connecting to LDAP, used for testing connection results and searching for users or user groups, e.g., cn=admin,dc=flashduty,dc=com |
-|BIND DN Password|Password for connecting to LDAP, stored encrypted in the database.|
-|TLS|Skip Verify on TLS Login|
-|StartTLS|Enable StartTLS|
-|User DN|Define the directory to start searching for users, e.g., ou=people,dc=flashduty,dc=com|
-|Authentication Filtering|This condition, combined with Bind DN and the corresponding password, is used for user search to retrieve the user's DN information and perform Ldap authentication. Custom filter expressions are supported in the basic form: (&&(mail=%s)). Note: Opening and closing brackets are required.|
-|Field Mapping|FlashDuty extracts user email, username, and mobile information from the identity provider through field mapping, with email as a required mapped field|
-|Login Domain|A crucial identifier, unique globally|
-|Create Account on Login|Enabled by default. **If disabled, members must be invited to join before they can log in.**|
+|protocol type|Field|
+|Description|LDAP service address, such as: ldap://10.10.10.10:389 |
+|BIND DN|Select LDAP protocol |
+|LDAP Link|The password used to connect to LDAP, which will be stored encrypted in the database.|
+|TLS|Username for LDAP Connection|
+|StartTLS|Whether to enable StartTLS|
+|BIND DN Password|Password used to connect to LDAP, stored encrypted in the database|
+|Skip Verify during TLS Login|This condition is combined with Bind DN and the corresponding password for user search, used to retrieve the user's DN information, and combined with the user password for Ldap authentication. Supports custom filter expression, the basic form is: ( & ( mail =%s)). Note: The opening and closing brackets are required.|
+|User DN|Define the directory to start searching for users, such as: ou=people,dc=flashduty,dc=com|
+|Authentication Filter|An important basis for identification, globally unique|
+|Field Mapping|It is enabled by default. **If it is disabled, you need to invite members to join before you can log in.**|
 
 > [!NOTE]
-> Field mapping must be consistent with the identity provider's configuration to avoid exceptions. Specific values should be filled according to the description and can be referenced in the [OpenLDAP Integration Guide](https://docs.flashcat.cloud/zh/flashduty/openldap-integration-guide). If further assistance is needed, contact FlashDuty support.
+> Field mapping needs to be consistent with the configuration of the identity provider, otherwise exceptions will occur. The specific value is filled according to the description. You can refer to [OpenLDAP integration guide](https://docs.flashcat.cloud/zh/flashduty/openldap-integration-guide) for configuration. If you have any questions, please contact FlashDuty .
 
 ## Best Practices
 
-SSO single sign-on configured through [Authing](/start/introduction) for FlashDuty.
-SSO single sign-on configured through [Keycloak](/start/introduction) for FlashDuty.
-SSO single sign-on configured through [LDAP](/start/introduction) for FlashDuty.
+SSO Single sign-on via [Authing Configuration](/start/introduction) FlashDuty .
+SSO Single sign-on via [Keycloak Configuration](/start/introduction) FlashDuty .
+SSO Single sign-on via [Ldap Configuration](/start/introduction) FlashDuty .
 
-## FAQs
+## Frequently Asked Questions
 
-|+| What is SSO single sign-on?
+|+| Best Practices
 
-    Single sign-on (SSO) is one of the solutions for integrating enterprise systems, designed to unify user identity authentication. With SSO, users need to log in only once to access all mutually trusted enterprise applications.
+    Single sign-on (SSO) is one of the solutions for integrating enterprise systems. It is used to unify user identity authentication. Users only need to log in once to access application systems that all enterprises trust.
 
-|+| What are the features of the SAML 2.0 protocol?
+|+| Features of SAML2.0 protocol?
 
-    The SAML 2.0 protocol, based on XML, facilitates secure and standardized single sign-on and identity verification across different domains. It supports various data exchange bindings, ensuring interoperability and flexibility.
+    The SAML 2.0 protocol is based on XML and implements single sign-on and authentication across domains through a secure and standardized declaration method. It supports multiple data exchange bindings to ensure interoperability and flexibility.
 
-|+| What are the characteristics of the OIDC protocol?
+|+| What is SSO Single Sign-On?
 
-    The OIDC protocol, built upon OAuth 2.0, offers a standardized and secure authentication process. It employs JSON Web Tokens to transmit user information, thereby enabling cross-platform single sign-on and comprehensive identity management.
+    The OIDC protocol is based on OAuth 2.0, provides a standardized and secure authentication process, uses JSON Web Tokens to transmit user information, and realizes cross-platform single sign-on and identity management.
 
-|+| What are the characteristics of the CAS protocol?
+|+| Features of the SAML2.0 Protocol?
 
     The CAS protocol is a single sign-on (SSO) protocol for web applications. It allows users to use a single authentication process on multiple services, using service tickets (Service Ticket) and authentication tickets (Authentication Ticket) to implement services. Certification.
 
-|+| What are the characteristics of the LDAP protocol?
+|+| Features of the OIDC Protocol?
 
     The LDAP protocol is developed based on the X.500 standard. Data is organized in a tree structure, which facilitates hierarchical management and rapid retrieval of data. It provides a flexible query language (LDAP Search Filter), allowing users to filter and search data based on complex conditions.
 
-|+| Does it support the integration of multiple protocols?
+|+| Features of the CAS Protocol?
 
-    Currently, it does not support multiple protocols; only one protocol can be chosen for integration
+    Currently not supported, you can only choose one protocol to access

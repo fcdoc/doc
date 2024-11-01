@@ -1,43 +1,43 @@
 ---
-brief: 1	Synchronize Tencent Cloud Log Service CLS alert events to Kuaimao Star Cloud via webhook, achieving automated noise reduction for alert notifications
+brief: Synchronize Tencent Cloud Log Service CLS to monitor alert events to Kuaimao Nebula through webhook to realize automatic noise reduction processing of alert events
 ---
 
-# 2	Integration of Tencent Cloud Log Service CLS
+# Tencent Cloud Log Service CLS Integration
 
-2	Synchronize Tencent Cloud Log Service CLS monitoring alert events to Flashduty via webhook, enabling automated noise reduction in alert processing.
+Synchronize Tencent Cloud Log Service CLS monitoring alert events to Flashduty through webhook to realize automatic noise reduction processing of alert events.
 
 ## In Flashduty
-使用专属集成
+You can obtain an integrated push address through the following two methods, choose either one.
 
 ### Use Proprietary Integrations
 
-When there is no need to route alert events to different collaboration spaces, this method is preferable as it is more straightforward.
+When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
     1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
-    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the integration creation page
-    3. Choose the **Tencent Cloud CLS** integration, click **Save**, and a card will be generated.
-    4. Click on the generated card to view the **Push Address**, copy it for backup, and the task is complete.
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
+    3. Select the **Tencent Cloud CLS** integration, click **Save**, and a card will be generated.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
 
 ### Use Shared Integrations
 
-When routing alert events to different collaboration spaces based on the payload information of the alert events is required, this method should be prioritized.
+When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and proceed to the integration selection page.
-    2. Select the **Tencent Cloud CLS** integration:
+    1. Enter the Flashduty console, select **Integration Center => Alerts**, and navigate to the integration selection page.
+    2. Choose the **Tencent Cloud CLS** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, to be adjusted as needed later.
-    5. Completed.
+    3. After clicking **Save**, copy the newly generated **push address** for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed.
+    5. Complete.
 
-## CLS in Tencent Cloud
+## In the Tencent Cloud CLS
 
 **Step 1: Configure Notification Channel Group**
 
-1. Log in to your Tencent Cloud console, select the Log Service CLS product, and go to Monitoring Alert - Notification Channel Group
+1. Log in to your Tencent Cloud console, select the Log Service CLS product, and enter Monitoring Alert - Notification Channel Group
 2. Click **New** to start a new
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/tencent_cls/1.avif" />
@@ -48,12 +48,12 @@ When routing alert events to different collaboration spaces based on the payload
 
 **Step 2: Configure Alert Policy**
 
-1. Log in to your Tencent Cloud console, select the Log Service CLS product, and go to Monitoring Alert - Alert Policy
+1. Log in to your Tencent Cloud console, select the Log Service CLS product, and enter Monitor Alert - Alert Policy
 2. Click **New** to start a new
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/tencent_cls/2.avif" />
 
-3. 5	As depicted, enter the specific alert name in the __alert name__ field, and select a specific log topic for the log theme
+3. As shown in the figure, __alert Name __ fill in the specific alert name, and the log topic selects a specific log topic
 
 4. **Execution statement:** Fill in the specific query statement, select the time range for the query time range, click preview to view the execution results, and enter the specific trigger condition for the trigger condition.
 
@@ -63,9 +63,9 @@ When routing alert events to different collaboration spaces based on the payload
 
 7. Alert Notification, **notification channel group** , can be associated with a specific channel group
 
-**Step 3: Configure Custom Callback**
+**Step 3: Configure Custom Callbacks**
 
-1. After associating the channel group, you will be able to view the callback content configuration
+1. After associating the channel group, you can see the callback content configuration
 
 2. Request headers, you can add specific request headers
 
@@ -107,8 +107,8 @@ When routing alert events to different collaboration spaces based on the payload
 
 Tencent Cloud CLS monitoring alert level to Flashduty mapping relationship:
 
-| Tencent Cloud CLS Monitoring |  Flashduty    | state
+| Tencent Cloud CLS Monitoring |  Flashduty    | Status
 | ------------- | --------- | --- |
-| Info          |  Info     | remind
-| Warn          |  Warning  | warn
-| Critical      |  Critical | Urgent
+| Info          |  Info     | Information
+| Warn          |  Warning  | Warning
+| Critical      |  Critical | Emergency

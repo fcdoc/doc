@@ -1,1 +1,1 @@
-# Security Clauses
+# Security Terms

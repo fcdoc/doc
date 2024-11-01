@@ -1,93 +1,93 @@
 ---
-brief: Alert events from various businesses or teams can be dispatched to the appropriate handling groups via dispatch strategies, ensuring that relevant handlers are reachable through various channels
+brief: Alert events from different businesses or teams can be assigned to corresponding processing groups through dispatch strategies, and the processing members can be reached through various channels
 ---
 
 # Configure Dispatch Strategy
 
-Each collaborative space should have at least one dispatch strategy. Through this strategy, alerts from different businesses or teams can be directed to the corresponding handling groups, and the relevant handlers can be contacted through diverse channels, such as common IM apps, text messages, voice calls, and robots. Additionally, it supports multi-stage notification configurations and automatic progression between stages. If a collaborative space lacks a dispatch strategy, incoming alerts will not trigger notifications.
+Each collaboration space should have at least one dispatch strategy. Through the dispatch strategy, alert events from different businesses or teams can be assigned to the corresponding processing groups, and the processing members can be reached through various channels, such as common IM applications, text messages, voice, and robots. It also supports multi-link notification configuration and automatic escalation between links; when the collaboration space does not have a dispatch strategy configured, alerts connected to the collaboration space will not trigger notifications.
 
 ## Policy Configuration
-### Time Filtering
-- By default, all incidents are notified according to this policy.
-- Supports the selection of whether to dispatch based on specific days of the week, for instance, only processing incidents from Monday to Friday, with Saturday and Sunday incidents not being addressed.
-- Supports the selection of whether to dispatch based on a service calendar (which needs to be created in advance), allowing configuration according to holidays or working days. For example, only incidents on trading days require notification, which is typically applicable in the securities industry.
+### Time Filter
+- By default, incidents at all times are notified according to this strategy.
+- Supports selecting whether to dispatch based on a specific day of the week, for example, only incidents from Monday to Friday will be dispatched, and incidents on Saturday and Sunday will not be processed.
+- Supports selecting whether to dispatch based on a service calendar (the service calendar needs to be created in advance), and can be configured according to holidays or working days. For example, only incidents on trading days need to be notified, which is generally applicable to the securities industry.
 
 ![](https://fcdoc.github.io/img/zh/flashduty/conf/escalate_rule/1.avif)
 
 ### Incident Filtering
-- By default, all incidents are notified according to this policy.
-- Supports matching incidents based on criteria such as title, level, and tags. For example, alerts with an "Info" level will follow this dispatching rule.
+- By default, all incidents are notified according to this strategy.
+- Supports matching incidents based on conditions such as title, level, and tags. For example, if the alert level is Info, it follows this dispatch strategy.
 
 ![](https://fcdoc.github.io/img/zh/flashduty/conf/escalate_rule/2.avif)
 
-Go to [How to Configure Filter Conditions](/conf/how_to_filter) for more information.
+Go to [How to configure filters](/conf/how_to_filter) to learn more.
 
 ## Dispatch configuration
 
 ### Dispatch Object
-- **Individual:** Specifies certain members to receive the alert, supporting multiple selections without repetition.
-- **Team:** Specifies a team to receive the alert, supporting multiple selections, with duplicate team members receiving only one notification.
-- **On Duty:** Specifies a duty schedule to receive the alert, with the specific recipients determined by the duty rules. Multiple selections are supported, with duplicate duty personnel receiving only one notification.
-- **Combination:** Select a combination of individuals, teams, and duty schedules.
+- **Individual:** Designate certain members to receive the alert, supporting multiple selections, and no duplicate selections.
+- **Team:** Designate a team to receive the alert, supporting multiple selections. If there are duplicate team members, only one notification will be sent to the member.
+- **On Duty:** Designate a duty schedule to receive the alert. The specific receiving members will be determined according to the duty schedule, supporting multiple selections. If the duty personnel are repeated, only one notification will be sent to the duty person.
+- **Combination:** Selecting individuals, teams, and duty schedules together.
 
 > [!NOTE]
-> Looking to integrate with internal self-developed systems for dynamic dispatching?
+> Want to integrate with an internal self-developed system to achieve dynamic dispatch?
 >
-> Please refer to [Dynamically Setting Dispatch Personnel](/advanced/dynamic_notifications).
+> Please refer to [Dynamically Setting Assignees](/advanced/dynamic_notifications).
 
 ### Single Chat Channel
-Single chat refers to one-on-one notifications, such as through email, SMS, voice, and certain IM applications.
+Single chat means one-to-one push, such as email, SMS, voice, and some IM applications.
 
-- **Follow Personal Preferences:** Notification methods are determined by members themselves in their [account settings](/conf/preference) for each alert category.
-- **Follow Unified Settings:** Notification recipients' alert channels and methods are configured uniformly by the policy setter.
+- **Follow Personal Preferences:** Notification methods are configured by members themselves in their [account settings](/conf/preference) for each alert category.
+- **Follow Unified Settings:** The policy configurator uniformly configures the channels and methods for members in the notification object to receive alerts.
 
 ### Group Chat Channel
 
-Group chat involves sending notifications to a group with special mentions for dispatch personnel, including various webhook robots and some IM applications.
+Group chat means pushing to a group and giving special reminders to the assigned personnel. This includes various webhook robots and some IM applications.
 
-- In the group chat, users can select different applications and group bots to reach the intended recipients. **When choosing to notify via IM applications**, the notification recipients must first associate themselves with the respective application. For specific instructions, please refer to [Instant Messaging Integration](/mixin/instant_messaging/lark)
+- In group chat, you can choose various applications and group robots to reach the recipients. **When selecting IM application notifications**, the notification recipient needs to be associated with the corresponding application first. For details, please refer to [Instant Messaging Integration](/mixin/instant_messaging/lark)
 
 > [!NOTE]
-> Select at least one notification channel for personal and group chats. If you prefer not to notify individuals, only groups, you can set an empty team as the dispatch target.
+> Please select at least one channel for personal and group chat notifications. If you do not want notifications to go to any individuals, only groups, you can set an empty team as the dispatch target.
 
-### Cyclic Notification
+### Circular Notification
 
-- Cyclic notifications are disabled by default, meaning that the same event is notified only once. If enabled, configure the number of notifications appropriately. Note that you must enter a value of at least `2` to receive additional cyclic notifications.
-- If an incident is claimed, the cycle of notifications is terminated.
+- Circular notifications are turned off by default, meaning the same event is notified once by default. If you need to turn it on, please configure the number of notifications appropriately. Note that the value you enter must be at least `2` to get additional circular notifications.
+- If the incident is claimed, the circular notification will be terminated.
 
 ### Upgrade Dispatch
 
-- To ensure that every incident is addressed, we can set up automatic escalation for incidents that exceed a timeout without being closed. This involves setting up multiple stages.
-- You can choose to automatically escalate incidents that are __not closed by timeout__ or __not claimed by timeout__.
-- Typical scenarios include hierarchical upgrades between primary and backup duty personnel, between superiors and subordinates, and between first and second lines of support.
+- To ensure that someone handles the incident, we can set the incident to automatically escalate if it remains open past a timeout. This involves setting up multiple stages.
+- You can choose to automatically upgrade when incident__ Timeout is not closed __ or __ Timeout is not claimed __ .
+- Typical scenarios include: layer-by-layer escalation between primary and backup personnel, superiors and subordinates, and first and second lines.
 
-You can also manually escalate incidents. Visit [Escalate & Dispatch Incidents](/alter/escalate_incidents) for more information.
+You can also manually escalate incidents. Go to [Upgrade & Dispatch Incidents](/alter/escalate_incidents) to learn more.
 
 ### Strategy Sequence Adjustment
-- When multiple dispatch strategies are in place, notifications are matched sequentially and stop once a match is found. Consider the relevant dispatch conditions thoroughly when configuring.
-- Different strategies can be adjusted by dragging and dropping to change the notification order, with changes taking effect immediately. Please proceed with caution.
+- When multiple dispatch strategies are used, notifications are matched in order and terminated when matched. Please fully consider the relevant dispatch conditions when configuring.
+- Different policies support dragging and dropping to adjust the notification order. The adjustment will take effect immediately. Please operate with caution.
 
 > [!NOTE]
-> If you need to set multiple dispatch policies within a collaboration space and ensure that every incident is notified, it's advisable to set up a fallback policy with no filtering criteria.
+> If you need to set up multiple dispatch policies in a collaboration space and ensure that every incident is notified, it's a good idea to set up a dispatch policy with no filters as a fallback.
 
 > [!WARN]
-> We do not recommend setting a collaboration space too large, especially when using a single space to manage all alerts for a large business. This can lead to managing numerous dispatch policies, making long-term maintenance more burdensome, confusing, and error-prone.
+> We do not recommend making a collaboration space too large. In particular, using a collaboration space to manage all alerts for a large business can result in maintaining many different dispatch strategies, making long-term maintenance burdensome, more confusing, and more error-prone.
 
 ## Policy Configuration Principles
-General principles for configuring dispatch strategies should consider the following aspects:
+General dispatch strategy configuration should consider the following aspects:
 
-1. **Notification Object Capability Matching:** Ensure that the notification object has the ability and authority to handle the space's alerts. This means that only relevant individuals or teams receive alerts related to their work, avoiding the delivery of irrelevant alerts to unrelated individuals.
-2. **Multi-Channel Notification:** Employ multiple notification methods to ensure that recipients receive alerts promptly. For example, notifications can be sent through various channels such as SMS, email, and instant messaging tools to enhance timeliness and reliability. However, different alert levels may warrant different notification methods to avoid message overload.
-3. **Alert Escalation Mechanism:** When an alert remains unclaimed or unprocessed for an extended period, an escalation mechanism should be in place. This could involve automatically escalating the alert to the next level of handlers or teams, or distributing the alert to multiple stages of handlers to ensure timely processing.
+1. **Notification Object Capability Matching:** Ensure that the notification object has the ability and authority to handle the space alerts. This means that only relevant people or teams receive alerts related to their work, avoiding irrelevant alerts being sent to unrelated people.
+2. **Multi-Channel Notification:** Use multiple notification methods to ensure that the notification recipient can receive the alert information promptly. For example, notifications can be sent through multiple channels such as SMS, email, and instant messaging tools to improve the timeliness and reliability of notifications. It is recommended to use different notification methods for different levels to avoid message overload.
+3. **Alert Upgrade Mechanism:** When an alert has not been claimed or processed for a long time, there should be a corresponding upgrade mechanism. This could be automatically escalating the alert to the next level handler or team, or sending the alert to handlers at multiple stages to ensure timely processing.
 
-## FAQs
+## Frequently Asked Questions
 
 |+| How to troubleshoot if an alert is generated but no notification is received?
 
-    Go to the "Incident Details" section => Timeline, to verify the normalcy of the notification statuses across all channels within the notification trigger process. Should there be failures, a failure message will be provided for your reference. For further reasons or assistance in diagnosing the issue, please contact technical support for guidance.
+    Go to incident Details => Timeline to check whether the notification status of each channel in the trigger notification process is normal. If it fails, there will be a failure message for reference. For more reasons, you can contact technical support for assistance in troubleshooting.
 
-|+| Why do the notification methods not align with my personal preference settings?
+|+| Why don't my notification methods match my personal preferences?
 
-    Flashduty's single chat notification channel supports two settings: "Follow Personal Preferences" and "Follow Unified Settings." Notifications will be personalized according to your settings only when the "Follow Personal Preferences" option is selected.
+    Flashduty single chat notification channels support two settings: one is "Follow Personal Preferences," and the other is "Follow Unified Settings." Only in the "Follow Personal Preferences" setting will notifications be personalized according to your settings.
 
-    Go to Collaboration Space Details => Assignment Policy to review your specific settings.
+    Go to Collaboration Space Details => Dispatch Strategy to view your specific settings.

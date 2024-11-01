@@ -1,63 +1,63 @@
 ---
 brief: >-
-  1. FlashDuty affords silent and suppression mechanisms to assist enterprises in refining their alerting processes. The former temporarily mutes alert notifications under specific conditions, while the latter automatically halts the issuance of redundant or anticipated alerts under certain circumstances, collectively diminishing distractions and enhancing the efficiency and accuracy of the alerting system
+  FlashDuty provides silencing and suppression mechanisms to help enterprises optimize the alert process. The former temporarily blocks alert notifications under specific conditions, while the latter automatically prevents repeated or expected alerts from being issued under specific conditions, thereby reducing interference and improving the efficiency and accuracy of the alert system
 ---
 
-# 2. Incident Silence and Suppression
+# Incident Silencing and Suppression
 
-3. FlashDuty affords silent and suppression mechanisms to assist enterprises in refining their alerting processes. The former temporarily mutes alert notifications under specific conditions, while the latter automatically halts the issuance of redundant or anticipated alerts under certain circumstances, collectively diminishing distractions and enhancing the efficiency and accuracy of the alerting system.
+FlashDuty provides silencing and suppression mechanisms to help enterprises optimize the alert process. The former temporarily blocks alert notifications under specific conditions, while the latter automatically prevents repeated or expected alerts from being issued under specific conditions, thereby reducing interference and improving the efficiency and accuracy of the alert system.
 
-## Silent Rules
+## Silence Rules
 
-During scheduled system maintenance windows or other specific time frames, silent rules can be预先设定 in advance to reduce unnecessary notifications.
-Configuration path: **Collaboration Space Details => Noise Reduction Configuration => Silent Rules**
-### Silent Time
-- **Single Silence:**  Effective only during the selected time period. It will expire and no longer be valid afterward, **but the rule will not be automatically deleted**.
-- **Periodic Silence:**
+During scheduled system maintenance windows or other specific time periods, silence rules can be set in advance to reduce unnecessary notifications.
+Configuration path: **Collaboration space details => Noise reduction configuration => Silence rules**
+### Silence Time
+- **Single silence:** It will only take effect within the specified time period and will no longer be effective after expiration, **but the rule will not be automatically deleted**.
+- **Periodic silence:**
 
-- Weekly Mode: Can be set to activate daily or on certain days of the week.
-- Calendar Mode: You must proactively create a [Service Calendar](/conf/calendar), after which it will become effective based on the working or non-working days indicated in the calendar.
+- Weekly mode: You can choose to take effect every day or on specific days of the week.
+- Calendar mode: [The service calendar](/conf/calendar) needs to be created in advance, and then it will take effect according to the working days or rest days in the calendar.
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/conf/fault_silence_and_suppression/1.avif" style="display: block; margin: 0 auto;" width="800">
 
-### Silent Conditions
-- 4. **Condition Configuration:** Selection for matching or not matching can be based on the severity of incidents or incident tags, as well as combined conditions.
-- 5. **In Case of Multiple Conditions:** The system supports advanced logical operators (such as AND, OR) to allow for flexible combinations of incident severity, incident tags, and other attributes, enabling precise multi-dimensional alert matching and control.
+### Silence Conditions
+- **Condition configuration:** You can choose to match or not match based on the severity of the incident or incident tags, as well as combination conditions.
+- **When there are multiple conditions:** The system supports advanced logical operators (such as AND, OR) to flexibly combine the severity of the incident, incident tags, and other attributes, achieving precise multi-dimensional alert matching and control.
 
 > [!WARN]
-> 6. When an incident meeting the criteria is silenced, it will still be displayed and processed on the console; however, no notifications will be triggered.
+> When a qualified incident is silenced, it will still be displayed and processed on the console, but the notification will not be triggered.
 
 ### Quick Silence
-7. Quick Silence refers to the rapid creation of **temporary or one-time** silence rules within the mobile app based on an existing incident. Operation path: **Click on incident details => More actions => Quick Silence**.
+Quick silence refers to quickly creating **temporary or single** silence rules on the mobile terminal based on an incident that has occurred. Operation path: **Click incident => More operations => Quick silence**.
 
-- 8. **Basic Information:** The rule name and description are automatically derived from the incident's ID and title by default.
-- 9. **Effective Scope:** The collaboration space where the silence rule takes effect is that of the incident's assigned collaboration space and **cannot be altered**.
-- **Effective Time:** Only supports a single time range (default 24 hours); the rule is automatically deleted upon expiration without a deletion record.
-- 10. **Silence Conditions:** By default, the incident's tags are used as the criteria, requiring an exact match. You can visit [Configure Filter Conditions](/conf/how_to_filter) to understand how to set up restrictive conditions.
+- **Basic information:** The rule name and rule description are combined by default using the incident ID and title.
+- **Effective scope:** The collaboration space in which the silence rule takes effect is the collaboration space to which the incident belongs and **cannot be changed**.
+- **Effective time:** Only supports a single time range (default 24 hours). The rule will be automatically deleted after expiration and there will be no deletion record.
+- **Silence condition:** By default, the label of the incident is used as the condition, and it is an exact match condition. You can go to [Configure filters](/conf/how_to_filter) to learn how to configure restrictions.
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/conf/fault_silence_and_suppression/2.avif" style="display: block; margin: 0 auto;" width="800">
 
 > [!NOTE]
-> 11. Entering and operating Quick Silence from the same incident details constitutes editing the original rule and does not create a new one.
+> When entering and operating quick silence in the same incident details, the original rule is edited, and no new rule is created.
 
 ## Suppression Rules
-12. Optimize the notification process in specific incident scenarios. For instance, when a Critical-level incident occurs, the system will suppress subsequent notifications for Info or Warning-level incidents to avoid redundancy and ensure focus remains on the most pressing issues, achieving notification effectiveness and relevance. Configuration path: **Collaboration Space Details => Noise Reduction Configuration => Suppression Rules**.
+Optimize the notification process under specific incident scenarios. For example, when there is a Critical-level incident, the system will suppress subsequent Info or Warning-level related incidents to avoid information redundancy and ensure that the focus remains on the most urgent issues, achieving the effectiveness and pertinence of notifications. Configuration path: **Collaboration space details => Noise reduction configuration => Suppression rules**.
 
 ### Suppression Conditions
-13. When a new incident meets the conditions and there is an active incident that meets the conditions within the last 24 hours, and the new incident shares identical items with the active one, it will be suppressed.
+When a new incident meets the conditions and there is an active incident that meets the conditions within 24 hours, and the new incident has the same items as the active incident, it will be suppressed.
 
-- 14. **New Incident:** This refers to an incident that has occurred after the rule has been configured and meets the specified conditions.
-- **Active Incident:** This refers to an **incident that remains unclaimed and unresolved** within a 24-hour period, qualifying as an active incident.
-- 16. **Conditional Matching:** You can choose to match or not match based on the severity of incidents or incident tags, as well as combined conditions.
-- **Same Items:** Supports matching using the same attributes or labels, with multiple conditions, selecting at least one attribute or label, and requiring simultaneous satisfaction when both are chosen.
+- **New incident:** Refers to a newly occurring incident, i.e., an incident that occurs after the rule is configured and meets the conditions.
+- **Active incident** It means that **incident that has not been claimed and not closed** within 24 hours is active incident .
+- **Condition matching:** You can choose to match or not match based on the severity of the incident or incident tags, as well as combination conditions.
+- **Same item:** Supports matching using the same attribute or the same label, supports multiple conditions, and at least one attribute and label must be selected. When selected simultaneously, all conditions must be met.
 
-You can visit [Configure filters](/conf/how_to_filter) to understand how to set up restrictive conditions.
+You can go to [Configure filters](/conf/how_to_filter) to learn how to configure restrictions.
 
 > [!WARN]
-> 17. When an incident meeting the criteria is suppressed, it will still be displayed and processed on the console; however, no notifications will be triggered.
+> When a qualified incident is suppressed, it will still be displayed and processed on the console, but the notification will not be triggered.
 
-### Configuration Example
+### Configuration Examples
 
-18. When there are Critical-level incidents with the same check items within 24 hours, incidents of Warning and Info levels will be suppressed.
+When there are Critical-level incidents of the same check item within 24 hours, the incidents of Warning and Info are suppressed.
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/conf/fault_silence_and_suppression/3.avif" style="display: block; margin: 0 auto;" width=800>

@@ -2,22 +2,22 @@
 brief: Tutorial on Setting Up LDAP with Docker Compose
 ---
 
-# Guide to Integrating OpenLDAP
+# OpenLDAP Integration Guide
 
 ## Quick Overview
 
 LDAP (Lightweight Directory Access Protocol) is a protocol based on the X.500 standard and is used to access and maintain distributed directory services. LDAP enables users and applications to query, browse, and search information stored in the directory, such as user identity information, network resources, etc. LDAP usually runs on the TCP/IP protocol stack, specifically using TCP ports 389 (for unencrypted communication) and 636 (for encrypted communication, using LDAPS).
 
-Core Features of LDAP Include:
+The core features of LDAP include:
 
-Tree Structure: LDAP data is organized in a tree structure known as the DIT (Directory Information Tree), which facilitates hierarchical searching and browsing.
+- Tree structure: LDAP data is organized into a tree structure called DIT (Directory Information Tree), which facilitates hierarchical searching and browsing.
 
-Entries and attributes: Each entry (Entry) in LDAP contains multiple attributes (Attribute). Attributes have types and values. For example, "cn" represents the common name (Common Name), and "mail" represents the email address.
+- Entries and attributes: Each entry (Entry) in LDAP contains multiple attributes (Attribute). Attributes have types and values, such as "cn" for common name (Common Name) and "mail" for email address.
 
 OpenLDAP is an open-source implementation of the Lightweight Directory Access Protocol (LDAP). Due to its open-source nature and flexibility, OpenLDAP has become the preferred LDAP implementation for many enterprises and organizations.
 
 > [!NOTE]
-> This article assumes that the environment already supports Docker and Docker Compose. If not, please install them first.
+> This article assumes that the environment already supports Docker and Docker Compose. If it does not, please install them first.
 
 ## Docker Compose Configuration File
 ```
@@ -69,33 +69,33 @@ networks:
 ```
 
 > [!NOTE]
-> Replace "password" with the desired password
+> Replace password with the password you want to set
 
-## Service Startup
-Save the above configuration file as docker-compose.yml. In the directory containing the configuration file, open a terminal or command prompt and run the following command to start the service:
+## Service Start
+Save the above configuration file as docker-compose.yml. In the directory where the configuration file is located, open a terminal or command prompt and run the following command to start the service:
 ```
 docker-compose up
 ```
 
-If you wish to run the service in the background, you can add the -d flag:
+If you want to run the service in the background, you can add the -d flag:
 ```
 docker-compose up -d
 ```
 
-View Service Status:
-Use the following command to check the service status:
+Check Service Status:
+Use the following command to check the status of the service:
 ```
 docker-compose ps
 ```
 
-Stop the Service:
-To stop the service, use the following command:
+Stop Service:
+When you want to stop the service, use the following command:
 ```
 docker-compose down
 ```
 
-## Login to OpenLDAP:
-Access http://ip:8088/ in your browser and log in using the username cn=admin,dc=flashduty,dc=com and the password xxx.
+## Log in to OpenLDAP
+Visit http://ip:8088/ in the browser and log in using the username cn=admin,dc=flashduty,dc=com and password xxx.
 
 ## OpenLDAP Configuration
 ### Add Groups and Users
@@ -106,8 +106,8 @@ Access http://ip:8088/ in your browser and log in using the username cn=admin,dc
 > In **the user path** (for example, cn = falsh duty ) under ou = people in the picture above -> `Add new attribute` -> Select `Email` to add Email attributes to the user. If it already exists, please ignore it.
 
 ## FlashDuty Integration
-With the above OpenLDAP configuration, the FlashDuty integration details are as shown in the figure below:
+Based on the above OpenLDAP configuration, the FlashDuty integration information is shown in the figure below:
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/openldap/2.avif)
 
 > [!NOTE]
-> For the meaning and description of the aforementioned fields, please refer to [Configuring Single Sign-On](/feature/single_sign_on)
+> For the meaning and description of the above fields, please refer to [Configuring Single Sign-On](/feature/single_sign_on)

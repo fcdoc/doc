@@ -1,1 +1,1 @@
-# Configure FlashDuty
+# Configure Flashduty

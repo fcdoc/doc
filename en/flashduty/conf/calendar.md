@@ -1,34 +1,34 @@
 ---
-brief: By configuring the service calendar, you can manage allocation strategies and silent rules using either the working day or rest day mode
+brief: By configuring the service calendar, you can manage allocation policies and quiescing rules using working day or rest day modes
 ---
 
 # Configure Service Calendar
 
 ## Application Scenarios
-- When assigning incidents, you can utilize the calendar mode to distribute them based on either rest days or working days.
-- For silencing alerts during a specific time frame, the calendar mode can be employed to achieve periodic silencing.
+- When assigning incidents, you can use the calendar mode to dispatch incidents based on whether it is a rest day or a working day.
+- When you need to silence alerts during a specific time period, you can use the calendar mode to set up periodic silencing.
 
 ## Create Calendar
-**Navigate to Console => Incident Management => Service Calendar => Add Calendar to create a new one**.
-- It is recommended to name the calendar based on the business dimension, for example, "Settlement Business System."
-- The calendar description should provide an overview of the business characteristics and logic, allowing team members to quickly grasp the information.
-- After configuring team members to manage the calendar, they will have full permissions for that calendar.
-- Newly created calendars are set to all working days by default. It is generally advised to link them directly to national holidays to automatically incorporate holiday schedules, thus saving the manual marking process. Even after linking, manual adjustments can still be made as needed.
+**Go to Console => Incident Management => Service Calendar => Add Calendar to create it.**
+- It is recommended to name the calendar based on the business dimension, such as the Settlement Business System.
+- The calendar description should outline the business features and logic to help team members quickly understand it.
+- After configuring the management team for a calendar, the team members have full permissions for that calendar.
+- The newly created calendar defaults to all working days. It is generally recommended to associate it with national holidays to automatically obtain holiday schedules, thus eliminating the need for manual marking. Even after association, manual adjustments can still be made as needed.
 
 ![Service Calendar](https://fcdoc.github.io/img/zh/flashduty/conf/calendar/1.avif)
 
 ## Edit Calendar
-- Only the creator and team members have the right to edit the calendar; other members have read-only access.
-- Basic information such as the calendar name, description, and management team can be modified.
-- Rest days can be quickly marked based on the weekday.
+- Only the creator and team members have edit permissions for the calendar; other members have read-only access.
+- Basic information, such as the calendar name, description, and management team, can be modified.
+- Rest days can be quickly marked based on the day of the week.
 
 ![](https://fcdoc.github.io/img/zh/flashduty/conf/calendar/2.avif)
 
 > [!WARN]
-> Deleting a calendar is irreversible. Please ensure no business is using it before deletion.
+> Deleted calendars cannot be recovered. Ensure that no business is using the calendar before deleting it.
 
-## FAQs
+## Frequently Asked Questions
 
-|+| What is the difference between a calendar and a duty label?
+|+| What is the difference between a calendar and duty labels?
 
-    The primary difference between the service calendar and the duty schedule lies in their distinct positioning and application scenarios. The duty schedule is used for reception, serving as the recipient of incident events and responsible for receiving and processing incidents assigned to the duty shift; whereas the service calendar is used for dispatching, determining which time periods' incidents are to be assigned, and it sits at a higher level than the recipient. The service calendar is typically applied in the securities industry, for instance, only businesses that operate on weekdays require attention.
+    The main difference between the service calendar and the duty schedule lies in their positioning and application scenarios. The duty schedule is used for receiving incidents and is responsible for receiving and processing incidents assigned to the duty team. In contrast, the service calendar is used for dispatching incidents, determining which time periods incidents should be dispatched, and serves as an upper layer for the receivers. The service calendar is commonly used in the securities industry, for example, where only business that operates on weekdays requires attention.

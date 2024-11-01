@@ -1,10 +1,10 @@
 ---
-brief: By integrating a third-party enterprise WeChat application, the capability to receive and respond to alerts within the enterprise WeChat client is realized
+brief: By integrating third-party applications with Enterprise WeChat, the capability to receive and respond to alerts within the Enterprise WeChat client is achieved
 ---
 
 # Enterprise WeChat Integration
 
-By integrating a third-party enterprise WeChat application, the capability to receive and respond to alerts within the enterprise WeChat client is realized.
+By integrating third-party applications with Enterprise WeChat, the capability to receive and respond to alerts within the Enterprise WeChat client is achieved.
 
 ## 1. Install the Application
 
@@ -24,47 +24,47 @@ By integrating a third-party enterprise WeChat application, the capability to re
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/wecom/4.avif" alt="drawing" width="400"/>
 
-5. **Please note: Flashduty As an enterprise WeChat service provider, we provide you with a long-term free version of the `FlashDuty` application. This application needs to obtain the Enterprise WeChat interface calling license before it can be used (password-free login + messages). This license currently supports $ 60 day __ for free for up to __ . After that, we must purchase the Enterprise WeChat license for you before you can use it.**
+5. **Please note: As an Enterprise WeChat service provider, Flashduty offers a long-term free version of the `FlashDuty` application. This application requires an Enterprise WeChat API call license to function (password-free login + message sending). This license currently supports __up to 60 days__ of free usage. After that, we must purchase the Enterprise WeChat license for you to continue using it.**
 
-## 2. Common Issues
+## 2. Frequently Asked Questions
 
-1. **Upon clicking the integrated save button, an error `authorize app first` appears?**
+1. **Clicking the integration save button results in an error `authorize app first`?**
 
-- Please check if you have completed the application installation steps, such as whether you can see the `FlashDuty` application in the workspace
+- Please check if you have completed the application installation steps, for example, whether you can see the `FlashDuty` application on the workbench
 - Please check if you have correctly configured the `Corp ID`
 
-2. **How to complete account linking? Or message sending prompt __ Not associated with the application __ ?**
+2. **How to complete account linking? Or why does the message sending prompt say __Not associated with the application__?**
 
 - Log in to the enterprise WeChat client (both desktop and mobile), enter **the workbench** , find and enter application `FlashDuty`
 - When entering the application for the first time, you need to log in - Select a member account, password or single sign-on. After successful login, `Flashduty` linkage to **the enterprise WeChat** account is completed.
 - Subsequent entries into the application will be password-free
 
-3. **How to issue incident notifications?**
+3. **How to send incident notifications?**
 
-- You must first complete the account association as described in question 1 before sending notifications
-- Enter the details page of a specific collaboration space - Dispatch Strategy, and under the personal channel section, select to notify the enterprise WeChat integration to complete the notification configuration
-- Support for customizing the content of enterprise WeChat notifications is available. You can go to the template management page to set a custom template. Note: **The custom area can display a maximum of 8 lines. Content exceeding this limit will be truncated by enterprise WeChat.**
+- You must refer to question 1 to complete the account linking before sending notifications
+- Enter the details page of a certain collaboration space - Dispatch Strategy. In the personal channel section, select Notification to Enterprise WeChat integration to complete the notification configuration
+- It supports customizing the content of Enterprise WeChat notifications. You can go to the template management page to set a custom template. Note: **The maximum number of display lines in the custom area is 8. If it exceeds this limit, it will be truncated by Enterprise WeChat.**
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/wecom/5.avif" alt="drawing" width="400"/>
 
 4. **How to handle alerts within WeChat?**
 
-- Click on the card message to directly access the alert details page
+- Click on the card message to go directly to the alert details page
 - Click **to start processing** and directly set alert to the **processing** status
 - Click **to close directly** , and directly set alert to the **closed** state
 - Click **Block for 2 hours** to directly block alert for 2 hours. If you want to block more time, click `...` in the upper right corner of the card for more blocking options.
 
 5. **Why does the card message provide a <strong>status refresh</strong> button?**
 
-- Enterprise WeChat limits card interactions to one update every 72 hours. Each button operation counts as an interaction
+- Enterprise WeChat limits a card interaction to only one update within 72 hours. Each button operation is an interaction
 - When the status of an alert changes, Flashduty will request an update to the card content
-- When the alert status changes frequently, it may exceed the update limit, preventing the card from updating in real time. In such cases, click the refresh button to gain an opportunity to update the card status
+- When the alert status changes frequently, the card may not be updated in real time due to exceeding the update limit. In this case, you can click the refresh button to get an opportunity to update the card status
 
 6. **Mac How to open click card messages using <strong>the system default browser</strong> on the desktop?**
 
-- By default, the Mac desktop uses the in-app browser to open links
-- You can try the shortcut keys `ctrl` + `command` + `shift` + `d` to turn on debugging mode, and then select **debug - browser, webView related - system browser to open the web page** to change the link opening mode. Use the same shortcut to turn off debug mode and keep settings.
+- The Mac desktop client defaults to using the in-app browser to open links
+- You can try the shortcut keys `ctrl` + `command` + `shift` + `d` to turn on debugging mode, and then select **debugging - browser, webView related - system browser to open the web page** to change the link opening mode. Use the same shortcut to turn off debug mode and keep settings.
 
-7. **Incident notification failed, displaying __License Not Activated__?**
+7. **Incident notification failed, prompting __license not opened__?**
 
-- Contact Flashduty customer service or dedicated support to purchase and activate the license for you
+- Contact Flashduty customer service or dedicated support to purchase and activate it for you

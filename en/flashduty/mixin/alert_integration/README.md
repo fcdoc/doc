@@ -1,1 +1,1 @@
-# - Alert Integration
+# Alert Integration

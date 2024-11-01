@@ -1,70 +1,70 @@
 ---
-brief: Push proprietary system alert events to Flashduty via standard protocols to facilitate automated noise reduction for alert events.
+brief: Push your system's alert events to Flashduty via standard protocols to achieve automated noise reduction of alert events.
 ---
 
 # Custom Alert Event Integration Guide
 
-Push proprietary system alert events to Flashduty via standard protocols to facilitate automated noise reduction for alert events.
+Push your system's alert events to Flashduty via standard protocols to achieve automated noise reduction of alert events.
 
 > [!NOTE]
-> Flashduty has adapted to the webhook protocols of most common alert systems. For these systems, you should first use the corresponding integration, which is simpler and more convenient. This integration provides a standard HTTP interface, allowing you to develop adaptors. The benefit is that you can push any alert event you wish to handle on-call.
+> Flashduty has already adapted to the webhook protocols of most commonly used alert systems. For these systems, you should first use the corresponding integration, which is simpler and more convenient. This integration provides a standard HTTP interface that requires you to develop an adapter. The advantage is that you can push any alert event you want to manage.
 
 ## Operation Steps
 
 ### In Flashduty
 
-使用专属集成
+You can obtain an integrated push address through the following two methods, choose either one.
 
 #### Use Proprietary Integrations
 
-When there is no need to route alert events to different collaboration spaces, this method is preferable as it is more straightforward.
+When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
     1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
-    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the integration creation page
-    3. Choose the **Prometheus** integration, click **Save**, and a card will be generated.
-    4. Click on the generated card to view the **Push Address**, copy it for backup, and the task is complete.
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
+    3. Select **Prometheus** integration, click **Save**, and a card will be generated.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
 
 #### Use Shared Integrations
 
-When routing alert events to different collaboration spaces based on the payload information of the alert events is required, this method should be prioritized.
+When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and proceed to the integration selection page.
+    1. Enter the Flashduty console, select **Integration Center => Alerts**, and navigate to the integration selection page.
     2. Select the **Custom Event** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, to be adjusted as needed later.
-    5. Completed.
+    3. After clicking **Save**, copy the newly generated **push address** for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed.
+    5. Complete.
 
 ## Implement Protocol
 
-Please refer to [the development documentation](https://developer.flashcat.cloud/zh/flashduty/custom-alert) to complete the protocol development.
+Please refer to the [development documentation](https://developer.flashcat.cloud/zh/flashduty/custom-alert) to complete the protocol development.
 
 ## Best Practices
 
-1. When an alert status changes, send an event to Kuaimao Nebula
-2. When an alert is resolved, send an event with a status of "Ok" to close the alert. Otherwise, the alert will remain open. If your alert system does not generate recovery events, it is recommended to manually send a resolution event
-3. The label is a description of the event. Enrich the label content as much as possible (specified when sending, or generated through configuration enrichment rules), such as:
+1. When the alert status changes, send an event to Kuaimao Nebula
+2. When the alert is restored, send an event with status Ok to close the alert. Otherwise, the Alert will remain on. If your alert system does not have recovery events, it is recommended that you send recovery events manually
+3. The label is a description of the event. The content of the label should be as detailed as possible (specify when sending, or generate new labels by configuring enrichment rules), such as:
 - The source of the alert, such as host, cluster, check, or metric, etc
-- Alert ownership information, such as team, owner, etc
-- Alert category information, such as class (api, db, net)
+- The ownership information of the alert, such as team, owner, etc
+- The category information of the alert, such as class (api, db, net)
 
-## FAQs
+## Frequently Asked Questions
 
-|+| Why have I not received any alerts in Flashduty?
+|+| Why Didn't I Receive an Alert in Flashduty?
 
     #### In Flashduty
 
-    1. Verify if the integration displays the **Latest Event Time**? If it does not, this indicates that Flashduty has not received the push, and you should check your system first.
-    2. If you are using a **shared integration**, first verify whether you have set up **routing rules**. Without routing rules, the system will reject new alerts directly, as there is no collaboration space to handle them. In such cases, simply configure the routing rules to the desired space.
+    1. Check if the integration shows the **Latest Event Time**? If not, it means Flashduty did not receive the push, and you should first check your system.
+    2. If you are using **Shared Integration**, first confirm whether you have configured **Routing Rules**. Without setting routing rules, the system will directly reject new pushes because there is no collaboration space to handle your alert. In this case, just configure the routing rules to the space you want.
 
-    #### In your system
+    #### In Your System
 
-    1. Confirm that the requested address matches exactly with the address in the integration details.
-    2. Confirm that your service can access the external api.flashcat.cloud domain name. If not, you first need to open an external network for the server, or separately enable external network access for Flashduty's domain name.
-    3. Print the response result from the Flashduty service to check for any clear information.
+    1. Confirm that the address you are requesting matches the address in the integration details exactly.
+    2. Confirm that your service can access the external api.flashcat.cloud domain name. If not, you first need to open an external network for the server, or enable external network access for Flashduty's domain name alone.
+    3. Print the response from the Flashduty service to check for any clear information.
 
-    If the root cause of the issue is still not identified after following the above steps, please contact us **with the request_id from the response**.
+    If the problem remains unresolved after performing the above steps, please contact us with the **request_id** from the request response.

@@ -1,51 +1,51 @@
 ---
-brief: Synchronize OceanBase alert events with Kuaimao Nebula via webhook to automate noise reduction for alert events
+brief: Synchronize OceanBase alert events to Kuaimao Nebula via webhook to achieve automatic noise reduction processing of alert events
 ---
 
-# OceanBase alert events
+# OceanBase Alert Events
 
-Synchronize OceanBase alert events with Kuaimao Nebula via webhook to automate noise reduction for alert events
+Synchronize OceanBase alert events to Kuaimao Nebula via webhook to achieve automatic noise reduction processing of alert events
 
 ## In Flashduty
-使用专属集成
+You can obtain an integrated push address through the following two methods, choose either one.
 
 ### Use Proprietary Integrations
 
-When there is no need to route alert events to different collaboration spaces, this method is preferable as it is more straightforward.
+When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
     1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
-    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the integration creation page
-    3. Choose the **OceanBase** integration, click **Save**, and a card will be generated.
-    4. Click on the generated card to view the **Push Address**, copy it for backup, and the task is complete.
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
+    3. Select **OceanBase** integration, click **Save**, and generate a card.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
 
 ### Use Shared Integrations
 
-When routing alert events to different collaboration spaces based on the payload information of the alert events is required, this method should be prioritized.
+When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and proceed to the integration selection page.
-    2. Select the **OceanBase** integration:
+    1. Enter the Flashduty console, select **Integration Center => Alerts**, and navigate to the integration selection page.
+    2. Choose **OceanBase** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, to be adjusted as needed later.
-    5. Completed.
+    3. After clicking **Save**, copy the newly generated **push address** for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed.
+    5. Complete.
 
-## At OceanBase
+## In OceanBase
 
 ## 1. OceanBase Alert Push Configuration
 
-### Step 1: Configure the Alert Channel
-1. Sign in to your OceanBase console and select the Alert Center.
-2. Proceed to **Alert Channels**, and click the **Create New Channel** button to begin setting up a new channel.
-3. Select **Custom Script** as the channel type.
-4. The basic configuration details are as shown in the following image:
+### Step 1: Configure Alert Channel
+1. Log in to your OceanBase console and select the alert center.
+2. Enter **Alert Channel**, click the **New Channel** button to start creating a new channel.
+3. Select **Custom Script** for the channel type.
+4. The basic configuration content is as shown in the figure below:
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/oceanbase/1.avif" />
 
-5. In the channel configuration, copy the following script content, and **please supplement the integration_key parameter in the script with the value of integration_key from the FlashDuty push address**.
+5. Copy the following script content in the configuration channel, and **please add the integration_key parameter in the script with the integration_key value in the FlashDuty address** .
 
 ```
 #!/usr/bin/env bash
@@ -124,9 +124,9 @@ sendToFlashDuty
 fi
 ```
 
-6. Simply input the verification information into the {} placeholder for Response.
-7. In the message configuration, select Markdown as the format for alert messages.
-8. Choose **Simplified Chinese** for the alert message template, and fill in the required content before submitting.
+6. Just fill in {} for the Response verification information.
+7. Select Markdown as the alert message format in the message configuration.
+8. Alert message template **Select Simplified Chinese**, fill in the following content and submit.
 
 ```
 OCP告警通知-单条告警
@@ -152,34 +152,34 @@ OCP告警通知-单条告警
 
 ### Step 2: Configure Alert Push
 
-1. Establish a new push configuration by following the path: **Alert Center => Alert Push => Create New Push Configuration**.
-2. Configure the push type and specified recipients as needed.
+1. Create a new push configuration, path: **Alert Center => Alert Push => New Push Configuration**.
+2. The push type and specified objects can be configured as needed.
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/oceanbase/2.avif" />
 
-3. Select **Simplified Chinese** as the language for notifications.
-4. Select **FlashDuty** as the Alert Channel.
+3. Select **Simplified Chinese** as the push language.
+4. Alert Channel selection **FlashDuty**.
 5. Enable **Recovery Notifications**.
-6. Submit the configuration.
+6. Submit.
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/oceanbase/3.avif" />
 
+## 2. Status Comparison
+
+|OceanBase|Kuaimao Nebula|Status|
+|---|---|---|
+|Stop Service|Critical|Critical|
+|Critical|Warning|Critical|
+|Warning|Warning|Warning|
+|Notice|Info|Information|
+|Information|Info|Information|
+
 ## Status Comparison
 
-|OceanBase|Kuaimao Nebula|state|
+|OceanBase|Kuaimao Nebula|Status|
 |---|---|---|
-|Service Suspension|Critical|serious|
-|serious|Warning|serious|
-|warn|Warning|warn|
-|Notice|Info|remind|
-|remind|Info|remind|
-
-## Status Comparison
-
-|OceanBase|Kuaimao Nebula|state|
-|---|---|---|
-|Service Suspension|Critical|serious|
-|serious|Warning|serious|
-|warn|Warning|warn|
-|Notice|Info|remind|
-|remind|Info|remind|
+|Stop Service|Critical|Critical|
+|Critical|Warning|Critical|
+|Warning|Warning|Warning|
+|Notice|Info|Information|
+|Information|Info|Information|

@@ -1,34 +1,34 @@
 ---
-brief: Understand the scenarios and configuration methods for using custom operations
+brief: Understand the Usage Scenarios and Configuration Methods of Custom Operations
 ---
 
 # Custom Operations
 
 ## Usage Scenarios
 
-The custom operation itself is a Webhook invocation, allowing you to add custom actions for incidents across different collaboration spaces. You can manually trigger these actions within the incident details to facilitate swift troubleshooting or information synchronization.
+A custom operation is essentially a Webhook call. You can add custom operations for incidents in different collaboration spaces and manually trigger these operations in the incident details to achieve rapid troubleshooting or information synchronization.
 
-Common scenarios for using custom operations:
-1. **Restart Host**: When the host's memory or CPU is maxed out, trigger a restart script to quickly reboot the host.
-2. **Information-rich**: Upon incident occurrence, the system will callback your service, leveraging alert details to retrieve Tracing, Logging, and topology information. It will proactively call the FlashDuty Open API to update incident details, such as adding tags or setting custom fields to aid in troubleshooting.
-3. **Rollback Changes**: If an incident is confirmed to be caused by a change, you can directly trigger a callback to your deployment platform to initiate the rollback process, thereby accelerating incident recovery.
-4. **Update Status Page**: When it is confirmed that an incident affects online services, you can trigger an update to the external Status Page to promptly notify your customers or upstream and downstream partners.
+Common Usage Scenarios for Custom Operations:
+1. **Restart the Host**: When the host memory or CPU is full, trigger a host restart script to quickly complete the host restart.
+2. **Enrich Information**: When an incident occurs, call back your service to retrieve Tracing, Logging, and topology information based on alert details. Actively call the FlashDuty Open API to update the incident information, such as adding labels or setting custom fields, to assist in troubleshooting.
+3. **Rollback Changes**: When an incident occurs, if it is determined that the incident is caused by a change, you can directly trigger a callback to your deployment platform to start the rollback process and speed up incident recovery.
+4. **Update Status Page**: When it is determined that the incident affects online services, trigger an external Status Page update to notify your customers or upstream and downstream users in a timely manner.
 
 ## Configure Custom Operations
 
-1. Login to the console and navigate to **Integration Center > Webhook**
-2. Click to add a **Custom Operation** integration
+1. Log in to the console and navigate to **Integration Center => Webhook**
+2. Click **Add Custom Operation** Integration
 3. Configure the following information:
-- **Operation Name**, this name will be displayed as a button within the incident details.
-- **Collaboration Spaces**, where multiple can be configured, but no more than three custom operations can be added per space.
-- **Endpoint**, the HTTP(s) request address that is triggered when the custom operation button is clicked.
-- **Custom Headers**, the custom headers included in the request to the Endpoint.
-4. Save to complete the configuration
+- **Operation Name**: This name will appear as a button in the incident details.
+- **Collaboration Spaces**: You can configure multiple spaces, but each space can have up to three custom operations.
+- **Endpoint**: The HTTP(s) address that will be triggered when the custom operation button is clicked.
+- **Custom Headers**: The custom message headers to be included when requesting the endpoint.
+4. Save and complete
 
 After creation, you can see the operation button under [Incident Details - More Operations] in the corresponding space. Click the button and the system will prompt you with the operation result. If the operation is successful, the system will write the operation record.
 
 ![](https://fcdoc.github.io/img/zh/flashduty/alter/custom_actions/1.avif)
 
-### How to Implement Webhooks?
+### How to Implement a Webhook?
 
-Visit [Webhook Getting Started](https://developer.flashcat.cloud/doc-2996930) for more information.
+Go to [Webhook Get Started](https://developer.flashcat.cloud/doc-2996930) to learn more.

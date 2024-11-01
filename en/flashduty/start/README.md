@@ -1,1 +1,1 @@
-# Beginner's Guide
+# Getting Started Guide

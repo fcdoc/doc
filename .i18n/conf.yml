@@ -14,8 +14,7 @@ upload:
 
 nav:
   - i18n: doc
-    # Don't add space between `,`
-    menu: NB flashduty
+    url: flashduty
     use: Doc
 
 addon:

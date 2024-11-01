@@ -1,64 +1,64 @@
 ---
-brief: Synchronize alerts from Alibaba Cloud Monitoring Event Center to Kuaimao Xingyun via webhook, enabling automated noise reduction for alert events
+brief: Synchronize Alibaba Cloud Cloud Monitoring Event Center alerts to Kuaimao Nebula via webhook to achieve automatic noise reduction processing of alert events
 ---
 
 # Alibaba Cloud Monitoring CM Event Integration
 
-Synchronize alerts from Alibaba Cloud Monitoring Event Center to Flashduty via webhook, facilitating automated noise reduction for alert events.
+Synchronize Alibaba Cloud Cloud Monitoring Event Center alerts to Flashduty via webhook to achieve automated noise reduction processing of alert events.
 
 ## In Flashduty
-使用专属集成
+You can obtain an integrated push address through the following two methods, choose either one.
 
 ### Use Proprietary Integrations
 
-When there is no need to route alert events to different collaboration spaces, this method is preferable as it is more straightforward.
+When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
     1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
-    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the integration creation page
-    3. Choose the **Alibaba Cloud CM Event** integration, click **Save**, and a card will be generated.
-    4. Click on the generated card to view the **Push Address**, copy it for backup, and the task is complete.
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
+    3. Select the **Alibaba Cloud CM Event** integration, click **Save**, and a card will be generated.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
 
 ### Use Shared Integrations
 
-When routing alert events to different collaboration spaces based on the payload information of the alert events is required, this method should be prioritized.
+When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and proceed to the integration selection page.
-    2. Select the **Alibaba Cloud CM Event** integration:
+    1. Enter the Flashduty console, select **Integration Center => Alerts**, and navigate to the integration selection page.
+    2. Choose the **Alibaba Cloud CM Event** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, to be adjusted as needed later.
-    5. Completed.
+    3. After clicking **Save**, copy the newly generated **push address** for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed.
+    5. Complete.
 
-## Configure Alibaba Cloud Monitoring CM Events
-**Step 1: Add a Push Channel**
+## Monitor CM Events on Alibaba Cloud
+**Step 1: Add Push Channels**
 
-1. Log in to your Alibaba Cloud console and select the Cloud Monitoring service
-2. Enter the **Event Center -> Event Subscription** page, navigate to the **Push Channels** tab, click the "Create Push Channel" button to begin editing the content
-3. As illustrated, select **POST** for the **Request Method** and enter the integrated push address in the **Address** field
-4. Click the "Confirm" button to finalize and submit the updates
+1. Log in to your Alibaba Cloud console and select the cloud monitoring product
+2. Enter **the Event Center -> Event Subscription** page, switch to **the Push Channel** tab, click the Create Push Channel button, and start editing content
+3. As shown in the figure, select **POST** for **Request Method** and fill in the integrated push address for **Address**
+4. Click the Confirm button to submit the update
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/aliyun_cm_event/1.avif" />
 
-**Step 2: Add a Subscription Policy**
+**Step 2: Add Subscription Policy**
 
-1. Log in to your Alibaba Cloud console and select the Cloud Monitoring service
-2. Access the **Event Center -> Event Subscription** page, go to the **Subscription Strategy** tab, and click the "Create Subscription Strategy" button to start editing the content
-3. Enter a subscription name, choose the event type and scope, and at the bottom, configure the push channel to the previously created Flashduty channel
-4. Click the "Confirm" button to finalize and submit the updates
-5. The figure below shows the subscription results for two types of events: Threshold and System
+1. Log in to your Alibaba Cloud console and select the cloud monitoring product
+2. Enter **the Event Center -> Event Subscription** page, switch to **the Subscription Strategy** tab, click the Create Subscription Strategy button, and start editing content
+3. Fill in the subscription name, select the event type and scope, and configure the push channel at the bottom to the Flashduty channel created previously
+4. Click the Confirm button to submit the update
+5. The figure below shows the subscription results for two types of events: threshold and system
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/aliyun_cm_event/2.avif" />
 
 ## Status Comparison
 
-Mapping relationship between Alibaba Cloud Monitoring Event alerts and Flashduty alert levels:
+Alibaba Cloud Cloud Monitoring event alert to Flashduty alert level mapping relationship:
 
-| Alibaba Cloud Monitoring |  Flashduty  | state |
+| Alibaba Cloud Cloud Monitoring |  Flashduty  | Status |
 | ------------ | -------- | ---- |
-| CRITICAL     | Critical | serious |
-| WARNING      | Warning  | warn |
-| INFO         | Info     | remind |
+| CRITICAL     | Critical | Critical |
+| WARNING      | Warning  | Warning |
+| INFO         | Info     | Information |

@@ -1,43 +1,43 @@
 ---
-brief: Understand how to reassign, upgrade assignments, or add handlers
+brief: Learn how to reassign, upgrade an assignment, or add a handler
 ---
 
-# Upgrading and dispatching incidents
+# Upgrading and Dispatching Incidents
 
 Reassign, upgrade the assignment, or add a handler.
 
 ## Reassign
 
-When an incident is assigned to you, but you confirm that you are not the correct person to handle it, or you are unable to address the incident, you can choose to reassign it to someone else or to the duty schedule.
+When an incident is assigned to you, but you confirm that you are not the correct assignee, or you are unable to handle the incident, you can choose to reassign the incident to another person or a duty schedule.
 
-Reassignment means a new notification. If an incident marked as **In Progress** is reassigned, it may reset the incident's status to **Pending**. Unless the new handler includes the previous handler, who has already claimed the incident.
+Reassigning means re-notifying. If an **in progress** incident is reassigned, the incident's handling progress may be reset to **pending**. Unless the new handler includes the previous handler, and the previous handler has already claimed the incident.
 
 > [!TIP]
-> Currently, reassignment targets can only be the duty list or an individual, which we refer to as **Direct Assignment**. The difference from **Strategic Assignment** is that incidents under direct assignment are notified based only on personal preferences and do not have the option for escalation.
+> Currently, the target of reassignment can only be a duty schedule or an individual, which we call **direct assignment**. The difference from **policy-based assignment** is that directly assigned incidents can only be notified according to personal preferences, and there is no possibility of escalation.
 
 ## Upgrade Dispatch
 
-- **Automatic Escalation**: When an incident is assigned to you according to a (multi-level) dispatch strategy and you fail to resolve the incident within the specified time frame, you do not opt to defer the escalation, and the incident does not automatically recover, the incident will automatically escalate to the next level at the specified time.
+- **Automatic Upgrade**: When an incident is automatically assigned to you according to a (multi-stage) dispatch policy, and you do not resolve the incident within the specified time window, do not choose to defer the upgrade, and the incident does not automatically recover, the incident will automatically escalate to the next stage at the specified time.
 
-- **Manual Escalation**: When an incident is assigned to you according to a (multi-level) dispatch strategy, but after receiving an alert, you confirm that you cannot handle the incident and require the intervention of personnel from the next level (such as second-line technical support), you can choose to directly escalate the incident to the next level.
+- **Manual Upgrade**: When an incident is automatically assigned to you according to a (multi-stage) dispatch policy, but after receiving the alert, you confirm that you cannot handle the incident and need personnel from the next stage (such as second-line technical support) to intervene early, you can choose to directly escalate the incident to the next stage.
 
 > [!TIP]
-> The essence of an upgrade assignment is **reassignment**, with the main difference being that **upgrade assignments** follow the dispatch and notification channels already set in the dispatch policy.
+> The essence of upgrading an assignment is **reassignment**. The main difference is that **upgrading an assignment** dispatches and notifies according to the personnel and notification channels already set in the dispatch policy.
 
 ## Add Handler
 
-When an incident is assigned to you, but you need the involvement of other personnel (not included in the current handlers), you can choose to add a handler.
+When an incident is assigned to you, but you need another person (who is not among the current handlers) to participate in handling it, you can choose to add a handler.
 
-Similar to **reassignment**, when adding a handler, you can only select the duty list or an individual as the assignment target. The system will notify these individuals based on their personal preferences.
+Similar to **reassignment**, when adding a handler, you can only select a duty schedule or an individual as the assignment target. The system will notify these individuals based on their personal preferences.
 
 ![](https://fcdoc.github.io/img/zh/flashduty/alter/escalate_incidents/1.avif)
 
-## FAQs
+## Frequently Asked Questions
 
-|+| Why is notification added without a strategy for handlers?
+|+| Why is there no policy-based notification when adding handlers?
 
-    Handlers are added and reassigned by default based on individual notification preferences, which you can update on the personal settings page. In the future, we will support the ability for you to modify the notification method independently during reassignment.
+    Adding handlers and reassigning are set according to personal notification preferences by default, and you can update these preferences on the personal settings page. In the future, we will support customizing the notification method during dispatch.
 
 |+| Why is there no upgrade button in my incident details?
 
-    Only when an incident is dispatched according to the dispatch strategy can you switch between different dispatch stages. When you choose direct assignment (such as by reassigning to an individual), the incident is not associated with any dispatch strategy and cannot be escalated through the strategy.
+    You can switch between different dispatch stages only when the incident is dispatched according to a dispatch policy. When you choose direct assignment (such as reassigning to an individual), the incident is not associated with any dispatch policy and cannot be escalated through the policy.

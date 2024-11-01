@@ -1,121 +1,121 @@
 ---
-brief: Compare Flashduty and Pagerduty in terms of products, services, and pricing
+brief: Compare Flashduty and Pagerduty Products, Services, and Prices
 ---
 
 # Product Comparison
 
 ### Preface
 
-In today's fast-paced IT environment, organizations are increasingly dependent on a comprehensive set of monitoring and incident management tools to ensure business continuity and service stability. However, as monitoring systems continue to expand, an overwhelming volume of alerts and event notifications is generated, posing unprecedented challenges for IT teams. Ensuring that every alert is captured promptly, delivered accurately, and effectively responded to has become crucial for maintaining service quality.
+In today's rapidly evolving IT environment, organizations increasingly rely on a comprehensive suite of monitoring and incident management tools to ensure business continuity and service stability. However, as monitoring systems expand, a deluge of alerts and event notifications can overwhelm IT teams, presenting unprecedented challenges. Ensuring that every alert is promptly captured, accurately delivered, and effectively responded to has become crucial for maintaining service quality.
 
-Facing these challenges, we have identified several scenarios that suggest organizations should consider introducing or upgrading their On-Call tools:
+Faced with this challenge, the following scenarios indicate that organizations need to introduce or upgrade their On-Call tools:
 
-- **Comprehensive Tracking and Resolution**: Ensure that every incident is tracked, handled, and resolved to prevent escalation and avoid substantial asset losses.
-- **Establishment of On-Call Duty Mechanism**: Set up a clear on-call duty system for personnel, including a primary and backup shift schedule, to distribute responsibilities fairly and prevent alert overload.
-- **Enhancing Response Efficiency**: When SRE or R&D personnel spend more than 25% of their time on daily On-Call duties, tools are needed to reduce noise and boost efficiency.
-- **Establishment of Quantitative Indicators**: Develop quantitative indicators for incident response timeliness and personnel workload to drive continuous improvement in service stability through data-driven insights.
+- **Comprehensive Tracking and Resolution**: Ensure that every incident is tracked, processed, and resolved to prevent issues from escalating and to avoid significant asset losses.
+- **Establishment of On-Call Mechanisms**: Establish a clear On-Call personnel rotation system, including primary and backup shifts, to distribute responsibilities fairly and avoid alert overload.
+- **Improving Response Efficiency**: When SRE or development personnel spend more than 25% of their time on On-Call duties, tools are needed to reduce noise and enhance productivity.
+- **Establishing Quantitative Metrics**: Develop metrics for incident response times and personnel workload to drive data-driven improvements in service stability.
 
-**"What key factors should be considered when purchasing On-Call services?"** This guide will provide you with comprehensive advice on On-Call tool procurement, starting from the three dimensions of **product**, **service**, and **price**. We will explore the questions IT managers should ask when seeking efficient incident management solutions for their development and operations teams. Additionally, we will offer comparative analyses of mainstream domestic and international On-Call service providers such as Flashduty and Pagerduty for each dimension to assist you in making informed decisions.
+**"What key factors should we consider when purchasing On-Call services?"** This guide will provide comprehensive On-Call tool procurement recommendations. We will explore the three dimensions of **product**, **service**, and **price** to help IT managers identify the right incident management solutions for their development and operations teams. Additionally, we will offer comparative analyses of leading domestic and international On-Call providers like Flashduty and Pagerduty to assist you in making an informed decision.
 
 ### Product
 #### Integration Capabilities
 
-The incident management system serves as a central hub for process handling, storing all alert and incident data. Such systems should support robust data ingestion and outbound capabilities to integrate with various other systems or workflows, accelerating response times and enhancing collaboration.
+The incident management system serves as a central hub for processing and storing all alert and incident data. Such systems should support robust data ingestion and outbound capabilities to integrate with various systems or workflows, accelerating response times and enhancing collaboration.
 
-|  Product Capabilities  |  Questions to Ask  |  Flashduty vs. Pagerduty  |
+|  Product Capabilities  |  Questions to Consider  |  Flashduty vs. Pagerduty  |
 | --- | --- | --- |
-|  **Alert Integration**  |  1.  Does it support the alert systems you commonly use?<br>2. Does it support custom alert integration, reporting self-developed script monitoring data via standard protocols?<br>3. Does it support email integration, triggering or closing incidents via email?<br>4. Does it support integration with change management processes?<br>Incidents are generally caused by changes, and integrating change management can aid in rapid troubleshooting.<br>5. Are integration documents easy to find, and is the text clear?<br>Can configurations be completed independently based on the documentation?       |  Flashduty ✅, Pagerduty ✅<br>Pagerduty supports most overseas monitoring tools.<br>Flashduty supports domestic and foreign mainstream monitoring tools and also supports the Pagerduty protocol, allowing some tools to directly push data to Flashduty in Pagerduty mode.  |
-|  **Webhooks**  |  1.  Does it support external incident operation push via Webhook for integration with self-developed processes or tools?<br>2. Does it support subscribing to events by type or source? For example, subscribing separately to incident assignment events from the order system?       |  Flashduty ✅, Pagerduty ✅  |
-|  **Open APIs**  |  Does it support a rich Open API that allows customers to operate data entities through the API?  |  Flashduty ✅, Pagerduty ✅<br>Both offer extensive APIs and documentation. |
+|  **Alert Integration**  |  1.  Does it support your commonly used alert system?<br> 2. Is custom alert integration supported? Report self-developed script monitoring data through standard protocols?<br> 3. Does it support email integration? Trigger or close incident via mail?<br> 4. Does it support change class integration?<br> Incident Generally caused by changes, integrating changes helps to quickly troubleshoot.<br> 5. Is the integration document easy to find and is the text clear?<br> Can I complete the configuration myself based on the documentation?       |  Flashduty ✅, Pagerduty ✅ <br>Pagerduty supports most overseas monitoring tools. <br>Flashduty supports domestic and international mainstream monitoring tools and also the Pagerduty protocol, allowing some tools to push data to Flashduty in the same way as Pagerduty.  |
+|  **Webhooks**  |  1.  Does it support pushing incident operations via Webhook? To integrate with custom workflows or tools? <br>2. Does it support subscribing to specific event types or sources? For example, subscribing to dispatch events from a specific order system?       |  Flashduty ✅, Pagerduty ✅  |
+|  **Open APIs**  |  Does it offer a rich set of Open APIs for clients to manipulate data entities?  |  Flashduty ✅, Pagerduty ✅ <br>Both provide extensive APIs and documentation. |
 
 #### Incident Handling
 
-Incident handling is the core operation of the system. This dimension focuses on assessing the **richness** and **flexibility** of product features.
+Incident handling is the core operation of the system. This dimension primarily evaluates the **richness** and **flexibility** of product features.
 
-|  Product Capabilities  |  Questions to Ask  |  Flashduty vs. Pagerduty  |
+|  Product Capabilities  |  Questions to Consider  |  Flashduty vs. Pagerduty  |
 | :---: | :--- | :--- |
-|  **Alert Routing**  |  1.  Is proprietary integration supported?<br>Is it possible to route directly to services or collaboration spaces without routing?<br>2. Is shared integration supported, along with flexible routing rules?          |  Flashduty ✅, Pagerduty ✅<br>Pagerduty only supports shared integration_key and lacks the concept of shared integration. Flashduty can support setting routing rules on the integration page, while Pagerduty requires complex Event Orchestration or Workflow to achieve this.  |
-|  **Information Enhancement**  |  Does it support setting custom fields?<br>Adding fields, defining types and enumeration values, and expanding incident information  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support extracting new tags from existing information using regular expressions?<br>For example, can data center information be extracted from the hostname?  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support generating new tags by combining existing information?<br>For example, generating a runbook address through service and alert policies  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support importing data tables and dynamically generating new labels?<br>For example, can owner information be automatically generated based on host IP by importing CMDB data?  |  Flashduty ✅, Pagerduty ❌<br>Flashduty supports flexible data mapping schemes. |
-|  **Alert Noise Reduction**  |  Does it support aggregating alerts into incidents?<br>1. Aggregating similar alerts for dispatch, notification, and processing to increase efficiency and reduce alert fatigue?<br>2. Does it support aggregating incidents within a time window?<br>3. Does it support merging based on AI?       |  Flashduty ✅, Pagerduty ✅<br> Pagerduty supports **intelligent aggregation** and **policy aggregation**.<br> Flashduty offers **fine-grained control over policy aggregation**.  |
-|  |  Does it support incident shielding?<br>Stopping alert notifications during market closures or system maintenance?  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support incident suppression?<br>For example, suppressing pod incidents when an incident occurs on the host machine?  |  Flashduty ✅, Pagerduty ❌  |
-|  |  Does it support storm warnings?<br>When the number of aggregated alerts in an incident is too high, does it notify again to intensify the response?  |  Flashduty ✅, Pagerduty ❌  |
-|  |  Does it support incident jitter convergence?<br>For the same incident that frequently occurs and recovers, should notifications be reduced appropriately to avoid wasting effort?  |  Flashduty ✅, Pagerduty ❌  |
-|  |  Does it support delayed incident notifications?<br>Delaying notification of an incident by a window to filter out those that automatically recover immediately after occurrence, reducing wasted effort.  |  Flashduty ✅, Pagerduty ✅  |
-|  **Incident Dispatch**  |  Does it support incident dispatch based on policy?<br>1. Does it support assigning incidents to shifts, teams, or individuals?<br>2. Does it support setting group or individual notification methods simultaneously?       |  Flashduty ✅, Pagerduty ✅<br>Flashduty additionally supports dispatching to teams and setting notification methods.<br>Pagerduty can only configure single and group chats globally, unable to match at the incident level.  |
-|  |  Is dispatching based on conditional matching supported?<br>1. Can multiple dispatch strategies be matched by weight?       |  Flashduty ✅, Pagerduty ❌<br>Pagerduty supports only one escalation policy under a Service.<br>Flashduty supports configuring multiple dispatch policies within a collaboration space, each effective at different times or for matching incident scopes. |
-|  |  Does it support automatic escalation of incidents if not resolved within a timeout?<br>1. Does it support manual escalation?       |  Flashduty ✅, Pagerduty ✅  |
-|  |  Is dynamic dispatching based on parameters or tags supported?<br>1. Can assigned personnel be dynamically replaced based on tags to reduce system integration costs?<br>2. Can group chat information be dynamically replaced based on tags to reduce configuration maintenance costs?       |  Flashduty ✅, Pagerduty ❌  |
-|  **Incident Processing**  |  Does it support manual creation of incidents?  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support incident claiming, closing, commenting, suspending, and merging?<br>1. Does it support automatic closure after a timeout?<br>2. Does it support automatic cancellation of suspended incidents after a timeout?       |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support incident review?  |  Flashduty ❌, Pagerduty ✅  |
-|  |  Does it support similar incidents?  |  Flashduty ❌, Pagerduty ✅  |
-|  |  Does it support detailed operation records?  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Is incident redistribution supported?  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support adding custom operations to incidents?<br>For example, manually triggering a host restart for incident self-healing?  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support reopening and notifying incidents after they are closed?  |  Flashduty ✅, Pagerduty ❌  |
-|  |  Does it support setting custom fields?<br>For example, can false positives be flagged, and meeting links be added?  |  Flashduty ✅, Pagerduty ✅<br>Both support multiple types of custom fields.<br>Flashduty supports searching by field for incidents.<br>Pagerduty can only view field settings in incident details. |
-|  |  Does it have strong search capabilities?  |  Flashduty ✅, Pagerduty ❌<br>Flashduty supports searching based on tags, custom fields, titles, and personnel information.<br>Flashduty supports exact, wildcard, and regular expression matching.<br>Flashduty supports card corner view.<br>Flashduty supports custom rendering of incident list content. |
-|  **Incident Analysis**  |  Does it support statistical analysis of incidents and event counts based on dimensions such as time, team, and service?  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support notifying incident processing metrics based on dimensions such as time, team, and service?<br>Such as MTTA and MTTR?  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support statistical analysis of personnel incident processing metrics?<br>Such as MTTA? Incident handling quantity?  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support statistical analysis of the most frequently occurring incident hosts and policies?  |  Flashduty ✅, Pagerduty ❌  |
-|  |  Does it support statistical analysis of the time personnel spend processing incidents?  |  Flashduty ❌, Pagerduty ✅  |
-|  |  Does it support customized statistical reports?  |  Flashduty ❌, Pagerduty ❌  |
-|  |  Does it support sending statistical reports on a regular basis?  |  Flashduty ❌, Pagerduty ❌  |
-|  |  Does it support large-screen display of analysis dashboards?  |  Flashduty ❌, Pagerduty ❌  |
-|  |  Does it support downloading data details?  |  Flashduty ❌, Pagerduty ✅  |
+|  **Alert Routing**  |  1.  Are proprietary integrations supported?<br> No need to route directly to services or collaboration spaces?<br> 2. Is shared integration supported? And flexible routing rules?          |  Flashduty ✅, Pagerduty ✅ <br>Pagerduty only supports shared integration keys and lacks a shared integration concept. Flashduty can set routing rules on the integration page, while Pagerduty requires complex Event Orchestration or Workflow configurations.  |
+|  **Information Enhancement**  |  Does it support custom fields? <br>Can fields be added, types defined, and enumeration values set to expand incident information?  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support extracting new tags from existing information using regular expressions? <br>For example, extracting data center information from hostnames  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support combining new tags from existing information? <br>For example, generating a runbook URL from service and alert policies  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support importing data tables to dynamically generate new tags? <br>For example, importing CMDB data to automatically generate owner information based on host IPs  |  Flashduty ✅, Pagerduty ❌ <br>Flashduty supports flexible data mapping. |
+|  **Alert Noise Reduction**  |  Does it support aggregating alerts into incidents? <br>1. Can similar alerts be grouped together for dispatch, notification, and handling to improve efficiency and reduce alert fatigue? <br>2. Does it support time-window-based aggregation? <br>3. Does it support AI-based merging?       |  Flashduty ✅, Pagerduty ✅ <br>Pagerduty supports **intelligent aggregation** and **policy-based aggregation**. <br>Flashduty supports **fine-grained policy-based aggregation**.  |
+|  |  Does it support incident suppression? <br>Can alerts be paused during market closures or system maintenance?  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support incident suppression? <br>For example, suppressing pod incidents when a host incident occurs?  |  Flashduty ✅, Pagerduty ❌  |
+|  |  Does it support storm warnings? <br>When the number of aggregated alerts is too high, can it notify to increase response efforts?  |  Flashduty ✅, Pagerduty ❌  |
+|  |  Does it support incident jitter reduction? <br>When the same incident occurs and resolves frequently, can it reduce notifications to avoid wasted effort?  |  Flashduty ✅, Pagerduty ❌  |
+|  |  Does it support delayed incident notifications? <br>Can it delay notifications to filter out incidents that resolve automatically, reducing wasted effort?  |  Flashduty ✅, Pagerduty ✅  |
+|  **Incident Dispatch**  |  Does it support policy-based incident dispatch? <br>1. Can incidents be assigned to shifts, teams, or individuals? <br>2. Can group chat or individual chat notification methods be set simultaneously?       |  Flashduty ✅, Pagerduty ✅ <br>Flashduty additionally supports assigning to teams and setting notification methods. <br>Pagerduty can only configure single chat and group chat globally, not at the incident level.  |
+|  |  Does it support dispatch based on conditional matching? <br>1. Can multiple dispatch policies be matched by weight?       |  Flashduty ✅, Pagerduty ❌ <br>Pagerduty only supports one upgrade policy per Service. <br>Flashduty supports configuring multiple dispatch policies in a collaboration space, each of which can take effect at different times or for different incident ranges. |
+|  |  Does it support automatic incident escalation if unresolved after a timeout? <br>1. Does it support manual escalation?       |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support dynamic dispatch based on parameters or tags? <br>1. Can assigned personnel be dynamically replaced based on tags to reduce system integration costs? <br>2. Can group chat information be dynamically replaced based on tags to reduce configuration maintenance costs?       |  Flashduty ✅, Pagerduty ❌  |
+|  **Incident Handling**  |  Does it support manual incident creation?  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support incident claiming, closing, commenting, deferring, and merging? <br>1. Does it support automatic closure after a timeout? <br>2. Does it support automatic deferral cancellation after a timeout?       |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support incident post-mortem analysis?  |  Flashduty ❌, Pagerduty ✅  |
+|  |  Does it support similar incident identification?  |  Flashduty ❌, Pagerduty ✅  |
+|  |  Does it support detailed operation logs?  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support incident reassignment?  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support custom incident actions? <br>For example, manually triggering a host restart for incident self-healing?  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support reopening and notifying after an incident is closed?  |  Flashduty ✅, Pagerduty ❌  |
+|  |  Does it support custom fields? <br>For example, marking false positives or adding meeting links?  |  Flashduty ✅, Pagerduty ✅ <br>Both support multiple types of custom fields. <br>Flashduty supports searching by field. <br>Pagerduty only allows viewing field settings in incident details. |
+|  |  Does it have powerful search capabilities?  |  Flashduty ✅, Pagerduty ❌ <br>Flashduty supports searching by tags, custom fields, titles, and personnel information. <br>Flashduty supports exact, wildcard, and regular expression matching. <br>Flashduty supports card view. <br>Flashduty supports custom rendering of incident lists. |
+|  **Incident Analysis**  |  Does it support counting incidents and events based on dimensions such as time, team, and service?  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support notifying incident processing metrics based on dimensions such as time, team, and service? <br>For example, MTTA and MTTR?  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support tracking personnel incident processing metrics? <br>For example, MTTA and number of incidents handled?  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support identifying the most frequent hosts and policies for incidents?  |  Flashduty ✅, Pagerduty ❌  |
+|  |  Does it support tracking the time personnel spend on incident handling?  |  Flashduty ❌, Pagerduty ✅  |
+|  |  Does it support custom statistical reports?  |  Flashduty ❌, Pagerduty ❌  |
+|  |  Does it support regular statistical report generation?  |  Flashduty ❌, Pagerduty ❌  |
+|  |  Does it support large-screen display of analysis boards?  |  Flashduty ❌, Pagerduty ❌  |
+|  |  Does it support downloading detailed data?  |  Flashduty ❌, Pagerduty ✅  |
 
 #### Platform Capabilities
 
-Platform capabilities are primarily focused on member management, duty response, and notification capabilities. The system must have basic auditing and single sign-on functions. The more diverse the notification channels, the better, and localized support is preferred. Duty management should ideally cater to the unique scenarios within the organization.
+Platform capabilities are mainly at the level of member management, duty response and notification capabilities. The system must have basic auditing and single sign-on functions. The richer the notification channels, the better, the more localized support, the better, and duty management should best meet the special scenarios within the organization.
 
-|  Product Capabilities  |  Questions to Ask  |  Flashduty vs. Pagerduty  |
+|  Product Capabilities  |  Questions to Consider  |  Flashduty vs. Pagerduty  |
 | --- | --- | :--- |
-|  **Duty Management**  |  Does it support rotation based on days, weeks, or custom cycles?  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support limiting duty hours within a rotation cycle?  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support different rotation rules for different time periods?  |  Flashduty ✅, Pagerduty ✅<br>Flashduty can set the cycle end time.  |
-|  |  Does it support setting up temporary shift adjustments?  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support setting duty roles? For example, main and backup duty?  |  Flashduty ✅, Pagerduty ❌  |
-|  |  Does it support multiple people on duty at the same time? Rotate together?  |  Flashduty ✅, Pagerduty ❌  |
-|  |  Does it support fair rotation?<br>For example, if 7 people rotate on a daily basis, is it fair that Zhang San will always be on duty on Sunday?  |  Flashduty ✅, Pagerduty ❌  |
-|  |  Does it support setting rotation notifications including advance notifications?  |  Flashduty ✅, Pagerduty ✅<br>Flashduty supports more notification methods  |
-|  |  Does it support duty calendar export?  |  Flashduty ❌, Pagerduty ✅  |
-|  **Notification Channels**  |  Does it support domestic voice and SMS?  |  Flashduty ✅, Pagerduty ✅<br>Pagerduty **Limited support, unstable**|
+|  **On-Call Management**  |  Does it support rotation based on days, weeks, or custom cycles?  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support limiting on-call hours within a rotation cycle?  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support different rotation rules for different time periods?  |  Flashduty ✅, Pagerduty ✅ <br>Flashduty can set the cycle end time.  |
+|  |  Does it support setting temporary shift adjustments?  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support setting on-call roles? For example, primary and backup roles?  |  Flashduty ✅, Pagerduty ❌  |
+|  |  Does it support multiple people on duty at the same time? Rotating together?  |  Flashduty ✅, Pagerduty ❌  |
+|  |  Does it support fair rotation? <br>For example, if 7 people rotate daily, is it fair that one person is always on duty on Sunday?  |  Flashduty ✅, Pagerduty ❌  |
+|  |  Does it support setting rotation notifications, including advance notifications?  |  Flashduty ✅, Pagerduty ✅ <br>Flashduty supports more notification methods  |
+|  |  Does it support exporting the on-call calendar?  |  Flashduty ❌, Pagerduty ✅  |
+|  **Notification Channels**  |  Does it support domestic voice and SMS?  |  Flashduty ✅, Pagerduty ✅ <br>Pagerduty **limited support, unstable**|
 |  |  Does it support fixed display numbers?  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support email notification?  |  Flashduty ✅, Pagerduty ✅  |
-|  |  Does it support domestic mainstream IM application collaboration? |  Flashduty ✅, Pagerduty ✅<br>Flashduty supports: Feishu, DingTalk, and Qiwei application integration.  |
-|  |  Does it support collaboration with foreign mainstream IM applications? |  Flashduty ✅, Pagerduty ✅<br> Both platforms support Slack and Microsoft Teams integrations.<br> Flashduty also supports Zoom and Telegram bots.  |
-|  |  Does it support mobile App?  |  Flashduty ❌, Pagerduty ✅  |
-|  |  Is custom notification template supported?  |  Flashduty ✅, Pagerduty ❌<br>Flashduty supports rich template syntax.|
-|  **Single Sign-On**  |  Is single sign-on supported? What protocols are supported?  |  Flashduty ✅, Pagerduty ✅<br> Flashduty supports SAML and OIDC;<br> Pagerduty supports SAML and OAuth2  |
-|  **Operational Audit**  |  Is operational auditing supported?  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support email notifications?  |  Flashduty ✅, Pagerduty ✅  |
+|  |  Does it support integration with domestic mainstream IM applications? |  Flashduty ✅, Pagerduty ✅ <br>Flashduty supports: Feishu, DingTalk, and QiWei application integration.  |
+|  |  Does it support integration with international mainstream IM applications? |  Flashduty ✅, Pagerduty ✅ <br>Both support Slack and Microsoft Teams. <br>Flashduty additionally supports Zoom and Telegram bots.  |
+|  |  Does it support a mobile app?  |  Flashduty ❌, Pagerduty ✅  |
+|  |  Does it support custom notification templates?  |  Flashduty ✅, Pagerduty ❌ <br>Flashduty supports rich template syntax.|
+|  **Single sign-on**  |  Does it support SSO? Which protocols are supported?  |  Flashduty ✅, Pagerduty ✅ <br>Flashduty supports SAML, OIDC; <br>Pagerduty supports SAML, OAuth2  |
+|  **Operational Auditing**  |  Does it support operational auditing?  |  Flashduty ✅, Pagerduty ✅  |
 
 ### Price
-Vendors typically offer various subscription options. However, we primarily consider which option offers the best value for money when meeting our own needs. Ensuring that actual usage does not exceed the budget and that the pricing method is straightforward is crucial.
+Vendors typically offer multiple subscription options. However, the primary consideration is which option is more cost-effective while meeting our needs. Ensuring that actual usage does not exceed the budget and that the pricing structure is straightforward is crucial.
 
-|  Comparison Item  |  Flashduty  |  Pagerduty  |
+|  Comparative Items  |  Flashduty  |  Pagerduty  |
 | --- | --- | --- |
 | **Price Page**   | [price.flashcat.cloud](https://flashcat.cloud/flashduty/price/) | [price.pagerduty.com](https://www.pagerduty.com/pricing/incident-response/) |
 |  **Charging Method**  |  Seat fee + excess communication fee  |  Seat fee + Add-Ons  |
-|  **Version Distinction**  |  Professional version ￥179/person/month, full functionality  |  Business Version $41/ person / month, Add-Ons separately charged (such as AIops)  |
-|  **Are Active User Fees Only Charged?**  |  Yes,<br>Active users are defined as members who view or process incidents in the current month. Merely receiving notifications does not count as an active user  |  No,<br>Processing alerts requires purchasing a Full License, while receiving alerts requires purchasing a Stakeholder License package, with a minimum of 50, each at $3/person/month  |
-|  **Free Trial**  |  The Professional version is free for 14 days,<br>Additionally, 14 days are granted upon completing the configuration, totaling 28 days  |  The Business version is free for 14 days  |
+|  **Version Distinction**  |  Professional version ￥179/person/month, full functionality  |  Business version $41/person/month, Add-Ons separately charged (e.g., AIops)  |
+|  **Are active user fees only charged?**  |  Yes, <br> The standard for active users is members who view or process incidents in the current month. Merely receiving notifications does not count as an active user  |  no,<br> Process alert Need to buy Full License , only receive alert need to buy Stakeholder License package, 50 minimum selling, each $3/ person / month  |
+|  **Free Trial**  |  Pro version offers a 14-day free trial, <br> and an additional 14 days are provided after completing the configuration, totaling 28 days  |  Business version offers a 14-day free trial  |
 
 ### Service
-The service dimension primarily assesses the supplier's response method and timeliness in service. Instant messaging is much more effective than other methods.
+The service dimension primarily evaluates the supplier's service response method and timeliness. Instant messaging is far superior to other methods.
 
-|  Comparison Item  |  Flashduty  |  Pagerduty  |
+|  Comparative Items  |  Flashduty  |  Pagerduty  |
 | --- | --- | --- |
-|  **Does it offer Email support?**  |  ✅  |  ✅  |
-|  **Is dedicated support available?**  |  ✅, dedicated IM service group supported  |  Needs to be purchased separately  |
-|  **Is expert remote support available?**  |  ✅, remote meeting support for problem-solving  |  Needs to be purchased separately  |
-|  **Service Hours**  |  Standard version: 5x8, Professional version: 7x8  |  Unknown  |
-|  **Does it provide a Status Page?**  |  Yes, [status.flashcat.cloud](https://status.flashcat.cloud/)  |  Yes, [status.pagerduty.com](https://status.pagerduty.com/)  |
-|  **Does it provide a Roadmap?**  |  Yes, [roadmap.flashcat.cloud](https://c9xudyniiq.feishu.cn/base/SAUGbfgkeatk9Gsqjj0cH6eGnZg)  |  no  |
+|  **Does it provide Email Support?**  |  ✅  |  ✅  |
+|  **Is Dedicated Support Available?**  |  ✅, supports exclusive IM service groups  |  Needs to be purchased separately  |
+|  **Is Expert Remote Support Available?**  |  ✅, supports remote meetings to solve problems  |  Needs to be purchased separately  |
+|  **Service Hours**  |  Standard version: 5*8, Pro version: 7*8  |  Unknown  |
+|  **Does it Provide a Status Page?**  |  Yes, [status.flashcat.cloud](https://status.flashcat.cloud/)  |  Yes, [status.pagerduty.com](https://status.pagerduty.com/)  |
+|  **Does it Provide a Roadmap?**  |  Yes, [roadmap.flashcat.cloud](https://c9xudyniiq.feishu.cn/base/SAUGbfgkeatk9Gsqjj0cH6eGnZg)  |  No  |
 
-### In Conclusion
-We recommend you seek a solution that can be customized to your needs and adapted to your various workflows. This mainly depends on your satisfaction with the provider's alerting and notification workflows, integrations, scheduling and escalations, pricing, and other features. It is advised that you make a choice after a comprehensive trial and evaluation.
+### Finally
+We recommend finding a solution that can be customized to your needs and adapted to your different workflows. This primarily depends on your satisfaction with the provider’s alert and notification workflows, integrations, scheduling and escalations, pricing, and various other features. We suggest choosing after a comprehensive trial and evaluation.

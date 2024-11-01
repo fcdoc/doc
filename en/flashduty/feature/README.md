@@ -1,1 +1,1 @@
-# Platform Capabilities
+# Platform Features

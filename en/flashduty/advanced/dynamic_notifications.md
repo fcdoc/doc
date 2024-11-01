@@ -1,60 +1,60 @@
 ---
-brief: Implement dynamic alert dispatch based on tags, integrating with your proprietary system
+brief: Realize dynamic dispatch of alerts based on tags, and integrate with your self-developed system
 ---
 
-# Dynamically set dispatch personnel
+# Dynamically set assignees
 
-Implement dynamic alert dispatch based on tags, integrating with your proprietary system.
+Realize dynamic dispatch of alerts based on tags, and integrate with your self-developed system.
 
-## Adaptation scenarios
+## Adaptation Scenarios
 
-**The responsible person for alerts is maintained and frequently adjusted in the source monitoring system, with the hope of synchronizing with Flashduty promptly.**
+**The alert responsible person is maintained and frequently adjusted in the source monitoring system, and you hope to synchronize this information to Flashduty in a timely manner.**
 
 Scenario 1:
 
-Customer A has a self-developed big data task system, where internal personnel can create various data batch processing tasks. Each task can assign a primary and secondary responsible person. If a batch processing task fails, the system will first alert the primary responsible person. If the alert is not resolved within 30 minutes, it will be escalated to the secondary responsible person.
+Customer A has developed a self-researched big data task system. Internal personnel can create various data batch processing tasks on this platform, and each task can set a primary and secondary responsible person. When a batch processing task fails, the system will first alert and notify the primary responsible person. If the alert has not been resolved within 30 minutes, it will be escalated to the secondary responsible person.
 
 Scenario 2:
 
-Customer B uses Zabbix for host monitoring and has assigned a responsible person tag for each host. The customer wants to ensure that when a host alert occurs, the corresponding responsible person is notified based on this tag.
+Customer B uses Zabbix for host monitoring and sets a responsible person tag for each host. The customer hopes that when a host is alerted, the system can notify the corresponding responsible person based on this tag.
 
 Scenario 3:
 
-Customer C has a self-developed monitoring system with many alert policies, each set to notify a specific WeChat group. The customer has decided to migrate incident response to Flashduty but wants to retain the relationship between the source monitoring system's policies and the WeChat groups, allowing alerts to dynamically notify the groups based on this relationship.
+Customer C has a self-developed monitoring system with many alert strategies, each of which is set to notify a specific WeChat group. The customer decided to migrate incident response to Flashduty but wants to retain the relationship between the strategies in the source monitoring system and the WeChat groups, and be able to dynamically notify the WeChat groups based on this relationship.
 
-## Implementation methods
+## Implementation Method
 
-**Add specific tags or Query parameters to override the dispatch targets in Flashduty for dynamic dispatching.**
+**Add specific tags or Query parameters to override the dispatch object in Flashduty to achieve dynamic dispatch.**
 
-Parameter format as follows:
+The parameter format is as follows:
 
-- **Replace dispatch personnel**:
-- **Parameter name**: Must match the regex: ^layer_person_reset_(\d)_emails$. The link number starts from 0. For example, layer_person_reset_0_emails represents replacing the dispatch personnel in the first link of the dispatch strategy.
-- **Parameter value**: Email addresses of the dispatch personnel, separated by commas. For example, zhangsan@flashcat.cloud, lisi@flashcat.cloud, replacing the personnel with Zhang San and Li Si.
-- **Parameter Position**: Query parameter or label value. e.g., set this tag in the Nightingale alert, or automatically generate tags through label enhancement, etc.
-- **Replace the WeChat group chat bot**:
-- **Parameter name**: Must match the regex: ^layer_webhook_reset_(\d)_wecoms$. The link number starts from 0. For example, layer_webhook_reset_0_wecoms represents replacing the WeChat group chat bot in the first link of the dispatch strategy.
-- **Parameter value**: Target group chat bot token, separated by commas for multiple tokens. For example, bbb025a0-e2e8-4b79-939d-82c91a275b06, replacing the group chat bot with the corresponding bot for this token.
-- **Parameter Position**: Query parameter or label value. e.g., set this tag in the Nightingale alert, or automatically generate tags through label enhancement, etc.
+- **To replace the assignee**:
+- **Parameter name**: Must match the regular expression: ^layer_person_reset_(\d)_emails$, with the link number starting from 0. For example, layer_person_reset_0_emails represents replacing the assignee in the first dispatch link of the dispatch strategy.
+- **Parameter value**: Email addresses of the assignees, separated by ",". For example, zhangsan@flashcat.cloud,lisi@flashcat.cloud, which replaces the assignees with Zhang San and Li Si.
+- **Parameter position**: Query parameter or tag value. For example, set this tag in a Nightingale alert, or automatically generate tags through tag enhancement.
+- **To replace the WeChat group chat bot**:
+- **Parameter name**: Must match the regular expression: ^layer_webhook_reset_(\d)_wecoms$, with the link number starting from 0. For example, layer_webhook_reset_0_wecoms represents replacing the WeChat group chat bot in the first dispatch link of the dispatch strategy.
+- **Parameter value**: Target group chat bot token, separated by ",". For example, bbb025a0-e2e8-4b79-939d-82c91a275b06, which replaces the group chat bot with the bot corresponding to this token.
+- **Parameter position**: Query parameter or tag value. For example, set this tag in a Nightingale alert, or automatically generate tags through tag enhancement.
 
 > [!NOTE]
-> When an incident is triggered, Flashduty matches it against existing dispatch policies. After a dispatch policy is matched, it proceeds with dispatching or escalating according to the stages in the policy. If the aforementioned parameters are set, the system will automatically replace the dispatch targets or group chat channels.
+> When an incident is triggered, Flashduty matches it to the existing dispatch strategy. After matching the dispatch strategy, it dispatches or escalates according to the links in the strategy. If the above parameters are set, the system will automatically replace the dispatch object or group chat channel.
 >
-> In the matched dispatch strategy, only the dispatch targets and group chat destinations change, while other content remains the same, similar to a template dispatch strategy.
+> In the matched dispatch strategy, except for the changes in the dispatch object and group chat target, all other content remains unchanged, effectively serving as a template dispatch strategy.
 
-## Push example
+## Push Example
 
-### Set a template dispatch policy
+### Set a Template Dispatch Strategy
 
-Configure a dispatch policy for the collaboration space. As shown in the figure below, the space is set up with one dispatch link, with the dispatch target being Toutie Technology, and simultaneously pushing to a WeChat group with a token ending in 5b96.
+Configure a dispatch strategy for the collaboration space. As shown in the figure below, this space only sets one dispatch link, with the dispatch object being Toutie Technology, and the WeChat group chat token ending in 5b96.
 
 ![](https://fcdoc.github.io/img/zh/flashduty/advanced/dynamic_notifications/1.avif)
 
-### Set tags for alerts
+### Set Labels for the Alert
 
-Let's take custom alert event integration as an example and push an example alert to the target collaboration space. The layer_person_reset_0_emails tag is set, hoping to replace the dispatcher of stage one with guoyuhang and yushuangyu . The layer_webhook_reset_0_wecoms label is set, hoping to replace token in the WeChat group chat in link 1 d9c0 token at the end.
+Let's take custom alert event integration as an example and push an example alert to the target collaboration space. The layer_person_reset_0_emails tag is set, hoping to replace the assignee in the first link with guoyuhang and yushuangyu. The layer_webhook_reset_0_wecoms tag is set, hoping to replace the WeChat group chat token in the first link with the token ending in d9c0.
 
-Request content as follows:
+The request content is as follows:
 
 ```
 curl --location --request POST 'https://api.flashcat.cloud/event/push/alert/standard?integration_key=your-integration-key' \
@@ -76,15 +76,15 @@ curl --location --request POST 'https://api.flashcat.cloud/event/push/alert/stan
 }'
 ```
 
-### View the incident dispatch timeline
+### View the Incident Dispatch Timeline
 
-As shown in the figure below, the target incident is triggered and dispatched normally. The incident's dispatchers and target group chats have been replaced as expected.
+As shown in the figure below, the target incident is triggered and dispatched normally. The dispatchers and target group chats have been replaced as expected.
 
 ![](https://fcdoc.github.io/img/zh/flashduty/advanced/dynamic_notifications/2.avif)
 
-## FAQs
+## Frequently Asked Questions
 
-|+| What should I do if my monitoring system lacks these tags?
+|+| What if my monitoring system does not have these tags?
 
-    1. If your system supports actively adding tags, such as Prometheus or Nightingale, it is recommended to add specific tags directly in the alert policy.
-    2. If your system already possesses relevant tags but differs in format or naming, for instance, if your host is labeled with a team tag, and you need to identify the responsible individual based on the team, you can utilize the tag enhancement feature to generate tags related to the responsible person based on the team tag. Please refer to [Configuring Tag Enhancement](http://docs.flashcat.cloud/zh/flashduty/label-enrichment-settings) for specific instructions.
+    1. If your system supports actively adding tags, such as Prometheus or Nightingale, it is recommended that you add specific tags directly in the alert policy.
+    2. If your system already has relevant tags but in a different format or naming, for example, if your host has a team tag and you need to find the corresponding responsible person based on the team, you can use the tag enhancement feature to generate responsible person-related tags based on the team tag. For details, please refer to [Configuring Tag Enhancement](http://docs.flashcat.cloud/zh/flashduty/label-enrichment-settings).

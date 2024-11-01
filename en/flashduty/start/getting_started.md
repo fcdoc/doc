@@ -1,77 +1,77 @@
 ---
-brief: Learn how to quickly get started with Flashduty
+brief: Learn how to get started quickly with Flashduty
 ---
 
-# Quick Start Guide
+# Quick Start
 
-## Demonstration Video
+## Demo Video
 
 <video controls src="https://fcdoc.github.io/img/zh/flashduty/start/getting_started/1.mp4"></video>
 
-## Get Started for Free
+## Start for Free
 
-1. Access the [Flashduty Console](https://console.flashcat.cloud/) through your browser, input **your mobile number** or **work email**, read and consent to our [Terms of Service](/license/user) and [Privacy Policy](/license/privacy_policy), then click "Next". The system will subsequently send a verification code to your mobile phone or email.
-2. Enter the name of your **company or organization**, along with the verification code received in the previous step, click "Next," and complete the registration.
-3. The system will guide you through the process of completing your information and will attempt to send you a custom alert event, giving you the opportunity to experience alerts via voice, SMS, or email.
+1. Visit the [Flashduty Console](https://console.flashcat.cloud/) in your browser, enter your **mobile phone number** or **work email**, read and agree to our [Terms of Service](/license/user) and [Privacy Policy](/license/privacy_policy), click Next, and the system will send a verification code to your mobile phone or email.
+2. Enter the name of your **company or organization** and the verification code obtained in the previous step, click Next to complete the registration.
+3. The system will guide you to complete the information and send you a customized alert event, allowing you to experience voice, text message, or email alerts.
 
 > [!NOTE]
-> Due to security considerations, the system only allows registration via work email. This means that if you use an email with a suffix like qq.com, gmail.com, 163.com, etc., your registration will be rejected.
+> For security reasons, the system restricts registration to work emails only. This means that if you use an email address with a suffix such as qq.com, gmail.com, 163.com, etc., you will be refused registration.
 
-## Basic Workflow
+## Basic Process
 
 ![](https://fcdoc.github.io/img/zh/flashduty/start/getting_started/2.avif)
 
-### Create a Collaboration Space
+### Creating a Collaboration Space
 
-The collaboration space serves as a container for related incidents. Typically, we use services that a team owns, manages, and monitors as the collaboration space, such as the order system, recommendation services, MySQL components, Client A, etc.
+A collaboration space is a container for related incidents. We generally use the services owned, managed, and monitored by a team as collaboration spaces, such as order systems, recommendation services, MySQL components, and Client A, etc.
 
-Enter the [collaboration space](https://console.flashcat.cloud/channel) list page, click **Create Collaboration Space**, and provide an intuitive and concise name along with a description. Associate a management team with the collaboration space to facilitate future multi-person management.
+Enter the [Collaboration Space](https://console.flashcat.cloud/channel) list page, click **Create Collaboration Space**, and enter an intuitive and concise name and description. Associate a management team with the collaboration space to facilitate future multi-person management.
 
 > [!WARN]
-> Collaboration spaces are managed through data permissions rather than by role.
+> Collaboration spaces are managed using data permissions rather than role-based controls.
 >
-> **Only the account owner, collaboration space creator, and members of the management team** have the authority to modify the collaboration space configuration; others can only view it. This means anyone can create a collaboration space, but only modify those they are managing.
+> **Only the account owner, collaboration space creator, and management team members** have the permission to modify the configuration of the collaboration space, and others can only view it. This means that anyone can create a collaboration space, but can only modify the collaboration spaces they manage.
 >
-> **Even as an account administrator, you cannot modify the configuration of a collaboration space you are not managing.**
+> **Even if you are an account administrator, you cannot modify the configuration of collaboration spaces that you do not manage.**
 
-### Integration of Alert Events
+### Integrate Alert Events
 
-The collaboration space can only store incidents, so we need to incorporate external integrations to receive alert event reports.
+A collaboration space can only store incidents, and we need to introduce external integrations to receive alert event reports.
 
-1. Enter the collaboration space details, click on **Integrated Data**, select **Add a New Integration**, choose the alert system used by your organization, and save the settings.
-2. The new integration will generate a unique push address. Any alerts sent to this address will be directly routed to the current collaboration space. You will need to follow the documentation provided in the integration details to complete the alert push configuration.
+1. Enter the collaboration space details, click **Integrate Data**, choose **Add an Integration**, select the alert system used by your company, and save.
+2. The new integration will generate an independent push address. Any alerts reported to this address will directly enter the current collaboration space. You need to complete the alert push configuration according to the documentation in the integration details.
 
-- If you want to deliver alerts to different collaboration spaces based on conditions, go to **Integration Center - Alert Events**, add a shared integration, and set up routing rules according to the specified conditions. This method is particularly useful for integrations with systems like Zabbix and Prometheus, where managing push webhooks by policy is not convenient.
+- Want to deliver alerts to different collaboration spaces based on conditions? Go to **Integration Center - Alert Events**, add a shared integration, and set routing rules based on conditions. This method is especially suitable for Zabbix, Prometheus, and other integrations where it is inconvenient to manage push webhooks by policy.
 
-3. If this integration receives an alert event, the integration card will display the **Latest Event Time**; otherwise, it will show **No Alerts Received Yet**. You can then investigate whether the monitoring system has generated a new alert and if the network is functioning properly.
+3. If this integration receives an alert event, the integration card will display **the latest event time**; otherwise, it will display **no alerts received yet**. You can check whether the monitoring system has generated new alerts and whether the network is normal.
 
 > [!NOTE]
-> Flashduty is already compatible with most monitoring systems used daily, allowing for out-of-the-box usage. If you have a proprietary alert system, please use **Custom Events** or **Email Integration**. If you have other monitoring system requirements, feel free to contact us at any time.
+> Flashduty has been adapted to most commonly used monitoring systems, and you can use it out of the box. If you have a self-developed alert system, please use **Custom Events** or **Email Integration**. If you have other monitoring system requirements, please feel free to contact us.
 
 ### Configure Notification Methods
 
 When an incident occurs, how will you be notified?
 
-1. Access the collaboration space details, click **Distribution Strategy**, and either add a new strategy or modify an existing one.
-2. Enter Configuration Step 1, specify the personnel responsible for dispatch, i.e., the responders after an incident is triggered, and define their notification methods.
-- Choose a duty, team, or individual as the assignee. It is recommended to use duty assignments, as the system will only notify the current duty personnel when an incident is triggered.
-- Single chat refers to one-on-one notifications, such as via text message, voice call, or email. IM applications like Feishu and DingTalk also support one-on-one chat notifications.
-- Group chat refers to notifications sent to an IM group, with @mentions for the assigned personnel.
-4. To ensure that incidents are addressed, you can add an escalation step. For instance, if an incident has not been resolved within 30 minutes, it will be escalated to the Team Leader.
+1. Enter the collaboration space details, click **Dispatch Strategy**, and add or modify the dispatch strategy.
+2. Enter step 1 configuration and specify the dispatch personnel, i.e., the responders after the incident is triggered. Specify how the assigned personnel are notified.
+- Select a shift, team, or individual as the dispatch target. We recommend using shifts. When an incident is triggered, the system will only notify the current on-duty personnel.
+- Single chat is one-to-one notification, i.e., text message, voice, email, etc. IM applications such as Feishu and DingTalk also support one-to-one chat push.
+- Group chat is pushed to the IM message group and @-mentions the assigned personnel.
+4. To ensure that someone handles the incident, you can add an escalation step. For example, if the incident has not been resolved after 30 minutes, it will be escalated to the Team Leader.
 
 > [!NOTE]
-> How can you set up incident notifications according to your personal preferences?
-> Go to **Account Settings > Notification Settings** to configure how you are notified when assigned or during shift rotations. Note that these settings only apply when assigned directly or when using policy-based assignments that follow personal preferences.
+> How to configure incident notifications according to personal preferences?
+> Go to the **Account Settings > Notification Settings** page to set how you are notified when assigned and when duty rotation occurs. Note that this setting only takes effect when dispatching directly or dispatching by policy and specifying personal preferences.
 
 ## Official Subscription
 
 > [!NOTE]
-> Only individuals with **Subscription Management** permissions can perform this action.
+> People with **subscription management** rights can perform this action.
 
-Newly registered businesses automatically receive a 2-week free trial. After testing, you can visit the **Payment Center** to choose between the Professional or Standard editions for an upgrade.
+Newly registered businesses will automatically receive a 2-week free trial. After the trial, you can go to the **Billing Center** and choose the Professional or Standard Edition to upgrade.
 
-- You can compare the feature differences between different versions at the bottom of the page.
-- Only members who handle incidents daily require a license. If you are only passively receiving alert notifications, there is no need to purchase a license.
-- If there are insufficient licenses, members without a license will not be able to view or handle incidents. You can purchase additional licenses at any time via the console, and they will take effect immediately.
-- Each license comes with a certain amount of free communication credit, which is shared among all members.
-- Five days before the subscription expires, the system will remind the primary account daily via SMS. Please renew promptly, as failure to do so may affect the reception of alerts.
+- You can compare the functional differences between different versions at the bottom of the page.
+- Only members who handle daily incidents need a license. If you only passively receive alert notifications, there is no need to purchase a license.
+- If the license is insufficient, members without a license cannot view or handle incidents. You can go to the console to purchase additional licenses at any time, which will take effect immediately.
+- Each license includes a certain amount of free communication quota, which is shared among all members.
+- Five days before the subscription expires, the system will remind the main account via text message every day. Please renew in time, otherwise it will affect alert reception.

@@ -2,77 +2,77 @@
 brief: Team Operations and Member Management
 ---
 
-# Team and Members
+# Teams and Members
 
 ## Team Introduction
-A team is a collection of members, also conceptualized as a group, where members with varying responsibilities or from different projects are aggregated to facilitate the management of **collaboration spaces, task assignments, duty schedules, and service calendars** among other scenarios.
+A team is a collection of members and can also be understood as a group. Members with different responsibilities or projects can be grouped into a team for managing **collaboration spaces, assignment notifications, duty schedules, and service calendars** among other scenarios.
 
 ## Team Management
 
 ### Team Search
 
-- By default, all teams are displayed, with an option to filter for only 'my' team.
-- Search by team name is supported with fuzzy matching; however, searching by member is not available.
+- By default, all teams are displayed. You can choose to view only the teams you belong to.
+- Fuzzy search by team name is supported, but search by member is not.
 
-### Create and Edit
+### Creation and Editing
 
-- Team limit: Currently, there is no restriction on the number of teams.
-- User limit per team: Currently, there is no restriction on the number of users that can be added.
-- A single member can be part of multiple teams.
-- The name, description, and membership of an existing team can be modified.
-- When changing team members, ensure that the member indeed belongs to the team.
+- Team quantity limit: Currently unlimited.
+- Number of users that can be added to a team: Currently unlimited.
+- The same member can belong to multiple teams.
+- The name, description, and members of a created team can be modified.
+- When modifying team members, ensure that the member indeed belongs to the team.
 
-### Delete Team
+### Deleting a Team
 
 > [!WARN]
-> Before deletion, confirm whether any collaboration spaces, assignment policies, or other related items are linked to the team.
-> After deletion, all associated paths will immediately become invalid and cannot be restored; please proceed with caution.
+> Before deleting, please confirm whether there are any collaboration spaces, assignment policies, or other related settings associated with the team.
+> After deletion, any related settings will immediately become invalid and cannot be recovered. Please proceed with caution.
 
 ## Member Management
 
-### Invitation Method
+### Invitation Methods
 
-- The console supports only email invitations, with the user nickname set to the email prefix by default, which can be changed in the account settings after activation
-- Invitations can also be sent via [Open API](https://developer.flashcat.cloud/api-110655699), which supports inviting via mobile phone numbers
-- The system will send either an SMS or email to the invited colleagues, with a daily limit of 200 invitations and a maximum of 10 people per invitation
-- Besides the above methods, you can contact the organization administrator to set up single sign-on, where new members will automatically have an account created upon login
-- After sending an invitation to the other party, they can activate their account simply by logging in. Until activation, the account will not be able to receive alert-related notifications
+- The console only supports email invitations. The user nickname defaults to the email prefix and can be modified in the account settings page after activation
+- You can invite members through [Open API](https://developer.flashcat.cloud/api-110655699), which supports mobile phone number invitations
+- The system will send text messages or emails to invited colleagues. The maximum number of invitations per day is 200, and a maximum of 10 people can be invited at a time
+- In addition to the above methods, you can also contact the organization administrator to configure single sign-on, and new members will automatically create accounts after logging in
+- After inviting a member, they can activate their account by logging in. The account will not receive alert-related notifications until it is activated
 
-### Invite Members
+### Inviting Members
 
-- When inviting a member, you can directly assign them a role; [understand the permission design](/feature/permission_overview).
-- For email invitations, the invited member will receive a notification email and can directly jump to the login verification from within the email.
-- For SMS invitations, the invited member will receive a corresponding SMS notification.
+- When inviting a member, you can directly assign them a role; [learn about permission design](/feature/permission_overview).
+- When inviting via email, the invited member will receive a notification email and can directly log in and verify through the email.
+- When inviting via SMS, the invited member will receive a corresponding SMS reminder.
 - Invited members can log in using the verification method provided during the invitation, such as email or mobile phone number.
 
-### Change Role
+### Changing Roles
 
-- Account administrators can change the roles of members.
-- Members can demote their own roles but cannot promote them.
+- Account administrators can change members' roles.
+- Members can downgrade their own roles but cannot upgrade them.
 
-### Delete Member
+### Deleting Members
 > [!WARN]
-> Once a member is deleted, they cannot be restored, so please exercise caution.
-> Deleting a member does not remove their data.
+> Once a member is deleted, they cannot be restored. Please proceed with caution.
+> After a member is deleted, their data will not be deleted.
 
-## FAQs
+## Frequently Asked Questions
 
-|+| Have the members not received the verification email after being invited via email?
+|+| Email Invitation Members Did Not Receive the Verification Email?
 
-    Please verify that the email address was entered correctly, check if the email was received in the spam folder, and ensure no blocking policy is set for the email. If all is well, you may ask the inviter to resend the invitation or contact the official technical support team.
+    Please confirm that the email address is correct, check the spam folder, and ensure that no interception policies are set in the email. If everything is normal, you can ask the inviter to resend the invitation or contact official technical support.
 
-|+| Didn’t the member invited via SMS receive the verification text message?
+|+| SMS Invitation Members Did Not Receive the Verification SMS?
 
-    Please confirm that the mobile number was entered correctly and that no blocking policy is in place on the phone. If everything is in order, you can ask the inviter to resend the invitation or reach out to the official technical support team.
+    Please confirm that the mobile phone number is correct and that no interception policies are set on the mobile phone. If everything is normal, you can ask the inviter to resend the invitation or contact official technical support.
 
-|+| Can the same member belong to multiple principal tenants?
+|+| Can the Same Member Belong to Multiple Principal Tenants?
 
-    Yes, for instance, if member A is part of multiple entities, member A will be prompted to select the entity to log into upon signing in.
+    Yes, for example, if member A belongs to multiple entities, member A will be prompted to choose the entity to log in when logging in.
 
-|+| Can the mobile numbers or email addresses of members under the same account be duplicated?
+|+| Can Members' Mobile Phone Numbers or Email Addresses Under the Same Account Be Repeated?
 
-    No, they cannot be duplicated; the mobile number or email address must remain unique.
+    No, the mobile phone number or email address must be unique.
 
-|+| Why can’t the administrator change other members’ email addresses or mobile numbers?
+|+| Why Can't the Administrator Modify Other Members' Email Addresses or Mobile Phone Numbers?
 
-    A mobile phone number or email is a crucial channel for incident notifications and for logging into the console. To prevent any modifications to this information without the user's knowledge, which could lead to unforeseen incidents, only the account owner can make changes, and these changes must be verified.
+    The mobile phone number or email address is an important channel for incident notifications and logging into the console. To prevent these details from being modified without the member's knowledge, which could lead to unexpected issues, only the member can modify them and must verify the changes.

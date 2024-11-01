@@ -1,1 +1,1 @@
-# Instant Message
+# Instant Messaging

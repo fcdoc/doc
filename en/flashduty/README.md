@@ -1,1 +1,1 @@
-# FlashDuty: A One-Stop Alert Response Platform
+# FlashDuty: One-Stop Alert Response Platform

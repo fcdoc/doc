@@ -1,5 +1,5 @@
 ---
-brief: Through the use of webhooks, synchronize Jira Issue events with Kuaimao Nebula to collect change events.
+brief: Synchronize Jira Issue events to Kuaimao Nebula via webhook to enable change event collection.
 ---
 
 # Jira Integration
@@ -8,12 +8,12 @@ brief: Through the use of webhooks, synchronize Jira Issue events with Kuaimao N
 
 ### In Jira
 
-- You must have the authority to modify **Settings => System => Webhooks**.
-- (For on-premises deployment) Your Jira server must be able to access the domain api.flascat.cloud.
+- You must have permission to modify **Settings => System => Webhooks**.
+- (If privately deployed) Your Jira server must be able to access the domain api.flascat.cloud.
 
 ## Supported Versions
 
-This guide is compatible with **Jira Cloud and On-Premises** versions.
+This guide is applicable to **Jira Cloud and on-premises** versions.
 
 ## Operation Steps
 
@@ -22,30 +22,30 @@ This guide is compatible with **Jira Cloud and On-Premises** versions.
 1. Enter the Flashduty console, select **Integration Center => Change Events**, and navigate to the integration selection page.
 2. Choose the **Jira** integration:
 - **Integration Name**: Define a name for the current integration.
-3. Click **Save**, then copy the newly generated **Push Address** on the current page for future reference.
-4. Completed.
+3. After clicking **Save**, copy the newly generated **push address** for later use.
+4. Complete.
 
 ### In Jira
 
-1. Log into your Jira account
-2. Navigate to the **Settings => System => Webhooks** page and click the "Create" button
-3. Set the callback address to the push address associated with the current integration, and select the event types: Issue Created/Updated/Deleted
-4. Optionally, you can enter JQL to further refine the scope of events to be synchronized (e.g., specific Projects)
-5. Click the "Save" button to submit the configuration
+1. Log in to your Jira
+2. Go to the **Settings => System => Webhooks** page and click the Create button
+3. Enter the callback URL as the push URL corresponding to the current integration, and select the three event types: Issue Created/Updated/Deleted
+4. Optionally, enter a JQL query to further narrow the scope of events to be synchronized (e.g., specific projects)
+5. Click the Save button to submit the configuration
 
 <img alt="drawing" src="https://fcdoc.github.io/img/zh/flashduty/mixin/change_integration/jira/1.avif" />
 
-5. Finish
+5. Complete
 
-## Status Mapping
+## State Mapping
 
-By default, Flashduty extracts the "status.name" information from the webhook payload and performs status transitions based on the mapping relationship provided below:
+Flashduty extracts the status.name information in the webhook payload by default, and performs status transition according to the following mapping relationship:
 
-| Jira        | Flashduty   | state               |
+| Jira        | Flashduty   | Status               |
 | ----------- | ---------- | ------------------ |
-| planned     | planned    | Bill Submitted             |
-| to do       | planned    | Bill Submitted             |
-| ready       | ready      | Soon to Start (or Planned) |
+| planned     | planned    | Submitted             |
+| to do       | planned    | Submitted             |
+| ready       | ready      | About to Start (or Planned) |
 | processing  | processing | In Progress             |
 | open        | processing | In Progress             |
 | reopen      | processing | In Progress             |
@@ -56,4 +56,4 @@ By default, Flashduty extracts the "status.name" information from the webhook pa
 | resolved    | done       | Completed             |
 | closed      | done       | Completed             |
 
-If you wish to modify this mapping, please contact Flashduty support.
+If you wish to modify this mapping, please contact Flashduty.
