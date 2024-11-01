@@ -29,7 +29,7 @@ conf/README.md
   conf/how_to_filter.md
 feature/README.md
   feature/teams_and_members.md
-  feature/permission_overview.md
+  feature/permission.md
   feature/single_sign_on.md
   feature/audits.md
   feature/subscription.md

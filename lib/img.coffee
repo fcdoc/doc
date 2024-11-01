@@ -29,7 +29,12 @@ RE_MDIMG = /\ssrc="([^"]+)"|!\[([^\]]*?)\]\(([^)]+)\)/g
 do =>
   {i18n} = load read join ROOT, '.i18n/conf.yml'
 
-  PREFIX = Object.keys(i18n.replace)[0]
+  keys = Object.keys(i18n.replace or {})
+
+  if keys.length == 0
+    return
+
+  PREFIX = keys[0]
 
   for [k,v] from Object.entries i18n.fromTo
     if not v
@@ -54,6 +59,8 @@ nextId = (id, rel, ext)=>
 EXIST = new Map
 
 < (li, rpath)=>
+  if not PREFIX
+    return
   p = rpath.lastIndexOf('.')
   rel = rpath.slice(0,p)
   id = 0

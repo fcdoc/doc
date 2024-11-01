@@ -1,0 +1,9 @@
+seo: false
+host: fcdoc.github.io
+out:
+  - fs
+
+pkg:
+  i: i18n.site
+  md: "@fcat/d"
+

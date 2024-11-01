@@ -40,7 +40,7 @@ A team is a collection of members and can also be understood as a group. Members
 
 ### Inviting Members
 
-- When inviting a member, you can directly assign them a role; [learn about permission design](/feature/permission_overview).
+- When inviting a member, you can directly assign a role to the member; [learn about permission design](/feature/permission).
 - When inviting via email, the invited member will receive a notification email and can directly log in and verify through the email.
 - When inviting via SMS, the invited member will receive a corresponding SMS reminder.
 - Invited members can log in using the verification method provided during the invitation, such as email or mobile phone number.
