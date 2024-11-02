@@ -41,7 +41,7 @@ brief: 通过 webhook 的方式同步 Skywalking 告警事件到快猫星云，�
 2. 找到 Skywalking 的配置文件 ./config/alarm-settings.yml。
 3. 在告警规则中添加 Level 的 tags。
 
-```
+```i18n
 # v8.6.0+ 及以上版本才支持tags标签，其他版本可以不添加。
 # Level 的对应 value ：Critical、Warning、Info。
 # 请注意大小写。
@@ -55,7 +55,7 @@ Level: Warning
 ```
 4. 添加 FlashDuty 的 webhook 地址。
 
-```
+```i18n
 # 在配置文件底部添加
 # v8.8.0 ~ v9.5.0 的添加方式
 webhooks:

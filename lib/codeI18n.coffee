@@ -9,12 +9,11 @@
     trim = line.trimStart()
 
     if trim.startsWith '```'
-
       if in_code
         if code[0].trimStart() == '```'
-          :out `//`
+          :out
             for i from code.slice(1,-1)
-              for c from txt
+              for c from i
                 if isChinese c
                   code[0] = code[0]+'i18n'
                   break out
