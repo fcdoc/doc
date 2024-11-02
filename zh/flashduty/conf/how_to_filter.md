@@ -38,7 +38,7 @@ Flashduty 将整个过滤条件做了抽象，期望做到最小化配置且满�
 
 如上图所示，我们有两组条件，每组条件内有两个条件，条件匹配值有多个。如果严重程度为 “Critical” 或 “Warning”，且check标签等于 “Binlog同步延迟”，则整体满足条件。否则，如果 check 标签包含 “cpu”、“io” 或 “disk” 任一字样，且 value 标签的数值大于 90，整体也满足条件。我们也可以使用一个表达式直观的描述过滤条件：
 
-```
+```i18n
 ( severity == Critical|Warning && labels.check == Binlog同步延迟 )
 or
 ( labels.check == /cpu/|/io/|/disk/ && labels.value == num:gt:90 )

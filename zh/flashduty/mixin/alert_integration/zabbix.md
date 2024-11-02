@@ -44,7 +44,7 @@ brief: >-
 
 1. media type 是 Zabbix 中用于发送通知和告警的传输通道。进入终端，通过以下命令，下载完整配置
 
-```
+```i18n
 // 5.x版本 XML配置：
 wget https://download.flashcat.cloud/flashduty/integration/zabbix/zbx_mediatype_flashcat_v5.xml
 
@@ -132,7 +132,7 @@ media type 必须关联至某个 user 才能发送事件。user 至少拥有对 
 4. 点击 Update，保存配置
 5. 登录 Zabbix server 所在服务器，执行以下命令：
 
-```
+```i18n
 
 #1. 进入告警脚本加载目录（具体地址配置在 Zabbix Server 配置文件中 `AlertScriptsPath` 变量，一般为`/usr/lib/zabbix/alertscripts`）
 cd /usr/lib/zabbix/alertscripts

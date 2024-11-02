@@ -47,7 +47,7 @@ brief: 通过 webhook 的方式同步OceanBase告警事件到快猫星云，实�
 
 5. 配置通道中复制以下脚本内容，同时**请将脚本中的 integration_key 参数补充上 FlashDuty 推送地址中的 integration_key 值**。
 
-```
+```i18n
 #!/usr/bin/env bash
 
 function sendToFlashDuty() {
@@ -128,7 +128,7 @@ fi
 7. 消息配置中的告警消息格式选择 Markdown。
 8. 告警消息模板 **选择简体中文**，并填写以下内容并提交。
 
-```
+```i18n
 OCP告警通知-单条告警
 - 告警ID： ${alarm_id}
 - 名称：${alarm_name}

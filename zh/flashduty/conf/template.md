@@ -22,7 +22,7 @@ brief: 通过自定义配置模版，可以实现个性化通知内容的需求
 ## 我可以引用哪些变量？
 **引用变量示例**：
 
-```
+```i18n
 // 引用标题
 {{.Title}}
 
@@ -125,7 +125,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 渲染失败后，系统将使用默认模板兜底，来保证消息可达；
 - 推荐您在不确定引用变量是否存在时，使用逻辑判断来避免渲染异常，如`resource`标签：
 
-```
+```i18n
 // 错误做法：直接读取标签
 {{.Labels.resource}}
 
@@ -135,7 +135,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 
 3. **故障标题含有“>”之类的__字符转义__？**
 
-```
+```i18n
 // 使用toHtml函数
 {{toHtml .Title}}
 
@@ -145,7 +145,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 
 4. **时间变量都是时间戳类型，如何__转换时间格式__？**
 
-```
+```i18n
 // date函数，将时间戳转换可读格式
 // "2006-01-02 15:04:05"是一种常见格式，更多格式请检索网络
 {{date "2006-01-02 15:04:05" .StartTime}}
@@ -155,7 +155,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 
 5. **如何在 for 循环内部引用外部变量？**
-```
+```i18n
 // 在外部变量前增加”$“
 {{range .Responders}}
 {{if eq $.Progress "Triggered"}}
@@ -165,14 +165,14 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```
 6. **如何提取命名中带”.“的字段值，如标签中的“obj.instance”的信息？**
 
-```
+```i18n
 // 使用index函数
 {{index .Labels "obj.instance"}}
 ```
 
 7. **如何提取故障关联告警中某个label的信息并去重？**
 
-```
+```i18n
 // 使用alertLabels函数，得到去重后的数组
 {{alertLabels . "resource"}}
 
@@ -182,7 +182,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 
 8. **如何遍历并打印labels？**
 
-```
+```i18n
 // 完整遍历
 {{range $k, $v := .Labels}}
 {{$k}} : {{toHtml $v}}
@@ -229,7 +229,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 我们列出了一些常见标签，您可自行删减；
 - 在飞书应用中，系统会自动帮您删除（因标签不存在导致的）渲染空行，您可放心配置
 
-```
+```i18n
 {{if (index .Labels "resource")}}resource：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
 {{if (index .Labels "check")}}check：{{toHtml (index .Labels "check")}}{{end}}
 {{if (index .Labels "metric")}}metric：{{index .Labels "metric"}}{{end}}
@@ -271,7 +271,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 我们列出了一些常见标签，您可自行删减；
 - 在钉钉应用中，系统会自动帮您删除（因标签不存在导致的）渲染空行，您可放心配置
 
-```
+```i18n
 {{if (index .Labels "resource")}}**resource**：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
 {{if (index .Labels "metric")}}**metric**：{{index .Labels "metric"}}{{end}}
 {{if (index .Labels "prom_ql")}}**prom_ql**：{{toHtml (index .Labels "prom_ql")}}{{end}}
@@ -300,7 +300,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 我们列出了一些常见标签，您可自行删减；
 - 在企业微信应用中，系统会自动帮您删除（因标签不存在导致的）渲染空行，您可放心配置
 
-```
+```i18n
 {{if (index .Labels "resource")}}resource：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
 {{if (index .Labels "metric")}}metric：{{index .Labels "metric"}}{{end}}
 {{if (index .Labels "prom_ql")}}prom_ql：{{toHtml (index .Labels "prom_ql")}}{{end}}
@@ -348,7 +348,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 消息可以发送长度为15000左右字符，超出后截断发送；
 - 在 Slack 应用中，系统会自动帮您删除（因标签不存在导致的）渲染空行，您可放心配置
 
-```
+```i18n
 {{if (index .Labels "resource")}}*resource*：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
 {{if (index .Labels "metric")}}*metric*：{{index .Labels "metric"}}{{end}}
 {{if (index .Labels "prom_ql")}}*prom_ql*：{{toHtml (index .Labels "prom_ql")}}{{end}}
@@ -390,7 +390,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 消息可以发送长度为 28KB 左右字节，超出后报错；
 - 在 Microsoft Teams 应用中，系统会自动帮您删除（因标签不存在导致的）渲染空行，您可放心配置
 
-```
+```i18n
 {{if (index .Labels "resource")}}**resource**：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
 {{if (index .Labels "metric")}}**metric**：{{index .Labels "metric"}}{{end}}
 {{if (index .Labels "prom_ql")}}**prom_ql**：{{toHtml (index .Labels "prom_ql")}}{{end}}
@@ -432,7 +432,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 消息可以发送长度为 28KB 左右字节，超出后报错；
 - 在 Microsoft Teams 应用中，系统会自动帮您删除（因标签不存在导致的）渲染空行，您可放心配置
 
-```
+```i18n
 {{if (index .Labels "resource")}}**resource**：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
 {{if (index .Labels "metric")}}**metric**：{{index .Labels "metric"}}{{end}}
 {{if (index .Labels "prom_ql")}}**prom_ql**：{{toHtml (index .Labels "prom_ql")}}{{end}}
@@ -461,7 +461,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 如果文本中包含`<br>`，渲染时会__先删除空行，再将`<br>`替换为换行符__；
 - 如果不设置自定义内容，将采用系统默认模板，仅展示关键信息：
 
-```
+```i18n
 {{fireReason .}}INC #{{.Num}} {{toHtml .Title}}
 -----
 协作空间：{{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}
@@ -482,7 +482,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 如果文本中包含`<br>`，渲染时会__先删除空行，再将`<br>`替换为换行符__；
 - 如果不设置自定义内容，将采用系统默认模板，仅展示关键信息：
 
-```
+```i18n
 {{fireReason .}}INC [#{{.Num}}]({{.DetailUrl}}) {{toHtml .Title}}
 
 - 协作空间：{{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}
@@ -503,7 +503,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 如果文本中包含`<br>`，渲染时会__先删除空行，再将`<br>`替换为换行符__；
 - 如果不设置自定义内容，将采用系统默认模板，仅展示关键信息：
 
-```
+```i18n
 {{fireReason .}}**INC [#{{.Num}}]({{.DetailUrl}}) {{toHtml .Title}}**
 > 协作空间：<font color="warning">{{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}</font>
 > 严重程度：<font color="warning">{{.IncidentSeverity}}</font>
@@ -522,7 +522,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 如果文本中包含`<br>`，渲染时会__先删除空行，再将`<br>`替换为换行符__；
 - 如果不设置自定义内容，将采用系统默认模板，仅展示关键信息：
 
-```
+```i18n
 {{fireReason .}}INC [#{{.Num}}]({{.DetailUrl}}) {{toHtml .Title}}
 -----
 协作空间：{{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}
@@ -542,7 +542,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 如果文本中包含`<br>`，渲染时会__先删除空行，再将`<br>`替换为换行符__；
 - 如果不设置自定义内容，将采用系统默认模板，仅展示关键信息：
 
-```
+```i18n
 {{fireReason .}}INC <{{.DetailUrl}}|#{{.Num}}> {{toHtml .Title}}
 -----
 协作空间：{{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}
@@ -563,7 +563,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 消息格式 __遵循Zoom消息格式__，当前机器人应用不支持Markdown，其他格式可以参考官网: https://developers.zoom.us/docs/team-chat-apps/customizing-messages/
 - 如果不设置自定义内容，将采用系统默认模板，仅展示关键信息：
 
-```
+```i18n
 {"head": {
 "text": "{{fireReason .}}INC [#{{.Num}}] {{toHtml .Title}}",
 "style": {
@@ -665,7 +665,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ## 邮件
 如果不设置自定义内容，将采用系统默认模板渲染通知：
 
-```
+```i18n
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>{{.Title}}</title>
