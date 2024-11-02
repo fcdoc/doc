@@ -130,23 +130,23 @@ fi
 
 ```i18n
 OCPAlarm Notification - Single Alarm
-- Alarm ID:  ${alarm_id}
+- Alarm ID: ${alarm_id}
 - Name: ${alarm_name}
 - Level: ${alarm_level}
 - Alert Object: ${alarm_target}
-- Service:  ${service}
+- Service: ${service}
 - Overview: ${alarm_summary}
 - Generation Time: ${alarm_active_at}
-- Update Time:  ${alarm_updated_at}
+- Update Time: ${alarm_updated_at}
 - Recovery Time: ${alarm_resolved_at}
 - Details: ${alarm_description}
-- Status:  ${alarm_status}
-- Alarm Type:  ${alarm_type}
-- Alarm Threshold:  ${alarm_threshold}
-- Cluster Group:  ${ob_cluster_group}
-- Cluster:  ${ob_cluster}
-- Host:  ${host_ip}
-- Application Cluster:  ${app_cluster}
+- Status: ${alarm_status}
+- Alarm Type: ${alarm_type}
+- Alarm Threshold: ${alarm_threshold}
+- Cluster Group: ${ob_cluster_group}
+- Cluster: ${ob_cluster}
+- Host: ${host_ip}
+- Application Cluster: ${app_cluster}
 - OCPLink: ${alarm_url}
 ```
 
