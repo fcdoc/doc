@@ -126,10 +126,10 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 推荐您在不确定引用变量是否存在时，使用逻辑判断来避免渲染异常，如`resource`标签：
 
 ```i18n
-// 错误做法：直接读取标签
+// 错误做法: 直接读取标签
 {{.Labels.resource}}
 
-// 推荐做法：先判断，再读取标签
+// 推荐做法: 先判断, 再读取标签
 {{if .Labels.resource}}{{.Labels.resource}}{{end}}
 ```
 
@@ -139,18 +139,18 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 // 使用toHtml函数
 {{toHtml .Title}}
 
-// 使用第一个不为空的值进行渲染，避免写复杂的if逻辑
+// 使用第一个不为空的值进行渲染, 避免写复杂的if逻辑
 {{toHtml .Title .TitleEnglish}}
 ```
 
 4. **时间变量都是时间戳类型，如何__转换时间格式__？**
 
 ```i18n
-// date函数，将时间戳转换可读格式
-// "2006-01-02 15:04:05"是一种常见格式，更多格式请检索网络
+// date函数, 将时间戳转换可读格式
+// "2006-01-02 15:04:05"是一种常见格式, 更多格式请检索网络
 {{date "2006-01-02 15:04:05" .StartTime}}
 
-// ago函数，将时间差转换为可读格式
+// ago函数, 将时间差转换为可读格式
 {{ago .StartTime}}
 ```
 
@@ -173,10 +173,10 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 7. **如何提取故障关联告警中某个label的信息并去重？**
 
 ```i18n
-// 使用alertLabels函数，得到去重后的数组
+// 使用alertLabels函数, 得到去重后的数组
 {{alertLabels . "resource"}}
 
-// 使用joinAlertLabels函数，得到去重后的数组，然后按照“sep”来拼接为字符串
+// 使用joinAlertLabels函数, 得到去重后的数组, 然后按照“sep”来拼接为字符串
 {{joinAlertLabels . "resource" "sep"}}
 ```
 
@@ -230,26 +230,26 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 在飞书应用中，系统会自动帮您删除（因标签不存在导致的）渲染空行，您可放心配置
 
 ```i18n
-{{if (index .Labels "resource")}}resource：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
-{{if (index .Labels "check")}}check：{{toHtml (index .Labels "check")}}{{end}}
-{{if (index .Labels "metric")}}metric：{{index .Labels "metric"}}{{end}}
-{{if (index .Labels "prom_ql")}}prom_ql：{{toHtml (index .Labels "prom_ql")}}{{end}}
-{{if (index .Labels "host_ql")}}host_ql：{{toHtml (index .Labels "host_ql")}}{{end}}
-{{if (index .Labels "trigger_value")}}trigger_value：{{index .Labels "trigger_value"}}{{end}}
-{{if (index .Labels "region")}}region：{{index .Labels "region"}}{{end}}
-{{if (index .Labels "cluster")}}cluster：{{index .Labels "cluster"}}{{end}}
-{{if (index .Labels "business")}}business：{{index .Labels "business"}}{{end}}
-{{if (index .Labels "service")}}service：{{index .Labels "service"}}{{end}}
-{{if (index .Labels "env")}}env：{{index .Labels "env"}}{{end}}
-{{if (index .Labels "type")}}type：{{index .Labels "type"}}{{end}}
-{{if (index .Labels "topic")}}topic：{{index .Labels "topic"}}{{end}}
-{{if (index .Labels "cpu")}}cpu：{{index .Labels "cpu"}}{{end}}
-{{if (index .Labels "device")}}device：{{index .Labels "device"}}{{end}}
-{{if (index .Labels "path")}}path：{{index .Labels "path"}}{{end}}
-{{if (index .Labels "fstype")}}fstype：{{index .Labels "fstype"}}{{end}}
-{{if (index .Labels "name")}}name：{{index .Labels "name"}}{{end}}
-{{if (index .Labels "mode")}}mode：{{index .Labels "mode"}}{{end}}
-{{if (index .Labels "runbook_url")}}runbook_url：{{toHtml (index .Labels "runbook_url")}}{{end}}
+{{if (index .Labels "resource")}}resource: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
+{{if (index .Labels "check")}}check: {{toHtml (index .Labels "check")}}{{end}}
+{{if (index .Labels "metric")}}metric: {{index .Labels "metric"}}{{end}}
+{{if (index .Labels "prom_ql")}}prom_ql: {{toHtml (index .Labels "prom_ql")}}{{end}}
+{{if (index .Labels "host_ql")}}host_ql: {{toHtml (index .Labels "host_ql")}}{{end}}
+{{if (index .Labels "trigger_value")}}trigger_value: {{index .Labels "trigger_value"}}{{end}}
+{{if (index .Labels "region")}}region: {{index .Labels "region"}}{{end}}
+{{if (index .Labels "cluster")}}cluster: {{index .Labels "cluster"}}{{end}}
+{{if (index .Labels "business")}}business: {{index .Labels "business"}}{{end}}
+{{if (index .Labels "service")}}service: {{index .Labels "service"}}{{end}}
+{{if (index .Labels "env")}}env: {{index .Labels "env"}}{{end}}
+{{if (index .Labels "type")}}type: {{index .Labels "type"}}{{end}}
+{{if (index .Labels "topic")}}topic: {{index .Labels "topic"}}{{end}}
+{{if (index .Labels "cpu")}}cpu: {{index .Labels "cpu"}}{{end}}
+{{if (index .Labels "device")}}device: {{index .Labels "device"}}{{end}}
+{{if (index .Labels "path")}}path: {{index .Labels "path"}}{{end}}
+{{if (index .Labels "fstype")}}fstype: {{index .Labels "fstype"}}{{end}}
+{{if (index .Labels "name")}}name: {{index .Labels "name"}}{{end}}
+{{if (index .Labels "mode")}}mode: {{index .Labels "mode"}}{{end}}
+{{if (index .Labels "runbook_url")}}runbook_url: {{toHtml (index .Labels "runbook_url")}}{{end}}
 ```
 
 ## 钉钉应用
@@ -272,25 +272,25 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 在钉钉应用中，系统会自动帮您删除（因标签不存在导致的）渲染空行，您可放心配置
 
 ```i18n
-{{if (index .Labels "resource")}}**resource**：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
-{{if (index .Labels "metric")}}**metric**：{{index .Labels "metric"}}{{end}}
-{{if (index .Labels "prom_ql")}}**prom_ql**：{{toHtml (index .Labels "prom_ql")}}{{end}}
-{{if (index .Labels "trigger_value")}}**trigger_value**：{{index .Labels "trigger_value"}}{{end}}
-{{if (index .Labels "host_ql")}}**host_ql**：{{toHtml (index .Labels "host_ql")}}{{end}}
-{{if (index .Labels "region")}}**region**：{{index .Labels "region"}}{{end}}
-{{if (index .Labels "cluster")}}**cluster**：{{index .Labels "cluster"}}{{end}}
-{{if (index .Labels "business")}}**business**：{{index .Labels "business"}}{{end}}
-{{if (index .Labels "service")}}**service**：{{index .Labels "service"}}{{end}}
-{{if (index .Labels "env")}}**env**：{{index .Labels "env"}}{{end}}
-{{if (index .Labels "type")}}**type**：{{index .Labels "type"}}{{end}}
-{{if (index .Labels "topic")}}**topic**：{{index .Labels "topic"}}{{end}}
-{{if (index .Labels "cpu")}}**cpu**：{{index .Labels "cpu"}}{{end}}
-{{if (index .Labels "device")}}**device**：{{index .Labels "device"}}{{end}}
-{{if (index .Labels "path")}}**path**：{{index .Labels "path"}}{{end}}
-{{if (index .Labels "fstype")}}**fstype**：{{index .Labels "fstype"}}{{end}}
-{{if (index .Labels "name")}}**name**：{{index .Labels "name"}}{{end}}
-{{if (index .Labels "mode")}}**mode**：{{index .Labels "mode"}}{{end}}
-{{if (index .Labels "runbook_url")}}**runbook_url**：{{index .Labels "runbook_url"}}{{end}}
+{{if (index .Labels "resource")}}**resource**: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
+{{if (index .Labels "metric")}}**metric**: {{index .Labels "metric"}}{{end}}
+{{if (index .Labels "prom_ql")}}**prom_ql**: {{toHtml (index .Labels "prom_ql")}}{{end}}
+{{if (index .Labels "trigger_value")}}**trigger_value**: {{index .Labels "trigger_value"}}{{end}}
+{{if (index .Labels "host_ql")}}**host_ql**: {{toHtml (index .Labels "host_ql")}}{{end}}
+{{if (index .Labels "region")}}**region**: {{index .Labels "region"}}{{end}}
+{{if (index .Labels "cluster")}}**cluster**: {{index .Labels "cluster"}}{{end}}
+{{if (index .Labels "business")}}**business**: {{index .Labels "business"}}{{end}}
+{{if (index .Labels "service")}}**service**: {{index .Labels "service"}}{{end}}
+{{if (index .Labels "env")}}**env**: {{index .Labels "env"}}{{end}}
+{{if (index .Labels "type")}}**type**: {{index .Labels "type"}}{{end}}
+{{if (index .Labels "topic")}}**topic**: {{index .Labels "topic"}}{{end}}
+{{if (index .Labels "cpu")}}**cpu**: {{index .Labels "cpu"}}{{end}}
+{{if (index .Labels "device")}}**device**: {{index .Labels "device"}}{{end}}
+{{if (index .Labels "path")}}**path**: {{index .Labels "path"}}{{end}}
+{{if (index .Labels "fstype")}}**fstype**: {{index .Labels "fstype"}}{{end}}
+{{if (index .Labels "name")}}**name**: {{index .Labels "name"}}{{end}}
+{{if (index .Labels "mode")}}**mode**: {{index .Labels "mode"}}{{end}}
+{{if (index .Labels "runbook_url")}}**runbook_url**: {{index .Labels "runbook_url"}}{{end}}
 ```
 
 ## 企业微信应用
@@ -301,25 +301,25 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 在企业微信应用中，系统会自动帮您删除（因标签不存在导致的）渲染空行，您可放心配置
 
 ```i18n
-{{if (index .Labels "resource")}}resource：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
-{{if (index .Labels "metric")}}metric：{{index .Labels "metric"}}{{end}}
-{{if (index .Labels "prom_ql")}}prom_ql：{{toHtml (index .Labels "prom_ql")}}{{end}}
-{{if (index .Labels "trigger_value")}}trigger_value：{{index .Labels "trigger_value"}}{{end}}
-{{if (index .Labels "host_ql")}}host_ql：{{toHtml (index .Labels "host_ql")}}{{end}}
-{{if (index .Labels "region")}}region：{{index .Labels "region"}}{{end}}
-{{if (index .Labels "cluster")}}cluster：{{index .Labels "cluster"}}{{end}}
-{{if (index .Labels "business")}}business：{{index .Labels "business"}}{{end}}
-{{if (index .Labels "service")}}service：{{index .Labels "service"}}{{end}}
-{{if (index .Labels "env")}}env：{{index .Labels "env"}}{{end}}
-{{if (index .Labels "type")}}type：{{index .Labels "type"}}{{end}}
-{{if (index .Labels "topic")}}topic：{{index .Labels "topic"}}{{end}}
-{{if (index .Labels "cpu")}}cpu：{{index .Labels "cpu"}}{{end}}
-{{if (index .Labels "device")}}device：{{index .Labels "device"}}{{end}}
-{{if (index .Labels "path")}}path：{{index .Labels "path"}}{{end}}
-{{if (index .Labels "fstype")}}fstype：{{index .Labels "fstype"}}{{end}}
-{{if (index .Labels "name")}}name：{{index .Labels "name"}}{{end}}
-{{if (index .Labels "mode")}}mode：{{index .Labels "mode"}}{{end}}
-{{if (index .Labels "runbook_url")}}runbook_url：{{toHtml (index .Labels "runbook_url")}}{{end}}
+{{if (index .Labels "resource")}}resource: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
+{{if (index .Labels "metric")}}metric: {{index .Labels "metric"}}{{end}}
+{{if (index .Labels "prom_ql")}}prom_ql: {{toHtml (index .Labels "prom_ql")}}{{end}}
+{{if (index .Labels "trigger_value")}}trigger_value: {{index .Labels "trigger_value"}}{{end}}
+{{if (index .Labels "host_ql")}}host_ql: {{toHtml (index .Labels "host_ql")}}{{end}}
+{{if (index .Labels "region")}}region: {{index .Labels "region"}}{{end}}
+{{if (index .Labels "cluster")}}cluster: {{index .Labels "cluster"}}{{end}}
+{{if (index .Labels "business")}}business: {{index .Labels "business"}}{{end}}
+{{if (index .Labels "service")}}service: {{index .Labels "service"}}{{end}}
+{{if (index .Labels "env")}}env: {{index .Labels "env"}}{{end}}
+{{if (index .Labels "type")}}type: {{index .Labels "type"}}{{end}}
+{{if (index .Labels "topic")}}topic: {{index .Labels "topic"}}{{end}}
+{{if (index .Labels "cpu")}}cpu: {{index .Labels "cpu"}}{{end}}
+{{if (index .Labels "device")}}device: {{index .Labels "device"}}{{end}}
+{{if (index .Labels "path")}}path: {{index .Labels "path"}}{{end}}
+{{if (index .Labels "fstype")}}fstype: {{index .Labels "fstype"}}{{end}}
+{{if (index .Labels "name")}}name: {{index .Labels "name"}}{{end}}
+{{if (index .Labels "mode")}}mode: {{index .Labels "mode"}}{{end}}
+{{if (index .Labels "runbook_url")}}runbook_url: {{toHtml (index .Labels "runbook_url")}}{{end}}
 ```
 
 如下图所示：
@@ -349,25 +349,25 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 在 Slack 应用中，系统会自动帮您删除（因标签不存在导致的）渲染空行，您可放心配置
 
 ```i18n
-{{if (index .Labels "resource")}}*resource*：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
-{{if (index .Labels "metric")}}*metric*：{{index .Labels "metric"}}{{end}}
-{{if (index .Labels "prom_ql")}}*prom_ql*：{{toHtml (index .Labels "prom_ql")}}{{end}}
-{{if (index .Labels "trigger_value")}}*trigger_value*：{{index .Labels "trigger_value"}}{{end}}
-{{if (index .Labels "host_ql")}}*host_ql*：{{index .Labels "host_ql"}}{{end}}
-{{if (index .Labels "region")}}*region*：{{index .Labels "region"}}{{end}}
-{{if (index .Labels "cluster")}}*cluster*：{{index .Labels "cluster"}}{{end}}
-{{if (index .Labels "business")}}*business*：{{index .Labels "business"}}{{end}}
-{{if (index .Labels "service")}}*service*：{{index .Labels "service"}}{{end}}
-{{if (index .Labels "env")}}*env*：{{index .Labels "env"}}{{end}}
-{{if (index .Labels "type")}}*type*：{{index .Labels "type"}}{{end}}
-{{if (index .Labels "topic")}}*topic*：{{index .Labels "topic"}}{{end}}
-{{if (index .Labels "cpu")}}*cpu*：{{index .Labels "cpu"}}{{end}}
-{{if (index .Labels "device")}}*device*：{{index .Labels "device"}}{{end}}
-{{if (index .Labels "path")}}*path*：{{index .Labels "path"}}{{end}}
-{{if (index .Labels "fstype")}}*fstype*：{{index .Labels "fstype"}}{{end}}
-{{if (index .Labels "name")}}*name*：{{index .Labels "name"}}{{end}}
-{{if (index .Labels "mode")}}*mode*：{{index .Labels "mode"}}{{end}}
-{{if (index .Labels "runbook_url")}}*runbook_url*：{{index .Labels "runbook_url"}}{{end}}
+{{if (index .Labels "resource")}}*resource*: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
+{{if (index .Labels "metric")}}*metric*: {{index .Labels "metric"}}{{end}}
+{{if (index .Labels "prom_ql")}}*prom_ql*: {{toHtml (index .Labels "prom_ql")}}{{end}}
+{{if (index .Labels "trigger_value")}}*trigger_value*: {{index .Labels "trigger_value"}}{{end}}
+{{if (index .Labels "host_ql")}}*host_ql*: {{index .Labels "host_ql"}}{{end}}
+{{if (index .Labels "region")}}*region*: {{index .Labels "region"}}{{end}}
+{{if (index .Labels "cluster")}}*cluster*: {{index .Labels "cluster"}}{{end}}
+{{if (index .Labels "business")}}*business*: {{index .Labels "business"}}{{end}}
+{{if (index .Labels "service")}}*service*: {{index .Labels "service"}}{{end}}
+{{if (index .Labels "env")}}*env*: {{index .Labels "env"}}{{end}}
+{{if (index .Labels "type")}}*type*: {{index .Labels "type"}}{{end}}
+{{if (index .Labels "topic")}}*topic*: {{index .Labels "topic"}}{{end}}
+{{if (index .Labels "cpu")}}*cpu*: {{index .Labels "cpu"}}{{end}}
+{{if (index .Labels "device")}}*device*: {{index .Labels "device"}}{{end}}
+{{if (index .Labels "path")}}*path*: {{index .Labels "path"}}{{end}}
+{{if (index .Labels "fstype")}}*fstype*: {{index .Labels "fstype"}}{{end}}
+{{if (index .Labels "name")}}*name*: {{index .Labels "name"}}{{end}}
+{{if (index .Labels "mode")}}*mode*: {{index .Labels "mode"}}{{end}}
+{{if (index .Labels "runbook_url")}}*runbook_url*: {{index .Labels "runbook_url"}}{{end}}
 ```
 
 ## Microsoft Teams 应用
@@ -391,25 +391,25 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 在 Microsoft Teams 应用中，系统会自动帮您删除（因标签不存在导致的）渲染空行，您可放心配置
 
 ```i18n
-{{if (index .Labels "resource")}}**resource**：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
-{{if (index .Labels "metric")}}**metric**：{{index .Labels "metric"}}{{end}}
-{{if (index .Labels "prom_ql")}}**prom_ql**：{{toHtml (index .Labels "prom_ql")}}{{end}}
-{{if (index .Labels "trigger_value")}}**trigger_value**：{{index .Labels "trigger_value"}}{{end}}
-{{if (index .Labels "host_ql")}}**host_ql**：{{index .Labels "host_ql"}}{{end}}
-{{if (index .Labels "region")}}**region**：{{index .Labels "region"}}{{end}}
-{{if (index .Labels "cluster")}}**cluster**：{{index .Labels "cluster"}}{{end}}
-{{if (index .Labels "business")}}**business**：{{index .Labels "business"}}{{end}}
-{{if (index .Labels "service")}}**service**：{{index .Labels "service"}}{{end}}
-{{if (index .Labels "env")}}**env**：{{index .Labels "env"}}{{end}}
-{{if (index .Labels "type")}}**type**：{{index .Labels "type"}}{{end}}
-{{if (index .Labels "topic")}}**topic**：{{index .Labels "topic"}}{{end}}
-{{if (index .Labels "cpu")}}**cpu**：{{index .Labels "cpu"}}{{end}}
-{{if (index .Labels "device")}}**device**：{{index .Labels "device"}}{{end}}
-{{if (index .Labels "path")}}**path**：{{index .Labels "path"}}{{end}}
-{{if (index .Labels "fstype")}}**fstype**：{{index .Labels "fstype"}}{{end}}
-{{if (index .Labels "name")}}**name**：{{index .Labels "name"}}{{end}}
-{{if (index .Labels "mode")}}**mode**：{{index .Labels "mode"}}{{end}}
-{{if (index .Labels "runbook_url")}}**runbook_url**：{{index .Labels "runbook_url"}}{{end}}
+{{if (index .Labels "resource")}}**resource**: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
+{{if (index .Labels "metric")}}**metric**: {{index .Labels "metric"}}{{end}}
+{{if (index .Labels "prom_ql")}}**prom_ql**: {{toHtml (index .Labels "prom_ql")}}{{end}}
+{{if (index .Labels "trigger_value")}}**trigger_value**: {{index .Labels "trigger_value"}}{{end}}
+{{if (index .Labels "host_ql")}}**host_ql**: {{index .Labels "host_ql"}}{{end}}
+{{if (index .Labels "region")}}**region**: {{index .Labels "region"}}{{end}}
+{{if (index .Labels "cluster")}}**cluster**: {{index .Labels "cluster"}}{{end}}
+{{if (index .Labels "business")}}**business**: {{index .Labels "business"}}{{end}}
+{{if (index .Labels "service")}}**service**: {{index .Labels "service"}}{{end}}
+{{if (index .Labels "env")}}**env**: {{index .Labels "env"}}{{end}}
+{{if (index .Labels "type")}}**type**: {{index .Labels "type"}}{{end}}
+{{if (index .Labels "topic")}}**topic**: {{index .Labels "topic"}}{{end}}
+{{if (index .Labels "cpu")}}**cpu**: {{index .Labels "cpu"}}{{end}}
+{{if (index .Labels "device")}}**device**: {{index .Labels "device"}}{{end}}
+{{if (index .Labels "path")}}**path**: {{index .Labels "path"}}{{end}}
+{{if (index .Labels "fstype")}}**fstype**: {{index .Labels "fstype"}}{{end}}
+{{if (index .Labels "name")}}**name**: {{index .Labels "name"}}{{end}}
+{{if (index .Labels "mode")}}**mode**: {{index .Labels "mode"}}{{end}}
+{{if (index .Labels "runbook_url")}}**runbook_url**: {{index .Labels "runbook_url"}}{{end}}
 ```
 
 ## Microsoft Teams 应用
@@ -433,25 +433,25 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 - 在 Microsoft Teams 应用中，系统会自动帮您删除（因标签不存在导致的）渲染空行，您可放心配置
 
 ```i18n
-{{if (index .Labels "resource")}}**resource**：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
-{{if (index .Labels "metric")}}**metric**：{{index .Labels "metric"}}{{end}}
-{{if (index .Labels "prom_ql")}}**prom_ql**：{{toHtml (index .Labels "prom_ql")}}{{end}}
-{{if (index .Labels "trigger_value")}}**trigger_value**：{{index .Labels "trigger_value"}}{{end}}
-{{if (index .Labels "host_ql")}}**host_ql**：{{index .Labels "host_ql"}}{{end}}
-{{if (index .Labels "region")}}**region**：{{index .Labels "region"}}{{end}}
-{{if (index .Labels "cluster")}}**cluster**：{{index .Labels "cluster"}}{{end}}
-{{if (index .Labels "business")}}**business**：{{index .Labels "business"}}{{end}}
-{{if (index .Labels "service")}}**service**：{{index .Labels "service"}}{{end}}
-{{if (index .Labels "env")}}**env**：{{index .Labels "env"}}{{end}}
-{{if (index .Labels "type")}}**type**：{{index .Labels "type"}}{{end}}
-{{if (index .Labels "topic")}}**topic**：{{index .Labels "topic"}}{{end}}
-{{if (index .Labels "cpu")}}**cpu**：{{index .Labels "cpu"}}{{end}}
-{{if (index .Labels "device")}}**device**：{{index .Labels "device"}}{{end}}
-{{if (index .Labels "path")}}**path**：{{index .Labels "path"}}{{end}}
-{{if (index .Labels "fstype")}}**fstype**：{{index .Labels "fstype"}}{{end}}
-{{if (index .Labels "name")}}**name**：{{index .Labels "name"}}{{end}}
-{{if (index .Labels "mode")}}**mode**：{{index .Labels "mode"}}{{end}}
-{{if (index .Labels "runbook_url")}}**runbook_url**：{{index .Labels "runbook_url"}}{{end}}
+{{if (index .Labels "resource")}}**resource**: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
+{{if (index .Labels "metric")}}**metric**: {{index .Labels "metric"}}{{end}}
+{{if (index .Labels "prom_ql")}}**prom_ql**: {{toHtml (index .Labels "prom_ql")}}{{end}}
+{{if (index .Labels "trigger_value")}}**trigger_value**: {{index .Labels "trigger_value"}}{{end}}
+{{if (index .Labels "host_ql")}}**host_ql**: {{index .Labels "host_ql"}}{{end}}
+{{if (index .Labels "region")}}**region**: {{index .Labels "region"}}{{end}}
+{{if (index .Labels "cluster")}}**cluster**: {{index .Labels "cluster"}}{{end}}
+{{if (index .Labels "business")}}**business**: {{index .Labels "business"}}{{end}}
+{{if (index .Labels "service")}}**service**: {{index .Labels "service"}}{{end}}
+{{if (index .Labels "env")}}**env**: {{index .Labels "env"}}{{end}}
+{{if (index .Labels "type")}}**type**: {{index .Labels "type"}}{{end}}
+{{if (index .Labels "topic")}}**topic**: {{index .Labels "topic"}}{{end}}
+{{if (index .Labels "cpu")}}**cpu**: {{index .Labels "cpu"}}{{end}}
+{{if (index .Labels "device")}}**device**: {{index .Labels "device"}}{{end}}
+{{if (index .Labels "path")}}**path**: {{index .Labels "path"}}{{end}}
+{{if (index .Labels "fstype")}}**fstype**: {{index .Labels "fstype"}}{{end}}
+{{if (index .Labels "name")}}**name**: {{index .Labels "name"}}{{end}}
+{{if (index .Labels "mode")}}**mode**: {{index .Labels "mode"}}{{end}}
+{{if (index .Labels "runbook_url")}}**runbook_url**: {{index .Labels "runbook_url"}}{{end}}
 ```
 
 ## 飞书机器人
@@ -464,15 +464,15 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```i18n
 {{fireReason .}}INC #{{.Num}} {{toHtml .Title}}
 -----
-协作空间：{{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}
-严重程度：{{.IncidentSeverity}}
-触发时间：{{date "2006-01-02 15:04:05" .StartTime}}
-持续时长：{{ago .StartTime}}{{if gt .AlertCnt 1}}
-聚合告警：{{.AlertCnt}}条{{end}}{{if .Labels.resource}}
-告警对象：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
-故障描述：{{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
-分派人员：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
-<br>详情：{{.DetailUrl}}
+协作空间: {{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}
+严重程度: {{.IncidentSeverity}}
+触发时间: {{date "2006-01-02 15:04:05" .StartTime}}
+持续时长: {{ago .StartTime}}{{if gt .AlertCnt 1}}
+聚合告警: {{.AlertCnt}}条{{end}}{{if .Labels.resource}}
+告警对象: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
+故障描述: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
+分派人员: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
+<br>详情: {{.DetailUrl}}
 ```
 
 ## 钉钉机器人
@@ -485,14 +485,14 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```i18n
 {{fireReason .}}INC [#{{.Num}}]({{.DetailUrl}}) {{toHtml .Title}}
 
-- 协作空间：{{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}
-- 严重程度：{{$s := colorSeverity .IncidentSeverity}}{{toHtml $s}}
-- 触发时间：{{date "2006-01-02 15:04:05" .StartTime}}
-- 持续时长：{{ago .StartTime}}{{if gt .AlertCnt 1}}
-- 聚合告警：{{.AlertCnt}}条{{end}}{{if .Labels.resource}}
-- 告警对象：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
-- 故障描述：{{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
-- 分派人员：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
+- 协作空间: {{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}
+- 严重程度: {{$s := colorSeverity .IncidentSeverity}}{{toHtml $s}}
+- 触发时间: {{date "2006-01-02 15:04:05" .StartTime}}
+- 持续时长: {{ago .StartTime}}{{if gt .AlertCnt 1}}
+- 聚合告警: {{.AlertCnt}}条{{end}}{{if .Labels.resource}}
+- 告警对象: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
+- 故障描述: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
+- 分派人员: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 <br>[详情]({{.DetailUrl}})|[认领]({{.DetailUrl}}?ack=1)
 ```
 
@@ -505,14 +505,14 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 
 ```i18n
 {{fireReason .}}**INC [#{{.Num}}]({{.DetailUrl}}) {{toHtml .Title}}**
-> 协作空间：<font color="warning">{{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}</font>
-> 严重程度：<font color="warning">{{.IncidentSeverity}}</font>
-> 触发时间：{{date "2006-01-02 15:04:05" .StartTime}}
-> 持续时长：{{ago .StartTime}}{{if gt .AlertCnt 1}}
-> 聚合告警：{{.AlertCnt}}条{{end}}{{if .Labels.resource}}
-> 告警对象：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
-> 故障描述：{{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
-> 分派人员：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
+> 协作空间: <font color="warning">{{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}</font>
+> 严重程度: <font color="warning">{{.IncidentSeverity}}</font>
+> 触发时间: {{date "2006-01-02 15:04:05" .StartTime}}
+> 持续时长: {{ago .StartTime}}{{if gt .AlertCnt 1}}
+> 聚合告警: {{.AlertCnt}}条{{end}}{{if .Labels.resource}}
+> 告警对象: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
+> 故障描述: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
+> 分派人员: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 <br>[详情]({{.DetailUrl}})|[认领]({{.DetailUrl}}?ack=1)
 ```
 
@@ -525,14 +525,14 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```i18n
 {{fireReason .}}INC [#{{.Num}}]({{.DetailUrl}}) {{toHtml .Title}}
 -----
-协作空间：{{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}
-严重程度：{{.IncidentSeverity}}
-触发时间：{{date "2006-01-02 15:04:05" .StartTime}}
-持续时长：{{ago .StartTime}}{{if gt .AlertCnt 1}}
-聚合告警：{{.AlertCnt}}条{{end}}{{if .Labels.resource}}
-告警对象：{{toHtml (joinAlertLabels . "resource" ", ")}}({{.Labels.resource}}){{end}}{{if .Description}}
-故障描述：{{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
-分派人员：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
+协作空间: {{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}
+严重程度: {{.IncidentSeverity}}
+触发时间: {{date "2006-01-02 15:04:05" .StartTime}}
+持续时长: {{ago .StartTime}}{{if gt .AlertCnt 1}}
+聚合告警: {{.AlertCnt}}条{{end}}{{if .Labels.resource}}
+告警对象: {{toHtml (joinAlertLabels . "resource" ", ")}}({{.Labels.resource}}){{end}}{{if .Description}}
+故障描述: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
+分派人员: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 
 <br>[详情]({{.DetailUrl}})|[认领]({{.DetailUrl}}?ack=1)
 ```
@@ -545,14 +545,14 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 ```i18n
 {{fireReason .}}INC <{{.DetailUrl}}|#{{.Num}}> {{toHtml .Title}}
 -----
-协作空间：{{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}
-严重程度：{{.IncidentSeverity}}
-触发时间：{{date "2006-01-02 15:04:05" .StartTime}}
-持续时长：{{ago .StartTime}}{{if gt .AlertCnt 1}}
-聚合告警：{{.AlertCnt}}条{{end}}{{if .Labels.resource}}
-告警对象：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
-故障描述：{{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
-分派人员：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
+协作空间: {{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}
+严重程度: {{.IncidentSeverity}}
+触发时间: {{date "2006-01-02 15:04:05" .StartTime}}
+持续时长: {{ago .StartTime}}{{if gt .AlertCnt 1}}
+聚合告警: {{.AlertCnt}}条{{end}}{{if .Labels.resource}}
+告警对象: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
+故障描述: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
+分派人员: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 -----
 <br><{{.DetailUrl}}|详情>|<{{.DetailUrl}}?ack=1|认领>
 ```
@@ -575,7 +575,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 "body": [
 {
 "type": "message",
-"text": "协作空间：{{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}",
+"text": "协作空间: {{if .ChannelName}}{{.ChannelName}}{{else}}无{{end}}",
 "style": {
 "bold": false,
 "italic": false
@@ -583,7 +583,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 },
 {
 "type": "message",
-"text": "严重程度：{{.IncidentSeverity}}",
+"text": "严重程度: {{.IncidentSeverity}}",
 "style": {
 "bold": false,
 "italic": false,
@@ -592,7 +592,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 },
 {
 "type": "message",
-"text": "持续时长：{{ago .StartTime}}{{if gt .AlertCnt 1}}",
+"text": "持续时长: {{ago .StartTime}}{{if gt .AlertCnt 1}}",
 "style": {
 "bold": false,
 "italic": false
@@ -600,7 +600,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 },
 {
 "type": "message",
-"text": "聚合告警：{{.AlertCnt}}条{{end}}{{if .Labels.resource}}",
+"text": "聚合告警: {{.AlertCnt}}条{{end}}{{if .Labels.resource}}",
 "style": {
 "bold": false,
 "italic": false
@@ -608,7 +608,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 },
 {
 "type": "message",
-"text": "告警对象：{{.Labels.resource}}{{end}}{{if .Description}}",
+"text": "告警对象: {{.Labels.resource}}{{end}}{{if .Description}}",
 "style": {
 "bold": false,
 "italic": false
@@ -616,7 +616,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 },
 {
 "type": "message",
-"text": "故障描述：{{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}",
+"text": "故障描述: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}",
 "style": {
 "bold": false,
 "italic": false
@@ -624,7 +624,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 },
 {
 "type": "message",
-"text": "分派人员：{{range .Responders}}@{{.PersonName}}{{end}}{{end}}",
+"text": "分派人员: {{range .Responders}}@{{.PersonName}}{{end}}{{end}}",
 "style": {
 "bold": false,
 "italic": false
@@ -637,7 +637,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 },
 {
 "type": "message",
-"text": "注意：当前故障状态变化频繁，将收敛通知{{.Flapping.MuteMinutes}}分钟，建议您优化告警策略。{{end}}{{if .IsInStorm}}",
+"text": "注意: 当前故障状态变化频繁, 将收敛通知{{.Flapping.MuteMinutes}}分钟, 建议您优化告警策略。{{end}}{{if .IsInStorm}}",
 "style": {
 "bold": true,
 "italic": false
@@ -645,7 +645,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 },
 {
 "type": "message",
-"text": "注意：当前故障已聚合{{.AlertCnt}}条告警，触发告警风暴，请加急处理！{{end}}",
+"text": "注意: 当前故障已聚合{{.AlertCnt}}条告警, 触发告警风暴, 请加急处理! {{end}}",
 "style": {
 "bold": true,
 "italic": false
@@ -659,7 +659,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 如果不设置自定义内容，将采用系统默认模板渲染通知：
 
 ```
-您有故障待处理：{{toHtml .Title}}，协作空间：{{.ChannelName}}，等级：{{.IncidentSeverity}}{{if gt .AlertCnt 1}}，共聚合{{.AlertCnt}}条告警{{end}}
+您有故障待处理: {{toHtml .Title}}, 协作空间: {{.ChannelName}}, 等级: {{.IncidentSeverity}}{{if gt .AlertCnt 1}}, 共聚合{{.AlertCnt}}条告警{{end}}
 ```
 
 ## 邮件

@@ -42,8 +42,8 @@ brief: 通过 webhook 的方式同步 Skywalking 告警事件到快猫星云，�
 3. 在告警规则中添加 Level 的 tags。
 
 ```i18n
-# v8.6.0+ 及以上版本才支持tags标签，其他版本可以不添加。
-# Level 的对应 value ：Critical、Warning、Info。
+# v8.6.0+ 及以上版本才支持tags标签, 其他版本可以不添加。
+# Level 的对应 value : Critical、Warning、Info。
 # 请注意大小写。
 rules:
 endpoint_relation_resp_time_rule:

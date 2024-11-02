@@ -34,18 +34,18 @@ brief: 通过告警聚合，可以将多条相似的活跃告警聚合到同一�
 设置空间按照 **告警检查项** 进行聚合，系统依次收到5次告警通知，这些通知依次触发了告警和故障：
 
 ```i18n
-故障：cpu idle < 20% / es.nj.03，Critical
+故障: cpu idle < 20% / es.nj.03, Critical
 
-- 告警cpu idle < 20% / es.nj.03：
-- 事件1：es.nj.03，cpu.idle = 10%，Critical
-- 事件2：es.nj.03，cpu.idle = 18%，Warning
-- 事件4：es.nj.03，cpu.idle = 10%，Ok
+- 告警cpu idle < 20% / es.nj.03:
+- 事件1: es.nj.03, cpu.idle = 10%, Critical
+- 事件2: es.nj.03, cpu.idle = 18%, Warning
+- 事件4: es.nj.03, cpu.idle = 10%, Ok
 
-- 告警cpu idle < 20% / es.nj.01：
-- 事件3：es.nj.01，cpu.idle = 15%，Warning
+- 告警cpu idle < 20% / es.nj.01:
+- 事件3: es.nj.01, cpu.idle = 15%, Warning
 
-- 告警cpu idle < 20% / es.nj.02：
-- 事件5：es.nj.02，cpu.idle = 19%，Warning
+- 告警cpu idle < 20% / es.nj.02:
+- 事件5: es.nj.02, cpu.idle = 19%, Warning
 ```
 
 我们通过控制台故障详情页，可以看到最终的【故障-告警-事件】关联关系：

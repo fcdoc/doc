@@ -1,4 +1,5 @@
 > is-chinese:isChinese
+  @3-/half
 
 < (li)=>
   r = []
@@ -10,15 +11,16 @@
 
     if trim.startsWith '```'
       if in_code
-        if code[0].trimStart() == '```'
+        trim0 = code[0].trimStart()
+        if ['```', '```i18n'].includes trim0
           :out
             for i from code.slice(1,-1)
               for c from i
                 if isChinese c
-                  code[0] = code[0]+'i18n'
+                  code[0] = '```i18n'
                   break out
 
-        r.push ...code
+        r.push ...code.map(half)
         code = []
       in_code = !in_code
     if in_code
