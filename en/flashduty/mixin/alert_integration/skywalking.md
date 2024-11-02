@@ -42,7 +42,7 @@ When you need to route alert events to different collaboration spaces based on t
 3. Add Level tags to the alert rules.
 
 ```i18n
-# Only versions v8.6.0 and above support the tags label; other versions do not need to add it.
+# Only versions v8.6.0+ and above support the tags label; other versions do not require it.
 # The corresponding values for Level are: Critical, Warning, Info.
 # Please pay attention to the capitalization.
 rules:

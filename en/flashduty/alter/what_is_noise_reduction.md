@@ -47,18 +47,18 @@ Go to [Collaboration Space Details] - [ Alert reduction], you can set the **aler
 Set the space to aggregate alerts based on **alert check items**. The system receives 5 alert notifications in sequence, each of which triggers an alert and incident:
 
 ```i18n
-Fault：cpu idle < 20% / es.nj.03, Critical
+Fault: cpu idle < 20% / es.nj.03, Critical
 
 - CPU Idle Alarm< 20% / es.nj.03:
-- Event 1：es.nj.03- CPU Idle: 10%, Status: Critical
-- Event 2：es.nj.03- CPU Idle: 18%, Status: Warning
-- Event 4：es.nj.03- CPU Idle: 10%, Status: Ok
+- Event 1: es.nj.03, cpu.idle = 10%, Critical
+- Event 2: es.nj.03, cpu.idle = 18%, Warning
+- Event 4: es.nj.03, cpu.idle = 10%, Ok
 
 - CPU Idle Alarm< 20% / es.nj.01:
-- Event 3：es.nj.01- CPU Idle: 15%, Status: Warning
+- Event 3: es.nj.01, cpu.idle = 15%, Warning
 
 - CPU Idle Alarm< 20% / es.nj.02:
-- Event 5：es.nj.02- CPU Idle: 19%, Status: Warning
+- Event 5: es.nj.02, cpu.idle = 19%, Warning
 ```
 
 We can see the final [Incident-Alert-Event] correlation through the incident details page of the console:

@@ -134,7 +134,7 @@ Log in to the Zabbix console, select `Monitoring > Problems` to view the latest 
 
 ```i18n
 
-#<ol><li>Enter the alarm script loading directory (the specific address is configured in the Zabbix Server variable `AlertScriptsPath` in the configuration file, usually `/usr/lib/zabbix/alertscripts` )</li></ol>
+#<ol><li>Enter the alarm script loading directory (the specific address is configured in Zabbix Server Variable `AlertScriptsPath` in the configuration file, usually `/usr/lib/zabbix/alertscripts` )</li></ol>
 cd /usr/lib/zabbix/alertscripts
 
 #2. Download the script

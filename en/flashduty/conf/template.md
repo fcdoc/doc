@@ -126,10 +126,10 @@ CloseTime | int64 | No | Closing time, EndTime is the alert recovery time, and C
 - It is recommended that you use logical judgment to avoid rendering exceptions when you are not sure whether the referenced variable exists, such as the `resource` tag:
 
 ```i18n
-// Incorrect Approach: Directly Reading the Tag
+// Wrong approach: Directly reading the tag
 {{.Labels.resource}}
 
-// Recommended Approach: Judge First, Then Read the Tag
+// Recommended approach: Judge first, then read the tag
 {{if .Labels.resource}}{{.Labels.resource}}{{end}}
 ```
 
@@ -139,18 +139,18 @@ CloseTime | int64 | No | Closing time, EndTime is the alert recovery time, and C
 // Use the toHtml Function
 {{toHtml .Title}}
 
-// Use the First Non-Null Value for Rendering to Avoid Complex If Logic
+// Use the first non-null value for rendering to avoid complex if logic
 {{toHtml .Title .TitleEnglish}}
 ```
 
 4. **How do I __convert time format__ for time variables, which are all timestamp types?**
 
 ```i18n
-// Use the date Function to Convert Timestamps into Readable Format
-// "2006-01-02 15:04:05" is a Common Format. For More Formats, Please Search Online
+// The date function converts timestamps into readable formats
+// "2006-01-02 15:04:05" is a common format; for more formats, please search online
 {{date "2006-01-02 15:04:05" .StartTime}}
 
-// Use the ago Function to Convert Time Differences into Readable Format
+// The ago function converts time differences into readable formats
 {{ago .StartTime}}
 ```
 
@@ -173,10 +173,10 @@ CloseTime | int64 | No | Closing time, EndTime is the alert recovery time, and C
 7. **How do I extract and deduplicate the information of a label in an incident's associated alert?**
 
 ```i18n
-// Use the alertLabels Function to Get a Deduplicated Array
+// Use the alertLabels function to get a deduplicated array
 {{alertLabels . "resource"}}
 
-// Use the joinAlertLabels Function to Get a Deduplicated Array and Then Concatenate It into a String Using "sep"
+// Use the joinAlertLabels function to get a deduplicated array and then concatenate it into a string using "sep"
 {{joinAlertLabels . "resource" "sep"}}
 ```
 
@@ -230,26 +230,26 @@ If you want to display only key tag information, you can refer to the following 
 - In the Feishu application, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
-{{if (index .Labels "resource")}}resource:{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
-{{if (index .Labels "check")}}check:{{toHtml (index .Labels "check")}}{{end}}
-{{if (index .Labels "metric")}}metric:{{index .Labels "metric"}}{{end}}
-{{if (index .Labels "prom_ql")}}prom_ql:{{toHtml (index .Labels "prom_ql")}}{{end}}
-{{if (index .Labels "host_ql")}}host_ql:{{toHtml (index .Labels "host_ql")}}{{end}}
-{{if (index .Labels "trigger_value")}}trigger_value:{{index .Labels "trigger_value"}}{{end}}
-{{if (index .Labels "region")}}region:{{index .Labels "region"}}{{end}}
-{{if (index .Labels "cluster")}}cluster:{{index .Labels "cluster"}}{{end}}
-{{if (index .Labels "business")}}business:{{index .Labels "business"}}{{end}}
-{{if (index .Labels "service")}}service:{{index .Labels "service"}}{{end}}
-{{if (index .Labels "env")}}env:{{index .Labels "env"}}{{end}}
-{{if (index .Labels "type")}}type:{{index .Labels "type"}}{{end}}
-{{if (index .Labels "topic")}}topic:{{index .Labels "topic"}}{{end}}
-{{if (index .Labels "cpu")}}cpu:{{index .Labels "cpu"}}{{end}}
-{{if (index .Labels "device")}}device:{{index .Labels "device"}}{{end}}
-{{if (index .Labels "path")}}path:{{index .Labels "path"}}{{end}}
-{{if (index .Labels "fstype")}}fstype:{{index .Labels "fstype"}}{{end}}
-{{if (index .Labels "name")}}name:{{index .Labels "name"}}{{end}}
-{{if (index .Labels "mode")}}mode:{{index .Labels "mode"}}{{end}}
-{{if (index .Labels "runbook_url")}}runbook_url:{{toHtml (index .Labels "runbook_url")}}{{end}}
+{{if (index .Labels "resource")}}resource: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
+{{if (index .Labels "check")}}check: {{toHtml (index .Labels "check")}}{{end}}
+{{if (index .Labels "metric")}}metric: {{index .Labels "metric"}}{{end}}
+{{if (index .Labels "prom_ql")}}prom_ql: {{toHtml (index .Labels "prom_ql")}}{{end}}
+{{if (index .Labels "host_ql")}}host_ql: {{toHtml (index .Labels "host_ql")}}{{end}}
+{{if (index .Labels "trigger_value")}}trigger_value: {{index .Labels "trigger_value"}}{{end}}
+{{if (index .Labels "region")}}region: {{index .Labels "region"}}{{end}}
+{{if (index .Labels "cluster")}}cluster: {{index .Labels "cluster"}}{{end}}
+{{if (index .Labels "business")}}business: {{index .Labels "business"}}{{end}}
+{{if (index .Labels "service")}}service: {{index .Labels "service"}}{{end}}
+{{if (index .Labels "env")}}env: {{index .Labels "env"}}{{end}}
+{{if (index .Labels "type")}}type: {{index .Labels "type"}}{{end}}
+{{if (index .Labels "topic")}}topic: {{index .Labels "topic"}}{{end}}
+{{if (index .Labels "cpu")}}cpu: {{index .Labels "cpu"}}{{end}}
+{{if (index .Labels "device")}}device: {{index .Labels "device"}}{{end}}
+{{if (index .Labels "path")}}path: {{index .Labels "path"}}{{end}}
+{{if (index .Labels "fstype")}}fstype: {{index .Labels "fstype"}}{{end}}
+{{if (index .Labels "name")}}name: {{index .Labels "name"}}{{end}}
+{{if (index .Labels "mode")}}mode: {{index .Labels "mode"}}{{end}}
+{{if (index .Labels "runbook_url")}}runbook_url: {{toHtml (index .Labels "runbook_url")}}{{end}}
 ```
 
 ## DingTalk Application
@@ -272,25 +272,25 @@ If you want to display only key tag information, you can refer to the following 
 - In the DingTalk application, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
-{{if (index .Labels "resource")}}**resource**:{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
-{{if (index .Labels "metric")}}**metric**:{{index .Labels "metric"}}{{end}}
-{{if (index .Labels "prom_ql")}}**prom_ql**:{{toHtml (index .Labels "prom_ql")}}{{end}}
-{{if (index .Labels "trigger_value")}}**trigger_value**:{{index .Labels "trigger_value"}}{{end}}
-{{if (index .Labels "host_ql")}}**host_ql**:{{toHtml (index .Labels "host_ql")}}{{end}}
-{{if (index .Labels "region")}}**region**:{{index .Labels "region"}}{{end}}
-{{if (index .Labels "cluster")}}**cluster**:{{index .Labels "cluster"}}{{end}}
-{{if (index .Labels "business")}}**business**:{{index .Labels "business"}}{{end}}
-{{if (index .Labels "service")}}**service**:{{index .Labels "service"}}{{end}}
-{{if (index .Labels "env")}}**env**:{{index .Labels "env"}}{{end}}
-{{if (index .Labels "type")}}**type**:{{index .Labels "type"}}{{end}}
-{{if (index .Labels "topic")}}**topic**:{{index .Labels "topic"}}{{end}}
-{{if (index .Labels "cpu")}}**cpu**:{{index .Labels "cpu"}}{{end}}
-{{if (index .Labels "device")}}**device**:{{index .Labels "device"}}{{end}}
-{{if (index .Labels "path")}}**path**:{{index .Labels "path"}}{{end}}
-{{if (index .Labels "fstype")}}**fstype**:{{index .Labels "fstype"}}{{end}}
-{{if (index .Labels "name")}}**name**:{{index .Labels "name"}}{{end}}
-{{if (index .Labels "mode")}}**mode**:{{index .Labels "mode"}}{{end}}
-{{if (index .Labels "runbook_url")}}**runbook_url**:{{index .Labels "runbook_url"}}{{end}}
+{{if (index .Labels "resource")}}**resource**: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
+{{if (index .Labels "metric")}}**metric**: {{index .Labels "metric"}}{{end}}
+{{if (index .Labels "prom_ql")}}**prom_ql**: {{toHtml (index .Labels "prom_ql")}}{{end}}
+{{if (index .Labels "trigger_value")}}**trigger_value**: {{index .Labels "trigger_value"}}{{end}}
+{{if (index .Labels "host_ql")}}**host_ql**: {{toHtml (index .Labels "host_ql")}}{{end}}
+{{if (index .Labels "region")}}**region**: {{index .Labels "region"}}{{end}}
+{{if (index .Labels "cluster")}}**cluster**: {{index .Labels "cluster"}}{{end}}
+{{if (index .Labels "business")}}**business**: {{index .Labels "business"}}{{end}}
+{{if (index .Labels "service")}}**service**: {{index .Labels "service"}}{{end}}
+{{if (index .Labels "env")}}**env**: {{index .Labels "env"}}{{end}}
+{{if (index .Labels "type")}}**type**: {{index .Labels "type"}}{{end}}
+{{if (index .Labels "topic")}}**topic**: {{index .Labels "topic"}}{{end}}
+{{if (index .Labels "cpu")}}**cpu**: {{index .Labels "cpu"}}{{end}}
+{{if (index .Labels "device")}}**device**: {{index .Labels "device"}}{{end}}
+{{if (index .Labels "path")}}**path**: {{index .Labels "path"}}{{end}}
+{{if (index .Labels "fstype")}}**fstype**: {{index .Labels "fstype"}}{{end}}
+{{if (index .Labels "name")}}**name**: {{index .Labels "name"}}{{end}}
+{{if (index .Labels "mode")}}**mode**: {{index .Labels "mode"}}{{end}}
+{{if (index .Labels "runbook_url")}}**runbook_url**: {{index .Labels "runbook_url"}}{{end}}
 ```
 
 ## Enterprise WeChat Application
@@ -301,25 +301,25 @@ You need to pre-configure **the integration center - Instant Messaging - Enterpr
 - In the Enterprise WeChat application, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
-{{if (index .Labels "resource")}}resource:{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
-{{if (index .Labels "metric")}}metric:{{index .Labels "metric"}}{{end}}
-{{if (index .Labels "prom_ql")}}prom_ql:{{toHtml (index .Labels "prom_ql")}}{{end}}
-{{if (index .Labels "trigger_value")}}trigger_value:{{index .Labels "trigger_value"}}{{end}}
-{{if (index .Labels "host_ql")}}host_ql:{{toHtml (index .Labels "host_ql")}}{{end}}
-{{if (index .Labels "region")}}region:{{index .Labels "region"}}{{end}}
-{{if (index .Labels "cluster")}}cluster:{{index .Labels "cluster"}}{{end}}
-{{if (index .Labels "business")}}business:{{index .Labels "business"}}{{end}}
-{{if (index .Labels "service")}}service:{{index .Labels "service"}}{{end}}
-{{if (index .Labels "env")}}env:{{index .Labels "env"}}{{end}}
-{{if (index .Labels "type")}}type:{{index .Labels "type"}}{{end}}
-{{if (index .Labels "topic")}}topic:{{index .Labels "topic"}}{{end}}
-{{if (index .Labels "cpu")}}cpu:{{index .Labels "cpu"}}{{end}}
-{{if (index .Labels "device")}}device:{{index .Labels "device"}}{{end}}
-{{if (index .Labels "path")}}path:{{index .Labels "path"}}{{end}}
-{{if (index .Labels "fstype")}}fstype:{{index .Labels "fstype"}}{{end}}
-{{if (index .Labels "name")}}name:{{index .Labels "name"}}{{end}}
-{{if (index .Labels "mode")}}mode:{{index .Labels "mode"}}{{end}}
-{{if (index .Labels "runbook_url")}}runbook_url:{{toHtml (index .Labels "runbook_url")}}{{end}}
+{{if (index .Labels "resource")}}resource: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
+{{if (index .Labels "metric")}}metric: {{index .Labels "metric"}}{{end}}
+{{if (index .Labels "prom_ql")}}prom_ql: {{toHtml (index .Labels "prom_ql")}}{{end}}
+{{if (index .Labels "trigger_value")}}trigger_value: {{index .Labels "trigger_value"}}{{end}}
+{{if (index .Labels "host_ql")}}host_ql: {{toHtml (index .Labels "host_ql")}}{{end}}
+{{if (index .Labels "region")}}region: {{index .Labels "region"}}{{end}}
+{{if (index .Labels "cluster")}}cluster: {{index .Labels "cluster"}}{{end}}
+{{if (index .Labels "business")}}business: {{index .Labels "business"}}{{end}}
+{{if (index .Labels "service")}}service: {{index .Labels "service"}}{{end}}
+{{if (index .Labels "env")}}env: {{index .Labels "env"}}{{end}}
+{{if (index .Labels "type")}}type: {{index .Labels "type"}}{{end}}
+{{if (index .Labels "topic")}}topic: {{index .Labels "topic"}}{{end}}
+{{if (index .Labels "cpu")}}cpu: {{index .Labels "cpu"}}{{end}}
+{{if (index .Labels "device")}}device: {{index .Labels "device"}}{{end}}
+{{if (index .Labels "path")}}path: {{index .Labels "path"}}{{end}}
+{{if (index .Labels "fstype")}}fstype: {{index .Labels "fstype"}}{{end}}
+{{if (index .Labels "name")}}name: {{index .Labels "name"}}{{end}}
+{{if (index .Labels "mode")}}mode: {{index .Labels "mode"}}{{end}}
+{{if (index .Labels "runbook_url")}}runbook_url: {{toHtml (index .Labels "runbook_url")}}{{end}}
 ```
 
 As shown below:
@@ -349,25 +349,25 @@ If you want to display only key tag information, you can refer to the following 
 - In the Slack application, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
-{{if (index .Labels "resource")}}*resource*:{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
-{{if (index .Labels "metric")}}*metric*:{{index .Labels "metric"}}{{end}}
-{{if (index .Labels "prom_ql")}}*prom_ql*:{{toHtml (index .Labels "prom_ql")}}{{end}}
-{{if (index .Labels "trigger_value")}}*trigger_value*:{{index .Labels "trigger_value"}}{{end}}
-{{if (index .Labels "host_ql")}}*host_ql*:{{index .Labels "host_ql"}}{{end}}
-{{if (index .Labels "region")}}*region*:{{index .Labels "region"}}{{end}}
-{{if (index .Labels "cluster")}}*cluster*:{{index .Labels "cluster"}}{{end}}
-{{if (index .Labels "business")}}*business*:{{index .Labels "business"}}{{end}}
-{{if (index .Labels "service")}}*service*:{{index .Labels "service"}}{{end}}
-{{if (index .Labels "env")}}*env*:{{index .Labels "env"}}{{end}}
-{{if (index .Labels "type")}}*type*:{{index .Labels "type"}}{{end}}
-{{if (index .Labels "topic")}}*topic*:{{index .Labels "topic"}}{{end}}
-{{if (index .Labels "cpu")}}*cpu*:{{index .Labels "cpu"}}{{end}}
-{{if (index .Labels "device")}}*device*:{{index .Labels "device"}}{{end}}
-{{if (index .Labels "path")}}*path*:{{index .Labels "path"}}{{end}}
-{{if (index .Labels "fstype")}}*fstype*:{{index .Labels "fstype"}}{{end}}
-{{if (index .Labels "name")}}*name*:{{index .Labels "name"}}{{end}}
-{{if (index .Labels "mode")}}*mode*:{{index .Labels "mode"}}{{end}}
-{{if (index .Labels "runbook_url")}}*runbook_url*:{{index .Labels "runbook_url"}}{{end}}
+{{if (index .Labels "resource")}}*resource*: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
+{{if (index .Labels "metric")}}*metric*: {{index .Labels "metric"}}{{end}}
+{{if (index .Labels "prom_ql")}}*prom_ql*: {{toHtml (index .Labels "prom_ql")}}{{end}}
+{{if (index .Labels "trigger_value")}}*trigger_value*: {{index .Labels "trigger_value"}}{{end}}
+{{if (index .Labels "host_ql")}}*host_ql*: {{index .Labels "host_ql"}}{{end}}
+{{if (index .Labels "region")}}*region*: {{index .Labels "region"}}{{end}}
+{{if (index .Labels "cluster")}}*cluster*: {{index .Labels "cluster"}}{{end}}
+{{if (index .Labels "business")}}*business*: {{index .Labels "business"}}{{end}}
+{{if (index .Labels "service")}}*service*: {{index .Labels "service"}}{{end}}
+{{if (index .Labels "env")}}*env*: {{index .Labels "env"}}{{end}}
+{{if (index .Labels "type")}}*type*: {{index .Labels "type"}}{{end}}
+{{if (index .Labels "topic")}}*topic*: {{index .Labels "topic"}}{{end}}
+{{if (index .Labels "cpu")}}*cpu*: {{index .Labels "cpu"}}{{end}}
+{{if (index .Labels "device")}}*device*: {{index .Labels "device"}}{{end}}
+{{if (index .Labels "path")}}*path*: {{index .Labels "path"}}{{end}}
+{{if (index .Labels "fstype")}}*fstype*: {{index .Labels "fstype"}}{{end}}
+{{if (index .Labels "name")}}*name*: {{index .Labels "name"}}{{end}}
+{{if (index .Labels "mode")}}*mode*: {{index .Labels "mode"}}{{end}}
+{{if (index .Labels "runbook_url")}}*runbook_url*: {{index .Labels "runbook_url"}}{{end}}
 ```
 
 ## Microsoft Teams Application
@@ -391,25 +391,25 @@ If you want to display only key tag information, you can refer to the following 
 - In the Microsoft Teams application, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
-{{if (index .Labels "resource")}}**resource**:{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
-{{if (index .Labels "metric")}}**metric**:{{index .Labels "metric"}}{{end}}
-{{if (index .Labels "prom_ql")}}**prom_ql**:{{toHtml (index .Labels "prom_ql")}}{{end}}
-{{if (index .Labels "trigger_value")}}**trigger_value**:{{index .Labels "trigger_value"}}{{end}}
-{{if (index .Labels "host_ql")}}**host_ql**:{{index .Labels "host_ql"}}{{end}}
-{{if (index .Labels "region")}}**region**:{{index .Labels "region"}}{{end}}
-{{if (index .Labels "cluster")}}**cluster**:{{index .Labels "cluster"}}{{end}}
-{{if (index .Labels "business")}}**business**:{{index .Labels "business"}}{{end}}
-{{if (index .Labels "service")}}**service**:{{index .Labels "service"}}{{end}}
-{{if (index .Labels "env")}}**env**:{{index .Labels "env"}}{{end}}
-{{if (index .Labels "type")}}**type**:{{index .Labels "type"}}{{end}}
-{{if (index .Labels "topic")}}**topic**:{{index .Labels "topic"}}{{end}}
-{{if (index .Labels "cpu")}}**cpu**:{{index .Labels "cpu"}}{{end}}
-{{if (index .Labels "device")}}**device**:{{index .Labels "device"}}{{end}}
-{{if (index .Labels "path")}}**path**:{{index .Labels "path"}}{{end}}
-{{if (index .Labels "fstype")}}**fstype**:{{index .Labels "fstype"}}{{end}}
-{{if (index .Labels "name")}}**name**:{{index .Labels "name"}}{{end}}
-{{if (index .Labels "mode")}}**mode**:{{index .Labels "mode"}}{{end}}
-{{if (index .Labels "runbook_url")}}**runbook_url**:{{index .Labels "runbook_url"}}{{end}}
+{{if (index .Labels "resource")}}**resource**: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
+{{if (index .Labels "metric")}}**metric**: {{index .Labels "metric"}}{{end}}
+{{if (index .Labels "prom_ql")}}**prom_ql**: {{toHtml (index .Labels "prom_ql")}}{{end}}
+{{if (index .Labels "trigger_value")}}**trigger_value**: {{index .Labels "trigger_value"}}{{end}}
+{{if (index .Labels "host_ql")}}**host_ql**: {{index .Labels "host_ql"}}{{end}}
+{{if (index .Labels "region")}}**region**: {{index .Labels "region"}}{{end}}
+{{if (index .Labels "cluster")}}**cluster**: {{index .Labels "cluster"}}{{end}}
+{{if (index .Labels "business")}}**business**: {{index .Labels "business"}}{{end}}
+{{if (index .Labels "service")}}**service**: {{index .Labels "service"}}{{end}}
+{{if (index .Labels "env")}}**env**: {{index .Labels "env"}}{{end}}
+{{if (index .Labels "type")}}**type**: {{index .Labels "type"}}{{end}}
+{{if (index .Labels "topic")}}**topic**: {{index .Labels "topic"}}{{end}}
+{{if (index .Labels "cpu")}}**cpu**: {{index .Labels "cpu"}}{{end}}
+{{if (index .Labels "device")}}**device**: {{index .Labels "device"}}{{end}}
+{{if (index .Labels "path")}}**path**: {{index .Labels "path"}}{{end}}
+{{if (index .Labels "fstype")}}**fstype**: {{index .Labels "fstype"}}{{end}}
+{{if (index .Labels "name")}}**name**: {{index .Labels "name"}}{{end}}
+{{if (index .Labels "mode")}}**mode**: {{index .Labels "mode"}}{{end}}
+{{if (index .Labels "runbook_url")}}**runbook_url**: {{index .Labels "runbook_url"}}{{end}}
 ```
 
 ## Microsoft Teams Application
@@ -433,25 +433,25 @@ If you want to display only key tag information, you can refer to the following 
 - In the Microsoft Teams application, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
-{{if (index .Labels "resource")}}**resource**:{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
-{{if (index .Labels "metric")}}**metric**:{{index .Labels "metric"}}{{end}}
-{{if (index .Labels "prom_ql")}}**prom_ql**:{{toHtml (index .Labels "prom_ql")}}{{end}}
-{{if (index .Labels "trigger_value")}}**trigger_value**:{{index .Labels "trigger_value"}}{{end}}
-{{if (index .Labels "host_ql")}}**host_ql**:{{index .Labels "host_ql"}}{{end}}
-{{if (index .Labels "region")}}**region**:{{index .Labels "region"}}{{end}}
-{{if (index .Labels "cluster")}}**cluster**:{{index .Labels "cluster"}}{{end}}
-{{if (index .Labels "business")}}**business**:{{index .Labels "business"}}{{end}}
-{{if (index .Labels "service")}}**service**:{{index .Labels "service"}}{{end}}
-{{if (index .Labels "env")}}**env**:{{index .Labels "env"}}{{end}}
-{{if (index .Labels "type")}}**type**:{{index .Labels "type"}}{{end}}
-{{if (index .Labels "topic")}}**topic**:{{index .Labels "topic"}}{{end}}
-{{if (index .Labels "cpu")}}**cpu**:{{index .Labels "cpu"}}{{end}}
-{{if (index .Labels "device")}}**device**:{{index .Labels "device"}}{{end}}
-{{if (index .Labels "path")}}**path**:{{index .Labels "path"}}{{end}}
-{{if (index .Labels "fstype")}}**fstype**:{{index .Labels "fstype"}}{{end}}
-{{if (index .Labels "name")}}**name**:{{index .Labels "name"}}{{end}}
-{{if (index .Labels "mode")}}**mode**:{{index .Labels "mode"}}{{end}}
-{{if (index .Labels "runbook_url")}}**runbook_url**:{{index .Labels "runbook_url"}}{{end}}
+{{if (index .Labels "resource")}}**resource**: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
+{{if (index .Labels "metric")}}**metric**: {{index .Labels "metric"}}{{end}}
+{{if (index .Labels "prom_ql")}}**prom_ql**: {{toHtml (index .Labels "prom_ql")}}{{end}}
+{{if (index .Labels "trigger_value")}}**trigger_value**: {{index .Labels "trigger_value"}}{{end}}
+{{if (index .Labels "host_ql")}}**host_ql**: {{index .Labels "host_ql"}}{{end}}
+{{if (index .Labels "region")}}**region**: {{index .Labels "region"}}{{end}}
+{{if (index .Labels "cluster")}}**cluster**: {{index .Labels "cluster"}}{{end}}
+{{if (index .Labels "business")}}**business**: {{index .Labels "business"}}{{end}}
+{{if (index .Labels "service")}}**service**: {{index .Labels "service"}}{{end}}
+{{if (index .Labels "env")}}**env**: {{index .Labels "env"}}{{end}}
+{{if (index .Labels "type")}}**type**: {{index .Labels "type"}}{{end}}
+{{if (index .Labels "topic")}}**topic**: {{index .Labels "topic"}}{{end}}
+{{if (index .Labels "cpu")}}**cpu**: {{index .Labels "cpu"}}{{end}}
+{{if (index .Labels "device")}}**device**: {{index .Labels "device"}}{{end}}
+{{if (index .Labels "path")}}**path**: {{index .Labels "path"}}{{end}}
+{{if (index .Labels "fstype")}}**fstype**: {{index .Labels "fstype"}}{{end}}
+{{if (index .Labels "name")}}**name**: {{index .Labels "name"}}{{end}}
+{{if (index .Labels "mode")}}**mode**: {{index .Labels "mode"}}{{end}}
+{{if (index .Labels "runbook_url")}}**runbook_url**: {{index .Labels "runbook_url"}}{{end}}
 ```
 
 ## Feishu Bot
@@ -464,15 +464,15 @@ Feishu Bot only supports sending plain text messages.
 ```i18n
 {{fireReason .}}INC #{{.Num}} {{toHtml .Title}}
 -----
-Collaboration Space：{{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}
-Severity：{{.IncidentSeverity}}
-Trigger Time：{{date "2006-01-02 15:04:05" .StartTime}}
-Duration：{{ago .StartTime}}{{if gt .AlertCnt 1}}
-Aggregated Alerts：{{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
-Alert Object：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
-Fault Description：{{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
-Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
-<br>Details：{{.DetailUrl}}
+Collaboration Space: {{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}
+Severity: {{.IncidentSeverity}}
+Trigger Time: {{date "2006-01-02 15:04:05" .StartTime}}
+Duration: {{ago .StartTime}}{{if gt .AlertCnt 1}}
+Aggregated Alerts: {{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
+Alert Object: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
+Fault Description: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
+Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
+<br>Details: {{.DetailUrl}}
 ```
 
 ## DingTalk Bot
@@ -485,14 +485,14 @@ DingTalk Bot only supports sending Markdown messages ([syntax restrictions](http
 ```i18n
 {{fireReason .}}INC [#{{.Num}}]({{.DetailUrl}}) {{toHtml .Title}}
 
-- Collaboration Space：{{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}
-- Severity：{{$s := colorSeverity .IncidentSeverity}}{{toHtml $s}}
-- Trigger Time：{{date "2006-01-02 15:04:05" .StartTime}}
-- Duration：{{ago .StartTime}}{{if gt .AlertCnt 1}}
-- Aggregated Alerts：{{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
-- Alert Object：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
-- Fault Description：{{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
-- Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
+- Collaboration Space: {{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}
+- Severity: {{$s := colorSeverity .IncidentSeverity}}{{toHtml $s}}
+- Trigger Time: {{date "2006-01-02 15:04:05" .StartTime}}
+- Duration: {{ago .StartTime}}{{if gt .AlertCnt 1}}
+- Aggregated Alerts: {{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
+- Alert Object: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
+- Fault Description: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
+- Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 <br>[Details]({{.DetailUrl}})|[Claim]({{.DetailUrl}}?ack=1)
 ```
 
@@ -505,14 +505,14 @@ Enterprise WeChat Bot only supports sending Markdown messages ([syntax restricti
 
 ```i18n
 {{fireReason .}}**INC [#{{.Num}}]({{.DetailUrl}}) {{toHtml .Title}}**
-> Collaboration Space：<font color="warning">{{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}</font>
-> Severity：<font color="warning">{{.IncidentSeverity}}</font>
-> Trigger Time：{{date "2006-01-02 15:04:05" .StartTime}}
-> Duration：{{ago .StartTime}}{{if gt .AlertCnt 1}}
-> Aggregated Alerts：{{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
-> Alert Object：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
-> Fault Description：{{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
-> Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
+> Collaboration Space: <font color="warning">{{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}</font>
+> Severity: <font color="warning">{{.IncidentSeverity}}</font>
+> Trigger Time: {{date "2006-01-02 15:04:05" .StartTime}}
+> Duration: {{ago .StartTime}}{{if gt .AlertCnt 1}}
+> Aggregated Alerts: {{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
+> Alert Object: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
+> Fault Description: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
+> Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 <br>[Details]({{.DetailUrl}})|[Claim]({{.DetailUrl}}?ack=1)
 ```
 
@@ -525,14 +525,14 @@ Enterprise WeChat Bot only supports sending Markdown messages ([syntax restricti
 ```i18n
 {{fireReason .}}INC [#{{.Num}}]({{.DetailUrl}}) {{toHtml .Title}}
 -----
-Collaboration Space：{{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}
-Severity：{{.IncidentSeverity}}
-Trigger Time：{{date "2006-01-02 15:04:05" .StartTime}}
-Duration：{{ago .StartTime}}{{if gt .AlertCnt 1}}
-Aggregated Alerts：{{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
-Alert Object：{{toHtml (joinAlertLabels . "resource" ", ")}}({{.Labels.resource}}){{end}}{{if .Description}}
-Fault Description：{{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
-Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
+Collaboration Space: {{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}
+Severity: {{.IncidentSeverity}}
+Trigger Time: {{date "2006-01-02 15:04:05" .StartTime}}
+Duration: {{ago .StartTime}}{{if gt .AlertCnt 1}}
+Aggregated Alerts: {{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
+Alert Object: {{toHtml (joinAlertLabels . "resource" ", ")}}({{.Labels.resource}}){{end}}{{if .Description}}
+Fault Description: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
+Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 
 <br>[Details]({{.DetailUrl}})|[Claim]({{.DetailUrl}}?ack=1)
 ```
@@ -545,14 +545,14 @@ Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 ```i18n
 {{fireReason .}}INC <{{.DetailUrl}}|#{{.Num}}> {{toHtml .Title}}
 -----
-Collaboration Space：{{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}
-Severity：{{.IncidentSeverity}}
-Trigger Time：{{date "2006-01-02 15:04:05" .StartTime}}
-Duration：{{ago .StartTime}}{{if gt .AlertCnt 1}}
-Aggregated Alerts：{{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
-Alert Object：{{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
-Fault Description：{{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
-Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
+Collaboration Space: {{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}
+Severity: {{.IncidentSeverity}}
+Trigger Time: {{date "2006-01-02 15:04:05" .StartTime}}
+Duration: {{ago .StartTime}}{{if gt .AlertCnt 1}}
+Aggregated Alerts: {{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
+Alert Object: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
+Fault Description: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
+Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 -----
 <br><{{.DetailUrl}}|Details>|<{{.DetailUrl}}?ack=1|Claim>
 ```
@@ -575,7 +575,7 @@ Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 "body": [
 {
 "type": "message",
-"text": "Collaboration Space：{{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}",
+"text": "Collaboration Space: {{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}",
 "style": {
 "bold": false,
 "italic": false
@@ -583,7 +583,7 @@ Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 },
 {
 "type": "message",
-"text": "Severity：{{.IncidentSeverity}}",
+"text": "Severity: {{.IncidentSeverity}}",
 "style": {
 "bold": false,
 "italic": false,
@@ -592,7 +592,7 @@ Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 },
 {
 "type": "message",
-"text": "Duration：{{ago .StartTime}}{{if gt .AlertCnt 1}}",
+"text": "Duration: {{ago .StartTime}}{{if gt .AlertCnt 1}}",
 "style": {
 "bold": false,
 "italic": false
@@ -600,7 +600,7 @@ Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 },
 {
 "type": "message",
-"text": "Aggregated Alerts：{{.AlertCnt}}Items{{end}}{{if .Labels.resource}}",
+"text": "Aggregated Alerts: {{.AlertCnt}}Items{{end}}{{if .Labels.resource}}",
 "style": {
 "bold": false,
 "italic": false
@@ -608,7 +608,7 @@ Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 },
 {
 "type": "message",
-"text": "Alert Object：{{.Labels.resource}}{{end}}{{if .Description}}",
+"text": "Alert Object: {{.Labels.resource}}{{end}}{{if .Description}}",
 "style": {
 "bold": false,
 "italic": false
@@ -616,7 +616,7 @@ Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 },
 {
 "type": "message",
-"text": "Fault Description：{{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}",
+"text": "Fault Description: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}",
 "style": {
 "bold": false,
 "italic": false
@@ -624,7 +624,7 @@ Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 },
 {
 "type": "message",
-"text": "Assigned Personnel：{{range .Responders}}@{{.PersonName}}{{end}}{{end}}",
+"text": "Assigned Personnel: {{range .Responders}}@{{.PersonName}}{{end}}{{end}}",
 "style": {
 "bold": false,
 "italic": false
@@ -637,7 +637,7 @@ Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 },
 {
 "type": "message",
-"text": "Notice：The Current Fault Status Changes Frequently, and Notifications Will Be Converged{{.Flapping.MuteMinutes}}Minutes, It Is Recommended That You Optimize the Alert Strategy.{{end}}{{if .IsInStorm}}",
+"text": "Notice: The current fault status changes frequently; notifications will be consolidated{{.Flapping.MuteMinutes}}minutes. It is recommended that you optimize your alarm strategy.{{end}}{{if .IsInStorm}}",
 "style": {
 "bold": true,
 "italic": false
@@ -645,7 +645,7 @@ Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 },
 {
 "type": "message",
-"text": "Notice：The Current Fault Has Been Aggregated{{.AlertCnt}}Alarms, Triggering an Alert Storm, Please Handle Urgently!{{end}}",
+"text": "Notice: The Current Fault Has Been Aggregated{{.AlertCnt}}An alarm storm has been triggered; please handle it urgently!{{end}}",
 "style": {
 "bold": true,
 "italic": false
@@ -659,7 +659,7 @@ Assigned Personnel：{{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 If you do not set custom content, the system default template will be used to render the notification:
 
 ```
-您有故障待处理：{{toHtml .Title}}，协作空间：{{.ChannelName}}，等级：{{.IncidentSeverity}}{{if gt .AlertCnt 1}}，共聚合{{.AlertCnt}}条告警{{end}}
+您有故障待处理: {{toHtml .Title}}, 协作空间: {{.ChannelName}}, 等级: {{.IncidentSeverity}}{{if gt .AlertCnt 1}}, 共聚合{{.AlertCnt}}条告警{{end}}
 ```
 
 ## Email

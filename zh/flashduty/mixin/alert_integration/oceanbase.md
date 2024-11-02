@@ -130,23 +130,23 @@ fi
 
 ```i18n
 OCP告警通知-单条告警
-- 告警ID:  ${alarm_id}
+- 告警ID: ${alarm_id}
 - 名称: ${alarm_name}
 - 级别: ${alarm_level}
 - 告警对象: ${alarm_target}
-- 服务:  ${service}
+- 服务: ${service}
 - 概述: ${alarm_summary}
 - 生成时间: ${alarm_active_at}
-- 更新时间:  ${alarm_updated_at}
+- 更新时间: ${alarm_updated_at}
 - 恢复时间: ${alarm_resolved_at}
 - 详情: ${alarm_description}
-- 状态:  ${alarm_status}
-- 告警类型:  ${alarm_type}
-- 告警阈值:  ${alarm_threshold}
-- 集群组:  ${ob_cluster_group}
-- 集群:  ${ob_cluster}
-- 主机:  ${host_ip}
-- 应用集群:  ${app_cluster}
+- 状态: ${alarm_status}
+- 告警类型: ${alarm_type}
+- 告警阈值: ${alarm_threshold}
+- 集群组: ${ob_cluster_group}
+- 集群: ${ob_cluster}
+- 主机: ${host_ip}
+- 应用集群: ${app_cluster}
 - OCP链接: ${alarm_url}
 ```
 

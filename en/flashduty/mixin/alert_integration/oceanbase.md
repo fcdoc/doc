@@ -86,7 +86,7 @@ alarm_target=$(echo ${alarm_target} | sed  "s/ /_/g")
 #Use the alarm update time as the alarm generation time
 timestamp=$(TZ=UTC date -d "${alarm_updated_at}" +%s)
 
-#The status and level of the OceanBase alarm notifications are in Chinese, so they are first converted to MD5 before making a judgment
+#The status and level of OceanBase alarm notifications are in Chinese, so they need to be converted to MD5 first before making a judgment
 levelMd5=$(echo ${alarm_level} | md5sum | awk '{print$1}')
 statusMd5=$(echo ${alarm_status} | md5sum | awk '{print$1}')
 
@@ -118,7 +118,7 @@ alert_level="Info"
 fi
 fi
 
-#Notifications will only be sent if the status is "In Alarm" or "Alarm Resolved." Notifications will not be sent if the status is "Blocked" or "Suppressed."
+#Notifications will only be sent if the status is "in alarm" or "alarm recovered." Notifications will not be sent for statuses that are "blocked" or "suppressed."
 if [[ ${statusMd5} == ${active} || ${statusMd5} == ${Inactive} ]];then
 sendToFlashDuty
 fi
@@ -130,24 +130,24 @@ fi
 
 ```i18n
 OCPAlarm Notification - Single Alarm
-- Alarm ID： ${alarm_id}
-- Name：${alarm_name}
-- Level：${alarm_level}
-- Alarm Object：${alarm_target}
-- Service： ${service}
-- Overview：${alarm_summary}
-- Generation Time：${alarm_active_at}
-- Update Time： ${alarm_updated_at}
-- Recovery Time：${alarm_resolved_at}
-- Details：${alarm_description}
-- Status： ${alarm_status}
-- Alarm Type： ${alarm_type}
-- Alarm Threshold： ${alarm_threshold}
-- Cluster Group： ${ob_cluster_group}
-- Cluster： ${ob_cluster}
-- Host： ${host_ip}
-- Application Cluster： ${app_cluster}
-- OCPLink：${alarm_url}
+- Alarm ID:  ${alarm_id}
+- Name: ${alarm_name}
+- Level: ${alarm_level}
+- Alert Object: ${alarm_target}
+- Service:  ${service}
+- Overview: ${alarm_summary}
+- Generation Time: ${alarm_active_at}
+- Update Time:  ${alarm_updated_at}
+- Recovery Time: ${alarm_resolved_at}
+- Details: ${alarm_description}
+- Status:  ${alarm_status}
+- Alarm Type:  ${alarm_type}
+- Alarm Threshold:  ${alarm_threshold}
+- Cluster Group:  ${ob_cluster_group}
+- Cluster:  ${ob_cluster}
+- Host:  ${host_ip}
+- Application Cluster:  ${app_cluster}
+- OCPLink: ${alarm_url}
 ```
 
 ### Step 2: Configure Alert Push
