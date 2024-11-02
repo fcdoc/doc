@@ -44,11 +44,11 @@ When you need to route alert events to different collaboration spaces based on t
 
 1. A media type in Zabbix is the transmission channel used to send notifications and alerts. Enter the terminal and download the complete configuration using the following command:
 
-```
-// 5.x版本 XML配置：
+```i18n
+// Version 5.x XML configuration:
 wget https://download.flashcat.cloud/flashduty/integration/zabbix/zbx_mediatype_flashcat_v5.xml
 
-// 6.x 版本 YAML 配置：
+// Version 6.x YAML configuration:
 wget https://download.flashcat.cloud/flashduty/integration/zabbix/zbx_mediatype_flashcat_v6.yml
 ```
 
@@ -132,15 +132,15 @@ Log in to the Zabbix console, select `Monitoring > Problems` to view the latest 
 4. Click Update to save the configuration
 5. Log in to the server where Zabbix is located and execute the following command:
 
-```
+```i18n
 
-#1. 进入告警脚本加载目录（具体地址配置在 Zabbix Server 配置文件中 `AlertScriptsPath` 变量，一般为`/usr/lib/zabbix/alertscripts`）
+#<ol><li>Enter the alarm script loading directory (the specific address is configured in the Zabbix Server variable `AlertScriptsPath` in the configuration file, usually `/usr/lib/zabbix/alertscripts` )</li></ol>
 cd /usr/lib/zabbix/alertscripts
 
-#2. 下载脚本
+#2. Download the script
 wget https://download.flashcat.cloud/flashduty/integration/zabbix/send-to-flashduty.sh
 
-#3. 更改脚本为可执行状态
+#3. Make the script executable
 chmod +x send-to-flashduty.sh
 
 ```

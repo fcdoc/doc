@@ -41,10 +41,10 @@ When you need to route alert events to different collaboration spaces based on t
 2. Find the Skywalking configuration file ./config/alarm-settings.yml.
 3. Add Level tags to the alert rules.
 
-```
-# v8.6.0+ 及以上版本才支持tags标签，其他版本可以不添加。
-# Level 的对应 value ：Critical、Warning、Info。
-# 请注意大小写。
+```i18n
+# Only versions v8.6.0 and above support the tags label; other versions do not need to add it.
+# The corresponding values for Level are: Critical, Warning, Info.
+# Please pay attention to the capitalization.
 rules:
 endpoint_relation_resp_time_rule:
 expression: sum(endpoint_relation_resp_time > 1000) >= 2
@@ -55,13 +55,13 @@ Level: Warning
 ```
 4. Add the FlashDuty webhook address.
 
-```
-# 在配置文件底部添加
-# v8.8.0 ~ v9.5.0 的添加方式
+```i18n
+# Add at the bottom of the configuration file:
+# For v8.8.0 ~ v9.5.0:
 webhooks:
 - url: https://api.flashcat.cloud/event/push/alert/skywalking?integration_key=18c7f1551df55fa28a1a87f0846d9d1e131
 
-# v10.0.0 的添加方式
+# For v10.0.0:
 hooks:
 webhook:
 default:

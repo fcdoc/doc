@@ -38,8 +38,8 @@ Each condition is divided into fields, operators and target values. Among them, 
 
 As shown in the figure above, we have two sets of conditions, each with two conditions, and each condition has multiple matching values. If the severity is "Critical" or "Warning" and the check label is equal to "Binlog synchronization delay," the overall condition is met. Otherwise, if the check label contains any of the words "cpu," "io," or "disk," and the value of the value label is greater than 90, the overall condition is also met. We can also use an expression to describe the filter conditions intuitively:
 
-```
-( severity == Critical|Warning && labels.check == Binlog同步延迟 )
+```i18n
+( severity == Critical|Warning && labels.check == Binlog1	Synchronization delay)
 or
 ( labels.check == /cpu/|/io/|/disk/ && labels.value == num:gt:90 )
 ```
