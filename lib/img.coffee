@@ -24,7 +24,7 @@ downImg = retry (url, ofp) =>
 ROOT = dirname(import.meta.dirname)
 RE_MDIMG = /\ssrc="([^"]+)"|!\[([^\]]*?)\]\(([^)]+)\)/g
 
-+ SRC_LANG, PREFIX
++ SRC_LANG, SELF_HOST
 
 do =>
   {i18n} = load read join ROOT, '.i18n/conf.yml'
@@ -34,7 +34,7 @@ do =>
   if keys.length == 0
     return
 
-  PREFIX = keys[0]
+  SELF_HOST = keys[0]
 
   for [k,v] from Object.entries i18n.fromTo
     if not v
@@ -46,7 +46,7 @@ do =>
 
 OUT = join ROOT, 'img', SRC_LANG+'/'
 
-PREFIX+=SRC_LANG+'/'
+PREFIX=SELF_HOST+SRC_LANG+'/'
 
 nextId = (id, rel, ext)=>
   loop
@@ -59,7 +59,7 @@ nextId = (id, rel, ext)=>
 EXIST = new Map
 
 < (li, rpath)=>
-  if not PREFIX
+  if not SELF_HOST
     return
   p = rpath.lastIndexOf('.')
   rel = rpath.slice(0,p)
@@ -73,7 +73,7 @@ EXIST = new Map
       RE_MDIMG,
       (_, url1, title, url2)=>
         url = url1 or url2
-        if url.startsWith(PREFIX)
+        if url.startsWith(SELF_HOST)
           return _
         exist_url = EXIST.get url
         if exist_url
