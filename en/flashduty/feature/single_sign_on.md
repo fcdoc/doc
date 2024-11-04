@@ -70,9 +70,9 @@ Configuration path: **Access Control = > Single Sign On = > = > Settings = > che
 
 ## Best Practices
 
-SSO Single sign-on via [Authing Configuration](/start/introduction) FlashDuty .
-SSO Single sign-on via [Keycloak Configuration](/start/introduction) FlashDuty .
-SSO Single sign-on via [Ldap Configuration](/start/introduction) FlashDuty .
+SSO Single Sign-On for FlashDuty via [Authing Configuration](/start/overview).
+SSO Single Sign-On for FlashDuty via [Keycloak Configuration](/start/overview).
+SSO Single Sign-On for FlashDuty via [Ldap Configuration](/start/overview).
 
 ## Frequently Asked Questions
 

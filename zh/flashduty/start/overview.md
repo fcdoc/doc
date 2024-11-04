@@ -1,5 +1,5 @@
 ---
-brief: Flashduty定位为企业**一站式告警响应平台**，我们帮助开发者、DevOps、运维以及业务负责人加快告警响应，提升产品体验，减少故障损失。
+brief: Flashduty，**企业级一站式告警响应平台**。我们帮助开发者、DevOps、运维以及业务负责人加快告警响应，提升产品体验，减少故障损失。
 ---
 
 <h1 style="display:flex;justify-content:space-between" id="H0">Flashduty ⋅ 告警响应平台<img src="https://fcdoc.github.io/img/i.svg" style="user-select:none;margin-top:-1px;width:42px"></h1>
