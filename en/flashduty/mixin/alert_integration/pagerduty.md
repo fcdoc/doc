@@ -1,40 +1,40 @@
 ---
-brief: Alert events can be pushed to Kuaimao Nebula through the PagerDuty protocol to achieve automated noise reduction processing
+brief: Alert events can be pushed to Flashcat through the PagerDuty protocol to achieve automated noise reduction processing of alert events
 ---
 
 # PagerDuty Integration
 
 Synchronization via Webhook
 
-Flashduty implements the PagerDuty Events API, with full compatibility for inputs and responses. Therefore, you can push alert events to Flashduty using the PagerDuty protocol to achieve automated noise reduction processing.
+Flashduty implements the PagerDuty Events API, ensuring full compatibility with inputs and responses. Therefore, you can push alert events to Flashduty through the PagerDuty protocol to achieve automated noise reduction processing of alert events.
 
 Similarly, for alert systems that already support pushing events to PagerDuty (such as ElastAlert), you only need to modify the destination push address to push events to Flashduty using the PagerDuty protocol.
 
 ## In Flashduty
-You can obtain an integrated push address through the following two methods, choose either one.
+You can obtain an integration push address through the following two methods; choose either one.
 
-### Use Proprietary Integrations
+### Use Dedicated Integration
 
 When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
+    1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
     3. Select the **PagerDuty** integration, click **Save**, and generate a card.
-    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete.
 
-### Use Shared Integrations
+### Use Shared Integration
 
 When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alerts**, and navigate to the integration selection page.
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
     2. Select the **PagerDuty** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. After clicking **Save**, copy the newly generated **push address** for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed.
+    3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
     5. Complete.
 
 ## In PagerDuty
@@ -72,25 +72,25 @@ Choose one of the following two methods:
 - Method 1: Include parameters in QueryString integration_key
 - Method 2: Pass integration_key as the service_key parameter into Payload
 
-### Configuration Examples
+### Configuration Example
 
 Take [ElastAlert2](https://github.com/jertel/elastalert2) as an example:
 
-1. Step 1: Obtain the Push Address
+1. Step 1: Obtain the push address
 
-Fill in the integration name on the current page and save it. Reopen the integration details and copy the push address, such as:
+Fill in the integration name on the current page and save it, then reopen the integration details and copy the push address, such as:
 
 ```
 {api_host}/event/push/alert/pagerduty?integration_key=xxx
 ```
 
-2. Step 2: Modify the Push Address
+2. Step 2: Modify the push address
 
 Modify the source code of the deployed ElastAlert instance, [view diff](https://github.com/jertel/elastalert2/commit/e815a62a6b1eecef6e1fef13afd99d905b67fc34):
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/pagerduty/1.avif" />
 
-3. Step 3: Report the Alert Event
+3. Step 3: Report the alert event
 
 Follow the [ElastAlert PagerDuty Push Configuration Document](https://elastalert2.readthedocs.io/en/latest/ruletypes.html#pagerduty) steps to configure the alert:
 

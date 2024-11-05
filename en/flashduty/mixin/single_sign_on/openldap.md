@@ -1,5 +1,5 @@
 ---
-brief: Tutorial on Setting Up LDAP with Docker Compose
+brief: Tutorial on Setting Up LDAP in Docker Compose
 ---
 
 # OpenLDAP Integration Guide
@@ -10,9 +10,9 @@ LDAP (Lightweight Directory Access Protocol) is a protocol based on the X.500 st
 
 The core features of LDAP include:
 
-- Tree structure: LDAP data is organized into a tree structure called DIT (Directory Information Tree), which facilitates hierarchical searching and browsing.
+Tree Structure: LDAP data is organized into a tree structure called DIT (Directory Information Tree), which facilitates hierarchical search and browsing.
 
-- Entries and attributes: Each entry (Entry) in LDAP contains multiple attributes (Attribute). Attributes have types and values, such as "cn" for common name (Common Name) and "mail" for email address.
+Entries and Attributes: Each entry (Entry) in LDAP contains multiple attributes (Attribute). Attributes have types and values, such as "cn" for common name (Common Name) and "mail" for email address.
 
 OpenLDAP is an open-source implementation of the Lightweight Directory Access Protocol (LDAP). Due to its open-source nature and flexibility, OpenLDAP has become the preferred LDAP implementation for many enterprises and organizations.
 
@@ -94,7 +94,7 @@ When you want to stop the service, use the following command:
 docker-compose down
 ```
 
-## Log in to OpenLDAP
+## Login to OpenLDAP
 Visit http://ip:8088/ in the browser and log in using the username cn=admin,dc=flashduty,dc=com and password xxx.
 
 ## OpenLDAP Configuration

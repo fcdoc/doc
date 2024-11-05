@@ -4,26 +4,26 @@ brief: Configure routing rules to distribute alert events of the same type or re
 
 # Configure Routing Rules
 
-When integrating alert events through shared integration, you can configure routing rules to distribute alert events of the same type or related business to the corresponding collaboration space, enabling information classification, processing, and analysis.
+When accessing alert events through shared integration, you can configure routing rules to distribute alert events of the same type or related business to the corresponding collaboration space, enabling information classification, processing, and analysis.
 
 ## How to Configure
 Configuration path: **Integration Center => Alert Events => Specific Integration Type => Create Route**
 
 **1. Add Routes:** You can add multiple routes. There is currently no limit, but it is recommended to keep them simple. Too many rules can reduce readability.
 **2. Adjust Order:** When there are two or more routing rules, you can use the up and down arrows to adjust the order in which the rules take effect.
-**3. Routing Rules:** Supports multiple conditions and rules for logical operations (distinguishing between matching and non-matching conditions). Multiple matching modes are available when conditions match, such as exact match, wildcards, and regular expressions. You can refer to [Configure Filters](/conf/how_to_filter) to learn how to configure restrictions.
-**4. Process Control:** When there are two or more routing rules, you can choose to **Stop or Continue** matching the next rule. The default is **Continue Matching**, which means subsequent routes will continue to take effect. If you choose **Stop**, subsequent rules will not take effect.
+**3. Routing Rules:** Supports multiple conditions and rules for logical operations (both matching and non-matching operations). Multiple matching modes are available when conditions are met, such as exact matching, wildcards, and regular expressions. You can refer to [Configure Filter Conditions](/conf/how_to_filter) to learn how to configure restrictions.
+**4. Process Control:** When there are two or more routing rules, you can choose to **Stop or Continue** matching the next rule. The default is **Continue Matching**, meaning subsequent routes will still take effect. If you choose **Stop**, the following rules will not take effect.
 **5. Preview Rules:** After configuring the rules, you can view the configuration expression.
 **6. Insert Routes:** When there are two or more routing rules, you can insert new routes before or after a specific route, eliminating the need to adjust the order.
-**7. Default Route:** Shared integration must have at least one routing rule to receive alert events, so a default routing rule is provided. If no routing rule is configured or the configured rule does not match, the default route will distribute the alert to the corresponding collaboration space.
+**7. Default Route:** Shared integration must have at least one routing rule to receive alert events, so a default route is provided. If no routing rule is configured or the configured rule does not match, the default route will distribute the alert to the corresponding collaboration space.
 **8. Delivery Space:** You can choose to deliver matching alerts to multiple collaboration spaces.
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/conf/alert_routings/1.avif"  width="800">
 
-## Configuration Examples
+## Configuration Example
 
-### 1. The Same Business Group Is Distributed to the Same Space
-**Scenario:** Distribute alerts from the same business group in the FlashCat monitoring platform to a unified collaboration space.
+### 1. Same Business Group Distributed to the Same Space
+**Scenario:** Route alerts from the same business group in the FlashCat monitoring platform to a unified collaboration space.
 **Rules:** Match based on Labels.group_name tag.
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/conf/alert_routings/2.avif"  width="800">
@@ -38,10 +38,10 @@ Configuration path: **Integration Center => Alert Events => Specific Integration
 
     A corresponding incident will be generated for each collaboration space. It is recommended to select multiple collaboration spaces in the same rule.
 
-|+| Cannot receive alerts after configuring routing rules?
+|+| No alerts received after configuring routing rules?
 
     Please confirm if the reported alert events can match the configured routing rules. It is recommended to configure a default fallback route to receive unmatched alert events.
 
-|+| Will the default route be matched when Stop is selected for routing rule flow control?
+|+| Will the default route be matched when the routing rule flow control is set to stop?
 
-    Yes, it will match. The default route is a fallback route and is not subject to process control restrictions.
+    The default route will still match. The default route is a fallback route and is not subject to process control restrictions.

@@ -6,33 +6,33 @@ brief: >-
 
 # Zabbix Integration
 
-Synchronize Zabbix alerts to Flashduty via webhook (supports Zabbix 3.x ~ 6.x versions, configurations vary by version) to achieve automatic noise reduction of alert events.
+Through webhook, synchronize Zabbix alert events to Flashduty (supports Zabbix 3.x ~ 6.x versions; configurations differ across versions) to achieve automated noise reduction of alert events.
 
 ## In Flashduty
-You can obtain an integrated push address through the following two methods, choose either one.
+You can obtain an integrated push address through the following two methods; choose either one.
 
-### Use Proprietary Integrations
+### Use Dedicated Integration
 
 When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
+    1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
     3. Select the **Zabbix** integration, click **Save**, and generate a card.
     4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
 
-### Use Shared Integrations
+### Use Shared Integration
 
-When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
+When you need to route alert events to different collaboration spaces based on the payload information of the alert event, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alerts**, and navigate to the integration selection page.
-    2. Choose the **Zabbix** integration:
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
+    2. Select the **Zabbix** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. After clicking **Save**, copy the newly generated **push address** for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed.
+    3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
     5. Complete.
 
 ## In Zabbix
@@ -40,60 +40,60 @@ When you need to route alert events to different collaboration spaces based on t
 
 ### 5.x ~ 6.x Versions
 
-#### Step 1: Define Flashduty Media Type
+#### Step 1: Define the Flashduty Media Type
 
-1. A media type in Zabbix is the transmission channel used to send notifications and alerts. Enter the terminal and download the complete configuration using the following command:
+1. A media type is a transmission channel in Zabbix used to send notifications and alerts. Enter the terminal and download the complete configuration using the following command:
 
 ```i18n
-// Version 5.x XML configuration:
+// 5.x Version XML Configuration:
 wget https://download.flashcat.cloud/flashduty/integration/zabbix/zbx_mediatype_flashcat_v5.xml
 
-// Version 6.x YAML configuration:
+// 6.x Version YAML Configuration:
 wget https://download.flashcat.cloud/flashduty/integration/zabbix/zbx_mediatype_flashcat_v6.yml
 ```
 
-2. Log in Zabbix Console, select `Administration > Media Types` , click the Import button in the upper right corner to enter the editing page, select the configuration file downloaded above, and click the Import button to complete the import
-3. Return to the Media Types page, and you will see the imported media type. Click on the name to enter the editing page and complete the URL, zabbix_url, and HTTPProxy fields:
+2. Log in to the Zabbix console, select `Administration > Media Types`, click the Import button in the upper right corner, enter the edit page, select the configuration file downloaded above, and click the Import button to complete the import
+3. Return to the Media Types page, and you will see the imported media type. Click on the name to enter the edit page and complete the URL, zabbix_url, and HTTPProxy fields:
 
-- `URL`: Webhook push request address, copy the integrated push address
-- `zabbix_url`: Zabbix console address, copy it directly (if your page is configured with a tomcat/nginx forwarding path, include it as well). The system will append trigger_id and other parameters to the path to generate the alert details page link
+- `URL`: The webhook push request address; just copy the integrated push address
+- `zabbix_url`: The Zabbix console address; just copy it (if your page is configured with a tomcat/nginx forwarding path, include it as well). The system will append parameters like trigger_id to the path to generate the alert details page link
 - `HTTPProxy`: If your Zabbix Server cannot directly access the Flashduty service, set this parameter to a proxy address
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/zabbix/1.avif" />
 
 4. Click Update to save the configuration
 
-#### Step 2: Associate Media Type with User
+#### Step 2: Associate the Media Type with a User
 
-The media type must be associated with a user to send events. The user must have at least read permission on the host. It is recommended to link it directly to the Admin user. For example, with the Admin user:
+The media type must be associated with a user to send events. The user must have at least read permission on the host. It is recommended to link it directly to the Admin user. For example, using the Admin user:
 
-1. Log in Zabbix Console, select `Administration > Users` , select Admin , select media , select Add , enter the editing window:
+1. Log in to the Zabbix console, select `Administration > Users`, select the Admin user, select media, select Add, and enter the edit window:
 
 - Type: Select the Flashduty media type created above
-- Send To: Enter N/A
-- Keep other configurations as default
+- Send To: Fill in N/A
+- Other configurations use the default settings and remain unchanged
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/zabbix/2.avif" />
 
 2. Click the Add button to exit the add media window
 3. Click the Update button to exit the edit user page
 
-#### Step 3: Create Action
+#### Step 3: Create an Action
 
 Sending a notification is one of the operations performed by the action ( actions ) in Zabbix . So, to set up a notification, log into Zabbix console, select `Configuration > Actions` , then:
 
-1. Click `Create action` to enter action Edit page
+1. Click `Create action` to enter the action edit page
 
-- Name: Enter "Send To FlashDuty"
+- Name: Fill in "Send To FlashDuty"
 
-2. Select `Operations` to add notification sending configurations for three scenarios:
+2. Select `Operations` and add notification sending configurations for three scenarios:
 
 - In the Operations configuration item, click the Add button to enter the configuration window
 - Send to users: Select the user created or configured above
 - Send only to: Select the Flashduty media type
 - Keep other configurations as default
-- Click the Add button to complete the configuration of this configuration item
-- Repeat the above steps to complete the configuration of `Recovery operations` and `Update operations`
+- Click the Add button to complete the configuration of this item
+- Repeat the above steps to complete the configurations for `Recovery operations` and `Update operations`
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/zabbix/3.avif" />
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/zabbix/4.avif" />
@@ -102,8 +102,8 @@ Sending a notification is one of the operations performed by the action ( action
 
 Log in to the Zabbix console, select `Monitoring > Problems` to view the latest alert list.
 
-1. Click Actions and you can see the message notification results in the pop-up window
-2. Find the corresponding Flashduty log. If the Status is `Sent`, the notification was successful. Otherwise, follow the prompts to investigate the cause
+1. Click Actions, and you can see the message notification results in the pop-up window
+2. Find the corresponding Flashduty log. If the Status is `Sent`, it means the notification was successful. Otherwise, troubleshoot the issue based on the prompts
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/zabbix/5.avif" />
 
@@ -114,76 +114,76 @@ Log in to the Zabbix console, select `Monitoring > Problems` to view the latest 
 
 ### 3.x ~ 4.x Versions
 
-#### Step 1: Define Flashduty Media Type
+#### Step 1: Define the Flashduty Media Type
 
-1. Log in Zabbix Console, select `Administration > Media Types` , click the `Create media type` button in the upper right corner to enter the editing page
-2. On the editing page, Type Select `Script` , Parameter in the following contents in order (do not adjust the order, leave blank if there is no value, the script obtains parameter values in order):
+1. Log in to the Zabbix console, select `Administration > Media Types`, click the `Create media type` button in the upper right corner to enter the edit page
+2. On the edit page, set Type to `Script`, and fill in the parameters in the following order (do not change the order; leave blank if there is no value; the script retrieves parameter values in order):
 
 - `{ALERT.SUBJECT}`: Alert title, keep it as the first parameter
 - `{ALERT.MESSAGE}`: Alert message, keep it as the second parameter
 
 - **FlashDuty webhook Push request address** , just copy the integrated push address and keep it in the third parameter
 - **Zabbix Console address** , just copy it directly (if your page is configured with tomcat/nginx path, please bring it with you at the same time), which is used to generate alert details page connection. If it is not empty, keep it in the fourth parameter
-- `HTTPProxy`: If your Zabbix Server cannot directly access the Flashduty service, set this parameter to a proxy address. If not applicable, leave it blank and keep it as the fifth parameter
+- `HTTPProxy`: If your Zabbix Server cannot directly access the Flashduty service, set this parameter to a proxy address. If it is not applicable, leave it blank and keep it as the fifth parameter
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/zabbix/6.avif"/>
 
-3. `Script name` in `send-to-flashduty.sh`
+3. `Script name`: Fill in `send-to-flashduty.sh`
 4. Click Update to save the configuration
-5. Log in to the server where Zabbix is located and execute the following command:
+5. Log in to the server where the Zabbix server is located and execute the following commands:
 
 ```i18n
 
-#<ol><li>Enter the alarm script loading directory (the specific address is configured in Zabbix Server Variable `AlertScriptsPath` in the configuration file, usually `/usr/lib/zabbix/alertscripts` )</li></ol>
+#1. Enter the alert script loading directory (the specific path is configured in the Zabbix Server configuration file under the `AlertScriptsPath` variable, usually `/usr/lib/zabbix/alertscripts`)
 cd /usr/lib/zabbix/alertscripts
 
 #2. Download the script
 wget https://download.flashcat.cloud/flashduty/integration/zabbix/send-to-flashduty.sh
 
-#3. Make the script executable
+#3. Change the script to an executable state
 chmod +x send-to-flashduty.sh
 
 ```
 
 6. Note that **the curl and jq commands are used in the script** . Make sure that the Zabbix server process can find and execute these two commands. If not, you need to install them according to the situation.
 
-#### Step 2: Associate Media Type with User
+#### Step 2: Associate the Media Type with a User
 
-The media type must be associated with a user to send events. The user must have at least read permission on the host. It is recommended to link it directly to the Admin user. For example, with the Admin user:
+The media type must be associated with a user to send events. The user must have at least read permission on the host. It is recommended to link it directly to the Admin user. For example, using the Admin user:
 
-1. Log in Zabbix Console, select `Administration > Users` , select Admin , select media , select Add , enter the editing window:
+1. Log in to the Zabbix console, select `Administration > Users`, select the Admin user, select media, select Add, and enter the edit window:
 
 - Type: Select the Flashduty media type created above
-- Send To: Enter N/A
-- Keep other configurations as default
+- Send To: Fill in N/A
+- Other configurations use the default settings and remain unchanged
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/zabbix/7.avif" />
 
 2. Click the Add button to exit the add media window
 3. Click the Update button to exit the edit user page
 
-#### Step 3: Create Action
+#### Step 3: Create an Action
 
 Sending a notification is one of the operations performed by the action ( actions ) in Zabbix . So, to set up a notification, log into Zabbix console, select `Configuration > Actions` , then:
 
-1. Click `Create action` to enter action Edit page
+1. Click `Create action` to enter the action edit page
 
-- Name: Enter "Send To FlashDuty"
+- Name: Fill in "Send To FlashDuty"
 
-2. Select `Operations` to update the notification user configurations for the three scenarios:
+2. Select `Operations` and update the notification user configurations for the three scenarios:
 
 - In the Operations configuration item, click the Add button to enter the configuration window
 - Send to users: Select the user created or configured above
 - Send only to: Select the Flashduty media type
 - Keep other configurations as default
-- Click the Add button to complete the configuration of this configuration item
-- Repeat the above steps to complete the configuration of `Recovery operations` and `Update operations`
+- Click the Add button to complete the configuration of this item
+- Repeat the above steps to complete the configurations for `Recovery operations` and `Update operations`
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/zabbix/8.avif" />
 
-3. Select `Operations` to update the notification content configuration of the three scenarios respectively:
+3. Select `Operations` and update the notification content configurations for the three scenarios:
 
-- **In the Default Message configuration, copy the following content completely and paste it after the default content**. FlashDuty will parse the corresponding text to find the alert attribute information:
+- **In the Default Message configuration item, copy the following content completely and paste it after the default content**. FlashDuty will parse the corresponding text to find the alert attribute information:
 
 ```
 
@@ -191,7 +191,7 @@ Sending a notification is one of the operations performed by the action ( action
 
 ```
 
-- Repeat the above steps to complete the configuration of `Recovery operations` and `Update operations`
+- Repeat the above steps to complete the configurations for `Recovery operations` and `Update operations`
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/zabbix/9.avif" />
 
@@ -199,8 +199,8 @@ Sending a notification is one of the operations performed by the action ( action
 
 Log in Zabbix Console, select Monitoring > Problems to view the latest alert list.
 
-1. Click Actions and you can see the message notification results in the pop-up window
-2. Find the corresponding log of Flashduty. If Status is Sent, it means the notification is successful. Otherwise, follow the prompts to investigate the cause
+1. Click Actions, and you can see the message notification results in the pop-up window
+2. Find the corresponding Flashduty log. If the status is "Sent," it indicates the notification was successful. Otherwise, troubleshoot based on the provided prompts
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/zabbix/10.avif" />
 
