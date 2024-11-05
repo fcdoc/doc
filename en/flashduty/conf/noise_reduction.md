@@ -29,9 +29,9 @@ Go to [Collaboration Space Details] - [ Alert reduction], you can set the **aler
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/alter/what_is_noise_reduction/2.avif" style="display: block; margin: 0 auto;" height="400">
 
-## See Aggregation Examples
+## View Aggregation Examples
 
-Set the space to aggregate by **alert check items**. The system received 5 alert notifications in sequence. These notifications triggered alerts and incidents in turn:
+Set the space to aggregate based on **alert check items**. The system receives 5 alert notifications in sequence. These notifications trigger alerts and incidents in turn:
 
 ```i18n
 Fault: cpu idle < 20% / es.nj.03, Critical
@@ -63,20 +63,20 @@ We can see the final [Incident-Alert-Event] correlation through the incident det
 |+| Will the incident labels change when alerts are merged?
 
     - Manually created alerts: No, their label list will always be empty
-    - Automatically triggered alerts: Possibly, the incident's labels will be consistent with the labels of the first alert that triggered the incident. If the alert's labels change, the incident's labels will also change synchronously.
+    - Automatically triggered alerts: It is possible. The labels of the incident will be consistent with the labels of the first alert that triggered the incident. If the labels of the alert change, the labels of the incident will also change synchronously.
 
 |+| Will the alert labels change as events are merged?
 
-    Yes, the alert labels will always be consistent with the newly merged events. For example, if you receive an alert "CPU Idle Low" at 10 o'clock, the trigger value is 10%. As the alert incorporates more events, the trigger value label may change dynamically. But if the newly received event is a recovery event, the alert will keep the existing labels unchanged and add labels that did not exist before. Our principle is that the labels displayed by the alert should remain as they were when it was triggered as much as possible.
+    Yes, the labels of the alert will always be consistent with the newly merged events. For example, if you receive an alert "CPU idle low" at 10 o'clock, the trigger value is 10%. As the alert incorporates more events, the trigger value label may change dynamically. However, if the newly received event is a recovery event, the alert will keep the existing labels unchanged and add labels that did not exist before. Our principle is to keep the labels displayed by the alert as much as possible when it is triggered.
 
 |+| Is there an upper limit on the number of alerts that can be merged into an incident?
 
-    Yes, we set a single incident to aggregate up to 1,000 alerts. This is mainly to reduce the rendering time of the console page. However, Flashduty is a high-performance event processing system with a lot of concurrent logic in the background, so when you see an incident aggregating more than 1,000 alerts, this is a normal phenomenon that may occur.
+    Yes, we have set a limit of up to 1,000 alerts per incident. This is mainly to reduce the rendering time of the console page. However, Flashduty is a high-performance event processing system with a lot of concurrent logic in the background, so when you see an incident aggregating more than 1,000 alerts, this is a possible normal phenomenon.
 
-|+| Is there an upper limit on the number of events that can be merged into an alert?
+|+| Is there an upper limit on the number of events that an alert can merge?
 
-    No. But the maximum window for an alert to aggregate events is 24 hours. This means that if an alert is triggered and has not been resolved within 24 hours, new events will not be merged in the future. If Flashduty receives a new event, a new alert will be generated.
+    No. However, the maximum window for an alert to aggregate events is 24 hours. This means that if an alert is triggered and has not been resolved for 24 hours, new events will not be merged in the future. If Flashduty receives a new event, a new alert will be generated.
 
 |+| Why do the number of events I push and the number of events associated with the alert not match?
 
-    The merging of events into alerts is also a noise reduction process. If Flashduty believes that the newly reported event and the alert have not changed much (for example, the status, severity, description, etc. have not changed), Flashduty will directly discard the newly reported event and use the label of the new event to overwrite the existing label.
+    The merging of events into alerts is also a noise reduction process. If Flashduty believes that the newly reported event and the alert have not changed much (for example, the status, severity, description, etc., have not changed), Flashduty will directly discard the newly reported event and use the labels of the new event to overwrite the existing labels.

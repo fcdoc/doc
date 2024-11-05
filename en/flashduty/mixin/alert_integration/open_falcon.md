@@ -6,7 +6,7 @@ brief: Synchronize Open-Falcon alert events to Flashduty via webhook to achieve 
 
 Synchronize Open-Falcon alert events to Flashduty via webhook to achieve automated noise reduction of alert events.
 ## In Flashduty
-You can obtain an integration push address through the following two methods. Choose either one.
+You can obtain an integrated push address through the following two methods; choose either one.
 
 ### Use Dedicated Integration
 
@@ -17,20 +17,20 @@ When you do not need to route alert events to different collaboration spaces, th
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
     3. Select the **Falcon** integration, click **Save**, and a card will be generated.
-    4. Click on the generated card to view the **Push Address**, copy it for later use, and complete.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
 
-### Use Shared Integrations
+### Use Shared Integration
 
-Use Shared Integration
+When you need to route alert events to different collaboration spaces based on the payload information of the alert event, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => alert events**, and go to the integration selection page.
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
     2. Choose the **Falcon** integration:
-    - Select the **Falcon** integration:
+    - **Integration Name**: Define a name for the current integration.
     3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
     4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
-    5. Finish.
+    5. Complete.
 
 ## In Falcon
 Complete.
@@ -45,19 +45,19 @@ Complete.
 
 Similarly, you can configure the same push address for the Expressions alert rules.
 
-5. Repeat steps 2 and 3 for all alert rule templates that need to send events
-6. Finish
+5. Return to the integration list. If the latest event time is displayed, the configuration is successful and the event has been received
+6. Complete
 
 ## Status Comparison
 
 Complete
 
-| Open-Falcon |  Flashduty  | Status Comparison |
+| Open-Falcon |  Flashduty  | Status |
 | ----------- | -------- | ---- |
-| 0           | Critical | Serious |
-| 1           | Critical | State | Flashduty | |
-| 2           | Warning  | --- | --- | |
-| 3           | Warning  | Critical | Critical | |
-| 4           | Info     | Major | Major | |
-| 5           | Info     | Minor | Minor | |
-| 6           | Info     | Info | Info | |
+| 0           | Critical | Critical |
+| 1           | Critical | Critical |
+| 2           | Warning  | Warning |
+| 3           | Warning  | Warning |
+| 4           | Info     | Information |
+| 5           | Info     | Information |
+| 6           | Info     | Information |

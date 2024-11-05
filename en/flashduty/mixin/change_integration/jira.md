@@ -4,7 +4,7 @@ brief: Synchronize Jira Issue events to Flashcat through webhooks to implement c
 
 # Jira Integration
 
-## Usage Limitations
+## Usage Restrictions
 
 ### In Jira
 
@@ -23,7 +23,7 @@ This article is applicable to **Jira Cloud and Private** versions.
 2. Choose the **Jira** integration:
 - **Integration Name**: Define a name for the current integration.
 3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
-4. Completion.
+4. Complete.
 
 ### In Jira
 
@@ -35,7 +35,7 @@ This article is applicable to **Jira Cloud and Private** versions.
 
 <img alt="drawing" src="https://fcdoc.github.io/img/zh/flashduty/mixin/change_integration/jira/1.avif" />
 
-5. Completion
+5. Complete
 
 ## Status Mapping
 

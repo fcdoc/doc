@@ -16,8 +16,8 @@ Push your own system change events to Flashduty through standard protocols. Most
 1. Enter the Flashduty console, select **Integration Center => Change Events**, and go to the integration selection page.
 2. Select the **Custom Event** integration:
 - **Integration Name**: Define a name for the current integration.
-3. After clicking **Save**, copy the newly generated **Push URL** on the current page for later use.
-4. Finish.
+3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
+4. Complete.
 
 ## Implement Protocol
 
@@ -35,12 +35,12 @@ Tags are descriptions of events and should be as detailed as possible, for examp
 
     #### In Flashduty
 
-    1. Check if the integration shows **the latest event time**? If not, it means Flashduty has not received the push. Prioritize troubleshooting the Nightingale part.
+    1. Check if the integration shows **the latest event time**. If not, it means Flashduty has not received the push, and you should first investigate the Nightingale part.
 
-    #### In your system
+    #### In Your System
 
-    1. Confirm that the address you requested matches the address in the integration details exactly.
-    2. Confirm that your service can access the external api.flashcat.cloud domain name. If not, you first need to open an external network for the server, or enable external network access for Flashduty's domain name alone.
+    1. Confirm that the address you are requesting matches the address in the integration details exactly.
+    2. Confirm that your service can access the external api.flashcat.cloud domain name. If not, you first need to open an external network for the server, or separately enable external network access for Flashduty's domain name.
     3. Print the response from the Flashduty service to see if there is any clear information.
 
-    If the root cause of the problem is still not found after performing the above steps, please contact us with the **request_id** from the request response.
+    If the problem remains unresolved after performing the above steps, please contact us with the **request_id** from the request response.

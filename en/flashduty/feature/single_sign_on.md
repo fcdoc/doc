@@ -30,7 +30,7 @@ Configuration path: **Access Control => Single Sign-On => Enable => Settings => 
 |Field Mapping|FlashDuty extracts user email, username, and mobile phone information from the identity provider through field mapping.|
 |Login Domain|An important identifier for user recognition, globally unique|
 |Login and Create Account|Enabled by default. **If disabled, members need to be invited to join before they can log in.**|
-|Flashcat Service Provider Information|**Redirect URL:** The identity provider callback address for Kuaimao Nebula <br> **Supported signature algorithms:** RS256, RS384, RS512, ES256, ES384, ES512, PS256, PS384, PS512 (HS256 not supported) <br> **Request scope:** openid, email, phone |
+|Flashcat Service Provider Information|**Redirect URL:** The address to which the identity provider redirects Flashcat <br> **Supported Signature Algorithms:** RS256, RS384, RS512, ES256, ES384, ES512, PS256, PS384, PS512 (HS256 is not supported) <br> **Request Scope:** openid, email, phone |
 
 ## Configure CAS Protocol
 Configuration path: **Access Control => Single Sign-On => Enable => Settings => Select CAS Protocol Type**
@@ -43,7 +43,7 @@ Configuration path: **Access Control => Single Sign-On => Enable => Settings => 
 |Field Mapping|FlashDuty extracts user email, username, and mobile phone information from the identity provider through field mapping.|
 |Login Domain|An important identifier for user recognition, globally unique|
 |Login and Create Account|Enabled by default. **If disabled, members need to be invited to join before they can log in.**|
-|Flashcat Service Provider Information|**Redirect URL:** The identity provider callback address for Kuaimao Nebula
+|Flashcat Service Provider Information|**Redirect URL:** The address to which the identity provider redirects Flashcat
 
 ## Configure LDAP Protocol
 > [!NOTE]

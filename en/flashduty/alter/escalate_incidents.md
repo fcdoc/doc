@@ -15,7 +15,7 @@ Reassigning means re-notifying. If an incident in **processing** is reassigned, 
 > [!TIP]
 > Currently, the target of reassignment can only be a duty schedule or an individual, which we call **direct assignment**. The difference from **policy-based assignment** is that directly assigned incidents can only be notified according to personal preferences, and there is no possibility of upgrading.
 
-## Upgrade Assignment
+## Upgrade Dispatch
 
 - **Automatic Upgrade**: When an incident is automatically assigned to you according to a (multi-stage) assignment policy, and you do not resolve the incident within the specified time window, do not choose to postpone the upgrade, and the incident does not automatically recover, the incident will automatically upgrade to the next stage at the specified time.
 

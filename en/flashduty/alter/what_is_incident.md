@@ -123,8 +123,8 @@ Click the **Create** button on the console to initiate the creation of an incide
 
 | Field | Required | Description |
 | :---: | :---:   | ---- |
-| Incident Title | Yes | A brief statement of what happened |
+| Incident title | Yes | A brief statement of what happened |
 | Incident Description | No | A detailed description of the incident, supporting Markdown syntax |
 | Severity | Yes | Select one of the three enumeration values: Critical, Warning, Info |
-| Collaboration Space | No | Incident Attribution<br>If not selected, it represents a global incident.<br>In this case, the incident must be directly assigned to a person to trigger notifications |
+| Collaborative Space | No | Incident Attribution<br>If not selected, it represents a global incident.<br>In this case, the incident must be directly assigned to a person to trigger notifications |
 | Assigned Personnel | No | Incident Handler<br>If not selected, the handler will be matched and assigned based on the collaboration space they belong to.<br>Otherwise, notifications will be sent directly according to personal preferences |

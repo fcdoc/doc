@@ -14,7 +14,7 @@ Visit [the Feishu developer backend](https://open.feishu.cn/app) to create a sel
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/lark/1.avif" alt="drawing" width="400"/>
 
-The application icon can use the [Flashduty official icon](https://download.flashcat.cloud/flashcat_logo_circular.png).
+The application icon can be the [Flashduty Official Icon](https://download.flashcat.cloud/flashcat_logo_circular.png).
 
 ### 2. Copy Credential Information
 
@@ -71,7 +71,7 @@ Go to the **Permission Management** page and apply for the `im:chat` and `im:mes
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/lark/11.avif" alt="drawing" width="800"/>
 
-## 4. Application Release and Usage
+## 4. Application Release and Use
 
 After completing the above steps, proceed with the application’s release and usage. It can be used after the administrator has reviewed it.
 Note: The **Available Scope** requires special configuration. It is recommended to set it to **All Employees**.
@@ -87,7 +87,7 @@ After the application is released, you can access it using the mobile/PC end. Fo
 
 ## 5. Frequently Asked Questions
 
-1. **The message cannot be delivered to the individual**, the operation record prompts __Not associated with the application__?
+1. **The message cannot be delivered to the individual**, the operation record prompts __Not Associated with the Application__?
 
 - Go to Feishu > Workbench > search for the application name > open the application, complete a login and associate the (Feishu <-> Flashduty) account so that the system can obtain the user identity for message delivery
 
@@ -99,7 +99,7 @@ After the application is released, you can access it using the mobile/PC end. Fo
 2. **The Feishu group chat list in the dispatch strategy is empty**?
 
 - Go to Feishu, select the group chat session, and add the created Flashduty robot, as shown in the figure below:
-- Return to the dispatch strategy configuration page, refresh, and select the group chat list again
+- Return to the dispatch policy configuration page, refresh and select the group chat list again
 
 <img alt="drawing" width="800" src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/lark/13.avif" />
 <img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/lark/14.avif" alt="drawing" width="800"/>

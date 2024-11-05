@@ -457,28 +457,28 @@ If you want to display only key tag information, you can refer to the following 
 ## Feishu Robot
 Feishu Robot only supports sending plain text messages.
 
-- Messages __have a maximum length of 4000 bytes, and will be truncated if exceeded__;
-- If the text contains `<br>`, when rendering, __the blank line will be deleted first, and then `<br>` will be replaced with a newline character__;
+- The message __can be up to 4000 bytes. If it exceeds this limit, it will be truncated and sent__ ;
+- If the text contains `<br>` , when rendering, __the blank lines will be removed first, and then `<br>` will be replaced with a newline character__ ;
 - If you do not set custom content, the system default template will be used to display only key information:
 
 ```i18n
 {{fireReason .}}INC #{{.Num}} {{toHtml .Title}}
 -----
-Collaboration space: {{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}
+Collaborative Space: {{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}
 Severity: {{.IncidentSeverity}}
-Trigger time: {{date "2006-01-02 15:04:05" .StartTime}}
+Trigger Time: {{date "2006-01-02 15:04:05" .StartTime}}
 Duration: {{ago .StartTime}}{{if gt .AlertCnt 1}}
-Aggregated alerts: {{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
-Alert object: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
-Fault description: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
-Assigned personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
+Aggregated Alerts: {{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
+Alert Object: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
+Fault Description: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
+Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 <br>Details: {{.DetailUrl}}
 ```
 
 ## DingTalk Robot
 DingTalk Robot only supports sending Markdown messages ( [grammar restrictions](https://open.dingtalk.com/document/robots/custom-robot-access#title-7ur-3ok-s1a) ).
 
-- Messages __have a maximum length of 4000 bytes, and will be truncated if exceeded__;
+- The message __can be up to 4000 bytes. If it exceeds this limit, it will be truncated and sent__ ;
 - If the text contains `<br>` , when rendering, __the blank lines will be removed first, and then `<br>` will be replaced with a newline character__ ;
 - If you do not set custom content, the system default template will be used to display only key information:
 

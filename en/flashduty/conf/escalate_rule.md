@@ -22,7 +22,7 @@ Each collaboration space should have at least one dispatch strategy. Through the
 
 Go to [How to configure filters](/conf/how_to_filter) to learn more.
 
-## Dispatch Configuration
+## Dispatch configuration
 
 ### Dispatch Object
 - **Individual:** Designate certain members to receive the alert, supports multiple selections, and no duplicate selections.

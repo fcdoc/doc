@@ -88,7 +88,7 @@ Examples are as follows:
 
 When the value does not match any of the above formats, it is considered an __exact match__. In this case, only when the strings are completely equal, the match is passed.
 
-## FAQ
+## Frequently Asked Questions
 
 |+| Why am I not prompted for optional tags?
 

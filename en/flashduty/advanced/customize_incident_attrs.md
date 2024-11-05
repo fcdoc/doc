@@ -63,7 +63,7 @@ Example:
 |[TPL]{{.Labels.resource}} / {{.Labels.check}} | {"resource": "127.0.0.1"} | 127.0.0.1 / \<no value\> |
 |[ TPL ] {{ . Labels.resource}} / Host is down | {"resource": "127.0.0.1"} | 127.0.0.1 / Host down |
 
-## FAQ
+## Frequently Asked Questions
 
 |+| If tags are used to dynamically generate titles, what happens if the tags do not exist?
 

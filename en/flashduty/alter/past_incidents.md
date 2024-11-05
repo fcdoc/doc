@@ -47,7 +47,7 @@ When judging similarity, we primarily consider the following factors:
 
 When searching for historical incidents, the system only matches similar incidents that have been resolved within the current collaboration space.
 
-## FAQ
+## Frequently Asked Questions
 
 |+| How far back can I view historical incidents?
 

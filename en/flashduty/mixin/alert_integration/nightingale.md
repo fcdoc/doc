@@ -21,37 +21,37 @@ This article is suitable for **Nightingale V5 and V6** versions.
 
 ## Operation Steps
 
-### In Flashduty:
+### In Flashduty
 
-You can obtain an integration push address through the following two methods. Choose either one.
+You can obtain an integrated push address through the following two methods; choose either one.
 
-#### Use Proprietary Integration
+#### Use Dedicated Integration
 
 When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
-|+| Expand:
+|+| Expand
 
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
     3. Select the **Nightingale/Flashcat** integration, click **Save** to generate a card.
-    4. Click on the generated card to view the **Push Address**, copy it for later use, and complete.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
     5. (Optional) Click the generated card, click the **Edit** button, select **Console Address**, and enter the Nightingale console address (only the domain part). Flashduty will generate a Nightingale details jump link for the new alert.
 
 #### Use Shared Integration
 
-When you need to route the alert to different collaboration spaces based on the payload information of the alert event, this method is preferred.
+When you need to route alert events to different collaboration spaces based on the payload information of the alert event, this method is preferred.
 
-|+| Expand:
+|+| Expand
 
     1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
     2. Choose the **Nightingale/Flashcat** integration:
     - **Integration Name**: Define a name for the current integration.
     - **Console Address**: (Optional) Enter the Nightingale console address (only the domain part). Flashduty will generate a Nightingale details jump link for the new alert.
-    3. After clicking **Save**, copy the newly generated **Push Address** on the current page for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set the default collaboration space as a fallback, and then adjust it as needed.
+    3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
     5. Complete.
 
-### In Nightingale/Flashcat:
+### In Nightingale/Flashcat
 
 Choose one of the two configuration methods.
 
@@ -65,7 +65,7 @@ Select alert rules in batches and configure the webhook.
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/nightingale/1.avif" />
 
-4. Return to the integration list. If the latest event time is displayed, the configuration is successful and the event is received
+4. Return to the integration list. If the latest event time is displayed, the configuration is successful and the event has been received
 5. Complete
 
 #### Method 2: Global Configuration
@@ -102,24 +102,24 @@ You need to replace the corresponding parameter value of Url with the integrated
 
 4. Save the configuration file
 5. Restart the n9e server to apply the configuration
-6. Return to the integration list. If the latest event time is displayed, the configuration is successful and the event is received
+6. Return to the integration list. If the latest event time is displayed, the configuration is successful and the event has been received
 7. Complete
 
 ## Severity Mapping
 
 Nightingale/Flashcat to Flashduty alert level mapping relationship:
 
-| n9e |  Flashduty  | Status | Severity | |
+| n9e |  Flashduty  | Status |
 | --- | -------- | ---- |
-| 1   | Critical | --------|----------| |
-| 2   | Warning  | Triggered | Serious  | |
-| 3   | Info     | Warning  | Warn     | |
+| 1   | Critical | Critical |
+| 2   | Warning  | Warning |
+| 3   | Info     | Information |
 
-## Common Issues
+## Frequently Asked Questions
 
 |+| Why didn't I receive the alert in Flashduty?
 
-    #### Why didn't I receive an alert in Flashduty?
+    #### In Flashduty
 
     1. Check if the integration shows **the latest event time**. If not, it means Flashduty has not received the push, and you should first investigate the Nightingale part.
     2. If you are using a **shared integration**, first confirm whether you have configured **routing rules**. Without setting routing rules, the system will directly reject new pushes because there is no collaboration space to handle your alerts. In this case, configure the routing rules to the space you want.

@@ -56,7 +56,7 @@ You can go to [Configure filters](/conf/how_to_filter) to learn how to configure
 > [!WARN]
 > When a qualified incident is suppressed, it will still be displayed and processed on the console, but the notification will not be triggered.
 
-### Configuration Example
+### Configuration Examples
 
 When there are Critical-level incidents of the same check item within 24 hours, the incidents of Warning and Info are suppressed.
 

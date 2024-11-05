@@ -107,7 +107,7 @@ curl --location --request POST 'https://api.flashcat.cloud/enrichment/mapping/sc
 | B | router | 2 |Danger|
 | C | gateway | 3 |Warning|
 | D | database | 4 |Notice|
-| E | MQ | 5 |Reminder|
+| E | MQ | 5 |Information|
 
 ```
 curl --location --request POST 'https://api.flashcat.cloud/enrichment/mapping/data/upload?schema_id={}&app_key={}' \

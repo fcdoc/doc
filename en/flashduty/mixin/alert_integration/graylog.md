@@ -18,20 +18,20 @@ When you do not need to route alert events to different collaboration spaces, th
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
     3. Select the **Graylog** integration, click **Save**, and generate a card.
-    4. Click on the generated card to view the **Push Address**, copy it for later use, and complete.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
 
-### Use Shared Integrations
+### Use Shared Integration
 
-Use Shared Integration
+When you need to route alert events to different collaboration spaces based on the payload information of the alert event, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and navigate to the integration selection page.
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
     2. Choose the **Graylog** integration:
-    - Choose the **Graylog** integration:
+    - **Integration Name**: Define a name for the current integration.
     3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed later.
-    5. Finish.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
+    5. Complete.
 
 ## Complete
 
@@ -70,8 +70,8 @@ Use Shared Integration
 
 ## 2. Status Comparison
 
-|Graylog|Flashcat|Complete the next step|
+|Graylog|Flashcat|Status|
 |---|---|---|
-|3|Critical|### Status Comparison|
+|3|Critical|Critical|
 |2|Warning|Warning|
-|1|Info|--------|----------|---------|--------||
+|1|Info|Information|

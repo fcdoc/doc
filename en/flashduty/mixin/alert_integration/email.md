@@ -6,15 +6,15 @@ brief: Generate a unique email address in Flashduty, and synchronize the occurre
 
 Generate a unique email address in Flashduty, and synchronize the occurrence and recovery of alerts to Flashduty via email.
 
-## ## Operation Steps
+## Operation Steps
 
 ### ### Create Email Integration
 
 You can obtain an email address in the following two ways, choose either one.
 
-#### #### Use Proprietary Integration
+#### Use Dedicated Integration
 
-When you do not need to route alert events to different collaboration spaces, this method is preferred because it is simpler.
+When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
@@ -23,24 +23,24 @@ When you do not need to route alert events to different collaboration spaces, th
     3. Select the **Email** integration, click **Save**, and generate the card.
     4. Click on the generated card to view the **email address**, copy it for later use, and complete.
 
-#### Use Shared Integrations
-
 #### Use Shared Integration
+
+When you need to route alert events to different collaboration spaces based on the payload information of the alert event, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => alert events**, and go to the integration selection page.
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
     2. Select the **Email** integration:
-    - Select the **Email** integration:
+    - **Integration Name**: Define a name for the current integration.
     - **Integration Name**: Define a name for the current integration.
     - **Email Address**: Set a memorable prefix for the email, ensuring it is unique under your account.
     3. **Push Mode**: Choose the conditions under which the email triggers or resolves an alert.
-    4. Copy the **email address** on the current page for later use.
-    5. Finish.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
+    5. Complete.
 
 ### Customize Email Integration
 
-#### ## Customize Email Integration
+#### Email address
 
 By default, the system generates a unique email address for you. You can modify it, but note that **the email prefix can only consist of letters and numbers** and must be unique within your account.
 
@@ -81,6 +81,6 @@ attachment_stripped = true
 
 5. If you change your account domain, this email address will also change. Be sure to update the push address.
 
-## Severity Mapping Relationship
+## Severity Mapping
 
 ### Severity Mapping Relationship

@@ -21,7 +21,7 @@ brief: Learn how to get started quickly with Flashduty
 
 ![](https://fcdoc.github.io/img/zh/flashduty/start/getting_started/2.avif)
 
-### Create a Collaboration Space
+### Creating a Collaboration Space
 
 A collaboration space is a container for related incidents. We generally create a collaboration space for the services owned, managed, and monitored by a team, such as order systems, recommendation services, MySQL components, Client A, etc.
 

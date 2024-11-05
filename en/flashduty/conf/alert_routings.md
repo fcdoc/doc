@@ -20,7 +20,7 @@ Configuration path: **Integration Center => Alert Events => Specific Integration
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/conf/alert_routings/1.avif"  width="800">
 
-## Configuration Example
+## Configuration Examples
 
 ### 1. Same Business Group Distributed to the Same Space
 **Scenario:** Route alerts from the same business group in the FlashCat monitoring platform to a unified collaboration space.

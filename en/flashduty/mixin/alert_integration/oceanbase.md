@@ -7,9 +7,9 @@ brief: Synchronize OceanBase alert events to Flashcat via webhook to achieve aut
 Synchronize OceanBase alert events to Flashcat via webhook to achieve automated noise reduction processing of alert events
 
 ## In Flashduty
-You can obtain an integration push address through the following two methods. Choose either one.
+You can obtain an integrated push address through the following two methods; choose either one.
 
-### Use Proprietary Integration
+### Use Dedicated Integration
 
 When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
@@ -18,7 +18,7 @@ When you do not need to route alert events to different collaboration spaces, th
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
     3. Select **OceanBase** integration, click **Save**, and generate a card.
-    4. Click on the generated card to view the **push address**, copy it for later use, and complete.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
 
 ### Use Shared Integration
 
@@ -30,14 +30,14 @@ When you need to route alert events to different collaboration spaces based on t
     2. Choose **OceanBase** integration:
     - **Integration Name**: Define a name for the current integration.
     3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set a default collaboration space as a fallback and adjust it as needed.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
     5. Complete.
 
 ## In OceanBase
 
 ## ### OceanBase Alert Push Configuration
 
-### #### Step 1: Configure Alert Channel
+### In Graylog
 1. Log in to your OceanBase console and select the alert center.
 2. Enter **Alert Channel**, click the **New Channel** button to start creating a new channel.
 3. Select **Custom Script** for the channel type.
@@ -134,7 +134,7 @@ OCPAlert Notification - Single Alert
 - Name: ${alarm_name}
 - Level: ${alarm_level}
 - Alert Object: ${alarm_target}
-- Service: ${service}
+- Services: ${service}
 - Overview: ${alarm_summary}
 - Generation Time: ${alarm_active_at}
 - Update Time: ${alarm_updated_at}
@@ -164,11 +164,11 @@ OCPAlert Notification - Single Alert
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/oceanbase/3.avif" />
 
-## ### Status Comparison
+## 2. Status Comparison
 
 |OceanBase|Flashcat|Status|
 |---|---|---|
-|Stopped|Critical|Critical|
+|Stop Service|Critical|Critical|
 |Critical|Warning|Critical|
 |Warning|Warning|Warning|
 |Notice|Info|Information|
@@ -178,7 +178,7 @@ OCPAlert Notification - Single Alert
 
 |OceanBase|Flashcat|Status|
 |---|---|---|
-|Stopped|Critical|Critical|
+|Stop Service|Critical|Critical|
 |Critical|Warning|Critical|
 |Warning|Warning|Warning|
 |Notice|Info|Information|

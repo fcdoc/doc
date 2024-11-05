@@ -42,4 +42,4 @@ brief: You can personalize your account and configure personal notification meth
 
     Secondly, the dispatch strategy for single chat notifications supports two settings: "Follow Personal Preferences" and "Follow Unified Settings." Only in the "Follow Personal Preferences" setting will notifications be personalized according to your settings. If you select "Follow Unified Settings," everyone will be notified according to this setting, rather than each person's preference.
 
-    Go to Collaboration Space Details = > Assignment Policy to view your specific settings.
+    Go to Collaboration Space Details => Dispatch Policy to view your specific settings.

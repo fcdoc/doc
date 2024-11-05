@@ -67,7 +67,7 @@ Only the following content can be updated:
 
 You can initiate a deletion operation in the console at any time. However, please note that deletion is a time-consuming operation. When a field is deleted, the system will scan historical incidents and asynchronously update to remove the association between the field and the incident. You cannot re-create a field with the same name until the deletion is complete.
 
-## Common Questions
+## Frequently Asked Questions
 
 |+| Why can't I search for incidents by the field I created?
 

@@ -6,7 +6,7 @@ brief: By integrating third-party Slack applications, you can receive and respon
 
 By integrating third-party Slack applications, you can receive and respond to alerts within Slack.
 
-## ### 1. Install the Application
+## 1. Install the Application
 
 1. Visit FlashDuty **Integration** **Center** - - `Slack` - **add**
 
@@ -16,7 +16,7 @@ By integrating third-party Slack applications, you can receive and respond to al
 
 3. Enter the data source name and click **Save**
 
-## ### 2. Frequently Asked Questions
+## 2. Frequently Asked Questions
 
 1. **The desired private channel is not in the group chat list of the dispatch policy.**
 - To add an application to a channel, you need to **install the application** in step 1. No error is reported.

@@ -7,7 +7,7 @@ brief: Through webhook, synchronize Huawei Cloud Monitoring CES alert events to 
 Through webhook, synchronize Huawei Cloud Monitoring CES alert events to Flashduty to achieve automated noise reduction processing of alert events.
 
 ## In Flashduty
-You can obtain an integration push address through the following two methods; choose either one.
+You can obtain an integrated push address through the following two methods; choose either one.
 
 ### Use Dedicated Integration
 
@@ -18,7 +18,7 @@ When you do not need to route alert events to different collaboration spaces, th
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
     3. Select the **Huawei Cloud Monitoring CES** integration, click **Save**, and generate a card.
-    4. Click the generated card to view the **Push Address**, copy it for later use, and complete.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
 
 ### Use Shared Integration
 
@@ -29,8 +29,8 @@ When you need to route alert events to different collaboration spaces based on t
     1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
     2. Choose the **Huawei Cloud Monitoring CES** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. After clicking **Save**, copy the newly generated **Push Address** on the current page for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set a default collaboration space as a fallback, and then adjust as needed.
+    3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
     5. Complete.
 
 ## In Huawei Cloud Monitoring CES
@@ -64,7 +64,7 @@ Mapping relationship between Huawei Cloud Monitoring and Flashduty alert levels:
 
 | CES  |  Flashduty  | Status |
 | ---- | -------- | ---- |
-| Urgent | Critical | Severe |
-| Important | Critical | Severe |
+| Urgent | Critical | Critical |
+| Important | Critical | Critical |
 | Minor | Warning  | Warning |
-| Info | Info     | Reminder |
+| Info | Info     | Information |

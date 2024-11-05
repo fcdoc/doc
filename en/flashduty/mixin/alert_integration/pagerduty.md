@@ -11,7 +11,7 @@ Flashduty implements the PagerDuty Events API, ensuring full compatibility with 
 Similarly, for alert systems that already support pushing events to PagerDuty (such as ElastAlert), you only need to modify the destination push address to push events to Flashduty using the PagerDuty protocol.
 
 ## In Flashduty
-You can obtain an integration push address through the following two methods; choose either one.
+You can obtain an integrated push address through the following two methods; choose either one.
 
 ### Use Dedicated Integration
 
@@ -22,11 +22,11 @@ When you do not need to route alert events to different collaboration spaces, th
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
     3. Select the **PagerDuty** integration, click **Save**, and generate a card.
-    4. Click on the generated card to view the **push address**, copy it for later use, and complete.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
 
 ### Use Shared Integration
 
-When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
+When you need to route alert events to different collaboration spaces based on the payload information of the alert event, this method is preferred.
 
 |+| Expand
 
@@ -72,7 +72,7 @@ Choose one of the following two methods:
 - Method 1: Include parameters in QueryString integration_key
 - Method 2: Pass integration_key as the service_key parameter into Payload
 
-### Configuration Example
+### Configuration Examples
 
 Take [ElastAlert2](https://github.com/jertel/elastalert2) as an example:
 

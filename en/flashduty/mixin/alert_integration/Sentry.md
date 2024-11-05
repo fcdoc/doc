@@ -7,22 +7,22 @@ brief: Synchronize Sentry alert events to Flashcat via webhook to achieve automa
 Synchronize Sentry alert events to Flashcat via webhook to achieve automated noise reduction processing of alert events.
 
 ## In Flashduty
-You can obtain an integrated push address through the following two methods, choose either one.
+You can obtain an integrated push address through the following two methods; choose either one.
 
-### Use Proprietary Integrations
+### Use Dedicated Integration
 
-When you do not need to route alert events to different collaboration spaces, this method is preferred because it is simpler.
+When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
     3. Select the **Sentry** integration, click **Save**, and generate a card.
-    4. Click on the generated card to view the **push address**, copy it for later use, and complete.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
 
-### Use Shared Integrations
+### Use Shared Integration
 
-When you need to route the alert to different collaboration spaces based on the payload information of the alert event, this method is preferred.
+When you need to route alert events to different collaboration spaces based on the payload information of the alert event, this method is preferred.
 
 |+| Expand
 
@@ -30,8 +30,8 @@ When you need to route the alert to different collaboration spaces based on the 
     2. Choose the **Sentry** integration:
     - **Integration Name**: Define a name for the current integration.
     3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set the default collaboration space as a fallback, and then adjust it as needed.
-    5. Finish.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
+    5. Complete.
 
 ## In Sentry
 
