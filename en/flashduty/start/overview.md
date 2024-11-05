@@ -1,0 +1,44 @@
+---
+brief: Flashduty, **an enterprise-level one-stop alert response platform**. We help developers, DevOps, operations, and business leaders accelerate alert response, enhance product experience, and minimize incident losses.
+---
+
+<h1 style="display:flex;justify-content:space-between" id="H0">Flashduty ⋅ alert response platform<img src="https://fcdoc.github.io/img/i.svg" style="user-select:none;margin-top:-1px;width:42px"></h1>
+
+## What is Flashduty?
+
+Flashduty, **an enterprise-level one-stop alert response platform**.
+
+We help developers, DevOps, operations, and business leaders accelerate alert response, enhance product experience, and minimize incident losses.
+
+### Key Features
+1. **Centralized Alert Handling**: Supports integration with most monitoring systems, providing a single platform for noise reduction, dispatch, collaboration, and automation of all alerts
+2. **Never Miss Critical Alerts**: Offers flexible on-call and scheduling strategies, ensuring alerts are only dispatched to the right personnel, with automatic escalation in case of timeout, multi-channel delivery, and avoidance of alert errors and omissions
+3. **No More Alert Storms**: Achieves up to 90% alert noise reduction, effectively managing alert storms and jitter scenarios, and preventing alert fatigue among development teams.
+4. **IM System Alert Handling**: Supports processing alerts within Feishu, DingTalk, Enterprise WeChat, Slack, and Teams, ensuring synchronized operations across multiple endpoints and more efficient collaboration.
+5. **Observable Incident Handling**: Establishes multi-dimensional analysis metrics for processing efficiency, driving continuous reduction in incident resolution time.
+
+## Why Choose Flashduty?
+1. **User Experience First**: Provides a simple and intuitive interface, balancing ease of use with flexibility.
+2. **Powerful Functionality**: Rich integrations, high scalability, and API-first approach. Offers solutions for a wide range of scenarios.
+3. **Rapid Iteration**: Receives real feedback from thousands of enterprise users in the Nightingale open-source community, enabling rapid iteration.
+4. **High Cost-Effectiveness**: Offers reasonable pricing and excellent customer service.
+
+## How to Contact Us?
+**Scan the QR code to add technical support on Enterprise WeChat for technical assistance**:
+
+<img src="https://fcdoc.github.io/img/zh/flashduty/start/overview/1.avif" alt="drawing" width="200">
+
+**Scan the QR code to add the business manager on Enterprise WeChat for business support**:
+
+<img src="https://fcdoc.github.io/img/zh/flashduty/start/overview/2.avif" alt="drawing" width="200">
+
+**Console Feedback**:
+
+Log in to the top right corner of the console, visit **Support => Feedback**, and submit your feedback.
+
+**Send Us an Email**:
+[contact-us@flashcat.cloud](mailto:contact-us@flashcat.cloud)
+
+## Try It Now!
+
+Visit [the console](https://console.flashcat.cloud/login?from=docs-intro), complete registration to receive a 14-day free trial, and start your experience today!
