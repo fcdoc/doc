@@ -1,41 +1,41 @@
 ---
-brief: Synchronize Tencent Cloud Monitoring CM alert events to Flashcat via webhook to achieve automatic noise reduction of alert events
+brief: Synchronize Tencent Cloud Monitoring CM alert events to Flashcat via webhook to achieve automatic noise reduction processing of alert events
 ---
 
 # Tencent Cloud Monitoring CM Integration
 
-Synchronize Tencent Cloud Monitoring CM alert events to Flashduty via webhook to achieve automatic noise reduction of alert events.
+Synchronize Tencent Cloud Monitoring CM alert events to Flashduty via webhook to achieve automatic noise reduction processing of alert events.
 
 ## In Flashduty
-You can obtain an integrated push address through the following two methods; choose either one.
+You can obtain an integration push address through the following two methods; either one is acceptable.
 
-### Use Dedicated Integration
+### Use Proprietary Integration
 
 When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
-    2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
-    3. Select **Tencent Cloud Monitoring CM** integration, click **Save**, and generate a card.
-    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
+    1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the Add Integration page
+    3. Select the **Tencent Cloud Monitoring CM** integration, click **Save**, and a card will be generated.
+    4. Click on the generated card to view the **Push Address**, copy it for later use, and complete.
 
-### Use Shared Integration
+### Use Shared Integrations
 
-When you need to route alert events to different collaboration spaces based on the payload information of the alert event, this method is preferred.
+Use Shared Integration
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
+    1. Enter the Flashduty console, select **Integration Center => alert events**, and navigate to the integration selection page.
     2. Choose the **Tencent Cloud Monitoring CM** integration:
-    - **Integration Name**: Define a name for the current integration.
+    - Choose the **Tencent Cloud Monitoring CM** integration:
     3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
     4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
     5. Complete.
 
-## In Tencent Cloud Monitoring CM
+## Complete
 
-1. Finish
+1. Log in to your Tencent Cloud console and select the cloud monitoring product
 2. Enter the alert Management -> Notification Templates page, click the New button to start editing notification templates
 3. Log in to your Tencent Cloud console and select the cloud monitoring product
 4. Click the Save button to save the template

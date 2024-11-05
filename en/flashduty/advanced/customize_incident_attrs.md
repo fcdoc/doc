@@ -1,19 +1,19 @@
 ---
-brief: By modifying push parameters, you can customize the severity and title of the incident
+brief: By modifying the push parameters, you can customize the severity and title of the incident
 ---
 
 # Customize Incident Title and Severity
 
-Customize the severity, title, and other information of the incident by modifying push parameters.
+Customize the severity, title, and other information of the incident by modifying the push parameters.
 
 ## Customize Severity
 
 **Add Query parameter severity to the push address to cover the severity of incident .**
 
 > [!NOTE]
-> Adapt to all integrations that report alerts through webhooks.
+> Adapt to all integrations that report alerts via webhooks.
 
-Some alert integrations (such as AWS CloudWatch) do not support severity differentiation. In this case, you can specify the severity in the integration push address. Different alert policies can be configured with different push addresses to differentiate the severity of the alert.
+Some alert integrations (such as AWS CloudWatch) do not support severity differentiation. In such cases, you can specify the severity in the integration push address. Different alert policies can be configured with different push addresses to differentiate the severity of the alerts.
 
 Example: The following address specifies the severity parameter, with the value Info ( **note the first letter is capitalized** ). alert pushed through this address will always have the severity overridden to Info .
 ```
@@ -23,7 +23,7 @@ https://api.flashcat.cloud/event/push/alert/aws/cloudwatch?integration_key=your-
 ## Customize Incident Title
 
 > [!NOTE]
-> Adapt to all integrations that report alerts through webhooks.
+> Adapt to all integrations that report alerts via webhooks.
 
 **Add Query parameter title_rule to the push address to dynamically generate incident title.**
 
@@ -65,8 +65,8 @@ Example:
 
 ## Frequently Asked Questions
 
-|+| If tags are used to dynamically generate titles, what happens if the tags do not exist?
+|+| What if the tags do not exist when using tags to dynamically generate titles?
 
     Depending on which variable acquisition method you use, the header may retain the original variable information or use <no value> instead.
 
-    Even if the variables cannot be obtained, it will not affect the generation of the alert, and you can debug with confidence.
+    Even if the variables cannot be obtained, it will not affect the generation of the alert. You can debug with confidence.

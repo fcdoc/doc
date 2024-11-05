@@ -10,9 +10,9 @@ A custom action is essentially a Webhook call. You can add custom actions for in
 
 Common usage scenarios for custom actions:
 1. **Restart the host**: When the host memory or CPU is full, trigger the host restart script to quickly complete the host restart.
-2. **Enrich information**: When an incident occurs, call back your service to retrieve Tracing, Logging, topology, and other information based on alert details. Actively call the FlashDuty Open API to update the incident information, such as adding labels or setting custom fields, to assist in troubleshooting.
+2. **Rich information**: When an incident occurs, call back your service to retrieve Tracing, Logging, topology, and other information based on the alert details. Actively call the FlashDuty Open API to update the incident information, such as adding labels or setting custom fields, to assist in troubleshooting.
 3. **Rollback changes**: When an incident occurs, if it is determined that the incident is caused by a change, you can directly trigger a callback to your deployment platform to start the rollback process and speed up incident recovery.
-4. **Update Status Page**: When it is determined that the incident affects online services, you can trigger an update to the external Status Page to notify your customers or upstream and downstream users in a timely manner.
+4. **Update Status Page**: When it is determined that the incident affects online services, trigger an external Status Page update to notify your customers or upstream and downstream users in a timely manner.
 
 ## Configure Custom Actions
 

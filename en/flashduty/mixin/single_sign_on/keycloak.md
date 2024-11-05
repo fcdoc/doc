@@ -13,7 +13,7 @@ Keycloak is an open-source identity and access management solution that provides
 
 ## Based on the SAML2.0 Protocol
 ### 1. Log in to the FlashDuty Console
-#### 1.1 Obtain the ACS Address from FlashDuty (to be used in Step 2)
+#### 1.1 Obtain the ACS URL from FlashDuty (to be used in Step 2)
 #### 1.2 Path: Access Control => Single Sign-On => Settings => SAML2.0 Protocol => Flashcat Service Provider Information => Assertion Consumer Service URL
 
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/1.avif)
@@ -22,32 +22,32 @@ Keycloak is an open-source identity and access management solution that provides
 #### 2.1 Path: Clients => Create client
 #### 2.2 Client Type: Select SAML Protocol
 #### 2.3 Fill in the Client ID: flashcat.cloud (Fixed Value, Cannot Be Changed)
-#### 2.4 Valid Redirect URIs: Enter the ACS address obtained from FlashDuty
+#### 2.4 Valid Redirect URIs: Enter the ACS URL obtained from FlashDuty
 
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/2.avif)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/3.avif)
 
-### 3. Configure Client-Related Information
+### 3. Configure Client Information
 
 #### 3.1 Change the Name ID Format to Email Type
 
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/4.avif)
 
-#### 3.2 Set "Client Signature Required" to Off
+#### 3.2 Set Client Signature Required to Off
 
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/5.avif)
 
 #### 3.3 Create Three Field Types: email/phone/username
 > [!NOTE]
-> Before creating, you need to delete the users from the previous OpenID Connect protocol. After creation, set them as Default
+> Before creating, delete the user from the previous OpenID Connect protocol. After creation, set it to Default
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/6.avif)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/7.avif)
 
-#### 3.4 Add the Created Users to the Client
+#### 3.4 Add the Created User to the Client
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/8.avif)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/9.avif)
 
-#### 3.5 Configure email/phone/username Mapper (Take email as an Example, Other Configurations Can Be Configured as Follows)
+#### 3.5 Configure the email/phone/username mappers (using email as an example; other configurations follow the same steps)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/10.avif)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/11.avif)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/12.avif)
@@ -63,7 +63,7 @@ Keycloak is an open-source identity and access management solution that provides
 
 ### 5. Create a User in Keycloak and Test Login
 
-#### 5.1 Create a User (must bind an email address)
+#### 5.1 Create a User (Ensure an Email Address is Bound)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/15.avif)
 
 #### 5.2 Test Login
@@ -82,13 +82,13 @@ Keycloak is an open-source identity and access management solution that provides
 - Client Type: Select OIDC Protocol
 - Client ID: No special requirements
 - Client Authentication: Keep it on
-- Valid Redirect URIs: Enter the Redirect URL address obtained in Step 1
+- Valid Redirect URIs: Enter the Redirect URL obtained in Step 1
 
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/18.avif)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/19.avif)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/20.avif)
 
-### 3. Obtain Client-Related Information
+### 3. Obtain Client Information
 
 - Client ID: The ID entered when creating the Client
 - Client Secret: **Client Details => Credentials** card

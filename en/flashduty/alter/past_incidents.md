@@ -6,7 +6,7 @@ brief: View solutions to similar historical incidents to quickly handle new inci
 
 View solutions to similar historical incidents to quickly handle new incidents.
 
-When responding to an incident, if you can view the solutions to similar historical incidents, it will significantly speed up the resolution process. The historical incident feature provides responders with a list of similar incidents that have been resolved. For responders unfamiliar with the issue, they can quickly review the timeline, root cause, and solution of historical incidents and replicate the relevant actions. Historical incidents provide the context needed to solve problems and prevent responders from panicking when encountering unfamiliar issues.
+When responding to an incident, being able to view the solutions to similar historical incidents can significantly expedite the resolution process. The Historical Incidents feature provides responders with a list of similar incidents that have been resolved. For responders unfamiliar with the issue, they can quickly review the timeline, root cause, and solution of historical incidents and replicate the relevant actions. Historical incidents provide the necessary context for problem-solving and help prevent responders from panicking when encountering unfamiliar issues.
 
 > [!NOTE]
 > This feature is currently in beta and is only available in the Professional Edition and above. If you need to enable this feature, please feel free to contact us.
@@ -16,11 +16,11 @@ When responding to an incident, if you can view the solutions to similar histori
 ### Console
 
 1. From the incident list or collaboration space, find an incident that needs to be processed;
-2. Click the incident title to enter the incident details, and select the **Historical Incidents** tab.
+2. Click the incident title, enter the incident details, and select the **Historical Incidents** tab.
 
 ![](https://fcdoc.github.io/img/zh/flashduty/alter/past_incidents/1.avif)
 
-The system will provide up to 5 similar historical incidents to avoid overwhelming you with too much information and wasting time on identification.
+The system will provide up to 5 similar historical incidents to avoid overwhelming you with too much information, which could waste your time.
 
 ### Sorting Principle
 
@@ -32,7 +32,7 @@ How do we sort?
 4. The system prioritizes more recent incidents.
 
 > [!NOTE]
-> It is a good habit to document the **solution** and **root cause** each time you resolve an incident. This will greatly enhance the speed at which future responders can handle similar incidents.
+> It is a good habit to document the **solution** and **root cause** each time you resolve an incident. This will greatly enhance the response speed for future incidents.
 
 ### How to Identify
 
@@ -42,20 +42,20 @@ When judging similarity, we primarily consider the following factors:
 
 1. Incident Title
 2. Detailed Description of the Incident
-3. The service affected by the incident (usually extracted from the service tag)
-4. Alert objects in the incident (usually extracted from the resource tag)
+3. The service affected by the incident (generally extracted from the service tag)
+4. The alert object in the incident (generally extracted from the resource tag)
 
-When searching for historical incidents, the system only matches similar incidents that have been resolved within the current collaboration space.
+When searching for historical incidents, the system only matches similar incidents that have been resolved in the current collaboration space.
 
-## Frequently Asked Questions
+## FAQ
 
 |+| How far back can I view historical incidents?
 
     Currently, you can only view similar incidents within 30 days before the current incident. Over time, the system may delete historical data, in which case you may not be able to view historical incidents.
 
-    Regardless, for current incidents, you can review up to 30 days of historical data.
+    Regardless, for the current incident, you can review up to 30 days of historical data.
 
-|+| Can I mark that the current incident is not similar to historical incidents?
+|+| Can I mark the current incident as not similar to historical incidents?
 
     No, the system currently does not have a marking function. However, you can communicate and provide feedback to us through other channels.
 

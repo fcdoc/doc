@@ -9,7 +9,7 @@ Synchronize OceanBase alert events to Flashcat via webhook to achieve automated 
 ## In Flashduty
 You can obtain an integrated push address through the following two methods; choose either one.
 
-### Use Dedicated Integration
+### Use Proprietary Integration
 
 When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
@@ -17,8 +17,8 @@ When you do not need to route alert events to different collaboration spaces, th
 
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
-    3. Select **OceanBase** integration, click **Save**, and generate a card.
-    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
+    3. Select the **OceanBase** integration, click **Save**, and generate a card.
+    4. Click the generated card to view the **Push Address**, copy it for later use, and complete.
 
 ### Use Shared Integration
 
@@ -27,17 +27,17 @@ When you need to route alert events to different collaboration spaces based on t
 |+| Expand
 
     1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
-    2. Choose **OceanBase** integration:
+    2. Choose the **OceanBase** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
+    3. After clicking **Save**, copy the newly generated **Push Address** on the current page for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set a default collaboration space as a fallback and adjust it as needed.
     5. Complete.
 
 ## In OceanBase
 
-## ### OceanBase Alert Push Configuration
+## OceanBase Alert Push Configuration
 
-### In Graylog
+### Step 1: Configure the Alert Channel
 1. Log in to your OceanBase console and select the alert center.
 2. Enter **Alert Channel**, click the **New Channel** button to start creating a new channel.
 3. Select **Custom Script** for the channel type.
@@ -45,7 +45,7 @@ When you need to route alert events to different collaboration spaces based on t
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/oceanbase/1.avif" />
 
-5. Copy the following script content in the configuration channel, and **please add the integration_key parameter in the script with the integration_key value from the FlashDuty push address**.
+5. Copy the following script content in the configuration channel, and **please add the integration_key parameter in the script with the integration_key value in the FlashDuty address** .
 
 ```i18n
 #!/usr/bin/env bash
@@ -118,15 +118,15 @@ alert_level="Info"
 fi
 fi
 
-#Notifications will be sent only if the status is "In Alarm" or "Recovered". If the status is "Blocked" or "Suppressed", no notification will be sent
+#Notifications will be sent only if the status is "In Alert" or "Alert Recovered". If the status is "Blocked" or "Suppressed", no notification will be sent
 if [[ ${statusMd5} == ${active} || ${statusMd5} == ${Inactive} ]];then
 sendToFlashDuty
 fi
 ```
 
-6. You can simply fill in {} for the Response verification information.
+6. Just fill in {} for the Response verification information.
 7. Select Markdown as the alert message format in the message configuration.
-8. **Select Simplified Chinese** for the alert message template, and fill in the following content and submit.
+8. For the Alert message template, **select Simplified Chinese** and fill in the following content, then submit.
 
 ```i18n
 OCPAlert Notification - Single Alert
@@ -134,7 +134,7 @@ OCPAlert Notification - Single Alert
 - Name: ${alarm_name}
 - Level: ${alarm_level}
 - Alert Object: ${alarm_target}
-- Services: ${service}
+- Service: ${service}
 - Overview: ${alarm_summary}
 - Generation Time: ${alarm_active_at}
 - Update Time: ${alarm_updated_at}
@@ -150,7 +150,7 @@ OCPAlert Notification - Single Alert
 - OCPLink: ${alarm_url}
 ```
 
-### #### Step 2: Configure Alert Push
+### Step 2: Configure the Alert Push
 
 1. Create a new push configuration, path: **Alert Center => Alert Push => New Push Configuration**.
 2. The push type and specified objects can be configured as needed.
@@ -158,28 +158,28 @@ OCPAlert Notification - Single Alert
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/oceanbase/2.avif" />
 
 3. Select **Simplified Chinese** as the push language.
-4. Select **FlashDuty** as the alert channel.
+4. Alert Channel: Select **FlashDuty**.
 5. Enable **Recovery Notifications**.
 6. Submit.
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/oceanbase/3.avif" />
 
-## 2. Status Comparison
+## Status Comparison
 
 |OceanBase|Flashcat|Status|
 |---|---|---|
-|Stop Service|Critical|Critical|
-|Critical|Warning|Critical|
+|Service Down|Critical|Severe|
+|Severe|Warning|Severe|
 |Warning|Warning|Warning|
-|Notice|Info|Information|
-|Information|Info|Information|
+|Notice|Info|Reminder|
+|Reminder|Info|Reminder|
 
 ## Status Comparison
 
 |OceanBase|Flashcat|Status|
 |---|---|---|
-|Stop Service|Critical|Critical|
-|Critical|Warning|Critical|
+|Service Down|Critical|Severe|
+|Severe|Warning|Severe|
 |Warning|Warning|Warning|
-|Notice|Info|Information|
-|Information|Info|Information|
+|Notice|Info|Reminder|
+|Reminder|Info|Reminder|
