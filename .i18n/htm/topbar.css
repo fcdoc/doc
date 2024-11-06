@@ -118,7 +118,7 @@ a.freeTrail:hover {
     padding-right: 10px;
     border-right-width: 3px;
 
-    &:before {
+    &:after {
       display: none;
     }
   }
