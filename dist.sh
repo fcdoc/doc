@@ -6,7 +6,7 @@ set -ex
 
 git add .
 git commit -mdist || true
-git fetch --unshallow
+git fetch --unshallow || true
 git pull
 
 merge() {
