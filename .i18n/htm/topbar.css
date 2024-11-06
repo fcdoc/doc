@@ -79,6 +79,7 @@ a.freeTrail {
   box-shadow: 0 0 6px #000 inset;
   margin: 0 24px 0 0;
   line-height: 31px;
+  vertical-align: 1px;
 }
 
 a.logo:hover {
