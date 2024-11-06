@@ -6,7 +6,7 @@ brief: Learn how to get started quickly with Flashduty
 
 ## Demo Video
 
-<video controls src="https://fcimg.3ti.site/zh/flashduty/start/getting_started/1.mp4"></video>
+<video poster="https://fcimg.3ti.site/zh/flashduty/start/getting_started/3.avif" controls src="https://fcimg.3ti.site/zh/flashduty/start/getting_started/1.mp4"></video>
 
 ## Start for Free
 
