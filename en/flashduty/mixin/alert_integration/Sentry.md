@@ -1,5 +1,5 @@
 ---
-brief: Synchronize Sentry alert events to Flashcat via webhook to achieve automatic noise reduction processing of alert events
+brief: Synchronize Sentry alert events to Flashcat via webhook to achieve automated noise reduction processing of alert events
 ---
 
 # Sentry Alert Events
@@ -7,9 +7,9 @@ brief: Synchronize Sentry alert events to Flashcat via webhook to achieve automa
 Synchronize Sentry alert events to Flashcat via webhook to achieve automated noise reduction processing of alert events.
 
 ## In Flashduty
-You can obtain an integrated push address through the following two methods, choose either one.
+You can obtain an integrated push address through the following two methods; either one will suffice.
 
-### Use Proprietary Integrations
+### Use Proprietary Integration
 
 When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
@@ -17,26 +17,26 @@ When you do not need to route alert events to different collaboration spaces, th
 
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
-    3. Select the **Sentry** integration, click **Save**, and generate a card.
-    4. Click on the generated card to view **the push address**, copy it for later use, and complete.
+    3. Select **Sentry** integration, click **Save**, and generate a card.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete.
 
-### Use Shared Integrations
+### Use Shared Integration
 
-When you need to route the alert to different collaboration spaces based on the payload information of the alert event, this method is preferred.
+When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
     1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
-    2. Choose the **Sentry** integration:
+    2. Choose **Sentry** integration:
     - **Integration Name**: Define a name for the current integration.
     3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set the default collaboration space as a fallback, and then adjust it as needed.
-    5. Finish.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set a default collaboration space as a fallback, and then adjust it as needed.
+    5. Complete.
 
 ## In Sentry
 
 ## Preliminary Instructions
-Sentry provides two types of alert mechanisms: Issue Alerts and Metric Alerts. Issue Alerts support the notification function through WebHooks in Integrations, while Metric Alerts are limited to using Internal Integration for alert notification. It is worth noting that Internal Integration is not only applicable to Metric Alerts but also compatible with Issue Alerts. Given the wide applicability of Internal Integration, we have decided to adopt this method uniformly and no longer rely solely on WebHooks to simplify the configuration of alert notifications.
+Sentry provides two types of alert mechanisms: Issue Alerts and Metric Alerts. Issue Alerts support notification functionality through WebHooks in Integrations, while Metric Alerts are limited to using Internal Integration for alert notifications. Notably, Internal Integration is not only applicable to Metric Alerts but also compatible with Issue Alerts. Given the wide applicability of Internal Integration, we have decided to adopt this method uniformly and no longer rely solely on WebHooks to simplify the configuration of alert notifications.
 
 ## Sentry Alert Push Configuration
 
@@ -45,8 +45,8 @@ Sentry provides two types of alert mechanisms: Issue Alerts and Metric Alerts. I
 1. Log in to the Sentry management console.
 2. In the left navigation bar, find **Settings => Custom Integrations**.
 3. Click Create New Integration and select **Internal Integration** .
-4. On the edit page, **fill in "FlashDuty" at Name, and copy the integrated push address to WebhookURL**.
-5. Enable **Alert Rule Action** and configure it as follows:
+4. On the edit page, **enter FlashDuty in the Name field, and copy the integration's push address into the WebhookURL field**.
+5. Enable **Alert Rule Action** and refer to the following configuration:
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/Sentry/1.avif" />
 
@@ -56,8 +56,8 @@ Sentry provides two types of alert mechanisms: Issue Alerts and Metric Alerts. I
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/Sentry/2.avif" />
 
-**Special instructions about WEBHOOKS configuration:**
-1. After checking **issue**, FlashDuty can receive the resolved event of an issue, i.e., when an issue is manually marked as resolved in the issue list, we will automatically restore the associated incident in FlashDuty.
+**Special Note on WEBHOOKS Configuration:**
+1. After checking **issue**, FlashDuty can receive the resolved event for issues, i.e., when an issue is manually marked as resolved in the issue list, we will automatically restore the associated incident in FlashDuty.
 2. Other events for issues, such as create, assigned, archived, and unresolved, are not supported.
 3. If both error and comment are checked, FlashDuty will not receive and process such events.
 
@@ -73,7 +73,7 @@ Sentry provides two types of alert mechanisms: Issue Alerts and Metric Alerts. I
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/Sentry/4.avif" />
 
-5.  Select the **FlashDuty** notification channel added above.
+5.  Choose the **FlashDuty** notification channel added above.
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/Sentry/5.avif" />
 

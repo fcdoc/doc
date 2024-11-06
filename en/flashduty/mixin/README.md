@@ -1,1 +1,1 @@
-# Integrated Boot
+# Integrated Booting

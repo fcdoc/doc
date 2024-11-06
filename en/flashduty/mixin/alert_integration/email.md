@@ -1,16 +1,16 @@
 ---
-brief: Generate a unique email address in Flashduty and synchronize the occurrence and recovery of alerts to Flashduty via email
+brief: Generate a unique email address in Flashduty, and synchronize the occurrence and recovery of alerts to Flashduty via email
 ---
 
 # Email Integration
 
-Generate a unique email address in Flashduty and synchronize the occurrence and recovery of alerts to Flashduty via email.
+Generate a unique email address in Flashduty, and synchronize the occurrence and recovery of alerts to Flashduty via email.
 
 ## Operation Steps
 
 ### Create Email Integration
 
-You can obtain an email address in the following two ways; choose either one.
+You can obtain an email address in two ways, choose either one.
 
 #### Use Proprietary Integration
 
@@ -20,58 +20,58 @@ When you do not need to route alert events to different collaboration spaces, th
 
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
-    3. Select the **Email** integration, click **Save**, and generate the card.
+    3. Select **Email** Integration, click **Save**, and generate the card.
     4. Click on the generated card to view the **email address**, copy it for later use, and complete.
 
 #### Use Shared Integration
 
-When you need to route alerts to different collaboration spaces based on the payload information of the alert event, this method is preferred.
+When you need to route alert events to different collaboration spaces based on the payload information of the alert event, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and go to the integration selection page.
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
     2. Select **Email** Integration:
-    - Select the **Email** integration:
     - **Integration Name**: Define a name for the current integration.
-    - **Email Address**: Set a memorable prefix for the email address, ensuring it is unique within your account.
-    3. **Push Mode**: Choose the conditions under which the email triggers or resolves an alert.
-    4. Copy the **email address** on the current page for later use.
-    5. Finish.
+    - **Email Address**: Set a memorable prefix for the email address, which must be unique under your account.
+    - **Push Mode**: Choose the conditions under which the email triggers or resolves an alert.
+    3. Copy the **email address** on the current page for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set a default collaboration space as a fallback, and then adjust it as needed.
+    5. Complete.
 
 ### Customize Email Integration
 
 #### Email Address
 
-**Email Address**
+By default, the system will generate a unique email address for you. You can modify it, but note that **the email prefix can only consist of letters and numbers** and must be unique within your account.
 
 #### Push Mode
 
 By default, the system always creates a new alert for each email, but you can switch the mode to:
 
-1. **Trigger or update alerts based on the email subject**: In this mode, whenever a new email is received, the system will search for unclosed alerts based on the email subject. If an alert is found, it will be updated; otherwise, the system will trigger a new alert.
-2. **Trigger or update alert based on email subject**: In this mode, whenever a new email is received, the system will search for an open alert based on the email subject. If an alert is found, it will be updated; otherwise, the system will trigger a new alert.
+1. **Trigger or update alert based on email subject**: In this mode, whenever a new email is received, the system will search for an unclosed alert based on the email subject. If an alert is found, it will be updated; otherwise, the system will trigger a new alert.
+2. **Trigger or close alert based on rules**: In this mode, whenever a new email is received, the system will match the email according to your rules, and the matched emails will trigger a new alert or close an existing alert according to the rules.
 
 - You need to fill in at least one **trigger** rule
-- You need to fill in at least one **trigger** rule
-- You can choose whether to discard the email if none of the rules match.
+- You must set the regular expression extraction rules for the Alert Key. The system uses this field to find historical alerts for updating or closing; **if the regular expression extraction fails, the system will use the email subject to generate the Alert Key** to ensure that the alert is not lost due to misconfiguration
+- You can choose whether to discard emails when none of the rules match.
 
 Configuration Example:
 
-- **Configuration Example:**
-- Alert Key Extracted from the email header, the rule is **/ (. * ) /** .
+- Receive all emails. When the email content contains the word **RESOLVED**, close the alert; otherwise, trigger a new alert
+- The Alert Key is extracted from the email subject, with the rule being **/(.\*)/**.
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/email/1.avif" alt="drawing" width="800"/>
 
-### Notes
+### Things to Note
 
 1. If the email message body is larger than 5MB, the system will directly refuse to receive it.
-2. If the email message body is larger than 5MB, the system will directly refuse to receive it
+2. If the text content of the email exceeds 32KB, the system will truncate it and add a label prompt in the incident details:
 
 ```
 body_cut = true
 ```
 
-3. If the text content of the email exceeds 32KB, the system will truncate it and add a label prompt in the incident details
+3. If the email contains an attachment, the system will discard the attachment and add a label prompt in the incident details:
 
 ```
 attachment_stripped = true
@@ -79,8 +79,8 @@ attachment_stripped = true
 
 4. In the new alert triggered by email, **the title is the email subject, and the description is the email content**.
 
-5. If you change your account domain, this email address will also change. Be sure to update the push address.
+5. If you change your account domain name, this email address will also change. Be sure to update your push address.
 
-## Severity Mapping
+## Severity Mapping Relationship
 
-The current alert levels pushed to Flashduty by email integration are all Warning.
+The current alert levels pushed to Flashduty by email integration are all set to Warning.

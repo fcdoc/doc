@@ -9,11 +9,11 @@ brief: Configuring Single Sign-On in Keycloak Tutorial
 Keycloak is an open-source identity and access management solution that provides a comprehensive set of tools and features to help developers quickly implement secure user authentication and authorization mechanisms while simplifying the identity and access management process for applications
 
 > [!NOTE]
-> This article does not cover the deployment or detailed explanation of Keycloak. For more information, please refer to the [official documentation](https://www.keycloak.org/)
+> This article does not cover the deployment or explanation of Keycloak. For more information, please refer to the [official documentation](https://www.keycloak.org/)
 
 ## Based on the SAML2.0 Protocol
 ### 1. Log in to the FlashDuty Console
-#### 1.1 Obtain the ACS URL from FlashDuty (to be used in Step 2)
+#### 1.1 Obtain the ACS Address from FlashDuty (Will be used in Step 2)
 #### 1.2 Path: Access Control => Single Sign-On => Settings => SAML2.0 Protocol => Flashcat Service Provider Information => Assertion Consumer Service URL
 
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/1.avif)
@@ -22,7 +22,7 @@ Keycloak is an open-source identity and access management solution that provides
 #### 2.1 Path: Clients => Create client
 #### 2.2 Client Type: Select SAML Protocol
 #### 2.3 Fill in the Client ID: flashcat.cloud (Fixed Value, Cannot Be Changed)
-#### 2.4 Valid Redirect URIs: Enter the ACS URL obtained from FlashDuty
+#### 2.4 Valid Redirect URIs: Enter the ACS address obtained from FlashDuty
 
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/2.avif)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/3.avif)
@@ -47,7 +47,7 @@ Keycloak is an open-source identity and access management solution that provides
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/8.avif)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/9.avif)
 
-#### 3.5 Configure the email/phone/username mappers (using email as an example; other configurations follow the same steps)
+#### 3.5 Configure Email/Phone/Username Mappers (Example: Email, others follow the same steps)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/10.avif)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/11.avif)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/12.avif)
@@ -55,15 +55,15 @@ Keycloak is an open-source identity and access management solution that provides
 ### 4. Download the XML File
 > [!NOTE]
 > The downloaded file is a compressed package. After decompression locally, there will be two xml files. Only the idp-metadata.xml file is needed
-#### 4.1 Download to Local in Client > Action
+#### 4.1 Download to Local in Client > Actions
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/13.avif)
 
-#### 4.2 Upload the XML File to the FlashDuty Single Sign-On Configuration
+#### 4.2 Upload the XML File to FlashDuty’s Single Sign-On Configuration
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/14.avif)
 
 ### 5. Create a User in Keycloak and Test Login
 
-#### 5.1 Create a User (Ensure an Email Address is Bound)
+#### 5.1 Create a User (Must Bind an Email Address)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/15.avif)
 
 #### 5.2 Test Login
@@ -73,7 +73,7 @@ Keycloak is an open-source identity and access management solution that provides
 
 ## Based on the OIDC Protocol
 ### 1. Log in to the FlashDuty Platform
-- Obtain the Redirect URL from FlashDuty (to be used in Step 2)
+- Obtain the Redirect URL from FlashDuty (Will be used in Step 2)
 - Path: **Access Control => Single Sign-On => Settings => OIDC Protocol => Flashcat Service Provider Information => Redirect URL**
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/17.avif)
 
@@ -82,7 +82,7 @@ Keycloak is an open-source identity and access management solution that provides
 - Client Type: Select OIDC Protocol
 - Client ID: No special requirements
 - Client Authentication: Keep it on
-- Valid Redirect URIs: Enter the Redirect URL obtained in Step 1
+- Valid Redirect URIs: Enter the Redirect URL address obtained in Step 1
 
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/18.avif)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/19.avif)
@@ -91,8 +91,8 @@ Keycloak is an open-source identity and access management solution that provides
 ### 3. Obtain Client Information
 
 - Client ID: The ID entered when creating the Client
-- Client Secret: **Client Details => Credentials** card
-- Issuer: **Realm Settings => Endpoints => OpenID Endpoint Configuration**
+- Client Secret: **Client Details > Credentials** card
+- Issuer: **Realm Settings > Endpoints > OpenID Endpoint Configuration**
 
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/21.avif)
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/22.avif)
@@ -102,4 +102,4 @@ Keycloak is an open-source identity and access management solution that provides
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/keycloak/23.avif)
 
 > [!NOTE]
-> After completing the configuration based on OIDC, refer to the "Configuring Single Sign-On" section for the login test
+> After the configuration based on OIDC is completed, please refer to the Configuring Single Sign-On section for the login test

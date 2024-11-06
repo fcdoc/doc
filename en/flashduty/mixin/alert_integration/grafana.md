@@ -1,13 +1,13 @@
 ---
-brief: Synchronize Grafana alert events to Flashcat via webhook to achieve automated noise reduction processing of alert events.
+brief: Synchronize Grafana alert events to Flashcat through webhooks to achieve automated noise reduction of alert events.
 ---
 
 # Grafana Integration
 
-Synchronize Grafana alert events to Flashduty via webhook to achieve automated noise reduction processing of alert events.
+Synchronize Grafana alert events to Flashduty through webhooks to achieve automated noise reduction of alert events.
 
 ## In Flashduty
-You can obtain an integration push address through the following two methods. Choose either one.
+You can obtain an integrated push address through the following two methods. Choose either one.
 
 ### Use Proprietary Integration
 
@@ -15,26 +15,26 @@ When you do not need to route alert events to different collaboration spaces, th
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
+    1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
-    3. Select the **Grafana** integration, click **Save**, and a card will be generated.
-    4. Click on the generated card to view the **Push Address**, copy it for later use, and complete.
+    3. Select **Grafana** integration, click **Save**, and generate a card.
+    4. Click the generated card to view the **push address**, copy it for later use, and complete.
 
 ### Use Shared Integration
 
-When you need to route alert events to different collaboration spaces based on the payload information of the alert event, this method is preferred.
+When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and navigate to the integration selection page.
-    2. Choose the **Grafana** integration:
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
+    2. Choose **Grafana** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. After clicking **Save**, copy the newly generated **Push Address** on the current page for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
+    3. After clicking **Save**, copy the newly generated **push address** for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set a default collaboration space as a fallback, and adjust as needed.
     5. Complete.
 
 ## In Grafana
-Grafana V4~V8 versions have the Legacy Alerting function enabled by default, while V9 and later versions have the Grafana Alerting function enabled by default. For function differentiation and activation methods, please refer to the [official documentation](https://grafana.com/docs/grafana/v8.4/alerting/unified-alerting/opt-in/#opt-in-to-grafana-alerting). Please integrate according to the version you have deployed. The steps are as follows.
+Grafana V4~V8 versions have the Legacy Alerting feature enabled by default, while V9 and later versions have the Grafana Alerting feature enabled by default. For details on the differences and activation methods, please refer to the [official documentation](https://grafana.com/docs/grafana/v8.4/alerting/unified-alerting/opt-in/#opt-in-to-grafana-alerting). Please integrate according to the version you have deployed. The steps are as follows.
 
 ### Legacy Alerting
 
@@ -78,7 +78,7 @@ Legacy Alerting to Flashduty alert level mapping:
 
 Grafana Alerting to Flashduty alert level mapping:
 
-The system sequentially extracts the `severity`, `priority`, and `level` tags from the alert event. The corresponding values will be used as the alert level in Prometheus. If none are extracted, the system will automatically set the Prometheus alert level to `warning`.
+The system sequentially extracts the `severity`, `priority`, and `level` from the alert event tags. The corresponding values will be used as the alert level in Prometheus. If none are extracted, the system automatically sets the Prometheus alert level to `warning`.
 
 | Grafana Alerting |  Flashduty  | Status |
 | ---------------- | -------- | ---- |

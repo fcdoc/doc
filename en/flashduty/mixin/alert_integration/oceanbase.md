@@ -17,27 +17,27 @@ When you do not need to route alert events to different collaboration spaces, th
 
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
-    3. Select the **OceanBase** integration, click **Save**, and generate a card.
-    4. Click the generated card to view the **Push Address**, copy it for later use, and complete.
+    3. Select **OceanBase** integration, click **Save**, and generate a card.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete.
 
 ### Use Shared Integration
 
-When you need to route alert events to different collaboration spaces based on the payload information of the alert event, this method is preferred.
+When you need to route the alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
     1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
-    2. Choose the **OceanBase** integration:
+    2. Choose **OceanBase** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. After clicking **Save**, copy the newly generated **Push Address** on the current page for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set a default collaboration space as a fallback and adjust it as needed.
+    3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set a default collaboration space as a fallback, and adjust it as needed later.
     5. Complete.
 
 ## In OceanBase
 
 ## OceanBase Alert Push Configuration
 
-### Step 1: Configure the Alert Channel
+### Step 1: Configure Alert Channel
 1. Log in to your OceanBase console and select the alert center.
 2. Enter **Alert Channel**, click the **New Channel** button to start creating a new channel.
 3. Select **Custom Script** for the channel type.
@@ -118,7 +118,7 @@ alert_level="Info"
 fi
 fi
 
-#Notifications will be sent only if the status is "In Alert" or "Alert Recovered". If the status is "Blocked" or "Suppressed", no notification will be sent
+#Notifications will be sent only if the status is "In Alert" or "Recovered"; if the status is "Blocked" or "Suppressed," no notification will be sent
 if [[ ${statusMd5} == ${active} || ${statusMd5} == ${Inactive} ]];then
 sendToFlashDuty
 fi
@@ -126,7 +126,7 @@ fi
 
 6. Just fill in {} for the Response verification information.
 7. Select Markdown as the alert message format in the message configuration.
-8. For the Alert message template, **select Simplified Chinese** and fill in the following content, then submit.
+8. **Select Simplified Chinese** for the alert message template, fill in the following content, and submit.
 
 ```i18n
 OCPAlert Notification - Single Alert
@@ -150,15 +150,15 @@ OCPAlert Notification - Single Alert
 - OCPLink: ${alarm_url}
 ```
 
-### Step 2: Configure the Alert Push
+### Step 2: Configure Alert Push
 
 1. Create a new push configuration, path: **Alert Center => Alert Push => New Push Configuration**.
-2. The push type and specified objects can be configured as needed.
+2. Configure the push type and specified objects as needed.
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/oceanbase/2.avif" />
 
 3. Select **Simplified Chinese** as the push language.
-4. Alert Channel: Select **FlashDuty**.
+4. Select **FlashDuty** as the alert channel.
 5. Enable **Recovery Notifications**.
 6. Submit.
 
@@ -168,7 +168,7 @@ OCPAlert Notification - Single Alert
 
 |OceanBase|Flashcat|Status|
 |---|---|---|
-|Service Down|Critical|Severe|
+|Service Stopped|Critical|Severe|
 |Severe|Warning|Severe|
 |Warning|Warning|Warning|
 |Notice|Info|Reminder|
@@ -178,7 +178,7 @@ OCPAlert Notification - Single Alert
 
 |OceanBase|Flashcat|Status|
 |---|---|---|
-|Service Down|Critical|Severe|
+|Service Stopped|Critical|Severe|
 |Severe|Warning|Severe|
 |Warning|Warning|Warning|
 |Notice|Info|Reminder|
