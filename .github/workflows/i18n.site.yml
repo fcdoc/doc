@@ -67,6 +67,7 @@ jobs:
         run: |
           set -ex
           cd out/dist/htm
+          ls -alh
           git add . || true
           if [[ -n $(git status -s) ]]; then
             git commit -m.
