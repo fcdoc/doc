@@ -20,6 +20,15 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
+      - name: clone dist htm
+        if: github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          set -ex
+          mkdir -p out/dist
+          cd out/dist
+          git clone --depth=1 https://github.com/fcdoc/dist.git htm
+
       - name: install node.js
         uses: actions/setup-node@v4
         with:
@@ -50,3 +59,15 @@ jobs:
         with:
           I18N_SITE_TOKEN: ${{ secrets.I18N_SITE_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: push dist htm
+        if: github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          set -ex
+          cd out/dist/htm
+          if [[ -n $(git status -s) ]]; then
+            git add .
+            git commit -m.
+            git push https://x-access-token:${{github.token}}@github.com/${{ github.repository_owner }}/dist main -f
+          fi

@@ -1,5 +1,5 @@
-seo: false
-host: fcdoc.github.io
+seo: true
+host: flashduty-doc.flashcat.cloud
 out:
   - fs
 
