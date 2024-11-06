@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: clone dist htm
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/dist'
         shell: bash
         run: |
           set -ex
@@ -61,7 +61,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: push dist htm
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/dist'
         shell: bash
         run: |
           set -ex
