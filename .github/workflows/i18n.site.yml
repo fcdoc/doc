@@ -52,7 +52,7 @@ jobs:
             git add .
             git commit -m '.'
             branch=$(git rev-parse --abbrev-ref HEAD)
-            git push https://x-access-token:${{github.token}}@github.com/${{ github.repository_owner }}/img.git $branch
+            git push https://x-access-token:${{secrets.GH_TOKEN}}@github.com/fcdoc/img.git $branch
           fi
 
       - name: https://i18n.site
@@ -67,9 +67,8 @@ jobs:
         run: |
           set -ex
           cd out/dist/htm
-          ls -alh
           git add . || true
           if [[ -n $(git status -s) ]]; then
             git commit -m.
-            git push https://x-access-token:${{github.token}}@github.com/${{ github.repository_owner }}/dist.git main -f
+            git push https://x-access-token:${{secrets.GH_TOKEN}}@github.com/fcdoc/dist.git main -f
           fi

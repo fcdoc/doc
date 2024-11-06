@@ -1,5 +1,5 @@
 seo: true
-host: flashduty-doc.flashcat.cloud
+host: doc.flashduty.com
 out:
   - fs
 
