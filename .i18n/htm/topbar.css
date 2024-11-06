@@ -101,8 +101,9 @@ a.logo:hover:after {
 }
 
 a.freeTrail:hover {
-  background: linear-gradient(45deg, #7B2FEA, #f40);
+  background: linear-gradient(-45deg, #f40, #72f);
   box-shadow: 0 0 4px #0618EA inset;
+  text-shadow: 0 0 1px #f40;
 }
 
 @media (max-width:1150px) {
