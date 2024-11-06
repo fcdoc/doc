@@ -15,11 +15,11 @@ Quick Overview
 - Enter the Application Name
 - Enter the Authentication URL (the URL to which users will be redirected during SSO login)
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/1.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/1.avif)
 
 ### 3. Record Relevant Information
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/2.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/2.avif)
 
 |Type|Description|
 |---|---|
@@ -31,30 +31,30 @@ Quick Overview
 ## Start Configuring the OIDC Protocol
 ### 1. Open the [FlashDuty](console.flashcat.cloud) Console and Enable Single Sign-On Configuration
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/3.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/3.avif)
 
 ### 2. Copy the Relevant Configuration Information into the Corresponding Fields
 
 #### 2.1 Copy the Relevant Information of the Authing Application into the Corresponding Fields
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/4.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/4.avif)
 
 #### 2.2 Copy the Redirect URL Domain to the Login Callback URL in Authing
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/5.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/5.avif)
 
 ### 3. Modify Authing Configuration
 
 #### 3.1 Configure as Shown; Just Change the id_token Signature Algorithm to RS256
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/6.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/6.avif)
 
 #### 3.2 Configure Login Control
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/7.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/7.avif)
 
 #### 3.3 Modify Permissions
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/8.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/8.avif)
 
 ### 4. Create a User and Test Login
 
@@ -63,18 +63,18 @@ Quick Overview
 > [!NOTE]
 > FlashDuty only supports user email association, so you need to use an email address to create a user
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/9.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/9.avif)
 
 #### 4.2 Test Login Using the SSO URL
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/10.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/10.avif)
 
 > [!NOTE]
 > **You Can Access console.flashcat.cloud and Log in via SSO**
 
 #### 4.3 The SSO URL Redirects to the Login Page
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/11.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/11.avif)
 
 > [!NOTE]
 > Use the user created in Authing to log in to the FlashDuty console
@@ -88,28 +88,28 @@ Quick Overview
 
 #### 1.1 Select SAML2.0
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/12.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/12.avif)
 
 #### 1.2 Change FlashDuty's Single Sign-On Protocol to SAML and Copy the ACS URL
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/13.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/13.avif)
 
 #### 1.3 After Copying the ACS URL to the Authing Application, Click Save and Change the Protocol Type
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/14.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/14.avif)
 
 ### 2. Configure in FlashDuty
 
 #### 2.1 Download the Metadata, Click the Link, and Save It Locally
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/15.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/15.avif)
 
 #### 2.2 Upload the Metadata to FlashDuty's Single Sign-On Configuration and Save It
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/16.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/16.avif)
 
 #### 2.3 Test Login (Refer to the OIDC Protocol Login)
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/11.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/11.avif)
 
 > [!NOTE]
 > The above are the complete configuration methods for both protocols. The two platforms are intertwined during configuration, so please be careful not to miss any key information. If you encounter any issues during the configuration process, you can contact FlashDuty technical support for assistance
@@ -117,30 +117,30 @@ Quick Overview
 ## Start Configuring the CAS Protocol
 ### 1. Open the [FlashDuty](console.flashcat.cloud) Console and Enable Single Sign-On Configuration
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/3.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/3.avif)
 
 ### 2. Copy the Relevant Configuration Information into the Corresponding Fields
 
 #### 2.1 Copy the Relevant Information of the Authing Application into the Corresponding Fields
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/17.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/17.avif)
 
 #### 2.2 Copy the Redirect URL to the Login Callback URL in Authing
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/18.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/18.avif)
 
 ### 3. Modify Authing Configuration
 
 #### 3.1 Configure as Shown
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/19.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/19.avif)
 
 #### 3.2 Configure Login Control
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/7.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/7.avif)
 
 #### 3.3 Modify Permissions
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/8.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/8.avif)
 
 ### 4. Create a User and Test Login
 
@@ -149,15 +149,15 @@ Quick Overview
 > [!NOTE]
 > FlashDuty only supports user email association, so you need to use an email address to create a user
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/9.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/9.avif)
 
 #### 4.2 Test Login Using the SSO URL
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/20.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/20.avif)
 
 #### 4.3 The SSO URL Redirects to the Login Page
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/authing/11.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/11.avif)
 
 > [!NOTE]
 > Use the user created in Authing to log in to the FlashDuty console

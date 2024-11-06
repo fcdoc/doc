@@ -59,7 +59,7 @@ wget https://download.flashcat.cloud/flashduty/integration/zabbix/zbx_mediatype_
 - `zabbix_url`: Zabbix console address; copy it directly (if your page is configured with a tomcat/nginx forwarding path, include it as well). The system will append parameters like trigger_id to the path to generate the alert details page link
 - `HTTPProxy`: If your Zabbix Server cannot directly access the Flashduty service, set this parameter to a proxy address
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/zabbix/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/zabbix/1.avif" />
 
 4. Click Update to save the configuration
 
@@ -73,7 +73,7 @@ The media type must be associated with a user to send events. The user must have
 - Send To: Enter N/A
 - Keep other configurations as default
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/zabbix/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/zabbix/2.avif" />
 
 2. Click the Update button to exit the edit user page
 3. Click the Update button to exit the edit user page
@@ -95,8 +95,8 @@ Sending a notification is one of the operations performed by the action ( action
 - Click the Add button to complete the configuration of this configuration item
 - Repeat the above steps to complete the configuration of `Recovery operations` and `Update operations`
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/zabbix/3.avif" />
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/zabbix/4.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/zabbix/3.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/zabbix/4.avif" />
 
 #### Step 4: Send events to Flashduty
 
@@ -105,7 +105,7 @@ Log in to the Zabbix console, select `Monitoring > Problems` to view the latest 
 1. Find the corresponding Flashduty log. If the Status is Sent, it means the notification was successful. Otherwise, troubleshoot the cause based on the prompts
 2. Find the corresponding Flashduty log. If the Status is `Sent`, the notification was successful. Otherwise, troubleshoot based on the prompts
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/zabbix/5.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/zabbix/5.avif" />
 
 3. Return to the integration list. If the latest event time is displayed, the configuration is successful and the event has been received
 4. Finish
@@ -126,7 +126,7 @@ Log in to the Zabbix console, select `Monitoring > Problems` to view the latest 
 - **Zabbix Console address** , just copy it directly (if your page is configured with tomcat/nginx path, please bring it with you at the same time), which is used to generate alert details page connection. If it is not empty, keep it in the fourth parameter
 - `HTTPProxy`: If your Zabbix Server cannot directly access the Flashduty service, set this parameter to a proxy address. If not applicable, leave it empty and keep it as the fifth parameter
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/zabbix/6.avif"/>
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/zabbix/6.avif"/>
 
 3. `Script name`: Enter `send-to-flashduty.sh`
 4. Click Update to save the configuration
@@ -157,7 +157,7 @@ The media type must be associated with a user to send events. The user must have
 - Send To: Enter N/A
 - Keep other configurations as default
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/zabbix/7.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/zabbix/7.avif" />
 
 2. Click the Update button to exit the edit user page
 3. Click the Update button to exit the edit user page
@@ -179,7 +179,7 @@ Sending a notification is one of the operations performed by the action ( action
 - Click the Add button to complete the configuration of this configuration item
 - Repeat the above steps to complete the configuration of `Recovery operations` and `Update operations`
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/zabbix/8.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/zabbix/8.avif" />
 
 3. Select `Operations` to update the notification content configuration of the three scenarios respectively:
 
@@ -193,7 +193,7 @@ Sending a notification is one of the operations performed by the action ( action
 
 - Repeat the above steps to complete the configuration of `Recovery operations` and `Update operations`
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/zabbix/9.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/zabbix/9.avif" />
 
 #### Step 4: Send events to Flashduty
 
@@ -202,7 +202,7 @@ Log in Zabbix Console, select Monitoring > Problems to view the latest alert lis
 1. Find the corresponding Flashduty log. If the Status is Sent, it means the notification was successful. Otherwise, troubleshoot the cause based on the prompts
 2. Find the corresponding log of Flashduty. If Status is Sent, it means the notification is successful. Otherwise, troubleshoot the cause according to the prompts
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/zabbix/10.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/zabbix/10.avif" />
 
 3. Return to the integration list. If the latest event time is displayed, the configuration is successful and the event has been received
 4. Finish

@@ -1,10 +1,10 @@
 @font-face {
   font-family: "F";
-  src: url(//p.3ti.site/ico1.woff2) format("woff2");
+  src: url(//p.i18n.site/ico1.woff2) format("woff2");
 }
 
 #Ft>b>a.site {
   background: none 50% / contain no-repeat;
   /* muse write this, for overwrite linear-gradient(0, #f40, #f90)*/
-  background-image: url(//fcimg.3ti.site/i.svg) !important;
+  background-image: url(//fcimg.i18n.site/i.svg) !important;
 }

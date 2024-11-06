@@ -222,7 +222,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 
 如下图所示：
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/template/1.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/template/1.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
 如果您期望仅展示关键标签信息，可以参照下边的代码段：
 
@@ -264,7 +264,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 
 如下图所示：
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/template/2.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/template/2.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
 如果您期望仅展示关键标签信息，可以参照下边的代码段：
 
@@ -324,7 +324,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 
 如下图所示：
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/template/3.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/template/3.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
 **注意，企业微信限制了卡片长度，在模板渲染区域，您最多可以渲染不超过 8 行内容，超过 8 行的部分将被隐藏**
 
@@ -340,7 +340,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 
 如下图所示：
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/template/4.avif" alt="drawing" style="display: block; margin: 0 auto;" width="600"/>
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/template/4.avif" alt="drawing" style="display: block; margin: 0 auto;" width="600"/>
 
 如果您期望仅展示关键标签信息，可以参照下边的代码段：
 
@@ -382,7 +382,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 
 如下图所示：
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/template/5.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/template/5.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
 
 如果您期望仅展示关键标签信息，可以参照下边的代码段：
 
@@ -424,7 +424,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 
 如下图所示：
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/template/5.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/template/5.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
 
 如果您期望仅展示关键标签信息，可以参照下边的代码段：
 
@@ -689,7 +689,7 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 <body data-id="__react-email-body" style="background-color:rgb(255,255,255);border-radius:0.25rem;margin-top:2.5rem;margin-bottom:2.5rem;margin-left:auto;margin-right:auto;padding:1rem;min-width:400px;max-width:660px;font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji">
 <div style="width:100%;height:0.375rem;margin-bottom:2rem" class="bg-{{.IncidentSeverity}}"></div>
 <div style="display:flex;align-items:center;margin-bottom:1.5rem">
-<div style="display:flex;align-items:flex-end;gap:1rem"><img witdh="120" data-id="react-email-img" src="https://fcimg.3ti.site/zh/flashduty/conf/template/6.avif" height="40" style="display:block;outline:none;border:none;text-decoration:none" /><span style="font-size:1.25rem;line-height:1.75rem;font-weight:600">您有故障待处理</span></div>
+<div style="display:flex;align-items:flex-end;gap:1rem"><img witdh="120" data-id="react-email-img" src="https://fcimg.i18n.site/zh/flashduty/conf/template/6.avif" height="40" style="display:block;outline:none;border:none;text-decoration:none" /><span style="font-size:1.25rem;line-height:1.75rem;font-weight:600">您有故障待处理</span></div>
 </div>
 <div style="background-color:rgb(243,244,246);padding:2rem;margin-top:1rem;border-radius:0.5rem">
 <div style="display:flex;flex-direction:column;gap:0.75rem">
@@ -752,4 +752,4 @@ CloseTime | int64 | 否 | 关闭时间，EndTime 为告警恢复时间，CloseTi
 
 如下图所示：
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/template/7.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/template/7.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>

@@ -2,7 +2,7 @@
 brief: Flashduty, **an enterprise-level one-stop alert response platform**. We help developers, DevOps, operations, and business leaders speed up alert response, improve product experience, and reduce incident losses.
 ---
 
-<h1 style="display:flex;justify-content:space-between" id="H0">Flashduty ⋅ Alert Response Platform<img src="https://fcimg.3ti.site/i.svg" style="user-select:none;margin-top:-1px;width:42px"></h1>
+<h1 style="display:flex;justify-content:space-between" id="H0">Flashduty ⋅ Alert Response Platform<img src="https://fcimg.i18n.site/i.svg" style="user-select:none;margin-top:-1px;width:42px"></h1>
 
 ## What is Flashduty?
 
@@ -26,11 +26,11 @@ We help developers, DevOps, operations, and business leaders speed up alert resp
 ## How to Contact Us?
 **Scan the QR code to add technical support enterprise WeChat to get technical support**:
 
-<img src="https://fcimg.3ti.site/zh/flashduty/start/overview/1.avif" alt="drawing" width="200">
+<img src="https://fcimg.i18n.site/zh/flashduty/start/overview/1.avif" alt="drawing" width="200">
 
 **Scan the QR code to add the business manager’s enterprise WeChat to get business support**:
 
-<img src="https://fcimg.3ti.site/zh/flashduty/start/overview/2.avif" alt="drawing" width="200">
+<img src="https://fcimg.i18n.site/zh/flashduty/start/overview/2.avif" alt="drawing" width="200">
 
 **Console Feedback**:
 

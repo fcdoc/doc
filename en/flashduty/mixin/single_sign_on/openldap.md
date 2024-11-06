@@ -100,14 +100,14 @@ Visit http://ip:8088/ in the browser and log in using the username cn=admin,dc=f
 ## OpenLDAP Configuration
 ### Add Groups and Users
 
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/openldap/1.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/openldap/1.avif)
 
 > [!NOTE]
 > In **the user path** (for example, cn = falsh duty ) under ou = people in the picture above -> `Add new attribute` -> Select `Email` to add Email attributes to the user. If it already exists, please ignore it.
 
 ## FlashDuty Integration
 Based on the above OpenLDAP configuration, the FlashDuty integration information is shown in the figure below:
-![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/openldap/2.avif)
+![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/openldap/2.avif)
 
 > [!NOTE]
 > For the meaning and description of the above fields, please refer to [Configuring Single Sign-On](/feature/single_sign_on)

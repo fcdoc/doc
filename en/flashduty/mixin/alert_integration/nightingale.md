@@ -63,7 +63,7 @@ Batch select alert rules and configure the webhook.
 2. Select the alert rules you want to import in batches, and select batch update alert rules in the upper right corner
 3. In the pop-up window, select the "Callback Address" field and enter the integrated push address in the new input box, as shown in the figure below:
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/nightingale/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/nightingale/1.avif" />
 
 4. Return to the integration list. If the latest event time is displayed, the configuration is successful and the event has been received
 5. Finish
@@ -78,7 +78,7 @@ Nightingale supports configuring a global webhook address in the page or configu
 2. Enter __ System Configuration - Notification Settings - Callback Address __ page
 3. As shown in the figure below, enable a new webhook and enter the integrated push address in the `URL` field
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/nightingale/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/nightingale/2.avif" />
 
 4. Finish
 

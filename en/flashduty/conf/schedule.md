@@ -19,7 +19,7 @@ Duty rules are one of the core components of an enterprise's internal management
 - Duty rules combined with shift adjustment rules form the final duty rules.
 - The final duty schedule can be viewed from a timeline or calendar perspective.
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/schedule/1.avif" style="display: block; margin: 0 auto;" height="500">
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/schedule/1.avif" style="display: block; margin: 0 auto;" height="500">
 
 ### Edit Rules
 #### 1. Create
@@ -49,7 +49,7 @@ Duty rules are one of the core components of an enterprise's internal management
 
 - Rules/Effects:
 
-![](https://fcimg.3ti.site/zh/flashduty/conf/schedule/2.avif)
+![](https://fcimg.i18n.site/zh/flashduty/conf/schedule/2.avif)
 
 ### Combined Shift Scheduling
 - Requirements Overview:
@@ -60,8 +60,8 @@ Duty rules are one of the core components of an enterprise's internal management
 
 - Rule Display:
 
-![](https://fcimg.3ti.site/zh/flashduty/conf/schedule/3.avif)
+![](https://fcimg.i18n.site/zh/flashduty/conf/schedule/3.avif)
 
 - Effect Display:
 
-![](https://fcimg.3ti.site/zh/flashduty/conf/schedule/4.avif)
+![](https://fcimg.i18n.site/zh/flashduty/conf/schedule/4.avif)

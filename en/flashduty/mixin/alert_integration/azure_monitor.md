@@ -42,14 +42,14 @@ When you need to route alert events to different collaboration spaces based on t
 4. Fill in the name, copy the `URI` part and paste it into the integration push address, and ensure to `Enable` the common alert structure;
 5. Click the Create button to submit and save.
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/azure_monitor/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/azure_monitor/1.avif" />
 
 **Step 2: Configure Alert Rule**
 
 1. Enter the `Alerts -> Alert rules` page, click Create or select an existing strategy to edit;
 2. As shown in the figure, on the `Actions` page, select the created Action group;
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/azure_monitor/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/azure_monitor/2.avif" />
 
 3. Submit and save, and wait for the alert to trigger.
 

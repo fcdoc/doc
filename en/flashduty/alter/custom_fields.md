@@ -14,15 +14,15 @@ With custom fields, you can add custom metadata, record specific incident-relate
 
 - **Flexible Definition**: You can create multiple custom fields as needed and define the field names, types, options, and default values. Common custom field types include text, drop-down lists, and checkboxes.
 
-![](https://fcimg.3ti.site/zh/flashduty/alter/custom_fields/1.avif)
+![](https://fcimg.i18n.site/zh/flashduty/alter/custom_fields/1.avif)
 
 - **Information Association**: Through custom fields, you can associate incidents with other related data. For example, you can add custom fields to identify affected systems, geographic locations, associated customers, or whether it is a false positive.
 
-![](https://fcimg.3ti.site/zh/flashduty/alter/custom_fields/2.avif)
+![](https://fcimg.i18n.site/zh/flashduty/alter/custom_fields/2.avif)
 
 - **Filtering and Categorization**: The incident list supports filtering and categorizing views based on custom fields. You can create common filters based on the values of custom fields to better organize and handle incidents.
 
-![](https://fcimg.3ti.site/zh/flashduty/alter/custom_fields/3.avif)
+![](https://fcimg.i18n.site/zh/flashduty/alter/custom_fields/3.avif)
 
 ## Configure Custom Fields
 

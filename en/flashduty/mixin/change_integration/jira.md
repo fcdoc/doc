@@ -33,7 +33,7 @@ This article is applicable to **Jira Cloud and on-premises** versions.
 4. Optionally, you can fill in a JQL query to further narrow down the scope of events to be synchronized (e.g., specific projects)
 5. Click the Save button to submit the configuration
 
-<img alt="drawing" src="https://fcimg.3ti.site/zh/flashduty/mixin/change_integration/jira/1.avif" />
+<img alt="drawing" src="https://fcimg.i18n.site/zh/flashduty/mixin/change_integration/jira/1.avif" />
 
 5. Finish
 

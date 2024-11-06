@@ -27,7 +27,7 @@ Each alert event in the integration center has a tag enhancement configuration o
 - **Mapping:** This involves generating new key-value pairs from the source key values in the system through mapping relationships. You need to [create a schema](https://developer.flashcat.cloud/api-142409927) and [upload metadata](https://developer.flashcat.cloud/api-145679479) in advance to configure this. For specific configuration, refer to the configuration examples below.
 - **Deletion:** Delete the tag with the specified name. If the tag to be deleted does not exist, the operation will be invalid.
 
-![](https://fcimg.3ti.site/zh/flashduty/conf/label_enrichment/1.avif)
+![](https://fcimg.i18n.site/zh/flashduty/conf/label_enrichment/1.avif)
 
 ### Configuration Instructions
 
@@ -36,7 +36,7 @@ Each alert event in the integration center has a tag enhancement configuration o
 
 - **Preview:** After configuring the rules, you can preview the results to visually observe the effect of the rule configuration.
 
-![](https://fcimg.3ti.site/zh/flashduty/conf/label_enrichment/2.avif)
+![](https://fcimg.i18n.site/zh/flashduty/conf/label_enrichment/2.avif)
 
 > [!NOTE]
 > Multiple tag rules can be configured. If there are multiple rules, they will be executed in order from top to bottom. When any of the rules does not match, the corresponding tag will not be generated/deleted, and there will be no prompt message.
@@ -46,27 +46,27 @@ Each alert event in the integration center has a tag enhancement configuration o
 **Scenario:** The alert event comes from email integration, and key information needs to be extracted from the description to be used as tags in other scenarios, such as extracting the IP and trigger value from the description as independent tags.
 #### 1.1 Alert Original Text
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/label_enrichment/3.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/label_enrichment/3.avif" style="display: block; margin: 0 auto;" width="500">
 
 #### 1.2 Extraction Rules
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/label_enrichment/4.avif" style="display: block; margin: 0 auto;"  width="500">
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/label_enrichment/4.avif" style="display: block; margin: 0 auto;"  width="500">
 
 #### 1.3 Extraction Effect
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/label_enrichment/5.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/label_enrichment/5.avif" style="display: block; margin: 0 auto;" width="500">
 
 ### 2. **Tag Combination**
 **Scenario:** The company's log platform can directly access log details through the domain name + event ID + timestamp, but the alert information only contains the event ID and timestamp tags. Therefore, you need to combine this information into an access URL.
 #### 2.1 Alert Original Text
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/label_enrichment/6.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/label_enrichment/6.avif" style="display: block; margin: 0 auto;" width="500">
 
 #### 2.2 Combination Rules
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/label_enrichment/7.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/label_enrichment/7.avif" style="display: block; margin: 0 auto;" width="500">
 
 #### 2.3 Combination Effect
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/label_enrichment/8.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/label_enrichment/8.avif" style="display: block; margin: 0 auto;" width="500">
 
 ### 3. **Tag Mapping**
 **Scenario:** When the tag values in the source alert information are not fixed and their meanings cannot be intuitively determined, you can use mapping to map the source tags to new defined tags and values. For example, if the source alert only contains resource type ID information, but you want to reflect the corresponding resource type names for each ID, this can be achieved through mapping.
@@ -119,15 +119,15 @@ curl --location --request POST 'https://api.flashcat.cloud/enrichment/mapping/da
 
 #### 3.3 Configure Mapping Relationship
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/label_enrichment/9.avif" style="display: block; margin: 0 auto;"  width="500">
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/label_enrichment/9.avif" style="display: block; margin: 0 auto;"  width="500">
 
 ##### 3.3.1 Alert Original Text
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/label_enrichment/10.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/label_enrichment/10.avif" style="display: block; margin: 0 auto;" width="500">
 
 ##### 3.3.2 Mapping Effect
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/label_enrichment/11.avif" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/label_enrichment/11.avif" style="display: block; margin: 0 auto;" width="500">
 
 > [!NOTE]
 > If you do not want the source tag to still exist, you can use the deletion rule to remove it.

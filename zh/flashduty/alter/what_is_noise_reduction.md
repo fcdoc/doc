@@ -26,7 +26,7 @@ brief: 理解Flashduty如何针对告警进行降噪
 4. Flashduty依据分派策略进行人员分派，并通知
 5. 人员收到通知，开始处理故障
 
-![](https://fcimg.3ti.site/zh/flashduty/alter/what_is_noise_reduction/1.avif)
+![](https://fcimg.i18n.site/zh/flashduty/alter/what_is_noise_reduction/1.avif)
 
 ## 设置告警聚合
 
@@ -40,7 +40,7 @@ brief: 理解Flashduty如何针对告警进行降噪
 - 风暴预警：故障触发后，系统将立即分派并通知（假设您没有设置延迟通知），随后持续合入新的告警，但不会触发新的通知，这会导致您无法及时感知到告警风暴。因此我们提供此阈值，当合入告警数量达到阈值，系统将触发风暴预警，提醒您加急处理。
 - 预览：您可使用预览功能，拉取最近发生的事件，并实时渲染降噪结果，以此评估降噪效果
 
-<img src="https://fcimg.3ti.site/zh/flashduty/alter/what_is_noise_reduction/2.avif" style="display: block; margin: 0 auto;" height="400">
+<img src="https://fcimg.i18n.site/zh/flashduty/alter/what_is_noise_reduction/2.avif" style="display: block; margin: 0 auto;" height="400">
 
 ## 查看聚合示例
 
@@ -65,7 +65,7 @@ brief: 理解Flashduty如何针对告警进行降噪
 - 点击告警标题，您可以查看关联告警的详情，包括告警的时间线和关联事件
 - 点击事件点，您可以查看事件上报的具体内容，包括标签和描述
 
-![](https://fcimg.3ti.site/zh/flashduty/alter/what_is_noise_reduction/3.avif)
+![](https://fcimg.i18n.site/zh/flashduty/alter/what_is_noise_reduction/3.avif)
 
 ## 常见问题
 

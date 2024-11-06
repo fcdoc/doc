@@ -26,7 +26,7 @@ An incident can be triggered in two ways: manual creation and automatic triggeri
 4. Flashduty assigns personnel according to the dispatch strategy and notifies them
 5. The personnel receive the notification and begin to handle the incident
 
-![](https://fcimg.3ti.site/zh/flashduty/alter/what_is_noise_reduction/1.avif)
+![](https://fcimg.i18n.site/zh/flashduty/alter/what_is_noise_reduction/1.avif)
 
 ## Set Alert Aggregation
 
@@ -40,7 +40,7 @@ Go to [Collaboration Space Details] - [ Alert reduction], you can set the **aler
 - Storm Warning: After an incident is triggered, the system will dispatch and notify immediately (assuming you do not set a delay notification). Subsequently, it will continue to merge new alerts, but no new notifications will be triggered, which can cause you to miss an alert storm. Therefore, we provide this threshold. When the number of merged alerts reaches the threshold, the system will trigger a storm warning to remind you to expedite processing.
 - Preview: You can use the preview function to pull recent events and render the noise reduction results in real time to evaluate the noise reduction effect
 
-<img src="https://fcimg.3ti.site/zh/flashduty/alter/what_is_noise_reduction/2.avif" style="display: block; margin: 0 auto;" height="400">
+<img src="https://fcimg.i18n.site/zh/flashduty/alter/what_is_noise_reduction/2.avif" style="display: block; margin: 0 auto;" height="400">
 
 ## See Aggregation Examples
 
@@ -65,7 +65,7 @@ We can see the final [Incident-Alert-Event] correlation through the incident det
 - Click the alert title to view the details of the associated alert, including the alert timeline and related events
 - Click the event point to view the specific content of the event report, including labels and descriptions
 
-![](https://fcimg.3ti.site/zh/flashduty/alter/what_is_noise_reduction/3.avif)
+![](https://fcimg.i18n.site/zh/flashduty/alter/what_is_noise_reduction/3.avif)
 
 ## Frequently Asked Questions
 

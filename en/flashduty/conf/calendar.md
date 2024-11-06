@@ -15,14 +15,14 @@ brief: By configuring the service calendar, you can manage allocation policies a
 - After configuring management team members for the calendar, those team members will have full permissions for the calendar.
 - The newly created calendar defaults to all working days. It is generally recommended to directly associate it with national holidays to automatically obtain holiday schedules, eliminating the need for manual marking. Even after association, manual adjustments are still supported as needed.
 
-![Service Calendar](https://fcimg.3ti.site/zh/flashduty/conf/calendar/1.avif)
+![Service Calendar](https://fcimg.i18n.site/zh/flashduty/conf/calendar/1.avif)
 
 ## Edit Calendar
 - Only the creator and team members have edit permissions for the calendar; other members have read-only access.
 - Basic information can be modified, such as the calendar name, description, and management team.
 - Rest days can be quickly marked based on the day of the week.
 
-![](https://fcimg.3ti.site/zh/flashduty/conf/calendar/2.avif)
+![](https://fcimg.i18n.site/zh/flashduty/conf/calendar/2.avif)
 
 > [!WARN]
 > Deleted calendars cannot be recovered. Please ensure that no business is using the calendar before deleting it.

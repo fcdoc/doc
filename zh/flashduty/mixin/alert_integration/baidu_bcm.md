@@ -39,7 +39,7 @@ brief: 通过 webhook 的方式同步百度云 BCM 告警事件到 Flashduty，�
 3. 进入 __报警管理-报警策略__ 页面，选择编辑已有或创建新的报警策略
 4. 报警策略中 __回调地址__ 一栏，填写集成的推送地址（当前页面填写集成名称，保存后即可生成地址）
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/baidu_bcm/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/baidu_bcm/1.avif" />
 
 5. 完成
 

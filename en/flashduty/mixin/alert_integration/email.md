@@ -60,7 +60,7 @@ Configuration Example:
 - Receive all emails. When the email content contains the word **RESOLVED**, close the alert; otherwise, trigger a new alert
 - The Alert Key is extracted from the email subject, with the rule being **/(.\*)/**.
 
-<img src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/email/1.avif" alt="drawing" width="800"/>
+<img src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/email/1.avif" alt="drawing" width="800"/>
 
 ### Things to Note
 

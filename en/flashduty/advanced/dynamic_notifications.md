@@ -48,7 +48,7 @@ The parameter format is as follows:
 
 Configure a dispatch policy for the collaboration space. As shown in the figure below, this space only sets one dispatch link, with the dispatch object being Toutie Technology, and the WeChat group chat token ending in 5b96.
 
-![](https://fcimg.3ti.site/zh/flashduty/advanced/dynamic_notifications/1.avif)
+![](https://fcimg.i18n.site/zh/flashduty/advanced/dynamic_notifications/1.avif)
 
 ### Set Labels for Alert
 
@@ -80,7 +80,7 @@ curl --location --request POST 'https://api.flashcat.cloud/event/push/alert/stan
 
 As shown in the figure below, the target incident is triggered and dispatched normally. The dispatchers and target group chats have been replaced as expected.
 
-![](https://fcimg.3ti.site/zh/flashduty/advanced/dynamic_notifications/2.avif)
+![](https://fcimg.i18n.site/zh/flashduty/advanced/dynamic_notifications/2.avif)
 
 ## Frequently Asked Questions
 

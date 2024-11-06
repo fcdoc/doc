@@ -41,7 +41,7 @@ When you need to route alert events to different collaboration spaces based on t
 3. As shown in the figure, select **POST** for **Request Method** and fill in the integrated push address for **Address**
 4. Click the Confirm button to submit the update
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/aliyun_cm_event/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/aliyun_cm_event/1.avif" />
 
 **Step 2: Add Subscription Policy**
 
@@ -51,7 +51,7 @@ When you need to route alert events to different collaboration spaces based on t
 4. Click the Confirm button to submit the update
 5. The figure below shows the subscription results for two types of events: threshold and system
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/aliyun_cm_event/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/aliyun_cm_event/2.avif" />
 
 ## Status Comparison
 

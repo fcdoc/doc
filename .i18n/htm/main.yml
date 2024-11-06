@@ -11,7 +11,7 @@ cdn:
   v:
     # - v.i18n.site
     # - v.ok0.pw
-    # - v.3ti.site
+    # - v.i18n.site
 
   jsd:
     # - cdn.jsdmirror.cn/npm

@@ -43,7 +43,7 @@ When you need to route alert events to different collaboration spaces based on t
 5. In the notification template, input: `$alertmanager_content`
 6. Click the Confirm button to submit and save.
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/aliyun_arms/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/aliyun_arms/1.avif" />
 
 **Step 2: Configure Notification Policies**
 
@@ -51,7 +51,7 @@ When you need to route alert events to different collaboration spaces based on t
 2. As shown in the figure below, on the **notification object** page, select the created **universal Webhook** object;
 3. Submit and save, and wait for the alert to trigger.
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/aliyun_arms/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/aliyun_arms/2.avif" />
 
 ## Status Comparison
 

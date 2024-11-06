@@ -27,7 +27,7 @@ Common usage scenarios for custom actions:
 
 After creation, you can see the operation button under [Incident Details - More Operations] in the corresponding space. Click the button and the system will prompt you with the operation result. If the operation is successful, the system will write the operation record.
 
-![](https://fcimg.3ti.site/zh/flashduty/alter/custom_actions/1.avif)
+![](https://fcimg.i18n.site/zh/flashduty/alter/custom_actions/1.avif)
 
 ### How to Implement a Webhook?
 

@@ -42,7 +42,7 @@ When you need to route alert events to different collaboration spaces based on t
 4. `Severity` is the severity level; select as needed;
 5. Submit and save
 
-<img alt="drawing" width="400" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/uptime_kuma/1.avif" />
+<img alt="drawing" width="400" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/uptime_kuma/1.avif" />
 
 **Step 2: Configure monitoring items**
 
@@ -51,7 +51,7 @@ When you need to route alert events to different collaboration spaces based on t
 3. If you need to set labels, you can add `Tags`. Note that only labels with both Key/Value pairs will be pushed to FlashDuty;
 4. Submit and save, and wait for the alert to trigger.
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/uptime_kuma/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/uptime_kuma/2.avif" />
 
 ## Status Comparison
 

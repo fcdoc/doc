@@ -44,19 +44,19 @@ When you need to route alert events to different collaboration spaces based on t
 4. Enter a Title and Description.
 5. Notification Type Select **HTTP Notification** as shown below.
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/graylog/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/graylog/1.avif" />
 
 6. Enter the URL obtained from FlashDuty (you need to whitelist the URL the first time you enter it).
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/graylog/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/graylog/2.avif" />
 
 7. Click Save to save the whitened URL
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/graylog/3.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/graylog/3.avif" />
 
 8. After saving, submit Create.
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/graylog/4.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/graylog/4.avif" />
 
 ### Step 2: Use FlashDuty Alert Channel in Alert Event
 1. Create or edit an existing Event Definition.
@@ -66,7 +66,7 @@ When you need to route alert events to different collaboration spaces based on t
 5. Click Done.
 6. Complete the next step.
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/graylog/5.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/graylog/5.avif" />
 
 ## Status Comparison
 

@@ -10,19 +10,19 @@ By integrating third-party enterprise WeChat applications, the ability to receiv
 
 1. Visit [企业微信管理后台](https://work.weixin.qq.com/wework_admin/frame#apps) - __Application Management__ - __Third Party__, and select to add a third-party application
 
-<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/wecom/1.avif" alt="drawing" width="400"/>
+<img src="https://fcimg.i18n.site/zh/flashduty/mixin/instant_messaging/wecom/1.avif" alt="drawing" width="400"/>
 
 2. Enter `flashduty` in the search bar, find the application, and click the __Add__ button
 
-<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/wecom/2.avif" alt="drawing" width="400"/>
+<img src="https://fcimg.i18n.site/zh/flashduty/mixin/instant_messaging/wecom/2.avif" alt="drawing" width="400"/>
 
 3. Modify the __Visible Scope__ of the application. We recommend setting it to all employees or specific department nodes to prevent the need to modify the scope when new members are added. Click __Agree to the Above Authorization and Add__ to complete the installation
 
-<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/wecom/3.avif" alt="drawing" width="400"/>
+<img src="https://fcimg.i18n.site/zh/flashduty/mixin/instant_messaging/wecom/3.avif" alt="drawing" width="400"/>
 
 4. Visit [企业微信管理后台](https://work.weixin.qq.com/wework_admin/frame#apps) - __My Enterprise__ page, copy the __Enterprise ID__ and use it as the `Corp ID` on the current page. Fill it into the integration configuration and click Save to complete the integration configuration
 
-<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/wecom/4.avif" alt="drawing" width="400"/>
+<img src="https://fcimg.i18n.site/zh/flashduty/mixin/instant_messaging/wecom/4.avif" alt="drawing" width="400"/>
 
 5. **Please note: As an enterprise WeChat service provider, Flashduty offers you a long-term free version of the `FlashDuty` application. This application requires an enterprise WeChat interface call license to use (password-free login + message sending). This license currently supports a __maximum of 60 days__ for free. After this period, we must purchase an enterprise WeChat license for you to continue using it.**
 
@@ -45,7 +45,7 @@ By integrating third-party enterprise WeChat applications, the ability to receiv
 - Enter the details page of a certain collaboration space - Dispatch Strategy. In the personal channel section, select Notification to Enterprise WeChat integration to complete the notification configuration
 - It supports customizing the content of enterprise WeChat notifications. You can go to the template management page to set a custom template. Note: **The maximum number of display lines in the custom area is 8. If it exceeds this limit, it will be truncated by Enterprise WeChat.**
 
-<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/wecom/5.avif" alt="drawing" width="400"/>
+<img src="https://fcimg.i18n.site/zh/flashduty/mixin/instant_messaging/wecom/5.avif" alt="drawing" width="400"/>
 
 4. **How to handle alerts in WeChat?**
 

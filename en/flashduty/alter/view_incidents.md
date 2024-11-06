@@ -10,7 +10,7 @@ Connect all alert events of the company to Flashduty to view and process alerts 
 
 Flashduty provides two entrances to view the incident list. One is within the collaboration space, and the other is under the incident management menu. The difference is that under the Incident management menu, you can see incidents from multiple collaboration spaces, or even all incidents in the company.
 
-![](https://fcimg.3ti.site/zh/flashduty/alter/view_incidents/1.avif)
+![](https://fcimg.i18n.site/zh/flashduty/alter/view_incidents/1.avif)
 
 1. **Assigned Personnel**: By default, the focus is on incidents **assigned to me**. You can switch to view incidents under the entire account.
 2. **Processing Progress**: Filter incidents by processing progress. The default is **all**.
@@ -28,7 +28,7 @@ Flashduty provides two entrances to view the incident list. One is within the co
 
 Aggregate views provide a different perspective on incidents, allowing you to define different aggregation dimensions. The essence of aggregation dimensions is real-time Group By, such as aggregating by severity.
 
-![](https://fcimg.3ti.site/zh/flashduty/alter/view_incidents/2.avif)
+![](https://fcimg.i18n.site/zh/flashduty/alter/view_incidents/2.avif)
 
 > [!TIP]
 > To improve performance, in the aggregate view, the system can match up to **100** pieces of data for aggregation. Therefore, the list page you see may not contain all matching data. If this is a concern, switch to list view.
@@ -55,7 +55,7 @@ Under the **Settings** tab, select or turn off the display of the following cont
 
 Incident details are the main entry point for investigating incidents, displaying all the information we can gather. Especially on the incident overview page, Flashduty focuses on the information you need most.
 
-![](https://fcimg.3ti.site/zh/flashduty/alter/view_incidents/3.avif)
+![](https://fcimg.i18n.site/zh/flashduty/alter/view_incidents/3.avif)
 
 1. **Key Information**: Incident title, severity, processing progress, ID number, collaboration space, duration, etc.
 2. **Details**: Incident description, impact, and tags. The description and impact support Markdown.

@@ -40,8 +40,8 @@ Select alert rules and configure webhooks one by one.
 3. Click the Save button to save the alert rule
 4. Repeat steps 2 and 3 for all alert rule templates that need to send events
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/open_falcon/1.avif" />
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/open_falcon/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/open_falcon/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/open_falcon/2.avif" />
 
 Similarly, the same push address can be configured for Expressions alert rules.
 

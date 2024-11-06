@@ -48,7 +48,7 @@ a.logo {
 }
 
 a.logo:before {
-  background: url(//fcimg.3ti.site/i.svg) 0 0 / 30px no-repeat;
+  background: url(//fcimg.i18n.site/i.svg) 0 0 / 30px no-repeat;
   position: absolute;
   content: "";
   width: 34px;

@@ -39,7 +39,7 @@ When you need to route alert events to different collaboration spaces based on t
 2. Click the alert rule that needs to synchronize events, enter the Alert Rule Builder page, and start editing the rules
 3. In the Alert Handlers section, select Add Another Handler, select post as the type, and fill in the integrated push address for HTTP endpoint, as shown in the figure below:
 
-![influxdb-alert-rule](https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/influxdata/1.avif)
+![influxdb-alert-rule](https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/influxdata/1.avif)
 
 4. Click the Save Rule button to save. Wait for the event to be triggered. If the latest event time is displayed in the integration list, it means the configuration is successful and the event is received
 5. Finish

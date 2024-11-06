@@ -18,7 +18,7 @@ brief: 查阅历史相似故障解决办法，快速处理新故障
 1. 从故障列表或协作空间，找到一条需要处理的故障；
 2. 点击故障标题，进入故障详情，在详情中选择**历史故障**标签页。
 
-![](https://fcimg.3ti.site/zh/flashduty/alter/past_incidents/1.avif)
+![](https://fcimg.i18n.site/zh/flashduty/alter/past_incidents/1.avif)
 
 系统会至多给出5条相似的历史故障，以避免信息太多导致您查阅辨识浪费更多时间。
 

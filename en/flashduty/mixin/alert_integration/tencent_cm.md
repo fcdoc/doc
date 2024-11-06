@@ -40,11 +40,11 @@ When you need to route alert events to different collaboration spaces based on t
 3. Fill in the callback address as the integrated push address, and select the notification language English
 4. Click the Save button to save the template
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/tencent_cm/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/tencent_cm/1.avif" />
 
 5. Enter the alert Configuration -> alert policy page, select the alert policy for all events to be sent, enter the details, and add the notification template created in the previous step
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/tencent_cm/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/tencent_cm/2.avif" />
 
 6. Return to the integration list. If the latest event time is displayed, the configuration is successful and the event has been received
 7. Finish

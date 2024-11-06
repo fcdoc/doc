@@ -18,7 +18,7 @@ Configuration path: **Collaboration space details => Noise reduction configurati
 - Weekly mode: You can choose to have it take effect every day or on specific days of the week.
 - Calendar mode: You need to create a [service calendar](/conf/calendar) in advance, and then it will take effect based on the working days or rest days in the calendar.
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/fault_silence_and_suppression/1.avif" style="display: block; margin: 0 auto;" width="800">
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/fault_silence_and_suppression/1.avif" style="display: block; margin: 0 auto;" width="800">
 
 ### Silence Conditions
 - **Condition configuration:** You can choose to match or not match based on the severity of the incident or incident tags and combination conditions.
@@ -35,7 +35,7 @@ Quick silence refers to quickly creating **temporary or single** silence rules o
 - **Effective time:** Only supports a single time range (default 24 hours). The rule will be automatically deleted after expiration and there will be no deletion record.
 - **Silence condition:** By default, the label of this incident is used as the condition, and it is an exact matching condition. You can go to [Configure filters](/conf/how_to_filter) to learn how to configure restrictions.
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/fault_silence_and_suppression/2.avif" style="display: block; margin: 0 auto;" width="800">
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/fault_silence_and_suppression/2.avif" style="display: block; margin: 0 auto;" width="800">
 
 > [!NOTE]
 > When entering and operating quick silence in the same incident details, the original rule is edited and no new rule is created.
@@ -60,4 +60,4 @@ You can go to [Configure filters](/conf/how_to_filter) to learn how to configure
 
 When there are Critical-level incidents of the same check item within 24 hours, the incidents of Warning and Info are suppressed.
 
-<img src="https://fcimg.3ti.site/zh/flashduty/conf/fault_silence_and_suppression/3.avif" style="display: block; margin: 0 auto;" width=800>
+<img src="https://fcimg.i18n.site/zh/flashduty/conf/fault_silence_and_suppression/3.avif" style="display: block; margin: 0 auto;" width=800>

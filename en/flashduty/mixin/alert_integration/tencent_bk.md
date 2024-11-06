@@ -44,7 +44,7 @@ Blue Whale alert strategies can trigger __processing packages__, which can be in
 2. Enter the __Configuration - Processing Packages__ page, click the __Add Package__ button to start creating a processing package
 3. Fill in the name as `Send To FlashDuty`, select __HTTP Callback__ as the package type, choose `POST` as the push method, and fill in the integration push address (obtained after saving the integration), as shown in the figure below:
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/tencent_bk/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/tencent_bk/1.avif" />
 
 4. Switch to the __Body__ tab, select `JSON` as the type, and copy the message body with the following information (when an alert is actually generated, Blue Whale will render the variable content as the Payload and push it to the target callback address):
 
@@ -59,7 +59,7 @@ Blue Whale alert strategies can trigger __processing packages__, which can be in
 1. Enter the __Configuration - Alert Policy__ page, select an existing policy to edit, or create a new alert policy
 2. Scroll down to the __Alert Processing__ section, select the `Send To FlashDuty` processing package in all three scenarios, and turn off the __Defense Rules__, as shown below:
 
-<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/tencent_bk/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/tencent_bk/2.avif" />
 
 3. Submit and save, and you are done
 4. Repeat the above steps for other alerts you want to push to FlashDuty.
