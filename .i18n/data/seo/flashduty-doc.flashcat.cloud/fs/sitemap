@@ -1,0 +1,83 @@
+@!$
+- flashduty:
+  - advanced:
+    - customize_incident_attrs.md#$STiex
+    - dynamic_notifications.md#$STiex
+    alter:
+    - custom_actions.md#$STiex
+    - custom_fields.md#$STiex
+    - edit_incidents.md#$STiex
+    - escalate_incidents.md#$STiex
+    - past_incidents.md#$STiex
+    - understand_novel_faults.md#$STiex
+    - view_incidents.md#$STiex
+    - what_is_incident.md#$STiex
+    - what_is_noise_reduction.md#$STiex
+    conf:
+    - alert_routings.md#$STiex
+    - calendar.md#$STiex
+    - channel.md#$STiex
+    - escalate_rule.md#$STiex
+    - fault_silence_and_suppression.md#$STiex
+    - how_to_filter.md#$STiex
+    - how_to_integrate_alerts.md#$STiex
+    - label_enrichment.md#$STiex
+    - noise_reduction.md#$STiex
+    - preference.md#$STiex
+    - schedule.md#$STiex
+    - template.md#$STiex
+    feature:
+    - permission.md#$STiex
+    - single_sign_on.md#$STiex
+    - teams_and_members.md#$STiex
+    license:
+    - privacy_policy.md#$STiex
+    - service_level.md#$STiex
+    - user.md#$STiex
+    mixin:
+    - alert_integration:
+      - Sentry.md#$STiex
+      - aliyun_arms.md#$STiex
+      - aliyun_cm_event.md#$STiex
+      - aliyun_cm_metric.md#$STiex
+      - aliyun_sls.md#$STiex
+      - aws_cloudwatch.md#$STiex
+      - azure_monitor.md#$STiex
+      - baidu_bcm.md#$STiex
+      - custom_alert.md#$STiex
+      - email.md#$STiex
+      - grafana.md#$STiex
+      - graylog.md#$STiex
+      - huawei_ces.md#$STiex
+      - influxdata.md#$STiex
+      - nightingale.md#$STiex
+      - oceanbase.md#$STiex
+      - open_falcon.md#$STiex
+      - pagerduty.md#$STiex
+      - prometheus.md#$STiex
+      - skywalking.md#$STiex
+      - tencent_bk.md#$STiex
+      - tencent_cls.md#$STiex
+      - tencent_cm.md#$STiex
+      - tencent_event_bridge.md#$STiex
+      - uptime_kuma.md#$STiex
+      - zabbix.md#$STiex
+      change_integration:
+      - custom_change.md#$STiex
+      - jira.md#$STiex
+      instant_messaging:
+      - dingtalk.md#$STiex
+      - lark.md#$STiex
+      - microsoft_teams.md#$STiex
+      - slack.md#$STiex
+      - wecom.md#$STiex
+      single_sign_on:
+      - authing.md#$STiex
+      - keycloak.md#$STiex
+      - openldap.md#$STiex
+    start:
+    - comparison_to_alternatives.md#$STiex
+    - frequently_asked_questions.md#$STiex
+    - getting_started.md#$STiex
+    - overview.md#$STiex
+  - README.md#$STiex
