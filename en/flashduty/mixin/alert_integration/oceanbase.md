@@ -7,7 +7,7 @@ brief: Synchronize OceanBase alert events to Flashcat via webhook to achieve aut
 Synchronize OceanBase alert events to Flashcat via webhook to achieve automated noise reduction processing of alert events
 
 ## In Flashduty
-You can obtain an integrated push address through the following two methods; choose either one.
+You can obtain an integration push address through the following two methods. Choose either one.
 
 ### Use Proprietary Integration
 
@@ -18,19 +18,19 @@ When you do not need to route alert events to different collaboration spaces, th
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
     3. Select **OceanBase** integration, click **Save**, and generate a card.
-    4. Click on the generated card to view the **push address**, copy it for later use, and complete.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the setup.
 
 ### Use Shared Integration
 
-When you need to route the alert events to different collaboration spaces based on the payload information, this method is preferred.
+When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and go to the integration selection page.
     2. Choose **OceanBase** integration:
     - **Integration Name**: Define a name for the current integration.
     3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set a default collaboration space as a fallback, and adjust it as needed later.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust as needed.
     5. Complete.
 
 ## In OceanBase
@@ -43,7 +43,7 @@ When you need to route the alert events to different collaboration spaces based 
 3. Select **Custom Script** for the channel type.
 4. The basic configuration content is as shown in the figure below:
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/oceanbase/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/oceanbase/1.avif" />
 
 5. Copy the following script content in the configuration channel, and **please add the integration_key parameter in the script with the integration_key value in the FlashDuty address** .
 
@@ -155,31 +155,31 @@ OCPAlert Notification - Single Alert
 1. Create a new push configuration, path: **Alert Center => Alert Push => New Push Configuration**.
 2. Configure the push type and specified objects as needed.
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/oceanbase/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/oceanbase/2.avif" />
 
 3. Select **Simplified Chinese** as the push language.
 4. Select **FlashDuty** as the alert channel.
 5. Enable **Recovery Notifications**.
 6. Submit.
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/oceanbase/3.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/oceanbase/3.avif" />
 
 ## Status Comparison
 
 |OceanBase|Flashcat|Status|
 |---|---|---|
-|Service Stopped|Critical|Severe|
-|Severe|Warning|Severe|
-|Warning|Warning|Warning|
-|Notice|Info|Reminder|
-|Reminder|Info|Reminder|
+|Stop Service|Critical|High|
+|High|Warning|High|
+|Average|Warning|Average|
+|Notice|Info|Disaster|
+|Disaster|Info|Disaster|
 
 ## Status Comparison
 
 |OceanBase|Flashcat|Status|
 |---|---|---|
-|Service Stopped|Critical|Severe|
-|Severe|Warning|Severe|
-|Warning|Warning|Warning|
-|Notice|Info|Reminder|
-|Reminder|Info|Reminder|
+|Stop Service|Critical|High|
+|High|Warning|High|
+|Average|Warning|Average|
+|Notice|Info|Disaster|
+|Disaster|Info|Disaster|

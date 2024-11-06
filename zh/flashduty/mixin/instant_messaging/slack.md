@@ -12,7 +12,7 @@ brief: 通过集成Slack第三方应用，实现在Slack内接收和响应告警
 
 2. 页面跳转到Slack的界面，右上角选择 __工作区__ ，然后点击 __允许__
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/slack/1.avif" alt="drawing" width="400"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/slack/1.avif" alt="drawing" width="400"/>
 
 3. 输入数据源名称，点击 __保存__
 

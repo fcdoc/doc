@@ -2,7 +2,7 @@
 brief: What is a collaboration space, what functions does it have, and how is it managed?
 ---
 
-# Collaboration Space
+# Collaborative Space
 
 A collaboration space, as a core tool for organizing and managing incident investigations, is designed to manage alerts from different teams, business systems, or service modules separately. Each collaboration space typically corresponds to a specific scope of a team's daily operations and maintenance.
 

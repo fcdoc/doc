@@ -25,17 +25,17 @@ When you do not need to route alert events to different collaboration spaces, th
 
 #### Use Shared Integration
 
-When you need to route alert events to different collaboration spaces based on the payload information of the alert event, this method is preferred.
+When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and go to the integration selection page.
     2. Select **Email** Integration:
     - **Integration Name**: Define a name for the current integration.
     - **Email Address**: Set a memorable prefix for the email address, which must be unique under your account.
     - **Push Mode**: Choose the conditions under which the email triggers or resolves an alert.
     3. Copy the **email address** on the current page for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set a default collaboration space as a fallback, and then adjust it as needed.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust as needed.
     5. Complete.
 
 ### Customize Email Integration
@@ -60,7 +60,7 @@ Configuration Example:
 - Receive all emails. When the email content contains the word **RESOLVED**, close the alert; otherwise, trigger a new alert
 - The Alert Key is extracted from the email subject, with the rule being **/(.\*)/**.
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/email/1.avif" alt="drawing" width="800"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/email/1.avif" alt="drawing" width="800"/>
 
 ### Things to Note
 

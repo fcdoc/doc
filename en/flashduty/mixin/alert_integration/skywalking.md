@@ -7,7 +7,7 @@ brief: Synchronize Skywalking alert events to Flashcat via webhook to achieve au
 Synchronize Skywalking alert events to Flashcat via webhook to achieve automated noise reduction processing of alert events.
 
 ## In Flashduty
-You can obtain an integrated push address through the following two methods; choose either one.
+You can obtain an integration push address through the following two methods. Choose either one.
 
 ### Use Proprietary Integration
 
@@ -18,19 +18,19 @@ When you do not need to route alert events to different collaboration spaces, th
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
     3. Select **Skywalking** integration, click **Save**, and generate a card.
-    4. Click the generated card to view the **push address**, copy it for later use, and complete.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the setup.
 
 ### Use Shared Integration
 
-When you need to route the alert event to different collaboration spaces based on the payload information of the alert event, this method is preferred.
+When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and go to the integration selection page.
     2. Choose **Skywalking** integration:
     - **Integration Name**: Define a name for the current integration.
     3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set a default collaboration space as a fallback, and then adjust it as needed.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust as needed.
     5. Complete.
 
 ## In Skywalking
@@ -76,7 +76,7 @@ urls:
 
 |Skywalking|Flashcat|Status|
 |---|---|---|
-|Critical|Critical|Critical|
-|Warning|Warning|Warning|
-|Info|Info|Info|
-|Other or Empty|Info|Info|
+|Critical|Critical|High|
+|Warning|Warning|Average|
+|Info|Info|Disaster|
+|Other or Empty|Info|Disaster|

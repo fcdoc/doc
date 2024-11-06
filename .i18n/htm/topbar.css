@@ -49,7 +49,7 @@ a.logo {
 }
 
 a.logo:before {
-  background: url(//fcdoc.github.io/img/i.svg) 0 0 / 30px no-repeat;
+  background: url(//fcimg.3ti.site/i.svg) 0 0 / 30px no-repeat;
   position: absolute;
   content: "";
   width: 34px;

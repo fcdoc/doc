@@ -44,7 +44,7 @@ brief: 通过 webhook 的方式同步蓝鲸智云监控事件到 Flashduty，实
 2. 进入__配置-处理套餐__页面，单击__添加套餐__按钮，开始创建处理套餐；
 3. 填写名称为`Send To FlashDuty`，套餐类型选择__HTTP回调__，推送方式选择`POST`，并填写集成的推送地址（保存集成后获得），如下图所示：
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/tencent_bk/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/tencent_bk/1.avif" />
 
 4. 切换到__主体__，选择`JSON`类型，消息体复制并填入以下信息（实际产生告警时，蓝鲸会渲染变量内容作为 Payload 推送到目标回调地址）：
 
@@ -59,7 +59,7 @@ brief: 通过 webhook 的方式同步蓝鲸智云监控事件到 Flashduty，实
 1. 进入__配置-告警策略__页面，选择一个已有的策略进行编辑，或新建一个告警策略；
 2. 下拉到__告警处理__部分，三种场景均选择`Send To FlashDuty`处理套餐，并关闭__防御规则__，如下图：
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/tencent_bk/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/tencent_bk/2.avif" />
 
 3. 提交保存，完成；
 4. 对于其他想要推送到 FlashDuty 的告警，重复以上步骤。

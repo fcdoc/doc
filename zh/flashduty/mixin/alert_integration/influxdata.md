@@ -39,7 +39,7 @@ brief: 通过 webhook 的方式同步 Influxdata 告警事件到快猫星云，�
 2. 点击需要同步事件的告警规则，进入 Alert Rule Builder 页面，开始编辑规则
 3. Alert Handlers 部分，选择 Add Another Handler，类型选择 post，HTTP endpoint 填入集成的推送地址，如下图所示：
 
-![influxdb-alert-rule](https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/influxdata/1.avif)
+![influxdb-alert-rule](https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/influxdata/1.avif)
 
 4. 点击 Save Rule 按钮，保存。等待事件触发，如果在集成列表展示了最新事件时间，说明配置成功且收到事件
 5. 完成

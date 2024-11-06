@@ -13,7 +13,7 @@ Push your system's alert events to Flashduty through standard protocols to achie
 
 ### In Flashduty
 
-You can obtain an integration push address through the following two methods; choose either one.
+You can obtain an integration push address through the following two methods. Choose either one.
 
 #### Use Proprietary Integration
 
@@ -24,7 +24,7 @@ When you do not need to route alert events to different collaboration spaces, th
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
     3. Select **Prometheus** integration, click **Save**, and generate a card.
-    4. Click on the generated card to view the **push address**, copy it for later use, and complete.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the setup.
 
 #### Use Shared Integration
 
@@ -36,14 +36,14 @@ When you need to route alert events to different collaboration spaces based on t
     2. Select **Custom Event** integration:
     - **Integration Name**: Define a name for the current integration.
     3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust as needed.
     5. Complete.
 
 ## Implementation Protocol
 
 Please refer to [the development documentation](https://developer.flashcat.cloud/zh/flashduty/custom-alert) to complete the protocol development.
 
-## Best Practices
+## Best practices
 
 1. When the alert status changes, send an event to Flashcat
 2. When the alert is restored, send an event with a status of "Ok" to close the alert. Otherwise, the alert will remain open. If your alert system does not support recovery events, it is recommended that you manually send a recovery event
@@ -54,12 +54,12 @@ Please refer to [the development documentation](https://developer.flashcat.cloud
 
 ## Frequently Asked Questions
 
-|+| Why didn't I receive the alert in Flashduty?
+|+| Why didn't I receive an alert in Flashduty?
 
     #### In Flashduty
 
     1. Check if the integration shows the **latest event time**? If not, it means Flashduty did not receive the push, and you should check your system first.
-    2. If you are using a **shared integration**, first confirm whether you have configured **routing rules**. Without setting routing rules, the system will directly reject new pushes because there is no collaboration space to handle your alert. In this case, simply configure the routing rules to the space you expect.
+    2. If you are using **shared integration**, first confirm whether you have configured **routing rules**. Without setting routing rules, the system will directly reject new pushes because there is no collaboration space to handle your alert. In this case, just configure the routing rules to the space you want.
 
     #### In your system
 

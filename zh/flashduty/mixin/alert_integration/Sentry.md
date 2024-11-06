@@ -48,13 +48,13 @@ Sentry 提供了两类告警机制：Issue Alerts 和 Metric Alerts。Issue Aler
 4. 在编辑页面。**Name 处填写 FlashDuty，WebhookURL 处复制写入集成的推送地址**。
 5. 开启 **Alert Rule Action**，参考如下图配置：
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/Sentry/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/Sentry/1.avif" />
 
 5. 在 PERMISSIONS 配置中为 **Issue & Event 配置 Read 权限** 。
 6. 在 WEBHOOKS 配置中，勾选 **issue** ，**请不要勾选 error 和 comment**。
 7. 配置完成后，点击 Save Changes 完成创建。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/Sentry/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/Sentry/2.avif" />
 
 **关于 WEBHOOKS 配置的特殊说明：**
 1. 勾选 **issue** 后 FlashDuty 可以接收 issue 的 resolved 事件，即在 issue 列表中对某个问题进行手动触发 resolved 时，我们会自动恢复 FlashDuty 中关联的故障。
@@ -65,17 +65,17 @@ Sentry 提供了两类告警机制：Issue Alerts 和 Metric Alerts。Issue Aler
 1. 在左侧导航栏，找到 **Alerts => Create Alert**。
 2. 选择要创建的 Alert 类型，如 Issue 。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/Sentry/3.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/Sentry/3.avif" />
 
 3. 触发条件请按需配置。
 
 4. 在 **THEN perform these actions 处 Add action** 并选择 **Send a notification via**。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/Sentry/4.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/Sentry/4.avif" />
 
 5.  通知渠道选择上面添加的 **FlashDuty**。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/Sentry/5.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/Sentry/5.avif" />
 
 6. 配置好其他选项后，点击 **Save Rule** 保存即可。
 

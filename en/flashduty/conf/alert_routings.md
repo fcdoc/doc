@@ -18,15 +18,15 @@ Configuration path: **Integration Center => Alert Events => Specific Integration
 **7. Default Route:** Shared integration must have at least one routing rule to receive alert events, so a default routing rule is provided. When no routing rule is configured or the configured routing rule does not match, the default route will distribute the alert to the corresponding collaboration space.
 **8. Delivery Space:** You can choose to deliver matching alerts to multiple collaboration spaces.
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/alert_routings/1.avif"  width="800">
+<img src="https://fcimg.3ti.site/zh/flashduty/conf/alert_routings/1.avif"  width="800">
 
-## Configuration Example
+## Configuration Examples
 
 ### 1. Same Business Group Distributed to the Same Space
 **Scenario:** Distribute alerts from the same business group in the FlashCat monitoring platform to a unified collaboration space.
 **Rules:** Match based on Labels.group_name tag.
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/alert_routings/2.avif"  width="800">
+<img src="https://fcimg.3ti.site/zh/flashduty/conf/alert_routings/2.avif"  width="800">
 
 ## Frequently Asked Questions
 

@@ -2,7 +2,7 @@
 brief: Learn about the most common issues when using Flashduty
 ---
 
-# FAQ
+# Frequently Asked Questions
 
 |+| What is Flashduty?
 
@@ -23,16 +23,16 @@ brief: Learn about the most common issues when using Flashduty
     | Voice    | ✅   |    |
     | SMS    | ✅   |    |
     | Email    | ✅   |    |
-    | Feishu application | ✅   |  ✅  |
-    | DingTalk application | ✅   |  ✅  |
+    | Feishu Application | ✅   |  ✅  |
+    | DingTalk Application | ✅   |  ✅  |
     | WeChat Work application | ✅   |    |
-    | Slack application| ✅   |  ✅  |
-    | Microsoft Teams application| ✅   |  ✅  |
-    | Feishu bot    |    |  ✅  |
-    | DingTalk bot    |    |  ✅  |
+    | Slack Application| ✅   |  ✅  |
+    | Microsoft Teams Application| ✅   |  ✅  |
+    | Feishu Robot only supports sending plain text messages    |    |  ✅  |
+    | DingTalk Robot    |    |  ✅  |
     | WeChat Work bot    |    |  ✅  |
-    | Zoom bot    |    |  ✅  |
-    | Telegram bot    |    |  ✅  |
+    | Zoom Bot    |    |  ✅  |
+    | Telegram Bot    |    |  ✅  |
 
 |+| Does Flashduty use a fixed number for voice notifications?
 

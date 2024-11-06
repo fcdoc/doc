@@ -88,7 +88,7 @@ On-call personnel can immediately claim the incident after receiving the notific
 
 Each incident has a timeline that is used to trace back the changes and operations that occurred at different moments in the incident's history. For example, at what point in time, through what channel, who was notified of the incident, and the results of the notification.
 
-![](https://fcdoc.github.io/img/zh/flashduty/alter/what_is_incident/1.avif)
+![](https://fcimg.3ti.site/zh/flashduty/alter/what_is_incident/1.avif)
 
 ## Triggering an Incident
 
@@ -121,10 +121,10 @@ Flashduty provides an email integration that allows you to report alerts by send
 
 Click the **Create** button on the console to initiate incident creation.
 
-| Field | Is it Required | Description |
+| Type | Is it Required | Description |
 | :---: | :---:   | ---- |
-| Incident Title | Yes | A brief statement of what happened |
+| Incident title | Trigger time, Unix timestamp | A brief statement of what happened |
 | Incident Description | No | A detailed description of the incident, supporting Markdown syntax |
-| Severity | Yes | Select one of the three enumeration values: Critical, Warning, Info |
-| Collaboration Space | No | The incident's归属<br>If not selected, it represents a global incident.<br>In this case, the incident must be directly assigned to a person to notify |
+| Severity | Trigger time, Unix timestamp | Select one of the three enumeration values: Critical, Warning, Info |
+| Collaborative Space | No | The incident's归属<br>If not selected, it represents a global incident.<br>In this case, the incident must be directly assigned to a person to notify |
 | Assigned Personnel | No | The incident's handler<br>If not selected, it will be matched and assigned according to the collaboration space it belongs to.<br>Otherwise, notifications will be made directly according to personal preferences |

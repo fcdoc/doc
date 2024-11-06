@@ -14,7 +14,7 @@ brief: 通过集成钉钉自建应用，实现在钉钉端内接收和响应告�
 
 访问 [钉钉开发者后台](https://open-dev.dingtalk.com/fe/app) - 应用开发 - 企业内部开发，创建应用。 (详见钉钉开发文档-[创建企业内部应用-H5 微应用](https://open.dingtalk.com/document/orgapp/microapplication-creation-and-release-process#title-ovn-666-1ty))
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/1.avif" alt="drawing" width="400"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/1.avif" alt="drawing" width="400"/>
 
 应用图标可使用[Flashduty官方 icon](https://download.flashcat.cloud/flashcat_logo_circular.png)。
 
@@ -22,13 +22,13 @@ brief: 通过集成钉钉自建应用，实现在钉钉端内接收和响应告�
 
 点击页面右上角企业，在下拉菜单中复制 `CorpId` 备用。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/2.avif" alt="drawing" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/2.avif" alt="drawing" width="500"/>
 
 ### 3. 复制应用凭证信息
 
 前往 **凭证与基础信息** 页面，复制 `AgentID`、 `ClientID` 和 `ClientSecret` 备用。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/3.avif" alt="drawing" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/3.avif" alt="drawing" width="500"/>
 
 ### 4. 复制事件订阅信息
 
@@ -38,36 +38,36 @@ brief: 通过集成钉钉自建应用，实现在钉钉端内接收和响应告�
 
 **（注意：生成 aes_key 和 Token 后请将信息临时保存到其它地方，离开页面后信息会消失，后续会用到）**
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/4.avif" alt="drawing" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/4.avif" alt="drawing" width="500"/>
 
 ## 二、添加钉钉集成
 
 回到Flashduty **集成中心** 页面，选择即时消息 > 钉钉，在表单中填入 __集成名称__ 以及上一步复制的 应用信息后，点击保存创建。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/5.avif" alt="drawing" width="400"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/5.avif" alt="drawing" width="400"/>
 
 保存后会看到 **网页配置** 地址、**服务器出口 IP** 地址以及 **事件订阅请求网址** 等信息，后边流程会用到。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/6.avif" alt="drawing" width="400"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/6.avif" alt="drawing" width="400"/>
 
 ## 三、配置钉钉应用
 
 ### 1. 添加酷应用、网页应用和机器人
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/7.avif" alt="drawing" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/7.avif" alt="drawing" width="500"/>
 
 1）创建酷应用 **酷应用-酷应用列表** 页面，点击 **创建酷应用** 按钮，选择 **扩展到群会话**
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/8.avif" alt="drawing" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/8.avif" alt="drawing" width="500"/>
 
 2）进入到 **编辑酷应用** 页面，完成以下步骤：
 
 2.1) 第一步，填写基本信息，图标可使用[Flashduty官方 icon](https://download.flashcat.cloud/flashcat_logo_circular.png)。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/9.avif" alt="drawing" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/9.avif" alt="drawing" width="500"/>
 
 2.2) 第二步，配置功能设计，左侧选中 **群快捷入口** 和 **消息卡片**。群快捷入口图标可使用[Flashduty官方 icon](https://download.flashcat.cloud/flashcat_logo_circular.png)，桌面和移动端访问地址请复制集成详情里的 **酷应用网页地址**。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/10.avif" alt="drawing" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/10.avif" alt="drawing" width="500"/>
 
 2.3) 跳过第三步功能开发，来到第四步 **预览发布**，点击 **发布** 按钮并确认。
 
@@ -75,7 +75,7 @@ brief: 通过集成钉钉自建应用，实现在钉钉端内接收和响应告�
 
 进入 **应用能力-机器人** 页面，打开机器人配置，填写名称并上传图标，图标可使用[Flashduty官方 icon](https://download.flashcat.cloud/flashcat_logo_circular.png)，保存即可。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/11.avif" alt="drawing" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/11.avif" alt="drawing" width="500"/>
 
 ### 3. 配置应用地址
 
@@ -85,30 +85,30 @@ brief: 通过集成钉钉自建应用，实现在钉钉端内接收和响应告�
 
 2）点击右上角 **保存**。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/12.avif" alt="drawing" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/12.avif" alt="drawing" width="500"/>
 
 ### 4. 配置事件订阅
 
 1）**开发配置-事件订阅** 页面，配置 **请求网址**，内容为集成详情中的 **事件订阅请求网址**，配置完成后**保存**。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/13.avif" alt="drawing" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/13.avif" alt="drawing" width="500"/>
 
 2）**保存**按钮下方，选中__群会话更换群名称__、__群内安装酷应用__和__群内卸载酷应用__三种群会话事件，配置完成后**保存**。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/14.avif" alt="drawing" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/14.avif" alt="drawing" width="500"/>
 
 ### 5. 申请应用权限
 
 进入 权限管理 页面，申请 `qyapi_chat_manage` 和 `qyapi_robot_sendmsg` 两项权限。此两项权限将允许当前应用获取自身所在群聊信息以及向群聊或个人发送消息的能力。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/15.avif" alt="drawing" width="600"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/15.avif" alt="drawing" width="600"/>
 
 ## 四、应用发布与使用
 
 完成上述步骤后，进行**应用发布-版本管理与发布**，进行创建新版本，然后进行发布（注意把可见范围调整为全部员工，否则其他人无法使用）
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/16.avif" alt="drawing" width="500"/>
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/17.avif" alt="drawing" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/16.avif" alt="drawing" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/17.avif" alt="drawing" width="500"/>
 
 应用发布后，就可以使用 手机端/PC 端 访问应用。首次访问需要登录并关联（钉钉<->Flashduty）账号，后续可以免登录使用。
 
@@ -132,6 +132,6 @@ brief: 通过集成钉钉自建应用，实现在钉钉端内接收和响应告�
 - 回到分派策略配置页面，刷新后重新选择群聊列表
 - 如果仍然拿不到群聊列表，请尝试群内卸载酷应用后，重试以上步骤。如果还不可以，请联系客户或专属技术支持
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/18.avif" alt="drawing" width="800"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/18.avif" alt="drawing" width="800"/>
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/dingtalk/19.avif" alt="drawing" width="800"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/mixin/instant_messaging/dingtalk/19.avif" alt="drawing" width="800"/>

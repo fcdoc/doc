@@ -100,14 +100,14 @@ docker-compose down
 ## OpenLDAP 配置
 ### 添加组和用户
 
-![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/openldap/1.avif)
+![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/openldap/1.avif)
 
 > [!NOTE]
 > 在 __用户路径__ (例如上图 ou=people 下的  cn=falsh duty) -> `Add new attribute` -> 选择 `Email` , 为用户添加 Email 属性，若已经存在请忽略。
 
 ## FlashDuty 集成
 结合上述OpenLDAP配置，FlashDuty集成信息如下图所示：
-![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/openldap/2.avif)
+![](https://fcimg.3ti.site/zh/flashduty/mixin/single_sign_on/openldap/2.avif)
 
 > [!NOTE]
 > 上述字段的含义与描述请参考 [配置单点登录](/feature/single_sign_on)

@@ -41,7 +41,7 @@ brief: 通过 webhook 的方式同步阿里云云监控事件中心告警到快�
 3. 如图，**请求方法** 选择 **POST**，**地址** 填写集成的推送地址
 4. 点击 确认 按钮，提交更新
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/aliyun_cm_event/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/aliyun_cm_event/1.avif" />
 
 **步骤 2：添加订阅策略**
 
@@ -51,7 +51,7 @@ brief: 通过 webhook 的方式同步阿里云云监控事件中心告警到快�
 4. 点击 确认 按钮，提交更新
 5. 下图为阈值和系统两种类型事件的订阅结果
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/aliyun_cm_event/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/aliyun_cm_event/2.avif" />
 
 ## 状态对照
 

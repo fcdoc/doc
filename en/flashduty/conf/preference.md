@@ -12,7 +12,7 @@ brief: You can personalize your account and configure personal notification meth
 - APP Key: Create or delete an APP Key.
 - Notification Method: Configure according to personal preferences.
 
-![](https://fcdoc.github.io/img/zh/flashduty/conf/preference/1.avif)
+![](https://fcimg.3ti.site/zh/flashduty/conf/preference/1.avif)
 
 ## Account Information
 - There are two types of account identities: main account and member account.
@@ -42,4 +42,4 @@ brief: You can personalize your account and configure personal notification meth
 
     Secondly, the dispatch policy single chat notification channel supports two settings: one is "follow personal preference" and the other is "follow unified settings". Only in the "Follow personal preferences" setting will notifications be personalized according to your settings. If you select "Follow unified settings", everyone will be notified according to this setting, rather than each person's preference.
 
-    Go to Collaboration Space Details = > Assignment Policy to view your specific settings.
+    Go to Collaboration Space Details => Dispatch Strategy to view your specific settings.

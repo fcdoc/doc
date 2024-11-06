@@ -9,40 +9,40 @@ FlashDuty currently supports single sign-on (SSO) via SAML2.0, OIDC, CAS, and LD
 ## Configure SAML Protocol
 Configuration path: **Access Control => Single Sign-On => Enable => Settings => Select SAML2.0 Protocol Type**
 
-|Field|Description|
+|Type|Description|
 |----|----|
 |Protocol Type|Select SAML2.0|
 |Metadata Document|XML document obtained from the identity provider|
-|Field Mapping|FlashDuty extracts user email, username, and mobile phone information from the identity provider through field mapping.|
-|Login Domain Name|An important identifier for user recognition, globally unique|
-|Login and Create Account|Enabled by default. **If disabled, members must be invited to join before they can log in.**|
+|Field mapping|FlashDuty extracts user email, username, and mobile phone information from the identity provider through field mapping.|
+|Login domain|Login Domain Name|
+|An important identifier for user recognition, globally unique|It is enabled by default. **If disabled, members must be invited to join before they can log in.**|
 |Flashcat Service Provider Information|**Service Provider Metadata:** <br> **Assertion Consumer Service URL:** Assertion address, used for single sign-on when called by the identity provider|
 
 ## Configure OIDC Protocol
 Configuration path: **Access Control => Single Sign-On => Enable => Settings => Select OIDC Protocol Type**
 
-|Field|Description|
+|Type|Description|
 |----|----|
 |Protocol Type|Select OIDC protocol|
 |Issuer|Issuer|
 |Client ID|Client ID, obtained from the identity provider|
 |Client Secret|Client Secret, obtained from the identity provider|
-|Field Mapping|FlashDuty extracts user email, username, and mobile phone information from the identity provider through field mapping.|
-|Login Domain Name|An important identifier for user recognition, globally unique|
-|Login and Create Account|Enabled by default. **If disabled, members must be invited to join before they can log in.**|
+|Field mapping|FlashDuty extracts user email, username, and mobile phone information from the identity provider through field mapping.|
+|Login domain|Login Domain Name|
+|An important identifier for user recognition, globally unique|It is enabled by default. **If disabled, members must be invited to join before they can log in.**|
 |Flashcat Service Provider Information|**Redirect URL:** The address to which the identity provider redirects Flashcat <br> **Supported Signature Algorithms:** RS256, RS384, RS512, ES256, ES384, ES512, PS256, PS384, PS512 (HS256 not supported)<br> **Request Scope:** openid, email, phone |
 
 ## Configure CAS Protocol
 Configuration path: **Access Control => Single Sign-On => Enable => Settings => Select CAS Protocol Type**
 
-|Field|Description|
+|Type|Description|
 |----|----|
 |Protocol Type|Select CAS protocol|
 |CAS Address|CAS service address obtained from the identity provider|
-|CAS Login Path|CAS login path|
-|Field Mapping|FlashDuty extracts user email, username, and mobile phone information from the identity provider through field mapping.|
-|Login Domain Name|An important identifier for user recognition, globally unique|
-|Login and Create Account|Enabled by default. **If disabled, members must be invited to join before they can log in.**|
+|CAS login path|CAS login path|
+|Field mapping|FlashDuty extracts user email, username, and mobile phone information from the identity provider through field mapping.|
+|Login domain|Login Domain Name|
+|An important identifier for user recognition, globally unique|It is enabled by default. **If disabled, members must be invited to join before they can log in.**|
 |Flashcat Service Provider Information|**Redirect URL:** The address to which the identity provider redirects Flashcat
 
 ## Configure LDAP Protocol
@@ -51,7 +51,7 @@ Configuration path: **Access Control => Single Sign-On => Enable => Settings => 
 
 Configuration path: **Access Control => Single Sign-On => Enable => Settings => Select LDAP Protocol Type**
 
-|Field|Description|
+|Type|Description|
 |----|----|
 |Protocol Type|Select LDAP protocol|
 |LDAP Link|LDAP service address, such as: ldap://10.10.10.10:389 |

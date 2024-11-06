@@ -48,7 +48,7 @@ Flashduty**基于团队来控制数据权限**，并应用于以下场景：
 
 当您没有对应资源的数据权限，系统会进行如下提示：
 
-![](https://fcdoc.github.io/img/zh/flashduty/feature/permission/1.avif)
+![](https://fcimg.3ti.site/zh/flashduty/feature/permission/1.avif)
 
 ## 常见问题
 

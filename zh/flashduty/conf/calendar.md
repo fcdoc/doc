@@ -15,14 +15,14 @@ brief: 通过配置服务日历，可以使用工作日或休息日模式进行�
 - 在为日历表配置管理团队成员后，该团队成员对该日历有全部权限。
 - 新建的日历默认全部是工作日，一般建议直接关联国家节假日，自动获取假日的安排，省去手动标记的环节，即使关联后同样支持手动按需调整。
 
-![服务日历](https://fcdoc.github.io/img/zh/flashduty/conf/calendar/1.avif)
+![服务日历](https://fcimg.3ti.site/zh/flashduty/conf/calendar/1.avif)
 
 ## 编辑日历
 - 只有创建者和团队成员对该日历有编辑权限，对其他成员只读。
 - 可对基础信息进行修改，如日历名称、描述、管理团队。
 - 可快速以星期几的维度进行标记休息日。
 
-![](https://fcdoc.github.io/img/zh/flashduty/conf/calendar/2.avif)
+![](https://fcimg.3ti.site/zh/flashduty/conf/calendar/2.avif)
 
 > [!WARN]
 > 删除日历不可恢复，请在删除前确保没有业务再使用。

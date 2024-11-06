@@ -15,7 +15,7 @@ Reassigning means re-notifying. If an incident in **processing** is reassigned, 
 > [!TIP]
 > Currently, the target of reassignment can only be a duty schedule or an individual, which we call **direct assignment**. The difference from **policy-based assignment** is that directly assigned incidents can only be notified according to personal preferences, and there is no possibility of upgrade.
 
-## Upgrade Assignment
+## Upgrade Dispatch
 
 - **Automatic Upgrade**: When an incident is automatically assigned to you according to a (multi-stage) assignment policy, and you do not resolve the incident within the specified time window, do not choose to postpone the upgrade, and the incident does not automatically recover, the incident will automatically upgrade to the next stage at the specified time.
 
@@ -30,7 +30,7 @@ When an incident is assigned to you, but you need another person (who is not amo
 
 Similar to **reassignment**, when adding a handler, you can only select a duty schedule or an individual as the assignment target. The system will notify these individuals based on their personal preferences.
 
-![](https://fcdoc.github.io/img/zh/flashduty/alter/escalate_incidents/1.avif)
+![](https://fcimg.3ti.site/zh/flashduty/alter/escalate_incidents/1.avif)
 
 ## Frequently Asked Questions
 

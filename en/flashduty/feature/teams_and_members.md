@@ -55,7 +55,7 @@ A team is a collection of members and can also be understood as a group. Members
 > Once a member is deleted, they cannot be restored, so please proceed with caution.
 > After a member is deleted, their data will not be deleted.
 
-## Common Issues
+## Frequently Asked Questions
 
 |+| Why didn't the invited member receive the verification email?
 

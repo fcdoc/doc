@@ -88,7 +88,7 @@ Flashduty 实现了 PagerDuty Events API，输入和响应完全兼容。因此�
 
 修改已经部署好的 ElastAlert 实例对应源码，[查看 diff ](https://github.com/jertel/elastalert2/commit/e815a62a6b1eecef6e1fef13afd99d905b67fc34)：
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/pagerduty/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/pagerduty/1.avif" />
 
 3. 步骤 3：上报告警事件
 

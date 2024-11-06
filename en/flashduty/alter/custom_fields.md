@@ -14,15 +14,15 @@ With custom fields, you can add custom metadata, record specific incident-relate
 
 - **Flexible Definition**: You can create multiple custom fields as needed and define the field names, types, options, and default values. Common custom field types include text, drop-down lists, and checkboxes.
 
-![](https://fcdoc.github.io/img/zh/flashduty/alter/custom_fields/1.avif)
+![](https://fcimg.3ti.site/zh/flashduty/alter/custom_fields/1.avif)
 
 - **Information Association**: Through custom fields, you can associate incidents with other related data. For example, you can add custom fields to identify affected systems, geographic locations, associated customers, or whether it is a false positive.
 
-![](https://fcdoc.github.io/img/zh/flashduty/alter/custom_fields/2.avif)
+![](https://fcimg.3ti.site/zh/flashduty/alter/custom_fields/2.avif)
 
 - **Filtering and Categorization**: The incident list supports filtering and categorizing views based on custom fields. You can create common filters based on the values of custom fields to better organize and handle incidents.
 
-![](https://fcdoc.github.io/img/zh/flashduty/alter/custom_fields/3.avif)
+![](https://fcimg.3ti.site/zh/flashduty/alter/custom_fields/3.avif)
 
 ## Configure Custom Fields
 
@@ -67,7 +67,7 @@ Only the following content can be updated:
 
 You can initiate a deletion operation in the console at any time. However, please note that deletion is a time-consuming operation. When a field is deleted, the system will scan historical incidents and update asynchronously to remove the association between the field and the incident. You cannot re-create a field with the same name until the deletion is complete.
 
-## FAQ
+## Frequently Asked Questions
 
 |+| Why can't I search for incidents using the field I created?
 

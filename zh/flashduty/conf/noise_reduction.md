@@ -27,7 +27,7 @@ brief: 通过告警聚合，可以将多条相似的活跃告警聚合到同一�
 
 - 预览：您可使用预览功能，拉取最近发生的事件，并实时渲染降噪结果，以此评估降噪效果。系统至多拉取`666`条历史事件。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/alter/what_is_noise_reduction/2.avif" style="display: block; margin: 0 auto;" height="400">
+<img src="https://fcimg.3ti.site/zh/flashduty/alter/what_is_noise_reduction/2.avif" style="display: block; margin: 0 auto;" height="400">
 
 ## 查看聚合示例
 
@@ -52,7 +52,7 @@ brief: 通过告警聚合，可以将多条相似的活跃告警聚合到同一�
 - 点击告警标题，您可以查看关联告警的详情，包括告警的时间线和关联事件
 - 点击事件点，您可以查看事件上报的具体内容，包括标签和描述
 
-![](https://fcdoc.github.io/img/zh/flashduty/alter/what_is_noise_reduction/3.avif)
+![](https://fcimg.3ti.site/zh/flashduty/alter/what_is_noise_reduction/3.avif)
 
 ## 常见问题
 

@@ -38,17 +38,17 @@ We use **Golang template syntax** [template/html](/0) to parse data, and you can
 
 **Complete list of variables** (direct reference):
 <span id="Incident"></span>
-Field|Type|Required|Description
+Type|Required|Description|Yes
 :-:|:-:|:-:|:---
-ID | string | Yes | incident ID
-`Title` | string | Yes | Incident title
-`Description` | string | Yes | Incident description, may be empty
-DetailUrl | string | Yes | Incident details page URL
-Num | string | Yes | Incident short identifier, used only for visual recognition and may be repeated
-`IncidentSeverity` | string | Yes | Severity, enumeration values: Critical, Warning, Info
-IncidentStatus | string | Yes | Incident status, enumeration values: Critical, Warning, Info, Ok
-`Progress` | string | Yes | Processing progress, enumeration values: Triggered, Processing, Closed
-`StartTime` | int64 | Yes | Trigger time, Unix timestamp
+ID | string | Trigger time, Unix timestamp | incident ID
+`Title` | string | Trigger time, Unix timestamp | Incident title
+`Description` | string | Trigger time, Unix timestamp | Incident description, may be empty
+DetailUrl | string | Trigger time, Unix timestamp | Incident details page URL
+Num | string | Trigger time, Unix timestamp | Incident short identifier, used only for visual recognition and may be repeated
+`IncidentSeverity` | string | Trigger time, Unix timestamp | Yes
+IncidentStatus | string | Trigger time, Unix timestamp | Incident status, enumeration values: Critical, Warning, Info, Ok
+`Progress` | string | Trigger time, Unix timestamp | Yes
+`StartTime` | int64 | Trigger time, Unix timestamp | No
 LastTime | int64 | No | Latest event time, the latest event time in the associated alert, Unix timestamp, default is 0
 EndTime | int64 | No | Recovery time, when all associated alerts are recovered, the incident will automatically recover and close. Unix timestamp, default is 0
 SnoozedBefore | int64 | No | Suppression deadline, Unix timestamp, default is 0
@@ -62,7 +62,7 @@ ChannelID | int64 | No | Collaboration space ID, the value is 0 when a global in
 ChannelName | string | No | Collaboration space name
 GroupMethod | string | No | Aggregation method, enumeration values: n: no aggregation, p: aggregation by rules, i: intelligent aggregation
 `Labels` | map[string]string | No | Tags KV, Key and Value are both strings. There is no such information when created manually. When created automatically, it is the label information of the first alert in the aggregation
-AlertCnt | int64 | Yes | Number of associated alerts
+AlertCnt | int64 | Trigger time, Unix timestamp | Number of associated alerts
 Alerts | [][Alert](#Alert) | No | Associated alert details, there is no such information when manually created
 FireType | string | No | Notification type, enumeration values: fire: notification, refire: circular notification
 IsFlapping | bool | No | Whether it is in a jittering state, i.e., frequent occurrence and recovery, related to the convergence configuration
@@ -72,41 +72,41 @@ Resolution | string | No | Incident solution, filled in after the incident is cl
 
 <span id="Person"></span>
 **Person** (indirect reference):
-Field|Type|Required|Description
+Type|Required|Description|Yes
 :-:|:-:|:-:|:---
-person_id | int64 | Yes | Person ID
-person_name | string | Yes | Person name
-email | string | Yes | Email Address
+person_id | int64 | Trigger time, Unix timestamp | Yes
+person_name | string | Trigger time, Unix timestamp | Yes
+email | string | Trigger time, Unix timestamp | Email Address
 
 <span id="Assignment"></span>
 **Assignment** (indirect reference):
-Field|Type|Required|Description
+Type|Required|Description|Yes
 :-:|:-:|:-:|:---
 PersonIDs | []string| No | No
 EscalateRuleID | string | No | No
-EscalateRuleName | string | Dispatch policy name | No
+EscalateRuleName | string | No | No
 LayerIdx | string | No | Yes
-Type | string | Yes | Dispatch type, enumeration value: assign: assign, reassign: reassign, escalate: upgrade assignment, reopen: reopen assignment
+Type | string | Trigger time, Unix timestamp | Dispatch type, enumeration value: assign: assign, reassign: reassign, escalate: upgrade assignment, reopen: reopen assignment
 
 <span id="Responder"></span>
 **Responder** (indirect reference):
 Type|Required|Description|Yes
 :-:|:-:|:-:|:---
-PersonID | int64 | Person ID | Yes
-PersonName | string | Person name | Yes
-Email | string | Yes | Email Address
-AssignedAt | int64 | Yes | No
+PersonID | int64 | Trigger time, Unix timestamp | Yes
+PersonName | string | Trigger time, Unix timestamp | Yes
+Email | string | Trigger time, Unix timestamp | Email Address
+AssignedAt | int64 | Trigger time, Unix timestamp | No
 AcknowledgedAt | int64 | No | Claim time, Unix timestamp in seconds, default is 0
 
 <span id="Alert"></span>
 **Alert** (indirect reference):
 Type|Required|Description|Yes
 :-:|:-:|:-:|:---
-Title | string | Alert title | Yes
-Description | string | Alert description, may be empty | Yes
-AlertSeverity | string | Yes | Yes
-AlertStatus | string | Yes | Yes
-Progress | string | Yes | Yes
+Title | string | Trigger time, Unix timestamp | Yes
+Description | string | Trigger time, Unix timestamp | Yes
+AlertSeverity | string | Trigger time, Unix timestamp | Yes
+AlertStatus | string | Trigger time, Unix timestamp | Yes
+Progress | string | Trigger time, Unix timestamp | Yes
 StartTime | int64 | Trigger time, Unix timestamp | No
 EndTime | int64 | No | No
 CloseTime | int64 | No | No
@@ -222,11 +222,11 @@ You need to pre-configure **the integration center - Instant Messaging -** integ
 
 As shown below:
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/template/1.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/conf/template/1.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
 We have listed some common tags that you can delete as needed;
 
-- We have listed some common tags that you can delete as needed;
+- Messages can be sent with a length of about 28KB, and an error will be reported if exceeded;
 - In the Feishu app, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
@@ -264,11 +264,11 @@ You need to pre-configure **the integration center - Instant Messaging -** integ
 
 As shown below:
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/template/2.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/conf/template/2.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
 We have listed some common tags that you can delete as needed;
 
-- We have listed some common tags that you can delete as needed;
+- Messages can be sent with a length of about 28KB, and an error will be reported if exceeded;
 - In the DingTalk app, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
@@ -297,7 +297,7 @@ We have listed some common tags that you can delete as needed;
 
 You need to pre-configure **the integration center - Instant Messaging - EnterpriseWeChat** integration to send message cards. If no custom content is set, the system default template will be used and only common tag information will be rendered:
 
-- We have listed some common tags that you can delete as needed;
+- Messages can be sent with a length of about 28KB, and an error will be reported if exceeded;
 - In the Enterprise WeChat app, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
@@ -324,7 +324,7 @@ You need to pre-configure **the integration center - Instant Messaging - Enterpr
 
 As shown below:
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/template/3.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/conf/template/3.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
 **Note: Enterprise WeChat limits the card length. In the template rendering area, you can render no more than 8 lines of content, and any part exceeding 8 lines will be hidden.**
 
@@ -340,11 +340,11 @@ You need to pre-configure **the Integration Center - IM - Slack integration befo
 
 As shown below:
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/template/4.avif" alt="drawing" style="display: block; margin: 0 auto;" width="600"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/conf/template/4.avif" alt="drawing" style="display: block; margin: 0 auto;" width="600"/>
 
 We have listed some common tags that you can delete as needed;
 
-- Messages can be sent with a length of about 15,000 characters, and will be truncated if exceeded;
+- Messages can be sent with a length of about 28KB, and an error will be reported if exceeded;
 - Messages can be up to about 15,000 characters long, and will be truncated if exceeded;
 - In the Slack app, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
@@ -382,7 +382,7 @@ You need to pre-configure **the Integration Center - IM - Microsoft Teams integr
 
 As shown below:
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/template/5.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/conf/template/5.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
 
 We have listed some common tags that you can delete as needed;
 
@@ -424,7 +424,7 @@ You need to pre-configure **the Integration Center - IM - Microsoft Teams integr
 
 As shown below:
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/template/5.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/conf/template/5.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
 
 We have listed some common tags that you can delete as needed;
 
@@ -457,28 +457,28 @@ We have listed some common tags that you can delete as needed;
 ## Feishu Robot only supports sending plain text messages
 Feishu Robot only supports sending plain text messages.
 
-- Messages __have a maximum length of 4000 bytes, and any part exceeding this will be truncated and sent__;
-- If the text contains `<br>`, when rendering, __the empty lines will be deleted first, and then `<br>` will be replaced with a newline character__;
-- Collaboration space
+- The message __has a maximum length of 4000 bytes, and any excess will be truncated and sent__ ;
+- If the text contains `<br>` , it will __first delete blank lines, and then replace `<br>` with a newline character__ ;
+- If you do not set custom content, the system default template will be used, displaying only key information:
 
 ```i18n
 {{fireReason .}}INC #{{.Num}} {{toHtml .Title}}
 -----
-No: {{if .ChannelName}}{{.ChannelName}}{{else}}Severity{{end}}
-Trigger time: {{.IncidentSeverity}}
-Duration: {{date "2006-01-02 15:04:05" .StartTime}}
-Aggregated alerts: {{ago .StartTime}}{{if gt .AlertCnt 1}}
-Count: {{.AlertCnt}}Alert object{{end}}{{if .Labels.resource}}
-Fault description: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
-Assigned personnel: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
-Details: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
-<br>DingTalk Robot: {{.DetailUrl}}
+Collaborative Space: {{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}
+Severity: {{.IncidentSeverity}}
+Trigger Time: {{date "2006-01-02 15:04:05" .StartTime}}
+Duration: {{ago .StartTime}}{{if gt .AlertCnt 1}}
+Aggregated Alerts: {{.AlertCnt}}Count{{end}}{{if .Labels.resource}}
+Alert Object: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
+Fault Description: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
+Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
+<br>Details: {{.DetailUrl}}
 ```
 
 ## DingTalk Robot
 DingTalk Robot only supports sending Markdown messages ([syntax restrictions](https://open.dingtalk.com/document/robots/custom-robot-access#title-7ur-3ok-s1a)).
 
-- Messages __have a maximum length of 4000 bytes, and any part exceeding this will be truncated and sent__;
+- The message __has a maximum length of 4000 bytes, and any excess will be truncated and sent__ ;
 - If the text contains `<br>` , it will __first delete blank lines, and then replace `<br>` with a newline character__ ;
 - If you do not set custom content, the system default template will be used, displaying only key information:
 
@@ -689,7 +689,7 @@ If you do not set custom content, the system default template will be used to re
 <body data-id="__react-email-body" style="background-color:rgb(255,255,255);border-radius:0.25rem;margin-top:2.5rem;margin-bottom:2.5rem;margin-left:auto;margin-right:auto;padding:1rem;min-width:400px;max-width:660px;font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji">
 <div style="width:100%;height:0.375rem;margin-bottom:2rem" class="bg-{{.IncidentSeverity}}"></div>
 <div style="display:flex;align-items:center;margin-bottom:1.5rem">
-<div style="display:flex;align-items:flex-end;gap:1rem"><img witdh="120" data-id="react-email-img" src="https://fcdoc.github.io/img/zh/flashduty/conf/template/6.avif" height="40" style="display:block;outline:none;border:none;text-decoration:none" /><span style="font-size:1.25rem;line-height:1.75rem;font-weight:600">You have a pending issue to handle</span></div>
+<div style="display:flex;align-items:flex-end;gap:1rem"><img witdh="120" data-id="react-email-img" src="https://fcimg.3ti.site/zh/flashduty/conf/template/6.avif" height="40" style="display:block;outline:none;border:none;text-decoration:none" /><span style="font-size:1.25rem;line-height:1.75rem;font-weight:600">You have a pending issue to handle</span></div>
 </div>
 <div style="background-color:rgb(243,244,246);padding:2rem;margin-top:1rem;border-radius:0.5rem">
 <div style="display:flex;flex-direction:column;gap:0.75rem">
@@ -752,4 +752,4 @@ If you do not set custom content, the system default template will be used to re
 
 As shown below:
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/template/7.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fcimg.3ti.site/zh/flashduty/conf/template/7.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>

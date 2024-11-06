@@ -11,7 +11,7 @@ brief: Synchronize Jira Issue events to Flashcat via webhook to implement change
 - You must have permission to modify **Settings => System => Webhooks**.
 - (If privately deployed) Your Jira server must be able to access the domain api.flascat.cloud.
 
-## Supported Versions
+## Step 1: Configure Alertmanager
 
 This article is applicable to **Jira Cloud and on-premises** versions.
 
@@ -33,15 +33,15 @@ This article is applicable to **Jira Cloud and on-premises** versions.
 4. Optionally, you can fill in a JQL query to further narrow down the scope of events to be synchronized (e.g., specific projects)
 5. Click the Save button to submit the configuration
 
-<img alt="drawing" src="https://fcdoc.github.io/img/zh/flashduty/mixin/change_integration/jira/1.avif" />
+<img alt="drawing" src="https://fcimg.3ti.site/zh/flashduty/mixin/change_integration/jira/1.avif" />
 
-5. Completion
+5. Finish
 
 ## State Mapping
 
 By default, Flashduty extracts the status.name information from the webhook payload and performs state transitions according to the following mapping:
 
-| Jira        | Flashduty   | State               |
+| Jira        | Flashduty   | Status               |
 | ----------- | ---------- | ------------------ |
 | planned     | planned    | Newly Created             |
 | to do       | planned    | Newly Created             |

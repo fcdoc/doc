@@ -12,17 +12,17 @@ Each collaboration space should have at least one dispatch strategy. Through the
 - Supports selecting whether to dispatch based on a specific day of the week. For example, only incidents from Monday to Friday will be dispatched, and incidents on Saturday and Sunday will not be processed.
 - Supports selecting whether to dispatch based on the service calendar (the service calendar needs to be created in advance), and can be configured according to holidays or working days. For example, only incidents on trading days need to be notified, which is generally applicable to the securities industry.
 
-![](https://fcdoc.github.io/img/zh/flashduty/conf/escalate_rule/1.avif)
+![](https://fcimg.3ti.site/zh/flashduty/conf/escalate_rule/1.avif)
 
 ### Incident Filtering
 - By default, all incidents are notified according to this policy.
 - Supports matching incidents based on conditions such as title, level, and label. For example, if the alert level is Info, it will follow this dispatch.
 
-![](https://fcdoc.github.io/img/zh/flashduty/conf/escalate_rule/2.avif)
+![](https://fcimg.3ti.site/zh/flashduty/conf/escalate_rule/2.avif)
 
 Go to [How to configure filters](/conf/how_to_filter) to learn more.
 
-## Dispatch Configuration
+## Dispatch configuration
 
 ### Dispatch Object
 - **Individual:** Designate certain members to receive this alert. Multiple selections are supported, and no duplicate selections are allowed.

@@ -43,14 +43,14 @@ brief: 通过 webhook 的方式同步 AWS CloudWatch 告警事件到 Flashduty�
 6. `Topic ARN` 选择 `FlashDuty`，`Protocal` 选择 `HTTPS`，`Endpoint` 填写集成的推送地址（当前页面填写集成名称，保存后即可生成地址）
 7. 点击 `Create subscription` 按钮，完成订阅创建
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/aws_cloudwatch/1.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/aws_cloudwatch/1.avif" />
 
 8. 回到 `Subscriptions` 页面，当订阅状态为 `Confirmed`，说明订阅地址校验成功，否则请联系 Flashduty
 9. 检索 `CloudWatch` 产品，并进入对应产品控制台
 10. 进入 `All alrams` 页面，选择创建或编辑已有的告警策略
 11. 对于 `Notification` 这一步，`In alarm`、`OK` 和 `Insufficient data` 三种状态推送目标 `SNS topic` 均选择 `FlashDuty`，如下图所示：
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/aws_cloudwatch/2.avif" />
+<img alt="drawing" width="600" src="https://fcimg.3ti.site/zh/flashduty/mixin/alert_integration/aws_cloudwatch/2.avif" />
 
 12. 回到集成列表，如果展示了最新事件时间，说明配置成功且收到事件
 13. 完成
