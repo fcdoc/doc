@@ -18,7 +18,7 @@
       align-items: center;
 
       &>a {
-        margin-right: 0
+        margin: 12px 0;
       }
     }
   }
@@ -42,7 +42,7 @@ a.logo {
   font-weight: bolder;
   vertical-align: -1px;
   margin: 0;
-  border-right: 0;
+  border-right-width: 0;
   border-radius: 16px 0 0 16px;
   position: relative;
   padding-top: 2px;
@@ -107,23 +107,19 @@ a.freeTrail:hover {
 }
 
 @media (max-width:1150px) {
-  a.logo {
+  a.freeTrail {
     display: none;
   }
 
-  a.freeTrail {
-    padding-left: 16px;
-    border-radius: 16px;
-  }
-}
-
-@media (max-width:700px) {
   a.logo {
-    display: inline-block;
-  }
 
-  a.freeTrail {
-    padding-left: 26px;
-    border-radius: 0 16px 16px 0;
+    margin-right: 24px;
+    border-radius: 16px;
+    padding-right: 10px;
+    border-right-width: 3px;
+
+    &:before {
+      display: none;
+    }
   }
 }
