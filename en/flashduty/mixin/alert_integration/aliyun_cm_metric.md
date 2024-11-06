@@ -1,13 +1,13 @@
 ---
-brief: Synchronize Alibaba Cloud Cloud Monitoring alert events to Flashcat through a webhook to achieve automated noise reduction processing of alert events
+brief: Synchronize Alibaba Cloud Cloud Monitoring alert events to Flashcat via webhook to achieve automated noise reduction processing of alert events
 ---
 
 # Alibaba Cloud Monitoring CM Indicator Integration
 
-Synchronize Alibaba Cloud Cloud Monitoring alert events to Flashduty through a webhook to achieve automated noise reduction processing of alert events.
+Synchronize Alibaba Cloud Cloud Monitoring alert events to Flashduty via webhook to achieve automated noise reduction processing of alert events.
 
 ## In Flashduty
-You can obtain an integration push address through the following two methods; choose either one.
+You can obtain an integrated push address through the following two methods, either of which can be chosen.
 
 ### Use Proprietary Integration
 
@@ -15,60 +15,60 @@ When you do not need to route alert events to different collaboration spaces, th
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
-    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the Add Integration page
-    3. Select the **Alibaba Cloud CM Indicator** integration, click **Save**, and a card will be generated.
-    4. Click on the generated card to view the **Push Address**, copy it for later use, and complete.
+    1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
+    3. Select **Alibaba Cloud CM Indicator** integration, click **Save**, and generate a card.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete.
 
-### Use Shared Integrations
+### Use Shared Integration
 
-Use Shared Integration
+When you need to route the alert events to different collaboration spaces based on the payload information of the alert event, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and navigate to the integration selection page.
-    2. Choose the **Alibaba Cloud CM Metrics** integration:
-    - Choose the **Alibaba Cloud CM Indicator** integration:
-    3. After clicking **Save**, copy the newly generated **push URL** on the current page for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
-    5. Finish.
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and go to the integration selection page.
+    2. Choose **Alibaba Cloud CM Indicator** integration:
+    - **Integration Name**: Define a name for the current integration.
+    3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set a default collaboration space as a fallback, and then adjust as needed.
+    5. Complete.
 
-## Complete
+## In Alibaba Cloud Monitoring
 Choose one of the following two methods.
 
-**Method 1: Configure by Rules**
+**Method 1: Configure by Rule**
 
-1. Choose one of the following two methods
+1. Log in to your Alibaba Cloud console and select the cloud monitoring product
 2. Enter the alert Service -> alert Rules page, select a rule, click the Modify button to start editing the rule content
-3. Log in to your Alibaba Cloud console and select the cloud monitoring product
+3. As shown in the figure, fill in the callback address under Advanced Settings as the integrated push address
 4. Click the Confirm button to submit the update
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/aliyun_cm_metric/1.avif" />
 
-5. Repeat the above steps for all alert rules that you want to synchronize events for
+5. Repeat the above steps for all alert rules that you wish to synchronize
 6. Return to the integration list. If the latest event time is displayed, the configuration is successful and the event has been received
-7. Finish
+7. Complete
 
-**Method 2: Configure by Contacts**
+**Method 2: Configure by Contact**
 
-1. Complete
+1. Log in to your Alibaba Cloud console and select the cloud monitoring product
 2. Enter the alert Service -> alert Contact page and choose to modify a contact
-3. Log in to your Alibaba Cloud console and select the cloud monitoring product
+3. As shown in the figure, fill in the integrated push address under Webhook
 4. Click the Confirm button to submit the update
 
 <img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/aliyun_cm_metric/2.avif" />
 
-5. Repeat the above steps for all contacts for which you want to synchronize events
+5. Repeat the above steps for all contacts for which you wish to synchronize events
 6. Return to the integration list. If the latest event time is displayed, the configuration is successful and the event has been received
-7. Finish
+7. Complete
 
 ## Status Comparison
 
-Complete
+Alibaba Cloud Cloud Monitoring to Flashduty Alert Level Mapping:
 
-| Status Comparison |  Flashduty  | Status |
+| Alibaba Cloud Cloud Monitoring |  Flashduty  | Status |
 | ------------ | -------- | ---- |
-| CRITICAL     | Critical | Alibaba Cloud Cloud Monitoring |
+| CRITICAL     | Critical | Critical |
 | WARN         | Warning  | Warning |
-| INFO         | Info     | Reminder |
-| NODATA       | Info     | Reminder |
+| INFO         | Info     | Info |
+| NODATA       | Info     | Info |

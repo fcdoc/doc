@@ -2,18 +2,18 @@
 brief: Tutorial on Configuring Single Sign-On in Authing
 ---
 
-# Configuring Single Sign-On in Authing
+# Configuring Single Sign-On and SSO Login in Authing
 
 Quick Overview
-[Authing](https://www.authing.cn/) is a provider of identity recognition and access control management. Through the Authing platform, you can log in to the FlashDuty management console using OIDC, SAML2.0, or CAS protocols
+[Authing](https://www.authing.cn/) is a provider of identity and access management services. Through the Authing platform, you can log in to the FlashDuty management console using OIDC, SAML2.0, or CAS protocols
 
 ## Preparation
 ### 1. Log in or Register for Authing
 - If you are a new user, you need to create a user pool first. Follow the prompts to create it
 ### 2. Create an Application
 - Choose a Standard Web Application
-- Fill in the Application Name
-- Fill in the Authentication URL (the URL to which users are redirected during SSO login)
+- Enter the Application Name
+- Enter the Authentication URL (the URL to which users will be redirected during SSO login)
 
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/authing/1.avif)
 
@@ -26,16 +26,16 @@ Quick Overview
 |App ID|Corresponds to FlashDuty's Client ID|
 |APP Secret|Corresponds to FlashDuty's Client Secret|
 |Issuer|Corresponds to FlashDuty's Issuer|
-|Authentication URL|The URL to which users are redirected during SSO login|
+|Authentication URL|The URL to which users will be redirected during SSO login|
 
 ## Start Configuring the OIDC Protocol
 ### 1. Open the [FlashDuty](console.flashcat.cloud) Console and Enable Single Sign-On Configuration
 
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/authing/3.avif)
 
-### 2. Copy the Relevant Configuration Information to the Corresponding Fields
+### 2. Copy the Relevant Configuration Information into the Corresponding Fields
 
-#### 2.1 Copy the Relevant Information of the Authing Application to the Corresponding Fields
+#### 2.1 Copy the Relevant Information of the Authing Application into the Corresponding Fields
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/authing/4.avif)
 
 #### 2.2 Copy the Redirect URL Domain to the Login Callback URL in Authing
@@ -44,7 +44,7 @@ Quick Overview
 
 ### 3. Modify Authing Configuration
 
-#### 3.1 Configure as Shown in the Diagram, Simply Change the id_token Signature Algorithm to RS256
+#### 3.1 Configure as Shown; Just Change the id_token Signature Algorithm to RS256
 
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/authing/6.avif)
 
@@ -70,7 +70,7 @@ Quick Overview
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/authing/10.avif)
 
 > [!NOTE]
-> **You can visit console.flashcat.cloud and log in via SSO**
+> **You Can Access console.flashcat.cloud and Log in via SSO**
 
 #### 4.3 The SSO URL Redirects to the Login Page
 
@@ -119,9 +119,9 @@ Quick Overview
 
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/authing/3.avif)
 
-### 2. Copy the Relevant Configuration Information to the Corresponding Fields
+### 2. Copy the Relevant Configuration Information into the Corresponding Fields
 
-#### 2.1 Copy the Relevant Information of the Authing Application to the Corresponding Fields
+#### 2.1 Copy the Relevant Information of the Authing Application into the Corresponding Fields
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/authing/17.avif)
 
 #### 2.2 Copy the Redirect URL to the Login Callback URL in Authing

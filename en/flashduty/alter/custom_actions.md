@@ -6,20 +6,20 @@ brief: Understand the usage scenarios and configuration methods of custom action
 
 ## Usage Scenarios
 
-A custom action is essentially a Webhook call. You can add custom actions for incidents in different collaboration spaces and manually trigger these actions in the incident details to achieve rapid troubleshooting or information synchronization.
+A custom action is a Webhook call. You can add custom actions for incidents in different collaboration spaces and manually trigger the action in the incident details to achieve rapid troubleshooting or information synchronization.
 
 Common usage scenarios for custom actions:
 1. **Restart the host**: When the host memory or CPU is full, trigger the host restart script to quickly complete the host restart.
-2. **Rich information**: When an incident occurs, call back your service to retrieve Tracing, Logging, topology, and other information based on the alert details. Actively call the FlashDuty Open API to update the incident information, such as adding labels or setting custom fields, to assist in troubleshooting.
-3. **Rollback changes**: When an incident occurs, if it is determined that the incident is caused by a change, you can directly trigger a callback to your deployment platform to start the rollback process and speed up incident recovery.
-4. **Update Status Page**: When it is determined that the incident affects online services, trigger an external Status Page update to notify your customers or upstream and downstream users in a timely manner.
+2. **Rich information**: When an incident occurs, call back your service, retrieve Tracing, Logging, topology, and other information according to the alert details, and actively call the FlashDuty Open API to update the incident information, such as adding labels or setting custom fields to assist in troubleshooting.
+3. **Rollback changes**: When an incident occurs, if it is determined that the incident is caused by a change, you can directly trigger a callback to your deployment platform, start the rollback process, and speed up incident recovery.
+4. **Update Status Page**: When it is determined that the incident affects online services, you can trigger an update to the external Status Page to notify your customers or upstream and downstream users in a timely manner.
 
 ## Configure Custom Actions
 
-1. Log in to the console and navigate to **Integration Center => Webhook**
+1. Log in to the console and go to **Integration Center => Webhook**
 2. Click **Add Custom Action** Integration
 3. Configure the following information:
-- **Action Name**: This name will appear as a button in the incident details.
+- **Action Name**: This name will be displayed as a button in the incident details.
 - **Collaboration Spaces**: You can configure multiple spaces, but each space can have up to three custom actions.
 - **Endpoint**: The HTTP(s) address that will be triggered when the custom action button is clicked.
 - **Custom Headers**: The custom message headers to be included when requesting the endpoint.

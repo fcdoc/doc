@@ -1,5 +1,5 @@
 ---
-brief: Understand, Configure, and Use Custom Fields
+brief: Understand, configure, and use custom fields
 ---
 
 # Custom Fields
@@ -8,7 +8,7 @@ Understand, configure, and use custom fields.
 
 ## Usage Scenarios
 
-FlashDuty has supported access to most common alert systems, and we have put most of the information in the push content into Lables for display. Despite this, our users will still have some expansion or customization needs, such as manually marking a incident whether it is a false positive. Therefore, we provide a **custom field** function to further enrich incident description.
+FlashDuty has integrated with most common alert systems, and we have placed most of the information from the push content into Labels for display. However, our users still have some expansion or customization needs, such as manually marking an incident as a false positive. Therefore, we provide the **custom fields** feature to further enrich incident descriptions.
 
 With custom fields, you can add custom metadata, record specific incident-related information, and pass and use this information during incident processing. The following are common usage scenarios for custom fields:
 
@@ -20,7 +20,7 @@ With custom fields, you can add custom metadata, record specific incident-relate
 
 ![](https://fcdoc.github.io/img/zh/flashduty/alter/custom_fields/2.avif)
 
-- **Filtering and Categorization**: The incident list supports filtering and categorizing views based on custom fields. You can create common filters based on the values of custom fields to better organize and process incidents.
+- **Filtering and Categorization**: The incident list supports filtering and categorizing views based on custom fields. You can create common filters based on the values of custom fields to better organize and handle incidents.
 
 ![](https://fcdoc.github.io/img/zh/flashduty/alter/custom_fields/3.avif)
 
@@ -39,7 +39,7 @@ With custom fields, you can add custom metadata, record specific incident-relate
    **Display Name**: The field displayed in the incident details page; can be modified after creation.
    **Field Description**: Assists incident handlers in understanding and using the field.
 
-4. Select the field type, and add options and default values as needed. Field types include:
+4. Select the field type and add options and default values as needed. Field types include:
 
    **Text**: Plain text input box, up to 500 characters.
    **Single Select**: Single-selection drop-down box, allowing up to ten options, each not exceeding 200 characters.
@@ -49,7 +49,7 @@ With custom fields, you can add custom metadata, record specific incident-relate
 5. Click **Submit** to complete
 
 > [!TIP]
-> If a field has a default value set, the system will automatically write this value into the field when the incident is generated. Note that the field only affects new incidents and has no impact on existing incidents.
+> If a field has a default value set, the system will automatically write the field and assign the default value when the incident is generated. Note that the field only affects new incidents and has no impact on existing incidents.
 
 ### Update Fields
 
@@ -65,10 +65,10 @@ Only the following content can be updated:
 
 ### Delete Fields
 
-You can initiate a deletion operation in the console at any time. However, please note that deletion is a time-consuming operation. When a field is deleted, the system will scan historical incidents and asynchronously update to remove the association between the field and the incident. You cannot re-create a field with the same name until the deletion is complete.
+You can initiate a deletion operation in the console at any time. However, please note that deletion is a time-consuming operation. When a field is deleted, the system will scan historical incidents and update asynchronously to remove the association between the field and the incident. You cannot re-create a field with the same name until the deletion is complete.
 
-## Frequently Asked Questions
+## FAQ
 
-|+| Why can't I search for incidents using the fields I created?
+|+| Why can't I search for incidents using the field I created?
 
-    Please confirm whether the field type you want to search is **text** type. To ensure system stability, the system currently does not support searching text type fields. Please understand.
+    Please confirm whether the field type you want to search is **text** type. To ensure system stability, the system currently does not support searching for text type fields. Please understand.

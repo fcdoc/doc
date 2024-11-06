@@ -1,5 +1,5 @@
 ---
-brief: By modifying the push parameters, you can customize the severity and title of the incident
+brief: By modifying the push parameters, you can customize information such as the severity and title of the incident
 ---
 
 # Customize Incident Title and Severity
@@ -11,7 +11,7 @@ Customize the severity, title, and other information of the incident by modifyin
 **Add Query parameter severity to the push address to cover the severity of incident .**
 
 > [!NOTE]
-> Adapt to all integrations that report alerts via webhooks.
+> Adapt to all integrations that report alerts through webhooks.
 
 Some alert integrations (such as AWS CloudWatch) do not support severity differentiation. In such cases, you can specify the severity in the integration push address. Different alert policies can be configured with different push addresses to differentiate the severity of the alerts.
 
@@ -23,7 +23,7 @@ https://api.flashcat.cloud/event/push/alert/aws/cloudwatch?integration_key=your-
 ## Customize Incident Title
 
 > [!NOTE]
-> Adapt to all integrations that report alerts via webhooks.
+> Adapt to all integrations that report alerts through webhooks.
 
 **Add Query parameter title_rule to the push address to dynamically generate incident title.**
 

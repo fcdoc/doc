@@ -1,35 +1,35 @@
 ---
-brief: Synchronize Open-Falcon alert events to Flashduty via webhook to achieve automated noise reduction of alert events
+brief: Synchronize Open-Falcon alert events to Flashduty via webhook to achieve automated noise reduction processing of alert events
 ---
 
 # Open Falcon Integration
 
-Synchronize Open-Falcon alert events to Flashduty via webhook to achieve automated noise reduction of alert events.
+Synchronize Open-Falcon alert events to Flashduty via webhook to achieve automated noise reduction processing of alert events.
 ## In Flashduty
 You can obtain an integration push address through the following two methods; choose either one.
 
-### Use Dedicated Integration
+### Use Proprietary Integration
 
-When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
+If you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
-    2. Select the **Integrated Data** tab, click **Add an Integration**, and proceed to the Add Integration page
-    3. Select the **Falcon** integration, click **Save**, and a card will be generated.
-    4. Click on the generated card to view the **Push Address**, copy it for later use, and complete.
+    1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
+    3. Select **Falcon** integration, click **Save**, and generate a card.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete.
 
 ### Use Shared Integration
 
-When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
+If you need to route the alert to different collaboration spaces based on the payload information of the alert event, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and navigate to the integration selection page.
-    2. Choose the **Falcon** integration:
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and go to the integration selection page.
+    2. Choose **Falcon** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. After clicking **Save**, copy the newly generated **Push Address** for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed.
+    3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
     5. Complete.
 
 ## In Falcon
@@ -58,6 +58,6 @@ Open-Falcon to Flashduty alert level mapping:
 | 1           | Critical | Critical |
 | 2           | Warning  | Warning |
 | 3           | Warning  | Warning |
-| 4           | Info     | Information |
-| 5           | Info     | Information |
-| 6           | Info     | Information |
+| 4           | Info     | Info |
+| 5           | Info     | Info |
+| 6           | Info     | Info |

@@ -6,18 +6,18 @@ brief: Tutorial on Setting Up LDAP in Docker Compose
 
 ## Quick Overview
 
-LDAP (Lightweight Directory Access Protocol) is a protocol based on the X.500 standard and is used to access and maintain distributed directory services. LDAP enables users and applications to query, browse, and search information stored in the directory, such as user identity information and network resources. LDAP typically runs on the TCP/IP protocol stack, specifically using TCP port 389 (for unencrypted communication) and 636 (for encrypted communication using LDAPS).
+LDAP (Lightweight Directory Access Protocol) is a protocol based on the X.500 standard and is used to access and maintain distributed directory services. LDAP enables users and applications to query, browse, and search information stored in the directory, such as user identity information, network resources, etc. LDAP usually runs on the TCP/IP protocol stack, specifically using TCP ports 389 (for unencrypted communication) and 636 (for encrypted communication, using LDAPS).
 
-Core Features of LDAP:
+The core features of LDAP include:
 
-Tree Structure: LDAP data is organized into a tree structure called DIT (Directory Information Tree), which facilitates hierarchical search and browsing.
+Tree Structure: LDAP data is organized into a tree structure called the DIT (Directory Information Tree), which facilitates hierarchical search and browsing.
 
 Entries and Attributes: Each entry (Entry) in LDAP contains multiple attributes (Attribute). Attributes have types and values, such as "cn" for common name (Common Name) and "mail" for email address.
 
 OpenLDAP is an open-source implementation of the Lightweight Directory Access Protocol (LDAP). Due to its open-source nature and flexibility, OpenLDAP has become the preferred LDAP implementation for many enterprises and organizations.
 
 > [!NOTE]
-> This article assumes that your environment already supports Docker and Docker Compose. If it does not, please install them first.
+> This article assumes that Docker and Docker Compose are already supported in the environment. If they are not, please install them first.
 
 ## Docker Compose Configuration File
 ```
@@ -89,12 +89,12 @@ docker-compose ps
 ```
 
 Stop Service:
-When you want to stop the service, you can use the following command:
+When you want to stop the service, use the following command:
 ```
 docker-compose down
 ```
 
-## Log in to OpenLDAP
+## Login to OpenLDAP
 Visit http://ip:8088/ in the browser and log in using the username cn=admin,dc=flashduty,dc=com and password xxx.
 
 ## OpenLDAP Configuration
@@ -106,7 +106,7 @@ Visit http://ip:8088/ in the browser and log in using the username cn=admin,dc=f
 > In **the user path** (for example, cn = falsh duty ) under ou = people in the picture above -> `Add new attribute` -> Select `Email` to add Email attributes to the user. If it already exists, please ignore it.
 
 ## FlashDuty Integration
-Combining the above OpenLDAP configuration, the FlashDuty integration information is shown in the figure below:
+Based on the above OpenLDAP configuration, the FlashDuty integration information is shown in the figure below:
 ![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/openldap/2.avif)
 
 > [!NOTE]

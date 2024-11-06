@@ -1,5 +1,5 @@
 ---
-brief: By customizing configuration templates, you can meet the needs for personalized notification content
+brief: By customizing configuration templates, you can meet the need for personalized notification content
 ---
 
 # Configure Notification Template
@@ -8,31 +8,31 @@ brief: By customizing configuration templates, you can meet the needs for person
 When the system __dispatches an incident__ , it uses templates to render [Incident](#Incident) and trigger notifications. Dispatching may occur in the following scenarios:
 
 1. Manually create an incident and dispatch it
-2. Report an alert event, the system automatically generates an incident and dispatches it according to the matched dispatch strategy
+2. Report an alert event, and the system automatically generates an incident and dispatches it according to the matched dispatch strategy
 3. After an incident is created, manually change the dispatch, i.e., re-dispatch
-4. According to the dispatch strategy settings, the system automatically upgrades the dispatch
-5. After an incident is closed and reopened, it is reassigned according to the previous settings
+4. According to the dispatch policy settings, the system automatically upgrades the dispatch
+5. An incident is closed and reopened, and re-dispatched according to the previous settings
 
 We use **Golang template syntax** [template/html](/0) to parse data, and you can complete any complex rendering requirements.
 
-- For the Chinese documentation, please refer to [here](https://www.topgoer.com/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%87%86%E5%BA%93/template.html#%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95). It supports logical judgment, loops, pipelines, and common functions;
+- Please refer to the Chinese documentation [here](https://www.topgoer.com/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%87%86%E5%BA%93/template.html#%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95). It supports logical judgment, loops, pipelines, and common functions;
 - We have referenced the open-source library [sprig](https://github.com/flashcatcloud/sprig/tree/flashcat), which includes hundreds of commonly used functions that you can call directly in the template;
 - If you wish to introduce more functions, you are welcome to submit a merge request
 
-## Which variables can I reference?
+## What variables can I reference?
 **Example of referencing variables**:
 
 ```i18n
-// Refer to the title
+// Reference title
 {{.Title}}
 
-// Refer to the initiator's name
+// Reference initiator's name
 {{.Creator.PersonName}}
 
-// Refer to the resource tag value
+// Reference resource tag value
 {{.Labels.resource}}
 
-// Refer to the tag value with a "." in the name
+// Reference the tag value with "." in the name
 {{index .Labels "A.B"}}
 ```
 
@@ -43,8 +43,8 @@ Field|Type|Required|Description
 ID | string | Yes | incident ID
 `Title` | string | Yes | Incident title
 `Description` | string | Yes | Incident description, may be empty
-DetailUrl | string | Yes | Incident detail page URL
-Num | string | Yes | Incident short identifier, used only for visual identification, may be repeated
+DetailUrl | string | Yes | Incident details page URL
+Num | string | Yes | Incident short identifier, used only for visual recognition and may be repeated
 `IncidentSeverity` | string | Yes | Severity, enumeration values: Critical, Warning, Info
 IncidentStatus | string | Yes | Incident status, enumeration values: Critical, Warning, Info, Ok
 `Progress` | string | Yes | Processing progress, enumeration values: Triggered, Processing, Closed
@@ -57,7 +57,7 @@ CloseTime | int64 | No | Closing time, end_time is the incident time, close_time
 Creator | [Person](#Person) | No | Initiator information, does not exist when the system automatically generates it
 Closer | [Person](#Person) | No | Closer information, does not exist when the incident automatically recovers
 AssignedTo | [Assignment](Assignment) | No | Dispatch configuration
-Responders | [][Responder](#Responder) | No | Handler list, initialized according to the dispatch configuration. If a non-dispatched person claims the incident, there will also be a corresponding record
+Responders | [][Responder](#Responder) | No | Handler list, initialized according to the dispatch configuration. If a non-assigned person claims the incident, there will also be a corresponding record
 ChannelID | int64 | No | Collaboration space ID, the value is 0 when a global incident is manually created
 ChannelName | string | No | Collaboration space name
 GroupMethod | string | No | Aggregation method, enumeration values: n: no aggregation, p: aggregation by rules, i: intelligent aggregation
@@ -65,7 +65,7 @@ GroupMethod | string | No | Aggregation method, enumeration values: n: no aggreg
 AlertCnt | int64 | Yes | Number of associated alerts
 Alerts | [][Alert](#Alert) | No | Associated alert details, there is no such information when manually created
 FireType | string | No | Notification type, enumeration values: fire: notification, refire: circular notification
-IsFlapping | bool | No | Whether it is in a jittering state, i.e., frequently occurs and recovers, related to the convergence configuration
+IsFlapping | bool | No | Whether it is in a jittering state, i.e., frequent occurrence and recovery, related to the convergence configuration
 Impact | string | No | Incident impact, filled in after the incident is closed
 RootCause | string | No | Incident root cause, filled in after the incident is closed
 Resolution | string | No | Incident solution, filled in after the incident is closed
@@ -76,64 +76,64 @@ Field|Type|Required|Description
 :-:|:-:|:-:|:---
 person_id | int64 | Yes | Person ID
 person_name | string | Yes | Person name
-email | string | Yes | Email address
+email | string | Yes | Email Address
 
 <span id="Assignment"></span>
 **Assignment** (indirect reference):
 Field|Type|Required|Description
 :-:|:-:|:-:|:---
-PersonIDs | []string| No | List of person IDs, only exists when assigned by person
-EscalateRuleID | string | No | Dispatch policy ID, only exists when dispatched by policy
-EscalateRuleName | string | No | Dispatch policy name
-LayerIdx | string | No | Dispatch stage, corresponding to the hierarchical index of the dispatch strategy, starting from 0
-Type | string | Yes | Dispatch type, enumeration values: assign: assign, reassign: reassign, escalate: escalate, reopen: reopen
+PersonIDs | []string| No | No
+EscalateRuleID | string | No | No
+EscalateRuleName | string | Dispatch policy name | No
+LayerIdx | string | No | Yes
+Type | string | Yes | Dispatch type, enumeration value: assign: assign, reassign: reassign, escalate: upgrade assignment, reopen: reopen assignment
 
 <span id="Responder"></span>
 **Responder** (indirect reference):
-Field|Type|Required|Description
+Type|Required|Description|Yes
 :-:|:-:|:-:|:---
-PersonID | int64 | Yes | Person ID
-PersonName | string | Yes | Person name
-Email | string | Yes | Email address
-AssignedAt | int64 | Yes | Dispatch time, Unix timestamp, default is 0
-AcknowledgedAt | int64 | No | Claim time, Unix timestamp, default is 0
+PersonID | int64 | Person ID | Yes
+PersonName | string | Person name | Yes
+Email | string | Yes | Email Address
+AssignedAt | int64 | Yes | No
+AcknowledgedAt | int64 | No | Claim time, Unix timestamp in seconds, default is 0
 
 <span id="Alert"></span>
 **Alert** (indirect reference):
-Field|Type|Required|Description
+Type|Required|Description|Yes
 :-:|:-:|:-:|:---
-Title | string | Yes | Alert title
-Description | string | Yes | Alert description, may be empty
-AlertSeverity | string | Yes | Severity, enumeration values: Critical, Warning, Info
-AlertStatus | string | Yes | Alert status, enumeration values: Critical, Warning, Info, Ok
-Progress | string | Yes | Processing progress, enumeration values: Triggered, Processing, Closed
-StartTime | int64 | Yes | Trigger time, Unix timestamp
-EndTime | int64 | No | Recovery time, Unix timestamp, default is 0
-CloseTime | int64 | No | Closing time, EndTime is the alert recovery time, and CloseTime is the closing time of the processing progress. Alert will be automatically closed when it is restored. Manually closing Alert will not affect alert recovery. Unix seconds timestamp, default is 0
-`Labels` | map[string]string | No | Tags KV, Key and Value are both strings
+Title | string | Alert title | Yes
+Description | string | Alert description, may be empty | Yes
+AlertSeverity | string | Yes | Yes
+AlertStatus | string | Yes | Yes
+Progress | string | Yes | Yes
+StartTime | int64 | Trigger time, Unix timestamp | No
+EndTime | int64 | No | No
+CloseTime | int64 | No | No
+`Labels` | map[string]string | No | Frequently Asked Questions
 
 ## Frequently Asked Questions
 1. **How do I know what specific tag information `Labels` has?**
 
-- Manually created incidents have no labels;
-- Automatically created incidents have labels, which are the same as the labels of the first alert that was merged. Go to the __incident list__ page, find an incident and view its details, and you can see all tag information
+- Manually created incidents do not have labels;
+- The automatically created incident tag exists, which is the same as the tag of the first alert that was merged. Go to the **incident list** page, find an item incident and view the details incident , and you can see all tag information.
 
-2. **Why does the actual content sent use the __default template__ even though I configured it to render according to a custom template?**
+2. **Why does the actual content sent use the __default template__ even though I configured a custom template for rendering?**
 
-- When creating a custom template, the system uses mock data to render the template to check for syntax errors
-- Mock data covers limited scenarios and may not match some of the logical branches in your template. During actual operation, rendering may fail
-- After rendering fails, the system will use the default template to ensure that the message is delivered
-- It is recommended that you use logical judgment to avoid rendering exceptions when you are not sure whether the reference variable exists, such as the `resource` tag:
+- Mock data covers limited scenarios and may not match some of the logical branches in your template. During actual operation, rendering may fail;
+- After rendering fails, the system will use the default template to ensure that the message is delivered;
+- After rendering fails, the system will use the default template to ensure the message is delivered;
+- It is recommended that you use logical judgment to avoid rendering errors when you are unsure if the referenced variable exists, such as the `resource` tag:
 
 ```i18n
-// Wrong approach: directly read the tag
+// Recommended approach: judge first, then read the tag
 {{.Labels.resource}}
 
-// Recommended approach: judge first, then read the tag
+// Recommended practice: judge first, then read the tag
 {{if .Labels.resource}}{{.Labels.resource}}{{end}}
 ```
 
-3. **Why does the incident title contain __character escapes such as " > " __?**
+3. **incident The title contains __ character escapes such as " > " __ ?**
 
 ```i18n
 // Use toHtml function
@@ -143,18 +143,18 @@ CloseTime | int64 | No | Closing time, EndTime is the alert recovery time, and C
 {{toHtml .Title .TitleEnglish}}
 ```
 
-4. **How to __convert time format__ for time variables, which are all timestamp types?**
+4. **How do I __convert time format__ for time variables, which are all timestamp types?**
 
 ```i18n
 // date function, convert timestamp into readable format
-// "2006-01-02 15:04:05" is a common format, more formats can be found online
+// "2006-01-02 15:04:05" is a common format; for more formats, please search the internet
 {{date "2006-01-02 15:04:05" .StartTime}}
 
 // ago function, convert the time difference into a readable format
 {{ago .StartTime}}
 ```
 
-5. **How to reference external variables inside a for loop?**
+5. **How do I reference external variables inside a for loop?**
 ```i18n
 // Add " $ " before external variables
 {{range .Responders}}
@@ -163,14 +163,14 @@ CloseTime | int64 | No | Closing time, EndTime is the alert recovery time, and C
 {{end}}
 {{end}}
 ```
-6. **How to extract the value of a field with a "." in the name, such as the information of "obj.instance" in the label?**
+6. **How to extract the field value with "." in the name, such as the information of " obj.instance " in the label?**
 
 ```i18n
 // Use the index function
 {{index .Labels "obj.instance"}}
 ```
 
-7. **How to extract the information of a label in an incident's associated alert and remove duplicates?**
+7. **How do I extract the information of a label from an incident-associated alert and remove duplicates?**
 
 ```i18n
 // Use the alertLabels function to get the deduplicated array
@@ -180,15 +180,15 @@ CloseTime | int64 | No | Closing time, EndTime is the alert recovery time, and C
 {{joinAlertLabels . "resource" "sep"}}
 ```
 
-8. **How to loop through and print labels?**
+8. **How do I loop through and print labels?**
 
 ```i18n
-// Complete traversal
+// Exclude a single label
 {{range $k, $v := .Labels}}
 {{$k}} : {{toHtml $v}}
 {{end}}
 
-// Exclude a single label
+// Exclude multiple labels
 {{range $k, $v := .Labels}}
 {{if ne $k "resource"}}
 {{$k}} : {{toHtml $v}}
@@ -204,11 +204,11 @@ CloseTime | int64 | No | Closing time, EndTime is the alert recovery time, and C
 
 ```
 
-9. **How can I view more functions and examples of their use?**
+9. **How can I view more functions and examples of their usage?**
 - Function list: https://github.com/flashcatcloud/sprig/blob/master/functions.go#L97
 - Usage example: View the corresponding _test.go file, such as date test case see [https://github.com/flashcatcloud/sprig/blob/master/date_test.go](https://github.com/flashcatcloud/sprig/blob/master/date_test.go)
 
-The following are specific descriptions for each notification channel.
+Feishu Application
 
 ## Feishu Application
 You need to pre-configure **the integration center - Instant Messaging -** integration to send message cards. If no custom content is set, the system default template will be used to render all label information:
@@ -224,10 +224,10 @@ As shown below:
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/conf/template/1.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
-If you want to display only key tag information, you can refer to the following code snippet:
+We have listed some common tags that you can delete as needed;
 
 - We have listed some common tags that you can delete as needed;
-- In the Feishu application, the system will automatically delete empty lines (caused by the non-existence of tags) for you, and you can configure it with confidence
+- In the Feishu app, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
 {{if (index .Labels "resource")}}resource: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
@@ -266,10 +266,10 @@ As shown below:
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/conf/template/2.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
-If you want to display only key tag information, you can refer to the following code snippet:
+We have listed some common tags that you can delete as needed;
 
 - We have listed some common tags that you can delete as needed;
-- In the DingTalk application, the system will automatically delete empty lines (caused by the non-existence of tags) for you, and you can configure it with confidence
+- In the DingTalk app, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
 {{if (index .Labels "resource")}}**resource**: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
@@ -298,7 +298,7 @@ If you want to display only key tag information, you can refer to the following 
 You need to pre-configure **the integration center - Instant Messaging - EnterpriseWeChat** integration to send message cards. If no custom content is set, the system default template will be used and only common tag information will be rendered:
 
 - We have listed some common tags that you can delete as needed;
-- In the Enterprise WeChat application, the system will automatically delete empty lines (caused by the non-existence of tags) for you, and you can configure it with confidence
+- In the Enterprise WeChat app, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
 {{if (index .Labels "resource")}}resource: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
@@ -326,7 +326,7 @@ As shown below:
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/conf/template/3.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
-**Note that Enterprise WeChat limits the length of the card. In the template rendering area, you can render no more than 8 lines of content, and the part exceeding 8 lines will be hidden.**
+**Note: Enterprise WeChat limits the card length. In the template rendering area, you can render no more than 8 lines of content, and any part exceeding 8 lines will be hidden.**
 
 ## Slack Application
 You need to pre-configure **the Integration Center - IM - Slack integration before** you can send message cards. If no custom content is set, the system default template will be used and only common tag information will be rendered:
@@ -342,11 +342,11 @@ As shown below:
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/conf/template/4.avif" alt="drawing" style="display: block; margin: 0 auto;" width="600"/>
 
-If you want to display only key tag information, you can refer to the following code snippet:
+We have listed some common tags that you can delete as needed;
 
-- We have listed some common tags that you can delete as needed;
 - Messages can be sent with a length of about 15,000 characters, and will be truncated if exceeded;
-- In the Slack application, the system will automatically delete empty lines (caused by the non-existence of tags) for you, and you can configure it with confidence
+- Messages can be up to about 15,000 characters long, and will be truncated if exceeded;
+- In the Slack app, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
 {{if (index .Labels "resource")}}*resource*: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
@@ -384,11 +384,11 @@ As shown below:
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/conf/template/5.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
 
-If you want to display only key tag information, you can refer to the following code snippet:
+We have listed some common tags that you can delete as needed;
 
-- We have listed some common tags that you can delete as needed;
 - Messages can be sent with a length of about 28KB, and an error will be reported if exceeded;
-- In the Microsoft Teams application, the system will automatically delete empty lines (caused by the non-existence of tags) for you, and you can configure it with confidence
+- Messages can be up to about 28KB in length, and an error will be reported if exceeded;
+- In the Microsoft Teams app, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
 {{if (index .Labels "resource")}}**resource**: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
@@ -426,11 +426,11 @@ As shown below:
 
 <img src="https://fcdoc.github.io/img/zh/flashduty/conf/template/5.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
 
-If you want to display only key tag information, you can refer to the following code snippet:
+We have listed some common tags that you can delete as needed;
 
-- We have listed some common tags that you can delete as needed;
 - Messages can be sent with a length of about 28KB, and an error will be reported if exceeded;
-- In the Microsoft Teams application, the system will automatically delete empty lines (caused by the non-existence of tags) for you, and you can configure it with confidence
+- Messages can be up to about 28KB in length, and an error will be reported if exceeded;
+- In the Microsoft Teams app, the system will automatically delete empty rendering lines (caused by non-existent tags) for you, so you can configure it with confidence
 
 ```i18n
 {{if (index .Labels "resource")}}**resource**: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}
@@ -454,33 +454,33 @@ If you want to display only key tag information, you can refer to the following 
 {{if (index .Labels "runbook_url")}}**runbook_url**: {{index .Labels "runbook_url"}}{{end}}
 ```
 
-## Feishu Robot
+## Feishu Robot only supports sending plain text messages
 Feishu Robot only supports sending plain text messages.
 
-- Messages __have a maximum length of 4000 bytes, and will be truncated if exceeded__;
-- If the text contains `<br>`, it will __first delete empty lines, then replace `<br>` with a newline character__;
-- If you do not set custom content, the system default template will be used to display only key information:
+- Messages __have a maximum length of 4000 bytes, and any part exceeding this will be truncated and sent__;
+- If the text contains `<br>`, when rendering, __the empty lines will be deleted first, and then `<br>` will be replaced with a newline character__;
+- Collaboration space
 
 ```i18n
 {{fireReason .}}INC #{{.Num}} {{toHtml .Title}}
 -----
-Collaboration space: {{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}
-Severity: {{.IncidentSeverity}}
-Trigger time: {{date "2006-01-02 15:04:05" .StartTime}}
-Duration: {{ago .StartTime}}{{if gt .AlertCnt 1}}
-Aggregated alerts: {{.AlertCnt}}Count{{end}}{{if .Labels.resource}}
-Alert object: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
-Fault description: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
-Assigned personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
-<br>Details: {{.DetailUrl}}
+No: {{if .ChannelName}}{{.ChannelName}}{{else}}Severity{{end}}
+Trigger time: {{.IncidentSeverity}}
+Duration: {{date "2006-01-02 15:04:05" .StartTime}}
+Aggregated alerts: {{ago .StartTime}}{{if gt .AlertCnt 1}}
+Count: {{.AlertCnt}}Alert object{{end}}{{if .Labels.resource}}
+Fault description: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
+Assigned personnel: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
+Details: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
+<br>DingTalk Robot: {{.DetailUrl}}
 ```
 
 ## DingTalk Robot
 DingTalk Robot only supports sending Markdown messages ([syntax restrictions](https://open.dingtalk.com/document/robots/custom-robot-access#title-7ur-3ok-s1a)).
 
-- Messages __have a maximum length of 4000 bytes, and will be truncated if exceeded__;
-- If the text contains `<br>` , when rendering, __the blank line will be deleted first, and then `<br>` will be replaced with a newline character__ ;
-- If you do not set custom content, the system default template will be used to display only key information:
+- Messages __have a maximum length of 4000 bytes, and any part exceeding this will be truncated and sent__;
+- If the text contains `<br>` , it will __first delete blank lines, and then replace `<br>` with a newline character__ ;
+- If you do not set custom content, the system default template will be used, displaying only key information:
 
 ```i18n
 {{fireReason .}}INC [#{{.Num}}]({{.DetailUrl}}) {{toHtml .Title}}
@@ -489,19 +489,19 @@ DingTalk Robot only supports sending Markdown messages ([syntax restrictions](ht
 - Severity: {{$s := colorSeverity .IncidentSeverity}}{{toHtml $s}}
 - Trigger Time: {{date "2006-01-02 15:04:05" .StartTime}}
 - Duration: {{ago .StartTime}}{{if gt .AlertCnt 1}}
-- Aggregation Alarm: {{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
-- Alarm Object: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
+- Aggregated Alerts: {{.AlertCnt}}Count{{end}}{{if .Labels.resource}}
+- Alert Object: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
 - Fault Description: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
 - Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 <br>[Details]({{.DetailUrl}})|[Claim]({{.DetailUrl}}?ack=1)
 ```
 
 ## Enterprise WeChat Robot
-The Qiwei Robot only supports sending Markdown messages ( [grammar restrictions](https://developer.work.weixin.qq.com/document/path/91770#markdown%E7%B1%BB%E5%9E%8B) ).
+The QiWei Robot only supports sending Markdown messages ([syntax limitations](https://developer.work.weixin.qq.com/document/path/91770#markdown%E7%B1%BB%E5%9E%8B)).
 
 - The message __has a maximum length of 4000 bytes, and any excess will be truncated and sent__ ;
-- If the text contains `<br>` , when rendering, __the blank line will be deleted first, and then `<br>` will be replaced with a newline character__ ;
-- If you do not set custom content, the system default template will be used to display only key information:
+- If the text contains `<br>` , it will __first delete blank lines, and then replace `<br>` with a newline character__ ;
+- If you do not set custom content, the system default template will be used, displaying only key information:
 
 ```i18n
 {{fireReason .}}**INC [#{{.Num}}]({{.DetailUrl}}) {{toHtml .Title}}**
@@ -509,18 +509,18 @@ The Qiwei Robot only supports sending Markdown messages ( [grammar restrictions]
 > Severity: <font color="warning">{{.IncidentSeverity}}</font>
 > Trigger Time: {{date "2006-01-02 15:04:05" .StartTime}}
 > Duration: {{ago .StartTime}}{{if gt .AlertCnt 1}}
-> Aggregation Alarm: {{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
-> Alarm Object: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
+> Aggregated Alerts: {{.AlertCnt}}Count{{end}}{{if .Labels.resource}}
+> Alert Object: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
 > Fault Description: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
 > Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 <br>[Details]({{.DetailUrl}})|[Claim]({{.DetailUrl}}?ack=1)
 ```
 
 ## Telegram Bot
-- Configure the Telegram service address that can be accessed in China;
-- The message __has a maximum length of 4096 characters, and any excess will not be sent__ ;
-- If the text contains `<br>` , when rendering, __the blank line will be deleted first, and then `<br>` will be replaced with a newline character__ ;
-- If you do not set custom content, the system default template will be used to display only key information:
+- Configure a Telegram service address that can be accessed domestically;
+- The message __has a maximum length of 4096 characters, and will not be sent if it exceeds this limit__ ;
+- If the text contains `<br>` , it will __first delete blank lines, and then replace `<br>` with a newline character__ ;
+- If you do not set custom content, the system default template will be used, displaying only key information:
 
 ```i18n
 {{fireReason .}}INC [#{{.Num}}]({{.DetailUrl}}) {{toHtml .Title}}
@@ -529,8 +529,8 @@ Collaborative Space: {{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}
 Severity: {{.IncidentSeverity}}
 Trigger Time: {{date "2006-01-02 15:04:05" .StartTime}}
 Duration: {{ago .StartTime}}{{if gt .AlertCnt 1}}
-Aggregation Alarm: {{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
-Alarm Object: {{toHtml (joinAlertLabels . "resource" ", ")}}({{.Labels.resource}}){{end}}{{if .Description}}
+Aggregated Alerts: {{.AlertCnt}}Count{{end}}{{if .Labels.resource}}
+Alert Object: {{toHtml (joinAlertLabels . "resource" ", ")}}({{.Labels.resource}}){{end}}{{if .Description}}
 Fault Description: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
 Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 
@@ -538,9 +538,9 @@ Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 ```
 
 ## Slack Bot
-- The message __can be sent with a length of about 15000 characters, and any excess will be truncated and sent__ ;
-- If the text contains `<br>` , when rendering, __the blank line will be deleted first, and then `<br>` will be replaced with a newline character__ ;
-- If you do not set custom content, the system default template will be used to display only key information:
+- The message __can be up to 15000 characters, and any excess will be truncated and sent__ ;
+- If the text contains `<br>` , it will __first delete blank lines, and then replace `<br>` with a newline character__ ;
+- If you do not set custom content, the system default template will be used, displaying only key information:
 
 ```i18n
 {{fireReason .}}INC <{{.DetailUrl}}|#{{.Num}}> {{toHtml .Title}}
@@ -549,8 +549,8 @@ Collaborative Space: {{if .ChannelName}}{{.ChannelName}}{{else}}None{{end}}
 Severity: {{.IncidentSeverity}}
 Trigger Time: {{date "2006-01-02 15:04:05" .StartTime}}
 Duration: {{ago .StartTime}}{{if gt .AlertCnt 1}}
-Aggregation Alarm: {{.AlertCnt}}Items{{end}}{{if .Labels.resource}}
-Alarm Object: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
+Aggregated Alerts: {{.AlertCnt}}Count{{end}}{{if .Labels.resource}}
+Alert Object: {{toHtml (joinAlertLabels . "resource" ", ")}}{{end}}{{if .Description}}
 Fault Description: {{toHtml .Description}}{{end}}{{if gt (len .Responders) 0}}
 Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 -----
@@ -558,10 +558,10 @@ Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 ```
 
 ## Zoom Bot
-- The message __can be sent with a length of about 4000 characters, and any excess will be truncated and sent__ ;
-- If the text contains `<br>` , when rendering, __the blank line will be deleted first, and then `<br>` will be replaced with a newline character__ ;
+- The message __can be up to 4000 characters, and any excess will be truncated and sent__ ;
+- If the text contains `<br>` , it will __first delete blank lines, and then replace `<br>` with a newline character__ ;
 - The message format **follows the Zoom message format** . The current robot application does not support Markdown . For other formats, please refer to the official website : [https://developers.zoom.us/docs/team-chat-apps/customizing-messages/](https://developers.zoom.us/docs/team-chat-apps/customizing-messages/)
-- If you do not set custom content, the system default template will be used to display only key information:
+- If you do not set custom content, the system default template will be used, displaying only key information:
 
 ```i18n
 {"head": {
@@ -600,7 +600,7 @@ Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 },
 {
 "type": "message",
-"text": "Aggregation Alarm: {{.AlertCnt}}Items{{end}}{{if .Labels.resource}}",
+"text": "Aggregated Alerts: {{.AlertCnt}}Count{{end}}{{if .Labels.resource}}",
 "style": {
 "bold": false,
 "italic": false
@@ -608,7 +608,7 @@ Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 },
 {
 "type": "message",
-"text": "Alarm Object: {{.Labels.resource}}{{end}}{{if .Description}}",
+"text": "Alert Object: {{.Labels.resource}}{{end}}{{if .Description}}",
 "style": {
 "bold": false,
 "italic": false
@@ -632,12 +632,12 @@ Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 },
 {
 "type": "message",
-"text": "Check Details
+"text": "View Details
 "link": "{{.DetailUrl}}{{if .IsFlapping}}"
 },
 {
 "type": "message",
-"text": "Notice: The current fault status changes frequently, and the notification will be converged{{.Flapping.MuteMinutes}}We recommend you optimize your alarm strategy.{{end}}{{if .IsInStorm}}",
+"text": "Notice: The current fault status changes frequently, and notifications will be converged{{.Flapping.MuteMinutes}}Minutes. It is recommended that you optimize your alert strategy.{{end}}{{if .IsInStorm}}",
 "style": {
 "bold": true,
 "italic": false
@@ -645,7 +645,7 @@ Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 },
 {
 "type": "message",
-"text": "Notice: The current fault has been aggregated{{.AlertCnt}}alarms, triggering an alarm storm. Please handle it urgently!{{end}}",
+"text": "Notice: The current faults have been aggregated{{.AlertCnt}}Count of alerts, triggering an alert storm. Please handle it urgently!{{end}}",
 "style": {
 "bold": true,
 "italic": false
@@ -655,7 +655,7 @@ Assigned Personnel: {{range .Responders}}@{{.PersonName}} {{end}}{{end}}
 }
 ```
 
-## Short Message
+## SMS
 If you do not set custom content, the system default template will be used to render the notification:
 
 ```
@@ -689,7 +689,7 @@ If you do not set custom content, the system default template will be used to re
 <body data-id="__react-email-body" style="background-color:rgb(255,255,255);border-radius:0.25rem;margin-top:2.5rem;margin-bottom:2.5rem;margin-left:auto;margin-right:auto;padding:1rem;min-width:400px;max-width:660px;font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji">
 <div style="width:100%;height:0.375rem;margin-bottom:2rem" class="bg-{{.IncidentSeverity}}"></div>
 <div style="display:flex;align-items:center;margin-bottom:1.5rem">
-<div style="display:flex;align-items:flex-end;gap:1rem"><img witdh="120" data-id="react-email-img" src="https://fcdoc.github.io/img/zh/flashduty/conf/template/6.avif" height="40" style="display:block;outline:none;border:none;text-decoration:none" /><span style="font-size:1.25rem;line-height:1.75rem;font-weight:600">You have a pending issue</span></div>
+<div style="display:flex;align-items:flex-end;gap:1rem"><img witdh="120" data-id="react-email-img" src="https://fcdoc.github.io/img/zh/flashduty/conf/template/6.avif" height="40" style="display:block;outline:none;border:none;text-decoration:none" /><span style="font-size:1.25rem;line-height:1.75rem;font-weight:600">You have a pending issue to handle</span></div>
 </div>
 <div style="background-color:rgb(243,244,246);padding:2rem;margin-top:1rem;border-radius:0.5rem">
 <div style="display:flex;flex-direction:column;gap:0.75rem">
@@ -733,14 +733,14 @@ If you do not set custom content, the system default template will be used to re
 </div>
 {{if .Labels.resource}}
 <div style="display:flex;margin-bottom:0.5rem;">
-<div style="color:#000;font-weight:500;width:6rem;margin-right:1rem;">Alarm Object</div>
+<div style="color:#000;font-weight:500;width:6rem;margin-right:1rem;">Alert Object</div>
 <div style="color:rgb(55,65,81);margin-top:0.125rem">
 <div data-id="react-email-markdown">{{toHtml (joinAlertLabels . "resource" ", ")}}</div>
 </div>
 </div>
 {{end}}
 </div>
-<div style="display:flex;gap:1rem;margin-top:2rem"><a href="{{.DetailUrl}}?ack=1" data-id="react-email-button" target="_blank" style="line-height:100%;text-decoration:none;display:inline-block;max-width:100%;padding:0px 0px"><span></span><span style="max-width:100%;display:inline-block;line-height:120%;mso-padding-alt:0px;mso-text-raise:0"><div style="padding-left:2rem;padding-right:2rem;padding-top:0.5rem;padding-bottom:0.5rem;background-color:rgb(108,83,177);border-radius:0.25rem;font-size:1rem;line-height:1.5rem;color:rgb(255,255,255);font-weight:600;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms">Claim Now</div></span><span></span></a><a href="{{.DetailUrl}}" data-id="react-email-button" target="_blank" style="color:#61dafb;line-height:100%;text-decoration:none;display:inline-block;max-width:100%;padding:0px 0px"><span></span><span style="max-width:100%;display:inline-block;line-height:120%;mso-padding-alt:0px;mso-text-raise:0"><div style="padding-left:2rem;padding-right:2rem;padding-top:0.5rem;padding-bottom:0.5rem;background-color:rgb(255,255,255);border-width: 1px;border-style:solid;border-color:rgb(229,231,235);border-radius:0.25rem;font-size:1rem;line-height:1.5rem;color:rgb(0,0,0);font-weight:600">Check Details</div></span><span></span></a></div>
+<div style="display:flex;gap:1rem;margin-top:2rem"><a href="{{.DetailUrl}}?ack=1" data-id="react-email-button" target="_blank" style="line-height:100%;text-decoration:none;display:inline-block;max-width:100%;padding:0px 0px"><span></span><span style="max-width:100%;display:inline-block;line-height:120%;mso-padding-alt:0px;mso-text-raise:0"><div style="padding-left:2rem;padding-right:2rem;padding-top:0.5rem;padding-bottom:0.5rem;background-color:rgb(108,83,177);border-radius:0.25rem;font-size:1rem;line-height:1.5rem;color:rgb(255,255,255);font-weight:600;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms">Claim Now</div></span><span></span></a><a href="{{.DetailUrl}}" data-id="react-email-button" target="_blank" style="color:#61dafb;line-height:100%;text-decoration:none;display:inline-block;max-width:100%;padding:0px 0px"><span></span><span style="max-width:100%;display:inline-block;line-height:120%;mso-padding-alt:0px;mso-text-raise:0"><div style="padding-left:2rem;padding-right:2rem;padding-top:0.5rem;padding-bottom:0.5rem;background-color:rgb(255,255,255);border-width: 1px;border-style:solid;border-color:rgb(229,231,235);border-radius:0.25rem;font-size:1rem;line-height:1.5rem;color:rgb(0,0,0);font-weight:600">View Details</div></span><span></span></a></div>
 </div>
 <div style="display:flex;justify-content:flex-end;align-items:flex-end;margin-top:2rem">
 <div style="font-size:0.875rem;line-height:1.25rem;font-weight:500">ALL RIGHTS RESERVED © Beijing Kuaimao Nebula Technology Co., Ltd</div>

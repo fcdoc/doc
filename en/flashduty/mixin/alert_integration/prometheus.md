@@ -6,7 +6,7 @@ brief: >-
 
 # Usage Restrictions
 
-Push the Prometheus alert events to Flashduty through AlertManager via webhook. When an alert is triggered, send a trigger event to Flashduty; when the alert is resolved, send a recovery event to Flashduty.
+Push the Prometheus alert events to Flashduty via AlertManager through webhooks. When an alert triggers, send a trigger event to Flashduty, and when the alert recovers, send a recovery event to Flashduty.
 
 ## Usage Restrictions
 
@@ -15,38 +15,38 @@ Push the Prometheus alert events to Flashduty through AlertManager via webhook. 
 - You must have permission to modify the AlertManager configuration file.
 - Supported Version
 
+## Step 1: Configure Alertmanager
+
+This article is compatible with **Alertmanager 0.16.0 and above** versions.
+
 ## Operation Steps
-
-This article is applicable to **Alertmanager 0.16.0 and above** versions.
-
-## Use Proprietary Integration
 
 ### In Flashduty:
 
-You can obtain an integration push address through the following two methods; choose either one.
+You can obtain an integration push address through the following two methods, either one is sufficient.
 
-#### Use Shared Integration
+#### Use Proprietary Integration
 
 When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
     1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
-    2. Select the **Integrate Data** tab, click **Add an Integration**, and enter the Add Integration page
-    3. Select the **Prometheus** integration, click **Save**, and a card will be generated.
+    2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
+    3. Select **Prometheus** integration, click **Save**, and generate a card.
     4. Click on the generated card to view the **push address**, copy it for later use, and complete.
 
-#### Step 1: Configure Alertmanager
+#### Use Shared Integration
 
-When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
+When you need to route alert events to different collaboration spaces based on the payload information of the alert event, this method is preferred.
 
 |+| Expand
 
     1. Enter the Flashduty console, select **Integration Center => Alert Events**, and enter the integration selection page.
-    2. Select the **Prometheus** integration:
+    2. Choose **Prometheus** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. After clicking **Save**, copy the newly generated **push address** for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust it as needed.
+    3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can directly set a default collaboration space as a fallback and adjust it as needed.
     5. Complete.
 
 ### In AlertManager:
@@ -67,9 +67,9 @@ http_config:
 proxy_url: 'http://proxyserver:port'
 ```
 
-You need to replace url with the corresponding parameter value as the integrated push address. Note that the query string parameter part needs to carry integration_key .
+name: 'flashduty-webhook'
 
-If you need to request through a proxy Flashduty you can additionally set the proxy_url parameter of http_config to the proxy address.
+webhook_configs:
 
 4. In the route configuration section, change the default route and specify the receiver to be the webhook just configured, as follows:
 
@@ -79,7 +79,7 @@ route:
 receiver: 'flashcat'
 ```
 
-You can also add the receiver to a non-default route, but this way you will only synchronize the alerts of the corresponding route to Flashduty, not all alerts.
+You can also add the receiver to a non-default route, but this way you will only synchronize the alert events of the corresponding route to Flashduty, not all alert events.
 
 5. Save the configuration file
 6. Make changes take effect by reloading the configuration file (sending a SIGHUP signal to the process, or POST request to /-/reload api)
@@ -90,7 +90,7 @@ You can also add the receiver to a non-default route, but this way you will only
 By default, the system uses the current time as the event trigger time. If you want to customize the time, you can set an additional timestamp field to identify the exact time when each alert occurs.
 
 1. Log in to your Prometheus Server instance
-2. Open the alert rule-related configuration file
+2. Open the alert rule configuration file
 3. For each alert rule, change the annotations section and add the timestamp field as follows:
 
 ```
@@ -103,22 +103,22 @@ timestamp: '{{ with query "time()" }}{{ . | first | value }}{{ end }}'
 5. Make changes take effect by reloading the configuration file (sending a SIGHUP signal to the process, or POST request to /-/reload api)
 6. Complete
 
-## Prometheus to Flashduty Alert Level Mapping:
+## Severity Mapping Relationship
 
-The system sequentially extracts the `severity`, `priority`, and `level` labels from the alert event. The corresponding values will be used as the alert level in Prometheus. If none are extracted, the system automatically sets the Prometheus alert level to `Warning`.
+The system sequentially extracts the `severity`, `priority`, and `level` from the alert event labels. The corresponding values will be used as the alert levels in Prometheus. If no values are extracted, the system automatically sets the Prometheus alert level to `Warning`.
 
-Frequently Asked Questions
+route:
 
-| Prometheus   |  Flashduty  | State | Severity | |
+| Prometheus   |  Flashduty  | state |
 | ------------ | -------- | ---- |
-| critical     | Critical | |-------|----------| |
-| warning      | Warning  | Critical | Serious | |
-| warn         | Warning  | Warning | Warning | |
-| info         | Info     | Info | Reminder | |
-| acknowledged | Info     | Info | Reminder | |
-| unknown      | Info     | Info | Reminder | |
-| unk          | Info     | Info | Reminder | |
-| ok           | Ok       | Resolved | Recovered | |
+| critical     | Critical | |-------|-----------------| |
+| warning      | Warning  | serious | Critical        | |
+| warn         | Warning  | warn | Warning         | |
+| info         | Info     | remind | Info            | |
+| acknowledged | Info     | remind | Info            | |
+| unknown      | Info     | remind | Info            | |
+| unk          | Info     | remind | Info            | |
+| ok           | Ok       | recover | Resolved        | |
 
 ## Faq
 
@@ -126,14 +126,14 @@ Frequently Asked Questions
 
     #### In Flashduty:
 
-    1. Does the integration show the **latest event time**? If not, it means Flashduty did not receive the push. Check the AlertManager part first.
-    2. If you are using **shared integration**, first confirm whether you have configured **routing rules**. Without setting routing rules, the system will directly reject new pushes because there is no collaboration space to handle your alerts. In this case, configure the routing rules to the desired space.
+    1. Check if the integration shows the **latest event time**? If not, it means Flashduty did not receive the push, so check the AlertManager part directly.
+    2. If you are using **shared integration**, first confirm whether you have configured **routing rules**. Without setting routing rules, the system will directly reject new pushes because there is no collaboration space to handle your alert. In this case, just configure the routing rules to the space you want.
 
     #### In AlertManager:
 
-    1. First, confirm whether the AlertManager has generated a new alert. If no new alert is generated, wait for a new alert to be triggered and then re-verify.
+    1. First, confirm whether the AlertManager has generated a new alert. If no new alert is generated, please wait for a new alert to be triggered and then re-verify.
     2. Open the AlertManager configuration file. If you set up a sub-route, please make sure that your routing settings are correct (for example, if the previous route is set to continue , AlertManager will skip matching subsequent sub-routes. We recommend that you always only set a default route to Flashduty ). Also verify whether the target callback address exactly matches the integrated push address. If they do not match, please modify **alert rules** and re-verify.
-    3. If it matches, please continue to confirm that the AlertManager instance can access the external api.flashcat.cloud domain name. If not, you first need to open an external network for it, or separately enable external network access for Flashduty's domain name.
-    4. If the network is fine, continue troubleshooting the AlertManager to check for any relevant error logs.
+    3. Step 2: Configure Timestamp
+    4. If the network is not the issue, continue troubleshooting the AlertManager to see if there are any relevant error logs.
 
     If you still cannot find the root cause of the problem after performing the above steps, please contact us directly.
