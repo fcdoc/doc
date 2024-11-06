@@ -51,7 +51,8 @@ jobs:
             git config --global user.email "github.action@i18n.site"
             git add .
             git commit -m '.'
-            git push https://x-access-token:${{github.token}}@github.com/${{ github.repository_owner }}/img main
+            branch=$(git rev-parse --abbrev-ref HEAD)
+            git push https://x-access-token:${{github.token}}@github.com/${{ github.repository_owner }}/img $branch
           fi
 
       - name: https://i18n.site
