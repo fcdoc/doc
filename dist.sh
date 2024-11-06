@@ -9,4 +9,4 @@ git commit -mdist || true
 git pull origin main
 git pull origin dist
 branch=$(git rev-parse --abbrev-ref HEAD)
-git push $branch dist
+git push origin $branch:dist
