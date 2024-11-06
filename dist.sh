@@ -5,7 +5,7 @@ cd $DIR
 set -ex
 
 git add .
-git commit -mdist
+git commit -mdist || true
 git pull origin main
 git pull origin dist
 branch=$(git rev-parse --abbrev-ref HEAD)
