@@ -4,7 +4,7 @@ brief: >-
   Flashduty 发送触发事件，当告警恢复时，向 Flashduty 发送恢复事件
 ---
 
-# 夜莺/FlahCat集成
+# 夜莺/Flash集成
 
 通过 webhook 的方式将夜莺（Nightingale / n9e）或 Flashcat 告警事件推送到 Flashduty。当告警触发时，向 Flashduty 发送触发事件，当告警恢复时，向 Flashduty 发送恢复事件。
 

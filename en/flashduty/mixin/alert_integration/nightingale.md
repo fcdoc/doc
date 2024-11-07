@@ -4,7 +4,7 @@ brief: >-
   Flashduty sends a trigger event. When the alert is restored, a recovery event is sent to Flashduty
 ---
 
-# Nightingale/Flashcat Integration
+# Nightingale/Flash Integration
 
 Push Nightingale (Nightingale/n9e) or Flashcat alert events to Flashduty through webhook. When an alert triggers, send a trigger event to Flashduty. When the alert recovers, send a recovery event to Flashduty.
 
