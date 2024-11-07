@@ -1,0 +1,83 @@
+@!$
+- flashduty:
+  - advanced:
+    - customize_incident_attrs.md#0Fu-O6
+    - dynamic_notifications.md#0Fu-O6
+    alter:
+    - custom_actions.md#0Fu-O6
+    - custom_fields.md#0Fu-O6
+    - edit_incidents.md#0Fu-O6
+    - escalate_incidents.md#0Fu-O6
+    - past_incidents.md#0Fu-O6
+    - understand_novel_faults.md#0Fu-O6
+    - view_incidents.md#0Fu-O6
+    - what_is_incident.md#0Fu-O6
+    - what_is_noise_reduction.md#0Fu-O6
+    conf:
+    - alert_routings.md#0Fu-O6
+    - calendar.md#0Fu-O6
+    - channel.md#0Fu-O6
+    - escalate_rule.md#0Fu-O6
+    - fault_silence_and_suppression.md#0Fu-O6
+    - how_to_filter.md#0Fu-O6
+    - how_to_integrate_alerts.md#0Fu-O6
+    - label_enrichment.md#0Fu-O6
+    - noise_reduction.md#0Fu-O6
+    - preference.md#0Fu-O6
+    - schedule.md#0Fu-O6
+    - template.md#0Fu-O6
+    feature:
+    - permission.md#0Fu-O6
+    - single_sign_on.md#0Fu-O6
+    - teams_and_members.md#0Fu-O6
+    license:
+    - privacy_policy.md#0Fu-O6
+    - service_level.md#0Fu-O6
+    - user.md#0Fu-O6
+    mixin:
+    - alert_integration:
+      - Sentry.md#0Fu-O6
+      - aliyun_arms.md#0Fu-O6
+      - aliyun_cm_event.md#0Fu-O6
+      - aliyun_cm_metric.md#0Fu-O6
+      - aliyun_sls.md#0Fu-O6
+      - aws_cloudwatch.md#0Fu-O6
+      - azure_monitor.md#0Fu-O6
+      - baidu_bcm.md#0Fu-O6
+      - custom_alert.md#0Fu-O6
+      - email.md#0Fu-O6
+      - grafana.md#0Fu-O6
+      - graylog.md#0Fu-O6
+      - huawei_ces.md#0Fu-O6
+      - influxdata.md#0Fu-O6
+      - nightingale.md#0Fu-O6
+      - oceanbase.md#0Fu-O6
+      - open_falcon.md#0Fu-O6
+      - pagerduty.md#0Fu-O6
+      - prometheus.md#0Fu-O6
+      - skywalking.md#0Fu-O6
+      - tencent_bk.md#0Fu-O6
+      - tencent_cls.md#0Fu-O6
+      - tencent_cm.md#0Fu-O6
+      - tencent_event_bridge.md#0Fu-O6
+      - uptime_kuma.md#0Fu-O6
+      - zabbix.md#0Fu-O6
+      change_integration:
+      - custom_change.md#0Fu-O6
+      - jira.md#0Fu-O6
+      instant_messaging:
+      - dingtalk.md#0Fu-O6
+      - lark.md#0Fu-O6
+      - microsoft_teams.md#0Fu-O6
+      - slack.md#0Fu-O6
+      - wecom.md#0Fu-O6
+      single_sign_on:
+      - authing.md#0Fu-O6
+      - keycloak.md#0Fu-O6
+      - openldap.md#0Fu-O6
+    start:
+    - comparison_to_alternatives.md#0Fu-O6
+    - frequently_asked_questions.md#0Fu-O6
+    - getting_started.md#0Fu-O6
+    - overview.md#0Fu-O6
+  - README.md#0Fu-O6
