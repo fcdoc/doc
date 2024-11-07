@@ -1,0 +1,15 @@
+@!$
+- flashduty:
+  - alter:
+    - custom_actions.md#x83W$
+    - custom_fields.md#x83W$
+    - edit_incidents.md#x83W$
+    - escalate_incidents.md#x83W$
+    - view_incidents.md#x83W$
+    - what_is_incident.md#x83W$
+    - what_is_noise_reduction.md#x83W$
+    start:
+    - comparison_to_alternatives.md#x83W$
+    - frequently_asked_questions.md#x83W$
+    - getting_started.md#x83W$
+    - overview.md#x83W$

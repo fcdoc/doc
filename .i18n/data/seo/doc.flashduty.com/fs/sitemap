@@ -1,0 +1,83 @@
+@!$
+- flashduty:
+  - advanced:
+    - customize_incident_attrs.md#x83W$
+    - dynamic_notifications.md#x83W$
+    alter:
+    - custom_actions.md#x83W$
+    - custom_fields.md#x83W$
+    - edit_incidents.md#x83W$
+    - escalate_incidents.md#x83W$
+    - past_incidents.md#x83W$
+    - understand_novel_faults.md#x83W$
+    - view_incidents.md#x83W$
+    - what_is_incident.md#x83W$
+    - what_is_noise_reduction.md#x83W$
+    conf:
+    - alert_routings.md#x83W$
+    - calendar.md#x83W$
+    - channel.md#x83W$
+    - escalate_rule.md#x83W$
+    - fault_silence_and_suppression.md#x83W$
+    - how_to_filter.md#x83W$
+    - how_to_integrate_alerts.md#x83W$
+    - label_enrichment.md#x83W$
+    - noise_reduction.md#x83W$
+    - preference.md#x83W$
+    - schedule.md#x83W$
+    - template.md#x83W$
+    feature:
+    - permission.md#x83W$
+    - single_sign_on.md#x83W$
+    - teams_and_members.md#x83W$
+    license:
+    - privacy_policy.md#x83W$
+    - service_level.md#x83W$
+    - user.md#x83W$
+    mixin:
+    - alert_integration:
+      - Sentry.md#x83W$
+      - aliyun_arms.md#x83W$
+      - aliyun_cm_event.md#x83W$
+      - aliyun_cm_metric.md#x83W$
+      - aliyun_sls.md#x83W$
+      - aws_cloudwatch.md#x83W$
+      - azure_monitor.md#x83W$
+      - baidu_bcm.md#x83W$
+      - custom_alert.md#x83W$
+      - email.md#x83W$
+      - grafana.md#x83W$
+      - graylog.md#x83W$
+      - huawei_ces.md#x83W$
+      - influxdata.md#x83W$
+      - nightingale.md#x83W$
+      - oceanbase.md#x83W$
+      - open_falcon.md#x83W$
+      - pagerduty.md#x83W$
+      - prometheus.md#x83W$
+      - skywalking.md#x83W$
+      - tencent_bk.md#x83W$
+      - tencent_cls.md#x83W$
+      - tencent_cm.md#x83W$
+      - tencent_event_bridge.md#x83W$
+      - uptime_kuma.md#x83W$
+      - zabbix.md#x83W$
+      change_integration:
+      - custom_change.md#x83W$
+      - jira.md#x83W$
+      instant_messaging:
+      - dingtalk.md#x83W$
+      - lark.md#x83W$
+      - microsoft_teams.md#x83W$
+      - slack.md#x83W$
+      - wecom.md#x83W$
+      single_sign_on:
+      - authing.md#x83W$
+      - keycloak.md#x83W$
+      - openldap.md#x83W$
+    start:
+    - comparison_to_alternatives.md#x83W$
+    - frequently_asked_questions.md#x83W$
+    - getting_started.md#x83W$
+    - overview.md#x83W$
+  - README.md#x83W$
