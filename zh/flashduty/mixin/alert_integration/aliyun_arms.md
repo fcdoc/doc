@@ -43,7 +43,7 @@ brief: 通过 webhook 的方式同步阿里云 ARMS 监控告警事件到快猫�
 5. 通知模板内输入：`$alertmanager_content`；
 6. 点击 确定 按钮，提交保存。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/aliyun_arms/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/aliyun_arms/1.avif" />
 
 **步骤 2：配置 通知策略**
 
@@ -51,7 +51,7 @@ brief: 通过 webhook 的方式同步阿里云 ARMS 监控告警事件到快猫�
 2. 如下图所示，在 __通知对象__ 页面，选择已创建好的 __通用Webhook__ 对象；
 3. 提交保存，等待告警触发。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/aliyun_arms/2.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/aliyun_arms/2.avif" />
 
 ## 状态对照
 

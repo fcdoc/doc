@@ -1,13 +1,12 @@
-@font-face {
-  font-family: 'h';
-  src: local('PingFang SC'),
-    local('Verdana'),
-    local('Helvetica Neue'),
-    local('Microsoft Yahei'),
-    local('Hiragino Sans GB'),
-    local('Microsoft Sans Serif');
-  font-style: normal;
-  font-weight: normal;
+@import '//unpkg.com/fc3@0.1.13/h.css';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Verdana, h;
 }
 
 @font-face {

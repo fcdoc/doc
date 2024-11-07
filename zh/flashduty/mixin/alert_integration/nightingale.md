@@ -4,7 +4,7 @@ brief: >-
   Flashduty 发送触发事件，当告警恢复时，向 Flashduty 发送恢复事件
 ---
 
-# 夜莺/FlahCat集成
+# 夜莺/Flash集成
 
 通过 webhook 的方式将夜莺（Nightingale / n9e）或 Flashcat 告警事件推送到 Flashduty。当告警触发时，向 Flashduty 发送触发事件，当告警恢复时，向 Flashduty 发送恢复事件。
 
@@ -63,7 +63,7 @@ brief: >-
 2. 批量选中您期望导入的告警规则，右上角选择批量更新告警规则
 3. 在弹窗中选择“回调地址”字段，新增输入框中填写集成的推送地址，如下图所示：
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/nightingale/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/nightingale/1.avif" />
 
 4. 回到集成列表，如果展示了最新事件时间，说明配置成功且收到事件
 5. 完成
@@ -78,7 +78,7 @@ brief: >-
 2. 进入__系统配置-通知设置-回调地址__页面
 3. 如下图所示，启用一个新的 webhook，`URL` 部分填写集成的推送地址
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/nightingale/2.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/nightingale/2.avif" />
 
 4. 完成
 

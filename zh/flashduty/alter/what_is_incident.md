@@ -88,7 +88,7 @@ On-Call 人员收到通知后，可以立即进行认领。您可以在 **语音
 
 任一故障都有一个时间线，用于回溯故障历史不同时刻发生的变化和操作。比如故障在什么时间点，以什么通道通知到了谁，以及通知的结果。
 
-![](https://fcdoc.github.io/img/zh/flashduty/alter/what_is_incident/1.avif)
+![](https://fc.3ti.site/zh/flashduty/alter/what_is_incident/1.avif)
 
 ## 触发故障
 

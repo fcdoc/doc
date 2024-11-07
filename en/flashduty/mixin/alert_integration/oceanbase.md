@@ -1,41 +1,41 @@
 ---
-brief: Synchronize OceanBase alert events to Kuaimao Nebula via webhook to achieve automatic noise reduction processing of alert events
+brief: Synchronize OceanBase alert events to Flashcat via webhook to achieve automated noise reduction processing of alert events
 ---
 
 # OceanBase Alert Events
 
-Synchronize OceanBase alert events to Kuaimao Nebula via webhook to achieve automatic noise reduction processing of alert events
+Synchronize OceanBase alert events to Flashcat via webhook to achieve automated noise reduction processing of alert events
 
 ## In Flashduty
-You can obtain an integrated push address through the following two methods, choose either one.
+You can obtain an integration push address through the following two methods. Choose either one.
 
-### Use Proprietary Integrations
+### Use Proprietary Integration
 
 When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
+    1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
     3. Select **OceanBase** integration, click **Save**, and generate a card.
-    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the setup.
 
-### Use Shared Integrations
+### Use Shared Integration
 
 When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alerts**, and navigate to the integration selection page.
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and go to the integration selection page.
     2. Choose **OceanBase** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. After clicking **Save**, copy the newly generated **push address** for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed.
+    3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust as needed.
     5. Complete.
 
 ## In OceanBase
 
-## 1. OceanBase Alert Push Configuration
+## OceanBase Alert Push Configuration
 
 ### Step 1: Configure Alert Channel
 1. Log in to your OceanBase console and select the alert center.
@@ -43,7 +43,7 @@ When you need to route alert events to different collaboration spaces based on t
 3. Select **Custom Script** for the channel type.
 4. The basic configuration content is as shown in the figure below:
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/oceanbase/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/oceanbase/1.avif" />
 
 5. Copy the following script content in the configuration channel, and **please add the integration_key parameter in the script with the integration_key value in the FlashDuty address** .
 
@@ -83,10 +83,10 @@ return $?
 alarm_name=$(echo ${alarm_name} | sed  "s/ /_/g")
 alarm_target=$(echo ${alarm_target} | sed  "s/ /_/g")
 
-#Use the alarm update time as the alarm generation time
+#Use the alert update time as the alert generation time
 timestamp=$(TZ=UTC date -d "${alarm_updated_at}" +%s)
 
-#The status and level of OceanBase alarm notifications are in Chinese, so they need to be converted to MD5 first before making a judgment
+#The status and level of OceanBase alert notifications are in Chinese, so convert them to MD5 first and then make a judgment
 levelMd5=$(echo ${alarm_level} | md5sum | awk '{print$1}')
 statusMd5=$(echo ${alarm_status} | md5sum | awk '{print$1}')
 
@@ -94,7 +94,7 @@ statusMd5=$(echo ${alarm_status} | md5sum | awk '{print$1}')
 active="048d106318302b41372b4292b5696ad4"
 Inactive="bf7da164d431439fe9668fbc964110c4"
 
-#Alarm Level MD5
+#Alert Level MD5
 down="2e1558b0a152fae2dd15884561b1508d"
 critical="59b9b38574ca2ee4f5e264b56f49a83f"
 alert="723931b03a5d1cec59eac40cf0703580"
@@ -104,7 +104,7 @@ info="6aae3f4254789d72aa0cc8ed55b8f11f"
 address="https://api.flashcat.cloud"
 integration_key=""
 
-#Convert OceanBase alarm level definitions
+#Convert OceanBase alert level definitions
 if [[ ${statusMd5} == ${Inactive} ]];then
 alert_level="Ok"
 timestamp=$(TZ=UTC date -d "${alarm_resolved_at}" +%s)
@@ -118,7 +118,7 @@ alert_level="Info"
 fi
 fi
 
-#Notifications will only be sent if the status is "in alarm" or "alarm recovered." Notifications will not be sent for statuses that are "blocked" or "suppressed."
+#Notifications will be sent only if the status is "In Alert" or "Recovered"; if the status is "Blocked" or "Suppressed," no notification will be sent
 if [[ ${statusMd5} == ${active} || ${statusMd5} == ${Inactive} ]];then
 sendToFlashDuty
 fi
@@ -126,60 +126,60 @@ fi
 
 6. Just fill in {} for the Response verification information.
 7. Select Markdown as the alert message format in the message configuration.
-8. Alert message template **Select Simplified Chinese**, fill in the following content and submit.
+8. **Select Simplified Chinese** for the alert message template, fill in the following content, and submit.
 
 ```i18n
-OCPAlarm Notification - Single Alarm
-- Alarm ID:  ${alarm_id}
+OCPAlert Notification - Single Alert
+- Alert ID: ${alarm_id}
 - Name: ${alarm_name}
 - Level: ${alarm_level}
 - Alert Object: ${alarm_target}
-- Service:  ${service}
+- Service: ${service}
 - Overview: ${alarm_summary}
 - Generation Time: ${alarm_active_at}
-- Update Time:  ${alarm_updated_at}
+- Update Time: ${alarm_updated_at}
 - Recovery Time: ${alarm_resolved_at}
 - Details: ${alarm_description}
-- Status:  ${alarm_status}
-- Alarm Type:  ${alarm_type}
-- Alarm Threshold:  ${alarm_threshold}
-- Cluster Group:  ${ob_cluster_group}
-- Cluster:  ${ob_cluster}
-- Host:  ${host_ip}
-- Application Cluster:  ${app_cluster}
+- Status: ${alarm_status}
+- Alert Type: ${alarm_type}
+- Alert Threshold: ${alarm_threshold}
+- Cluster Group: ${ob_cluster_group}
+- Cluster: ${ob_cluster}
+- Host: ${host_ip}
+- Application Cluster: ${app_cluster}
 - OCPLink: ${alarm_url}
 ```
 
 ### Step 2: Configure Alert Push
 
 1. Create a new push configuration, path: **Alert Center => Alert Push => New Push Configuration**.
-2. The push type and specified objects can be configured as needed.
+2. Configure the push type and specified objects as needed.
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/oceanbase/2.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/oceanbase/2.avif" />
 
 3. Select **Simplified Chinese** as the push language.
-4. Alert Channel selection **FlashDuty**.
+4. Select **FlashDuty** as the alert channel.
 5. Enable **Recovery Notifications**.
 6. Submit.
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/oceanbase/3.avif" />
-
-## 2. Status Comparison
-
-|OceanBase|Kuaimao Nebula|Status|
-|---|---|---|
-|Stop Service|Critical|Critical|
-|Critical|Warning|Critical|
-|Warning|Warning|Warning|
-|Notice|Info|Information|
-|Information|Info|Information|
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/oceanbase/3.avif" />
 
 ## Status Comparison
 
-|OceanBase|Kuaimao Nebula|Status|
+|OceanBase|Flashcat|Status|
 |---|---|---|
-|Stop Service|Critical|Critical|
-|Critical|Warning|Critical|
-|Warning|Warning|Warning|
-|Notice|Info|Information|
-|Information|Info|Information|
+|Stop Service|Critical|High|
+|High|Warning|High|
+|Average|Warning|Average|
+|Notice|Info|Disaster|
+|Disaster|Info|Disaster|
+
+## Status Comparison
+
+|OceanBase|Flashcat|Status|
+|---|---|---|
+|Stop Service|Critical|High|
+|High|Warning|High|
+|Average|Warning|Average|
+|Notice|Info|Disaster|
+|Disaster|Info|Disaster|

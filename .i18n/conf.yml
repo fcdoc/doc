@@ -3,7 +3,7 @@ i18n:
     zh: en
 
   replace:
-    https://fcdoc.github.io/img/ : # en
+    https://fc.3ti.site/ : # en
 
 ignore:
   - _*

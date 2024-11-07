@@ -18,7 +18,7 @@ brief: 配置路由规则实现将相同类型或相关业务的告警事件分�
 **7. 默认路由：** 共享集成至少有一个路由规则才可以接收到告警事件，所以提供了默认路由规则，当不配置路由规则或配置的路由规则不匹配是将通过默认路由分发到对应的协作空间。
 **8. 投递空间：** 可以选择将匹配的告警投递到多个协作空间。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/alert_routings/1.avif"  width="800">
+<img src="https://fc.3ti.site/zh/flashduty/conf/alert_routings/1.avif"  width="800">
 
 ## 配置示例
 
@@ -26,7 +26,7 @@ brief: 配置路由规则实现将相同类型或相关业务的告警事件分�
 **场景：** 将来源 FlashCat 监控平台中相同业务组的告警接入到统一协作空间。
 **规则：** 根据 Labels.group_name 标签匹配。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/alert_routings/2.avif"  width="800">
+<img src="https://fc.3ti.site/zh/flashduty/conf/alert_routings/2.avif"  width="800">
 
 ## 常见问题
 

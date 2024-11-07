@@ -6,7 +6,7 @@ brief: 了解如何快速上手 Flashduty
 
 ## 演示视频
 
-<video controls src="https://fcdoc.github.io/img/zh/flashduty/start/getting_started/1.mp4"></video>
+<video poster="https://fc.3ti.site/zh/flashduty/start/getting_started/3.avif" controls src="https://fc.3ti.site/zh/flashduty/start/getting_started/4.mp4"></video>
 
 ## 免费开始
 
@@ -19,7 +19,7 @@ brief: 了解如何快速上手 Flashduty
 
 ## 基本流程
 
-![](https://fcdoc.github.io/img/zh/flashduty/start/getting_started/2.avif)
+![](https://fc.3ti.site/zh/flashduty/start/getting_started/2.avif)
 
 ### 创建协作空间
 

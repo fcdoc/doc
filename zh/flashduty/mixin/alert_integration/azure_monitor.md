@@ -42,14 +42,14 @@ brief: 通过 webhook 的方式同步 Azure Monitor 告警事件到快猫星云�
 4. 填写名称，`URI` 部分复制写入集成的推送地址，注意要 `Enable` 通用 alert 结构；
 5. 点击 Create 按钮，提交保存。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/azure_monitor/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/azure_monitor/1.avif" />
 
 **步骤 2：配置 Alert rule**
 
 1. 进入 `Alerts -> Alert rules` 页面，单击 Create 或 选择已有的策略进行编辑；
 2. 如下图所示，在 `Actions` 页面，选择已创建好的 Action group；
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/azure_monitor/2.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/azure_monitor/2.avif" />
 
 3. 提交保存，等待告警触发。
 

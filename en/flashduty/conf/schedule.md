@@ -4,22 +4,22 @@ brief: By configuring duty rules, you can achieve automatic scheduling and notif
 
 # Configure Duty Rules
 
-Duty rules are one of the core components of an enterprise's internal management methods, helping to reasonably arrange employees' working hours and ensure business continuity and efficiency. FlashDuty's duty schedule offers a variety of duty rules, which enterprises can adjust and customize according to their actual business needs.
+Duty rules are one of the core components of an enterprise's internal management, helping to reasonably arrange employees' working hours and ensure business continuity and efficiency. FlashDuty's duty schedule offers a variety of duty rules, which can be adjusted and customized according to the company's actual business needs.
 
 ## Duty Schedule
-1. On the duty management page, you can see a summary of all your duties.
+1. On the duty management page, you can see a summary of all your duty assignments.
 2. Subject members can view all duty schedules or only the schedules they manage.
-3. Before setting up duty rules, you need to create a duty list. This duty list can also belong to a specific team, allowing team members to maintain and plan it.
+3. Before setting up duty rules, you need to create a duty schedule. This schedule can also belong to a team, allowing team members to maintain and plan it.
 4. When creating a duty schedule, you can flexibly configure the notification method for shift changes:
-- Notification Time: Notify the next person on duty N minutes before the shift change
-- Notification Channels: Single chat (one-to-one notification, such as SMS, voice, email, etc.), group chat (push to IM message group and @ mention assigned personnel).
+- Notification Time: Notify the next person on duty N minutes before the shift handover
+- Notification Channels: Single Chat (one-to-one notification, e.g., SMS, voice, email, etc.), Group Chat (push to IM message group and @ mention assigned personnel).
 
-### Duty Rules Composition
+### Duty Rule Composition
 
-- Duty rules + shift adjustment rules form the final duty rules.
-- The final duty schedule can be viewed from the perspective of a timeline or calendar.
+- Duty rules combined with shift adjustment rules form the final duty rules.
+- The final duty schedule can be viewed from a timeline or calendar perspective.
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/schedule/1.avif" style="display: block; margin: 0 auto;" height="500">
+<img src="https://fc.3ti.site/zh/flashduty/conf/schedule/1.avif" style="display: block; margin: 0 auto;" height="500">
 
 ### Edit Rules
 #### 1. Create
@@ -30,18 +30,18 @@ Duty rules are one of the core components of an enterprise's internal management
 
 - Hover over the rule and click to open the rule configuration dialog box.
 - Changes to the scheduled duty rules will not affect historical data, including adding/deleting on-duty personnel or changing duty hours.
-- Rule changes take effect immediately after being saved.
+- Saved rule changes take effect immediately.
 
 #### 3. Delete
 
-- Once a rule is deleted, it cannot be restored, so proceed with caution.
-- Deletion takes effect immediately. Confirm that no services are still using it before proceeding.
+- Once a rule is deleted, it cannot be restored, so please proceed with caution.
+- Deletion takes effect immediately. Please confirm that no business is still using the rule before proceeding.
 
-#### 4. Temporary Shift Adjustment
-- Temporary shift adjustments are primarily used in pre-planned duty schedules. For example, when a person on duty is temporarily unavailable or on leave, other colleagues need to take their place.
-- Before making a shift adjustment, fully communicate with the substitute about the duty time. Although there will be a message notification during the shift, there will be no system notification when the real-time adjustment takes effect immediately.
+#### 4. Temporary Shift Change
+- Temporary shift adjustments are primarily used in pre-planned duty schedules, such as when a duty person is temporarily unavailable or on leave and needs to be replaced by another colleague.
+- Before making a temporary shift adjustment, fully communicate with the substitute about the duty hours. Although there will be a notification during the shift change, there will be no system notification when the adjustment takes effect immediately.
 
-## Duty Example
+## Duty Examples
 
 ### Daily Duty
 - Requirements Overview:
@@ -49,7 +49,7 @@ Duty rules are one of the core components of an enterprise's internal management
 
 - Rules/Effects:
 
-![](https://fcdoc.github.io/img/zh/flashduty/conf/schedule/2.avif)
+![](https://fc.3ti.site/zh/flashduty/conf/schedule/2.avif)
 
 ### Combined Shift Scheduling
 - Requirements Overview:
@@ -60,8 +60,8 @@ Duty rules are one of the core components of an enterprise's internal management
 
 - Rule Display:
 
-![](https://fcdoc.github.io/img/zh/flashduty/conf/schedule/3.avif)
+![](https://fc.3ti.site/zh/flashduty/conf/schedule/3.avif)
 
 - Effect Display:
 
-![](https://fcdoc.github.io/img/zh/flashduty/conf/schedule/4.avif)
+![](https://fc.3ti.site/zh/flashduty/conf/schedule/4.avif)

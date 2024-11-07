@@ -18,7 +18,7 @@ FlashDuty提供了静默和抑制机制，来帮助企业优化告警流程，�
 - 星期模式：可以选择每天或者每个星期中某一天或某几天的时间内生效。
 - 日历模式：需提前创建[服务日历](/conf/calendar)，然后根据日历中的工作日或休息日生效。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/fault_silence_and_suppression/1.avif" style="display: block; margin: 0 auto;" width="800">
+<img src="https://fc.3ti.site/zh/flashduty/conf/fault_silence_and_suppression/1.avif" style="display: block; margin: 0 auto;" width="800">
 
 ### 静默条件
 - **条件配置：** 可以根据故障的严重性或故障标签以及组合条件进行选择匹配或不匹配。
@@ -35,7 +35,7 @@ FlashDuty提供了静默和抑制机制，来帮助企业优化告警流程，�
 - **生效时间：** 只支持单次时间范围（默认24小时），规则到期后自动删除该规则且无删除记录。
 - **静默条件：** 默认取该故障的标签作为条件，且是完全匹配条件。您可以前往 [配置过滤条件](/conf/how_to_filter)，了解如何配置限制条件。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/fault_silence_and_suppression/2.avif" style="display: block; margin: 0 auto;" width="800">
+<img src="https://fc.3ti.site/zh/flashduty/conf/fault_silence_and_suppression/2.avif" style="display: block; margin: 0 auto;" width="800">
 
 > [!NOTE]
 > 在同一故障详情中进入并操作快速静默时，属于编辑原规则，并不会创建新的规则。
@@ -60,4 +60,4 @@ FlashDuty提供了静默和抑制机制，来帮助企业优化告警流程，�
 
 当 24小时内存在相同检查项的Critical 级别的故障时，抑制Waning和Info的故障。
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/conf/fault_silence_and_suppression/3.avif" style="display: block; margin: 0 auto;" width=800>
+<img src="https://fc.3ti.site/zh/flashduty/conf/fault_silence_and_suppression/3.avif" style="display: block; margin: 0 auto;" width=800>

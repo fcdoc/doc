@@ -1,40 +1,40 @@
 ---
-brief: Alert events can be pushed to Kuaimao Nebula through the PagerDuty protocol to achieve automated noise reduction processing
+brief: Alert events can be pushed to Flashcat through the PagerDuty protocol, enabling automated noise reduction processing of alert events
 ---
 
 # PagerDuty Integration
 
 Synchronization via Webhook
 
-Flashduty implements the PagerDuty Events API, with full compatibility for inputs and responses. Therefore, you can push alert events to Flashduty using the PagerDuty protocol to achieve automated noise reduction processing.
+Flashduty implements the PagerDuty Events API, ensuring full compatibility in inputs and responses. Therefore, you can push alert events to Flashduty using the PagerDuty protocol to enable automated noise reduction processing of alert events.
 
 Similarly, for alert systems that already support pushing events to PagerDuty (such as ElastAlert), you only need to modify the destination push address to push events to Flashduty using the PagerDuty protocol.
 
 ## In Flashduty
-You can obtain an integrated push address through the following two methods, choose either one.
+You can obtain an integration push address through the following two methods. Choose either one.
 
-### Use Proprietary Integrations
+### Use Proprietary Integration
 
 When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
+    1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
-    3. Select the **PagerDuty** integration, click **Save**, and generate a card.
-    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
+    3. Select **PagerDuty** integration, click **Save**, and a card will be generated.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the setup.
 
-### Use Shared Integrations
+### Use Shared Integration
 
 When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alerts**, and navigate to the integration selection page.
-    2. Select the **PagerDuty** integration:
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and go to the integration selection page.
+    2. Choose **PagerDuty** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. After clicking **Save**, copy the newly generated **push address** for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed.
+    3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust as needed.
     5. Complete.
 
 ## In PagerDuty
@@ -74,7 +74,7 @@ Choose one of the following two methods:
 
 ### Configuration Examples
 
-Take [ElastAlert2](https://github.com/jertel/elastalert2) as an example:
+Taking [ElastAlert2](https://github.com/jertel/elastalert2) as an example:
 
 1. Step 1: Obtain the Push Address
 
@@ -88,7 +88,7 @@ Fill in the integration name on the current page and save it. Reopen the integra
 
 Modify the source code of the deployed ElastAlert instance, [view diff](https://github.com/jertel/elastalert2/commit/e815a62a6b1eecef6e1fef13afd99d905b67fc34):
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/pagerduty/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/pagerduty/1.avif" />
 
 3. Step 3: Report the Alert Event
 

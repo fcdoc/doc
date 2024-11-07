@@ -1,5 +1,5 @@
 ---
-brief: Tutorial on Setting Up LDAP with Docker Compose
+brief: Tutorial on Setting Up LDAP in Docker Compose
 ---
 
 # OpenLDAP Integration Guide
@@ -10,14 +10,14 @@ LDAP (Lightweight Directory Access Protocol) is a protocol based on the X.500 st
 
 The core features of LDAP include:
 
-- Tree structure: LDAP data is organized into a tree structure called DIT (Directory Information Tree), which facilitates hierarchical searching and browsing.
+Tree Structure: LDAP data is organized into a tree structure called the DIT (Directory Information Tree), which facilitates hierarchical search and browsing.
 
-- Entries and attributes: Each entry (Entry) in LDAP contains multiple attributes (Attribute). Attributes have types and values, such as "cn" for common name (Common Name) and "mail" for email address.
+Entries and Attributes: Each entry (Entry) in LDAP contains multiple attributes (Attribute). Attributes have types and values, such as "cn" for common name (Common Name) and "mail" for email address.
 
 OpenLDAP is an open-source implementation of the Lightweight Directory Access Protocol (LDAP). Due to its open-source nature and flexibility, OpenLDAP has become the preferred LDAP implementation for many enterprises and organizations.
 
 > [!NOTE]
-> This article assumes that the environment already supports Docker and Docker Compose. If it does not, please install them first.
+> This article assumes that Docker and Docker Compose are already supported in the environment. If they are not, please install them first.
 
 ## Docker Compose Configuration File
 ```
@@ -94,20 +94,20 @@ When you want to stop the service, use the following command:
 docker-compose down
 ```
 
-## Log in to OpenLDAP
+## Login to OpenLDAP
 Visit http://ip:8088/ in the browser and log in using the username cn=admin,dc=flashduty,dc=com and password xxx.
 
 ## OpenLDAP Configuration
 ### Add Groups and Users
 
-![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/openldap/1.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/openldap/1.avif)
 
 > [!NOTE]
 > In **the user path** (for example, cn = falsh duty ) under ou = people in the picture above -> `Add new attribute` -> Select `Email` to add Email attributes to the user. If it already exists, please ignore it.
 
 ## FlashDuty Integration
 Based on the above OpenLDAP configuration, the FlashDuty integration information is shown in the figure below:
-![](https://fcdoc.github.io/img/zh/flashduty/mixin/single_sign_on/openldap/2.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/openldap/2.avif)
 
 > [!NOTE]
 > For the meaning and description of the above fields, please refer to [Configuring Single Sign-On](/feature/single_sign_on)

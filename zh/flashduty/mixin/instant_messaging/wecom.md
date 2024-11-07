@@ -10,19 +10,19 @@ brief: 通过集成企业微信第三方应用，实现在企业微信端内接�
 
 1. 访问 [企业微信管理后台](https://work.weixin.qq.com/wework_admin/frame#apps) - __应用管理__ - __第三方__，选择添加第三方应用
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/wecom/1.avif" alt="drawing" width="400"/>
+<img src="https://fc.3ti.site/zh/flashduty/mixin/instant_messaging/wecom/1.avif" alt="drawing" width="400"/>
 
 2. 搜索栏输入 `flashduty`，检索到应用，并点击 __添加__ 按钮
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/wecom/2.avif" alt="drawing" width="400"/>
+<img src="https://fc.3ti.site/zh/flashduty/mixin/instant_messaging/wecom/2.avif" alt="drawing" width="400"/>
 
 3. 修改应用 __可见范围__，推荐全员或具体部门节点，防止新增成员时还要修改范围。点击 __同意以上授权并添加__，完成安装
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/wecom/3.avif" alt="drawing" width="400"/>
+<img src="https://fc.3ti.site/zh/flashduty/mixin/instant_messaging/wecom/3.avif" alt="drawing" width="400"/>
 
 4. 访问 [企业微信管理后台](https://work.weixin.qq.com/wework_admin/frame#apps) - __我的企业__ 页面，复制 __企业ID__ 作为当前页面的 `Corp ID` 填写到集成配置，点击保存，完成集成配置
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/wecom/4.avif" alt="drawing" width="400"/>
+<img src="https://fc.3ti.site/zh/flashduty/mixin/instant_messaging/wecom/4.avif" alt="drawing" width="400"/>
 
 5. **请注意：Flashduty作为企业微信服务商，为您提供 `FlashDuty` 应用的长期免费版本。该应用需要获得企业微信接口调用许可才能使用（免密登录+发消息），该许可目前支持__最多60天__免费，超过后我们必须为您购买企微许可才能使用。**
 
@@ -45,7 +45,7 @@ brief: 通过集成企业微信第三方应用，实现在企业微信端内接�
 - 进入某个协作空间详情页面-分派策略，在个人渠道部分，选择通知到企业微信集成，完成通知配置
 - 支持对企业微信通知内容进行自定义，您前往模板管理页面，设定自定义模板。注意：**自定义区域展示行数最多 8 行**，超过会被企业微信截断
 
-<img src="https://fcdoc.github.io/img/zh/flashduty/mixin/instant_messaging/wecom/5.avif" alt="drawing" width="400"/>
+<img src="https://fc.3ti.site/zh/flashduty/mixin/instant_messaging/wecom/5.avif" alt="drawing" width="400"/>
 
 4. **如何在微信内处理告警？**
 

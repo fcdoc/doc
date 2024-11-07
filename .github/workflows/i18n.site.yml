@@ -20,6 +20,15 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
+      - name: clone dist htm
+        if: github.ref == 'refs/heads/dist'
+        shell: bash
+        run: |
+          set -ex
+          mkdir -p out/dist
+          cd out/dist
+          git clone --depth=1 https://x-access-token:${{secrets.GH_TOKEN}}@github.com/fcdoc/dist.git htm
+
       - name: install node.js
         uses: actions/setup-node@v4
         with:
@@ -34,7 +43,7 @@ jobs:
           npm i
           npm install --os=linux --cpu=x64 sharp
 
-          git clone --depth 1 https://github.com/${{ github.repository_owner }}/img.git
+          git clone --depth 1 https://x-access-token:${{secrets.GH_TOKEN}}@github.com/fcdoc/img.git
           ./.mise/bin/coffee mdfix.coffee
           cd img
           if [[ -n $(git status -s) ]]; then
@@ -42,7 +51,7 @@ jobs:
             git config --global user.email "github.action@i18n.site"
             git add .
             git commit -m '.'
-            git push https://x-access-token:${{github.token}}@github.com/${{ github.repository_owner }}/img main
+            git push
           fi
 
       - name: https://i18n.site
@@ -50,3 +59,15 @@ jobs:
         with:
           I18N_SITE_TOKEN: ${{ secrets.I18N_SITE_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: push dist htm
+        if: github.ref == 'refs/heads/dist'
+        shell: bash
+        run: |
+          set -ex
+          cd out/dist/htm
+          git add . || true
+          if [[ -n $(git status -s) ]]; then
+            git commit -m.
+            git push -f
+          fi

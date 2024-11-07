@@ -6,12 +6,10 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  margin: 64px 0 0;
+  margin: 32px 0 0;
   padding: 24px;
   width: 100%;
 }
-
-
 
 #Ft>b:first-child>b {
   color: #aaa;

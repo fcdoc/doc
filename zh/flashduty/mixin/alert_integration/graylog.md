@@ -44,19 +44,19 @@ brief: 通过 webhook 的方式同步Graylog告警事件到快猫星云，实现
 4. 输入 Title 和 Description。
 5. Notification Type 选择 **HTTP Notification**，如下图。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/graylog/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/graylog/1.avif" />
 
 6. 输入 FlashDuty 获取到的 URL (第一次输入需要对 URL 加白)。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/graylog/2.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/graylog/2.avif" />
 
 7. 点击 Save 保存加白的 URL
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/graylog/3.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/graylog/3.avif" />
 
 8. 保存后，提交 Create。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/graylog/4.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/graylog/4.avif" />
 
 ### 步骤2：在告警事件中使用 FlashDuty 告警通道
 1. 创建或编辑已有的 Event Definition。
@@ -66,7 +66,7 @@ brief: 通过 webhook 的方式同步Graylog告警事件到快猫星云，实现
 5. 点击 Done。
 6. 下一步完成即可。
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/graylog/5.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/graylog/5.avif" />
 
 ## 二、状态对照
 

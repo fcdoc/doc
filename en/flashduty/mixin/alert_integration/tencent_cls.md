@@ -1,46 +1,46 @@
 ---
-brief: Synchronize Tencent Cloud Log Service CLS to monitor alert events to Kuaimao Nebula through webhook to realize automatic noise reduction processing of alert events
+brief: Synchronize Tencent Cloud Log Service CLS monitoring alert events to Flashcat through a webhook to achieve automated noise reduction of alert events
 ---
 
 # Tencent Cloud Log Service CLS Integration
 
-Synchronize Tencent Cloud Log Service CLS monitoring alert events to Flashduty through webhook to realize automatic noise reduction processing of alert events.
+Synchronize Tencent Cloud Log Service CLS monitoring alert events to Flashduty through a webhook to achieve automated noise reduction of alert events.
 
 ## In Flashduty
-You can obtain an integrated push address through the following two methods, choose either one.
+You can obtain an integration push address through the following two methods. Choose either one.
 
-### Use Proprietary Integrations
+### Use Proprietary Integration
 
 When you do not need to route alert events to different collaboration spaces, this method is preferred as it is simpler.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Collaboration Space**, and navigate to the details page of a specific space
+    1. Enter the Flashduty console, select **Collaboration Space**, and enter the details page of a specific space
     2. Select the **Integrated Data** tab, click **Add an Integration**, and enter the Add Integration page
-    3. Select the **Tencent Cloud CLS** integration, click **Save**, and a card will be generated.
-    4. Click on the generated card to view the **push address**, copy it for later use, and complete the process.
+    3. Select **Tencent Cloud CLS** integration, click **Save**, and generate a card.
+    4. Click on the generated card to view the **push address**, copy it for later use, and complete the setup.
 
-### Use Shared Integrations
+### Use Shared Integration
 
 When you need to route alert events to different collaboration spaces based on the payload information, this method is preferred.
 
 |+| Expand
 
-    1. Enter the Flashduty console, select **Integration Center => Alerts**, and navigate to the integration selection page.
-    2. Choose the **Tencent Cloud CLS** integration:
+    1. Enter the Flashduty console, select **Integration Center => Alert Events**, and go to the integration selection page.
+    2. Choose **Tencent Cloud CLS** integration:
     - **Integration Name**: Define a name for the current integration.
-    3. After clicking **Save**, copy the newly generated **push address** for later use.
-    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or set a default collaboration space as a fallback, which can be adjusted as needed.
+    3. After clicking **Save**, copy the newly generated **push address** on the current page for later use.
+    4. Click **Create Route** to configure routing rules for the integration. You can match different alerts to different collaboration spaces based on conditions, or you can set a default collaboration space as a fallback and adjust as needed.
     5. Complete.
 
-## In the Tencent Cloud CLS
+## In the Tencent Cloud CLS,
 
 **Step 1: Configure Notification Channel Group**
 
 1. Log in to your Tencent Cloud console, select the Log Service CLS product, and enter Monitoring Alert - Notification Channel Group
 2. Click **New** to start a new
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/tencent_cls/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/tencent_cls/1.avif" />
 
 3. As shown in the figure, **name** fill in the specific channel group name __ channel type __ select "custom interface callback", **callback address** fill in the integrated push address, **request method** select POST
 
@@ -51,7 +51,7 @@ When you need to route alert events to different collaboration spaces based on t
 1. Log in to your Tencent Cloud console, select the Log Service CLS product, and enter Monitor Alert - Alert Policy
 2. Click **New** to start a new
 
-<img alt="drawing" width="600" src="https://fcdoc.github.io/img/zh/flashduty/mixin/alert_integration/tencent_cls/2.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/tencent_cls/2.avif" />
 
 3. As shown in the figure, __alert Name __ fill in the specific alert name, and the log topic selects a specific log topic
 
@@ -109,6 +109,6 @@ Tencent Cloud CLS monitoring alert level to Flashduty mapping relationship:
 
 | Tencent Cloud CLS Monitoring |  Flashduty    | Status
 | ------------- | --------- | --- |
-| Info          |  Info     | Information
-| Warn          |  Warning  | Warning
+| Info          |  Info     | Disaster
+| Warn          |  Warning  | Average
 | Critical      |  Critical | Emergency
