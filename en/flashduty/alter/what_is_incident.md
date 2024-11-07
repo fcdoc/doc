@@ -88,7 +88,7 @@ On-call personnel can immediately claim the incident after receiving the notific
 
 Each incident has a timeline that is used to trace back the changes and operations that occurred at different moments in the incident's history. For example, at what point in time, through what channel, who was notified of the incident, and the results of the notification.
 
-![](https://fcimg.i18n.site/zh/flashduty/alter/what_is_incident/1.avif)
+![](https://fc.3ti.site/zh/flashduty/alter/what_is_incident/1.avif)
 
 ## Triggering an Incident
 

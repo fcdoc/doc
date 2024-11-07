@@ -43,7 +43,7 @@ Choose one of the following two methods.
 3. As shown in the figure, fill in the callback address under Advanced Settings as the integrated push address
 4. Click the Confirm button to submit the update
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/aliyun_cm_metric/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/aliyun_cm_metric/1.avif" />
 
 5. Repeat the above steps for all alert rules that you wish to synchronize
 6. Return to the integration list. If the latest event time is displayed, the configuration is successful and the event has been received
@@ -56,7 +56,7 @@ Choose one of the following two methods.
 3. As shown in the figure, fill in the integrated push address under Webhook
 4. Click the Confirm button to submit the update
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/aliyun_cm_metric/2.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/aliyun_cm_metric/2.avif" />
 
 5. Repeat the above steps for all contacts for which you wish to synchronize events
 6. Return to the integration list. If the latest event time is displayed, the configuration is successful and the event has been received

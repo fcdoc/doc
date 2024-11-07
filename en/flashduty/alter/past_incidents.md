@@ -18,7 +18,7 @@ When responding to an incident, if you can view the solutions to similar histori
 1. From the incident list or collaboration space, find an incident that needs to be processed;
 2. Click the incident title to enter the incident details, and select the **Historical Incidents** tab.
 
-![](https://fcimg.i18n.site/zh/flashduty/alter/past_incidents/1.avif)
+![](https://fc.3ti.site/zh/flashduty/alter/past_incidents/1.avif)
 
 The system will provide up to 5 similar historical incidents to avoid overwhelming you with too much information.
 

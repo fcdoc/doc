@@ -42,7 +42,7 @@ Grafana V4~V8 versions have the Legacy Alerting feature enabled by default, whil
 2. Click Add Channel to open the Channel configuration pop-up page
 3. Configure the name, select webhook for Type, fill in the integrated push address for Url, and select POST for Method, as shown in the figure below:
 
-<img src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/grafana/1.avif" alt="drawing" width="600"/>
+<img src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/grafana/1.avif" alt="drawing" width="600"/>
 
 4. Save, return to the integration list, and wait for an alert to be generated. If the latest event time is displayed, the configuration is successful and the event has been received
 5. Finish
@@ -53,16 +53,16 @@ Grafana V4~V8 versions have the Legacy Alerting feature enabled by default, whil
 2. Click New contact point to open the configuration pop-up page
 3. Configure the name, select webhook for Type, fill in the integrated push address for Url, and select POST for Method, as shown in the figure below:
 
-<img src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/grafana/2.avif" alt="drawing" width="600"/>
+<img src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/grafana/2.avif" alt="drawing" width="600"/>
 
 4. Open the Notification policies page, edit or add a policy as appropriate, and select the contact point created in the previous step as the sending channel, as shown in the following figure:
 
-<img src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/grafana/3.avif" alt="drawing" width="600"/>
+<img src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/grafana/3.avif" alt="drawing" width="600"/>
 
 5. Save, return to the integration list, and wait for an alert to be generated. If the latest event time is displayed, the configuration is successful and the event has been received
 6. The default alert level is warning. If you need to customize it, you can configure the severity label on the alert details page (for enumeration, please refer to the status comparison below). The specific operation is as shown in the figure below:
 
-<img src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/grafana/4.avif" alt="drawing" width="600"/>
+<img src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/grafana/4.avif" alt="drawing" width="600"/>
 
 7. Finish
 

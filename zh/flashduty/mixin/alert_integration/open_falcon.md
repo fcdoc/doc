@@ -40,8 +40,8 @@ brief: 通过 webhook 的方式同步 Open-Falcon 告警事件到 Flashduty，�
 3. 点击 Save 按钮，保存告警规则
 4. 针对所有要发送事件的告警规则模板，重复步骤2和3
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/open_falcon/1.avif" />
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/open_falcon/2.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/open_falcon/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/open_falcon/2.avif" />
 
 同样的，针对 Expressions 告警规则，也可以配置相同的推送地址。
 

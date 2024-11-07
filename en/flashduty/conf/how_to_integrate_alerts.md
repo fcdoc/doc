@@ -14,14 +14,14 @@ Dedicated integration addition path: **Collaboration space details => Integratio
 - Alerts connected via dedicated integration in the collaboration space **do not require configuring routing rules, meaning all alerts will be distributed to that space** (excluding filtered alerts) and cannot be shared with other collaboration spaces.
 - When alerts do not need to be distributed to multiple different spaces, you can choose dedicated integration.
 
-![](https://fcimg.i18n.site/zh/flashduty/conf/how_to_integrate_alerts/1.avif)
+![](https://fc.3ti.site/zh/flashduty/conf/how_to_integrate_alerts/1.avif)
 
 ### Shared integration
 Shared integration addition path: **Integration center => Alert events**.
 - Alert event types created in the Integration Center are global and must **be routed to a specific collaboration space or multiple collaboration spaces through routing rules**.
 - Each integration **must be configured with at least one collaboration space that receives alerts; otherwise, the integration will not take effect, meaning it will not be able to receive alert events**.
 
-![](https://fcimg.i18n.site/zh/flashduty/conf/how_to_integrate_alerts/2.avif)
+![](https://fc.3ti.site/zh/flashduty/conf/how_to_integrate_alerts/2.avif)
 
 > [!NOTE]
 > - Both dedicated and shared integrations will generate a push address after adding an alert integration. Just copy the generated address to the corresponding platform.

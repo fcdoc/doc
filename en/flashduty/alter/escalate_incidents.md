@@ -30,7 +30,7 @@ When an incident is assigned to you, but you need another person (who is not amo
 
 Similar to **reassignment**, when adding a handler, you can only select a duty schedule or an individual as the assignment target. The system will notify these individuals based on their personal preferences.
 
-![](https://fcimg.i18n.site/zh/flashduty/alter/escalate_incidents/1.avif)
+![](https://fc.3ti.site/zh/flashduty/alter/escalate_incidents/1.avif)
 
 ## Frequently Asked Questions
 

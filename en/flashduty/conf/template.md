@@ -222,7 +222,7 @@ You need to pre-configure **the integration center - Instant Messaging -** integ
 
 As shown below:
 
-<img src="https://fcimg.i18n.site/zh/flashduty/conf/template/1.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fc.3ti.site/zh/flashduty/conf/template/1.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
 We have listed some common tags that you can delete as needed;
 
@@ -264,7 +264,7 @@ You need to pre-configure **the integration center - Instant Messaging -** integ
 
 As shown below:
 
-<img src="https://fcimg.i18n.site/zh/flashduty/conf/template/2.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fc.3ti.site/zh/flashduty/conf/template/2.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
 We have listed some common tags that you can delete as needed;
 
@@ -324,7 +324,7 @@ You need to pre-configure **the integration center - Instant Messaging - Enterpr
 
 As shown below:
 
-<img src="https://fcimg.i18n.site/zh/flashduty/conf/template/3.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fc.3ti.site/zh/flashduty/conf/template/3.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
 
 **Note: Enterprise WeChat limits the card length. In the template rendering area, you can render no more than 8 lines of content, and any part exceeding 8 lines will be hidden.**
 
@@ -340,7 +340,7 @@ You need to pre-configure **the Integration Center - IM - Slack integration befo
 
 As shown below:
 
-<img src="https://fcimg.i18n.site/zh/flashduty/conf/template/4.avif" alt="drawing" style="display: block; margin: 0 auto;" width="600"/>
+<img src="https://fc.3ti.site/zh/flashduty/conf/template/4.avif" alt="drawing" style="display: block; margin: 0 auto;" width="600"/>
 
 We have listed some common tags that you can delete as needed;
 
@@ -382,7 +382,7 @@ You need to pre-configure **the Integration Center - IM - Microsoft Teams integr
 
 As shown below:
 
-<img src="https://fcimg.i18n.site/zh/flashduty/conf/template/5.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
+<img src="https://fc.3ti.site/zh/flashduty/conf/template/5.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
 
 We have listed some common tags that you can delete as needed;
 
@@ -424,7 +424,7 @@ You need to pre-configure **the Integration Center - IM - Microsoft Teams integr
 
 As shown below:
 
-<img src="https://fcimg.i18n.site/zh/flashduty/conf/template/5.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
+<img src="https://fc.3ti.site/zh/flashduty/conf/template/5.avif" alt="drawing" style="display: block; margin: 0 auto;" width="300"/>
 
 We have listed some common tags that you can delete as needed;
 
@@ -689,7 +689,7 @@ If you do not set custom content, the system default template will be used to re
 <body data-id="__react-email-body" style="background-color:rgb(255,255,255);border-radius:0.25rem;margin-top:2.5rem;margin-bottom:2.5rem;margin-left:auto;margin-right:auto;padding:1rem;min-width:400px;max-width:660px;font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji">
 <div style="width:100%;height:0.375rem;margin-bottom:2rem" class="bg-{{.IncidentSeverity}}"></div>
 <div style="display:flex;align-items:center;margin-bottom:1.5rem">
-<div style="display:flex;align-items:flex-end;gap:1rem"><img witdh="120" data-id="react-email-img" src="https://fcimg.i18n.site/zh/flashduty/conf/template/6.avif" height="40" style="display:block;outline:none;border:none;text-decoration:none" /><span style="font-size:1.25rem;line-height:1.75rem;font-weight:600">You have a pending issue to handle</span></div>
+<div style="display:flex;align-items:flex-end;gap:1rem"><img witdh="120" data-id="react-email-img" src="https://fc.3ti.site/zh/flashduty/conf/template/6.avif" height="40" style="display:block;outline:none;border:none;text-decoration:none" /><span style="font-size:1.25rem;line-height:1.75rem;font-weight:600">You have a pending issue to handle</span></div>
 </div>
 <div style="background-color:rgb(243,244,246);padding:2rem;margin-top:1rem;border-radius:0.5rem">
 <div style="display:flex;flex-direction:column;gap:0.75rem">
@@ -752,4 +752,4 @@ If you do not set custom content, the system default template will be used to re
 
 As shown below:
 
-<img src="https://fcimg.i18n.site/zh/flashduty/conf/template/7.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>
+<img src="https://fc.3ti.site/zh/flashduty/conf/template/7.avif" alt="drawing" style="display: block; margin: 0 auto;" width="500"/>

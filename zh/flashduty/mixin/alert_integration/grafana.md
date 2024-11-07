@@ -42,7 +42,7 @@ Grafana V4~V8 版本默认开启 Legacy Alerting 功能，在 V9 之后默认开
 2. 点击 Add Channel，打开配置 Channel 弹窗页面
 3. 配置名称，Type 选择 webhook，Url 填写集成的推送地址， Method 选择 POST，如下图所示：
 
-<img src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/grafana/1.avif" alt="drawing" width="600"/>
+<img src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/grafana/1.avif" alt="drawing" width="600"/>
 
 4. 保存，回到集成列表，等待产生告警后，如果展示了最新事件时间，说明配置成功且收到事件
 5. 完成
@@ -53,16 +53,16 @@ Grafana V4~V8 版本默认开启 Legacy Alerting 功能，在 V9 之后默认开
 2. 点击 New contact point，打开配置弹窗页面
 3. 配置名称，Type 选择 webhook，Url 填写集成的推送地址， Method 选择 POST，如下图所示：
 
-<img src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/grafana/2.avif" alt="drawing" width="600"/>
+<img src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/grafana/2.avif" alt="drawing" width="600"/>
 
 4. 打开 Notification policies 页面，根据情况编辑或新增 policy，选择上一步创建的 contact point 作为发送渠道，如下图所示：
 
-<img src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/grafana/3.avif" alt="drawing" width="600"/>
+<img src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/grafana/3.avif" alt="drawing" width="600"/>
 
 5. 保存，回到集成列表，等待产生告警后，如果展示了最新事件时间，说明配置成功且收到事件
 6. 默认告警等级为 warning，如果需要自定义，可以在告警详情页面配置 severity 标签（枚举参考下文状态对照），具体操作如下图所示：
 
-<img src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/grafana/4.avif" alt="drawing" width="600"/>
+<img src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/grafana/4.avif" alt="drawing" width="600"/>
 
 7. 完成
 

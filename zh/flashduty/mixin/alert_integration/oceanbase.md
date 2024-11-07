@@ -43,7 +43,7 @@ brief: 通过 webhook 的方式同步OceanBase告警事件到快猫星云，实�
 3. 通道类型选择 **自定义脚本** 。
 4. 基本配置内容，如下图所示：
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/oceanbase/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/oceanbase/1.avif" />
 
 5. 配置通道中复制以下脚本内容，同时**请将脚本中的 integration_key 参数补充上 FlashDuty 推送地址中的 integration_key 值**。
 
@@ -155,14 +155,14 @@ OCP告警通知-单条告警
 1. 新建推送配置，路径：**告警中心=>告警推送=>新建推送配置**。
 2. 推送类型、指定对象按需配置即可。
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/oceanbase/2.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/oceanbase/2.avif" />
 
 3. 推送语言选择 **简体中文**。
 4. 告警通道选择 **FlashDuty** 。
 5. 开启 **恢复通知**。
 6. 提交。
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/oceanbase/3.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/oceanbase/3.avif" />
 
 ## 二、状态对照
 

@@ -6,7 +6,7 @@ brief: Learn how to get started quickly with Flashduty
 
 ## Demo Video
 
-<video poster="https://fcimg.i18n.site/zh/flashduty/start/getting_started/3.avif" controls src="https://fcimg.i18n.site/zh/flashduty/start/getting_started/4.mp4"></video>
+<video poster="https://fc.3ti.site/zh/flashduty/start/getting_started/3.avif" controls src="https://fc.3ti.site/zh/flashduty/start/getting_started/4.mp4"></video>
 
 ## Start for Free
 
@@ -19,7 +19,7 @@ brief: Learn how to get started quickly with Flashduty
 
 ## Basic Process
 
-![](https://fcimg.i18n.site/zh/flashduty/start/getting_started/2.avif)
+![](https://fc.3ti.site/zh/flashduty/start/getting_started/2.avif)
 
 ### Create a Collaboration Space
 

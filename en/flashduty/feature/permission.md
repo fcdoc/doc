@@ -48,7 +48,7 @@ Flashduty **controls data permissions based on teams** and applies to the follow
 
 When you do not have data permissions for the corresponding resource, the system will display the following message:
 
-![](https://fcimg.i18n.site/zh/flashduty/feature/permission/1.avif)
+![](https://fc.3ti.site/zh/flashduty/feature/permission/1.avif)
 
 ## Frequently Asked Questions
 

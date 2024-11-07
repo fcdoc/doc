@@ -12,7 +12,7 @@ By integrating third-party Slack applications, you can receive and respond to al
 
 2. The page will redirect to the Slack interface. Select the __workspace__ in the upper right corner, then click __Allow__
 
-<img src="https://fcimg.i18n.site/zh/flashduty/mixin/instant_messaging/slack/1.avif" alt="drawing" width="400"/>
+<img src="https://fc.3ti.site/zh/flashduty/mixin/instant_messaging/slack/1.avif" alt="drawing" width="400"/>
 
 3. Enter the data source name and click __Save__
 

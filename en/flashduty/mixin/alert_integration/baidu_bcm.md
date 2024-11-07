@@ -39,7 +39,7 @@ When you need to route alert events to different collaboration spaces based on t
 3. Enter the **alert Management -Alert Policy** page and choose to edit an existing or create a new alert policy
 4. Alert In the **callback address** column in the policy, fill in the integrated push address (fill in the integration name on the current page, and the address can be generated after saving)
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/baidu_bcm/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/baidu_bcm/1.avif" />
 
 5. Finish
 

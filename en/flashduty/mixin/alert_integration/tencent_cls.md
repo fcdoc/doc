@@ -40,7 +40,7 @@ When you need to route alert events to different collaboration spaces based on t
 1. Log in to your Tencent Cloud console, select the Log Service CLS product, and enter Monitoring Alert - Notification Channel Group
 2. Click **New** to start a new
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/tencent_cls/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/tencent_cls/1.avif" />
 
 3. As shown in the figure, **name** fill in the specific channel group name __ channel type __ select "custom interface callback", **callback address** fill in the integrated push address, **request method** select POST
 
@@ -51,7 +51,7 @@ When you need to route alert events to different collaboration spaces based on t
 1. Log in to your Tencent Cloud console, select the Log Service CLS product, and enter Monitor Alert - Alert Policy
 2. Click **New** to start a new
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/tencent_cls/2.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/tencent_cls/2.avif" />
 
 3. As shown in the figure, __alert Name __ fill in the specific alert name, and the log topic selects a specific log topic
 

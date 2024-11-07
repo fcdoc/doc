@@ -48,13 +48,13 @@ Sentry provides two types of alert mechanisms: Issue Alerts and Metric Alerts. I
 4. On the edit page, **enter FlashDuty in the Name field, and copy the integration's push address into the WebhookURL field**.
 5. Enable **Alert Rule Action** and refer to the following configuration:
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/Sentry/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/Sentry/1.avif" />
 
 5. **Configure Read permissions for Issue & Event** in PERMISSIONS Configuration.
 6. In WEBHOOKS configuration, check **issue** , **please do not check error and comment** .
 7. After the configuration is complete, click Save Changes to complete the creation.
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/Sentry/2.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/Sentry/2.avif" />
 
 **Special Note on WEBHOOKS Configuration:**
 1. After checking **issue**, FlashDuty can receive the resolved event for issues, i.e., when an issue is manually marked as resolved in the issue list, we will automatically restore the associated incident in FlashDuty.
@@ -65,17 +65,17 @@ Sentry provides two types of alert mechanisms: Issue Alerts and Metric Alerts. I
 1. In the left navigation bar, find **Alerts => Create Alert**.
 2. Select the type of Alert to create, such as Issue .
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/Sentry/3.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/Sentry/3.avif" />
 
 3. Configure the trigger conditions as needed.
 
 4. At **THEN perform these actions Add action** and select **Send a notification via** .
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/Sentry/4.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/Sentry/4.avif" />
 
 5.  Choose the **FlashDuty** notification channel added above.
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/Sentry/5.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/Sentry/5.avif" />
 
 6. After configuring other options, click **Save Rule** to save.
 

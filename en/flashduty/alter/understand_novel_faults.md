@@ -18,13 +18,13 @@ A novel incident is one that has never occurred in the past period. If an incide
 1. On the incident list page, novel incidents will be marked with a prominent **Novel** label;
 2. On the incident details page, novel incidents will have a prominent **Novel** label and explanation at the top.
 
-<img src="https://fcimg.i18n.site/zh/flashduty/alter/understand_novel_faults/1.avif" alt="新奇" style="display: block; margin: 0 auto;" width="600">
+<img src="https://fc.3ti.site/zh/flashduty/alter/understand_novel_faults/1.avif" alt="新奇" style="display: block; margin: 0 auto;" width="600">
 
 ### IM Tool
 
 Taking Feishu as an example, when an incident is identified as a novel alert, the system will enhance the notification:
 
-<img src="https://fcimg.i18n.site/zh/flashduty/alter/understand_novel_faults/2.avif" alt="新奇-feishu" style="display: block; margin: 0 auto;" width="500">
+<img src="https://fc.3ti.site/zh/flashduty/alter/understand_novel_faults/2.avif" alt="新奇-feishu" style="display: block; margin: 0 auto;" width="500">
 
 ### How to Identify
 

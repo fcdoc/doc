@@ -12,7 +12,7 @@ brief: You can personalize your account and configure personal notification meth
 - APP Key: Create or delete an APP Key.
 - Notification Method: Configure according to personal preferences.
 
-![](https://fcimg.i18n.site/zh/flashduty/conf/preference/1.avif)
+![](https://fc.3ti.site/zh/flashduty/conf/preference/1.avif)
 
 ## Account Information
 - There are two types of account identities: main account and member account.

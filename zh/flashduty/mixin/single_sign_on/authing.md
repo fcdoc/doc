@@ -15,11 +15,11 @@ brief: 在Authing中配置单点登录教程
 - 填写应用名称
 - 填写认证地址(SSO 登录时跳转的地址)
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/1.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/1.avif)
 
 ### 3.记录相关信息
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/2.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/2.avif)
 
 |字段|描述|
 |---|---|
@@ -31,30 +31,30 @@ brief: 在Authing中配置单点登录教程
 ## 开始配置 OIDC 协议
 ### 1. 打开 [FlashDuty](console.flashcat.cloud) 控制台并开启单点登录配置
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/3.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/3.avif)
 
 ### 2.配置相关信息复制到对应的填写框中
 
 #### 2.1 将 Authing 应用的相关信息复制到对应的填写框中
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/4.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/4.avif)
 
 #### 2.2 将 Redirect UR L域名复制到 Authing 的登录回调 URL中
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/5.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/5.avif)
 
 ### 3.更改 Authing 配置
 
 #### 3.1 按图配置，只需将 id_token 签名算法更改为 RS256 即可
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/6.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/6.avif)
 
 #### 3.2 配置登录控制
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/7.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/7.avif)
 
 #### 3.3 更改权限
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/8.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/8.avif)
 
 ### 4.创建用户并测试登录
 
@@ -63,18 +63,18 @@ brief: 在Authing中配置单点登录教程
 > [!NOTE]
 > FlashDuty 只支持用户邮箱关联，所以需要用邮箱创建用户
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/9.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/9.avif)
 
 #### 4.2 使用 SSO 地址测试登录
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/10.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/10.avif)
 
 > [!NOTE]
 > **可以访问 console.flashcat.cloud 通过 SSO 的方式登录**
 
 #### 4.3 SSO 地址跳转到登录页面
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/11.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/11.avif)
 
 > [!NOTE]
 > 使用在 Authing 创建的用户，登录 FlashDuty 控制台
@@ -88,28 +88,28 @@ brief: 在Authing中配置单点登录教程
 
 #### 1.1 选择 SAML2.0
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/12.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/12.avif)
 
 #### 1.2 将 FlashDuty 的单点登录协议改成 SAML 协议，并复制 acs 地址
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/13.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/13.avif)
 
 #### 1.3 acs 地址复制到 authing 应用中后，点击保存并修改协议类型
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/14.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/14.avif)
 
 ### 2.在 FlashDuty 中配置
 
 #### 2.1 下载 metadata 数据，点击链接并保存到本地
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/15.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/15.avif)
 
 #### 2.2 上传到 FlashDuty 的单点登录配置中并保存
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/16.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/16.avif)
 
 #### 2.3 测试登录（参考 OIDC 协议的登录）
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/11.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/11.avif)
 
 > [!NOTE]
 > 以上是两种方式的全部配置方式，两个平台在配置时有穿插，所以请务必小心不要遗忘关键信息，如在配置过程中有任何问题，可以联系 FlashDuty 技术支持协助
@@ -117,30 +117,30 @@ brief: 在Authing中配置单点登录教程
 ## 开始配置 CAS 协议
 ### 1. 打开 [FlashDuty](console.flashcat.cloud) 控制台并开启单点登录配置
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/3.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/3.avif)
 
 ### 2.配置相关信息复制到对应的填写框中
 
 #### 2.1 将 Authing 应用的相关信息复制到对应的填写框中
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/17.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/17.avif)
 
 #### 2.2 将 Redirect URL 复制到 Authing 的登录回调URL 中
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/18.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/18.avif)
 
 ### 3.更改 Authing 配置
 
 #### 3.1 按图配置
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/19.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/19.avif)
 
 #### 3.2 配置登录控制
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/7.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/7.avif)
 
 #### 3.3 更改权限
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/8.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/8.avif)
 
 ### 4.创建用户并测试登录
 
@@ -149,15 +149,15 @@ brief: 在Authing中配置单点登录教程
 > [!NOTE]
 > FlashDuty 只支持用户邮箱关联，所以需要用邮箱创建用户
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/9.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/9.avif)
 
 #### 4.2 使用 SSO 地址测试登录
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/20.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/20.avif)
 
 #### 4.3 SSO 地址跳转到登录页面
 
-![](https://fcimg.i18n.site/zh/flashduty/mixin/single_sign_on/authing/11.avif)
+![](https://fc.3ti.site/zh/flashduty/mixin/single_sign_on/authing/11.avif)
 
 > [!NOTE]
 > 使用在 Authing 创建的用户，登录 FlashDuty 控制台

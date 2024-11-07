@@ -30,7 +30,7 @@ brief: 了解如何重新分派、升级分派，或者添加处理人
 
 与 **重新分派** 类似，添加处理人，只能选择值班表或者个人作为分派目标。系统会按照个人偏好来通知这些人员。
 
-![](https://fcimg.i18n.site/zh/flashduty/alter/escalate_incidents/1.avif)
+![](https://fc.3ti.site/zh/flashduty/alter/escalate_incidents/1.avif)
 
 ## 常见问题
 

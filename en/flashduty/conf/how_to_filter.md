@@ -34,7 +34,7 @@ Each condition is divided into fields, operators and target values. Among them, 
 > [!NOTE]
 > The target values in the conditions are all strings and support multiple matching methods such as **exact**, **regular**, **wildcard**, **IP segment**, and **numerical size**.
 
-<img src="https://fcimg.i18n.site/zh/flashduty/conf/how_to_filter/1.avif" style="display: block; margin: 0 auto;" height="300">
+<img src="https://fc.3ti.site/zh/flashduty/conf/how_to_filter/1.avif" style="display: block; margin: 0 auto;" height="300">
 
 As shown in the figure above, we have two sets of conditions, each set containing two conditions, with multiple condition matching values. If the severity is "Critical" or "Warning" and the check label equals "Binlog synchronization delay," the overall condition is met. Otherwise, if the check label contains any of the words "cpu," "io," or "disk," and the value of the value label is greater than 90, the overall condition is also met. We can also use an expression to describe the filter conditions intuitively:
 

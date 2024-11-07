@@ -43,14 +43,14 @@ When you need to route alert events to different collaboration spaces based on t
 6. Set `Topic ARN` to `FlashDuty`, `Protocol` to `HTTPS`, and `Endpoint` to the integration push address (fill in the integration name on the current page, and the address will be generated after saving)
 7. Click the `Create subscription` button to complete the subscription creation
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/aws_cloudwatch/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/aws_cloudwatch/1.avif" />
 
 8. Return to the `Subscriptions` page. When the subscription status is `Confirmed`, it means the subscription address verification is successful. Otherwise, please contact Flashduty
 9. Search for `CloudWatch` and enter the corresponding product console
 10. Enter the `All Alarms` page and choose to create or edit an existing alert strategy
 11. For the `Notification` step, set the push target `SNS topic` to `FlashDuty` for the three states: `In alarm`, `OK`, and `Insufficient data`, as shown in the figure below:
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/aws_cloudwatch/2.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/aws_cloudwatch/2.avif" />
 
 12. Return to the integration list. If the latest event time is displayed, the configuration is successful and the event has been received
 13. Finish

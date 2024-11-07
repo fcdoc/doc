@@ -3,7 +3,7 @@ i18n:
     zh: en
 
   replace:
-    https://fcimg.i18n.site/ : # en
+    https://fc.3ti.site/ : # en
 
 ignore:
   - _*

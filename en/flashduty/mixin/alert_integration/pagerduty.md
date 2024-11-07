@@ -88,7 +88,7 @@ Fill in the integration name on the current page and save it. Reopen the integra
 
 Modify the source code of the deployed ElastAlert instance, [view diff](https://github.com/jertel/elastalert2/commit/e815a62a6b1eecef6e1fef13afd99d905b67fc34):
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/pagerduty/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/pagerduty/1.avif" />
 
 3. Step 3: Report the Alert Event
 

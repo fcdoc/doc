@@ -43,7 +43,7 @@ When you need to route alert events to different collaboration spaces based on t
 3. Select **Custom Script** for the channel type.
 4. The basic configuration content is as shown in the figure below:
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/oceanbase/1.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/oceanbase/1.avif" />
 
 5. Copy the following script content in the configuration channel, and **please add the integration_key parameter in the script with the integration_key value in the FlashDuty address** .
 
@@ -155,14 +155,14 @@ OCPAlert Notification - Single Alert
 1. Create a new push configuration, path: **Alert Center => Alert Push => New Push Configuration**.
 2. Configure the push type and specified objects as needed.
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/oceanbase/2.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/oceanbase/2.avif" />
 
 3. Select **Simplified Chinese** as the push language.
 4. Select **FlashDuty** as the alert channel.
 5. Enable **Recovery Notifications**.
 6. Submit.
 
-<img alt="drawing" width="600" src="https://fcimg.i18n.site/zh/flashduty/mixin/alert_integration/oceanbase/3.avif" />
+<img alt="drawing" width="600" src="https://fc.3ti.site/zh/flashduty/mixin/alert_integration/oceanbase/3.avif" />
 
 ## Status Comparison
 
