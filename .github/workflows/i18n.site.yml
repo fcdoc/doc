@@ -27,7 +27,7 @@ jobs:
           set -ex
           mkdir -p out/dist
           cd out/dist
-          git clone --depth=1 https://github.com/fcdoc/dist.git htm
+          git clone --depth=1 https://x-access-token:${{secrets.GH_TOKEN}}@github.com/fcdoc/dist.git htm
 
       - name: install node.js
         uses: actions/setup-node@v4
@@ -43,7 +43,7 @@ jobs:
           npm i
           npm install --os=linux --cpu=x64 sharp
 
-          git clone --depth 1 https://github.com/${{ github.repository_owner }}/img.git
+          git clone --depth 1 https://x-access-token:${{secrets.GH_TOKEN}}@github.com/fcdoc/img.git
           ./.mise/bin/coffee mdfix.coffee
           cd img
           if [[ -n $(git status -s) ]]; then
@@ -51,8 +51,7 @@ jobs:
             git config --global user.email "github.action@i18n.site"
             git add .
             git commit -m '.'
-            branch=$(git rev-parse --abbrev-ref HEAD)
-            git push https://x-access-token:${{secrets.GH_TOKEN}}@github.com/fcdoc/img.git $branch
+            git push
           fi
 
       - name: https://i18n.site
@@ -70,5 +69,5 @@ jobs:
           git add . || true
           if [[ -n $(git status -s) ]]; then
             git commit -m.
-            git push https://x-access-token:${{secrets.GH_TOKEN}}@github.com/fcdoc/dist.git main -f
+            git push -f
           fi
