@@ -4,7 +4,7 @@ DIR=$(realpath $0) && DIR=${DIR%/*}
 cd $DIR
 set -ex
 
-git add .
+git add . || true
 git commit -mdist || true
 git fetch --unshallow 2>/dev/null || true
 git pull
